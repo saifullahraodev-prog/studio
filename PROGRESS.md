@@ -31,9 +31,10 @@
 4. Real caption system.
 5. 4 style-test stills → GATE 2.
 
+### GitHub
+- Private repo: https://github.com/saifullahraodev-prog/studio (GitHub CLI 2.103.3 installed and signed in).
+
 ### Open decisions (owner)
-- GitHub: `gh` (GitHub CLI) is not installed. Need: install it (small, ~30 MB) and log in, so I can
-  create the private repo and push.
 - Optional speed-up: make headless Chrome use the NVIDIA Quadro P620 (Windows Settings →
   Display → Graphics → add `chrome-headless-shell.exe` → High performance). Owner must do this;
   then I re-run `npm run gltest`.

@@ -61,4 +61,5 @@ Ask before installing anything large, deleting files, or spending money.
 `src/` (Remotion entry + compositions + ui), `out/` (scratch renders, git-ignored).
 
 ## Git
-Commit at every gate. Private GitHub repo (owner sets up `gh` login).
+Commit and push at every gate. Private repo: https://github.com/saifullahraodev-prog/studio
+(`gh` at `C:\Program Files\GitHub CLI\gh.exe`, signed in as saifullahraodev-prog).
