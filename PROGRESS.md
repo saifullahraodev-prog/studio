@@ -1,40 +1,65 @@
 # PROGRESS
 
-## Current phase: Phase 1 (Setup), waiting at GATE 1
+## Current phase: Phase 2 (Style creation), waiting at GATE 2
 
-### Done (Phase 1, 2026-11-08)
-- Toolchain verified: Node 24.22 (LTS), npm 11, Python 3.12.10, FFmpeg 9.0.2, Git 2.56,
-  faster-whisper 1.2.1 (already installed).
-- Remotion 4.0.541 + @remotion/three + three 0.180 + react-three-fiber 9.3 installed.
-  Chrome Headless Shell (131 MB) downloaded by Remotion.
-- Remotion official agent skills installed (`.agents/skills`).
-- Folder structure created; git repo initialised; first commit.
-- WebGL test across 6 GL modes: **all work**. `angle` uses the Intel UHD GPU (hardware);
-  the rest use software rendering.
-- 5-second test scene (spinning toon cube + caption + keyword) rendered at 720p and 1080p.
-- Tools: `tools/run.mjs` (keeps temp on D:), `tools/cleanup.mjs`, `tools/contact_sheet.py`,
-  `tools/gltest.mjs`, `tools/stresstest.mjs`.
+### GATE 2: owner decisions needed
+1. **Face variant**: A "Ink Dot", B "Bean & Blush" or C "Woodcut" (or a mix, e.g. "A eyes + C brows").
+2. **Approve the look** (or list changes) → I save it as `engine/look/style-v1.0.json` and copy the
+   approved stills to `golden/` as the first golden frames.
+3. **Bodies: code-built vs CC0 models.** For speed and a consistent look I built the chibi bodies
+   from simple shapes in code instead of restyling Quaternius/Kenney models (the locked plan).
+   Code-built bodies can be animated from code (walk, point, panic, …). CC0 rigged models would
+   need a download (I'll ask first) and bring ready-made animations. Decide before Phase 4.
 
-### Measured render speed
-| Test | Result |
+Review files: `out/gate2/` (not in git; regenerate with the commands below).
+- `face-variants.png`: Inspector + stoker in each face variant
+- `faces/*.png`: full sprite sheets (8 expressions × [resting mouth + 5 talking mouths])
+- `turnaround-inspector.png`: front / 3/4 / side / back
+- `style-grid.png`: rows = variants A/B/C, columns = day / golden / storm / night
+- `style-<preset>-<variant>.png`: full-size 1080×1920 stills
+- `safe-area-check.png`: red = areas covered by the YouTube Shorts UI
+- `talk-test-720p.mp4` (+ contact sheet): lip-sync from word timings (fake timings for now)
+
+### Done (Phase 2, 2026-11-08)
+- Style file `engine/look/style-v0.1.json`: toon ramp, ink/paper colours, face panel size,
+  fake DOF, caption layout + safe area, 4 lighting presets.
+- Face system (`engine/characters/face.tsx`): 3 variants × 8 expressions × 6 mouth slots, drawn as
+  SVG with ink wobble + paper grain, exported to sprite sheets by `node tools/make-faces.mjs`.
+  Per-character extras: Inspector glasses; stoker soot + stubble.
+- Character bible (`engine/characters/*.json` + `bible.ts`): Inspector, Stoker.
+- Chibi body (`Character.tsx`): ~2.5 heads, rounded "marshmallow" head with flush face panel,
+  toon shading, no outlines, oversized peaked cap / flat cap, white gloves, clipboard, shovel.
+  Faces glow slightly in dark presets so they stay readable.
+- Lip-sync (`lipsync.ts`): word timings → mouth shapes (vowel-driven, min hold 0.07 s).
+- World kit: ship deck (planks, railing, hull, deckhouse with windows/doors, lifeboats on davits,
+  raked funnels, ventilator, night lamps) + toon sea + painted sky backdrop (sun, moon, stars,
+  clouds) + rain fx.
+- Caption system (`engine/captions/Captions.tsx`): top subtitle + centre keyword pop, auto-fits
+  inside the Shorts safe area; optional safe-area overlay.
+- Shot layer stack (`engine/shots/WorldShot.tsx`): backdrop → 3D → rain → grade → captions.
+
+### Measured
+| Render | Time |
 |---|---|
-| Toon cube, 150 frames (5 s), 1080p | 15.7 s total (incl. ~7 s startup) |
-| Stress scene (400 objects, ~1.6M triangles, shadows), 60 frames 1080p, angle, 2 workers | ~13 s total → ~0.1 s/frame steady |
-| Same, 1 / 2 / 4 workers | 15.1 / 12.9 / 13.4 s |
-| Estimate: 40 s Short at 1080p | ~3–6 min |
-| Estimate: 10 min video at 1080p | ~30–90 min (scene-dependent) |
+| One 1080×1920 style still (deck + 2 characters + shadows) | ~3.5–4.5 s incl. startup |
+| Talk test, 150 frames (5 s) at 720p | 14.1 s total |
 
-### Next (Phase 2: style creation)
-1. The Inspector: 3 face-panel variants (stills), then turnaround.
-2. Face system: 8 expressions + 5 mouth shapes.
-3. Ship-deck world with 4 lighting presets.
-4. Real caption system.
-5. 4 style-test stills → GATE 2.
+### Known limitations (fine for now)
+- Backdrops are painted in code (gradient sky, clouds). Painted/AI images can replace them later.
+- Depth of field is "fake" (blurred backdrop + fog). Real lens blur later if needed.
+- Lip-sync tested with generated timings; real faster-whisper timings in Phase 3.
 
-### GitHub
-- Private repo: https://github.com/saifullahraodev-prog/studio (GitHub CLI 2.103.3 installed and signed in).
+### Next (Phase 3, after GATE 2)
+1. Draft the Titanic lifeboats Short script (25–40 s) with sources → owner approval.
+2. Placeholder TTS voice + faster-whisper word timings.
+3. Scene file → 720p preview → 1080p final → GATE 3.
 
-### Open decisions (owner)
-- Optional speed-up: make headless Chrome use the NVIDIA Quadro P620 (Windows Settings →
-  Display → Graphics → add `chrome-headless-shell.exe` → High performance). Owner must do this;
-  then I re-run `npm run gltest`.
+### Phase 1 summary (2026-11-08)
+- Toolchain: Node 24.22, Python 3.12.10, FFmpeg 9.0.2, Git 2.56, faster-whisper 1.2.1,
+  Remotion 4.0.541 + three 0.180 + R3F 9.3. WebGL via `--gl=angle` on the Intel UHD GPU.
+- Speed: heavy 1080p scene ~0.1 s/frame + ~7 s startup; 2 workers best.
+- GitHub: private repo https://github.com/saifullahraodev-prog/studio
+
+### Open (optional)
+- Make headless Chrome use the NVIDIA Quadro P620 (Windows Settings → Display → Graphics → add
+  `chrome-headless-shell.exe` → High performance). Owner must do this; then I re-run `npm run gltest`.

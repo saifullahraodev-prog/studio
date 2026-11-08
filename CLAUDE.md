@@ -37,6 +37,19 @@ Ask before installing anything large, deleting files, or spending money.
   Key 3D rules: wrap 3D in `<ThreeCanvas width height>`; **never use `useFrame()`**; animate only from
   `useCurrentFrame()`; `<Sequence layout="none">` inside ThreeCanvas.
 
+## Engine layout (Phase 2)
+- Engine code lives in `engine/<area>/` (TypeScript); `src/` only holds the Remotion entry, `Root.tsx`
+  and compositions. Binary assets (face sprite sheets, later backdrops/models) live in `public/`
+  mirroring engine areas, loaded with `useStaticTexture()` (`engine/assets.ts`), which also forces
+  the 3D redraw after loading (Remotion only redraws three.js on frame change).
+- Look values: import `style` from `engine/look/style.tsx` (points at the current style JSON).
+- Faces: drawn in `engine/characters/face.tsx`; after changing faces or adding a character run
+  `node tools/make-faces.mjs` to regenerate `public/characters/faces/<id>-<variant>.png`.
+- Every world shot uses `WorldShot` (backdrop → 3D → fx → grade → captions).
+- Stills: `node tools/still.mjs <Comp> <out.png> key=value ... [--frame=N] [--rebundle]`.
+  Rebundle after any code change.
+- R3F: `meshToonMaterial` has no `flatShading`; use non-indexed geometry for faceted looks.
+
 ## Engine conventions
 - Lay out 2D overlays in **design pixels for 1080x1920** and convert with `useUnit()` (`src/ui/units.ts`).
 - Vertical compositions take `res` prop: 720 (preview, default) or 1080 (final).

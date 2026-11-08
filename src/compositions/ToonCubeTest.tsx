@@ -1,9 +1,10 @@
-import { ThreeCanvas } from "@remotion/three";
+﻿import { ThreeCanvas } from "@remotion/three";
 import { useMemo } from "react";
-import { AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, useCurrentFrame, useVideoConfig } from "remotion";
 import * as THREE from "three";
-import { Captions } from "../ui/Captions";
-import { ResProps } from "../ui/units";
+
+import { Captions } from "../../engine/captions/Captions";
+import { ResProps } from "../../engine/look/units";
 
 // 3-step gradient map = soft toon shading (no outlines, per style direction F).
 const useToonGradient = () =>
@@ -38,12 +39,7 @@ const Scene: React.FC = () => {
 };
 
 export const ToonCubeTest: React.FC<ResProps> = () => {
-  const frame = useCurrentFrame();
   const { width, height } = useVideoConfig();
-  const keyword = frame < 75 ? "TOON" : "CUBE";
-  const pop = interpolate(frame % 75, [0, 6, 10], [0.6, 1.12, 1], {
-    extrapolateRight: "clamp",
-  });
   return (
     <AbsoluteFill>
       <ThreeCanvas
@@ -54,9 +50,10 @@ export const ToonCubeTest: React.FC<ResProps> = () => {
         <Scene />
       </ThreeCanvas>
       <Captions
-        subtitle="Phase 1 test: a spinning toon cube."
-        keyword={keyword}
-        keywordScale={pop}
+        beats={[
+          { subtitle: "Phase 1 test: a spinning toon cube.", keyword: "Toon", from: 0, to: 75 },
+          { subtitle: "Phase 1 test: a spinning toon cube.", keyword: "Cube", from: 75, to: 150 },
+        ]}
       />
     </AbsoluteFill>
   );

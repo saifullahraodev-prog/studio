@@ -1,0 +1,19 @@
+﻿{
+  "id": "inspector",
+  "name": "The Inspector",
+  "role": "Recurring narrator. A safety inspector with a clipboard who opens and closes every video.",
+  "faceVariant": "A",
+  "faceExtras": { "glasses": true },
+  "body": {
+    "torso": "#C9A36A",
+    "torsoStyle": "coat",
+    "trim": "#8E6E3E",
+    "sleeve": "#C9A36A",
+    "legs": "#3C4250",
+    "shoes": "#2B2622",
+    "scale": 1.0
+  },
+  "headgear": { "type": "peakedCap", "color": "#2F3D5C", "band": "#1E2638", "badge": "#E2B84A" },
+  "prop": "clipboard",
+  "accessories": ["badge", "tie"]
+}

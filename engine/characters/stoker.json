@@ -1,0 +1,19 @@
+{
+  "id": "stoker",
+  "name": "Stoker",
+  "role": "Boiler-room worker shovelling coal (Titanic and other steamships).",
+  "faceVariant": "A",
+  "faceExtras": { "soot": true, "stubble": true },
+  "body": {
+    "torso": "#6E7480",
+    "torsoStyle": "vest",
+    "trim": "#4A3426",
+    "sleeve": "#D9D2C2",
+    "legs": "#3A3430",
+    "shoes": "#221E1B",
+    "scale": 0.97
+  },
+  "headgear": { "type": "flatCap", "color": "#4A4642", "band": "#2E2B28" },
+  "prop": "shovel",
+  "accessories": ["suspenders", "neckerchief"]
+}

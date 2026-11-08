@@ -1,8 +1,8 @@
-import { ThreeCanvas } from "@remotion/three";
+﻿import { ThreeCanvas } from "@remotion/three";
 import { useMemo } from "react";
 import { AbsoluteFill, useCurrentFrame, useVideoConfig } from "remotion";
 import * as THREE from "three";
-import { ResProps } from "../ui/units";
+import { ResProps } from "../../engine/look/units";
 
 // Heavier diagnostic scene, roughly what a busy world shot will cost:
 // ~400 objects (~1.6M triangles), real-time shadows, fog.
