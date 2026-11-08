@@ -2,7 +2,7 @@
 
 Status: **DRAFT v1, waiting for owner approval** (nothing is built until approved)
 Series: Rules written in disaster · Format: YouTube Short, 9:16 · Target length: ~38 s
-Words: 98 (≈ 2.6 words/second)
+Words: 97 (≈ 37 s at 2.6 words/second)
 
 ---
 
