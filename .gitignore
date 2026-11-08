@@ -4,3 +4,4 @@ out/
 videos/*/out/
 *.log
 .env
+models/

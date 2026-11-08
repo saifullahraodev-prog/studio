@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import * as THREE from "three";
-import styleJson from "./style-v1.0.json";
+import styleJson from "./style-v1.1.json";
 
 // The ONE place look values come from. Switch versions by changing the import above.
 export const style = styleJson;

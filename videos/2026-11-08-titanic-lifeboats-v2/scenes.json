@@ -1,0 +1,2231 @@
+{
+ "slug": "titanic-lifeboats-v2",
+ "format": "short",
+ "world": "ship-deck",
+ "fps": 30,
+ "duration": 32.928,
+ "beats": [
+  {
+   "id": "b1",
+   "cuts": [
+    {
+     "cue": "the",
+     "shot": "insp-medium",
+     "face": "determined",
+     "do": "tap",
+     "start": 0.0,
+     "end": 1.04,
+     "tr": "cut"
+    },
+    {
+     "cue": "more",
+     "shot": "insp-punch",
+     "face": "shocked",
+     "do": "point",
+     "fx": "hit",
+     "tr": "cut",
+     "start": 1.04,
+     "end": 2.84
+    },
+    {
+     "cue": "so",
+     "shot": "insp-dutch",
+     "face": "worried",
+     "do": "think",
+     "tr": "whip",
+     "start": 2.84,
+     "end": 4.68
+    },
+    {
+     "cue": "die",
+     "shot": "ship-sinking",
+     "fx": "boom",
+     "tr": "whip",
+     "start": 4.68,
+     "end": 5.335,
+     "face": "neutral"
+    }
+   ],
+   "speaker": "inspector",
+   "preset": "golden",
+   "say": "The Titanic carried MORE lifeboats than the law required. So why did more than fifteen hundred people die?",
+   "emph": [
+    "more",
+    "fifteen",
+    "hundred",
+    "die"
+   ],
+   "subtitle": "The Titanic carried MORE lifeboats than the law required. So why did more than fifteen hundred people die?",
+   "pause": 0.05,
+   "voiceStart": 0.25,
+   "voiceEnd": 5.115,
+   "start": 0.0,
+   "end": 5.335,
+   "words": [
+    {
+     "word": "Titanic",
+     "start": 0.32,
+     "end": 0.66
+    },
+    {
+     "word": "carried",
+     "start": 0.66,
+     "end": 1.08
+    },
+    {
+     "word": "more",
+     "start": 1.08,
+     "end": 1.32
+    },
+    {
+     "word": "lifeboats",
+     "start": 1.32,
+     "end": 1.84
+    },
+    {
+     "word": "than",
+     "start": 1.84,
+     "end": 2.0
+    },
+    {
+     "word": "the",
+     "start": 2.0,
+     "end": 2.08
+    },
+    {
+     "word": "law",
+     "start": 2.08,
+     "end": 2.26
+    },
+    {
+     "word": "required.",
+     "start": 2.26,
+     "end": 2.62
+    },
+    {
+     "word": "So,",
+     "start": 2.88,
+     "end": 3.0
+    },
+    {
+     "word": "why",
+     "start": 3.18,
+     "end": 3.36
+    },
+    {
+     "word": "did",
+     "start": 3.36,
+     "end": 3.5
+    },
+    {
+     "word": "more",
+     "start": 3.5,
+     "end": 3.68
+    },
+    {
+     "word": "than",
+     "start": 3.68,
+     "end": 3.82
+    },
+    {
+     "word": "1500",
+     "start": 3.82,
+     "end": 4.24
+    },
+    {
+     "word": "people",
+     "start": 4.24,
+     "end": 4.72
+    },
+    {
+     "word": "die?",
+     "start": 4.72,
+     "end": 5.02
+    }
+   ],
+   "cueAt": 0.25,
+   "aligned": [
+    [
+     "The",
+     0.32,
+     0.32,
+     null
+    ],
+    [
+     "Titanic",
+     0.32,
+     0.66,
+     "Titanic"
+    ],
+    [
+     "carried",
+     0.66,
+     1.08,
+     "carried"
+    ],
+    [
+     "MORE",
+     1.08,
+     1.32,
+     "more"
+    ],
+    [
+     "lifeboats",
+     1.32,
+     1.84,
+     "lifeboats"
+    ],
+    [
+     "than",
+     1.84,
+     2.0,
+     "than"
+    ],
+    [
+     "the",
+     2.0,
+     2.08,
+     "the"
+    ],
+    [
+     "law",
+     2.08,
+     2.26,
+     "law"
+    ],
+    [
+     "required.",
+     2.26,
+     2.62,
+     "required."
+    ],
+    [
+     "So",
+     2.88,
+     3.0,
+     "So,"
+    ],
+    [
+     "why",
+     3.18,
+     3.36,
+     "why"
+    ],
+    [
+     "did",
+     3.36,
+     3.5,
+     "did"
+    ],
+    [
+     "more",
+     3.5,
+     3.68,
+     "more"
+    ],
+    [
+     "than",
+     3.68,
+     3.82,
+     "than"
+    ],
+    [
+     "fifteen",
+     3.82,
+     4.03,
+     "1500"
+    ],
+    [
+     "hundred",
+     4.03,
+     4.24,
+     ""
+    ],
+    [
+     "people",
+     4.24,
+     4.72,
+     "people"
+    ],
+    [
+     "die?",
+     4.72,
+     5.02,
+     "die?"
+    ]
+   ]
+  },
+  {
+   "id": "b2",
+   "cuts": [
+    {
+     "cue": "it's",
+     "shot": "furnace-insert",
+     "fx": "fire",
+     "tr": "flash",
+     "start": 5.335,
+     "end": 6.34,
+     "face": "neutral"
+    },
+    {
+     "cue": "you're",
+     "shot": "stoker-furnace",
+     "face": "neutral",
+     "do": "shovel",
+     "start": 6.34,
+     "end": 7.1,
+     "tr": "cut"
+    },
+    {
+     "cue": "night",
+     "shot": "stoker-yawn",
+     "face": "sad",
+     "do": "yawn",
+     "tr": "cut",
+     "start": 7.1,
+     "end": 7.81
+    }
+   ],
+   "speaker": "vo",
+   "preset": "night",
+   "pause": 0.3,
+   "say": "It's nineteen twelve. You're a stoker. Night shift.",
+   "emph": [
+    "nineteen",
+    "twelve",
+    "stoker"
+   ],
+   "subtitle": "It's nineteen twelve. You're a stoker. Night shift.",
+   "voiceStart": 5.415,
+   "voiceEnd": 7.69,
+   "start": 5.335,
+   "end": 7.81,
+   "words": [
+    {
+     "word": "It's",
+     "start": 5.42,
+     "end": 5.6
+    },
+    {
+     "word": "1912.",
+     "start": 5.6,
+     "end": 6.26
+    },
+    {
+     "word": "You're",
+     "start": 6.38,
+     "end": 6.54
+    },
+    {
+     "word": "a",
+     "start": 6.54,
+     "end": 6.62
+    },
+    {
+     "word": "stoker.",
+     "start": 6.62,
+     "end": 6.96
+    },
+    {
+     "word": "Night",
+     "start": 7.14,
+     "end": 7.28
+    },
+    {
+     "word": "shift.",
+     "start": 7.28,
+     "end": 7.52
+    }
+   ],
+   "cueAt": 5.415,
+   "aligned": [
+    [
+     "It's",
+     5.42,
+     5.6,
+     "It's"
+    ],
+    [
+     "nineteen",
+     5.6,
+     5.93,
+     "1912."
+    ],
+    [
+     "twelve.",
+     5.93,
+     6.26,
+     ""
+    ],
+    [
+     "You're",
+     6.38,
+     6.54,
+     "You're"
+    ],
+    [
+     "a",
+     6.54,
+     6.62,
+     "a"
+    ],
+    [
+     "stoker.",
+     6.62,
+     6.96,
+     "stoker."
+    ],
+    [
+     "Night",
+     7.14,
+     7.28,
+     "Night"
+    ],
+    [
+     "shift.",
+     7.28,
+     7.52,
+     "shift."
+    ]
+   ]
+  },
+  {
+   "id": "b3",
+   "cuts": [
+    {
+     "cue": "then",
+     "shot": "stoker-yawn-hold",
+     "face": "neutral",
+     "start": 7.81,
+     "end": 8.499,
+     "tr": "cut"
+    }
+   ],
+   "speaker": "vo",
+   "preset": "night",
+   "pause": 0.2,
+   "say": "Then...",
+   "subtitle": "Then...",
+   "emph": [],
+   "voiceStart": 7.89,
+   "voiceEnd": 8.029,
+   "start": 7.81,
+   "end": 8.499,
+   "words": [
+    {
+     "word": "Huh?",
+     "start": 7.88,
+     "end": 8.0
+    }
+   ],
+   "cueAt": 7.89,
+   "aligned": [
+    [
+     "Then.",
+     7.88,
+     8.0,
+     null
+    ]
+   ]
+  },
+  {
+   "id": "b3b",
+   "cuts": [
+    {
+     "cue": "crunch",
+     "shot": "iceberg-hit",
+     "fx": "crunch",
+     "tr": "cut",
+     "start": 8.499,
+     "end": 9.371,
+     "face": "neutral"
+    }
+   ],
+   "speaker": "vo",
+   "preset": "night",
+   "pause": 0.55,
+   "say": "CRUNCH!",
+   "emph": [
+    "crunch"
+   ],
+   "subtitle": "CRUNCH!",
+   "voiceStart": 8.579,
+   "voiceEnd": 8.951,
+   "start": 8.499,
+   "end": 9.371,
+   "words": [
+    {
+     "word": "Quatch.",
+     "start": 8.6,
+     "end": 8.82
+    }
+   ],
+   "cueAt": 8.579,
+   "aligned": [
+    [
+     "CRUNCH!",
+     8.6,
+     8.82,
+     null
+    ]
+   ]
+  },
+  {
+   "id": "b4",
+   "cuts": [
+    {
+     "cue": "you",
+     "shot": "stoker-shocked-cu",
+     "face": "shocked",
+     "do": "recoil",
+     "tr": "whip",
+     "start": 9.371,
+     "end": 9.7
+    },
+    {
+     "cue": "up",
+     "shot": "run-low",
+     "face": "scared",
+     "tr": "whip",
+     "fx": "whoosh",
+     "start": 9.7,
+     "end": 10.42
+    },
+    {
+     "cue": "count",
+     "shot": "count-fingers",
+     "face": "worried",
+     "do": "count",
+     "start": 10.42,
+     "end": 11.371,
+     "tr": "cut"
+    }
+   ],
+   "speaker": "vo",
+   "preset": "night",
+   "pause": 0.5,
+   "say": "You sprint up on deck and count the lifeboats.",
+   "emph": [
+    "sprint",
+    "count"
+   ],
+   "subtitle": "You sprint up on deck and count the lifeboats.",
+   "voiceStart": 9.451,
+   "voiceEnd": 11.401,
+   "start": 9.371,
+   "end": 11.371,
+   "words": [
+    {
+     "word": "You",
+     "start": 9.48,
+     "end": 9.54
+    },
+    {
+     "word": "sprint",
+     "start": 9.54,
+     "end": 9.74
+    },
+    {
+     "word": "up",
+     "start": 9.74,
+     "end": 9.94
+    },
+    {
+     "word": "on",
+     "start": 9.94,
+     "end": 10.12
+    },
+    {
+     "word": "deck",
+     "start": 10.12,
+     "end": 10.3
+    },
+    {
+     "word": "and",
+     "start": 10.3,
+     "end": 10.46
+    },
+    {
+     "word": "count",
+     "start": 10.46,
+     "end": 10.68
+    },
+    {
+     "word": "the",
+     "start": 10.68,
+     "end": 10.8
+    },
+    {
+     "word": "lifeboats.",
+     "start": 10.8,
+     "end": 11.3
+    }
+   ],
+   "cueAt": 9.451,
+   "aligned": [
+    [
+     "You",
+     9.48,
+     9.54,
+     "You"
+    ],
+    [
+     "sprint",
+     9.54,
+     9.74,
+     "sprint"
+    ],
+    [
+     "up",
+     9.74,
+     9.94,
+     "up"
+    ],
+    [
+     "on",
+     9.94,
+     10.12,
+     "on"
+    ],
+    [
+     "deck",
+     10.12,
+     10.3,
+     "deck"
+    ],
+    [
+     "and",
+     10.3,
+     10.46,
+     "and"
+    ],
+    [
+     "count",
+     10.46,
+     10.68,
+     "count"
+    ],
+    [
+     "the",
+     10.68,
+     10.8,
+     "the"
+    ],
+    [
+     "lifeboats.",
+     10.8,
+     11.3,
+     "lifeboats."
+    ]
+   ]
+  },
+  {
+   "id": "b5",
+   "cuts": [
+    {
+     "cue": "twenty",
+     "shot": "fingers-out",
+     "face": "shocked",
+     "do": "panic",
+     "fx": "boing",
+     "tr": "cut",
+     "start": 11.371,
+     "end": 12.22
+    },
+    {
+     "cue": "two",
+     "shot": "crowd-pile",
+     "fx": "pop",
+     "tr": "whip",
+     "start": 12.22,
+     "end": 13.674,
+     "face": "neutral"
+    }
+   ],
+   "speaker": "vo",
+   "preset": "night",
+   "say": "Twenty. For over two thousand two hundred people.",
+   "emph": [
+    "twenty",
+    "two",
+    "thousand",
+    "hundred"
+   ],
+   "subtitle": "Twenty. For over two thousand two hundred people.",
+   "pause": 0.05,
+   "voiceStart": 11.451,
+   "voiceEnd": 13.704,
+   "start": 11.371,
+   "end": 13.674,
+   "words": [
+    {
+     "word": "20",
+     "start": 11.48,
+     "end": 11.7
+    },
+    {
+     "word": "for",
+     "start": 11.7,
+     "end": 11.98
+    },
+    {
+     "word": "over",
+     "start": 11.98,
+     "end": 12.26
+    },
+    {
+     "word": "2",
+     "start": 12.26,
+     "end": 12.52
+    },
+    {
+     "word": ",200",
+     "start": 12.52,
+     "end": 13.0
+    },
+    {
+     "word": "people.",
+     "start": 13.0,
+     "end": 13.6
+    },
+    {
+     "word": "Seats",
+     "start": 13.74,
+     "end": 13.98
+    }
+   ],
+   "cueAt": 11.451,
+   "aligned": [
+    [
+     "Twenty.",
+     11.48,
+     11.7,
+     "20"
+    ],
+    [
+     "For",
+     11.7,
+     11.98,
+     "for"
+    ],
+    [
+     "over",
+     11.98,
+     12.26,
+     "over"
+    ],
+    [
+     "two",
+     12.26,
+     12.445,
+     "2,200"
+    ],
+    [
+     "thousand",
+     12.445,
+     12.63,
+     ""
+    ],
+    [
+     "two",
+     12.63,
+     12.815,
+     ""
+    ],
+    [
+     "hundred",
+     12.815,
+     13.0,
+     ""
+    ],
+    [
+     "people.",
+     13.0,
+     13.6,
+     "people."
+    ]
+   ]
+  },
+  {
+   "id": "b6",
+   "cuts": [
+    {
+     "cue": "seats",
+     "shot": "crowd-half",
+     "fx": "pop",
+     "tr": "cut",
+     "start": 13.674,
+     "end": 14.3,
+     "face": "neutral"
+    },
+    {
+     "cue": "half",
+     "shot": "crowd-stare",
+     "face": "sad",
+     "tr": "cut",
+     "start": 14.3,
+     "end": 15.258
+    }
+   ],
+   "speaker": "vo",
+   "preset": "night",
+   "say": "Seats for about half of you.",
+   "emph": [
+    "half"
+   ],
+   "subtitle": "Seats for about half of you.",
+   "pause": 0.05,
+   "voiceStart": 13.754,
+   "voiceEnd": 14.938,
+   "start": 13.674,
+   "end": 15.258,
+   "words": [
+    {
+     "word": "Seats",
+     "start": 13.74,
+     "end": 13.98
+    },
+    {
+     "word": "for",
+     "start": 13.98,
+     "end": 14.14
+    },
+    {
+     "word": "about",
+     "start": 14.14,
+     "end": 14.34
+    },
+    {
+     "word": "half",
+     "start": 14.34,
+     "end": 14.62
+    },
+    {
+     "word": "of",
+     "start": 14.62,
+     "end": 14.74
+    },
+    {
+     "word": "you.",
+     "start": 14.74,
+     "end": 14.9
+    }
+   ],
+   "cueAt": 13.754,
+   "aligned": [
+    [
+     "Seats",
+     13.74,
+     13.98,
+     "Seats"
+    ],
+    [
+     "for",
+     13.98,
+     14.14,
+     "for"
+    ],
+    [
+     "about",
+     14.14,
+     14.34,
+     "about"
+    ],
+    [
+     "half",
+     14.34,
+     14.62,
+     "half"
+    ],
+    [
+     "of",
+     14.62,
+     14.74,
+     "of"
+    ],
+    [
+     "you.",
+     14.74,
+     14.9,
+     "you."
+    ]
+   ]
+  },
+  {
+   "id": "b7",
+   "cuts": [
+    {
+     "cue": "but",
+     "shot": "insp-medium",
+     "face": "worried",
+     "do": "think",
+     "tr": "whip",
+     "start": 15.258,
+     "end": 16.84
+    },
+    {
+     "cue": "legal",
+     "shot": "stamp",
+     "face": "determined",
+     "do": "stamp",
+     "fx": "stamp",
+     "tr": "cut",
+     "start": 16.84,
+     "end": 17.479
+    }
+   ],
+   "speaker": "vo",
+   "preset": "night",
+   "pause": 0.4,
+   "say": "But here's the twist. It was totally legal.",
+   "emph": [
+    "twist",
+    "legal"
+   ],
+   "subtitle": "But here's the twist. It was totally legal.",
+   "voiceStart": 15.338,
+   "voiceEnd": 17.509,
+   "start": 15.258,
+   "end": 17.479,
+   "words": [
+    {
+     "word": "here's",
+     "start": 15.44,
+     "end": 15.74
+    },
+    {
+     "word": "the",
+     "start": 15.74,
+     "end": 15.82
+    },
+    {
+     "word": "twist.",
+     "start": 15.82,
+     "end": 16.04
+    },
+    {
+     "word": "It",
+     "start": 16.34,
+     "end": 16.42
+    },
+    {
+     "word": "was",
+     "start": 16.42,
+     "end": 16.58
+    },
+    {
+     "word": "totally",
+     "start": 16.58,
+     "end": 16.88
+    },
+    {
+     "word": "legal.",
+     "start": 16.88,
+     "end": 17.3
+    }
+   ],
+   "cueAt": 15.338,
+   "aligned": [
+    [
+     "But",
+     15.44,
+     15.44,
+     null
+    ],
+    [
+     "here's",
+     15.44,
+     15.74,
+     "here's"
+    ],
+    [
+     "the",
+     15.74,
+     15.82,
+     "the"
+    ],
+    [
+     "twist.",
+     15.82,
+     16.04,
+     "twist."
+    ],
+    [
+     "It",
+     16.34,
+     16.42,
+     "It"
+    ],
+    [
+     "was",
+     16.42,
+     16.58,
+     "was"
+    ],
+    [
+     "totally",
+     16.58,
+     16.88,
+     "totally"
+    ],
+    [
+     "legal.",
+     16.88,
+     17.3,
+     "legal."
+    ]
+   ]
+  },
+  {
+   "id": "b8",
+   "cuts": [
+    {
+     "cue": "the",
+     "shot": "rulebook-open",
+     "face": "angry",
+     "tr": "whip",
+     "fx": "whoosh",
+     "start": 17.479,
+     "end": 19.44
+    },
+    {
+     "cue": "and",
+     "shot": "insp-dutch",
+     "face": "angry",
+     "do": "shrug",
+     "tr": "whip",
+     "start": 19.44,
+     "end": 20.48
+    },
+    {
+     "cue": "ten",
+     "shot": "rulebook-row",
+     "fx": "ding",
+     "tr": "cut",
+     "start": 20.48,
+     "end": 21.86,
+     "face": "neutral"
+    }
+   ],
+   "speaker": "vo",
+   "preset": "night",
+   "say": "The rulebook was from eighteen ninety-four, and its biggest size was ten thousand tons and up.",
+   "emph": [
+    "eighteen",
+    "ninety-four",
+    "ten",
+    "thousand"
+   ],
+   "subtitle": "The rulebook was from eighteen ninety-four, and its biggest size was ten thousand tons and up.",
+   "pause": 0.05,
+   "voiceStart": 17.559,
+   "voiceEnd": 21.89,
+   "start": 17.479,
+   "end": 21.86,
+   "words": [
+    {
+     "word": "The",
+     "start": 17.56,
+     "end": 17.64
+    },
+    {
+     "word": "rulebook",
+     "start": 17.64,
+     "end": 17.98
+    },
+    {
+     "word": "was",
+     "start": 17.98,
+     "end": 18.16
+    },
+    {
+     "word": "from",
+     "start": 18.16,
+     "end": 18.32
+    },
+    {
+     "word": "1894,",
+     "start": 18.32,
+     "end": 19.22
+    },
+    {
+     "word": "and",
+     "start": 19.48,
+     "end": 19.6
+    },
+    {
+     "word": "its",
+     "start": 19.6,
+     "end": 19.72
+    },
+    {
+     "word": "biggest",
+     "start": 19.72,
+     "end": 19.98
+    },
+    {
+     "word": "size",
+     "start": 19.98,
+     "end": 20.36
+    },
+    {
+     "word": "was",
+     "start": 20.36,
+     "end": 20.52
+    },
+    {
+     "word": "10",
+     "start": 20.52,
+     "end": 20.78
+    },
+    {
+     "word": ",000",
+     "start": 20.78,
+     "end": 21.24
+    },
+    {
+     "word": "tons",
+     "start": 21.24,
+     "end": 21.4
+    },
+    {
+     "word": "and",
+     "start": 21.4,
+     "end": 21.68
+    },
+    {
+     "word": "up.",
+     "start": 21.68,
+     "end": 21.84
+    }
+   ],
+   "cueAt": 17.559,
+   "aligned": [
+    [
+     "The",
+     17.56,
+     17.64,
+     "The"
+    ],
+    [
+     "rulebook",
+     17.64,
+     17.98,
+     "rulebook"
+    ],
+    [
+     "was",
+     17.98,
+     18.16,
+     "was"
+    ],
+    [
+     "from",
+     18.16,
+     18.32,
+     "from"
+    ],
+    [
+     "eighteen",
+     18.32,
+     18.77,
+     "1894,"
+    ],
+    [
+     "ninety-four,",
+     18.77,
+     19.22,
+     ""
+    ],
+    [
+     "and",
+     19.48,
+     19.6,
+     "and"
+    ],
+    [
+     "its",
+     19.6,
+     19.72,
+     "its"
+    ],
+    [
+     "biggest",
+     19.72,
+     19.98,
+     "biggest"
+    ],
+    [
+     "size",
+     19.98,
+     20.36,
+     "size"
+    ],
+    [
+     "was",
+     20.36,
+     20.52,
+     "was"
+    ],
+    [
+     "ten",
+     20.52,
+     20.88,
+     "10,000"
+    ],
+    [
+     "thousand",
+     20.88,
+     21.24,
+     ""
+    ],
+    [
+     "tons",
+     21.24,
+     21.4,
+     "tons"
+    ],
+    [
+     "and",
+     21.4,
+     21.68,
+     "and"
+    ],
+    [
+     "up.",
+     21.68,
+     21.84,
+     "up."
+    ]
+   ]
+  },
+  {
+   "id": "b9",
+   "cuts": [
+    {
+     "cue": "titanic",
+     "shot": "ship-too-big",
+     "face": "shocked",
+     "fx": "boing",
+     "tr": "cut",
+     "start": 21.86,
+     "end": 23.56
+    },
+    {
+     "cue": "same",
+     "shot": "boats-16",
+     "face": "angry",
+     "fx": "pop",
+     "tr": "whip",
+     "start": 23.56,
+     "end": 25.24
+    },
+    {
+     "cue": "she",
+     "shot": "boats-plus4",
+     "face": "happy",
+     "do": "thumbsup",
+     "fx": "ding",
+     "start": 25.24,
+     "end": 26.928,
+     "tr": "cut"
+    }
+   ],
+   "speaker": "vo",
+   "preset": "night",
+   "say": "Titanic? Forty-six thousand. Same rule. Sixteen boats. She even brought four extra.",
+   "emph": [
+    "forty-six",
+    "thousand",
+    "sixteen",
+    "four",
+    "extra"
+   ],
+   "subtitle": "Titanic? Forty-six thousand. Same rule. Sixteen boats. She even brought four extra.",
+   "pause": 0.05,
+   "voiceStart": 21.94,
+   "voiceEnd": 26.758,
+   "start": 21.86,
+   "end": 26.928,
+   "words": [
+    {
+     "word": "Titanic?",
+     "start": 21.96,
+     "end": 22.24
+    },
+    {
+     "word": "46",
+     "start": 22.52,
+     "end": 22.9
+    },
+    {
+     "word": ",000.",
+     "start": 22.9,
+     "end": 23.46
+    },
+    {
+     "word": "Same",
+     "start": 23.6,
+     "end": 23.84
+    },
+    {
+     "word": "rule.",
+     "start": 23.84,
+     "end": 24.08
+    },
+    {
+     "word": "16",
+     "start": 24.36,
+     "end": 24.6
+    },
+    {
+     "word": "boats.",
+     "start": 24.6,
+     "end": 25.02
+    },
+    {
+     "word": "She",
+     "start": 25.28,
+     "end": 25.42
+    },
+    {
+     "word": "even",
+     "start": 25.42,
+     "end": 25.68
+    },
+    {
+     "word": "brought",
+     "start": 25.68,
+     "end": 25.94
+    },
+    {
+     "word": "four",
+     "start": 25.94,
+     "end": 26.22
+    },
+    {
+     "word": "extra.",
+     "start": 26.22,
+     "end": 26.54
+    }
+   ],
+   "cueAt": 21.94,
+   "aligned": [
+    [
+     "Titanic?",
+     21.96,
+     22.24,
+     "Titanic?"
+    ],
+    [
+     "Forty-six",
+     22.52,
+     22.99,
+     "46,000."
+    ],
+    [
+     "thousand.",
+     22.99,
+     23.46,
+     ""
+    ],
+    [
+     "Same",
+     23.6,
+     23.84,
+     "Same"
+    ],
+    [
+     "rule.",
+     23.84,
+     24.08,
+     "rule."
+    ],
+    [
+     "Sixteen",
+     24.36,
+     24.6,
+     "16"
+    ],
+    [
+     "boats.",
+     24.6,
+     25.02,
+     "boats."
+    ],
+    [
+     "She",
+     25.28,
+     25.42,
+     "She"
+    ],
+    [
+     "even",
+     25.42,
+     25.68,
+     "even"
+    ],
+    [
+     "brought",
+     25.68,
+     25.94,
+     "brought"
+    ],
+    [
+     "four",
+     25.94,
+     26.22,
+     "four"
+    ],
+    [
+     "extra.",
+     26.22,
+     26.54,
+     "extra."
+    ]
+   ]
+  },
+  {
+   "id": "b10",
+   "cuts": [
+    {
+     "cue": "and",
+     "shot": "today-medium",
+     "face": "determined",
+     "do": "tap",
+     "tr": "flash",
+     "fx": "whoosh",
+     "start": 26.928,
+     "end": 27.84
+    },
+    {
+     "cue": "every",
+     "shot": "today-low",
+     "face": "happy",
+     "do": "point",
+     "tr": "whip",
+     "start": 27.84,
+     "end": 29.74
+    },
+    {
+     "cue": "lifeboat",
+     "shot": "today-boat",
+     "tr": "cut",
+     "start": 29.74,
+     "end": 31.24,
+     "face": "neutral"
+    },
+    {
+     "cue": "everyone",
+     "shot": "today-punch",
+     "face": "happy",
+     "do": "tick",
+     "fx": "ding",
+     "tr": "cut",
+     "start": 31.24,
+     "end": 32.928
+    }
+   ],
+   "speaker": "inspector",
+   "preset": "day",
+   "pause": 0.25,
+   "say": "And that's why, today, every passenger ship must carry a lifeboat or life-raft seat for everyone on board.",
+   "emph": [
+    "today",
+    "everyone"
+   ],
+   "subtitle": "And that's why, today, every passenger ship must carry a lifeboat or life-raft seat for everyone on board.",
+   "voiceStart": 27.008,
+   "voiceEnd": 32.128,
+   "start": 26.928,
+   "end": 32.928,
+   "words": [
+    {
+     "word": "that's",
+     "start": 27.12,
+     "end": 27.36
+    },
+    {
+     "word": "why,",
+     "start": 27.36,
+     "end": 27.56
+    },
+    {
+     "word": "today,",
+     "start": 27.72,
+     "end": 27.88
+    },
+    {
+     "word": "every",
+     "start": 27.88,
+     "end": 28.38
+    },
+    {
+     "word": "passenger",
+     "start": 28.38,
+     "end": 28.82
+    },
+    {
+     "word": "should",
+     "start": 28.82,
+     "end": 29.08
+    },
+    {
+     "word": "must",
+     "start": 29.08,
+     "end": 29.26
+    },
+    {
+     "word": "carry",
+     "start": 29.26,
+     "end": 29.54
+    },
+    {
+     "word": "a",
+     "start": 29.54,
+     "end": 29.78
+    },
+    {
+     "word": "lifeboat",
+     "start": 29.78,
+     "end": 30.18
+    },
+    {
+     "word": "or",
+     "start": 30.18,
+     "end": 30.32
+    },
+    {
+     "word": "life",
+     "start": 30.32,
+     "end": 30.54
+    },
+    {
+     "word": "raft",
+     "start": 30.54,
+     "end": 30.78
+    },
+    {
+     "word": "seat",
+     "start": 30.78,
+     "end": 31.06
+    },
+    {
+     "word": "for",
+     "start": 31.06,
+     "end": 31.28
+    },
+    {
+     "word": "everyone",
+     "start": 31.28,
+     "end": 31.64
+    },
+    {
+     "word": "on",
+     "start": 31.64,
+     "end": 31.8
+    },
+    {
+     "word": "board.",
+     "start": 31.8,
+     "end": 32.0
+    }
+   ],
+   "cueAt": 27.008,
+   "aligned": [
+    [
+     "And",
+     27.12,
+     27.12,
+     null
+    ],
+    [
+     "that's",
+     27.12,
+     27.36,
+     "that's"
+    ],
+    [
+     "why,",
+     27.36,
+     27.56,
+     "why,"
+    ],
+    [
+     "today,",
+     27.72,
+     27.88,
+     "today,"
+    ],
+    [
+     "every",
+     27.88,
+     28.38,
+     "every"
+    ],
+    [
+     "passenger",
+     28.38,
+     28.82,
+     "passenger"
+    ],
+    [
+     "ship",
+     28.82,
+     29.08,
+     null
+    ],
+    [
+     "must",
+     29.08,
+     29.26,
+     "must"
+    ],
+    [
+     "carry",
+     29.26,
+     29.54,
+     "carry"
+    ],
+    [
+     "a",
+     29.54,
+     29.78,
+     "a"
+    ],
+    [
+     "lifeboat",
+     29.78,
+     30.18,
+     "lifeboat"
+    ],
+    [
+     "or",
+     30.18,
+     30.32,
+     "or"
+    ],
+    [
+     "life-raft",
+     30.32,
+     30.78,
+     null
+    ],
+    [
+     "seat",
+     30.78,
+     31.06,
+     "seat"
+    ],
+    [
+     "for",
+     31.06,
+     31.28,
+     "for"
+    ],
+    [
+     "everyone",
+     31.28,
+     31.64,
+     "everyone"
+    ],
+    [
+     "on",
+     31.64,
+     31.8,
+     "on"
+    ],
+    [
+     "board.",
+     31.8,
+     32.0,
+     "board."
+    ]
+   ]
+  }
+ ],
+ "captionWords": [
+  {
+   "text": "The",
+   "start": 0.32,
+   "end": 0.32,
+   "emph": false
+  },
+  {
+   "text": "Titanic",
+   "start": 0.32,
+   "end": 0.66,
+   "emph": false
+  },
+  {
+   "text": "carried",
+   "start": 0.66,
+   "end": 1.08,
+   "emph": false
+  },
+  {
+   "text": "MORE",
+   "start": 1.08,
+   "end": 1.32,
+   "emph": true
+  },
+  {
+   "text": "lifeboats",
+   "start": 1.32,
+   "end": 1.84,
+   "emph": false
+  },
+  {
+   "text": "than",
+   "start": 1.84,
+   "end": 2.0,
+   "emph": false
+  },
+  {
+   "text": "the",
+   "start": 2.0,
+   "end": 2.08,
+   "emph": false
+  },
+  {
+   "text": "law",
+   "start": 2.08,
+   "end": 2.26,
+   "emph": false
+  },
+  {
+   "text": "required",
+   "start": 2.26,
+   "end": 2.62,
+   "emph": false
+  },
+  {
+   "text": "So",
+   "start": 2.88,
+   "end": 3.0,
+   "emph": false
+  },
+  {
+   "text": "why",
+   "start": 3.18,
+   "end": 3.36,
+   "emph": false
+  },
+  {
+   "text": "did",
+   "start": 3.36,
+   "end": 3.5,
+   "emph": false
+  },
+  {
+   "text": "more",
+   "start": 3.5,
+   "end": 3.68,
+   "emph": true
+  },
+  {
+   "text": "than",
+   "start": 3.68,
+   "end": 3.82,
+   "emph": false
+  },
+  {
+   "text": "1500",
+   "start": 3.82,
+   "end": 4.03,
+   "emph": true
+  },
+  {
+   "text": "people",
+   "start": 4.24,
+   "end": 4.72,
+   "emph": false
+  },
+  {
+   "text": "die?",
+   "start": 4.72,
+   "end": 5.02,
+   "emph": true
+  },
+  {
+   "text": "It's",
+   "start": 5.42,
+   "end": 5.6,
+   "emph": false
+  },
+  {
+   "text": "1912",
+   "start": 5.6,
+   "end": 5.93,
+   "emph": true
+  },
+  {
+   "text": "You're",
+   "start": 6.38,
+   "end": 6.54,
+   "emph": false
+  },
+  {
+   "text": "a",
+   "start": 6.54,
+   "end": 6.62,
+   "emph": false
+  },
+  {
+   "text": "stoker",
+   "start": 6.62,
+   "end": 6.96,
+   "emph": true
+  },
+  {
+   "text": "Night",
+   "start": 7.14,
+   "end": 7.28,
+   "emph": false
+  },
+  {
+   "text": "shift",
+   "start": 7.28,
+   "end": 7.52,
+   "emph": false
+  },
+  {
+   "text": "Then",
+   "start": 7.88,
+   "end": 8.0,
+   "emph": false
+  },
+  {
+   "text": "CRUNCH",
+   "start": 8.6,
+   "end": 8.82,
+   "emph": true
+  },
+  {
+   "text": "You",
+   "start": 9.48,
+   "end": 9.54,
+   "emph": false
+  },
+  {
+   "text": "sprint",
+   "start": 9.54,
+   "end": 9.74,
+   "emph": true
+  },
+  {
+   "text": "up",
+   "start": 9.74,
+   "end": 9.94,
+   "emph": false
+  },
+  {
+   "text": "on",
+   "start": 9.94,
+   "end": 10.12,
+   "emph": false
+  },
+  {
+   "text": "deck",
+   "start": 10.12,
+   "end": 10.3,
+   "emph": false
+  },
+  {
+   "text": "and",
+   "start": 10.3,
+   "end": 10.46,
+   "emph": false
+  },
+  {
+   "text": "count",
+   "start": 10.46,
+   "end": 10.68,
+   "emph": true
+  },
+  {
+   "text": "the",
+   "start": 10.68,
+   "end": 10.8,
+   "emph": false
+  },
+  {
+   "text": "lifeboats",
+   "start": 10.8,
+   "end": 11.3,
+   "emph": false
+  },
+  {
+   "text": "20",
+   "start": 11.48,
+   "end": 11.7,
+   "emph": true
+  },
+  {
+   "text": "For",
+   "start": 11.7,
+   "end": 11.98,
+   "emph": false
+  },
+  {
+   "text": "over",
+   "start": 11.98,
+   "end": 12.26,
+   "emph": false
+  },
+  {
+   "text": "2,200",
+   "start": 12.26,
+   "end": 12.445,
+   "emph": true
+  },
+  {
+   "text": "people",
+   "start": 13.0,
+   "end": 13.6,
+   "emph": false
+  },
+  {
+   "text": "Seats",
+   "start": 13.74,
+   "end": 13.98,
+   "emph": false
+  },
+  {
+   "text": "for",
+   "start": 13.98,
+   "end": 14.14,
+   "emph": false
+  },
+  {
+   "text": "about",
+   "start": 14.14,
+   "end": 14.34,
+   "emph": false
+  },
+  {
+   "text": "half",
+   "start": 14.34,
+   "end": 14.62,
+   "emph": true
+  },
+  {
+   "text": "of",
+   "start": 14.62,
+   "end": 14.74,
+   "emph": false
+  },
+  {
+   "text": "you",
+   "start": 14.74,
+   "end": 14.9,
+   "emph": false
+  },
+  {
+   "text": "But",
+   "start": 15.44,
+   "end": 15.44,
+   "emph": false
+  },
+  {
+   "text": "here's",
+   "start": 15.44,
+   "end": 15.74,
+   "emph": false
+  },
+  {
+   "text": "the",
+   "start": 15.74,
+   "end": 15.82,
+   "emph": false
+  },
+  {
+   "text": "twist",
+   "start": 15.82,
+   "end": 16.04,
+   "emph": true
+  },
+  {
+   "text": "It",
+   "start": 16.34,
+   "end": 16.42,
+   "emph": false
+  },
+  {
+   "text": "was",
+   "start": 16.42,
+   "end": 16.58,
+   "emph": false
+  },
+  {
+   "text": "totally",
+   "start": 16.58,
+   "end": 16.88,
+   "emph": false
+  },
+  {
+   "text": "legal",
+   "start": 16.88,
+   "end": 17.3,
+   "emph": true
+  },
+  {
+   "text": "The",
+   "start": 17.56,
+   "end": 17.64,
+   "emph": false
+  },
+  {
+   "text": "rulebook",
+   "start": 17.64,
+   "end": 17.98,
+   "emph": false
+  },
+  {
+   "text": "was",
+   "start": 17.98,
+   "end": 18.16,
+   "emph": false
+  },
+  {
+   "text": "from",
+   "start": 18.16,
+   "end": 18.32,
+   "emph": false
+  },
+  {
+   "text": "1894",
+   "start": 18.32,
+   "end": 18.77,
+   "emph": true
+  },
+  {
+   "text": "and",
+   "start": 19.48,
+   "end": 19.6,
+   "emph": false
+  },
+  {
+   "text": "its",
+   "start": 19.6,
+   "end": 19.72,
+   "emph": false
+  },
+  {
+   "text": "biggest",
+   "start": 19.72,
+   "end": 19.98,
+   "emph": false
+  },
+  {
+   "text": "size",
+   "start": 19.98,
+   "end": 20.36,
+   "emph": false
+  },
+  {
+   "text": "was",
+   "start": 20.36,
+   "end": 20.52,
+   "emph": false
+  },
+  {
+   "text": "10,000",
+   "start": 20.52,
+   "end": 20.88,
+   "emph": true
+  },
+  {
+   "text": "tons",
+   "start": 21.24,
+   "end": 21.4,
+   "emph": false
+  },
+  {
+   "text": "and",
+   "start": 21.4,
+   "end": 21.68,
+   "emph": false
+  },
+  {
+   "text": "up",
+   "start": 21.68,
+   "end": 21.84,
+   "emph": false
+  },
+  {
+   "text": "Titanic?",
+   "start": 21.96,
+   "end": 22.24,
+   "emph": false
+  },
+  {
+   "text": "46,000",
+   "start": 22.52,
+   "end": 22.99,
+   "emph": true
+  },
+  {
+   "text": "Same",
+   "start": 23.6,
+   "end": 23.84,
+   "emph": false
+  },
+  {
+   "text": "rule",
+   "start": 23.84,
+   "end": 24.08,
+   "emph": false
+  },
+  {
+   "text": "16",
+   "start": 24.36,
+   "end": 24.6,
+   "emph": true
+  },
+  {
+   "text": "boats",
+   "start": 24.6,
+   "end": 25.02,
+   "emph": false
+  },
+  {
+   "text": "She",
+   "start": 25.28,
+   "end": 25.42,
+   "emph": false
+  },
+  {
+   "text": "even",
+   "start": 25.42,
+   "end": 25.68,
+   "emph": false
+  },
+  {
+   "text": "brought",
+   "start": 25.68,
+   "end": 25.94,
+   "emph": false
+  },
+  {
+   "text": "four",
+   "start": 25.94,
+   "end": 26.22,
+   "emph": true
+  },
+  {
+   "text": "extra",
+   "start": 26.22,
+   "end": 26.54,
+   "emph": true
+  },
+  {
+   "text": "And",
+   "start": 27.12,
+   "end": 27.12,
+   "emph": false
+  },
+  {
+   "text": "that's",
+   "start": 27.12,
+   "end": 27.36,
+   "emph": false
+  },
+  {
+   "text": "why",
+   "start": 27.36,
+   "end": 27.56,
+   "emph": false
+  },
+  {
+   "text": "today",
+   "start": 27.72,
+   "end": 27.88,
+   "emph": true
+  },
+  {
+   "text": "every",
+   "start": 27.88,
+   "end": 28.38,
+   "emph": false
+  },
+  {
+   "text": "passenger",
+   "start": 28.38,
+   "end": 28.82,
+   "emph": false
+  },
+  {
+   "text": "ship",
+   "start": 28.82,
+   "end": 29.08,
+   "emph": false
+  },
+  {
+   "text": "must",
+   "start": 29.08,
+   "end": 29.26,
+   "emph": false
+  },
+  {
+   "text": "carry",
+   "start": 29.26,
+   "end": 29.54,
+   "emph": false
+  },
+  {
+   "text": "a",
+   "start": 29.54,
+   "end": 29.78,
+   "emph": false
+  },
+  {
+   "text": "lifeboat",
+   "start": 29.78,
+   "end": 30.18,
+   "emph": false
+  },
+  {
+   "text": "or",
+   "start": 30.18,
+   "end": 30.32,
+   "emph": false
+  },
+  {
+   "text": "life-raft",
+   "start": 30.32,
+   "end": 30.78,
+   "emph": false
+  },
+  {
+   "text": "seat",
+   "start": 30.78,
+   "end": 31.06,
+   "emph": false
+  },
+  {
+   "text": "for",
+   "start": 31.06,
+   "end": 31.28,
+   "emph": false
+  },
+  {
+   "text": "everyone",
+   "start": 31.28,
+   "end": 31.64,
+   "emph": true
+  },
+  {
+   "text": "on",
+   "start": 31.64,
+   "end": 31.8,
+   "emph": false
+  },
+  {
+   "text": "board",
+   "start": 31.8,
+   "end": 32.0,
+   "emph": false
+  }
+ ]
+}

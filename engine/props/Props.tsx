@@ -248,3 +248,207 @@ export const LiferaftCanisters: React.FC<{ count?: number; position?: [number, n
     ))}
   </group>
 );
+
+// ─── v2 kit: boiler room, desk crate, documents, stamp, mini boats, 3D labels ──
+
+// Simple text label floating in 3D (signs, "+4", stamps)
+export const TextLabel: React.FC<{ text: string; color?: string; bg?: string; position?: [number, number, number]; rotation?: [number, number, number]; width?: number; font?: string }> = ({
+  text,
+  color = "#FFD23F",
+  bg,
+  position,
+  rotation,
+  width = 0.6,
+  font = "bold 150px Arial",
+}) => {
+  const tex = useCanvasTexture(
+    512,
+    256,
+    (g, w, h) => {
+      if (bg) {
+        g.fillStyle = bg;
+        g.fillRect(0, 0, w, h);
+      }
+      g.font = font;
+      g.textAlign = "center";
+      g.textBaseline = "middle";
+      g.lineWidth = 18;
+      g.strokeStyle = "#16161C";
+      g.strokeText(text, w / 2, h / 2);
+      g.fillStyle = color;
+      g.fillText(text, w / 2, h / 2);
+    },
+    [text, color, bg, font],
+  );
+  return (
+    <mesh position={position} rotation={rotation}>
+      <planeGeometry args={[width, width / 2]} />
+      <meshBasicMaterial map={tex} transparent toneMapped={false} />
+    </mesh>
+  );
+};
+
+export const Crate: React.FC<{ position?: [number, number, number]; size?: [number, number, number] }> = ({ position, size = [2.4, 0.62, 0.9] }) => (
+  <M p={position ? [position[0], position[1] + size[1] / 2, position[2]] : [0, size[1] / 2, 0]}>
+    <boxGeometry args={size} />
+    <Toon color="#8A6440" kind="wood" />
+  </M>
+);
+
+// Certificate lying flat; `stamped` (0..1) slams the red APPROVED stamp on.
+export const Certificate: React.FC<{ position?: [number, number, number]; rotationY?: number; stamped?: number }> = ({ position, rotationY = 0, stamped = 0 }) => {
+  const tex = useCanvasTexture(
+    512,
+    680,
+    (g, w, h) => {
+      g.fillStyle = "#F2EAD3";
+      g.fillRect(0, 0, w, h);
+      g.fillStyle = "#3A2E22";
+      g.textAlign = "center";
+      g.font = "bold 40px Georgia";
+      g.fillText("BOARD OF TRADE", w / 2, 90);
+      g.font = "30px Georgia";
+      g.fillText("Inspection, 1912", w / 2, 140);
+      g.font = "bold 46px Georgia";
+      g.fillText("R.M.S. TITANIC", w / 2, 240);
+      g.font = "30px Georgia";
+      g.textAlign = "left";
+      g.fillText("Boats required:   16", 70, 340);
+      g.fillText("Boats carried:     20", 70, 395);
+      g.fillStyle = "rgba(58,46,34,0.3)";
+      for (let i = 0; i < 4; i++) g.fillRect(70, 450 + i * 34, 360 - i * 40, 9);
+    },
+    [],
+  );
+  const stampTex = useCanvasTexture(
+    512,
+    200,
+    (g, w, h) => {
+      g.strokeStyle = "#C0302A";
+      g.lineWidth = 14;
+      g.strokeRect(14, 14, w - 28, h - 28);
+      g.fillStyle = "#C0302A";
+      g.font = "bold 110px Arial";
+      g.textAlign = "center";
+      g.textBaseline = "middle";
+      g.fillText("APPROVED", w / 2, h / 2 + 6);
+    },
+    [],
+  );
+  return (
+    <group position={position} rotation={[0, rotationY, 0]}>
+      <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
+        <planeGeometry args={[0.42, 0.56]} />
+        <meshStandardMaterial map={tex} roughness={0.9} />
+      </mesh>
+      {stamped > 0 && (
+        <mesh rotation={[-Math.PI / 2, 0, 0.25]} position={[0, 0.003, 0.05]} scale={0.6 + 0.4 * Math.min(1, stamped)}>
+          <planeGeometry args={[0.4, 0.156]} />
+          <meshBasicMaterial map={stampTex} transparent opacity={Math.min(1, stamped * 1.5)} toneMapped={false} />
+        </mesh>
+      )}
+    </group>
+  );
+};
+
+// Rubber stamp held in a glove (arm-local: the arm hangs along -y)
+export const StampTool: React.FC = () => (
+  <group position={[0, -0.12, 0.04]}>
+    <M p={[0, -0.02, 0]}>
+      <cylinderGeometry args={[0.035, 0.045, 0.16, 12]} />
+      <Toon color="#6B4A2E" kind="wood" />
+    </M>
+    <M p={[0, -0.13, 0]}>
+      <boxGeometry args={[0.16, 0.05, 0.11]} />
+      <Toon color="#3A3A3E" kind="metal" />
+    </M>
+    <M p={[0, -0.163, 0]}>
+      <boxGeometry args={[0.15, 0.015, 0.1]} />
+      <Toon color="#C0302A" kind="rubber" />
+    </M>
+  </group>
+);
+
+// Tiny lifeboat icon (for counting boats / "seats" above heads)
+export const MiniBoat: React.FC<{ position?: [number, number, number]; rotationY?: number; scale?: number; color?: string }> = ({ position, rotationY = 0, scale = 1, color = "#F4F1EA" }) => (
+  <group position={position} rotation={[0, rotationY, 0]} scale={scale}>
+    <M r={[Math.PI, 0, 0]} s={[0.075, 0.065, 0.2]}>
+      <sphereGeometry args={[1, 16, 8, 0, Math.PI * 2, 0, Math.PI / 2]} />
+      <Toon color={color} kind="paint" side={THREE.DoubleSide} />
+    </M>
+    <M r={[Math.PI / 2, 0, 0]} s={[0.075, 0.2, 1]}>
+      <torusGeometry args={[1, 0.035, 6, 24]} />
+      <Toon color="#8A5A35" kind="wood" />
+    </M>
+  </group>
+);
+
+// Boiler room: brick wall, iron furnace with a glowing mouth, coal pile, flickering fire light
+export const BoilerRoom: React.FC<{ t: number }> = ({ t }) => {
+  const flicker = 0.75 + 0.18 * Math.sin(t * 13) + 0.1 * Math.sin(t * 31 + 1.3) + 0.07 * Math.sin(t * 7.7);
+  const bricks = useCanvasTexture(
+    512,
+    512,
+    (g, w, h) => {
+      g.fillStyle = "#3A1E16";
+      g.fillRect(0, 0, w, h);
+      for (let y = 0; y < h; y += 32)
+        for (let x = (y / 32) % 2 ? -32 : 0; x < w; x += 64) {
+          const s = 70 + ((x * 7 + y * 13) % 30);
+          g.fillStyle = `rgb(${s + 40},${s * 0.45},${s * 0.35})`;
+          g.fillRect(x + 2, y + 2, 60, 28);
+        }
+    },
+    [],
+  );
+  bricks.wrapS = bricks.wrapT = THREE.RepeatWrapping;
+  bricks.repeat.set(3, 2);
+  const coal = useMemo(() => Array.from({ length: 40 }, (_, i) => [((i * 37) % 13) / 13 - 0.5, ((i * 17) % 7) / 7, ((i * 29) % 11) / 11 - 0.5] as [number, number, number]), []);
+  return (
+    <group>
+      <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
+        <planeGeometry args={[14, 14]} />
+        <meshStandardMaterial color="#2A2624" roughness={0.9} metalness={0.2} />
+      </mesh>
+      <mesh position={[0, 3, -2]} receiveShadow>
+        <planeGeometry args={[14, 6]} />
+        <meshStandardMaterial map={bricks} roughness={0.95} />
+      </mesh>
+      <mesh position={[-4, 3, 2]} rotation={[0, Math.PI / 2, 0]} receiveShadow>
+        <planeGeometry args={[10, 6]} />
+        <meshStandardMaterial map={bricks} roughness={0.95} />
+      </mesh>
+      {/* furnace */}
+      <group position={[-1.2, 0, -1.3]}>
+        <M p={[0, 0.9, 0]}>
+          <boxGeometry args={[2, 1.8, 1.2]} />
+          <Toon color="#2B2C30" kind="metal" />
+        </M>
+        <mesh position={[0, 0.75, 0.61]}>
+          <circleGeometry args={[0.38, 32, 0, Math.PI]} />
+          <meshBasicMaterial color={new THREE.Color("#FF8A2A").multiplyScalar(1.2 * flicker)} toneMapped={false} />
+        </mesh>
+        <mesh position={[0, 0.75, 0.61]}>
+          <planeGeometry args={[0.76, 0.02]} />
+          <meshBasicMaterial color="#FFD27A" toneMapped={false} />
+        </mesh>
+        {[-0.6, 0.6].map((x) => (
+          <M key={x} p={[x, 1.85, 0.2]}>
+            <cylinderGeometry args={[0.12, 0.12, 0.5, 14]} />
+            <Toon color="#3A3B40" kind="metal" />
+          </M>
+        ))}
+        <pointLight position={[0, 0.8, 1.1]} color="#FF8A3A" intensity={9 * flicker} distance={8} decay={1.5} />
+      </group>
+      {/* coal pile */}
+      <group position={[1.4, 0, -1.0]}>
+        {coal.map((c, i) => (
+          <M key={i} p={[c[0] * 1.4, c[1] * 0.45 + 0.08, c[2] * 1.0]} s={0.12 + (i % 5) * 0.02}>
+            <dodecahedronGeometry args={[1, 0]} />
+            <Toon color="#18181A" kind="metal" roughness={0.6} />
+          </M>
+        ))}
+      </group>
+    </group>
+  );
+};

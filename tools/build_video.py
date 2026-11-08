@@ -3,15 +3,16 @@
     python -I tools/build_video.py videos/<date>-<slug> [--retts] [--recording]
 
 Steps:
-  1. parse scenes.txt -> beats
-  2. voice: placeholder TTS per line (Windows voice), joined with pauses -> voice.wav
-     (--recording: use your own voice.wav as-is; beats are aligned from word timings)
+  1. parse scenes.txt -> beats (+ cuts, emphasis, pauses)
+  2. voice: placeholder TTS per line (Piper if `voice: piper`, else the Windows voice),
+     joined with per-line pauses -> voice.wav   (--recording: use your own voice.wav)
   3. faster-whisper word timings -> words.json
-  4. beat timing + keyword cue times -> scenes.json
-  5. audio mix: voice + quiet generated sea ambience, ducked under the voice, loudness
-     levelled for YouTube (-14 LUFS) -> mix.wav
+  4. beat + cut timing (cuts start on their cue words), keyword cues, caption words -> scenes.json
+  5. audio: voice + music bed (light/tense by lighting preset) + procedural SFX on cuts,
+     music ducked under the voice, two-pass loudness to -14 LUFS -> mix.wav
   6. copy scenes.json + mix.wav to public/videos/<slug>/ for Remotion
 """
+import importlib.util
 import json
 import re
 import shutil
@@ -20,12 +21,20 @@ import sys
 import wave
 from pathlib import Path
 
+import numpy as np
+
 ROOT = Path(__file__).resolve().parent.parent
-LEAD = 0.45  # silence before the first line (s)
-GAP = 0.32  # pause between lines (s)
-TAIL = 1.1  # hold after the last line (s)
 FPS = 30
 TARGET_LUFS = -14.0  # YouTube's playback reference loudness
+STYLE = json.loads((ROOT / "engine" / "look" / "style-v1.1.json").read_text(encoding="utf-8"))
+PACING = STYLE.get("pacing", {})
+
+
+def load_sfx():
+    spec = importlib.util.spec_from_file_location("sfx", ROOT / "audio" / "sfx.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
 
 
 def parse_scenes(path: Path):
@@ -34,22 +43,48 @@ def parse_scenes(path: Path):
         line = raw.strip()
         if not line or line.startswith("#"):
             continue
-        m = re.match(r"\[beat\s+(\d+)\]", line)
+        m = re.match(r"\[beat\s+(\w+)\]", line)
         if m:
-            cur = {"id": f"b{m.group(1)}"}
+            cur = {"id": f"b{m.group(1)}", "cuts": []}
             beats.append(cur)
             continue
-        if ":" in line:
-            k, v = line.split(":", 1)
-            (cur if cur is not None else meta)[k.strip()] = v.strip()
+        if ":" not in line:
+            continue
+        k, v = line.split(":", 1)
+        k, v = k.strip(), v.strip()
+        if cur is None:
+            meta[k] = v
+        elif k == "cut":
+            parts = [p.strip() for p in v.split("|")]
+            cut = {"cue": parts[0], "shot": parts[1] if len(parts) > 1 else cur.get("shot", "")}
+            for p in parts[2:]:
+                if "=" in p:
+                    a, b = p.split("=", 1)
+                    cut[a.strip()] = b.strip()
+            cur["cuts"].append(cut)
+        else:
+            cur[k] = v
     for b in beats:
         b.setdefault("subtitle", b["say"])
+        b["pause"] = float(b.get("pause", PACING.get("lineGap", 0.32) if b["cuts"] else 0.32))
+        b["emph"] = [e.strip() for e in b.get("emph", "").split(",") if e.strip()]
     return meta, beats
 
 
 def wav_seconds(p: Path) -> float:
     with wave.open(str(p)) as w:
         return w.getnframes() / w.getframerate()
+
+
+def write_wav(path: Path, x: np.ndarray, sr=48000):
+    x = np.clip(x, -1, 1)
+    data = (x * 32767).astype("<i2")
+    ch = 1 if x.ndim == 1 else x.shape[1]
+    with wave.open(str(path), "wb") as w:
+        w.setnchannels(ch)
+        w.setsampwidth(2)
+        w.setframerate(sr)
+        w.writeframes(data.tobytes())
 
 
 def run(cmd, **kw):
@@ -64,32 +99,92 @@ def norm(s: str) -> str:
     return re.sub(r"[^a-z0-9]", "", s.lower())
 
 
+def align(say: str, words):
+    """Map every token of the script line to a time, using the heard words.
+    Returns [(token, start, end, heard_text_or_None)]; unheard tokens get interpolated times."""
+    import difflib
+
+    toks = re.findall(r"[A-Za-z0-9'’\-]+[?.!,]?", say)
+    sn = [norm(t) for t in toks]
+    wn = [norm(w["word"]) for w in words]
+    t_start = [None] * len(toks)
+    t_end = [None] * len(toks)
+    heard = [None] * len(toks)
+    sm = difflib.SequenceMatcher(None, sn, wn, autojunk=False)
+    for op, i1, i2, j1, j2 in sm.get_opcodes():
+        if op == "equal":
+            for k in range(i2 - i1):
+                w = words[j1 + k]
+                t_start[i1 + k], t_end[i1 + k], heard[i1 + k] = w["start"], w["end"], w["word"]
+        elif op == "replace" and j2 > j1:
+            a, e = words[j1]["start"], words[j2 - 1]["end"]
+            n = i2 - i1
+            for k in range(n):
+                t_start[i1 + k] = a + (e - a) * k / n
+                t_end[i1 + k] = a + (e - a) * (k + 1) / n
+            # numbers: keep whisper's digits ("1912") for the captions
+            if any(any(ch.isdigit() for ch in wn[j]) for j in range(j1, j2)):
+                heard[i1] = "".join(words[j]["word"] for j in range(j1, j2))
+                for k in range(1, n):
+                    heard[i1 + k] = ""
+    # interpolate anything still missing between known neighbours
+    known = [i for i in range(len(toks)) if t_start[i] is not None]
+    for i in range(len(toks)):
+        if t_start[i] is None:
+            prev = max([k for k in known if k < i], default=None)
+            nxt = min([k for k in known if k > i], default=None)
+            a = t_end[prev] if prev is not None else (words[0]["start"] if words else 0)
+            e = t_start[nxt] if nxt is not None else (words[-1]["end"] if words else a + 0.3)
+            span = (nxt if nxt is not None else len(toks)) - (prev if prev is not None else -1)
+            pos = i - (prev if prev is not None else -1)
+            t_start[i] = a + (e - a) * (pos - 1) / span
+            t_end[i] = a + (e - a) * pos / span
+    return [(toks[i], round(t_start[i], 3), round(t_end[i], 3), heard[i]) for i in range(len(toks))]
+
+
+def tts_piper(beats, linedir: Path):
+    from piper import PiperVoice, SynthesisConfig
+
+    voice = PiperVoice.load(str(ROOT / "models" / "piper" / "en_US-ryan-high.onnx"))
+    cfg = SynthesisConfig(length_scale=PACING.get("voiceLengthScale", 0.9), noise_scale=0.6, noise_w_scale=0.7)
+    linedir.mkdir(parents=True, exist_ok=True)
+    for b in beats:
+        with wave.open(str(linedir / f"{b['id']}.wav"), "wb") as wf:
+            voice.synthesize_wav(b["say"], wf, syn_config=cfg)
+        print(f"  piper {b['id']}: {wav_seconds(linedir / (b['id'] + '.wav')):.2f}s")
+
+
 def main():
     vdir = (ROOT / sys.argv[1]).resolve()
     retts = "--retts" in sys.argv
     recording = "--recording" in sys.argv
     meta, beats = parse_scenes(vdir / "scenes.txt")
     slug = meta.get("slug", vdir.name)
+    cut_mode = any(b["cuts"] for b in beats)
     tmp = ROOT / ".cache" / "tmp"
     tmp.mkdir(parents=True, exist_ok=True)
     linedir = vdir / "voice-lines"
+    lead, tail = (0.25, 0.8) if cut_mode else (0.45, 1.1)
 
     # ── 2. voice ──
     if not recording:
         missing = [b for b in beats if retts or not (linedir / f"{b['id']}.wav").exists()]
         if missing:
-            lj = tmp / "lines.json"
-            lj.write_text(json.dumps([{"id": b["id"], "say": b["say"]} for b in missing]), encoding="utf-8")
-            run(["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", str(ROOT / "tools" / "tts_placeholder.ps1"), str(lj), str(linedir), "Microsoft David Desktop", "3"])
-        # join: lead + line + gap + line ... + tail, record where each line sits
-        t = LEAD
+            if meta.get("voice") == "piper":
+                tts_piper(missing, linedir)
+            else:
+                lj = tmp / "lines.json"
+                lj.write_text(json.dumps([{"id": b["id"], "say": b["say"]} for b in missing]), encoding="utf-8")
+                run(["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", str(ROOT / "tools" / "tts_placeholder.ps1"), str(lj), str(linedir), "Microsoft David Desktop", "3"])
+        t = lead
         parts, inputs = [], []
-        for b in beats:
+        for i, b in enumerate(beats):
+            if i > 0:
+                t += b["pause"]
             d = wav_seconds(linedir / f"{b['id']}.wav")
             b["voiceStart"], b["voiceEnd"] = round(t, 3), round(t + d, 3)
-            t += d + GAP
-        total = beats[-1]["voiceEnd"] + TAIL
-        # build with ffmpeg: adelay each line to its start, then mix
+            t += d
+        total = beats[-1]["voiceEnd"] + tail
         for i, b in enumerate(beats):
             inputs += ["-i", str(linedir / f"{b['id']}.wav")]
             ms = int(b["voiceStart"] * 1000)
@@ -102,9 +197,6 @@ def main():
     # ── 3. word timings ──
     from faster_whisper import WhisperModel
 
-    import numpy as np
-
-    # decode with ffmpeg ourselves (16 kHz mono float) - avoids a PyAV version mismatch
     pcm = subprocess.run(["ffmpeg", "-v", "error", "-i", str(vdir / "voice.wav"), "-f", "s16le", "-ac", "1", "-ar", "16000", "-"], capture_output=True, check=True).stdout
     audio = np.frombuffer(pcm, np.int16).astype(np.float32) / 32768.0
     model = WhisperModel("small", device="cpu", compute_type="int8")
@@ -114,7 +206,6 @@ def main():
 
     # ── 4. beats timing ──
     if recording:
-        # align beats by walking the transcript: each beat starts at the first word of its text
         wi = 0
         for b in beats:
             first = norm(b["say"].split()[0])
@@ -125,42 +216,107 @@ def main():
             nxt = beats[i + 1]["voiceStart"] if i + 1 < len(beats) else total
             inside = [w for w in words if b["voiceStart"] <= w["start"] < nxt]
             b["voiceEnd"] = inside[-1]["end"] if inside else nxt
+    lead_cut = 0.08 if cut_mode else 0.12
     for i, b in enumerate(beats):
-        # each beat (shot) starts a little before its line and runs until the next one starts
-        b["start"] = 0.0 if i == 0 else round(b["voiceStart"] - 0.12, 3)
-        b["end"] = round(beats[i + 1]["voiceStart"] - 0.12, 3) if i + 1 < len(beats) else round(total, 3)
+        b["start"] = 0.0 if i == 0 else round(b["voiceStart"] - lead_cut, 3)
+        b["end"] = round(beats[i + 1]["voiceStart"] - lead_cut, 3) if i + 1 < len(beats) else round(total, 3)
         b["words"] = [w for w in words if b["voiceStart"] - 0.05 <= w["start"] < b["voiceEnd"] + 0.05]
         cue = norm(b.get("cue", ""))
         kw = norm(b.get("keyword", ""))
 
-        def is_cue(word: str) -> bool:
+        def is_cue(word: str, cue=cue, kw=kw) -> bool:
             n = norm(word)
             if not n:
                 return False
             if cue and n.startswith(cue[:5]):
                 return True
-            # whisper writes numbers as digits ("20", "1894", "46 ,000"): match the keyword's digits
             return n.isdigit() and kw.isdigit() and kw.startswith(n)
 
         hit = next((w for w in b["words"] if is_cue(w["word"])), None)
         b["cueAt"] = round(hit["start"], 3) if hit else round(b["voiceStart"], 3)
-        if cue and not hit:
-            print(f"  note: cue '{b['cue']}' not heard in {b['id']}; keyword pops at line start")
 
-    data = {"slug": slug, "format": meta.get("format", "short"), "world": meta.get("world"), "fps": FPS, "duration": round(total, 3), "beats": beats}
+        # cuts: each starts on its cue word (script aligned to the heard words, in order)
+        b["aligned"] = align(b["say"], b["words"])
+        si = 0
+        for ci, c in enumerate(b["cuts"]):
+            target = norm(c["cue"])
+            found = next((j for j in range(si, len(b["aligned"])) if norm(b["aligned"][j][0]) == target), None)
+            if found is None:
+                found = next((j for j in range(si, len(b["aligned"])) if norm(b["aligned"][j][0]).startswith(target[:4])), None)
+            if ci == 0:
+                c["start"] = b["start"]
+            elif found is not None:
+                c["start"] = round(max(b["start"], b["aligned"][found][1] - 0.04), 3)
+            else:
+                c["start"] = round(b["start"] + (b["end"] - b["start"]) * ci / len(b["cuts"]), 3)
+                print(f"  note: cue '{c['cue']}' not in the line of {b['id']}; cut placed evenly")
+            if found is not None:
+                si = found + 1
+        for ci, c in enumerate(b["cuts"]):
+            c["end"] = b["cuts"][ci + 1]["start"] if ci + 1 < len(b["cuts"]) else b["end"]
+            c["face"] = c.get("face", b.get("face", "neutral"))
+            c["tr"] = c.get("tr", "cut")
+            if c["end"] - c["start"] < PACING.get("minShot", 0.45) - 0.05:
+                print(f"  warn: {b['id']} cut '{c['cue']}' is only {c['end'] - c['start']:.2f}s")
+
+    # caption words (word-by-word mode): emphasis from `emph:` + any word with digits
+    cap = []
+    for b in beats:
+        emph = {norm(e) for e in b["emph"]}
+        for tok, a, e, heard in b.get("aligned") or [(w["word"], w["start"], w["end"], w["word"]) for w in b["words"]]:
+            if heard == "":
+                continue  # folded into a number shown on the previous token
+            text = heard if heard and any(ch.isdigit() for ch in heard) else tok
+            text = re.sub(r"[^\w'’?,\-]", "", text).strip(",")
+            if not text:
+                continue
+            # numbers read better with thousands separators (but leave years like 1894 / 1912 alone)
+            if text.isdigit() and len(text) >= 4 and not (1800 <= int(text) <= 2099):
+                text = f"{int(text):,}"
+            n = norm(text)
+            cap.append({"text": text, "start": a, "end": e, "emph": bool(n in emph or norm(tok) in emph or any(ch.isdigit() for ch in n))})
+    data = {"slug": slug, "format": meta.get("format", "short"), "world": meta.get("world"), "fps": FPS, "duration": round(total, 3), "beats": beats, "captionWords": cap}
     (vdir / "scenes.json").write_text(json.dumps(data, indent=1), encoding="utf-8")
 
-    # ── 5. mix: voice + sea ambience (generated), ducked, -14 LUFS ──
+    # ── 5. audio mix ──
     mix = vdir / "mix.wav"
     pre = tmp / "premix.wav"
-    filt = (
-        f"anoisesrc=color=brown:amplitude=0.6:duration={total:.3f}:sample_rate=48000,lowpass=f=520,highpass=f=40,"
-        f"volume=-24dB,tremolo=f=0.12:d=0.5[amb];"
-        f"[0]asplit=2[v][sc];[amb][sc]sidechaincompress=threshold=0.03:ratio=6:attack=20:release=400[duck];"
-        f"[v][duck]amix=inputs=2:normalize=0[out]"
-    )
-    run(["ffmpeg", "-v", "error", "-y", "-i", str(vdir / "voice.wav"), "-filter_complex", filt, "-map", "[out]", "-ar", "48000", "-ac", "2", str(pre)])
-    # two-pass loudness: measure, then apply exact gain + true-peak limiter (one-pass undershoots on short clips)
+    if cut_mode:
+        sfx = load_sfx()
+        events = []
+        for b in beats:
+            for c in b["cuts"]:
+                if c.get("fx"):
+                    events.append((c["start"] + {"whoosh": -0.1, "stamp": 0.32}.get(c["fx"], 0.0), c["fx"]))  # stamp lands at 0.32 s
+                if c["tr"] == "whip" and c.get("fx") != "whoosh":
+                    events.append((c["start"] - 0.12, "whoosh"))
+                if c["tr"] == "flash":
+                    events.append((c["start"], "tick"))
+        fx_track = sfx.render_events(events, total)
+        segs = []
+        for b in beats:
+            mood = "tense" if b.get("preset") in ("night", "storm") else "light"
+            if segs and segs[-1][2] == mood:
+                segs[-1] = (segs[-1][0], b["end"], mood)
+            else:
+                segs.append((b["start"], b["end"], mood))
+        music = sfx.music_bed(segs, total)
+        write_wav(tmp / "fx.wav", fx_track)
+        write_wav(tmp / "music.wav", music)
+        filt = (
+            "[1]volume=-17dB[mus];[0]asplit=2[v][sc];[mus][sc]sidechaincompress=threshold=0.04:ratio=5:attack=15:release=350[duck];"
+            "[2]volume=-4dB[fx];[v][duck][fx]amix=inputs=3:normalize=0[out]"
+        )
+        run(["ffmpeg", "-v", "error", "-y", "-i", str(vdir / "voice.wav"), "-i", str(tmp / "music.wav"), "-i", str(tmp / "fx.wav"), "-filter_complex", filt, "-map", "[out]", "-ar", "48000", "-ac", "2", "-t", f"{total:.3f}", str(pre)])
+        print(f"  sfx: {len(events)} events; music: {', '.join(f'{m} {a:.1f}-{e:.1f}s' for a, e, m in segs)}")
+    else:
+        filt = (
+            f"anoisesrc=color=brown:amplitude=0.6:duration={total:.3f}:sample_rate=48000,lowpass=f=520,highpass=f=40,"
+            f"volume=-24dB,tremolo=f=0.12:d=0.5[amb];"
+            f"[0]asplit=2[v][sc];[amb][sc]sidechaincompress=threshold=0.03:ratio=6:attack=20:release=400[duck];"
+            f"[v][duck]amix=inputs=2:normalize=0[out]"
+        )
+        run(["ffmpeg", "-v", "error", "-y", "-i", str(vdir / "voice.wav"), "-filter_complex", filt, "-map", "[out]", "-ar", "48000", "-ac", "2", str(pre)])
     meas = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", str(pre), "-af", "ebur128=peak=true", "-f", "null", "-"], capture_output=True, text=True).stderr
     summary = meas[meas.rfind("Summary:"):]
     integ = float(re.search(r"I:\s+(-?[\d.]+) LUFS", summary).group(1))
@@ -174,9 +330,12 @@ def main():
     shutil.copy(vdir / "scenes.json", pub / "scenes.json")
     shutil.copy(mix, pub / "mix.wav")
 
-    print(f"{slug}: {len(beats)} beats, {total:.2f}s ({round(total * FPS)} frames)")
+    ncuts = sum(len(b["cuts"]) for b in beats)
+    print(f"{slug}: {len(beats)} beats, {ncuts} cuts, {total:.2f}s ({round(total * FPS)} frames), {len(words)} words = {len(words) / total:.2f} words/s")
     for b in beats:
-        print(f"  {b['id']}  {b['start']:6.2f}-{b['end']:6.2f}s  voice {b['voiceStart']:6.2f}-{b['voiceEnd']:6.2f}  cue {b['cueAt']:6.2f}  {b['shot']}")
+        print(f"  {b['id']}  {b['start']:6.2f}-{b['end']:6.2f}s  voice {b['voiceStart']:6.2f}-{b['voiceEnd']:6.2f}")
+        for c in b["cuts"]:
+            print(f"      {c['start']:6.2f}-{c['end']:6.2f}  {c['shot']:<18} {c.get('do', '')} {c.get('fx', '')} {c['tr']}")
 
 
 if __name__ == "__main__":

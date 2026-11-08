@@ -122,3 +122,16 @@ Review files: `out/gate2/` (not in git; regenerate with the commands below).
 ### Open (optional)
 - Make headless Chrome use the NVIDIA Quadro P620 (Windows Settings → Display → Graphics → add
   `chrome-headless-shell.exe` → High performance). Owner must do this; then I re-run `npm run gltest`.
+
+### Short v2 (2026-11-08): owner approved script v2 + plan
+- New: style v1.1 (word-by-word captions, accent colour; v1.0 untouched, golden frames unchanged),
+  Piper offline voice (`models/piper/en_US-ryan-high.onnx`, owner-approved download), script↔audio
+  alignment for cues/captions, procedural SFX + music bed (`audio/sfx.py`, no downloads),
+  gesture kit (12 gestures, `engine/characters/gestures.ts`), finger-counting gloves, camera kit
+  (punch-in, push, wide-lens, dutch), 27 cut templates (`engine/shots/cuts.tsx`), `ShortV2`
+  composition with whip-pan blur + flash transitions, new props (boiler room, crate, certificate +
+  APPROVED stamp, rubber stamp, mini boats, 3D labels).
+- Result (720p preview): 32.9 s, 28 cuts (one every 1.2 s vs 4.1 s in v1), 3.1 words/s,
+  -14.0 LUFS, no black/frozen frames, render 158 s (160 ms/frame).
+- Files: `videos/2026-11-08-titanic-lifeboats-v2/` (scenes.txt, script.md, out/preview-v2-720p.mp4).
+- Next: owner review of v2 preview → tweaks → 1080p final → GATE 3.

@@ -1,0 +1,114 @@
+# Scene file: Short #1 v2, Titanic lifeboats (script v2 approved 2026-11-08)
+# Facts and sources: ../2026-11-08-titanic-lifeboats/script.md + review-vs-reference.md
+#
+# One [beat] per spoken line. Beat fields:
+#   speaker  inspector | vo        say    spoken text (spell numbers as spoken)
+#   preset   lighting              pause  silence before this line (s), for reveals (default 0.05)
+#   emph     words shown big + coloured in the word captions (comma separated)
+# Cuts: a new picture starting on a spoken word (the cue). Format:
+#   cut: <cue word> | <shot> | face=<expression> | do=<gesture> | fx=<sound> | tr=<cut|whip|flash>
+# After editing:  python -I tools/build_video.py videos/2026-11-08-titanic-lifeboats-v2
+
+slug: titanic-lifeboats-v2
+format: short
+world: ship-deck
+voice: piper
+
+[beat 1]
+speaker: inspector
+preset: golden
+say: The Titanic carried MORE lifeboats than the law required. So why did more than fifteen hundred people die?
+emph: more, fifteen, hundred, die
+cut: the     | insp-medium   | face=determined | do=tap
+cut: more    | insp-punch    | face=shocked    | do=point   | fx=hit   | tr=cut
+cut: so      | insp-dutch    | face=worried    | do=think   | tr=whip
+cut: die     | ship-sinking  | fx=boom   | tr=whip
+
+[beat 2]
+speaker: vo
+preset: night
+pause: 0.3
+say: It's nineteen twelve. You're a stoker. Night shift.
+emph: nineteen, twelve, stoker
+cut: it's    | furnace-insert | fx=fire | tr=flash
+cut: you're  | stoker-furnace | face=neutral | do=shovel
+cut: night   | stoker-yawn    | face=sad     | do=yawn | tr=cut
+
+[beat 3]
+speaker: vo
+preset: night
+pause: 0.2
+say: Then...
+cut: then    | stoker-yawn-hold | face=neutral
+
+[beat 3b]
+speaker: vo
+preset: night
+pause: 0.55
+say: CRUNCH!
+emph: crunch
+cut: crunch  | iceberg-hit      | fx=crunch | tr=cut
+
+[beat 4]
+speaker: vo
+preset: night
+pause: 0.5
+say: You sprint up on deck and count the lifeboats.
+emph: sprint, count
+cut: you     | stoker-shocked-cu | face=shocked | do=recoil | tr=whip
+cut: up      | run-low           | face=scared  | tr=whip | fx=whoosh
+cut: count   | count-fingers     | face=worried | do=count
+
+[beat 5]
+speaker: vo
+preset: night
+say: Twenty. For over two thousand two hundred people.
+emph: twenty, two, thousand, hundred
+cut: twenty  | fingers-out   | face=shocked | do=panic | fx=boing | tr=cut
+cut: two     | crowd-pile    | fx=pop | tr=whip
+
+[beat 6]
+speaker: vo
+preset: night
+say: Seats for about half of you.
+emph: half
+cut: seats   | crowd-half    | fx=pop | tr=cut
+cut: half    | crowd-stare   | face=sad | tr=cut
+
+[beat 7]
+speaker: vo
+preset: night
+pause: 0.4
+say: But here's the twist. It was totally legal.
+emph: twist, legal
+cut: but     | insp-medium   | face=worried    | do=think | tr=whip
+cut: legal   | stamp         | face=determined | do=stamp | fx=stamp | tr=cut
+
+[beat 8]
+speaker: vo
+preset: night
+say: The rulebook was from eighteen ninety-four, and its biggest size was ten thousand tons and up.
+emph: eighteen, ninety-four, ten, thousand
+cut: the     | rulebook-open  | face=angry | tr=whip | fx=whoosh
+cut: and     | insp-dutch     | face=angry | do=shrug | tr=whip
+cut: ten     | rulebook-row   | fx=ding | tr=cut
+
+[beat 9]
+speaker: vo
+preset: night
+say: Titanic? Forty-six thousand. Same rule. Sixteen boats. She even brought four extra.
+emph: forty-six, thousand, sixteen, four, extra
+cut: titanic | ship-too-big   | face=shocked | fx=boing | tr=cut
+cut: same    | boats-16       | face=angry   | fx=pop | tr=whip
+cut: she     | boats-plus4    | face=happy   | do=thumbsup | fx=ding
+
+[beat 10]
+speaker: inspector
+preset: day
+pause: 0.25
+say: And that's why, today, every passenger ship must carry a lifeboat or life-raft seat for everyone on board.
+emph: today, everyone
+cut: and      | today-medium | face=determined | do=tap  | tr=flash | fx=whoosh
+cut: every    | today-low    | face=happy      | do=point | tr=whip
+cut: lifeboat | today-boat   | tr=cut
+cut: everyone | today-punch  | face=happy      | do=tick | fx=ding | tr=cut

@@ -3,6 +3,7 @@ import * as THREE from "three";
 import { useStaticTexture } from "../assets";
 import { applySceneLight, makeInkPaperMaterial, useFaceLook, useSceneLight } from "../look/faceShader";
 import { style, Toon } from "../look/style";
+import { StampTool } from "../props/Props";
 import { CharacterDef } from "./bible";
 import { cellUV, Expression, eyeCellPos, faceSheetPath, FaceVariant, isHeadFace, MouthSlot } from "./face";
 
@@ -24,6 +25,9 @@ export type Pose = {
   walk?: number; // walk-cycle phase (radians); advance it with time
   stride?: number; // 0 standing, 0.5 walk, 1 run
   noProp?: boolean; // hide the character's hand prop for this shot (e.g. holding something else)
+  fingersL?: number; // digits extended on each glove (0 fist … 4 open)
+  fingersR?: number;
+  holdR?: "stamp"; // something held in the right hand for this shot
 };
 
 const F = style.face;
@@ -265,7 +269,9 @@ const Headgear: React.FC<{ g: CharacterDef["headgear"] }> = ({ g }) => {
 };
 
 // ─── white 4-finger cartoon glove ───────────────────────────────────────────
-const Glove: React.FC = () => (
+// `up` = how many digits are extended (0 = fist … 4 = open hand). Order: index,
+// middle, ring, thumb. Folded digits curl into the palm.
+const Glove: React.FC<{ up?: number }> = ({ up = 4 }) => (
   <group>
     <S p={[0, 0.05, 0]}>
       <cylinderGeometry args={[0.13, 0.105, 0.1, 20]} />
@@ -275,13 +281,16 @@ const Glove: React.FC = () => (
       <sphereGeometry args={[0.13, 20, 16]} />
       <Toon color="#FFFFFF" kind="glove" />
     </S>
-    {[-0.07, 0, 0.07].map((x, i) => (
-      <S key={x} p={[x, -0.17 + (i === 1 ? -0.012 : 0), 0.015]} r={[0.15, 0, -x * 1.2]}>
-        <capsuleGeometry args={[0.034, 0.07, 4, 10]} />
-        <Toon color="#FFFFFF" kind="glove" />
-      </S>
-    ))}
-    <S p={[0.0, -0.06, 0.09]} r={[1.0, 0, 0]}>
+    {[-0.07, 0, 0.07].map((x, i) => {
+      const open = i < up;
+      return (
+        <S key={x} p={[x, open ? -0.17 + (i === 1 ? -0.012 : 0) : -0.13, open ? 0.015 : 0.06]} r={[open ? 0.15 : 1.6, 0, -x * 1.2]} s={open ? 1 : [1, 0.55, 1]}>
+          <capsuleGeometry args={[0.034, 0.07, 4, 10]} />
+          <Toon color="#FFFFFF" kind="glove" />
+        </S>
+      );
+    })}
+    <S p={[0.0, -0.06, 0.09]} r={[up >= 4 ? 1.0 : 1.5, 0, 0]} s={up >= 4 ? 1 : [1, 0.7, 1]}>
       <capsuleGeometry args={[0.036, 0.06, 4, 10]} />
       <Toon color="#FFFFFF" kind="glove" />
     </S>
@@ -342,7 +351,7 @@ const ShovelOnShoulder: React.FC = () => {
   );
 };
 
-const Arm: React.FC<{ side: 1 | -1; sleeve: string; rot: [number, number]; prop?: React.ReactNode }> = ({ side, sleeve, rot, prop }) => (
+const Arm: React.FC<{ side: 1 | -1; sleeve: string; rot: [number, number]; prop?: React.ReactNode; fingers?: number }> = ({ side, sleeve, rot, prop, fingers }) => (
   <group position={[side * 0.41, TORSO_Y + 0.66, 0]} rotation={[-rot[0], 0, side * rot[1]]}>
     <S p={[0, -0.03, 0]}>
       <sphereGeometry args={[0.11, 18, 14]} />
@@ -353,7 +362,7 @@ const Arm: React.FC<{ side: 1 | -1; sleeve: string; rot: [number, number]; prop?
       <Toon color={sleeve} kind="fabric" />
     </S>
     <group position={[0, -0.42, 0]}>
-      <Glove />
+      <Glove up={fingers} />
       {prop}
     </group>
   </group>
@@ -467,8 +476,8 @@ export const Character: React.FC<CharacterProps> = ({ def, expression = "neutral
     <group position={position} rotation={[0, rotationY, 0]} scale={def.body.scale}>
       <group position={[0, bob, 0]} rotation={[lean, 0, 0]}>
         <Body def={def} legSwing={swing} />
-        <Arm side={1} sleeve={def.body.sleeve} rot={armL} prop={def.prop === "clipboard" && !pose.noProp ? <Clipboard /> : null} />
-        <Arm side={-1} sleeve={def.body.sleeve} rot={armR} />
+        <Arm side={1} sleeve={def.body.sleeve} rot={armL} prop={def.prop === "clipboard" && !pose.noProp ? <Clipboard /> : null} fingers={pose.fingersL} />
+        <Arm side={-1} sleeve={def.body.sleeve} rot={armR} fingers={pose.fingersR} prop={pose.holdR === "stamp" ? <StampTool /> : null} />
         {def.prop === "shovel" && !pose.noProp && <ShovelOnShoulder />}
         <group position={[0, HEAD_Y, 0]} rotation={[pose.headNod ?? 0, pose.headYaw ?? 0, pose.headTilt ?? 0]}>
           <Head sheet={faceSheetPath(def.id, v)} variant={v} expression={expression} mouth={mouth} />

@@ -6,6 +6,7 @@ import { FaceSheet, FaceSheetProps } from "./compositions/FaceSheet";
 import { GLInfo } from "./compositions/GLInfo";
 import { LookTest, LookTestProps } from "./compositions/LookTest";
 import { calculateShortMetadata, Short, ShortProps } from "./compositions/Short";
+import { calculateShortV2Metadata, ShortV2, ShortV2Props } from "./compositions/ShortV2";
 import { StressTest } from "./compositions/StressTest";
 import { StyleTest, StyleTestProps } from "./compositions/StyleTest";
 import { TalkTest, TalkTestProps } from "./compositions/TalkTest";
@@ -86,6 +87,16 @@ export const RemotionRoot: React.FC = () => {
         height={1280}
         defaultProps={{ res: 720, slug: "titanic-lifeboats" } as ShortProps}
         calculateMetadata={calculateShortMetadata}
+      />
+      <Composition
+        id="ShortV2"
+        component={ShortV2}
+        durationInFrames={300}
+        fps={30}
+        width={720}
+        height={1280}
+        defaultProps={{ res: 720, slug: "titanic-lifeboats-v2" } as ShortV2Props}
+        calculateMetadata={calculateShortV2Metadata}
       />
       <Composition id="GLInfo" component={GLInfo} durationInFrames={1} fps={30} width={1600} height={240} />
     </>

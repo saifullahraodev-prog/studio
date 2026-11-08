@@ -47,3 +47,26 @@ export const breathe = (cam: CameraState, t: number, amount = 0.02): CameraState
 });
 
 export const progress = (frame: number, start: number, end: number) => interpolate(frame, [start, end], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+
+// punch-in: the shot starts ~30% further out and snaps in with a little overshoot
+// in the first 0.16 s (the "zoom on a stressed word" look), then drifts.
+export const punchIn = (cam: CameraState, t: number, amount = 0.3, dur = 0.16): CameraState => {
+  const p = Math.max(0, Math.min(1, t / dur));
+  const back = 1 + 1.9 * Math.pow(p - 1, 3) + 1.9 * Math.pow(p - 1, 2) * 1; // back-out easing 0 -> 1
+  const k = amount * (1 - Math.min(1.08, back));
+  const d: Vec3 = [cam.position[0] - cam.target[0], cam.position[1] - cam.target[1], cam.position[2] - cam.target[2]];
+  return { ...cam, position: [cam.position[0] + d[0] * k, cam.position[1] + d[1] * k, cam.position[2] + d[2] * k] };
+};
+
+// slow push toward the target over the shot (keeps every frame alive)
+export const push = (cam: CameraState, p: number, amount = 0.08): CameraState => {
+  const k = amount * Math.max(0, Math.min(1, p));
+  return { ...cam, position: [cam.position[0] + (cam.target[0] - cam.position[0]) * k, cam.position[1] + (cam.target[1] - cam.position[1]) * k, cam.position[2] + (cam.target[2] - cam.position[2]) * k] };
+};
+
+// wide-lens close-up: camera `dist` metres in front of a point, facing it (big-head comedy distortion)
+export const wideClose = (face: Vec3, yaw: number, dist = 1.45, fov = 60, height = 0.05): CameraState => ({
+  position: [face[0] + Math.sin(yaw) * dist, face[1] + height, face[2] + Math.cos(yaw) * dist],
+  target: face,
+  fov,
+});
