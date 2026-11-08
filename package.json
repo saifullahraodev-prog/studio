@@ -1,0 +1,33 @@
+{
+  "name": "studio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Rules written in disaster: code-driven 3D animated video pipeline",
+  "type": "module",
+  "scripts": {
+    "studio": "node tools/run.mjs studio src/index.ts",
+    "still": "node tools/run.mjs still src/index.ts",
+    "render": "node tools/run.mjs render src/index.ts",
+    "gltest": "node tools/gltest.mjs",
+    "cleanup": "node tools/cleanup.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@react-three/fiber": "9.3.0",
+    "@remotion/cli": "4.0.541",
+    "@remotion/google-fonts": "4.0.541",
+    "@remotion/three": "4.0.541",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "remotion": "4.0.541",
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.12",
+    "@types/three": "0.180.0",
+    "typescript": "5.9.2"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true
+  }
+}
