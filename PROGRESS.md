@@ -1,6 +1,25 @@
 # PROGRESS
 
-## Current phase: Phase 2 (Style creation), waiting at GATE 2
+## Current phase: Phase 3 (First Short), not started. GATE 2 PASSED 2026-11-08
+
+### GATE 2 result (2026-11-08)
+- Owner approved the look → **`engine/look/style-v1.0.json` is LOCKED** (git tag `style-v1.0`).
+  Face Variant D "Comic" + ink hatching + head outline; PBR bodies; real depth of field.
+- **14 golden frames** in `golden/` (deck × 4 presets, close-ups × 4 presets, wide shot,
+  2 turnarounds, talking frame, 2 face sheets), listed in `golden/manifest.json`.
+- Golden checker: `node tools/golden.mjs check` re-renders and compares (SSIM ≥ 0.985), writes
+  side-by-side diffs to `out/golden-report/`. Baseline re-check: 14/14 SSIM 1.0000 (renders are
+  deterministic). `approve` overwrites the baseline: owner approval only.
+- Still open: code-built bodies vs CC0 rigged models (decide before Phase 4).
+
+### Next: Phase 3 (First Short)
+1. Draft 25–40 s script "POV: you're on the Titanic. Why weren't there enough lifeboats?" with
+   sources → owner approval before anything else.
+2. Placeholder TTS voice + faster-whisper word timings.
+3. Scene file → 720p preview → 1080p final → GATE 3 (record render time + usage).
+
+---
+## History: Phase 2 iterations
 
 ### Look v0.2 (2026-11-08, after owner feedback "variant A, but closer to the reference channels")
 Owner chose face **Variant A**, but wants the look closer to the reference images (big round head,

@@ -61,7 +61,13 @@ Ask before installing anything large, deleting files, or spending money.
   Pass via file: `--props=engine/presets/res-1080.json` (inline JSON breaks on Windows).
 - ~80% of shots from templates (data only), ~20% hand-crafted hero shots (hook, climax, ending).
 - New characters only via the character bible; new places only from the world kit.
-- Keep 10–20 golden frames in `golden/`; check every engine change against them.
+- Keep 10–20 golden frames in `golden/`; check every engine change against them:
+  `node tools/golden.mjs check` (must pass before committing engine changes). Only run
+  `node tools/golden.mjs approve` after the owner approves a new look/version.
+- Current locked look: `engine/look/style-v1.0.json` (GATE 2, 2026-11-08). Never edit it; a look
+  change means a new `style-v1.x.json` + owner approval + new golden frames.
+- Edit files with the Edit/Write tools or Python (UTF-8). Do NOT use PowerShell Get-Content/
+  Set-Content for source edits (Windows PowerShell 5.1 garbles non-ASCII characters).
 
 ## Hardware & rendering (measured Phase 1, 2026-11-08)
 - Actual PC: i5-10300H (4C/8T), 15.6 GB RAM, Intel UHD + NVIDIA Quadro P620.

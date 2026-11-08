@@ -5,12 +5,14 @@ import { BIBLE } from "../../engine/characters/bible";
 import { Character, Pose } from "../../engine/characters/Character";
 import { Expression, FACE_VARIANTS, FaceVariant, VARIANT_NAMES } from "../../engine/characters/face";
 import { CameraRig } from "../../engine/cameras/CameraRig";
+import { EnvMap } from "../../engine/shots/WorldShot";
 
 // Review stills for GATE 2: face variants side by side, and a turnaround.
 const { fontFamily } = loadFont("normal", { weights: ["600"], subsets: ["latin"] });
 
 const StudioLights: React.FC = () => (
   <>
+    <EnvMap intensity={0.55} />
     <hemisphereLight args={["#E8F0FF", "#8A7F70", 1.2]} />
     <directionalLight
       position={[-4, 7, 6]}

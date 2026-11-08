@@ -1,0 +1,22 @@
+{
+  "style": "1.0",
+  "approved": "2026-11-08",
+  "note": "Golden frames approved at GATE 2. Re-render only with owner approval (node tools/golden.mjs approve).",
+  "threshold": 0.985,
+  "frames": [
+    { "id": "01-deck-day", "comp": "StyleTest", "props": { "res": 1080, "preset": "day" }, "frame": 30 },
+    { "id": "02-deck-golden", "comp": "StyleTest", "props": { "res": 1080, "preset": "golden" }, "frame": 30 },
+    { "id": "03-deck-storm", "comp": "StyleTest", "props": { "res": 1080, "preset": "storm" }, "frame": 30 },
+    { "id": "04-deck-night", "comp": "StyleTest", "props": { "res": 1080, "preset": "night" }, "frame": 30 },
+    { "id": "05-close-shocked-day", "comp": "LookTest", "props": { "res": 1080, "option": "both", "preset": "day", "shot": "closeup", "expression": "shocked" }, "frame": 30 },
+    { "id": "06-close-happy-golden", "comp": "LookTest", "props": { "res": 1080, "option": "both", "preset": "golden", "shot": "closeup", "expression": "happy" }, "frame": 30 },
+    { "id": "07-close-scared-night", "comp": "LookTest", "props": { "res": 1080, "option": "both", "preset": "night", "shot": "closeup", "expression": "scared" }, "frame": 30 },
+    { "id": "08-close-angry-storm", "comp": "LookTest", "props": { "res": 1080, "option": "both", "preset": "storm", "shot": "closeup", "expression": "angry" }, "frame": 30 },
+    { "id": "09-wide-determined-day", "comp": "LookTest", "props": { "res": 1080, "option": "both", "preset": "day", "shot": "wide", "expression": "determined" }, "frame": 30 },
+    { "id": "10-turnaround-inspector", "comp": "Turnaround", "props": { "character": "inspector", "variant": "D" }, "frame": 0 },
+    { "id": "11-turnaround-stoker", "comp": "Turnaround", "props": { "character": "stoker", "variant": "D" }, "frame": 0 },
+    { "id": "12-talking", "comp": "TalkTest", "props": { "res": 1080, "variant": "D" }, "frame": 60 },
+    { "id": "13-facesheet-inspector", "comp": "FaceSheet", "props": { "character": "inspector", "variant": "D" }, "frame": 0 },
+    { "id": "14-facesheet-stoker", "comp": "FaceSheet", "props": { "character": "stoker", "variant": "D" }, "frame": 0 }
+  ]
+}

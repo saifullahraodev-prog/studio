@@ -50,14 +50,14 @@ export const RemotionRoot: React.FC = () => {
         fps={30}
         width={1920}
         height={1080}
-        defaultProps={{ character: "inspector", variant: "A" as FaceVariant }}
+        defaultProps={{ character: "inspector", variant: "D" as FaceVariant }}
       />
       <Composition
         id="StyleTest"
         component={StyleTest}
         durationInFrames={90}
         {...vertical}
-        defaultProps={{ res: 720, preset: "day", variant: "A", safeArea: false } as StyleTestProps}
+        defaultProps={{ res: 720, preset: "day", variant: "D", safeArea: false } as StyleTestProps}
         calculateMetadata={({ props }: { props: StyleTestProps }) => verticalSize(props.res)}
       />
       <Composition
@@ -65,7 +65,7 @@ export const RemotionRoot: React.FC = () => {
         component={TalkTest}
         durationInFrames={150}
         {...vertical}
-        defaultProps={{ res: 720, variant: "A" } as TalkTestProps}
+        defaultProps={{ res: 720, variant: "D" } as TalkTestProps}
         calculateMetadata={({ props }: { props: TalkTestProps }) => verticalSize(props.res)}
       />
       <Composition

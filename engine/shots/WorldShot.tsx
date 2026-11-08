@@ -30,7 +30,7 @@ export type WorldShotProps = {
   children: React.ReactNode;
 };
 
-const EnvMap: React.FC<{ intensity: number }> = ({ intensity }) => {
+export const EnvMap: React.FC<{ intensity: number }> = ({ intensity }) => {
   const gl = useThree((s) => s.gl);
   const scene = useThree((s) => s.scene);
   const env = useMemo(() => {
