@@ -14,6 +14,11 @@ bold face, realistic materials, strong lens blur) "with a unique addition". Buil
   hatch = pen crosshatching on the shadow side of head/face that follows the real light;
   rim = face is a raised paper card with an ink edge. Review: `out/look2/options-4.png`
   (plain / hatch / rim / both) and `out/look2/presets-4.png` (both, in 4 presets).
+- **Owner chose BOTH** (hatch + rim). Feedback "drawing feels drawn on the face" → added:
+  relief (features pressed slightly into the surface, lit by the scene), soft occlusion around
+  features, a shared surface sheen, cleaner lines (wobble 0.6, grain 0.1), and the Inspector's
+  glasses are now a real 3D wire prop on the face. Review: `out/look3/compare-face.png`
+  (before | after) and `out/look3/after-4.png`.
 - Not yet updated to v0.2 framing: `StyleTest`, `FaceVariants`, `Turnaround` compositions.
 
 ### GATE 2: owner decisions needed (earlier list; face variant answered: A)

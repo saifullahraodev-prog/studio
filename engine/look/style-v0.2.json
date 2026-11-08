@@ -14,8 +14,8 @@
     "paper": "#F2ECDF",
     "ink": "#2A2A30",
     "accent": "#E0907E",
-    "grainOpacity": 0.18,
-    "wobble": 1.6
+    "grainOpacity": 0.1,
+    "wobble": 0.6
   },
   "face": {
     "cellW": 320,
@@ -26,7 +26,10 @@
     "panelW": 1.08,
     "panelH": 0.8,
     "headPaper": "#E2D9C6",
-    "shading": { "hatch": true, "rim": true }
+    "shading": { "hatch": true, "rim": true },
+    "relief": 0.5,
+    "occlusion": 0.3,
+    "sheen": 0.18
   },
   "dof": {
     "mode": "real",

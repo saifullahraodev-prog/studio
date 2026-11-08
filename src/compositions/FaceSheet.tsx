@@ -1,4 +1,4 @@
-import { AbsoluteFill } from "remotion";
+﻿import { AbsoluteFill } from "remotion";
 import { BIBLE } from "../../engine/characters/bible";
 import { FaceSheetSvg, FaceVariant } from "../../engine/characters/face";
 
@@ -10,7 +10,8 @@ export const FaceSheet: React.FC<FaceSheetProps> = ({ character, variant }) => {
   const def = BIBLE[character];
   return (
     <AbsoluteFill style={{ backgroundColor: "transparent" }}>
-      <FaceSheetSvg variant={variant} extras={def?.faceExtras} />
+      {/* glasses are a real 3D prop on the face, so they are not drawn into the sheet */}
+      <FaceSheetSvg variant={variant} extras={{ ...def?.faceExtras, glasses: false }} />
     </AbsoluteFill>
   );
 };

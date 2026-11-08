@@ -386,4 +386,10 @@ export const cellUV = (expression: Expression, mouth: MouthSlot) => {
   };
 };
 
+// Eye centre + glasses ring radius in cell pixels (for 3D props placed on the face).
+export const eyeCellPos = (v: FaceVariant) => {
+  const s = LOOK[v].scale;
+  return { dx: EYE_DX * s, y: 128 + (EYE_Y + 2 - 128) * s, ringR: 27 * s };
+};
+
 export const faceSheetPath = (characterId: string, variant: FaceVariant) => `characters/faces/${characterId}-${variant}.png`;

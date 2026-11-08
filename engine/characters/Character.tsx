@@ -4,7 +4,7 @@ import { useStaticTexture } from "../assets";
 import { applySceneLight, makeInkPaperMaterial, useFaceLook, useSceneLight } from "../look/faceShader";
 import { style, Toon } from "../look/style";
 import { CharacterDef } from "./bible";
-import { cellUV, Expression, faceSheetPath, FaceVariant, MouthSlot } from "./face";
+import { cellUV, Expression, eyeCellPos, faceSheetPath, FaceVariant, MouthSlot } from "./face";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Chibi character, v0.2 look: big round head carrying a drawn paper face card,
@@ -115,6 +115,54 @@ const Head: React.FC<{ sheet: string; expression: Expression; mouth: MouthSlot }
           <meshBasicMaterial map={rimTex} color={style.ink.ink} alphaTest={0.5} />
         </mesh>
       )}
+    </group>
+  );
+};
+
+// ─── 3D wire spectacles, sitting on the face (not drawn on it) ──────────────
+const cellToPanel = (px: number, py: number) => ({
+  x: (px / style.face.cellW - 0.5) * F.panelW,
+  y: (0.5 - py / style.face.cellH) * F.panelH + PANEL_YOFF,
+});
+const along = (a: THREE.Vector3, b: THREE.Vector3) => {
+  const d = b.clone().sub(a);
+  const q = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), d.clone().normalize());
+  const e = new THREE.Euler().setFromQuaternion(q);
+  return { mid: a.clone().add(b).multiplyScalar(0.5), len: d.length(), rot: [e.x, e.y, e.z] as [number, number, number] };
+};
+const Spectacles: React.FC<{ variant: FaceVariant }> = ({ variant }) => {
+  const parts = useMemo(() => {
+    const e = eyeCellPos(variant);
+    const r3 = (e.ringR / style.face.cellW) * F.panelW;
+    const R = HR + 0.05;
+    const rings = ([-1, 1] as const).map((sd) => {
+      const p = cellToPanel(style.face.cellW / 2 + sd * e.dx, e.y);
+      const z = Math.sqrt(Math.max(R * R - p.x * p.x - p.y * p.y, 0));
+      const pos = new THREE.Vector3(p.x, p.y, z);
+      const q = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 0, 1), pos.clone().normalize());
+      const rot = new THREE.Euler().setFromQuaternion(q);
+      const inner = new THREE.Vector3(-sd * r3, 0, 0).applyQuaternion(q).add(pos);
+      const outer = new THREE.Vector3(sd * r3, 0.01, 0).applyQuaternion(q).add(pos);
+      const ear = new THREE.Vector3(sd * (HR + 0.015), p.y + 0.03, -0.12);
+      return { pos, rot: [rot.x, rot.y, rot.z] as [number, number, number], inner, outer, ear };
+    });
+    const bridgeTop = rings[0].inner.clone().add(rings[1].inner).multiplyScalar(0.5).add(new THREE.Vector3(0, 0.035, 0.012));
+    return { r3, rings, bridge: [along(rings[0].inner, bridgeTop), along(bridgeTop, rings[1].inner)], temples: rings.map((g) => along(g.outer, g.ear)) };
+  }, [variant]);
+  return (
+    <group>
+      {parts.rings.map((g, i) => (
+        <mesh key={i} position={g.pos} rotation={g.rot} castShadow>
+          <torusGeometry args={[parts.r3, 0.013, 10, 40]} />
+          <Toon color="#24252B" kind="metal" roughness={0.35} />
+        </mesh>
+      ))}
+      {[...parts.bridge, ...parts.temples].map((s, i) => (
+        <mesh key={`s${i}`} position={s.mid} rotation={s.rot} castShadow>
+          <cylinderGeometry args={[0.011, 0.011, s.len, 8]} />
+          <Toon color="#24252B" kind="metal" roughness={0.35} />
+        </mesh>
+      ))}
     </group>
   );
 };
@@ -383,6 +431,7 @@ export const Character: React.FC<CharacterProps> = ({ def, expression = "neutral
         {def.prop === "shovel" && <ShovelOnShoulder />}
         <group position={[0, HEAD_Y, 0]} rotation={[pose.headNod ?? 0, pose.headYaw ?? 0, pose.headTilt ?? 0]}>
           <Head sheet={faceSheetPath(def.id, v)} expression={expression} mouth={mouth} />
+          {def.faceExtras.glasses && <Spectacles variant={v} />}
           <Headgear g={def.headgear} />
         </group>
       </group>
