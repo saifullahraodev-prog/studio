@@ -64,6 +64,7 @@ const EYE_DX = 54;
 const MOUTH_Y = 176;
 
 type VariantLook = {
+  scale: number; // feature scale (bigger + bolder lines)
   radius: number;
   border: number; // ink border width (0 = none)
   browW: number;
@@ -71,9 +72,9 @@ type VariantLook = {
   mouthW: number;
 };
 const LOOK: Record<FaceVariant, VariantLook> = {
-  A: { radius: 74, border: 0, browW: 9, browCap: "round", mouthW: 6 },
-  B: { radius: 54, border: 4, browW: 5, browCap: "round", mouthW: 5 },
-  C: { radius: 34, border: 3, browW: 13, browCap: "butt", mouthW: 7 },
+  A: { scale: 1.24, radius: 84, border: 0, browW: 10, browCap: "round", mouthW: 6.5 },
+  B: { scale: 1, radius: 54, border: 4, browW: 5, browCap: "round", mouthW: 5 },
+  C: { scale: 1, radius: 34, border: 3, browW: 13, browCap: "butt", mouthW: 7 },
 };
 
 const INK = style.ink.ink;
@@ -336,7 +337,7 @@ export const FaceCell: React.FC<{
       </defs>
       <g clipPath={`url(#panel-${uid})`}>
         <rect x={0} y={0} width={W} height={H} fill={PAPER} />
-        <g filter={`url(#wobble-${uid})`}>
+        <g filter={`url(#wobble-${uid})`} transform={`translate(${CX} 128) scale(${L.scale}) translate(${-CX} -128)`}>
           <Extras v={v} x={{ ...extras, glasses: false, mustache: false }} e={e} />
           <Eye v={v} e={e} side={-1} />
           <Eye v={v} e={e} side={1} />

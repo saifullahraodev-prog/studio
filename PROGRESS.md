@@ -2,7 +2,21 @@
 
 ## Current phase: Phase 2 (Style creation), waiting at GATE 2
 
-### GATE 2: owner decisions needed
+### Look v0.2 (2026-11-08, after owner feedback "variant A, but closer to the reference channels")
+Owner chose face **Variant A**, but wants the look closer to the reference images (big round head,
+bold face, realistic materials, strong lens blur) "with a unique addition". Built `style-v0.2.json`:
+- Big sphere head; Variant A features 24% bigger/bolder; face is a paper card wrapped on the head.
+- Realistic (PBR) materials: cloth weave, leather, brass, metal; soft environment reflections.
+- White 4-finger cartoon gloves; brown leather cap for the stoker.
+- Real depth of field (postprocessing), sky painted into the 3D background.
+- Keyword caption moved lower (y 1330 of 1920) so it doesn't cover faces.
+- **Unique addition candidates** (switchable in `style.face.shading`):
+  hatch = pen crosshatching on the shadow side of head/face that follows the real light;
+  rim = face is a raised paper card with an ink edge. Review: `out/look2/options-4.png`
+  (plain / hatch / rim / both) and `out/look2/presets-4.png` (both, in 4 presets).
+- Not yet updated to v0.2 framing: `StyleTest`, `FaceVariants`, `Turnaround` compositions.
+
+### GATE 2: owner decisions needed (earlier list; face variant answered: A)
 1. **Face variant**: A "Ink Dot", B "Bean & Blush" or C "Woodcut" (or a mix, e.g. "A eyes + C brows").
 2. **Approve the look** (or list changes) → I save it as `engine/look/style-v1.0.json` and copy the
    approved stills to `golden/` as the first golden frames.

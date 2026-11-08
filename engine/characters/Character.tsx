@@ -1,15 +1,17 @@
 ﻿import React, { useMemo } from "react";
 import * as THREE from "three";
 import { useStaticTexture } from "../assets";
-import { makeToonGradient, style, Toon } from "../look/style";
+import { applySceneLight, makeInkPaperMaterial, useFaceLook, useSceneLight } from "../look/faceShader";
+import { style, Toon } from "../look/style";
 import { CharacterDef } from "./bible";
 import { cellUV, Expression, faceSheetPath, FaceVariant, MouthSlot } from "./face";
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-// Chunky chibi body, ~2.5 heads tall (head = 1.0 unit). Soft toon shading, no
-// outlines. Head is a rounded cylinder ("marshmallow") so the flat paper face
-// panel sits flush on its front. Root is at the feet, facing +Z.
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─────────────────────────────────────────────────────────────────────────────
+// Chibi character, v0.2 look: big round head carrying a drawn paper face card,
+// soft realistic materials on the body, white 4-finger cartoon gloves.
+// The head + face use the "ink & paper" shader (crosshatched shadow side).
+// Root is at the feet, facing +Z.
+// ─────────────────────────────────────────────────────────────────────────────
 
 export type Pose = {
   armL?: [number, number]; // [forward (x-rot), out (z-rot)] radians, character's left arm
@@ -17,34 +19,39 @@ export type Pose = {
   headYaw?: number;
   headTilt?: number; // roll
   headNod?: number; // pitch (+ = look down)
-  lean?: number; // forward lean of the whole body
-  bob?: number; // vertical offset (breathing / bounce)
+  lean?: number;
+  bob?: number;
 };
 
-const HEAD_R = 0.5;
-const HEAD_STRAIGHT = 0.36; // half-height of the straight (cylindrical) section
-const HEAD_CORNER = 0.14;
-const HEAD_Y = 1.72; // head centre above the feet
+const F = style.face;
+const HR = F.headRadius; // 0.62
+const TORSO_Y = 0.4;
+const HEAD_Y = TORSO_Y + 0.86 + HR * 0.82;
+const PANEL_YOFF = -0.08;
 
-const roundedCylinderProfile = (r: number, halfStraight: number, corner: number, steps = 8) => {
-  const pts: THREE.Vector2[] = [new THREE.Vector2(0, -(halfStraight + corner))];
-  for (let i = 0; i <= steps; i++) {
-    const a = -Math.PI / 2 + (i / steps) * (Math.PI / 2);
-    pts.push(new THREE.Vector2(r - corner + Math.cos(a) * corner, -halfStraight + Math.sin(a) * corner));
+// A rectangle (w x h) wrapped onto the front of a sphere of radius r.
+// UVs stay planar, so the drawing looks undistorted from the front.
+const wrappedPanel = (r: number, w: number, h: number, yOff: number) => {
+  const g = new THREE.PlaneGeometry(w, h, 48, 36);
+  const p = g.attributes.position as THREE.BufferAttribute;
+  const n = new Float32Array(p.count * 3);
+  for (let i = 0; i < p.count; i++) {
+    const x = p.getX(i);
+    const y = p.getY(i) + yOff;
+    const z = Math.sqrt(Math.max(r * r - x * x - y * y, 0));
+    p.setXYZ(i, x, y, z);
+    const l = Math.hypot(x, y, z) || 1;
+    n[i * 3] = x / l;
+    n[i * 3 + 1] = y / l;
+    n[i * 3 + 2] = z / l;
   }
-  for (let i = 0; i <= steps; i++) {
-    const a = (i / steps) * (Math.PI / 2);
-    pts.push(new THREE.Vector2(r - corner + Math.cos(a) * corner, halfStraight + Math.sin(a) * corner));
-  }
-  pts.push(new THREE.Vector2(0, halfStraight + corner));
-  return pts;
+  g.setAttribute("normal", new THREE.BufferAttribute(n, 3));
+  return g;
 };
 
-// Head uses a softer toon ramp so the paper-white head never goes muddy grey.
-let _hg: THREE.DataTexture | null = null;
-const headGradient = () => (_hg ??= makeToonGradient([170, 215, 255]));
-
-const headGeo = new THREE.LatheGeometry(roundedCylinderProfile(HEAD_R, HEAD_STRAIGHT, HEAD_CORNER), 40);
+const headGeo = new THREE.SphereGeometry(HR, 64, 48);
+const panelGeo = { flush: wrappedPanel(HR + 0.004, F.panelW, F.panelH, PANEL_YOFF), raised: wrappedPanel(HR + 0.014, F.panelW, F.panelH, PANEL_YOFF) };
+const rimGeo = wrappedPanel(HR + 0.006, F.panelW * 1.07, F.panelH * 1.09, PANEL_YOFF);
 
 const torsoGeo = (style_: "coat" | "vest" | "shirt") => {
   const flare = style_ === "coat" ? 0.5 : 0.43;
@@ -59,18 +66,11 @@ const torsoGeo = (style_: "coat" | "vest" | "shirt") => {
     [0.12, 0.86],
     [0, 0.86],
   ].map(([x, y]) => new THREE.Vector2(x, y));
-  return new THREE.LatheGeometry(pts, 32);
+  return new THREE.LatheGeometry(pts, 40);
 };
 const TORSO = { coat: torsoGeo("coat"), vest: torsoGeo("vest"), shirt: torsoGeo("shirt") };
-const TORSO_Y = 0.4;
 
-// Face panel: a slice of a cylinder just outside the head's straight section.
-const PANEL_H = style.face.panelHeight;
-const PANEL_R = HEAD_R + 0.006;
-const PANEL_THETA = style.face.panelArc / PANEL_R;
-const panelGeo = new THREE.CylinderGeometry(PANEL_R, PANEL_R, PANEL_H, 24, 1, true, -PANEL_THETA / 2, PANEL_THETA);
-
-const S: React.FC<React.PropsWithChildren<{ p?: [number, number, number]; r?: [number, number, number]; s?: [number, number, number] }>> = ({
+const S: React.FC<React.PropsWithChildren<{ p?: [number, number, number]; r?: [number, number, number]; s?: [number, number, number] | number }>> = ({
   p,
   r,
   s,
@@ -81,56 +81,69 @@ const S: React.FC<React.PropsWithChildren<{ p?: [number, number, number]; r?: [n
   </mesh>
 );
 
-// â”€â”€â”€ face â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-const FacePanel: React.FC<{ sheet: string; expression: Expression; mouth: MouthSlot; tint: string; glow: number }> = ({ sheet, expression, mouth, tint, glow }) => {
+// ─── head + face ────────────────────────────────────────────────────────────
+const Head: React.FC<{ sheet: string; expression: Expression; mouth: MouthSlot }> = ({ sheet, expression, mouth }) => {
+  const light = useSceneLight();
+  const look = useFaceLook();
   const base = useStaticTexture(sheet);
-  const tex = useMemo(() => {
+  const headMat = useMemo(() => makeInkPaperMaterial({ paper: F.headPaper, hatchDensity: 26 }), []);
+  const faceMat = useMemo(() => (base ? makeInkPaperMaterial({ map: base, paper: style.ink.paper, hatchDensity: 20 }) : null), [base]);
+  const rimTex = useMemo(() => {
     if (!base) return null;
     const t = base.clone();
     t.needsUpdate = true;
     return t;
   }, [base]);
-  if (!tex) return null;
+
   const uv = cellUV(expression, mouth);
-  tex.repeat.set(...uv.repeat);
-  tex.offset.set(...uv.offset);
+  applySceneLight(headMat, light, look.hatch);
+  if (faceMat) {
+    applySceneLight(faceMat, light, look.hatch);
+    faceMat.uniforms.uvRepeat.value.set(...uv.repeat);
+    faceMat.uniforms.uvOffset.value.set(...uv.offset);
+  }
+  if (rimTex) {
+    rimTex.repeat.set(...uv.repeat);
+    rimTex.offset.set(...uv.offset);
+  }
   return (
-    <mesh geometry={panelGeo} position={[0, -0.02, 0]}>
-      <meshToonMaterial map={tex} gradientMap={headGradient()} transparent alphaTest={0.5} emissive={tint} emissiveMap={tex} emissiveIntensity={glow} />
-    </mesh>
+    <group>
+      <mesh geometry={headGeo} material={headMat} castShadow receiveShadow />
+      {faceMat && <mesh geometry={look.rim ? panelGeo.raised : panelGeo.flush} material={faceMat} />}
+      {look.rim && rimTex && (
+        <mesh geometry={rimGeo}>
+          <meshBasicMaterial map={rimTex} color={style.ink.ink} alphaTest={0.5} />
+        </mesh>
+      )}
+    </group>
   );
 };
 
-// â”€â”€â”€ headgear â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── headgear (sits low on the round head, like a real helmet/cap) ──────────
 const Headgear: React.FC<{ g: CharacterDef["headgear"] }> = ({ g }) => {
-  const top = HEAD_STRAIGHT + HEAD_CORNER; // head top relative to head centre
   if (g.type === "peakedCap") {
     return (
-      <group position={[0, top - 0.12, 0]}>
-        {/* band */}
+      <group position={[0, 0.27, 0]} scale={1.13}>
         <S p={[0, 0.06, 0]}>
-          <cylinderGeometry args={[0.54, 0.535, 0.13, 36]} />
-          <Toon color={g.band ?? g.color} />
+          <cylinderGeometry args={[0.54, 0.535, 0.13, 48]} />
+          <Toon color={g.band ?? g.color} kind="leather" />
         </S>
-        {/* crown, flaring out (oversized) */}
         <S p={[0, 0.26, -0.03]}>
-          <cylinderGeometry args={[0.66, 0.54, 0.28, 36]} />
-          <Toon color={g.color} />
+          <cylinderGeometry args={[0.68, 0.54, 0.28, 48]} />
+          <Toon color={g.color} kind="wool" />
         </S>
         <S p={[0, 0.4, -0.03]} s={[1, 0.22, 1]}>
-          <sphereGeometry args={[0.66, 36, 16, 0, Math.PI * 2, 0, Math.PI / 2]} />
-          <Toon color={g.color} />
+          <sphereGeometry args={[0.68, 48, 16, 0, Math.PI * 2, 0, Math.PI / 2]} />
+          <Toon color={g.color} kind="wool" />
         </S>
-        {/* peak */}
-        <S p={[0, 0.0, 0.42]} r={[0.32, 0, 0]} s={[1, 1, 0.55]}>
-          <cylinderGeometry args={[0.5, 0.5, 0.045, 32, 1, false, -Math.PI / 2, Math.PI]} />
-          <Toon color="#15171D" />
+        <S p={[0, 0.0, 0.42]} r={[0.3, 0, 0]} s={[1, 1, 0.6]}>
+          <cylinderGeometry args={[0.5, 0.5, 0.045, 40, 1, false, -Math.PI / 2, Math.PI]} />
+          <Toon color="#121318" kind="leather" roughness={0.25} />
         </S>
-        {/* badge */}
         {g.badge && (
-          <S p={[0, 0.25, 0.58]} r={[-0.25, 0, 0]}>
-            <cylinderGeometry args={[0.085, 0.085, 0.03, 6]} />
-            <Toon color={g.badge} emissive={g.badge} emissiveIntensity={0.15} />
+          <S p={[0, 0.25, 0.6]} r={[-0.25, 0, 0]}>
+            <cylinderGeometry args={[0.09, 0.09, 0.03, 6]} />
+            <Toon color={g.badge} kind="brass" />
           </S>
         )}
       </group>
@@ -138,87 +151,92 @@ const Headgear: React.FC<{ g: CharacterDef["headgear"] }> = ({ g }) => {
   }
   if (g.type === "flatCap") {
     return (
-      <group position={[0, top - 0.1, 0.02]}>
+      <group position={[0, 0.27, 0.02]} scale={1.13}>
         <S p={[0, 0.04, 0]}>
-          <cylinderGeometry args={[0.55, 0.535, 0.1, 36]} />
-          <Toon color={g.band ?? g.color} />
+          <cylinderGeometry args={[0.55, 0.535, 0.12, 48]} />
+          <Toon color={g.band ?? g.color} kind="leather" />
         </S>
-        <S p={[0, 0.1, 0.06]} s={[1.08, 0.42, 1.14]}>
-          <sphereGeometry args={[0.6, 36, 18, 0, Math.PI * 2, 0, Math.PI / 2]} />
-          <Toon color={g.color} />
+        <S p={[0, 0.1, 0.06]} s={[1.08, 0.45, 1.14]}>
+          <sphereGeometry args={[0.6, 48, 20, 0, Math.PI * 2, 0, Math.PI / 2]} />
+          <Toon color={g.color} kind="leather" />
         </S>
-        <S p={[0, 0.06, 0.5]} r={[0.18, 0, 0]} s={[0.95, 1, 0.5]}>
-          <cylinderGeometry args={[0.5, 0.5, 0.05, 32, 1, false, -Math.PI / 2, Math.PI]} />
-          <Toon color={g.color} />
+        <S p={[0, 0.06, 0.5]} r={[0.18, 0, 0]} s={[0.95, 1, 0.55]}>
+          <cylinderGeometry args={[0.5, 0.5, 0.05, 40, 1, false, -Math.PI / 2, Math.PI]} />
+          <Toon color={g.color} kind="leather" />
         </S>
-        <S p={[0, 0.22, 0.46]} s={[1, 1, 1]}>
-          <sphereGeometry args={[0.045, 10, 8]} />
-          <Toon color={g.band ?? g.color} />
+        <S p={[0, 0.235, 0.47]}>
+          <sphereGeometry args={[0.045, 12, 10]} />
+          <Toon color={g.band ?? g.color} kind="leather" />
         </S>
       </group>
     );
   }
   // hardHat / helmet: dome with brim
   return (
-    <group position={[0, top - 0.14, 0]}>
-      <S p={[0, 0, 0]} s={[1, 0.85, 1.05]}>
-        <sphereGeometry args={[0.64, 36, 18, 0, Math.PI * 2, 0, Math.PI / 2]} />
-        <Toon color={g.color} />
+    <group position={[0, 0.12, 0]} scale={1.12}>
+      <S s={[1, 0.85, 1.05]}>
+        <sphereGeometry args={[0.66, 48, 24, 0, Math.PI * 2, 0, Math.PI / 2]} />
+        <Toon color={g.color} kind={g.type === "helmet" ? "metal" : "paint"} />
       </S>
-      <S p={[0, 0.0, 0.08]}>
-        <cylinderGeometry args={[0.76, 0.76, 0.05, 36]} />
-        <Toon color={g.color} />
+      <S p={[0, 0, 0.06]}>
+        <cylinderGeometry args={[0.8, 0.8, 0.05, 48]} />
+        <Toon color={g.color} kind={g.type === "helmet" ? "metal" : "paint"} />
       </S>
     </group>
   );
 };
 
-// â”€â”€â”€ arms, gloves, props â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── white 4-finger cartoon glove ───────────────────────────────────────────
 const Glove: React.FC = () => (
   <group>
-    <S p={[0, 0.04, 0]}>
-      <cylinderGeometry args={[0.125, 0.115, 0.08, 16]} />
-      <Toon color="#FFFFFF" />
+    <S p={[0, 0.05, 0]}>
+      <cylinderGeometry args={[0.13, 0.105, 0.1, 20]} />
+      <Toon color="#FFFFFF" kind="glove" />
     </S>
-    <S p={[0, -0.09, 0.01]} s={[1, 1.05, 0.9]}>
-      <sphereGeometry args={[0.135, 18, 14]} />
-      <Toon color="#FFFFFF" />
+    <S p={[0, -0.07, 0.01]} s={[1, 0.85, 0.62]}>
+      <sphereGeometry args={[0.13, 20, 16]} />
+      <Toon color="#FFFFFF" kind="glove" />
     </S>
-    <S p={[0.0, -0.04, 0.11]} s={[0.8, 1, 1]}>
-      <sphereGeometry args={[0.055, 10, 8]} />
-      <Toon color="#FFFFFF" />
+    {[-0.07, 0, 0.07].map((x, i) => (
+      <S key={x} p={[x, -0.17 + (i === 1 ? -0.012 : 0), 0.015]} r={[0.15, 0, -x * 1.2]}>
+        <capsuleGeometry args={[0.034, 0.07, 4, 10]} />
+        <Toon color="#FFFFFF" kind="glove" />
+      </S>
+    ))}
+    <S p={[0.0, -0.06, 0.09]} r={[1.0, 0, 0]}>
+      <capsuleGeometry args={[0.036, 0.06, 4, 10]} />
+      <Toon color="#FFFFFF" kind="glove" />
     </S>
   </group>
 );
 
 const Clipboard: React.FC = () => (
-  <group position={[0, -0.12, 0.2]} rotation={[-0.35, 0, 0]}>
+  <group position={[0, -0.14, 0.22]} rotation={[-0.35, 0, 0]}>
     <S>
-      <boxGeometry args={[0.34, 0.46, 0.03]} />
-      <Toon color="#8C6239" />
+      <boxGeometry args={[0.36, 0.48, 0.03]} />
+      <Toon color="#8C6239" kind="wood" />
     </S>
     <S p={[0, -0.02, 0.018]}>
-      <boxGeometry args={[0.29, 0.38, 0.006]} />
-      <Toon color="#F7F3EA" />
+      <boxGeometry args={[0.3, 0.4, 0.006]} />
+      <Toon color="#F7F3EA" kind="paint" roughness={0.9} />
     </S>
     {[-0.08, -0.02, 0.04, 0.1].map((y) => (
       <S key={y} p={[-0.02, y - 0.04, 0.023]}>
         <boxGeometry args={[0.2, 0.014, 0.002]} />
-        <Toon color="#9AA0AA" />
+        <Toon color="#7A808A" />
       </S>
     ))}
-    <S p={[0, 0.21, 0.025]}>
+    <S p={[0, 0.22, 0.025]}>
       <boxGeometry args={[0.13, 0.06, 0.03]} />
-      <Toon color="#B9BEC6" />
+      <Toon color="#B9BEC6" kind="metal" />
     </S>
   </group>
 );
 
-// Shovel carried over the right shoulder (body space): handle from the right
-// hand in front of the chest, up over the shoulder, blade behind the back.
+// Shovel carried over the right shoulder (body space).
 const shovelPlacement = (() => {
-  const a = new THREE.Vector3(-0.2, 0.88, 0.5); // hand end
-  const b = new THREE.Vector3(-0.85, 1.62, -0.35); // past the shoulder, beside the head
+  const a = new THREE.Vector3(-0.2, 0.88, 0.5);
+  const b = new THREE.Vector3(-0.95, 1.62, -0.35);
   const dir = b.clone().sub(a);
   const len = dir.length();
   dir.normalize();
@@ -233,74 +251,82 @@ const ShovelOnShoulder: React.FC = () => {
   return (
     <group>
       <S p={[mid.x, mid.y, mid.z]} r={rot}>
-        <cylinderGeometry args={[0.035, 0.035, len, 10]} />
-        <Toon color="#8A6440" />
+        <cylinderGeometry args={[0.035, 0.035, len, 12]} />
+        <Toon color="#8A6440" kind="wood" />
       </S>
       <group position={[blade.x, blade.y, blade.z]} rotation={rot}>
         <S r={[0.25, 0, 0]}>
           <boxGeometry args={[0.4, 0.46, 0.035]} />
-          <Toon color="#5C6066" />
+          <Toon color="#5C6066" kind="metal" />
         </S>
       </group>
     </group>
   );
 };
+
 const Arm: React.FC<{ side: 1 | -1; sleeve: string; rot: [number, number]; prop?: React.ReactNode }> = ({ side, sleeve, rot, prop }) => (
   <group position={[side * 0.41, TORSO_Y + 0.66, 0]} rotation={[-rot[0], 0, side * rot[1]]}>
     <S p={[0, -0.03, 0]}>
-      <sphereGeometry args={[0.115, 16, 12]} />
-      <Toon color={sleeve} />
+      <sphereGeometry args={[0.11, 18, 14]} />
+      <Toon color={sleeve} kind="fabric" />
     </S>
     <S p={[0, -0.2, 0]}>
-      <capsuleGeometry args={[0.105, 0.26, 6, 14]} />
-      <Toon color={sleeve} />
+      <capsuleGeometry args={[0.095, 0.26, 6, 16]} />
+      <Toon color={sleeve} kind="fabric" />
     </S>
-    <group position={[0, -0.44, 0]}>
+    <group position={[0, -0.42, 0]}>
       <Glove />
       {prop}
     </group>
   </group>
 );
 
-// â”€â”€â”€ body â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── body ───────────────────────────────────────────────────────────────────
 const Body: React.FC<{ def: CharacterDef }> = ({ def }) => {
   const b = def.body;
   const acc = def.accessories ?? [];
   return (
     <group>
-      {/* legs + shoes */}
       {[-1, 1].map((sd) => (
         <group key={sd} position={[sd * 0.18, 0, 0]}>
           <S p={[0, 0.26, 0]}>
-            <cylinderGeometry args={[0.13, 0.12, 0.36, 14]} />
-            <Toon color={b.legs} />
+            <cylinderGeometry args={[0.13, 0.12, 0.36, 18]} />
+            <Toon color={b.legs} kind="fabric" />
           </S>
           <S p={[0, 0.07, 0.05]} s={[1, 0.62, 1.35]}>
-            <sphereGeometry args={[0.16, 16, 12]} />
-            <Toon color={b.shoes} />
+            <sphereGeometry args={[0.16, 18, 14]} />
+            <Toon color={b.shoes} kind="leather" />
           </S>
         </group>
       ))}
-      {/* torso */}
       <mesh geometry={TORSO[b.torsoStyle]} position={[0, TORSO_Y, 0]} castShadow receiveShadow>
-        <Toon color={b.torso} />
+        <Toon color={b.torso} kind="fabric" />
       </mesh>
-      {/* belt / trim */}
+      {/* collar */}
+      <S p={[0, TORSO_Y + 0.8, 0]} r={[Math.PI / 2, 0, 0]}>
+        <torusGeometry args={[0.24, 0.06, 10, 28]} />
+        <Toon color={b.torso} kind="fabric" />
+      </S>
       <S p={[0, TORSO_Y + 0.3, 0]}>
-        <cylinderGeometry args={[0.455, 0.457, 0.07, 32]} />
-        <Toon color={b.trim} />
+        <cylinderGeometry args={[0.455, 0.457, 0.07, 40]} />
+        <Toon color={b.trim} kind="leather" />
       </S>
       {b.torsoStyle === "coat" && (
         <>
-          {/* coat opening + buttons */}
           <S p={[0, TORSO_Y + 0.45, 0.425]} r={[-0.05, 0, 0]}>
             <boxGeometry args={[0.03, 0.62, 0.02]} />
-            <Toon color={b.trim} />
+            <Toon color={b.trim} kind="fabric" />
           </S>
           {[0.18, 0.46, 0.6].map((y) => (
             <S key={y} p={[0.07, TORSO_Y + y, 0.44 - (y > 0.5 ? 0.02 : 0)]}>
-              <sphereGeometry args={[0.028, 8, 6]} />
-              <Toon color="#3A2C1E" />
+              <sphereGeometry args={[0.028, 10, 8]} />
+              <Toon color="#B8913E" kind="brass" />
+            </S>
+          ))}
+          {[-1, 1].map((sd) => (
+            <S key={sd} p={[sd * 0.25, TORSO_Y + 0.22, 0.43]} r={[-0.1, sd * 0.45, 0]}>
+              <boxGeometry args={[0.2, 0.06, 0.02]} />
+              <Toon color={b.trim} kind="fabric" />
             </S>
           ))}
         </>
@@ -308,26 +334,26 @@ const Body: React.FC<{ def: CharacterDef }> = ({ def }) => {
       {acc.includes("tie") && (
         <S p={[0, TORSO_Y + 0.68, 0.36]} r={[-0.5, 0, Math.PI / 4]}>
           <boxGeometry args={[0.09, 0.09, 0.03]} />
-          <Toon color="#A8322E" />
+          <Toon color="#A8322E" kind="fabric" />
         </S>
       )}
       {acc.includes("badge") && (
         <S p={[-0.22, TORSO_Y + 0.58, 0.39]} r={[-0.35, -0.35, 0]}>
           <cylinderGeometry args={[0.06, 0.06, 0.02, 5]} />
-          <Toon color="#E2B84A" emissive="#E2B84A" emissiveIntensity={0.15} />
+          <Toon color="#E2B84A" kind="brass" />
         </S>
       )}
       {acc.includes("suspenders") &&
         [-1, 1].map((sd) => (
           <S key={sd} p={[sd * 0.2, TORSO_Y + 0.47, 0.41]} r={[-0.2, 0, sd * 0.05]}>
             <boxGeometry args={[0.06, 0.62, 0.02]} />
-            <Toon color={b.trim} />
+            <Toon color={b.trim} kind="leather" />
           </S>
         ))}
       {acc.includes("neckerchief") && (
-        <S p={[0, TORSO_Y + 0.8, 0.14]} r={[0.5, 0, 0]}>
-          <torusGeometry args={[0.2, 0.05, 8, 20]} />
-          <Toon color="#B5432F" />
+        <S p={[0, TORSO_Y + 0.82, 0.12]} r={[0.5 + Math.PI / 2, 0, 0]}>
+          <torusGeometry args={[0.22, 0.055, 10, 24]} />
+          <Toon color="#B5432F" kind="fabric" />
         </S>
       )}
     </group>
@@ -342,37 +368,21 @@ export type CharacterProps = {
   position?: [number, number, number];
   rotationY?: number;
   faceVariant?: FaceVariant;
-  faceTint?: string; // colour faces glow with (keeps faces readable in dark scenes)
-  faceGlow?: number;
 };
 
-export const Character: React.FC<CharacterProps> = ({
-  def,
-  expression = "neutral",
-  mouth = "rest",
-  pose = {},
-  position = [0, 0, 0],
-  rotationY = 0,
-  faceVariant,
-  faceTint = "#FFFFFF",
-  faceGlow = 0,
-}) => {
+export const Character: React.FC<CharacterProps> = ({ def, expression = "neutral", mouth = "rest", pose = {}, position = [0, 0, 0], rotationY = 0, faceVariant }) => {
   const v = faceVariant ?? def.faceVariant;
   const armL = pose.armL ?? [0.05, 0.18];
-  const prop = def.prop === "clipboard" ? <Clipboard /> : null;
   const armR = def.prop === "shovel" ? pose.armR ?? [0.95, 0.12] : pose.armR ?? [0.05, 0.18];
   return (
     <group position={position} rotation={[0, rotationY, 0]} scale={def.body.scale}>
       <group position={[0, pose.bob ?? 0, 0]} rotation={[pose.lean ?? 0, 0, 0]}>
         <Body def={def} />
-        <Arm side={1} sleeve={def.body.sleeve} rot={armL} prop={def.prop === "clipboard" ? prop : null} />
+        <Arm side={1} sleeve={def.body.sleeve} rot={armL} prop={def.prop === "clipboard" ? <Clipboard /> : null} />
         <Arm side={-1} sleeve={def.body.sleeve} rot={armR} />
         {def.prop === "shovel" && <ShovelOnShoulder />}
         <group position={[0, HEAD_Y, 0]} rotation={[pose.headNod ?? 0, pose.headYaw ?? 0, pose.headTilt ?? 0]}>
-          <mesh geometry={headGeo} castShadow receiveShadow>
-            <meshToonMaterial color={style.ink.paper} gradientMap={headGradient()} emissive={faceTint} emissiveIntensity={faceGlow * 0.85} />
-          </mesh>
-          <FacePanel sheet={faceSheetPath(def.id, v)} expression={expression} mouth={mouth} tint={faceTint} glow={faceGlow} />
+          <Head sheet={faceSheetPath(def.id, v)} expression={expression} mouth={mouth} />
           <Headgear g={def.headgear} />
         </group>
       </group>
@@ -380,4 +390,5 @@ export const Character: React.FC<CharacterProps> = ({
   );
 };
 
-export const CHARACTER_HEIGHT = 2.55; // feet to top of cap, for framing
+export const CHARACTER_HEIGHT = HEAD_Y + HR + 0.3; // feet to top of cap, for framing
+export const HEAD_HEIGHT = HEAD_Y;

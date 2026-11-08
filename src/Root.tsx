@@ -4,6 +4,7 @@ import { FaceVariants, Turnaround } from "./compositions/CharacterSheets";
 import { ResProps, verticalSize } from "../engine/look/units";
 import { FaceSheet, FaceSheetProps } from "./compositions/FaceSheet";
 import { GLInfo } from "./compositions/GLInfo";
+import { LookTest, LookTestProps } from "./compositions/LookTest";
 import { StressTest } from "./compositions/StressTest";
 import { StyleTest, StyleTestProps } from "./compositions/StyleTest";
 import { TalkTest, TalkTestProps } from "./compositions/TalkTest";
@@ -66,6 +67,14 @@ export const RemotionRoot: React.FC = () => {
         {...vertical}
         defaultProps={{ res: 720, variant: "A" } as TalkTestProps}
         calculateMetadata={({ props }: { props: TalkTestProps }) => verticalSize(props.res)}
+      />
+      <Composition
+        id="LookTest"
+        component={LookTest}
+        durationInFrames={90}
+        {...vertical}
+        defaultProps={{ res: 720, option: "both", preset: "day", shot: "closeup", expression: "shocked" } as LookTestProps}
+        calculateMetadata={({ props }: { props: LookTestProps }) => verticalSize(props.res)}
       />
       <Composition id="GLInfo" component={GLInfo} durationInFrames={1} fps={30} width={1600} height={240} />
     </>

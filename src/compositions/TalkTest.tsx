@@ -1,4 +1,4 @@
-import { useCurrentFrame, useVideoConfig } from "remotion";
+﻿import { useCurrentFrame, useVideoConfig } from "remotion";
 import { BIBLE } from "../../engine/characters/bible";
 import { Character } from "../../engine/characters/Character";
 import { FaceVariant } from "../../engine/characters/face";
@@ -29,7 +29,7 @@ export const TalkTest: React.FC<TalkTestProps> = ({ variant }) => {
   ];
   const nod = Math.sin(t * 5) * (mouth === "rest" ? 0 : 0.025);
   return (
-    <WorldShot preset={p} camera={{ position: [0.9, 2.15, 5.6], target: [0.6, 1.75, 0], fov: 34 }} focus={[0.5, 0, 1]} captions={beats}>
+    <WorldShot preset={p} camera={{ position: [0.9, 2.15, 5.6], target: [0.6, 1.75, 0], fov: 34 }} focus={[0.5, 1.8, 1.2]} captions={beats}>
       <ShipDeck preset={p} />
       <Character
         def={BIBLE.inspector}

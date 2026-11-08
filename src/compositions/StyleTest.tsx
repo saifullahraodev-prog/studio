@@ -31,7 +31,8 @@ export const StyleTest: React.FC<StyleTestProps> = ({ preset, variant, safeArea 
     <WorldShot
       preset={p}
       camera={{ position: [0.2, 2.7, 11.5], target: [0.9, 2.1, 0], fov: 36 }}
-      focus={[1.2, 0, 1]}
+      focus={[0.8, 1.8, 1.1]}
+      focusRange={3.5}
       captions={[{ ...b.caption, from: frame - 20 }]}
       showSafeArea={safeArea}
     >
@@ -43,8 +44,6 @@ export const StyleTest: React.FC<StyleTestProps> = ({ preset, variant, safeArea 
         position={[0.05, 0, 1.4]}
         rotationY={0.45}
         pose={{ armL: [0.95, 0.2], armR: [0.1, 0.25], headYaw: 0.1, bob: breathe }}
-        faceTint={p.faceTint}
-        faceGlow={p.faceGlow}
       />
       <Character
         def={BIBLE.stoker}
@@ -53,8 +52,6 @@ export const StyleTest: React.FC<StyleTestProps> = ({ preset, variant, safeArea 
         position={[1.55, 0, 0.8]}
         rotationY={-0.35}
         pose={{ headYaw: -0.15, bob: -breathe }}
-        faceTint={p.faceTint}
-        faceGlow={p.faceGlow}
       />
     </WorldShot>
   );
