@@ -1,14 +1,14 @@
-﻿import React, { useMemo } from "react";
+import React, { useMemo } from "react";
 import * as THREE from "three";
 import { LightingPreset, Toon } from "../../look/style";
 import { Sea } from "../Sea";
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─────────────────────────────────────────────────────────────────────────────
 // World kit: SHIP DECK (early-1900s liner promenade / boat deck).
 // Coordinates: deck surface y = 0. The deck runs along -Z (towards the bow).
 // Railing (sea side) at x = +RAIL_X, deckhouse wall at x = -WALL_X.
 // Camera-friendly character spot: around x 0..2.5, z 0..2.
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─────────────────────────────────────────────────────────────────────────────
 
 export const RAIL_X = 3.2;
 export const WALL_X = 3.4;

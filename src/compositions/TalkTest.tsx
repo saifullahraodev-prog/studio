@@ -1,4 +1,4 @@
-﻿import { useCurrentFrame, useVideoConfig } from "remotion";
+import { useCurrentFrame, useVideoConfig } from "remotion";
 import { BIBLE } from "../../engine/characters/bible";
 import { Character } from "../../engine/characters/Character";
 import { FaceVariant } from "../../engine/characters/face";

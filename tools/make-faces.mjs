@@ -10,7 +10,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const chars = process.argv.slice(2).length
   ? process.argv.slice(2)
   : readdirSync(path.join(root, "engine", "characters")).filter((f) => f.endsWith(".json")).map((f) => f.replace(".json", ""));
-const variants = ["A", "B", "C"];
+const variants = ["A", "B", "C", "D"];
 const outDir = path.join(root, "public", "characters", "faces");
 const tmp = path.join(root, ".cache", "tmp");
 mkdirSync(outDir, { recursive: true });

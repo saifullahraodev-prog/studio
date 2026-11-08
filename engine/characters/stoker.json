@@ -1,8 +1,8 @@
-﻿{
+{
   "id": "stoker",
   "name": "Stoker",
   "role": "Boiler-room worker shovelling coal (Titanic and other steamships).",
-  "faceVariant": "A",
+  "faceVariant": "D",
   "faceExtras": { "soot": true, "stubble": true },
   "body": {
     "torso": "#6E7480",

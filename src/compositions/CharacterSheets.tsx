@@ -1,4 +1,4 @@
-﻿import { loadFont } from "@remotion/google-fonts/Fredoka";
+import { loadFont } from "@remotion/google-fonts/Fredoka";
 import { ThreeCanvas } from "@remotion/three";
 import { AbsoluteFill, useVideoConfig } from "remotion";
 import { BIBLE } from "../../engine/characters/bible";

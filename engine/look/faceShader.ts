@@ -2,12 +2,12 @@
 import * as THREE from "three";
 import { style } from "./style";
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─────────────────────────────────────────────────────────────────────────────
 // "Ink & paper" shading for heads and face panels: the channel's signature.
 // Instead of the usual flat grey half-shadow, the dark side of a head is drawn
 // as pen crosshatching on paper, following the real 3D light direction.
 // Options (style file `face.shading`): hatch on/off, card rim on/off.
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─────────────────────────────────────────────────────────────────────────────
 
 export type SceneLight = {
   dir: [number, number, number]; // direction TO the light (world)
@@ -29,11 +29,13 @@ const vert = /* glsl */ `
   varying vec3 vN;
   varying vec2 vPanel;
   varying vec3 vWorld;
+  varying vec3 vObj;
   uniform vec2 uvRepeat;
   uniform vec2 uvOffset;
   void main() {
     vPanel = uv;
     vWorld = (modelMatrix * vec4(position, 1.0)).xyz;
+    vObj = position;   // head-local position: hatch strokes run continuously over head + face
     vUv = uv * uvRepeat + uvOffset;
     vN = normalize(mat3(modelMatrix) * normal);
     gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
@@ -59,6 +61,7 @@ const frag = /* glsl */ `
   varying vec3 vN;
   varying vec2 vPanel;
   varying vec3 vWorld;
+  varying vec3 vObj;
 
   // 1 where there is ink (dark drawing), 0 on bare paper
   float inkAt(vec2 uv) {
@@ -133,9 +136,10 @@ const frag = /* glsl */ `
       float s1 = 1.0 - smoothstep(-0.32, -0.12, ndl);   // only surfaces turned away get strokes
       float s2 = 1.0 - smoothstep(-0.7, -0.45, ndl);    // cross-hatch only in the deepest shadow
       // hand-drawn wobble so the hatching reads as pen strokes, not a screen pattern
-      float wob = sin(vPanel.y * 37.0 + vPanel.x * 11.0) * 0.18 + sin(vPanel.x * 53.0) * 0.1;
-      float h1 = lines((vPanel.x * 1.3 + vPanel.y) * hatchDensity + wob, 0.13) * s1;
-      float h2 = lines((vPanel.x * 1.3 - vPanel.y) * hatchDensity * 0.85 - wob, 0.12) * s2;
+      vec2 hp = vObj.xy + vec2(vObj.z * 0.6, 0.0);
+      float wob = sin(hp.y * 30.0 + hp.x * 9.0) * 0.18 + sin(hp.x * 43.0) * 0.1;
+      float h1 = lines((hp.x * 1.3 + hp.y) * hatchDensity + wob, 0.13) * s1;
+      float h2 = lines((hp.x * 1.3 - hp.y) * hatchDensity * 0.85 - wob, 0.12) * s2;
       float h = clamp(h1 + h2, 0.0, 1.0);
       col = mix(col, ink * light * 0.9, h * 0.62);
       col *= 1.0 + 0.08 * s1;  // hatched paper stays lighter than flat grey

@@ -1,4 +1,4 @@
-﻿import { useMemo } from "react";
+import { useMemo } from "react";
 import { useCurrentFrame, useVideoConfig } from "remotion";
 import * as THREE from "three";
 import { toonGradient } from "../look/style";

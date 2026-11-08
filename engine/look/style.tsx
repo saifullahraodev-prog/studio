@@ -1,4 +1,4 @@
-﻿import { useMemo } from "react";
+import { useMemo } from "react";
 import * as THREE from "three";
 import styleJson from "./style-v0.2.json";
 

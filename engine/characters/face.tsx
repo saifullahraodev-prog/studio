@@ -1,20 +1,23 @@
-﻿import React from "react";
+import React from "react";
 import { style } from "../look/style";
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─────────────────────────────────────────────────────────────────────────────
 // Drawn face panels. A face is a flat "paper" card (off-white, rounded square,
 // charcoal ink, paper grain) that is mapped onto the 3D head. Expressions and
 // mouth shapes are image swaps from a sprite sheet generated from this file.
 // Our own design; deliberately NOT a white round circle face.
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─────────────────────────────────────────────────────────────────────────────
 
-export const FACE_VARIANTS = ["A", "B", "C"] as const;
+export const FACE_VARIANTS = ["A", "B", "C", "D"] as const;
 export type FaceVariant = (typeof FACE_VARIANTS)[number];
 export const VARIANT_NAMES: Record<FaceVariant, string> = {
   A: "Ink Dot",
   B: "Bean & Blush",
   C: "Woodcut",
+  D: "Comic", // whole head is the face; big expressive eyes (current channel look)
 };
+// Variants whose cells are transparent (features only, drawn straight onto the head).
+export const isHeadFace = (v: FaceVariant) => v === "D";
 
 export const EXPRESSIONS = ["neutral", "happy", "worried", "scared", "angry", "shocked", "determined", "sad"] as const;
 export type Expression = (typeof EXPRESSIONS)[number];
@@ -55,7 +58,7 @@ export const EXPR: Record<Expression, ExprParams> = {
 // Per-character extras drawn on top (defined in the character bible).
 export type FaceExtras = { glasses?: boolean; soot?: boolean; stubble?: boolean; mustache?: boolean };
 
-// â”€â”€â”€ geometry â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── geometry ───────────────────────────────────────────────────────────────
 const W = style.face.cellW; // 320
 const H = style.face.cellH; // 240
 const CX = W / 2;
@@ -75,13 +78,14 @@ const LOOK: Record<FaceVariant, VariantLook> = {
   A: { scale: 1.24, radius: 84, border: 0, browW: 10, browCap: "round", mouthW: 6.5 },
   B: { scale: 1, radius: 54, border: 4, browW: 5, browCap: "round", mouthW: 5 },
   C: { scale: 1, radius: 34, border: 3, browW: 13, browCap: "butt", mouthW: 7 },
+  D: { scale: 1, radius: 0, border: 0, browW: 11, browCap: "round", mouthW: 7 },
 };
 
 const INK = style.ink.ink;
 const PAPER = style.ink.paper;
 const ACCENT = style.ink.accent;
 
-// â”€â”€â”€ eyes â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── eyes ───────────────────────────────────────────────────────────────────
 const Eye: React.FC<{ v: FaceVariant; e: ExprParams; side: -1 | 1 }> = ({ v, e, side }) => {
   // side -1 = character's right eye (image left), +1 = image right. Inner corner faces centre.
   const cx = CX + side * EYE_DX;
@@ -153,7 +157,7 @@ const Eye: React.FC<{ v: FaceVariant; e: ExprParams; side: -1 | 1 }> = ({ v, e, 
   return <g>{els}</g>;
 };
 
-// â”€â”€â”€ brows â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── brows ──────────────────────────────────────────────────────────────────
 const Brow: React.FC<{ v: FaceVariant; e: ExprParams; side: -1 | 1 }> = ({ v, e, side }) => {
   const L = LOOK[v];
   const cx = CX + side * EYE_DX;
@@ -168,7 +172,7 @@ const Brow: React.FC<{ v: FaceVariant; e: ExprParams; side: -1 | 1 }> = ({ v, e,
   return <path d={`M${xo} ${yo} Q${mx} ${my} ${xi} ${yi}`} fill="none" stroke={INK} strokeWidth={L.browW} strokeLinecap={L.browCap} />;
 };
 
-// â”€â”€â”€ mouths â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── mouths ─────────────────────────────────────────────────────────────────
 const Tongue: React.FC<{ cx: number; cy: number; rx: number; ry: number }> = (p) => (
   <ellipse cx={p.cx} cy={p.cy} rx={p.rx} ry={p.ry} fill={ACCENT} />
 );
@@ -246,7 +250,7 @@ const Mouth: React.FC<{ v: FaceVariant; shape: RestMouth | TalkMouth }> = ({ v, 
   }
 };
 
-// â”€â”€â”€ extras â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── extras ─────────────────────────────────────────────────────────────────
 const Extras: React.FC<{ v: FaceVariant; x: FaceExtras; e: ExprParams }> = ({ v, x, e }) => (
   <g>
     {x.soot && (
@@ -307,7 +311,7 @@ const Drops: React.FC<{ e: ExprParams }> = ({ e }) => (
   </g>
 );
 
-// â”€â”€â”€ one face cell â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── one face cell ──────────────────────────────────────────────────────────
 // Returns SVG content for one cell (W x H). `uid` keeps filter ids unique on a sheet.
 export const FaceCell: React.FC<{
   variant: FaceVariant;
@@ -316,6 +320,7 @@ export const FaceCell: React.FC<{
   extras?: FaceExtras;
   uid: string;
 }> = ({ variant: v, expression, mouth, extras = {}, uid }) => {
+  if (v === "D") return <ComicCell expression={expression} mouth={mouth} extras={extras} uid={uid} />;
   const e = EXPR[expression];
   const L = LOOK[v];
   const inset = 6;
@@ -358,6 +363,116 @@ export const FaceCell: React.FC<{
   );
 };
 
+// ─── Variant D "Comic": the whole round head is the face ───────────────────
+// Big white eyes with small dot pupils, lids that droop/squint/pop, a little
+// asymmetry, small mouth low on the face, no nose. Cells are transparent:
+// only the features are drawn, straight onto the paper-coloured head.
+const CD = { dx: 56, eyeY: 110, rx: 28, ry: 35, mouthY: 194 };
+type ComicExpr = {
+  sL: number; // eye size, image-left eye
+  sR: number; // eye size, image-right eye (asymmetry = comedy)
+  pupil: number; // pupil radius px
+  px?: number; // pupil shift toward the nose
+  py?: number; // pupil shift down
+  lidIn: number; // upper lid drop at inner corner 0..1
+  lidOut: number; // upper lid drop at outer corner 0..1
+  lidBot?: number; // lower lid rise 0..1 (squint)
+  arcs?: boolean; // happy closed-eye arcs
+  brow?: { tilt: number; y: number };
+};
+const COMIC: Record<Expression, ComicExpr> = {
+  neutral: { sL: 1, sR: 1, pupil: 8.5, lidIn: 0.14, lidOut: 0.14 },
+  happy: { sL: 1, sR: 1, pupil: 8, lidIn: 0, lidOut: 0, arcs: true },
+  worried: { sL: 1, sR: 0.94, pupil: 7, py: 3, lidIn: 0, lidOut: 0.2, brow: { tilt: 1, y: 0.4 } },
+  scared: { sL: 1.12, sR: 1, pupil: 4.5, lidIn: 0, lidOut: 0, brow: { tilt: 1.1, y: 1.1 } },
+  angry: { sL: 0.95, sR: 0.95, pupil: 8, px: 2, lidIn: 0.62, lidOut: 0.18, brow: { tilt: -1.3, y: -0.5 } },
+  shocked: { sL: 1.24, sR: 1.04, pupil: 4, lidIn: 0, lidOut: 0, brow: { tilt: 0.2, y: 1.7 } },
+  determined: { sL: 0.95, sR: 0.95, pupil: 9, px: 1, lidIn: 0.45, lidOut: 0.3, lidBot: 0.18, brow: { tilt: -0.6, y: -0.3 } },
+  sad: { sL: 0.95, sR: 0.95, pupil: 8, py: 7, lidIn: 0.1, lidOut: 0.5, brow: { tilt: 1, y: 0.3 } },
+};
+
+const ComicEye: React.FC<{ c: ComicExpr; side: -1 | 1; uid: string }> = ({ c, side, uid }) => {
+  const s = side < 0 ? c.sL : c.sR;
+  const cx = CX + side * CD.dx;
+  const cy = CD.eyeY;
+  const rx = CD.rx * s;
+  const ry = CD.ry * s;
+  const inner = -side;
+  const id = `ce-${uid}-${side}`;
+  if (c.arcs) {
+    return <path d={`M${cx - rx * 0.85} ${cy + 8} Q${cx} ${cy - ry * 0.75} ${cx + rx * 0.85} ${cy + 8}`} fill="none" stroke={INK} strokeWidth={8} strokeLinecap="round" />;
+  }
+  const xo = cx - inner * rx * 1.2;
+  const xi = cx + inner * rx * 1.2;
+  const yo = cy - ry + 2 * ry * c.lidOut;
+  const yi = cy - ry + 2 * ry * c.lidIn;
+  const paper = style.face.headPaper;
+  return (
+    <g>
+      <clipPath id={id}>
+        <ellipse cx={cx} cy={cy} rx={rx} ry={ry} />
+      </clipPath>
+      <ellipse cx={cx} cy={cy} rx={rx} ry={ry} fill="#FFFFFF" />
+      <g clipPath={`url(#${id})`}>
+        <circle cx={cx + inner * (c.px ?? 0) * s} cy={cy + (c.py ?? 0) * s} r={c.pupil * s} fill={INK} />
+        {(c.lidIn > 0 || c.lidOut > 0) && (
+          <>
+            <polygon points={`${xo},${cy - ry - 12} ${xi},${cy - ry - 12} ${xi},${yi} ${xo},${yo}`} fill={paper} />
+            <line x1={xo} y1={yo} x2={xi} y2={yi} stroke={INK} strokeWidth={6} />
+          </>
+        )}
+        {c.lidBot && (
+          <>
+            <rect x={cx - rx - 4} y={cy + ry - 2 * ry * c.lidBot} width={rx * 2 + 8} height={ry} fill={paper} />
+            <line x1={cx - rx} y1={cy + ry - 2 * ry * c.lidBot} x2={cx + rx} y2={cy + ry - 2 * ry * c.lidBot} stroke={INK} strokeWidth={5} />
+          </>
+        )}
+      </g>
+      <ellipse cx={cx} cy={cy} rx={rx} ry={ry} fill="none" stroke={INK} strokeWidth={6.5} />
+    </g>
+  );
+};
+
+const ComicBrow: React.FC<{ c: ComicExpr; side: -1 | 1 }> = ({ c, side }) => {
+  if (!c.brow) return null;
+  const s = side < 0 ? c.sL : c.sR;
+  const cx = CX + side * CD.dx;
+  const inner = -side;
+  const base = CD.eyeY - CD.ry * s - 14 - c.brow.y * 8;
+  const xi = cx + inner * CD.rx * 0.75;
+  const xo = cx - inner * CD.rx * 0.95;
+  const yi = base - c.brow.tilt * 10;
+  const yo = base + c.brow.tilt * 3;
+  return <path d={`M${xo} ${yo} Q${(xi + xo) / 2} ${(yi + yo) / 2 - 4} ${xi} ${yi}`} fill="none" stroke={INK} strokeWidth={11} strokeLinecap="round" />;
+};
+
+const ComicCell: React.FC<{ expression: Expression; mouth: MouthSlot; extras: FaceExtras; uid: string }> = ({ expression, mouth, extras, uid }) => {
+  const e = EXPR[expression];
+  const c = COMIC[expression];
+  const shape = mouth === "rest" ? e.mouth : mouth === "closed" ? (e.mouth === "openSmile" ? "smile" : e.mouth === "bigO" || e.mouth === "oTall" ? "small" : e.mouth) : mouth;
+  return (
+    <g>
+      <defs>
+        <filter id={`wobble-${uid}`}>
+          <feTurbulence type="turbulence" baseFrequency="0.035" numOctaves="2" seed={3} result="t" />
+          <feDisplacementMap in="SourceGraphic" in2="t" scale={style.ink.wobble * 2} />
+        </filter>
+      </defs>
+      <g filter={`url(#wobble-${uid})`}>
+        <Extras v="D" x={{ ...extras, glasses: false, mustache: false }} e={e} />
+        <ComicEye c={c} side={-1} uid={uid} />
+        <ComicEye c={c} side={1} uid={uid} />
+        <ComicBrow c={c} side={-1} />
+        <ComicBrow c={c} side={1} />
+        <g transform={`translate(${CX} ${CD.mouthY}) scale(1.18) translate(${-CX} ${-MOUTH_Y})`}>
+          <Mouth v="D" shape={shape as RestMouth | TalkMouth} />
+        </g>
+        <Drops e={e} />
+      </g>
+    </g>
+  );
+};
+
 // Full sprite sheet: rows = expressions, columns = mouth slots.
 export const SHEET_COLS = MOUTH_SLOTS.length; // 6
 export const SHEET_ROWS = EXPRESSIONS.length; // 8
@@ -388,6 +503,7 @@ export const cellUV = (expression: Expression, mouth: MouthSlot) => {
 
 // Eye centre + glasses ring radius in cell pixels (for 3D props placed on the face).
 export const eyeCellPos = (v: FaceVariant) => {
+  if (v === "D") return { dx: CD.dx, y: CD.eyeY, ringR: CD.ry + 9 };
   const s = LOOK[v].scale;
   return { dx: EYE_DX * s, y: 128 + (EYE_Y + 2 - 128) * s, ringR: 27 * s };
 };

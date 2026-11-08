@@ -1,4 +1,4 @@
-﻿import { ThreeCanvas } from "@remotion/three";
+import { ThreeCanvas } from "@remotion/three";
 import { useMemo } from "react";
 import { AbsoluteFill, useCurrentFrame, useVideoConfig } from "remotion";
 import * as THREE from "three";

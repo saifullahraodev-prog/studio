@@ -18,9 +18,14 @@ Ask before installing anything large, deleting files, or spending money.
 ## Visual style: Direction F, "Drawn face, 3D world"
 - Bodies: chunky chibi 3D, ~2.5 heads tall, soft toon shading, **no outlines on 3D geometry**,
   oversized role-defining headgear, simple white cartoon gloves.
-- Faces: **not modelled**. Flat drawn panel on the head: off-white rounded-square "paper" face,
-  charcoal ink lines, faint paper grain. Expressions + mouth shapes = sprite swaps.
-  Must be our own design: **do not copy the Circle Toons white round face**.
+- Faces (updated 2026-11-08 by owner, look v0.2): **face Variant D "Comic"**: the whole round
+  head is the face. Big white eyes with small dot pupils, expressive lids/brows, small mouth low on
+  the face, no nose, ink outline around the head silhouette. Expressions + mouth shapes = sprite
+  swaps (`engine/characters/face.tsx`). Owner asked to move closer to the reference channels;
+  keep these marks that make it ours: warm off-white paper head (not flat white), **pen
+  crosshatching** on the shadow side (not flat grey), features with slight relief/sheen, and
+  character extras as real 3D props (Inspector's spectacles) or drawn details (soot, stubble).
+- Bodies: soft realistic (PBR) materials (cloth, leather, brass, metal), white 4-finger gloves.
 - World: softly realistic, strong depth of field. Far background = painted/AI backdrop image;
   near/mid ground = real 3D.
 - Captions: small sentence subtitle near top + one huge keyword per beat in centre

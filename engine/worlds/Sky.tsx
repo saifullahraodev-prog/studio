@@ -1,4 +1,4 @@
-﻿import { useThree } from "@react-three/fiber";
+import { useThree } from "@react-three/fiber";
 import { useLayoutEffect, useMemo } from "react";
 import { random, useCurrentFrame, useVideoConfig } from "remotion";
 import * as THREE from "three";

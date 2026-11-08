@@ -1,8 +1,8 @@
-﻿{
+{
   "id": "inspector",
   "name": "The Inspector",
   "role": "Recurring narrator. A safety inspector with a clipboard who opens and closes every video.",
-  "faceVariant": "A",
+  "faceVariant": "D",
   "faceExtras": { "glasses": true },
   "body": {
     "torso": "#C9A36A",

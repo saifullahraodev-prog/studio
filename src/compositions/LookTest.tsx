@@ -1,4 +1,4 @@
-﻿import { useCurrentFrame } from "remotion";
+import { useCurrentFrame } from "remotion";
 import { BIBLE } from "../../engine/characters/bible";
 import { Character, HEAD_HEIGHT } from "../../engine/characters/Character";
 import { Expression } from "../../engine/characters/face";

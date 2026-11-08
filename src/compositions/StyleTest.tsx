@@ -1,4 +1,4 @@
-﻿import { useCurrentFrame } from "remotion";
+import { useCurrentFrame } from "remotion";
 import { BIBLE } from "../../engine/characters/bible";
 import { Character } from "../../engine/characters/Character";
 import { Expression, FaceVariant } from "../../engine/characters/face";

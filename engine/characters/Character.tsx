@@ -1,10 +1,10 @@
-﻿import React, { useMemo } from "react";
+import React, { useMemo } from "react";
 import * as THREE from "three";
 import { useStaticTexture } from "../assets";
 import { applySceneLight, makeInkPaperMaterial, useFaceLook, useSceneLight } from "../look/faceShader";
 import { style, Toon } from "../look/style";
 import { CharacterDef } from "./bible";
-import { cellUV, Expression, eyeCellPos, faceSheetPath, FaceVariant, MouthSlot } from "./face";
+import { cellUV, Expression, eyeCellPos, faceSheetPath, FaceVariant, isHeadFace, MouthSlot } from "./face";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Chibi character, v0.2 look: big round head carrying a drawn paper face card,
@@ -51,6 +51,7 @@ const wrappedPanel = (r: number, w: number, h: number, yOff: number) => {
 
 const headGeo = new THREE.SphereGeometry(HR, 64, 48);
 const panelGeo = { flush: wrappedPanel(HR + 0.004, F.panelW, F.panelH, PANEL_YOFF), raised: wrappedPanel(HR + 0.014, F.panelW, F.panelH, PANEL_YOFF) };
+const outlineGeo = new THREE.SphereGeometry(HR * 1.065, 64, 48);
 const rimGeo = wrappedPanel(HR + 0.006, F.panelW * 1.07, F.panelH * 1.09, PANEL_YOFF);
 
 const torsoGeo = (style_: "coat" | "vest" | "shirt") => {
@@ -82,12 +83,13 @@ const S: React.FC<React.PropsWithChildren<{ p?: [number, number, number]; r?: [n
 );
 
 // ─── head + face ────────────────────────────────────────────────────────────
-const Head: React.FC<{ sheet: string; expression: Expression; mouth: MouthSlot }> = ({ sheet, expression, mouth }) => {
+const Head: React.FC<{ sheet: string; variant: FaceVariant; expression: Expression; mouth: MouthSlot }> = ({ sheet, variant, expression, mouth }) => {
+  const headFace = isHeadFace(variant);
   const light = useSceneLight();
   const look = useFaceLook();
   const base = useStaticTexture(sheet);
-  const headMat = useMemo(() => makeInkPaperMaterial({ paper: F.headPaper, hatchDensity: 26 }), []);
-  const faceMat = useMemo(() => (base ? makeInkPaperMaterial({ map: base, paper: style.ink.paper, hatchDensity: 20 }) : null), [base]);
+  const headMat = useMemo(() => makeInkPaperMaterial({ paper: F.headPaper, hatchDensity: 30 }), []);
+  const faceMat = useMemo(() => (base ? makeInkPaperMaterial({ map: base, paper: style.ink.paper, hatchDensity: 30 }) : null), [base]);
   const rimTex = useMemo(() => {
     if (!base) return null;
     const t = base.clone();
@@ -109,8 +111,14 @@ const Head: React.FC<{ sheet: string; expression: Expression; mouth: MouthSlot }
   return (
     <group>
       <mesh geometry={headGeo} material={headMat} castShadow receiveShadow />
-      {faceMat && <mesh geometry={look.rim ? panelGeo.raised : panelGeo.flush} material={faceMat} />}
-      {look.rim && rimTex && (
+      {faceMat && <mesh geometry={look.rim && !headFace ? panelGeo.raised : panelGeo.flush} material={faceMat} />}
+      {/* comic heads: the "rim" is an ink outline around the head's silhouette */}
+      {look.rim && headFace && (
+        <mesh geometry={outlineGeo}>
+          <meshBasicMaterial color={style.ink.ink} side={THREE.BackSide} />
+        </mesh>
+      )}
+      {look.rim && !headFace && rimTex && (
         <mesh geometry={rimGeo}>
           <meshBasicMaterial map={rimTex} color={style.ink.ink} alphaTest={0.5} />
         </mesh>
@@ -171,7 +179,7 @@ const Spectacles: React.FC<{ variant: FaceVariant }> = ({ variant }) => {
 const Headgear: React.FC<{ g: CharacterDef["headgear"] }> = ({ g }) => {
   if (g.type === "peakedCap") {
     return (
-      <group position={[0, 0.27, 0]} scale={1.13}>
+      <group position={[0, 0.31, 0]} scale={1.13}>
         <S p={[0, 0.06, 0]}>
           <cylinderGeometry args={[0.54, 0.535, 0.13, 48]} />
           <Toon color={g.band ?? g.color} kind="leather" />
@@ -199,7 +207,7 @@ const Headgear: React.FC<{ g: CharacterDef["headgear"] }> = ({ g }) => {
   }
   if (g.type === "flatCap") {
     return (
-      <group position={[0, 0.27, 0.02]} scale={1.13}>
+      <group position={[0, 0.31, 0.02]} scale={1.13}>
         <S p={[0, 0.04, 0]}>
           <cylinderGeometry args={[0.55, 0.535, 0.12, 48]} />
           <Toon color={g.band ?? g.color} kind="leather" />
@@ -430,7 +438,7 @@ export const Character: React.FC<CharacterProps> = ({ def, expression = "neutral
         <Arm side={-1} sleeve={def.body.sleeve} rot={armR} />
         {def.prop === "shovel" && <ShovelOnShoulder />}
         <group position={[0, HEAD_Y, 0]} rotation={[pose.headNod ?? 0, pose.headYaw ?? 0, pose.headTilt ?? 0]}>
-          <Head sheet={faceSheetPath(def.id, v)} expression={expression} mouth={mouth} />
+          <Head sheet={faceSheetPath(def.id, v)} variant={v} expression={expression} mouth={mouth} />
           {def.faceExtras.glasses && <Spectacles variant={v} />}
           <Headgear g={def.headgear} />
         </group>

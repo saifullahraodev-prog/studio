@@ -19,6 +19,11 @@ bold face, realistic materials, strong lens blur) "with a unique addition". Buil
   features, a shared surface sheen, cleaner lines (wobble 0.6, grain 0.1), and the Inspector's
   glasses are now a real 3D wire prop on the face. Review: `out/look3/compare-face.png`
   (before | after) and `out/look3/after-4.png`.
+- Owner then asked for faces like the reference channels ("the face gives emotion and a comedic
+  vibe") → new **Variant D "Comic"** (now the default for both characters): whole head is the face,
+  big white eyes + dot pupils, expressive lids/brows, bigger mouths, ink silhouette outline,
+  hatching runs continuously over head and face. Review: `out/look4/expressions-3d.png`
+  (8 expressions) and `out/look4/presets-4.png`.
 - Not yet updated to v0.2 framing: `StyleTest`, `FaceVariants`, `Turnaround` compositions.
 
 ### GATE 2: owner decisions needed (earlier list; face variant answered: A)

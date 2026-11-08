@@ -1,4 +1,4 @@
-﻿import { AbsoluteFill } from "remotion";
+import { AbsoluteFill } from "remotion";
 import { BIBLE } from "../../engine/characters/bible";
 import { FaceSheetSvg, FaceVariant } from "../../engine/characters/face";
 
