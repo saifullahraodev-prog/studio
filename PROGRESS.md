@@ -1,6 +1,22 @@
 # PROGRESS
 
-## Current phase: Phase 3 (First Short), not started. GATE 2 PASSED 2026-11-08
+## Current phase: Phase 3 (First Short): v1 rendered, owner wants a faster/funnier v2
+
+### Phase 3 status (2026-11-08)
+- Short v1 done end-to-end from `videos/2026-11-08-titanic-lifeboats/scenes.txt`:
+  placeholder TTS → faster-whisper timings → 9 shot templates → 720p preview → 1080p final.
+- Render times: 720p preview 198 s (181 ms/frame); **1080p final 366 s (334 ms/frame)**, 1,094 frames.
+  QC: 1080×1920 30 fps, 36.5 s, no black/frozen frames, -15.3 LUFS, -1.5 dBTP. Golden check 14/14.
+- Usage at this point: Claude Pro plan, 5-hour window 16% used, weekly 11% used; this session's
+  context ~57% (565k tokens).
+- Owner feedback: delivery and reveal are boring vs. reference Short (IdUVd-PXeC8). Full
+  frame-by-frame analysis + plan: `videos/2026-11-08-titanic-lifeboats/review-vs-reference.md`.
+  Key gaps: ~7× fewer shots (every 4.1 s vs ~0.6 s), slower narration (2.5 vs 3.7 words/s), no
+  hook, characters barely act, no inserts, no SFX, sentence captions instead of word-by-word.
+- Waiting on owner: approve script v2 + plan (micro-beats, camera kit, gesture kit, word captions
+  = style v1.1, CC0 SFX/music + Piper voice downloads).
+
+## GATE 2 (passed 2026-11-08)
 
 ### GATE 2 result (2026-11-08)
 - Owner approved the look → **`engine/look/style-v1.0.json` is LOCKED** (git tag `style-v1.0`).
