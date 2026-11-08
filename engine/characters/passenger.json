@@ -1,0 +1,19 @@
+{
+  "id": "passenger",
+  "name": "Passenger (crowd extra)",
+  "role": "Generic early-1900s passenger. The crowd module recolours clothes and swaps hats per extra.",
+  "faceVariant": "D",
+  "faceExtras": {},
+  "body": {
+    "torso": "#5A4A3E",
+    "torsoStyle": "coat",
+    "trim": "#3A2E26",
+    "sleeve": "#5A4A3E",
+    "legs": "#2E2E34",
+    "shoes": "#1E1C1A",
+    "scale": 1.0
+  },
+  "headgear": { "type": "bowler", "color": "#26252A", "band": "#141418" },
+  "prop": null,
+  "accessories": []
+}

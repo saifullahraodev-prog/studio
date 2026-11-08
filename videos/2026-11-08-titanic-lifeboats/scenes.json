@@ -1,0 +1,631 @@
+{
+ "slug": "titanic-lifeboats",
+ "format": "short",
+ "world": "ship-deck",
+ "fps": 30,
+ "duration": 36.457,
+ "beats": [
+  {
+   "id": "b1",
+   "speaker": "inspector",
+   "say": "Safety Inspector here. Today's case: the Titanic.",
+   "keyword": "Case file",
+   "cue": "case",
+   "shot": "hero-closeup",
+   "preset": "golden",
+   "face": "determined",
+   "subtitle": "Safety Inspector here. Today's case: the Titanic.",
+   "voiceStart": 0.45,
+   "voiceEnd": 4.069,
+   "start": 0.0,
+   "end": 4.269,
+   "words": [
+    {
+     "word": "Inspector",
+     "start": 0.74,
+     "end": 1.14
+    },
+    {
+     "word": "here.",
+     "start": 1.14,
+     "end": 1.38
+    },
+    {
+     "word": "Today's",
+     "start": 2.06,
+     "end": 2.38
+    },
+    {
+     "word": "case,",
+     "start": 2.38,
+     "end": 2.54
+    },
+    {
+     "word": "the",
+     "start": 2.94,
+     "end": 3.04
+    },
+    {
+     "word": "Titanic.",
+     "start": 3.04,
+     "end": 3.3
+    }
+   ],
+   "cueAt": 2.38
+  },
+  {
+   "id": "b2",
+   "speaker": "vo",
+   "say": "It's April nineteen twelve. You're a stoker on the biggest ship in the world.",
+   "subtitle": "It's April 1912. You're a stoker on the biggest ship in the world.",
+   "keyword": "1912",
+   "cue": "nineteen",
+   "shot": "push-in-stoker",
+   "preset": "golden",
+   "face": "happy",
+   "voiceStart": 4.389,
+   "voiceEnd": 8.318,
+   "start": 4.269,
+   "end": 8.518,
+   "words": [
+    {
+     "word": "It's",
+     "start": 4.46,
+     "end": 4.6
+    },
+    {
+     "word": "April",
+     "start": 4.6,
+     "end": 4.78
+    },
+    {
+     "word": "1912.",
+     "start": 4.78,
+     "end": 5.38
+    },
+    {
+     "word": "You're",
+     "start": 6.02,
+     "end": 6.32
+    },
+    {
+     "word": "a",
+     "start": 6.32,
+     "end": 6.38
+    },
+    {
+     "word": "stoker",
+     "start": 6.38,
+     "end": 6.6
+    },
+    {
+     "word": "on",
+     "start": 6.6,
+     "end": 6.76
+    },
+    {
+     "word": "the",
+     "start": 6.76,
+     "end": 6.84
+    },
+    {
+     "word": "biggest",
+     "start": 6.84,
+     "end": 7.0
+    },
+    {
+     "word": "ship",
+     "start": 7.0,
+     "end": 7.26
+    },
+    {
+     "word": "in",
+     "start": 7.26,
+     "end": 7.4
+    },
+    {
+     "word": "the",
+     "start": 7.4,
+     "end": 7.48
+    },
+    {
+     "word": "world.",
+     "start": 7.48,
+     "end": 7.64
+    }
+   ],
+   "cueAt": 4.78
+  },
+  {
+   "id": "b3",
+   "speaker": "vo",
+   "say": "Just before midnight, she hits an iceberg.",
+   "keyword": "Iceberg",
+   "cue": "iceberg",
+   "shot": "iceberg-pass",
+   "preset": "night",
+   "face": "shocked",
+   "subtitle": "Just before midnight, she hits an iceberg.",
+   "voiceStart": 8.638,
+   "voiceEnd": 11.135,
+   "start": 8.518,
+   "end": 11.335,
+   "words": [
+    {
+     "word": "before",
+     "start": 8.86,
+     "end": 9.08
+    },
+    {
+     "word": "midnight,",
+     "start": 9.08,
+     "end": 9.42
+    },
+    {
+     "word": "she",
+     "start": 9.82,
+     "end": 9.96
+    },
+    {
+     "word": "hits",
+     "start": 9.96,
+     "end": 10.08
+    },
+    {
+     "word": "an",
+     "start": 10.08,
+     "end": 10.2
+    },
+    {
+     "word": "iceberg.",
+     "start": 10.2,
+     "end": 10.36
+    }
+   ],
+   "cueAt": 10.2
+  },
+  {
+   "id": "b4",
+   "speaker": "vo",
+   "say": "You run up on deck and count the lifeboats. Twenty.",
+   "keyword": "20",
+   "cue": "twenty",
+   "shot": "lifeboat-glide",
+   "preset": "night",
+   "face": "worried",
+   "subtitle": "You run up on deck and count the lifeboats. Twenty.",
+   "voiceStart": 11.455,
+   "voiceEnd": 14.509,
+   "start": 11.335,
+   "end": 14.709,
+   "words": [
+    {
+     "word": "You",
+     "start": 11.46,
+     "end": 11.62
+    },
+    {
+     "word": "run",
+     "start": 11.62,
+     "end": 11.76
+    },
+    {
+     "word": "up",
+     "start": 11.76,
+     "end": 11.9
+    },
+    {
+     "word": "on",
+     "start": 11.9,
+     "end": 12.02
+    },
+    {
+     "word": "deck",
+     "start": 12.02,
+     "end": 12.14
+    },
+    {
+     "word": "and",
+     "start": 12.14,
+     "end": 12.28
+    },
+    {
+     "word": "count",
+     "start": 12.28,
+     "end": 12.46
+    },
+    {
+     "word": "the",
+     "start": 12.46,
+     "end": 12.58
+    },
+    {
+     "word": "lifeboats.",
+     "start": 12.58,
+     "end": 12.94
+    },
+    {
+     "word": "20.",
+     "start": 13.62,
+     "end": 13.88
+    }
+   ],
+   "cueAt": 13.62
+  },
+  {
+   "id": "b5",
+   "speaker": "vo",
+   "say": "Seats for about half the people on board.",
+   "keyword": "Half",
+   "cue": "half",
+   "shot": "crowd-vs-boats",
+   "preset": "night",
+   "face": "scared",
+   "subtitle": "Seats for about half the people on board.",
+   "voiceStart": 14.829,
+   "voiceEnd": 16.941,
+   "start": 14.709,
+   "end": 17.141,
+   "words": [
+    {
+     "word": "for",
+     "start": 15.12,
+     "end": 15.28
+    },
+    {
+     "word": "about",
+     "start": 15.28,
+     "end": 15.42
+    },
+    {
+     "word": "half",
+     "start": 15.42,
+     "end": 15.62
+    },
+    {
+     "word": "the",
+     "start": 15.62,
+     "end": 15.72
+    },
+    {
+     "word": "people",
+     "start": 15.72,
+     "end": 15.92
+    },
+    {
+     "word": "on",
+     "start": 15.92,
+     "end": 16.1
+    },
+    {
+     "word": "board.",
+     "start": 16.1,
+     "end": 16.28
+    }
+   ],
+   "cueAt": 15.42
+  },
+  {
+   "id": "b6",
+   "speaker": "vo",
+   "say": "Illegal? No. The eighteen ninety-four rules stopped counting at ten thousand tons.",
+   "subtitle": "Illegal? No. The 1894 rules stopped counting at 10,000 tons.",
+   "keyword": "1894",
+   "cue": "eighteen",
+   "shot": "rulebook",
+   "preset": "night",
+   "face": "angry",
+   "voiceStart": 17.261,
+   "voiceEnd": 22.038,
+   "start": 17.141,
+   "end": 22.238,
+   "words": [
+    {
+     "word": "No.",
+     "start": 18.2,
+     "end": 18.42
+    },
+    {
+     "word": "The",
+     "start": 18.96,
+     "end": 19.18
+    },
+    {
+     "word": "1894",
+     "start": 19.18,
+     "end": 19.7
+    },
+    {
+     "word": "rule",
+     "start": 19.7,
+     "end": 19.98
+    },
+    {
+     "word": "stopped",
+     "start": 19.98,
+     "end": 20.16
+    },
+    {
+     "word": "counting",
+     "start": 20.16,
+     "end": 20.52
+    },
+    {
+     "word": "at",
+     "start": 20.52,
+     "end": 20.68
+    },
+    {
+     "word": "10",
+     "start": 20.68,
+     "end": 20.84
+    },
+    {
+     "word": ",000",
+     "start": 20.84,
+     "end": 21.14
+    },
+    {
+     "word": "tons.",
+     "start": 21.14,
+     "end": 21.34
+    }
+   ],
+   "cueAt": 19.18
+  },
+  {
+   "id": "b7",
+   "speaker": "vo",
+   "say": "Titanic was forty-six thousand. She carried more boats than the law asked for, and still not enough.",
+   "subtitle": "Titanic was 46,000. She carried more boats than the law asked for, and still not enough.",
+   "keyword": "46,000",
+   "cue": "forty-six",
+   "shot": "size-gag",
+   "preset": "night",
+   "face": "sad",
+   "voiceStart": 22.358,
+   "voiceEnd": 27.634,
+   "start": 22.238,
+   "end": 27.834,
+   "words": [
+    {
+     "word": "was",
+     "start": 22.68,
+     "end": 22.94
+    },
+    {
+     "word": "46",
+     "start": 22.94,
+     "end": 23.36
+    },
+    {
+     "word": ",000.",
+     "start": 23.36,
+     "end": 23.68
+    },
+    {
+     "word": "She",
+     "start": 24.28,
+     "end": 24.56
+    },
+    {
+     "word": "carried",
+     "start": 24.56,
+     "end": 24.8
+    },
+    {
+     "word": "more",
+     "start": 24.8,
+     "end": 24.96
+    },
+    {
+     "word": "boats",
+     "start": 24.96,
+     "end": 25.2
+    },
+    {
+     "word": "than",
+     "start": 25.2,
+     "end": 25.34
+    },
+    {
+     "word": "the",
+     "start": 25.34,
+     "end": 25.42
+    },
+    {
+     "word": "law",
+     "start": 25.42,
+     "end": 25.56
+    },
+    {
+     "word": "asked",
+     "start": 25.56,
+     "end": 25.74
+    },
+    {
+     "word": "for,",
+     "start": 25.74,
+     "end": 25.94
+    },
+    {
+     "word": "and",
+     "start": 26.26,
+     "end": 26.42
+    },
+    {
+     "word": "still",
+     "start": 26.42,
+     "end": 26.62
+    },
+    {
+     "word": "not",
+     "start": 26.62,
+     "end": 26.76
+    },
+    {
+     "word": "enough.",
+     "start": 26.76,
+     "end": 27.0
+    }
+   ],
+   "cueAt": 22.94
+  },
+  {
+   "id": "b8",
+   "speaker": "vo",
+   "say": "More than fifteen hundred people died.",
+   "subtitle": "More than 1,500 people died.",
+   "keyword": "1,500+",
+   "cue": "fifteen",
+   "shot": "empty-deck",
+   "preset": "night",
+   "face": "sad",
+   "voiceStart": 27.954,
+   "voiceEnd": 29.943,
+   "start": 27.834,
+   "end": 30.143,
+   "words": [
+    {
+     "word": "than",
+     "start": 28.14,
+     "end": 28.28
+    },
+    {
+     "word": "1",
+     "start": 28.28,
+     "end": 28.42
+    },
+    {
+     "word": ",500",
+     "start": 28.42,
+     "end": 28.76
+    },
+    {
+     "word": "people",
+     "start": 28.76,
+     "end": 29.06
+    },
+    {
+     "word": "died.",
+     "start": 29.06,
+     "end": 29.32
+    }
+   ],
+   "cueAt": 28.28
+  },
+  {
+   "id": "b9",
+   "speaker": "inspector",
+   "say": "And that's why, today, every passenger ship must carry a lifeboat or life-raft seat for everyone on board.",
+   "keyword": "Everyone",
+   "cue": "everyone",
+   "shot": "today-closeup",
+   "preset": "day",
+   "face": "determined",
+   "subtitle": "And that's why, today, every passenger ship must carry a lifeboat or life-raft seat for everyone on board.",
+   "voiceStart": 30.263,
+   "voiceEnd": 35.357,
+   "start": 30.143,
+   "end": 36.457,
+   "words": [
+    {
+     "word": "And",
+     "start": 30.28,
+     "end": 30.42
+    },
+    {
+     "word": "that's",
+     "start": 30.42,
+     "end": 30.62
+    },
+    {
+     "word": "why,",
+     "start": 30.62,
+     "end": 30.76
+    },
+    {
+     "word": "today,",
+     "start": 31.08,
+     "end": 31.24
+    },
+    {
+     "word": "every",
+     "start": 31.66,
+     "end": 31.8
+    },
+    {
+     "word": "passenger",
+     "start": 31.8,
+     "end": 32.1
+    },
+    {
+     "word": "ship",
+     "start": 32.1,
+     "end": 32.42
+    },
+    {
+     "word": "must",
+     "start": 32.42,
+     "end": 32.58
+    },
+    {
+     "word": "carry",
+     "start": 32.58,
+     "end": 32.8
+    },
+    {
+     "word": "a",
+     "start": 32.8,
+     "end": 32.94
+    },
+    {
+     "word": "lifeboat",
+     "start": 32.94,
+     "end": 33.2
+    },
+    {
+     "word": "or",
+     "start": 33.2,
+     "end": 33.36
+    },
+    {
+     "word": "life",
+     "start": 33.36,
+     "end": 33.54
+    },
+    {
+     "word": "raft",
+     "start": 33.54,
+     "end": 33.72
+    },
+    {
+     "word": "seat",
+     "start": 33.72,
+     "end": 33.9
+    },
+    {
+     "word": "for",
+     "start": 33.9,
+     "end": 34.08
+    },
+    {
+     "word": "everyone",
+     "start": 34.08,
+     "end": 34.38
+    },
+    {
+     "word": "on",
+     "start": 34.38,
+     "end": 34.52
+    },
+    {
+     "word": "board.",
+     "start": 34.52,
+     "end": 34.7
+    }
+   ],
+   "cueAt": 31.66
+  }
+ ]
+}

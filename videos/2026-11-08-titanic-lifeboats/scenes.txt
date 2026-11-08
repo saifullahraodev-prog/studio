@@ -1,0 +1,97 @@
+# Scene file: Short #1, Titanic lifeboats (script approved 2026-11-08)
+# One [beat] per script line. Fields:
+#   speaker   inspector | vo (inspector voice-over)
+#   say       what the voice reads (spell numbers the way they should be spoken)
+#   subtitle  small text at the top (defaults to `say`)
+#   keyword   big centre word;  cue = the spoken word that makes it pop (defaults to beat start)
+#   shot      shot template (engine/shots);  preset = lighting;  face = main character expression
+# After editing run:  python tools/build_video.py videos/2026-11-08-titanic-lifeboats
+
+slug: titanic-lifeboats
+format: short
+world: ship-deck
+
+[beat 1]
+speaker: inspector
+say: Safety Inspector here. Today's case: the Titanic.
+keyword: Case file
+cue: case
+shot: hero-closeup
+preset: golden
+face: determined
+
+[beat 2]
+speaker: vo
+say: It's April nineteen twelve. You're a stoker on the biggest ship in the world.
+subtitle: It's April 1912. You're a stoker on the biggest ship in the world.
+keyword: 1912
+cue: nineteen
+shot: push-in-stoker
+preset: golden
+face: happy
+
+[beat 3]
+speaker: vo
+say: Just before midnight, she hits an iceberg.
+keyword: Iceberg
+cue: iceberg
+shot: iceberg-pass
+preset: night
+face: shocked
+
+[beat 4]
+speaker: vo
+say: You run up on deck and count the lifeboats. Twenty.
+keyword: 20
+cue: twenty
+shot: lifeboat-glide
+preset: night
+face: worried
+
+[beat 5]
+speaker: vo
+say: Seats for about half the people on board.
+keyword: Half
+cue: half
+shot: crowd-vs-boats
+preset: night
+face: scared
+
+[beat 6]
+speaker: vo
+say: Illegal? No. The eighteen ninety-four rules stopped counting at ten thousand tons.
+subtitle: Illegal? No. The 1894 rules stopped counting at 10,000 tons.
+keyword: 1894
+cue: eighteen
+shot: rulebook
+preset: night
+face: angry
+
+[beat 7]
+speaker: vo
+say: Titanic was forty-six thousand. She carried more boats than the law asked for, and still not enough.
+subtitle: Titanic was 46,000. She carried more boats than the law asked for, and still not enough.
+keyword: 46,000
+cue: forty-six
+shot: size-gag
+preset: night
+face: sad
+
+[beat 8]
+speaker: vo
+say: More than fifteen hundred people died.
+subtitle: More than 1,500 people died.
+keyword: 1,500+
+cue: fifteen
+shot: empty-deck
+preset: night
+face: sad
+
+[beat 9]
+speaker: inspector
+say: And that's why, today, every passenger ship must carry a lifeboat or life-raft seat for everyone on board.
+keyword: Everyone
+cue: everyone
+shot: today-closeup
+preset: day
+face: determined

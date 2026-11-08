@@ -21,6 +21,9 @@ export type Pose = {
   headNod?: number; // pitch (+ = look down)
   lean?: number;
   bob?: number;
+  walk?: number; // walk-cycle phase (radians); advance it with time
+  stride?: number; // 0 standing, 0.5 walk, 1 run
+  noProp?: boolean; // hide the character's hand prop for this shot (e.g. holding something else)
 };
 
 const F = style.face;
@@ -227,6 +230,25 @@ const Headgear: React.FC<{ g: CharacterDef["headgear"] }> = ({ g }) => {
       </group>
     );
   }
+  if (g.type === "none") return null;
+  if (g.type === "bowler") {
+    return (
+      <group position={[0, 0.3, 0]} scale={1.05}>
+        <S p={[0, 0.16, 0]} s={[1, 1.05, 1]}>
+          <sphereGeometry args={[0.56, 40, 20, 0, Math.PI * 2, 0, Math.PI / 2]} />
+          <Toon color={g.color} kind="wool" />
+        </S>
+        <S p={[0, 0.16, 0]}>
+          <cylinderGeometry args={[0.565, 0.57, 0.1, 40]} />
+          <Toon color={g.band ?? g.color} kind="leather" />
+        </S>
+        <S p={[0, 0.1, 0]}>
+          <cylinderGeometry args={[0.78, 0.76, 0.04, 40]} />
+          <Toon color={g.color} kind="wool" />
+        </S>
+      </group>
+    );
+  }
   // hardHat / helmet: dome with brim
   return (
     <group position={[0, 0.12, 0]} scale={1.12}>
@@ -338,21 +360,25 @@ const Arm: React.FC<{ side: 1 | -1; sleeve: string; rot: [number, number]; prop?
 );
 
 // ─── body ───────────────────────────────────────────────────────────────────
-const Body: React.FC<{ def: CharacterDef }> = ({ def }) => {
+const HIP_Y = 0.44;
+const Body: React.FC<{ def: CharacterDef; legSwing?: number }> = ({ def, legSwing = 0 }) => {
   const b = def.body;
   const acc = def.accessories ?? [];
   return (
     <group>
       {[-1, 1].map((sd) => (
-        <group key={sd} position={[sd * 0.18, 0, 0]}>
-          <S p={[0, 0.26, 0]}>
-            <cylinderGeometry args={[0.13, 0.12, 0.36, 18]} />
-            <Toon color={b.legs} kind="fabric" />
-          </S>
-          <S p={[0, 0.07, 0.05]} s={[1, 0.62, 1.35]}>
-            <sphereGeometry args={[0.16, 18, 14]} />
-            <Toon color={b.shoes} kind="leather" />
-          </S>
+        // legs pivot at the hip so they can swing for walk/run cycles
+        <group key={sd} position={[sd * 0.18, HIP_Y, 0]} rotation={[sd * legSwing, 0, 0]}>
+          <group position={[0, -HIP_Y, 0]}>
+            <S p={[0, 0.26, 0]}>
+              <cylinderGeometry args={[0.13, 0.12, 0.36, 18]} />
+              <Toon color={b.legs} kind="fabric" />
+            </S>
+            <S p={[0, 0.07, 0.05]} s={[1, 0.62, 1.35]}>
+              <sphereGeometry args={[0.16, 18, 14]} />
+              <Toon color={b.shoes} kind="leather" />
+            </S>
+          </group>
         </group>
       ))}
       <mesh geometry={TORSO[b.torsoStyle]} position={[0, TORSO_Y, 0]} castShadow receiveShadow>
@@ -428,15 +454,22 @@ export type CharacterProps = {
 
 export const Character: React.FC<CharacterProps> = ({ def, expression = "neutral", mouth = "rest", pose = {}, position = [0, 0, 0], rotationY = 0, faceVariant }) => {
   const v = faceVariant ?? def.faceVariant;
-  const armL = pose.armL ?? [0.05, 0.18];
-  const armR = def.prop === "shovel" ? pose.armR ?? [0.95, 0.12] : pose.armR ?? [0.05, 0.18];
+  // walk / run cycle: stride 0 = standing, ~0.5 = walk, 1 = run
+  const stride = pose.stride ?? 0;
+  const ph = pose.walk ?? 0;
+  const swing = Math.sin(ph) * 0.75 * stride;
+  const armSwing = Math.sin(ph) * 0.9 * stride;
+  const bob = (pose.bob ?? 0) + Math.abs(Math.sin(ph)) * 0.07 * stride;
+  const lean = (pose.lean ?? 0) + 0.18 * stride;
+  const armL: [number, number] = pose.armL ?? [0.05 - armSwing, 0.18 + 0.1 * stride];
+  const armR: [number, number] = def.prop === "shovel" ? pose.armR ?? [0.95, 0.12] : pose.armR ?? [0.05 + armSwing, 0.18 + 0.1 * stride];
   return (
     <group position={position} rotation={[0, rotationY, 0]} scale={def.body.scale}>
-      <group position={[0, pose.bob ?? 0, 0]} rotation={[pose.lean ?? 0, 0, 0]}>
-        <Body def={def} />
-        <Arm side={1} sleeve={def.body.sleeve} rot={armL} prop={def.prop === "clipboard" ? <Clipboard /> : null} />
+      <group position={[0, bob, 0]} rotation={[lean, 0, 0]}>
+        <Body def={def} legSwing={swing} />
+        <Arm side={1} sleeve={def.body.sleeve} rot={armL} prop={def.prop === "clipboard" && !pose.noProp ? <Clipboard /> : null} />
         <Arm side={-1} sleeve={def.body.sleeve} rot={armR} />
-        {def.prop === "shovel" && <ShovelOnShoulder />}
+        {def.prop === "shovel" && !pose.noProp && <ShovelOnShoulder />}
         <group position={[0, HEAD_Y, 0]} rotation={[pose.headNod ?? 0, pose.headYaw ?? 0, pose.headTilt ?? 0]}>
           <Head sheet={faceSheetPath(def.id, v)} variant={v} expression={expression} mouth={mouth} />
           {def.faceExtras.glasses && <Spectacles variant={v} />}

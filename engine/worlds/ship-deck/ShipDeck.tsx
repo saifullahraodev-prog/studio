@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import * as THREE from "three";
 import { LightingPreset, Toon } from "../../look/style";
+import { LiferaftCanisters, ModernLifeboat } from "../../props/Props";
 import { Sea } from "../Sea";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -258,7 +259,9 @@ const Lamps: React.FC = () => {
   );
 };
 
-export const ShipDeck: React.FC<{ preset: LightingPreset }> = ({ preset }) => {
+// era "1912": wooden lifeboats on davits.  era "today": the same deck dressed with a
+// modern enclosed lifeboat + life-raft canisters (for "…and that's why, today" endings).
+export const ShipDeck: React.FC<{ preset: LightingPreset; era?: "1912" | "today" }> = ({ preset, era = "1912" }) => {
   const plank = usePlankTexture();
   return (
     <group>
@@ -271,8 +274,19 @@ export const ShipDeck: React.FC<{ preset: LightingPreset }> = ({ preset }) => {
       <Hull />
       <Deckhouse lit={preset.lamps} />
       {preset.lamps && <Lamps />}
-      <Lifeboat z={-9} />
-      <Lifeboat z={-20} />
+      {era === "1912" ? (
+        <>
+          <Lifeboat z={-9} />
+          <Lifeboat z={-20} />
+        </>
+      ) : (
+        <>
+          <ModernLifeboat position={[RAIL_X - 1.0, 2.7, -8]} />
+          <ModernLifeboat position={[RAIL_X - 1.0, 2.7, -17]} />
+          <LiferaftCanisters count={4} position={[RAIL_X - 0.55, 0, -2.2]} />
+          <LiferaftCanisters count={4} position={[RAIL_X - 0.55, 0, -12.5]} />
+        </>
+      )}
       <Ventilator p={[-WALL_X + 0.6, 0, -5.5]} rotY={0.6} />
       <Funnel z={-26} />
       <Funnel z={-46} />

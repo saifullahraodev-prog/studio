@@ -1,0 +1,492 @@
+[
+ {
+  "word": "Safety",
+  "start": 0.0,
+  "end": 0.74
+ },
+ {
+  "word": "Inspector",
+  "start": 0.74,
+  "end": 1.14
+ },
+ {
+  "word": "here.",
+  "start": 1.14,
+  "end": 1.38
+ },
+ {
+  "word": "Today's",
+  "start": 2.06,
+  "end": 2.38
+ },
+ {
+  "word": "case,",
+  "start": 2.38,
+  "end": 2.54
+ },
+ {
+  "word": "the",
+  "start": 2.94,
+  "end": 3.04
+ },
+ {
+  "word": "Titanic.",
+  "start": 3.04,
+  "end": 3.3
+ },
+ {
+  "word": "It's",
+  "start": 4.46,
+  "end": 4.6
+ },
+ {
+  "word": "April",
+  "start": 4.6,
+  "end": 4.78
+ },
+ {
+  "word": "1912.",
+  "start": 4.78,
+  "end": 5.38
+ },
+ {
+  "word": "You're",
+  "start": 6.02,
+  "end": 6.32
+ },
+ {
+  "word": "a",
+  "start": 6.32,
+  "end": 6.38
+ },
+ {
+  "word": "stoker",
+  "start": 6.38,
+  "end": 6.6
+ },
+ {
+  "word": "on",
+  "start": 6.6,
+  "end": 6.76
+ },
+ {
+  "word": "the",
+  "start": 6.76,
+  "end": 6.84
+ },
+ {
+  "word": "biggest",
+  "start": 6.84,
+  "end": 7.0
+ },
+ {
+  "word": "ship",
+  "start": 7.0,
+  "end": 7.26
+ },
+ {
+  "word": "in",
+  "start": 7.26,
+  "end": 7.4
+ },
+ {
+  "word": "the",
+  "start": 7.4,
+  "end": 7.48
+ },
+ {
+  "word": "world.",
+  "start": 7.48,
+  "end": 7.64
+ },
+ {
+  "word": "Just",
+  "start": 8.58,
+  "end": 8.86
+ },
+ {
+  "word": "before",
+  "start": 8.86,
+  "end": 9.08
+ },
+ {
+  "word": "midnight,",
+  "start": 9.08,
+  "end": 9.42
+ },
+ {
+  "word": "she",
+  "start": 9.82,
+  "end": 9.96
+ },
+ {
+  "word": "hits",
+  "start": 9.96,
+  "end": 10.08
+ },
+ {
+  "word": "an",
+  "start": 10.08,
+  "end": 10.2
+ },
+ {
+  "word": "iceberg.",
+  "start": 10.2,
+  "end": 10.36
+ },
+ {
+  "word": "You",
+  "start": 11.46,
+  "end": 11.62
+ },
+ {
+  "word": "run",
+  "start": 11.62,
+  "end": 11.76
+ },
+ {
+  "word": "up",
+  "start": 11.76,
+  "end": 11.9
+ },
+ {
+  "word": "on",
+  "start": 11.9,
+  "end": 12.02
+ },
+ {
+  "word": "deck",
+  "start": 12.02,
+  "end": 12.14
+ },
+ {
+  "word": "and",
+  "start": 12.14,
+  "end": 12.28
+ },
+ {
+  "word": "count",
+  "start": 12.28,
+  "end": 12.46
+ },
+ {
+  "word": "the",
+  "start": 12.46,
+  "end": 12.58
+ },
+ {
+  "word": "lifeboats.",
+  "start": 12.58,
+  "end": 12.94
+ },
+ {
+  "word": "20.",
+  "start": 13.62,
+  "end": 13.88
+ },
+ {
+  "word": "Seats",
+  "start": 14.68,
+  "end": 15.12
+ },
+ {
+  "word": "for",
+  "start": 15.12,
+  "end": 15.28
+ },
+ {
+  "word": "about",
+  "start": 15.28,
+  "end": 15.42
+ },
+ {
+  "word": "half",
+  "start": 15.42,
+  "end": 15.62
+ },
+ {
+  "word": "the",
+  "start": 15.62,
+  "end": 15.72
+ },
+ {
+  "word": "people",
+  "start": 15.72,
+  "end": 15.92
+ },
+ {
+  "word": "on",
+  "start": 15.92,
+  "end": 16.1
+ },
+ {
+  "word": "board.",
+  "start": 16.1,
+  "end": 16.28
+ },
+ {
+  "word": "Illegal?",
+  "start": 17.1,
+  "end": 17.54
+ },
+ {
+  "word": "No.",
+  "start": 18.2,
+  "end": 18.42
+ },
+ {
+  "word": "The",
+  "start": 18.96,
+  "end": 19.18
+ },
+ {
+  "word": "1894",
+  "start": 19.18,
+  "end": 19.7
+ },
+ {
+  "word": "rule",
+  "start": 19.7,
+  "end": 19.98
+ },
+ {
+  "word": "stopped",
+  "start": 19.98,
+  "end": 20.16
+ },
+ {
+  "word": "counting",
+  "start": 20.16,
+  "end": 20.52
+ },
+ {
+  "word": "at",
+  "start": 20.52,
+  "end": 20.68
+ },
+ {
+  "word": "10",
+  "start": 20.68,
+  "end": 20.84
+ },
+ {
+  "word": ",000",
+  "start": 20.84,
+  "end": 21.14
+ },
+ {
+  "word": "tons.",
+  "start": 21.14,
+  "end": 21.34
+ },
+ {
+  "word": "Titanic",
+  "start": 22.24,
+  "end": 22.68
+ },
+ {
+  "word": "was",
+  "start": 22.68,
+  "end": 22.94
+ },
+ {
+  "word": "46",
+  "start": 22.94,
+  "end": 23.36
+ },
+ {
+  "word": ",000.",
+  "start": 23.36,
+  "end": 23.68
+ },
+ {
+  "word": "She",
+  "start": 24.28,
+  "end": 24.56
+ },
+ {
+  "word": "carried",
+  "start": 24.56,
+  "end": 24.8
+ },
+ {
+  "word": "more",
+  "start": 24.8,
+  "end": 24.96
+ },
+ {
+  "word": "boats",
+  "start": 24.96,
+  "end": 25.2
+ },
+ {
+  "word": "than",
+  "start": 25.2,
+  "end": 25.34
+ },
+ {
+  "word": "the",
+  "start": 25.34,
+  "end": 25.42
+ },
+ {
+  "word": "law",
+  "start": 25.42,
+  "end": 25.56
+ },
+ {
+  "word": "asked",
+  "start": 25.56,
+  "end": 25.74
+ },
+ {
+  "word": "for,",
+  "start": 25.74,
+  "end": 25.94
+ },
+ {
+  "word": "and",
+  "start": 26.26,
+  "end": 26.42
+ },
+ {
+  "word": "still",
+  "start": 26.42,
+  "end": 26.62
+ },
+ {
+  "word": "not",
+  "start": 26.62,
+  "end": 26.76
+ },
+ {
+  "word": "enough.",
+  "start": 26.76,
+  "end": 27.0
+ },
+ {
+  "word": "More",
+  "start": 27.78,
+  "end": 28.14
+ },
+ {
+  "word": "than",
+  "start": 28.14,
+  "end": 28.28
+ },
+ {
+  "word": "1",
+  "start": 28.28,
+  "end": 28.42
+ },
+ {
+  "word": ",500",
+  "start": 28.42,
+  "end": 28.76
+ },
+ {
+  "word": "people",
+  "start": 28.76,
+  "end": 29.06
+ },
+ {
+  "word": "died.",
+  "start": 29.06,
+  "end": 29.32
+ },
+ {
+  "word": "And",
+  "start": 30.28,
+  "end": 30.42
+ },
+ {
+  "word": "that's",
+  "start": 30.42,
+  "end": 30.62
+ },
+ {
+  "word": "why,",
+  "start": 30.62,
+  "end": 30.76
+ },
+ {
+  "word": "today,",
+  "start": 31.08,
+  "end": 31.24
+ },
+ {
+  "word": "every",
+  "start": 31.66,
+  "end": 31.8
+ },
+ {
+  "word": "passenger",
+  "start": 31.8,
+  "end": 32.1
+ },
+ {
+  "word": "ship",
+  "start": 32.1,
+  "end": 32.42
+ },
+ {
+  "word": "must",
+  "start": 32.42,
+  "end": 32.58
+ },
+ {
+  "word": "carry",
+  "start": 32.58,
+  "end": 32.8
+ },
+ {
+  "word": "a",
+  "start": 32.8,
+  "end": 32.94
+ },
+ {
+  "word": "lifeboat",
+  "start": 32.94,
+  "end": 33.2
+ },
+ {
+  "word": "or",
+  "start": 33.2,
+  "end": 33.36
+ },
+ {
+  "word": "life",
+  "start": 33.36,
+  "end": 33.54
+ },
+ {
+  "word": "raft",
+  "start": 33.54,
+  "end": 33.72
+ },
+ {
+  "word": "seat",
+  "start": 33.72,
+  "end": 33.9
+ },
+ {
+  "word": "for",
+  "start": 33.9,
+  "end": 34.08
+ },
+ {
+  "word": "everyone",
+  "start": 34.08,
+  "end": 34.38
+ },
+ {
+  "word": "on",
+  "start": 34.38,
+  "end": 34.52
+ },
+ {
+  "word": "board.",
+  "start": 34.52,
+  "end": 34.7
+ }
+]

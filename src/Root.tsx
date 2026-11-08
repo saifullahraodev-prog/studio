@@ -5,6 +5,7 @@ import { ResProps, verticalSize } from "../engine/look/units";
 import { FaceSheet, FaceSheetProps } from "./compositions/FaceSheet";
 import { GLInfo } from "./compositions/GLInfo";
 import { LookTest, LookTestProps } from "./compositions/LookTest";
+import { calculateShortMetadata, Short, ShortProps } from "./compositions/Short";
 import { StressTest } from "./compositions/StressTest";
 import { StyleTest, StyleTestProps } from "./compositions/StyleTest";
 import { TalkTest, TalkTestProps } from "./compositions/TalkTest";
@@ -75,6 +76,16 @@ export const RemotionRoot: React.FC = () => {
         {...vertical}
         defaultProps={{ res: 720, option: "both", preset: "day", shot: "closeup", expression: "shocked" } as LookTestProps}
         calculateMetadata={({ props }: { props: LookTestProps }) => verticalSize(props.res)}
+      />
+      <Composition
+        id="Short"
+        component={Short}
+        durationInFrames={300}
+        fps={30}
+        width={720}
+        height={1280}
+        defaultProps={{ res: 720, slug: "titanic-lifeboats" } as ShortProps}
+        calculateMetadata={calculateShortMetadata}
       />
       <Composition id="GLInfo" component={GLInfo} durationInFrames={1} fps={30} width={1600} height={240} />
     </>

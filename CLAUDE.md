@@ -55,6 +55,21 @@ Ask before installing anything large, deleting files, or spending money.
   Rebundle after any code change.
 - R3F: `meshToonMaterial` has no `flatShading`; use non-indexed geometry for faceted looks.
 
+## Video pipeline (Phase 3)
+1. `videos/<date>-<slug>/script.md` (owner-approved, sources listed) → `scenes.txt` (one [beat] per line:
+   speaker, say, subtitle, keyword, cue, shot, preset, face).
+2. `python -I tools/build_video.py videos/<date>-<slug> [--retts|--recording]`
+   (set `HF_HUB_OFFLINE=1`): placeholder TTS per line (Windows voice) or owner's `voice.wav`,
+   faster-whisper "small" word timings (decode with ffmpeg → numpy; PyAV mismatch), beat timing,
+   keyword cue times, ambience bed + ducking, two-pass loudness to -14 LUFS → `scenes.json`,
+   `mix.wav`, copied to `public/videos/<slug>/`.
+3. `node tools/storyboard.mjs <slug> 720 --rebundle` → one still per beat (cheap framing check).
+4. Render the `Short` composition (props file `{"slug": "...", "res": 720|1080}`), then QC:
+   blackdetect/freezedetect, ebur128 loudness, contact sheet.
+- Shot templates live in `engine/shots/templates.tsx` (data in, camera + focus + 3D out).
+  New videos pick templates by name; add a template only when a story needs a new kind of shot.
+- `WorldShot` includes a WarmUp step: fresh shots must draw before capture (else blank first frame).
+
 ## Engine conventions
 - Lay out 2D overlays in **design pixels for 1080x1920** and convert with `useUnit()` (`src/ui/units.ts`).
 - Vertical compositions take `res` prop: 720 (preview, default) or 1080 (final).

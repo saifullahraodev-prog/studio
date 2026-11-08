@@ -1,6 +1,6 @@
 # Short #1: "POV: you're on the Titanic. Why weren't there enough lifeboats?"
 
-Status: **DRAFT v1, waiting for owner approval** (nothing is built until approved)
+Status: **APPROVED by owner 2026-11-08** · built from `scenes.txt` · placeholder voice (Windows "Microsoft David") until the owner records
 Series: Rules written in disaster · Format: YouTube Short, 9:16 · Target length: ~38 s
 Words: 97 (≈ 37 s at 2.6 words/second)
 

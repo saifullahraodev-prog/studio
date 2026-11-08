@@ -16,6 +16,7 @@ export type CaptionBeat = {
   keyword?: string;
   from: number; // frame the beat starts (relative to this layer)
   to: number; // frame the beat ends
+  keywordFrom?: number; // frame the keyword pops (its cue word); defaults to `from`
 };
 
 const Subtitle: React.FC<{ text: string; age: number; left: number }> = ({ text, age, left }) => {
@@ -101,7 +102,9 @@ export const Captions: React.FC<{ beats: CaptionBeat[]; showSafeArea?: boolean }
   return (
     <AbsoluteFill style={{ fontFamily, pointerEvents: "none" }}>
       {beat?.subtitle && <Subtitle text={beat.subtitle} age={frame - beat.from} left={beat.to - frame} />}
-      {beat?.keyword && <Keyword text={beat.keyword} age={frame - beat.from} left={beat.to - frame} />}
+      {beat?.keyword && frame >= (beat.keywordFrom ?? beat.from) && (
+        <Keyword text={beat.keyword} age={frame - (beat.keywordFrom ?? beat.from)} left={beat.to - frame} />
+      )}
       {showSafeArea && <SafeAreaGuide />}
     </AbsoluteFill>
   );
