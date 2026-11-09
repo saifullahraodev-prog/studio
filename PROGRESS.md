@@ -1,6 +1,10 @@
 # PROGRESS
 
-## Current phase: GATE 4 (2026-11-09): 3-minute test video rendered from the scene file alone, waiting for owner review
+## Current phase: PAUSED by owner (2026-11-09) at GATE 4
+Video production is on hold. Nothing is pending in the background. When resuming: owner reviews the
+GATE 4 preview + style v1.2 lighting, then 1080p final, then Phase 5 (long-form pipeline).
+
+### GATE 4 (2026-11-09): 3-minute test video rendered from the scene file alone, not yet reviewed
 
 ### GATE 4 result
 - `videos/2026-11-09-triangle-fire/out/preview-720p.mp4`: 2:49, 34 beats, 97 director-chosen shots,
