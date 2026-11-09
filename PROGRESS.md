@@ -13,6 +13,9 @@
   v1 vs v2 sheet: `out/rev2/v1-vs-v2.png`.
 - Render cost (720p): old Short 172 s for 31.8 s = 5.4 s per second of video; revision 187 s for 29.8 s =
   6.3 s per second (+16%, textures/skies/grade). 1080p estimate ~12.9 s per second (~6.4 min).
+- 2026-11-10: owner supplied the narration (`voice-original.wav`, 31.7 s). Recording mode now aligns the
+  whole script to the audio at once (robust beat starts). Preview with owner voice:
+  `out/preview-720p-myvoice.mp4` (32.0 s, -14.0 LUFS, render 187 s). Limiter lowered to -2 dB for the final.
 - WAITING ON OWNER: approve preview -> 1080p final; approve style v1.3 look -> re-approve golden frames
   (golden check now differs by design: no hatching, textures, grade).
 

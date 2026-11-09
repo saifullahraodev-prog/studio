@@ -323,16 +323,17 @@ def main():
 
     # ── 4. beats timing ──
     if recording:
-        wi = 0
+        # align the WHOLE script to the recording at once (word-by-word), then each line starts at
+        # its first word and ends at its last. Robust when lines begin with common words ("The", "You").
+        full = " ".join(b["say"] for b in beats)
+        al = align(full, words)
+        k = 0
         for b in beats:
-            first = norm(b["say"].split()[0])
-            while wi < len(words) and not norm(words[wi]["word"]).startswith(first[:4]):
-                wi += 1
-            b["voiceStart"] = words[min(wi, len(words) - 1)]["start"]
-        for i, b in enumerate(beats):
-            nxt = beats[i + 1]["voiceStart"] if i + 1 < len(beats) else total
-            inside = [w for w in words if b["voiceStart"] <= w["start"] < nxt]
-            b["voiceEnd"] = inside[-1]["end"] if inside else nxt
+            n = len(re.findall(r"[A-Za-z0-9'’\-]+[?.!,]?", b["say"]))
+            seg = al[k : k + n]
+            k += n
+            b["voiceStart"] = seg[0][1] if seg else (beats[-1].get("voiceEnd", 0) if beats else 0)
+            b["voiceEnd"] = seg[-1][2] if seg else b["voiceStart"]
     lead_cut = 0.08 if cut_mode else 0.12
     for i, b in enumerate(beats):
         b["start"] = 0.0 if i == 0 else round(b["voiceStart"] - lead_cut, 3)
@@ -451,7 +452,7 @@ def main():
     summary = meas[meas.rfind("Summary:"):]
     integ = float(re.search(r"I:\s+(-?[\d.]+) LUFS", summary).group(1))
     gain = TARGET_LUFS - integ
-    run(["ffmpeg", "-v", "error", "-y", "-i", str(pre), "-af", f"volume={gain:.2f}dB,alimiter=limit=0.84:attack=5:release=50:level=false", "-ar", "48000", "-ac", "2", str(mix)])
+    run(["ffmpeg", "-v", "error", "-y", "-i", str(pre), "-af", f"volume={gain:.2f}dB,alimiter=limit=0.79:attack=5:release=50:level=false", "-ar", "48000", "-ac", "2", str(mix)])
     print(f"  loudness: premix {integ:.1f} LUFS -> gain {gain:+.1f} dB (target {TARGET_LUFS} LUFS, limiter -1.5 dBTP)")
 
     # ── 6. publish for Remotion ──
