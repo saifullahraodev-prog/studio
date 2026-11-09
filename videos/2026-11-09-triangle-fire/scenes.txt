@@ -1,0 +1,366 @@
+# Scene file: GATE 4 test video, Triangle fire 1911 (script approved 2026-11-09, sources in script.md)
+#
+# DIRECTOR MODE: every beat names a PLACE and a CAST; the director picks and times the shots.
+#   place    office | factory | stairwell | street | courtroom
+#   cast     name=character@spot do=<action> face=<expression>; ...   (spots are named per place)
+#   fire / smoke   0..1 or "a-b" (ramps over the beat)      music   light|tense|somber|investigate|ragtime|hopeful
+#   tr       transition INTO the beat: whip | flash | fade | cut   (same place = camera move, no cut)
+#   fx       name[@cue word], ...  (procedural or CC0 library sounds)
+#   shot     <cue word> | <type> [subject] [prop] | face= | do= | punch    (optional overrides)
+#   doorshake / dooropen / sprinkler   world state for the beat
+# Tone rule: no gags on victims. Beats 16-17 are quiet: slow shots, somber music, no sound effects.
+# After editing:  python -I tools/build_video.py videos/2026-11-09-triangle-fire
+
+slug: triangle-fire
+format: test-3min
+voice: piper
+# long-form narration: a little slower than the Shorts voice (0.82)
+voice_scale: 1.08
+
+# ── 1. Hook (Inspector, today) ──
+[beat 1]
+speaker: inspector
+place: office
+cast: insp=inspector@center do=talk face=determined
+dooropen: 0-0.7
+say: That door that swings outward when you push it. The sprinkler over your head. The fire drill you groan about every year. All three exist because of one Saturday afternoon in New York, in nineteen eleven.
+emph: outward, sprinkler, drill, nineteen, eleven
+music: light
+
+# ── 2. The job ──
+[beat 2]
+speaker: vo
+place: factory
+tr: flash
+cast: you=worker@aisle do=sew face=happy
+say: It's March twenty-fifth, nineteen eleven. You're a young immigrant, and you sew blouses called shirtwaists on the ninth floor of the Asch Building.
+emph: ninth
+music: ragtime
+
+[beat 3]
+speaker: vo
+place: factory
+cast: you=worker@aisle do=sew face=neutral
+say: The Triangle Waist Company fills the top three floors: eight, nine and ten. About five hundred workers. Mostly young women and girls. Rows and rows of sewing machines.
+emph: five, hundred
+shot: the | establish
+shot: rows | insert machines
+
+[beat 4]
+speaker: vo
+place: factory
+cast: you=worker@aisle do=sew face=worried; boss=owner@aisle2 do=point face=angry
+say: It's Saturday, almost quitting time. And there's one house rule: the doors stay locked. The bosses say it stops stealing. And unplanned breaks.
+emph: locked
+shot: bosses | close boss | punch
+shot: breaks | two you boss | face=angry
+
+# ── 3. The fire ──
+[beat 5]
+speaker: vo
+place: factory
+pause: 0.25
+cast: you=worker@aisle do=sew face=neutral
+fire: 0-0.15
+say: Downstairs, on eight, someone drops a match or a cigarette into a bin of fabric scraps.
+fx: match@match
+music: tense
+
+[beat 6]
+speaker: vo
+place: factory
+cast: you=worker@aisle do=panic face=shocked
+fire: 0.3-0.85
+smoke: 0.2-0.6
+say: Within five minutes, the whole eighth floor is on fire.
+emph: five, minutes
+shot: within | establish
+shot: eighth | close you | face=shocked | punch
+fx: riser@whole, fire_big@fire
+shake: 0.04
+
+[beat 7]
+speaker: vo
+place: street
+fire: 0.35
+cast: ff=firefighter@firefighter do=point face=determined
+say: Up on ten, they get a warning. They run for the roof, and students from the university next door push ladders across to them. Almost everyone on ten gets out.
+emph: roof
+shot: up | establish
+shot: roof | insert top
+shot: almost | establish
+
+[beat 8]
+speaker: vo
+place: factory
+tr: whip
+cast: you=worker@aisle do=sew face=neutral
+fire: 0.5
+smoke: 0.4
+say: On nine, you look up from your machine, and there's fire in the windows.
+shot: fire | close you | face=shocked | do=recoil | punch
+fx: hit@fire
+
+# ── 4. The exits (the gag is the system, not the people) ──
+[beat 9]
+speaker: vo
+place: factory
+cast: you=worker@aisle do=think face=determined
+fire: 0.55
+smoke: 0.45
+say: OK. Exits. You've got options.
+emph: options
+music: investigate
+
+[beat 10]
+speaker: vo
+place: stairwell
+tr: whip
+cast: you=worker@door do=rattle face=shocked
+doorshake: 1
+smoke: 0.2
+say: Option one: the stairs to Washington Place. Locked.
+emph: one, locked
+shot: locked | insert door
+fx: hit@locked
+
+[beat 11]
+speaker: vo
+place: stairwell
+pause: 0.4
+cast: you=worker@landing do=recoil face=scared
+fire: 0.7
+smoke: 0.45
+say: Option two: the other stairs. The fire is already coming up them.
+emph: two
+
+[beat 12]
+speaker: vo
+place: stairwell
+cast: you=worker@landing do=think face=worried
+smoke: 0.5
+say: Option three: the elevators. The operators make trip after trip, until they can't anymore.
+emph: three
+
+[beat 13]
+speaker: vo
+place: street
+tr: whip
+fire: 0.7
+cast: ff=firefighter@firefighter do=point face=shocked
+say: Option four: the fire escape. It twists, and collapses.
+emph: four, collapses
+shot: twists | insert fireescape
+fx: impact@collapses
+shake: 0.08
+
+[beat 14]
+speaker: vo
+place: street
+fire: 0.75
+cast: ff=firefighter@firefighter do=cheer face=happy
+say: Option five: the fire department! They arrive fast. Big ladders. Big hoses.
+emph: five
+shot: big | insert engine
+fx: bell@department
+
+[beat 15]
+speaker: vo
+place: street
+fire: 0.8
+cast: ff=firefighter@firefighter do=facepalm face=sad
+say: The ladders stop floors below you. The water can't reach either.
+shot: the | insert ladder
+shot: water | close ff | face=sad | do=facepalm
+music: tense
+
+# ── quiet: no gags, no sound effects ──
+[beat 16]
+speaker: vo
+place: street
+tr: fade
+pause: 0.5
+fire: 0.8
+extras: no
+cast: perkins=perkins@perkins face=sad
+say: Some people make the last choice there is. They jump.
+shot: some | insert windows
+shot: they | establish
+music: somber
+
+[beat 17]
+speaker: vo
+place: street
+pause: 0.4
+fire: 0.6
+cast: perkins=perkins@perkins face=sad
+say: One hundred forty-six people die. Most of them young women. The youngest were fourteen.
+shot: one | establish
+shot: most | medium perkins
+music: somber
+
+# ── 5. The twist ──
+[beat 18]
+speaker: inspector
+place: office
+tr: fade
+pause: 0.5
+cast: insp=inspector@center do=point face=angry
+say: Now here's the part that should make you angry. New York's law already said factory doors must not be locked during working hours. The rule existed. Nobody checked.
+emph: already, locked, nobody
+shot: nobody | close insp | do=facepalm | face=sad | punch
+music: investigate
+
+[beat 19]
+speaker: vo
+place: courtroom
+tr: whip
+cast: judge=judge@judge face=neutral; boss=owner@owner face=worried; boss2=owner@owner2 face=worried
+say: The owners were tried for manslaughter. Not guilty. Later they settled the lawsuits: seventy-five dollars per life.
+emph: guilty, seventy-five, life
+shot: not | close judge | face=determined
+shot: later | two boss boss2 | face=happy
+shot: seventy-five | close boss | face=happy | punch
+fx: stamp@guilty
+
+# ── 6. The fix ──
+[beat 20]
+speaker: vo
+place: street
+tr: whip
+fire: 0.6
+cast: perkins=perkins@perkins face=determined
+say: But New York didn't let it go. A young woman named Frances Perkins watched the fire from the street.
+emph: perkins
+shot: frances | close perkins
+music: hopeful
+
+[beat 21]
+speaker: vo
+place: factory
+tr: flash
+cast: perkins=perkins@aisle do=talk face=determined; insp=inspector@aisle2 do=tick face=determined
+say: She joined a new Factory Investigating Commission. Inspectors walked into factory after factory, and the state passed more than twenty new laws.
+emph: twenty
+music: hopeful
+
+[beat 22]
+speaker: inspector
+place: office
+tr: whip
+cast: insp=inspector@center do=point face=happy
+dooropen: 0-1
+sprinkler: 1
+say: Doors that open outward, and stay unlocked while you work. Automatic sprinklers in tall factories. Fire drills. Fire alarms. And New York City set up a Bureau of Fire Prevention.
+emph: outward, unlocked, sprinklers, drills, alarms
+shot: automatic | close insp | face=shocked | do=recoil
+
+[beat 23]
+speaker: inspector
+place: office
+cast: insp=inspector@center do=thumbsup face=happy; perkins=perkins@left do=wave face=happy
+say: Perkins later became the first woman in a U.S. president's cabinet.
+emph: first
+shot: perkins | two perkins insp
+
+# ── 6b. Rule by rule (each rule fixes one failed exit) ──
+[beat 24]
+speaker: inspector
+place: office
+cast: insp=inspector@center do=count face=determined
+say: Look at it rule by rule. Every one of them fixes a way out that failed on the ninth floor.
+emph: ninth
+music: investigate
+
+[beat 25]
+speaker: inspector
+place: stairwell
+tr: whip
+cast: you=worker@door do=rattle face=shocked
+doorshake: 1
+say: A locked door?
+shot: a | insert door
+
+[beat 26]
+speaker: inspector
+place: office
+tr: whip
+cast: insp=inspector@center do=tick face=determined
+say: Now it's illegal, and someone actually comes to check.
+emph: illegal
+
+[beat 27]
+speaker: inspector
+place: stairwell
+tr: whip
+cast: you=worker@door do=pushbar face=worried
+say: A door that opens the wrong way, against a crowd pushing to get out?
+
+[beat 28]
+speaker: inspector
+place: office
+tr: whip
+cast: you=worker@door do=pushbar face=happy; insp=inspector@center do=thumbsup face=happy
+dooropen: 0-1
+say: Now it swings outward.
+emph: outward
+shot: now | insert exit
+
+[beat 29]
+speaker: inspector
+place: street
+tr: whip
+fire: 0.6
+cast: ff=firefighter@firefighter do=facepalm face=sad
+say: Ladders that can't reach?
+shot: ladders | insert ladder
+
+[beat 30]
+speaker: inspector
+place: office
+tr: whip
+cast: insp=inspector@center do=recoil face=shocked
+sprinkler: 1
+say: Sprinklers fight the fire from the inside, before it grows.
+shot: sprinklers | insert sprinkler
+shot: fight | close insp | face=shocked
+
+[beat 31]
+speaker: inspector
+place: factory
+tr: whip
+fire: 0.5
+smoke: 0.5
+cast: you=worker@aisle do=panic face=scared
+say: Nobody knows where to go?
+
+[beat 32]
+speaker: inspector
+place: office
+tr: whip
+cast: insp=inspector@center do=point face=determined; you=worker@left do=walk face=happy
+say: Fire drills. You practise until your feet know the way.
+emph: drills
+
+[beat 33]
+speaker: inspector
+place: office
+cast: insp=inspector@center do=tap face=determined
+say: And the alarm? It rings on every floor, not just one.
+emph: every
+shot: alarm | insert alarm
+fx: bell@rings
+
+# ── 7. Close ──
+[beat 34]
+speaker: inspector
+place: office
+pause: 0.3
+cast: insp=inspector@center do=talk face=determined
+dooropen: 1
+say: So next time a fire drill ruins your afternoon, remember the ninth floor. And that's why, today, exit doors swing outward, stay unlocked, and lead somewhere safe.
+emph: ninth, today, outward, unlocked, safe
+shot: and | medium insp | face=happy
+shot: exit | insert exit
+shot: safe | close insp | face=happy | do=thumbsup
+music: hopeful

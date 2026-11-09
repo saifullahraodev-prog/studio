@@ -54,6 +54,16 @@ def parse_scenes(path: Path):
         k, v = k.strip(), v.strip()
         if cur is None:
             meta[k] = v
+        elif k == "shot":
+            parts = [x.strip() for x in v.split("|")]
+            sh = {"cue": parts[0], "spec": parts[1] if len(parts) > 1 else "medium"}
+            for x in parts[2:]:
+                if "=" in x:
+                    a, b = x.split("=", 1)
+                    sh[a.strip()] = b.strip()
+                elif x == "punch":
+                    sh["punch"] = True
+            cur.setdefault("shots", []).append(sh)
         elif k == "cut":
             parts = [p.strip() for p in v.split("|")]
             cut = {"cue": parts[0], "shot": parts[1] if len(parts) > 1 else cur.get("shot", "")}
@@ -66,7 +76,7 @@ def parse_scenes(path: Path):
             cur[k] = v
     for b in beats:
         b.setdefault("subtitle", b["say"])
-        b["pause"] = float(b.get("pause", PACING.get("lineGap", 0.32) if b["cuts"] else 0.32))
+        b["pause"] = float(b.get("pause", PACING.get("lineGap", 0.32) if (b["cuts"] or b.get("place")) else 0.32))
         b["emph"] = [e.strip() for e in b.get("emph", "").split(",") if e.strip()]
     return meta, beats
 
@@ -99,6 +109,9 @@ def norm(s: str) -> str:
     return re.sub(r"[^a-z0-9]", "", s.lower())
 
 
+NUMBER_WORDS = set("zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty thirty forty fifty sixty seventy eighty ninety hundred thousand million fortysix seventyfive ninetyfour".split())
+
+
 def align(say: str, words):
     """Map every token of the script line to a time, using the heard words.
     Returns [(token, start, end, heard_text_or_None)]; unheard tokens get interpolated times."""
@@ -124,9 +137,11 @@ def align(say: str, words):
                 t_end[i1 + k] = a + (e - a) * (k + 1) / n
             # numbers: keep whisper's digits ("1912") for the captions
             if any(any(ch.isdigit() for ch in wn[j]) for j in range(j1, j2)):
-                heard[i1] = "".join(words[j]["word"] for j in range(j1, j2))
+                # fold only the NUMBER words into the digits; ordinary words keep their own caption
+                heard[i1] = " ".join(words[j]["word"] for j in range(j1, j2) if any(ch.isdigit() for ch in words[j]["word"]))
                 for k in range(1, n):
-                    heard[i1 + k] = ""
+                    if norm(toks[i1 + k]) in NUMBER_WORDS:
+                        heard[i1 + k] = ""
     # interpolate anything still missing between known neighbours
     known = [i for i in range(len(toks)) if t_start[i] is not None]
     for i in range(len(toks)):
@@ -142,16 +157,108 @@ def align(say: str, words):
     return [(toks[i], round(t_start[i], 3), round(t_end[i], 3), heard[i]) for i in range(len(toks))]
 
 
-def tts_piper(beats, linedir: Path):
+def tts_piper(beats, linedir: Path, scale=None):
     from piper import PiperVoice, SynthesisConfig
 
     voice = PiperVoice.load(str(ROOT / "models" / "piper" / "en_US-ryan-high.onnx"))
-    cfg = SynthesisConfig(length_scale=PACING.get("voiceLengthScale", 0.9), noise_scale=0.6, noise_w_scale=0.7)
+    cfg = SynthesisConfig(length_scale=scale or PACING.get("voiceLengthScale", 0.9), noise_scale=0.6, noise_w_scale=0.7)
     linedir.mkdir(parents=True, exist_ok=True)
     for b in beats:
         with wave.open(str(linedir / f"{b['id']}.wav"), "wb") as wf:
             voice.synthesize_wav(b["say"], wf, syn_config=cfg)
         print(f"  piper {b['id']}: {wav_seconds(linedir / (b['id'] + '.wav')):.2f}s")
+
+
+PLACE_MOOD = {"office": "light", "factory": "ragtime", "stairwell": "tense", "street": "tense", "courtroom": "investigate"}
+
+
+def cut_audio(beats):
+    """v2 cut mode (explicit `cut:` lines): sounds on cuts + light/tense music by preset."""
+    sets = json.loads((ROOT / "engine" / "shots" / "sets.json").read_text(encoding="utf-8"))
+    place = lambda shot: sets["sets"].get(shot, sets["default"])
+    offset = {"whoosh": -0.1, "stamp": 0.32, "impact": 0.06, "scream": 0.55}  # stamp lands at 0.32 s
+    events, prev = [], None
+    for b in beats:
+        for c in b["cuts"]:
+            fxs = [f for f in c.get("fx", "").split("+") if f]
+            for f in fxs:
+                at = c["start"] + offset.get(f, 0.0)
+                events.append((at, f))
+                if c.get("pre") == "riser":  # suck-in that ends exactly on the hit: no dead air
+                    events.append((at - 0.5, "riser"))
+            # whoosh only where the picture really whips to a new place (same place = camera move, silent)
+            new_place = prev is None or place(prev) != place(c["shot"])
+            if c["tr"] == "whip" and new_place and "whoosh" not in fxs:
+                events.append((c["start"] - 0.06, "whoosh"))
+            if c["tr"] == "flash":
+                events.append((c["start"], "tick"))
+            prev = c["shot"]
+    segs = []
+    for b in beats:
+        mood = "tense" if b.get("preset") in ("night", "storm") else "light"
+        if segs and segs[-1][2] == mood:
+            segs[-1] = (segs[-1][0], b["end"], mood)
+        else:
+            segs.append((b["start"], b["end"], mood))
+    return events, segs
+
+
+def director_audio(beats, total, sfx):
+    """Director mode: sound events + music segments from places and beat fields.
+    - `fx: name[@cue], ...` per beat (cue word -> exact time), whoosh on place-change whips,
+      tick on flashes, `pre=riser` style rises via `fx: riser@cue`
+    - ambience beds per run of beats in the same place (sewing room, fire, street, crowd)
+    - music: beat `music:` mood, else the place's default (fire turns the factory tense)"""
+    events = []
+    prev_place = None
+    for b in beats:
+        c0 = b["cuts"][0] if b["cuts"] else None
+        if c0 and c0["tr"] == "whip" and b["place"] != prev_place:
+            events.append((c0["start"] - 0.06, "whoosh"))
+        if c0 and c0["tr"] == "flash":
+            events.append((c0["start"], "tick"))
+        for item in [x.strip() for x in b.get("fx", "").split(",") if x.strip()]:
+            name, _, cue = item.partition("@")
+            at = b["voiceStart"]
+            if cue:
+                hit = next((a for tok, a, e, h in b.get("aligned", []) if norm(tok).startswith(norm(cue)[:5])), None)
+                at = hit if hit is not None else at
+            if name == "riser":
+                at -= 0.5
+            events.append((at, name))
+        prev_place = b["place"]
+    # ambience runs
+    runs = []
+    for b in beats:
+        fire = max(b["fire"] or [0])
+        if b["place"] == "factory":
+            bed = "fire_bed" if fire > 0.1 else "sewing"
+        elif b["place"] == "stairwell":
+            bed = "fire_bed" if fire > 0.1 else None
+        elif b["place"] == "street":
+            bed = "crowd_bed" if fire > 0.1 else "street_bed"
+        else:
+            bed = None
+        if runs and runs[-1][2] == bed:
+            runs[-1][1] = b["end"]
+        else:
+            runs.append([b["start"], b["end"], bed])
+    for a, e, bed in runs:
+        if bed:
+            events.append((a, bed, 0.55, e - a))
+    # music segments
+    # music only changes where a beat asks for it (`music:`); otherwise it carries on
+    segs = []
+    mood = None
+    for b in beats:
+        fire = max(b["fire"] or [0])
+        mood = b.get("music") or mood or ("tense" if (b["place"] == "factory" and fire > 0.1) else PLACE_MOOD.get(b["place"], "light"))
+        if segs and segs[-1][2] == mood:
+            segs[-1] = (segs[-1][0], b["end"], mood)
+        else:
+            segs.append((b["start"], b["end"], mood))
+    print(f"  director audio: {len(events)} events; music: {', '.join(f'{m} {a:.0f}-{e:.0f}s' for a, e, m in segs)}")
+    return events, segs
 
 
 def main():
@@ -160,7 +267,8 @@ def main():
     recording = "--recording" in sys.argv
     meta, beats = parse_scenes(vdir / "scenes.txt")
     slug = meta.get("slug", vdir.name)
-    cut_mode = any(b["cuts"] for b in beats)
+    director = any(b.get("place") for b in beats)
+    cut_mode = director or any(b["cuts"] for b in beats)
     tmp = ROOT / ".cache" / "tmp"
     tmp.mkdir(parents=True, exist_ok=True)
     linedir = vdir / "voice-lines"
@@ -171,7 +279,7 @@ def main():
         missing = [b for b in beats if retts or not (linedir / f"{b['id']}.wav").exists()]
         if missing:
             if meta.get("voice") == "piper":
-                tts_piper(missing, linedir)
+                tts_piper(missing, linedir, float(meta["voice_scale"]) if meta.get("voice_scale") else None)
             else:
                 lj = tmp / "lines.json"
                 lj.write_text(json.dumps([{"id": b["id"], "say": b["say"]} for b in missing]), encoding="utf-8")
@@ -267,6 +375,27 @@ def main():
             if c["end"] - c["start"] < PACING.get("minShot", 0.45) - 0.05:
                 print(f"  warn: {b['id']} cut '{c['cue']}' is only {c['end'] - c['start']:.2f}s")
 
+    if director:
+        spec = importlib.util.spec_from_file_location("director", ROOT / "tools" / "director.py")
+        dmod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(dmod)
+        prev_place, counter = None, {}
+        for b in beats:
+            b["cast"] = dmod.parse_cast(b.get("cast", ""))
+            b["fire"] = dmod.rng(b.get("fire"))
+            b["smoke"] = dmod.rng(b.get("smoke"))
+            st = {}
+            if b.get("doorshake"):
+                st["doorShake"] = float(b["doorshake"])
+            if b.get("dooropen"):
+                st["doorOpen"] = dmod.rng(b["dooropen"])
+            if b.get("sprinkler"):
+                st["sprinkler"] = float(b["sprinkler"])
+            b["state"] = st
+            b["extras"] = b.get("extras", "yes") != "no"
+            dmod.plan(b, prev_place, PACING, counter)
+            prev_place = b["place"]
+
     # caption words (word-by-word mode): emphasis from `emph:` + any word with digits
     cap = []
     for b in beats:
@@ -275,7 +404,8 @@ def main():
             if heard == "":
                 continue  # folded into a number shown on the previous token
             text = heard if heard and any(ch.isdigit() for ch in heard) else tok
-            text = re.sub(r"[^\w'’?,\-]", "", text).strip(",")
+            text = re.sub(r"[^\w'’?,\- ]", "", text).strip(", ")
+            text = re.sub(r",(?=\S)", ", ", text)  # "25th,1911" -> "25th, 1911"
             if not text:
                 continue
             # numbers read better with thousands separators (but leave years like 1894 / 1912 alone)
@@ -291,34 +421,11 @@ def main():
     pre = tmp / "premix.wav"
     if cut_mode:
         sfx = load_sfx()
-        sets = json.loads((ROOT / "engine" / "shots" / "sets.json").read_text(encoding="utf-8"))
-        place = lambda shot: sets["sets"].get(shot, sets["default"])
-        offset = {"whoosh": -0.1, "stamp": 0.32, "impact": 0.06, "scream": 0.55}  # stamp lands at 0.32 s
-        events = []
-        prev = None
-        for b in beats:
-            for c in b["cuts"]:
-                fxs = [f for f in c.get("fx", "").split("+") if f]
-                for f in fxs:
-                    at = c["start"] + offset.get(f, 0.0)
-                    events.append((at, f))
-                    if c.get("pre") == "riser":  # suck-in that ends exactly on the hit: no dead air
-                        events.append((at - 0.5, "riser"))
-                # whoosh only where the picture really whips to a new place (same place = camera move, silent)
-                new_place = prev is None or place(prev) != place(c["shot"])
-                if c["tr"] == "whip" and new_place and "whoosh" not in fxs:
-                    events.append((c["start"] - 0.06, "whoosh"))
-                if c["tr"] == "flash":
-                    events.append((c["start"], "tick"))
-                prev = c["shot"]
+        if director:
+            events, segs = director_audio(beats, total, sfx)
+        else:
+            events, segs = cut_audio(beats)
         fx_track = sfx.render_events(events, total)
-        segs = []
-        for b in beats:
-            mood = "tense" if b.get("preset") in ("night", "storm") else "light"
-            if segs and segs[-1][2] == mood:
-                segs[-1] = (segs[-1][0], b["end"], mood)
-            else:
-                segs.append((b["start"], b["end"], mood))
         music = sfx.music_bed(segs, total)
         write_wav(tmp / "fx.wav", fx_track)
         write_wav(tmp / "music.wav", music)
@@ -355,7 +462,8 @@ def main():
     for b in beats:
         print(f"  {b['id']}  {b['start']:6.2f}-{b['end']:6.2f}s  voice {b['voiceStart']:6.2f}-{b['voiceEnd']:6.2f}")
         for c in b["cuts"]:
-            print(f"      {c['start']:6.2f}-{c['end']:6.2f}  {c['shot']:<18} {c.get('do', '')} {c.get('fx', '')} {c['tr']}")
+            shot = c["shot"] if isinstance(c["shot"], str) else " ".join(str(v) for k, v in c["shot"].items() if k in ("type", "subject", "prop"))
+            print(f"      {c['start']:6.2f}-{c['end']:6.2f}  {shot:<26} {c.get('do', '')} {c.get('fx', '')} {c['tr']}")
 
 
 if __name__ == "__main__":

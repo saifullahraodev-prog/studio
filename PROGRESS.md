@@ -33,6 +33,19 @@
   stops at the 7th floor, cobbles, lamps). Fire/smoke fx: `engine/fx/Fire.tsx`.
   New style file **v1.2** = v1.1 + presets `interior` and `fire` (existing presets untouched;
   owner reviews at GATE 4). Review: `out/phase4/worlds-review.png` (composition `WorldTest`).
+- 2026-11-09: steps 4-6. **Music**: 6 themes on one shared beat grid (light, tense, somber,
+  investigate, ragtime, hopeful), level-matched within 1 dB, equal-power cross-fades
+  (`audio/sfx.py`; O(n) smoothing so long videos build fast). **Small sets**: today's office
+  (EXIT door with push bar, sprinklers that spray, alarm, extinguisher) and a 1911 courtroom.
+  **Places + generic shots**: `engine/director/places.tsx` (spots, props with insert cameras,
+  establishing views, camera zones) and `engine/director/shots.tsx` (establish, wide, medium,
+  close, low, top, two, ots, insert, pov; angle fallback for tight rooms, from behind when facing
+  a wall). **Director**: `tools/director.py` (phrases -> shots: new place = establish, prop words
+  = insert, emphasis = punch-in close, question = low, else rotation; explicit `shot:` overrides;
+  tiny cuts folded) + `src/compositions/Video.tsx` (camera moves inside a place, whip/flash/fade
+  between places). Music only changes where a beat says `music:`; ambience beds per place.
+- Test video scene file: `videos/2026-11-09-triangle-fire/scenes.txt` -> 34 beats, 97 shots,
+  2:49 (voice_scale 1.08 for long-form narration).
 
 ### Phase 4 plan (2026-11-09)
 Script draft: `videos/2026-11-09-triangle-fire/script.md` (~3:00, 21 checked claims, 9 sources).

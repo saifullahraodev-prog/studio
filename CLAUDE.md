@@ -106,3 +106,11 @@ Ask before installing anything large, deleting files, or spending money.
 ## Git
 Commit and push at every gate. Private repo: https://github.com/saifullahraodev-prog/studio
 (`gh` at `C:\Program Files\GitHub CLI\gh.exe`, signed in as saifullahraodev-prog).
+
+## Director mode (Phase 4)
+- Scene files whose beats name a `place:` + `cast:` are directed automatically (`tools/director.py`);
+  render with the `Video` composition (props file `{"slug": ..., "res": 720|1080}`).
+- New places go in `engine/director/places.tsx` (spots, props + insert cameras, establishing views,
+  camera `bounds`). Shot types live in `engine/director/shots.tsx`.
+- Rebundle after every `build_video.py` run: the bundle copies `public/` (scenes.json, mix.wav).
+

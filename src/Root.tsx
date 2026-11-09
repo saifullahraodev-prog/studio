@@ -7,6 +7,7 @@ import { GLInfo } from "./compositions/GLInfo";
 import { LookTest, LookTestProps } from "./compositions/LookTest";
 import { calculateShortMetadata, Short, ShortProps } from "./compositions/Short";
 import { calculateShortV2Metadata, ShortV2, ShortV2Props } from "./compositions/ShortV2";
+import { calculateVideoMetadata, Video, VideoProps } from "./compositions/Video";
 import { StressTest } from "./compositions/StressTest";
 import { StyleTest, StyleTestProps } from "./compositions/StyleTest";
 import { TalkTest, TalkTestProps } from "./compositions/TalkTest";
@@ -116,6 +117,16 @@ export const RemotionRoot: React.FC = () => {
         {...vertical}
         defaultProps={{ res: 720, world: "factory", view: 0, preset: "interior", fire: 0, smoke: 0, people: true } as WorldTestProps}
         calculateMetadata={({ props }: { props: WorldTestProps }) => verticalSize(props.res)}
+      />
+      <Composition
+        id="Video"
+        component={Video}
+        durationInFrames={300}
+        fps={30}
+        width={720}
+        height={1280}
+        defaultProps={{ res: 720, slug: "triangle-fire" } as VideoProps}
+        calculateMetadata={calculateVideoMetadata}
       />
       <Composition id="GLInfo" component={GLInfo} durationInFrames={1} fps={30} width={1600} height={240} />
     </>

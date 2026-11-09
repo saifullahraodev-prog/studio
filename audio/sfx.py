@@ -28,8 +28,27 @@ def _noise(n):
     return _rng.uniform(-1, 1, n)
 
 
+def _movavg(x, k):
+    """centred moving average via cumulative sum: O(n) (np.convolve is O(n*k), far too slow
+    for minutes of audio)"""
+    k = max(1, int(k))
+    c = np.concatenate([[0.0], np.cumsum(x, dtype=np.float64)])
+    h = k // 2
+    i = np.arange(len(x))
+    a = np.clip(i - h, 0, len(x))
+    b = np.clip(i - h + k, 0, len(x))
+    return (c[b] - c[a]) / np.maximum(b - a, 1)
+
+
 def _lp(x, cutoff):
     # one-pole low-pass (cutoff may be an array for sweeps)
+    if np.ndim(cutoff) == 0:
+        try:
+            from scipy.signal import lfilter  # fast path for a fixed cutoff
+            a = float(np.exp(-2 * np.pi * float(cutoff) / SR))
+            return lfilter([1 - a], [1, -a], np.asarray(x, dtype=float))
+        except ImportError:
+            pass
     c = np.broadcast_to(np.asarray(cutoff, dtype=float), x.shape)
     a = np.exp(-2 * np.pi * c / SR)
     y = np.empty_like(x)
@@ -283,7 +302,7 @@ def _beds(duration, bpm=112):
     bar_idx = ((tt / (step * 8)).astype(int)) % 4
     root = np.array([NOTE(c[0] - 12) for c in tense_prog])[bar_idx]
     k = int(0.08 * SR)
-    root = np.convolve(root, np.ones(k) / k, mode="same")  # glide between chords
+    root = _movavg(root, k)  # glide between chords
     ph = np.cumsum(root) / SR
     drone = (2 * (ph % 1) - 1) + (2 * ((ph * 1.004) % 1) - 1)
     drone = _lp(drone, 380) * (0.75 + 0.25 * np.sin(2 * np.pi * 0.25 * tt))
@@ -291,22 +310,109 @@ def _beds(duration, bpm=112):
     return light, tense, step
 
 
-def music_bed(segments, duration, xfade=0.35):
-    """segments: [(start_sec, end_sec, mood)] with mood 'light' | 'tense'.
-    One continuous groove; moods cross-fade instead of restarting."""
+def _rms(x):
+    return float(np.sqrt(np.mean(x ** 2))) or 1.0
+
+
+def _more_beds(duration, bpm=112):
+    """Four more themes on the SAME eighth-note grid as _beds (t = 0, same bpm):
+    somber (half-time piano + low pad, no drums), investigate (pizzicato walking bass + ticks),
+    ragtime (1910s oom-pah: bass on 1/3, chord stabs on 2/4), hopeful (rising major arpeggio + pad)."""
+    step = 60 / bpm / 2
+    n = int(duration * SR) + SR
+    beds = {k: np.zeros(n) for k in ("somber", "investigate", "ragtime", "hopeful")}
+    cache = {}
+
+    def get(key, make):
+        if key not in cache:
+            cache[key] = make()
+        return cache[key]
+
+    def piano(m, sec=1.6):
+        # soft "felt piano": two detuned plucks, low-passed, long decay
+        return _lp(_pluck(NOTE(m), sec) + _pluck(NOTE(m) * 1.003, sec) * 0.6, 1800) * 0.6
+
+    som = [[57, 60, 64], [53, 57, 60], [48, 52, 55], [55, 59, 62]]  # Am F C G
+    inv = [50, 53, 57, 60, 62, 60, 57, 53]  # D minor walking line
+    rag = [[48, 52, 55], [53, 57, 60], [55, 59, 62], [48, 52, 55]]  # C F G C
+    hop = [[60, 64, 67], [55, 59, 62], [57, 60, 64], [53, 57, 60]]  # C G Am F
+    kick = lambda: _sine_sweep(110, 45, 0.16, 0.5) * np.exp(-_t(0.16) * 22) * 0.7
+    tick = lambda: _bp(_noise(int(0.03 * SR)), 5000, 11000) * _env(int(0.03 * SR), 0.001, 0.025) * 0.3
+    i, t = 0, 0.0
+    while t < duration:
+        bar = (i // 8) % 4
+        # somber: one low note per half bar + a high answer, nothing on the off-beats
+        if i % 4 == 0:
+            ch = som[bar]
+            m = ch[(i // 4) % 3]
+            _add(beds["somber"], get(("sp", m), lambda: piano(m)), t)
+            if i % 8 == 0:
+                _add(beds["somber"], get(("sb", ch[0]), lambda: piano(ch[0] - 12, 2.4) * 1.2), t)
+        # investigate: walking pizzicato on every beat, tick on off-beats
+        if i % 2 == 0:
+            m = inv[(i // 2) % 8] - 12
+            _add(beds["investigate"], get(("ip", m), lambda: _lp(_pluck(NOTE(m), 0.25), 1400) * 1.2), t)
+        else:
+            _add(beds["investigate"], get("it", tick), t)
+        # ragtime: oom (bass) on beats 1,3 / pah (chord) on 2,4 / syncopated melody plucks
+        ch = rag[bar]
+        if i % 4 == 0:
+            m = ch[0] - 12 if i % 8 == 0 else ch[2] - 24
+            _add(beds["ragtime"], get(("rb", m), lambda: _pluck(NOTE(m), 0.35) * 1.1), t)
+        if i % 4 == 2:
+            for m in ch:
+                _add(beds["ragtime"], get(("rc", m), lambda: _pluck(NOTE(m + 12), 0.18) * 0.45), t)
+        if i % 8 in (1, 3, 6):
+            m = ch[(i // 3) % 3] + 24
+            _add(beds["ragtime"], get(("rm", m), lambda: _pluck(NOTE(m), 0.3) * 0.4), t)
+        # hopeful: rising arpeggio on every eighth + soft kick on beats 1 and 3
+        ch = hop[bar]
+        m = ch[i % 3] + 12 * (1 + (i % 8) // 3 % 2)
+        _add(beds["hopeful"], get(("ha", m), lambda: _pluck(NOTE(m), 0.6) * 0.45), t)
+        if i % 4 == 0:
+            _add(beds["hopeful"], get("hk", kick), t)
+        i += 1
+        t += step
+    # sustained pads under somber and hopeful (chord roots, slow swell)
+    tt = np.arange(n) / SR
+    bar_idx = ((tt / (step * 8)).astype(int)) % 4
+    for name, prog, lvl in (("somber", som, 0.18), ("hopeful", hop, 0.12)):
+        root = np.array([NOTE(c[0] - 12) for c in prog])[bar_idx]
+        k = int(0.1 * SR)
+        root = _movavg(root, k)
+        ph = np.cumsum(root) / SR
+        pad = np.sin(2 * np.pi * ph) + 0.5 * np.sin(2 * np.pi * ph * 1.5) + 0.3 * np.sin(2 * np.pi * ph * 2.002)
+        beds[name] += _lp(pad, 900) * lvl * (0.8 + 0.2 * np.sin(2 * np.pi * 0.2 * tt))
+    return beds
+
+
+MOODS = ("light", "tense", "somber", "investigate", "ragtime", "hopeful")
+
+
+def music_bed(segments, duration, xfade=0.45):
+    """segments: [(start_sec, end_sec, mood)], mood in MOODS. All themes share one beat grid,
+    so the groove never restarts; moods cross-fade (equal power) at segment edges.
+    Every theme is level-matched (same RMS) so switching mood never jumps in loudness."""
     light, tense, _ = _beds(duration)
+    beds = {"light": light, "tense": tense, **_more_beds(duration)}
+    used = {m for _, _, m in segments} or {"light"}
     n = len(light)
-    w = np.zeros(n)  # 0 = light, 1 = tense
-    for s0, s1, mood in segments:
-        if mood == "tense":
-            w[int(s0 * SR) : int(s1 * SR)] = 1.0
-    if segments:
-        w[int(segments[-1][1] * SR) :] = w[max(0, int(segments[-1][1] * SR) - 1)]
     k = max(1, int(xfade * SR))
-    w = np.convolve(w, np.ones(k) / k, mode="same")  # smooth mood switches
-    w = np.clip(w, 0.0, 1.0)
-    light = light * 2.2  # level-match the plucky bed to the tense one (measured ~7 dB quieter)
-    out = light * np.sqrt(1 - w) + tense * np.sqrt(w)
+    weights = {}
+    for m in used:
+        w = np.zeros(n)
+        for s0, s1, mm in segments:
+            if mm == m:
+                w[int(s0 * SR) : int(s1 * SR)] = 1.0
+        if segments and segments[-1][2] == m:
+            w[int(segments[-1][1] * SR) :] = 1.0
+        weights[m] = _movavg(w, k)
+    total = sum(weights.values()) + 1e-9
+    out = np.zeros(n)
+    for m in used:
+        bed = beds.get(m, light)
+        bed = bed / _rms(bed[: int(duration * SR)]) * 0.12
+        out += bed * np.sqrt(np.clip(weights[m] / total, 0, 1))
     return norm(out[: int(duration * SR)], 0.8)
 
 

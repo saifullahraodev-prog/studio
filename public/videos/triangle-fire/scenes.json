@@ -1,0 +1,11423 @@
+{
+ "slug": "triangle-fire",
+ "format": "test-3min",
+ "world": null,
+ "fps": 30,
+ "duration": 169.19,
+ "beats": [
+  {
+   "id": "b1",
+   "cuts": [
+    {
+     "start": 0.0,
+     "shot": {
+      "subject": "insp",
+      "variant": 0,
+      "type": "establish"
+     },
+     "tr": "whip",
+     "end": 2.2
+    },
+    {
+     "start": 2.2,
+     "shot": {
+      "subject": "insp",
+      "variant": 1,
+      "type": "insert",
+      "prop": "sprinkler"
+     },
+     "tr": "cut",
+     "end": 3.74
+    },
+    {
+     "start": 3.74,
+     "shot": {
+      "subject": "insp",
+      "variant": 2,
+      "type": "insert",
+      "prop": "alarm"
+     },
+     "tr": "cut",
+     "end": 5.8
+    },
+    {
+     "start": 5.8,
+     "shot": {
+      "subject": "insp",
+      "variant": 3,
+      "type": "medium"
+     },
+     "tr": "cut",
+     "end": 6.98
+    },
+    {
+     "start": 6.98,
+     "shot": {
+      "subject": "insp",
+      "variant": 4,
+      "type": "wide"
+     },
+     "tr": "cut",
+     "end": 9.12
+    },
+    {
+     "start": 9.12,
+     "shot": {
+      "subject": "insp",
+      "variant": 5,
+      "type": "close",
+      "punch": true
+     },
+     "tr": "cut",
+     "end": 10.46
+    }
+   ],
+   "speaker": "inspector",
+   "place": "office",
+   "cast": [
+    {
+     "name": "insp",
+     "char": "inspector",
+     "spot": "center",
+     "do": "talk",
+     "face": "determined"
+    }
+   ],
+   "dooropen": "0-0.7",
+   "say": "That door that swings outward when you push it. The sprinkler over your head. The fire drill you groan about every year. All three exist because of one Saturday afternoon in New York, in nineteen eleven.",
+   "emph": [
+    "outward",
+    "sprinkler",
+    "drill",
+    "nineteen",
+    "eleven"
+   ],
+   "music": "light",
+   "subtitle": "That door that swings outward when you push it. The sprinkler over your head. The fire drill you groan about every year. All three exist because of one Saturday afternoon in New York, in nineteen eleven.",
+   "pause": 0.05,
+   "voiceStart": 0.25,
+   "voiceEnd": 10.49,
+   "start": 0.0,
+   "end": 10.46,
+   "words": [
+    {
+     "word": "door",
+     "start": 0.4,
+     "end": 0.56
+    },
+    {
+     "word": "that",
+     "start": 0.56,
+     "end": 0.74
+    },
+    {
+     "word": "swings",
+     "start": 0.74,
+     "end": 0.96
+    },
+    {
+     "word": "outward",
+     "start": 0.96,
+     "end": 1.38
+    },
+    {
+     "word": "when",
+     "start": 1.38,
+     "end": 1.6
+    },
+    {
+     "word": "you",
+     "start": 1.6,
+     "end": 1.76
+    },
+    {
+     "word": "push",
+     "start": 1.76,
+     "end": 2.02
+    },
+    {
+     "word": "it,",
+     "start": 2.02,
+     "end": 2.16
+    },
+    {
+     "word": "a",
+     "start": 2.24,
+     "end": 2.32
+    },
+    {
+     "word": "sprinkler",
+     "start": 2.32,
+     "end": 2.78
+    },
+    {
+     "word": "over",
+     "start": 2.78,
+     "end": 3.1
+    },
+    {
+     "word": "your",
+     "start": 3.1,
+     "end": 3.3
+    },
+    {
+     "word": "head,",
+     "start": 3.3,
+     "end": 3.6
+    },
+    {
+     "word": "the",
+     "start": 3.78,
+     "end": 3.86
+    },
+    {
+     "word": "fire",
+     "start": 3.86,
+     "end": 4.16
+    },
+    {
+     "word": "drill",
+     "start": 4.16,
+     "end": 4.44
+    },
+    {
+     "word": "you",
+     "start": 4.44,
+     "end": 4.66
+    },
+    {
+     "word": "groan",
+     "start": 4.66,
+     "end": 4.96
+    },
+    {
+     "word": "about",
+     "start": 4.96,
+     "end": 5.14
+    },
+    {
+     "word": "every",
+     "start": 5.14,
+     "end": 5.44
+    },
+    {
+     "word": "year.",
+     "start": 5.44,
+     "end": 5.76
+    },
+    {
+     "word": "All",
+     "start": 5.84,
+     "end": 5.96
+    },
+    {
+     "word": "three",
+     "start": 5.96,
+     "end": 6.2
+    },
+    {
+     "word": "exist",
+     "start": 6.2,
+     "end": 6.54
+    },
+    {
+     "word": "because",
+     "start": 6.54,
+     "end": 6.82
+    },
+    {
+     "word": "of",
+     "start": 6.82,
+     "end": 7.02
+    },
+    {
+     "word": "one",
+     "start": 7.02,
+     "end": 7.24
+    },
+    {
+     "word": "Saturday",
+     "start": 7.24,
+     "end": 7.6
+    },
+    {
+     "word": "afternoon",
+     "start": 7.6,
+     "end": 8.24
+    },
+    {
+     "word": "in",
+     "start": 8.24,
+     "end": 8.66
+    },
+    {
+     "word": "New",
+     "start": 8.66,
+     "end": 8.84
+    },
+    {
+     "word": "York",
+     "start": 8.84,
+     "end": 9.16
+    },
+    {
+     "word": "in",
+     "start": 9.16,
+     "end": 9.46
+    },
+    {
+     "word": "1911.",
+     "start": 9.46,
+     "end": 10.32
+    },
+    {
+     "word": "It's",
+     "start": 10.54,
+     "end": 10.72
+    }
+   ],
+   "cueAt": 0.25,
+   "aligned": [
+    [
+     "That",
+     0.4,
+     0.4,
+     null
+    ],
+    [
+     "door",
+     0.4,
+     0.56,
+     "door"
+    ],
+    [
+     "that",
+     0.56,
+     0.74,
+     "that"
+    ],
+    [
+     "swings",
+     0.74,
+     0.96,
+     "swings"
+    ],
+    [
+     "outward",
+     0.96,
+     1.38,
+     "outward"
+    ],
+    [
+     "when",
+     1.38,
+     1.6,
+     "when"
+    ],
+    [
+     "you",
+     1.6,
+     1.76,
+     "you"
+    ],
+    [
+     "push",
+     1.76,
+     2.02,
+     "push"
+    ],
+    [
+     "it.",
+     2.02,
+     2.16,
+     "it,"
+    ],
+    [
+     "The",
+     2.24,
+     2.32,
+     null
+    ],
+    [
+     "sprinkler",
+     2.32,
+     2.78,
+     "sprinkler"
+    ],
+    [
+     "over",
+     2.78,
+     3.1,
+     "over"
+    ],
+    [
+     "your",
+     3.1,
+     3.3,
+     "your"
+    ],
+    [
+     "head.",
+     3.3,
+     3.6,
+     "head,"
+    ],
+    [
+     "The",
+     3.78,
+     3.86,
+     "the"
+    ],
+    [
+     "fire",
+     3.86,
+     4.16,
+     "fire"
+    ],
+    [
+     "drill",
+     4.16,
+     4.44,
+     "drill"
+    ],
+    [
+     "you",
+     4.44,
+     4.66,
+     "you"
+    ],
+    [
+     "groan",
+     4.66,
+     4.96,
+     "groan"
+    ],
+    [
+     "about",
+     4.96,
+     5.14,
+     "about"
+    ],
+    [
+     "every",
+     5.14,
+     5.44,
+     "every"
+    ],
+    [
+     "year.",
+     5.44,
+     5.76,
+     "year."
+    ],
+    [
+     "All",
+     5.84,
+     5.96,
+     "All"
+    ],
+    [
+     "three",
+     5.96,
+     6.2,
+     "three"
+    ],
+    [
+     "exist",
+     6.2,
+     6.54,
+     "exist"
+    ],
+    [
+     "because",
+     6.54,
+     6.82,
+     "because"
+    ],
+    [
+     "of",
+     6.82,
+     7.02,
+     "of"
+    ],
+    [
+     "one",
+     7.02,
+     7.24,
+     "one"
+    ],
+    [
+     "Saturday",
+     7.24,
+     7.6,
+     "Saturday"
+    ],
+    [
+     "afternoon",
+     7.6,
+     8.24,
+     "afternoon"
+    ],
+    [
+     "in",
+     8.24,
+     8.66,
+     "in"
+    ],
+    [
+     "New",
+     8.66,
+     8.84,
+     "New"
+    ],
+    [
+     "York,",
+     8.84,
+     9.16,
+     "York"
+    ],
+    [
+     "in",
+     9.16,
+     9.46,
+     "in"
+    ],
+    [
+     "nineteen",
+     9.46,
+     10.09,
+     "1911."
+    ],
+    [
+     "eleven.",
+     10.09,
+     10.72,
+     ""
+    ]
+   ],
+   "fire": null,
+   "smoke": null,
+   "state": {
+    "doorOpen": [
+     0.0,
+     0.7
+    ]
+   },
+   "extras": true
+  },
+  {
+   "id": "b2",
+   "cuts": [
+    {
+     "start": 10.46,
+     "shot": {
+      "subject": "you",
+      "variant": 6,
+      "type": "establish"
+     },
+     "tr": "flash",
+     "end": 12.84
+    },
+    {
+     "start": 12.84,
+     "shot": {
+      "subject": "you",
+      "variant": 7,
+      "type": "insert",
+      "prop": "machines"
+     },
+     "tr": "cut",
+     "end": 16.3
+    },
+    {
+     "start": 16.3,
+     "shot": {
+      "subject": "you",
+      "variant": 8,
+      "type": "close",
+      "punch": true
+     },
+     "tr": "cut",
+     "end": 18.254
+    }
+   ],
+   "speaker": "vo",
+   "place": "factory",
+   "tr": "flash",
+   "cast": [
+    {
+     "name": "you",
+     "char": "worker",
+     "spot": "aisle",
+     "do": "sew",
+     "face": "happy"
+    }
+   ],
+   "say": "It's March twenty-fifth, nineteen eleven. You're a young immigrant, and you sew blouses called shirtwaists on the ninth floor of the Asch Building.",
+   "emph": [
+    "ninth"
+   ],
+   "music": "ragtime",
+   "subtitle": "It's March twenty-fifth, nineteen eleven. You're a young immigrant, and you sew blouses called shirtwaists on the ninth floor of the Asch Building.",
+   "pause": 0.05,
+   "voiceStart": 10.54,
+   "voiceEnd": 18.284,
+   "start": 10.46,
+   "end": 18.254,
+   "words": [
+    {
+     "word": "It's",
+     "start": 10.54,
+     "end": 10.72
+    },
+    {
+     "word": "March",
+     "start": 10.72,
+     "end": 10.86
+    },
+    {
+     "word": "25th,",
+     "start": 10.86,
+     "end": 11.86
+    },
+    {
+     "word": "1911.",
+     "start": 11.98,
+     "end": 12.74
+    },
+    {
+     "word": "You're",
+     "start": 12.88,
+     "end": 13.04
+    },
+    {
+     "word": "a",
+     "start": 13.04,
+     "end": 13.14
+    },
+    {
+     "word": "young",
+     "start": 13.14,
+     "end": 13.32
+    },
+    {
+     "word": "immigrant,",
+     "start": 13.32,
+     "end": 13.68
+    },
+    {
+     "word": "and",
+     "start": 14.1,
+     "end": 14.26
+    },
+    {
+     "word": "you",
+     "start": 14.26,
+     "end": 14.4
+    },
+    {
+     "word": "sew",
+     "start": 14.4,
+     "end": 14.56
+    },
+    {
+     "word": "blouses",
+     "start": 14.56,
+     "end": 15.08
+    },
+    {
+     "word": "called",
+     "start": 15.08,
+     "end": 15.5
+    },
+    {
+     "word": "shirt",
+     "start": 15.5,
+     "end": 15.82
+    },
+    {
+     "word": "wastes",
+     "start": 15.82,
+     "end": 16.2
+    },
+    {
+     "word": "on",
+     "start": 16.2,
+     "end": 16.34
+    },
+    {
+     "word": "the",
+     "start": 16.34,
+     "end": 16.44
+    },
+    {
+     "word": "ninth",
+     "start": 16.44,
+     "end": 16.64
+    },
+    {
+     "word": "floor",
+     "start": 16.64,
+     "end": 17.04
+    },
+    {
+     "word": "of",
+     "start": 17.04,
+     "end": 17.32
+    },
+    {
+     "word": "the",
+     "start": 17.32,
+     "end": 17.46
+    },
+    {
+     "word": "Ash",
+     "start": 17.46,
+     "end": 17.76
+    },
+    {
+     "word": "building.",
+     "start": 17.76,
+     "end": 18.14
+    }
+   ],
+   "cueAt": 10.54,
+   "aligned": [
+    [
+     "It's",
+     10.54,
+     10.72,
+     "It's"
+    ],
+    [
+     "March",
+     10.72,
+     10.86,
+     "March"
+    ],
+    [
+     "twenty-fifth,",
+     10.86,
+     11.487,
+     "25th, 1911."
+    ],
+    [
+     "nineteen",
+     11.487,
+     12.113,
+     ""
+    ],
+    [
+     "eleven.",
+     12.113,
+     12.74,
+     ""
+    ],
+    [
+     "You're",
+     12.88,
+     13.04,
+     "You're"
+    ],
+    [
+     "a",
+     13.04,
+     13.14,
+     "a"
+    ],
+    [
+     "young",
+     13.14,
+     13.32,
+     "young"
+    ],
+    [
+     "immigrant,",
+     13.32,
+     13.68,
+     "immigrant,"
+    ],
+    [
+     "and",
+     14.1,
+     14.26,
+     "and"
+    ],
+    [
+     "you",
+     14.26,
+     14.4,
+     "you"
+    ],
+    [
+     "sew",
+     14.4,
+     14.56,
+     "sew"
+    ],
+    [
+     "blouses",
+     14.56,
+     15.08,
+     "blouses"
+    ],
+    [
+     "called",
+     15.08,
+     15.5,
+     "called"
+    ],
+    [
+     "shirtwaists",
+     15.5,
+     16.2,
+     null
+    ],
+    [
+     "on",
+     16.2,
+     16.34,
+     "on"
+    ],
+    [
+     "the",
+     16.34,
+     16.44,
+     "the"
+    ],
+    [
+     "ninth",
+     16.44,
+     16.64,
+     "ninth"
+    ],
+    [
+     "floor",
+     16.64,
+     17.04,
+     "floor"
+    ],
+    [
+     "of",
+     17.04,
+     17.32,
+     "of"
+    ],
+    [
+     "the",
+     17.32,
+     17.46,
+     "the"
+    ],
+    [
+     "Asch",
+     17.46,
+     17.76,
+     null
+    ],
+    [
+     "Building.",
+     17.76,
+     18.14,
+     "building."
+    ]
+   ],
+   "fire": null,
+   "smoke": null,
+   "state": {},
+   "extras": true
+  },
+  {
+   "id": "b3",
+   "cuts": [
+    {
+     "start": 18.254,
+     "shot": {
+      "subject": "you",
+      "variant": 9,
+      "type": "establish"
+     },
+     "tr": "cut",
+     "end": 19.82
+    },
+    {
+     "start": 19.82,
+     "shot": {
+      "subject": "you",
+      "variant": 10,
+      "type": "close"
+     },
+     "tr": "cut",
+     "end": 21.88
+    },
+    {
+     "start": 21.88,
+     "shot": {
+      "subject": "you",
+      "variant": 11,
+      "type": "close",
+      "punch": true
+     },
+     "tr": "cut",
+     "end": 24.64
+    },
+    {
+     "start": 24.64,
+     "shot": {
+      "subject": "you",
+      "variant": 12,
+      "type": "medium"
+     },
+     "tr": "cut",
+     "end": 26.44
+    },
+    {
+     "start": 26.44,
+     "shot": {
+      "subject": "you",
+      "variant": 13,
+      "type": "insert",
+      "prop": "machines"
+     },
+     "tr": "cut",
+     "end": 28.718
+    }
+   ],
+   "speaker": "vo",
+   "place": "factory",
+   "cast": [
+    {
+     "name": "you",
+     "char": "worker",
+     "spot": "aisle",
+     "do": "sew",
+     "face": "neutral"
+    }
+   ],
+   "say": "The Triangle Waist Company fills the top three floors: eight, nine and ten. About five hundred workers. Mostly young women and girls. Rows and rows of sewing machines.",
+   "emph": [
+    "five",
+    "hundred"
+   ],
+   "shots": [
+    {
+     "cue": "the",
+     "spec": "establish"
+    },
+    {
+     "cue": "rows",
+     "spec": "insert machines"
+    }
+   ],
+   "subtitle": "The Triangle Waist Company fills the top three floors: eight, nine and ten. About five hundred workers. Mostly young women and girls. Rows and rows of sewing machines.",
+   "pause": 0.05,
+   "voiceStart": 18.334,
+   "voiceEnd": 28.748,
+   "start": 18.254,
+   "end": 28.718,
+   "words": [
+    {
+     "word": "The",
+     "start": 18.34,
+     "end": 18.42
+    },
+    {
+     "word": "Triangle",
+     "start": 18.42,
+     "end": 18.82
+    },
+    {
+     "word": "Waste",
+     "start": 18.82,
+     "end": 19.1
+    },
+    {
+     "word": "Company",
+     "start": 19.1,
+     "end": 19.56
+    },
+    {
+     "word": "fills",
+     "start": 19.56,
+     "end": 19.86
+    },
+    {
+     "word": "the",
+     "start": 19.86,
+     "end": 20.08
+    },
+    {
+     "word": "top",
+     "start": 20.08,
+     "end": 20.34
+    },
+    {
+     "word": "three",
+     "start": 20.34,
+     "end": 20.64
+    },
+    {
+     "word": "floors,",
+     "start": 20.64,
+     "end": 21.0
+    },
+    {
+     "word": "eight,",
+     "start": 21.4,
+     "end": 21.66
+    },
+    {
+     "word": "nine,",
+     "start": 21.92,
+     "end": 22.22
+    },
+    {
+     "word": "and",
+     "start": 22.46,
+     "end": 22.58
+    },
+    {
+     "word": "ten.",
+     "start": 22.58,
+     "end": 22.86
+    },
+    {
+     "word": "About",
+     "start": 23.0,
+     "end": 23.16
+    },
+    {
+     "word": "500",
+     "start": 23.16,
+     "end": 23.74
+    },
+    {
+     "word": "workers,",
+     "start": 23.74,
+     "end": 24.3
+    },
+    {
+     "word": "mostly",
+     "start": 24.68,
+     "end": 24.92
+    },
+    {
+     "word": "young",
+     "start": 24.92,
+     "end": 25.18
+    },
+    {
+     "word": "women",
+     "start": 25.18,
+     "end": 25.52
+    },
+    {
+     "word": "and",
+     "start": 25.52,
+     "end": 25.92
+    },
+    {
+     "word": "girls,",
+     "start": 25.92,
+     "end": 26.24
+    },
+    {
+     "word": "rows",
+     "start": 26.48,
+     "end": 26.74
+    },
+    {
+     "word": "and",
+     "start": 26.74,
+     "end": 27.12
+    },
+    {
+     "word": "rows",
+     "start": 27.12,
+     "end": 27.4
+    },
+    {
+     "word": "of",
+     "start": 27.4,
+     "end": 27.64
+    },
+    {
+     "word": "sewing",
+     "start": 27.64,
+     "end": 27.86
+    },
+    {
+     "word": "machines.",
+     "start": 27.86,
+     "end": 28.5
+    },
+    {
+     "word": "It's",
+     "start": 28.5,
+     "end": 29.02
+    }
+   ],
+   "cueAt": 18.334,
+   "aligned": [
+    [
+     "The",
+     18.34,
+     18.42,
+     "The"
+    ],
+    [
+     "Triangle",
+     18.42,
+     18.82,
+     "Triangle"
+    ],
+    [
+     "Waist",
+     18.82,
+     19.1,
+     null
+    ],
+    [
+     "Company",
+     19.1,
+     19.56,
+     "Company"
+    ],
+    [
+     "fills",
+     19.56,
+     19.86,
+     "fills"
+    ],
+    [
+     "the",
+     19.86,
+     20.08,
+     "the"
+    ],
+    [
+     "top",
+     20.08,
+     20.34,
+     "top"
+    ],
+    [
+     "three",
+     20.34,
+     20.64,
+     "three"
+    ],
+    [
+     "floors",
+     20.64,
+     21.0,
+     "floors,"
+    ],
+    [
+     "eight,",
+     21.4,
+     21.66,
+     "eight,"
+    ],
+    [
+     "nine",
+     21.92,
+     22.22,
+     "nine,"
+    ],
+    [
+     "and",
+     22.46,
+     22.58,
+     "and"
+    ],
+    [
+     "ten.",
+     22.58,
+     22.86,
+     "ten."
+    ],
+    [
+     "About",
+     23.0,
+     23.16,
+     "About"
+    ],
+    [
+     "five",
+     23.16,
+     23.45,
+     "500"
+    ],
+    [
+     "hundred",
+     23.45,
+     23.74,
+     ""
+    ],
+    [
+     "workers.",
+     23.74,
+     24.3,
+     "workers,"
+    ],
+    [
+     "Mostly",
+     24.68,
+     24.92,
+     "mostly"
+    ],
+    [
+     "young",
+     24.92,
+     25.18,
+     "young"
+    ],
+    [
+     "women",
+     25.18,
+     25.52,
+     "women"
+    ],
+    [
+     "and",
+     25.52,
+     25.92,
+     "and"
+    ],
+    [
+     "girls.",
+     25.92,
+     26.24,
+     "girls,"
+    ],
+    [
+     "Rows",
+     26.48,
+     26.74,
+     "rows"
+    ],
+    [
+     "and",
+     26.74,
+     27.12,
+     "and"
+    ],
+    [
+     "rows",
+     27.12,
+     27.4,
+     "rows"
+    ],
+    [
+     "of",
+     27.4,
+     27.64,
+     "of"
+    ],
+    [
+     "sewing",
+     27.64,
+     27.86,
+     "sewing"
+    ],
+    [
+     "machines.",
+     27.86,
+     28.5,
+     "machines."
+    ]
+   ],
+   "fire": null,
+   "smoke": null,
+   "state": {},
+   "extras": true
+  },
+  {
+   "id": "b4",
+   "cuts": [
+    {
+     "start": 28.718,
+     "shot": {
+      "subject": "you",
+      "other": "boss",
+      "variant": 14,
+      "type": "low"
+     },
+     "tr": "cut",
+     "end": 30.98
+    },
+    {
+     "start": 30.98,
+     "shot": {
+      "subject": "you",
+      "other": "boss",
+      "variant": 15,
+      "type": "insert",
+      "prop": "door"
+     },
+     "tr": "cut",
+     "end": 33.68
+    },
+    {
+     "start": 33.68,
+     "shot": {
+      "subject": "boss",
+      "other": "boss",
+      "variant": 17,
+      "type": "close",
+      "punch": true
+     },
+     "tr": "cut",
+     "end": 35.3
+    },
+    {
+     "start": 35.3,
+     "shot": {
+      "subject": "you",
+      "other": "boss",
+      "variant": 18,
+      "type": "wide"
+     },
+     "tr": "cut",
+     "end": 35.9
+    },
+    {
+     "start": 35.9,
+     "shot": {
+      "subject": "you",
+      "other": "boss",
+      "variant": 19,
+      "type": "two"
+     },
+     "tr": "cut",
+     "face": "angry",
+     "end": 36.914
+    }
+   ],
+   "speaker": "vo",
+   "place": "factory",
+   "cast": [
+    {
+     "name": "you",
+     "char": "worker",
+     "spot": "aisle",
+     "do": "sew",
+     "face": "worried"
+    },
+    {
+     "name": "boss",
+     "char": "owner",
+     "spot": "aisle2",
+     "do": "point",
+     "face": "angry"
+    }
+   ],
+   "say": "It's Saturday, almost quitting time. And there's one house rule: the doors stay locked. The bosses say it stops stealing. And unplanned breaks.",
+   "emph": [
+    "locked"
+   ],
+   "shots": [
+    {
+     "cue": "bosses",
+     "spec": "close boss",
+     "punch": true
+    },
+    {
+     "cue": "breaks",
+     "spec": "two you boss",
+     "face": "angry"
+    }
+   ],
+   "subtitle": "It's Saturday, almost quitting time. And there's one house rule: the doors stay locked. The bosses say it stops stealing. And unplanned breaks.",
+   "pause": 0.05,
+   "voiceStart": 28.798,
+   "voiceEnd": 36.635,
+   "start": 28.718,
+   "end": 36.914,
+   "words": [
+    {
+     "word": "Saturday,",
+     "start": 29.02,
+     "end": 29.36
+    },
+    {
+     "word": "almost",
+     "start": 29.84,
+     "end": 30.14
+    },
+    {
+     "word": "quitting",
+     "start": 30.14,
+     "end": 30.42
+    },
+    {
+     "word": "time.",
+     "start": 30.42,
+     "end": 30.82
+    },
+    {
+     "word": "And",
+     "start": 31.02,
+     "end": 31.04
+    },
+    {
+     "word": "there's",
+     "start": 31.04,
+     "end": 31.3
+    },
+    {
+     "word": "one",
+     "start": 31.3,
+     "end": 31.5
+    },
+    {
+     "word": "house",
+     "start": 31.5,
+     "end": 31.8
+    },
+    {
+     "word": "rule,",
+     "start": 31.8,
+     "end": 32.16
+    },
+    {
+     "word": "the",
+     "start": 32.5,
+     "end": 32.58
+    },
+    {
+     "word": "doors",
+     "start": 32.58,
+     "end": 32.82
+    },
+    {
+     "word": "stay",
+     "start": 32.82,
+     "end": 33.14
+    },
+    {
+     "word": "locked.",
+     "start": 33.14,
+     "end": 33.5
+    },
+    {
+     "word": "The",
+     "start": 33.66,
+     "end": 33.72
+    },
+    {
+     "word": "bosses",
+     "start": 33.72,
+     "end": 34.0
+    },
+    {
+     "word": "say",
+     "start": 34.0,
+     "end": 34.28
+    },
+    {
+     "word": "it",
+     "start": 34.28,
+     "end": 34.4
+    },
+    {
+     "word": "stops",
+     "start": 34.4,
+     "end": 34.64
+    },
+    {
+     "word": "stealing.",
+     "start": 34.64,
+     "end": 35.12
+    },
+    {
+     "word": "And",
+     "start": 35.34,
+     "end": 35.48
+    },
+    {
+     "word": "unplanned",
+     "start": 35.48,
+     "end": 35.94
+    },
+    {
+     "word": "breaks",
+     "start": 35.94,
+     "end": 36.36
+    },
+    {
+     "word": "downstairs",
+     "start": 36.36,
+     "end": 37.58
+    }
+   ],
+   "cueAt": 28.798,
+   "aligned": [
+    [
+     "It's",
+     29.02,
+     29.02,
+     null
+    ],
+    [
+     "Saturday,",
+     29.02,
+     29.36,
+     "Saturday,"
+    ],
+    [
+     "almost",
+     29.84,
+     30.14,
+     "almost"
+    ],
+    [
+     "quitting",
+     30.14,
+     30.42,
+     "quitting"
+    ],
+    [
+     "time.",
+     30.42,
+     30.82,
+     "time."
+    ],
+    [
+     "And",
+     31.02,
+     31.04,
+     "And"
+    ],
+    [
+     "there's",
+     31.04,
+     31.3,
+     "there's"
+    ],
+    [
+     "one",
+     31.3,
+     31.5,
+     "one"
+    ],
+    [
+     "house",
+     31.5,
+     31.8,
+     "house"
+    ],
+    [
+     "rule",
+     31.8,
+     32.16,
+     "rule,"
+    ],
+    [
+     "the",
+     32.5,
+     32.58,
+     "the"
+    ],
+    [
+     "doors",
+     32.58,
+     32.82,
+     "doors"
+    ],
+    [
+     "stay",
+     32.82,
+     33.14,
+     "stay"
+    ],
+    [
+     "locked.",
+     33.14,
+     33.5,
+     "locked."
+    ],
+    [
+     "The",
+     33.66,
+     33.72,
+     "The"
+    ],
+    [
+     "bosses",
+     33.72,
+     34.0,
+     "bosses"
+    ],
+    [
+     "say",
+     34.0,
+     34.28,
+     "say"
+    ],
+    [
+     "it",
+     34.28,
+     34.4,
+     "it"
+    ],
+    [
+     "stops",
+     34.4,
+     34.64,
+     "stops"
+    ],
+    [
+     "stealing.",
+     34.64,
+     35.12,
+     "stealing."
+    ],
+    [
+     "And",
+     35.34,
+     35.48,
+     "And"
+    ],
+    [
+     "unplanned",
+     35.48,
+     35.94,
+     "unplanned"
+    ],
+    [
+     "breaks.",
+     35.94,
+     36.36,
+     "breaks"
+    ]
+   ],
+   "fire": null,
+   "smoke": null,
+   "state": {},
+   "extras": true
+  },
+  {
+   "id": "b5",
+   "cuts": [
+    {
+     "start": 36.914,
+     "shot": {
+      "subject": "you",
+      "variant": 20,
+      "type": "insert",
+      "prop": "bin"
+     },
+     "tr": "cut",
+     "end": 40.32
+    },
+    {
+     "start": 40.32,
+     "shot": {
+      "subject": "you",
+      "variant": 21,
+      "type": "close"
+     },
+     "tr": "cut",
+     "end": 42.386
+    }
+   ],
+   "speaker": "vo",
+   "place": "factory",
+   "pause": 0.25,
+   "cast": [
+    {
+     "name": "you",
+     "char": "worker",
+     "spot": "aisle",
+     "do": "sew",
+     "face": "neutral"
+    }
+   ],
+   "fire": [
+    0.0,
+    0.15
+   ],
+   "say": "Downstairs, on eight, someone drops a match or a cigarette into a bin of fabric scraps.",
+   "fx": "match@match",
+   "music": "tense",
+   "subtitle": "Downstairs, on eight, someone drops a match or a cigarette into a bin of fabric scraps.",
+   "emph": [],
+   "voiceStart": 36.994,
+   "voiceEnd": 42.416,
+   "start": 36.914,
+   "end": 42.386,
+   "words": [
+    {
+     "word": "on",
+     "start": 37.58,
+     "end": 38.2
+    },
+    {
+     "word": "eight.",
+     "start": 38.2,
+     "end": 38.44
+    },
+    {
+     "word": "Someone",
+     "start": 38.8,
+     "end": 38.98
+    },
+    {
+     "word": "drops",
+     "start": 38.98,
+     "end": 39.32
+    },
+    {
+     "word": "a",
+     "start": 39.32,
+     "end": 39.56
+    },
+    {
+     "word": "match",
+     "start": 39.56,
+     "end": 39.84
+    },
+    {
+     "word": "or",
+     "start": 39.84,
+     "end": 40.16
+    },
+    {
+     "word": "a",
+     "start": 40.16,
+     "end": 40.36
+    },
+    {
+     "word": "cigarette",
+     "start": 40.36,
+     "end": 40.64
+    },
+    {
+     "word": "into",
+     "start": 40.64,
+     "end": 40.96
+    },
+    {
+     "word": "a",
+     "start": 40.96,
+     "end": 41.18
+    },
+    {
+     "word": "bin",
+     "start": 41.18,
+     "end": 41.34
+    },
+    {
+     "word": "of",
+     "start": 41.34,
+     "end": 41.46
+    },
+    {
+     "word": "fabric",
+     "start": 41.46,
+     "end": 41.74
+    },
+    {
+     "word": "scraps.",
+     "start": 41.74,
+     "end": 42.1
+    }
+   ],
+   "cueAt": 36.994,
+   "aligned": [
+    [
+     "Downstairs,",
+     37.58,
+     37.58,
+     null
+    ],
+    [
+     "on",
+     37.58,
+     38.2,
+     "on"
+    ],
+    [
+     "eight,",
+     38.2,
+     38.44,
+     "eight."
+    ],
+    [
+     "someone",
+     38.8,
+     38.98,
+     "Someone"
+    ],
+    [
+     "drops",
+     38.98,
+     39.32,
+     "drops"
+    ],
+    [
+     "a",
+     39.32,
+     39.56,
+     "a"
+    ],
+    [
+     "match",
+     39.56,
+     39.84,
+     "match"
+    ],
+    [
+     "or",
+     39.84,
+     40.16,
+     "or"
+    ],
+    [
+     "a",
+     40.16,
+     40.36,
+     "a"
+    ],
+    [
+     "cigarette",
+     40.36,
+     40.64,
+     "cigarette"
+    ],
+    [
+     "into",
+     40.64,
+     40.96,
+     "into"
+    ],
+    [
+     "a",
+     40.96,
+     41.18,
+     "a"
+    ],
+    [
+     "bin",
+     41.18,
+     41.34,
+     "bin"
+    ],
+    [
+     "of",
+     41.34,
+     41.46,
+     "of"
+    ],
+    [
+     "fabric",
+     41.46,
+     41.74,
+     "fabric"
+    ],
+    [
+     "scraps.",
+     41.74,
+     42.1,
+     "scraps."
+    ]
+   ],
+   "smoke": null,
+   "state": {},
+   "extras": true
+  },
+  {
+   "id": "b6",
+   "cuts": [
+    {
+     "start": 42.386,
+     "shot": {
+      "subject": "you",
+      "variant": 22,
+      "type": "establish",
+      "shake": 0.04
+     },
+     "tr": "cut",
+     "end": 43.98
+    },
+    {
+     "start": 43.98,
+     "shot": {
+      "subject": "you",
+      "variant": 23,
+      "type": "close",
+      "punch": true
+     },
+     "tr": "cut",
+     "face": "shocked",
+     "end": 45.234
+    }
+   ],
+   "speaker": "vo",
+   "place": "factory",
+   "cast": [
+    {
+     "name": "you",
+     "char": "worker",
+     "spot": "aisle",
+     "do": "panic",
+     "face": "shocked"
+    }
+   ],
+   "fire": [
+    0.3,
+    0.85
+   ],
+   "smoke": [
+    0.2,
+    0.6
+   ],
+   "say": "Within five minutes, the whole eighth floor is on fire.",
+   "emph": [
+    "five",
+    "minutes"
+   ],
+   "shots": [
+    {
+     "cue": "within",
+     "spec": "establish"
+    },
+    {
+     "cue": "eighth",
+     "spec": "close you",
+     "face": "shocked",
+     "punch": true
+    }
+   ],
+   "fx": "riser@whole, fire_big@fire",
+   "shake": "0.04",
+   "subtitle": "Within five minutes, the whole eighth floor is on fire.",
+   "pause": 0.05,
+   "voiceStart": 42.466,
+   "voiceEnd": 45.264,
+   "start": 42.386,
+   "end": 45.234,
+   "words": [
+    {
+     "word": "Within",
+     "start": 42.48,
+     "end": 42.68
+    },
+    {
+     "word": "five",
+     "start": 42.68,
+     "end": 43.06
+    },
+    {
+     "word": "minutes,",
+     "start": 43.06,
+     "end": 43.44
+    },
+    {
+     "word": "the",
+     "start": 43.7,
+     "end": 43.78
+    },
+    {
+     "word": "whole",
+     "start": 43.78,
+     "end": 44.02
+    },
+    {
+     "word": "eighth",
+     "start": 44.02,
+     "end": 44.28
+    },
+    {
+     "word": "floor",
+     "start": 44.28,
+     "end": 44.52
+    },
+    {
+     "word": "is",
+     "start": 44.52,
+     "end": 44.68
+    },
+    {
+     "word": "on",
+     "start": 44.68,
+     "end": 44.82
+    },
+    {
+     "word": "fire.",
+     "start": 44.82,
+     "end": 45.14
+    }
+   ],
+   "cueAt": 42.466,
+   "aligned": [
+    [
+     "Within",
+     42.48,
+     42.68,
+     "Within"
+    ],
+    [
+     "five",
+     42.68,
+     43.06,
+     "five"
+    ],
+    [
+     "minutes,",
+     43.06,
+     43.44,
+     "minutes,"
+    ],
+    [
+     "the",
+     43.7,
+     43.78,
+     "the"
+    ],
+    [
+     "whole",
+     43.78,
+     44.02,
+     "whole"
+    ],
+    [
+     "eighth",
+     44.02,
+     44.28,
+     "eighth"
+    ],
+    [
+     "floor",
+     44.28,
+     44.52,
+     "floor"
+    ],
+    [
+     "is",
+     44.52,
+     44.68,
+     "is"
+    ],
+    [
+     "on",
+     44.68,
+     44.82,
+     "on"
+    ],
+    [
+     "fire.",
+     44.82,
+     45.14,
+     "fire."
+    ]
+   ],
+   "state": {},
+   "extras": true
+  },
+  {
+   "id": "b7",
+   "cuts": [
+    {
+     "start": 45.234,
+     "shot": {
+      "subject": "ff",
+      "variant": 24,
+      "type": "establish"
+     },
+     "tr": "whip",
+     "end": 47.12
+    },
+    {
+     "start": 47.12,
+     "shot": {
+      "subject": "ff",
+      "variant": 25,
+      "type": "medium"
+     },
+     "tr": "cut",
+     "end": 47.7
+    },
+    {
+     "start": 47.7,
+     "shot": {
+      "subject": "ff",
+      "variant": 26,
+      "type": "insert",
+      "prop": "top"
+     },
+     "tr": "cut",
+     "end": 49.88
+    },
+    {
+     "start": 49.88,
+     "shot": {
+      "subject": "ff",
+      "variant": 27,
+      "type": "insert",
+      "prop": "ladder"
+     },
+     "tr": "cut",
+     "end": 51.5
+    },
+    {
+     "start": 51.5,
+     "shot": {
+      "subject": "ff",
+      "variant": 28,
+      "type": "establish"
+     },
+     "tr": "cut",
+     "end": 53.434
+    }
+   ],
+   "speaker": "vo",
+   "place": "street",
+   "fire": [
+    0.35,
+    0.35
+   ],
+   "cast": [
+    {
+     "name": "ff",
+     "char": "firefighter",
+     "spot": "firefighter",
+     "do": "point",
+     "face": "determined"
+    }
+   ],
+   "say": "Up on ten, they get a warning. They run for the roof, and students from the university next door push ladders across to them. Almost everyone on ten gets out.",
+   "emph": [
+    "roof"
+   ],
+   "shots": [
+    {
+     "cue": "up",
+     "spec": "establish"
+    },
+    {
+     "cue": "roof",
+     "spec": "insert top"
+    },
+    {
+     "cue": "almost",
+     "spec": "establish"
+    }
+   ],
+   "subtitle": "Up on ten, they get a warning. They run for the roof, and students from the university next door push ladders across to them. Almost everyone on ten gets out.",
+   "pause": 0.05,
+   "voiceStart": 45.314,
+   "voiceEnd": 53.464,
+   "start": 45.234,
+   "end": 53.434,
+   "words": [
+    {
+     "word": "Up",
+     "start": 45.32,
+     "end": 45.5
+    },
+    {
+     "word": "on",
+     "start": 45.5,
+     "end": 45.68
+    },
+    {
+     "word": "ten,",
+     "start": 45.68,
+     "end": 45.94
+    },
+    {
+     "word": "they",
+     "start": 46.32,
+     "end": 46.44
+    },
+    {
+     "word": "get",
+     "start": 46.44,
+     "end": 46.58
+    },
+    {
+     "word": "a",
+     "start": 46.58,
+     "end": 46.68
+    },
+    {
+     "word": "warning.",
+     "start": 46.68,
+     "end": 46.96
+    },
+    {
+     "word": "They",
+     "start": 47.16,
+     "end": 47.24
+    },
+    {
+     "word": "run",
+     "start": 47.24,
+     "end": 47.42
+    },
+    {
+     "word": "for",
+     "start": 47.42,
+     "end": 47.62
+    },
+    {
+     "word": "the",
+     "start": 47.62,
+     "end": 47.74
+    },
+    {
+     "word": "roof",
+     "start": 47.74,
+     "end": 47.96
+    },
+    {
+     "word": "and",
+     "start": 47.96,
+     "end": 48.34
+    },
+    {
+     "word": "students",
+     "start": 48.34,
+     "end": 48.64
+    },
+    {
+     "word": "from",
+     "start": 48.64,
+     "end": 48.98
+    },
+    {
+     "word": "the",
+     "start": 48.98,
+     "end": 49.12
+    },
+    {
+     "word": "university",
+     "start": 49.12,
+     "end": 49.52
+    },
+    {
+     "word": "next",
+     "start": 49.52,
+     "end": 49.92
+    },
+    {
+     "word": "door",
+     "start": 49.92,
+     "end": 50.14
+    },
+    {
+     "word": "push",
+     "start": 50.14,
+     "end": 50.38
+    },
+    {
+     "word": "ladders",
+     "start": 50.38,
+     "end": 50.78
+    },
+    {
+     "word": "across",
+     "start": 50.78,
+     "end": 51.04
+    },
+    {
+     "word": "to",
+     "start": 51.04,
+     "end": 51.3
+    },
+    {
+     "word": "them.",
+     "start": 51.3,
+     "end": 51.46
+    },
+    {
+     "word": "Almost",
+     "start": 51.54,
+     "end": 51.78
+    },
+    {
+     "word": "everyone",
+     "start": 51.78,
+     "end": 52.22
+    },
+    {
+     "word": "on",
+     "start": 52.22,
+     "end": 52.48
+    },
+    {
+     "word": "ten",
+     "start": 52.48,
+     "end": 52.74
+    },
+    {
+     "word": "gets",
+     "start": 52.74,
+     "end": 53.02
+    },
+    {
+     "word": "out.",
+     "start": 53.02,
+     "end": 53.36
+    }
+   ],
+   "cueAt": 45.314,
+   "aligned": [
+    [
+     "Up",
+     45.32,
+     45.5,
+     "Up"
+    ],
+    [
+     "on",
+     45.5,
+     45.68,
+     "on"
+    ],
+    [
+     "ten,",
+     45.68,
+     45.94,
+     "ten,"
+    ],
+    [
+     "they",
+     46.32,
+     46.44,
+     "they"
+    ],
+    [
+     "get",
+     46.44,
+     46.58,
+     "get"
+    ],
+    [
+     "a",
+     46.58,
+     46.68,
+     "a"
+    ],
+    [
+     "warning.",
+     46.68,
+     46.96,
+     "warning."
+    ],
+    [
+     "They",
+     47.16,
+     47.24,
+     "They"
+    ],
+    [
+     "run",
+     47.24,
+     47.42,
+     "run"
+    ],
+    [
+     "for",
+     47.42,
+     47.62,
+     "for"
+    ],
+    [
+     "the",
+     47.62,
+     47.74,
+     "the"
+    ],
+    [
+     "roof,",
+     47.74,
+     47.96,
+     "roof"
+    ],
+    [
+     "and",
+     47.96,
+     48.34,
+     "and"
+    ],
+    [
+     "students",
+     48.34,
+     48.64,
+     "students"
+    ],
+    [
+     "from",
+     48.64,
+     48.98,
+     "from"
+    ],
+    [
+     "the",
+     48.98,
+     49.12,
+     "the"
+    ],
+    [
+     "university",
+     49.12,
+     49.52,
+     "university"
+    ],
+    [
+     "next",
+     49.52,
+     49.92,
+     "next"
+    ],
+    [
+     "door",
+     49.92,
+     50.14,
+     "door"
+    ],
+    [
+     "push",
+     50.14,
+     50.38,
+     "push"
+    ],
+    [
+     "ladders",
+     50.38,
+     50.78,
+     "ladders"
+    ],
+    [
+     "across",
+     50.78,
+     51.04,
+     "across"
+    ],
+    [
+     "to",
+     51.04,
+     51.3,
+     "to"
+    ],
+    [
+     "them.",
+     51.3,
+     51.46,
+     "them."
+    ],
+    [
+     "Almost",
+     51.54,
+     51.78,
+     "Almost"
+    ],
+    [
+     "everyone",
+     51.78,
+     52.22,
+     "everyone"
+    ],
+    [
+     "on",
+     52.22,
+     52.48,
+     "on"
+    ],
+    [
+     "ten",
+     52.48,
+     52.74,
+     "ten"
+    ],
+    [
+     "gets",
+     52.74,
+     53.02,
+     "gets"
+    ],
+    [
+     "out.",
+     53.02,
+     53.36,
+     "out."
+    ]
+   ],
+   "smoke": null,
+   "state": {},
+   "extras": true
+  },
+  {
+   "id": "b8",
+   "cuts": [
+    {
+     "start": 53.434,
+     "shot": {
+      "subject": "you",
+      "variant": 29,
+      "type": "establish"
+     },
+     "tr": "whip",
+     "end": 55.84
+    },
+    {
+     "start": 55.84,
+     "shot": {
+      "subject": "you",
+      "variant": 31,
+      "type": "close",
+      "punch": true
+     },
+     "tr": "cut",
+     "face": "shocked",
+     "do": "recoil",
+     "end": 56.955
+    }
+   ],
+   "speaker": "vo",
+   "place": "factory",
+   "tr": "whip",
+   "cast": [
+    {
+     "name": "you",
+     "char": "worker",
+     "spot": "aisle",
+     "do": "sew",
+     "face": "neutral"
+    }
+   ],
+   "fire": [
+    0.5,
+    0.5
+   ],
+   "smoke": [
+    0.4,
+    0.4
+   ],
+   "say": "On nine, you look up from your machine, and there's fire in the windows.",
+   "shots": [
+    {
+     "cue": "fire",
+     "spec": "close you",
+     "face": "shocked",
+     "do": "recoil",
+     "punch": true
+    }
+   ],
+   "fx": "hit@fire",
+   "subtitle": "On nine, you look up from your machine, and there's fire in the windows.",
+   "pause": 0.05,
+   "emph": [],
+   "voiceStart": 53.514,
+   "voiceEnd": 56.985,
+   "start": 53.434,
+   "end": 56.955,
+   "words": [
+    {
+     "word": "On",
+     "start": 53.52,
+     "end": 53.68
+    },
+    {
+     "word": "nine,",
+     "start": 53.68,
+     "end": 53.98
+    },
+    {
+     "word": "you",
+     "start": 54.2,
+     "end": 54.24
+    },
+    {
+     "word": "look",
+     "start": 54.24,
+     "end": 54.38
+    },
+    {
+     "word": "up",
+     "start": 54.38,
+     "end": 54.54
+    },
+    {
+     "word": "from",
+     "start": 54.54,
+     "end": 54.74
+    },
+    {
+     "word": "your",
+     "start": 54.74,
+     "end": 54.88
+    },
+    {
+     "word": "machine,",
+     "start": 54.88,
+     "end": 55.26
+    },
+    {
+     "word": "and",
+     "start": 55.58,
+     "end": 55.66
+    },
+    {
+     "word": "there's",
+     "start": 55.66,
+     "end": 55.88
+    },
+    {
+     "word": "fire",
+     "start": 55.88,
+     "end": 56.12
+    },
+    {
+     "word": "in",
+     "start": 56.12,
+     "end": 56.34
+    },
+    {
+     "word": "the",
+     "start": 56.34,
+     "end": 56.42
+    },
+    {
+     "word": "windows.",
+     "start": 56.42,
+     "end": 56.66
+    },
+    {
+     "word": "Okay?",
+     "start": 57.02,
+     "end": 57.26
+    }
+   ],
+   "cueAt": 53.514,
+   "aligned": [
+    [
+     "On",
+     53.52,
+     53.68,
+     "On"
+    ],
+    [
+     "nine,",
+     53.68,
+     53.98,
+     "nine,"
+    ],
+    [
+     "you",
+     54.2,
+     54.24,
+     "you"
+    ],
+    [
+     "look",
+     54.24,
+     54.38,
+     "look"
+    ],
+    [
+     "up",
+     54.38,
+     54.54,
+     "up"
+    ],
+    [
+     "from",
+     54.54,
+     54.74,
+     "from"
+    ],
+    [
+     "your",
+     54.74,
+     54.88,
+     "your"
+    ],
+    [
+     "machine,",
+     54.88,
+     55.26,
+     "machine,"
+    ],
+    [
+     "and",
+     55.58,
+     55.66,
+     "and"
+    ],
+    [
+     "there's",
+     55.66,
+     55.88,
+     "there's"
+    ],
+    [
+     "fire",
+     55.88,
+     56.12,
+     "fire"
+    ],
+    [
+     "in",
+     56.12,
+     56.34,
+     "in"
+    ],
+    [
+     "the",
+     56.34,
+     56.42,
+     "the"
+    ],
+    [
+     "windows.",
+     56.42,
+     56.66,
+     "windows."
+    ]
+   ],
+   "state": {},
+   "extras": true
+  },
+  {
+   "id": "b9",
+   "cuts": [
+    {
+     "start": 56.955,
+     "shot": {
+      "subject": "you",
+      "variant": 32,
+      "type": "close",
+      "punch": true
+     },
+     "tr": "cut",
+     "end": 59.049
+    }
+   ],
+   "speaker": "vo",
+   "place": "factory",
+   "cast": [
+    {
+     "name": "you",
+     "char": "worker",
+     "spot": "aisle",
+     "do": "think",
+     "face": "determined"
+    }
+   ],
+   "fire": [
+    0.55,
+    0.55
+   ],
+   "smoke": [
+    0.45,
+    0.45
+   ],
+   "say": "OK. Exits. You've got options.",
+   "emph": [
+    "options"
+   ],
+   "music": "investigate",
+   "subtitle": "OK. Exits. You've got options.",
+   "pause": 0.05,
+   "voiceStart": 57.035,
+   "voiceEnd": 59.079,
+   "start": 56.955,
+   "end": 59.049,
+   "words": [
+    {
+     "word": "Okay?",
+     "start": 57.02,
+     "end": 57.26
+    },
+    {
+     "word": "Exits.",
+     "start": 57.44,
+     "end": 57.78
+    },
+    {
+     "word": "You've",
+     "start": 57.78,
+     "end": 58.26
+    },
+    {
+     "word": "got",
+     "start": 58.26,
+     "end": 58.44
+    },
+    {
+     "word": "options.",
+     "start": 58.44,
+     "end": 58.88
+    }
+   ],
+   "cueAt": 57.035,
+   "aligned": [
+    [
+     "OK.",
+     57.02,
+     57.26,
+     null
+    ],
+    [
+     "Exits.",
+     57.44,
+     57.78,
+     "Exits."
+    ],
+    [
+     "You've",
+     57.78,
+     58.26,
+     "You've"
+    ],
+    [
+     "got",
+     58.26,
+     58.44,
+     "got"
+    ],
+    [
+     "options.",
+     58.44,
+     58.88,
+     "options."
+    ]
+   ],
+   "state": {},
+   "extras": true
+  },
+  {
+   "id": "b10",
+   "cuts": [
+    {
+     "start": 59.049,
+     "shot": {
+      "subject": "you",
+      "variant": 33,
+      "type": "establish"
+     },
+     "tr": "whip",
+     "end": 61.8
+    },
+    {
+     "start": 61.8,
+     "shot": {
+      "subject": "you",
+      "variant": 34,
+      "type": "insert",
+      "prop": "door"
+     },
+     "tr": "cut",
+     "end": 62.361
+    }
+   ],
+   "speaker": "vo",
+   "place": "stairwell",
+   "tr": "whip",
+   "cast": [
+    {
+     "name": "you",
+     "char": "worker",
+     "spot": "door",
+     "do": "rattle",
+     "face": "shocked"
+    }
+   ],
+   "doorshake": "1",
+   "smoke": [
+    0.2,
+    0.2
+   ],
+   "say": "Option one: the stairs to Washington Place. Locked.",
+   "emph": [
+    "one",
+    "locked"
+   ],
+   "shots": [
+    {
+     "cue": "locked",
+     "spec": "insert door"
+    }
+   ],
+   "fx": "hit@locked",
+   "subtitle": "Option one: the stairs to Washington Place. Locked.",
+   "pause": 0.05,
+   "voiceStart": 59.129,
+   "voiceEnd": 62.031,
+   "start": 59.049,
+   "end": 62.361,
+   "words": [
+    {
+     "word": "Option",
+     "start": 59.16,
+     "end": 59.38
+    },
+    {
+     "word": "one,",
+     "start": 59.38,
+     "end": 59.7
+    },
+    {
+     "word": "the",
+     "start": 60.06,
+     "end": 60.16
+    },
+    {
+     "word": "stairs",
+     "start": 60.16,
+     "end": 60.46
+    },
+    {
+     "word": "to",
+     "start": 60.46,
+     "end": 60.7
+    },
+    {
+     "word": "Washington",
+     "start": 60.7,
+     "end": 61.14
+    },
+    {
+     "word": "Place.",
+     "start": 61.14,
+     "end": 61.64
+    },
+    {
+     "word": "What?",
+     "start": 61.84,
+     "end": 61.94
+    }
+   ],
+   "cueAt": 59.129,
+   "aligned": [
+    [
+     "Option",
+     59.16,
+     59.38,
+     "Option"
+    ],
+    [
+     "one",
+     59.38,
+     59.7,
+     "one,"
+    ],
+    [
+     "the",
+     60.06,
+     60.16,
+     "the"
+    ],
+    [
+     "stairs",
+     60.16,
+     60.46,
+     "stairs"
+    ],
+    [
+     "to",
+     60.46,
+     60.7,
+     "to"
+    ],
+    [
+     "Washington",
+     60.7,
+     61.14,
+     "Washington"
+    ],
+    [
+     "Place.",
+     61.14,
+     61.64,
+     "Place."
+    ],
+    [
+     "Locked.",
+     61.84,
+     61.94,
+     null
+    ]
+   ],
+   "fire": null,
+   "state": {
+    "doorShake": 1.0
+   },
+   "extras": true
+  },
+  {
+   "id": "b11",
+   "cuts": [
+    {
+     "start": 62.361,
+     "shot": {
+      "subject": "you",
+      "variant": 35,
+      "type": "insert",
+      "prop": "hole"
+     },
+     "tr": "cut",
+     "end": 64.46
+    },
+    {
+     "start": 64.46,
+     "shot": {
+      "subject": "you",
+      "variant": 36,
+      "type": "medium"
+     },
+     "tr": "cut",
+     "end": 66.219
+    }
+   ],
+   "speaker": "vo",
+   "place": "stairwell",
+   "pause": 0.4,
+   "cast": [
+    {
+     "name": "you",
+     "char": "worker",
+     "spot": "landing",
+     "do": "recoil",
+     "face": "scared"
+    }
+   ],
+   "fire": [
+    0.7,
+    0.7
+   ],
+   "smoke": [
+    0.45,
+    0.45
+   ],
+   "say": "Option two: the other stairs. The fire is already coming up them.",
+   "emph": [
+    "two"
+   ],
+   "subtitle": "Option two: the other stairs. The fire is already coming up them.",
+   "voiceStart": 62.441,
+   "voiceEnd": 66.249,
+   "start": 62.361,
+   "end": 66.219,
+   "words": [
+    {
+     "word": "Option",
+     "start": 62.42,
+     "end": 62.72
+    },
+    {
+     "word": "two,",
+     "start": 62.72,
+     "end": 63.16
+    },
+    {
+     "word": "the",
+     "start": 63.5,
+     "end": 63.58
+    },
+    {
+     "word": "other",
+     "start": 63.58,
+     "end": 63.78
+    },
+    {
+     "word": "stairs.",
+     "start": 63.78,
+     "end": 64.1
+    },
+    {
+     "word": "The",
+     "start": 64.5,
+     "end": 64.5
+    },
+    {
+     "word": "fire",
+     "start": 64.5,
+     "end": 64.8
+    },
+    {
+     "word": "is",
+     "start": 64.8,
+     "end": 65.04
+    },
+    {
+     "word": "already",
+     "start": 65.04,
+     "end": 65.42
+    },
+    {
+     "word": "coming",
+     "start": 65.42,
+     "end": 65.66
+    },
+    {
+     "word": "up",
+     "start": 65.66,
+     "end": 65.92
+    },
+    {
+     "word": "them.",
+     "start": 65.92,
+     "end": 66.14
+    }
+   ],
+   "cueAt": 62.441,
+   "aligned": [
+    [
+     "Option",
+     62.42,
+     62.72,
+     "Option"
+    ],
+    [
+     "two",
+     62.72,
+     63.16,
+     "two,"
+    ],
+    [
+     "the",
+     63.5,
+     63.58,
+     "the"
+    ],
+    [
+     "other",
+     63.58,
+     63.78,
+     "other"
+    ],
+    [
+     "stairs.",
+     63.78,
+     64.1,
+     "stairs."
+    ],
+    [
+     "The",
+     64.5,
+     64.5,
+     "The"
+    ],
+    [
+     "fire",
+     64.5,
+     64.8,
+     "fire"
+    ],
+    [
+     "is",
+     64.8,
+     65.04,
+     "is"
+    ],
+    [
+     "already",
+     65.04,
+     65.42,
+     "already"
+    ],
+    [
+     "coming",
+     65.42,
+     65.66,
+     "coming"
+    ],
+    [
+     "up",
+     65.66,
+     65.92,
+     "up"
+    ],
+    [
+     "them.",
+     65.92,
+     66.14,
+     "them."
+    ]
+   ],
+   "state": {},
+   "extras": true
+  },
+  {
+   "id": "b12",
+   "cuts": [
+    {
+     "start": 66.219,
+     "shot": {
+      "subject": "you",
+      "variant": 37,
+      "type": "insert",
+      "prop": "elevator"
+     },
+     "tr": "cut",
+     "end": 68.12
+    },
+    {
+     "start": 68.12,
+     "shot": {
+      "subject": "you",
+      "variant": 38,
+      "type": "wide"
+     },
+     "tr": "cut",
+     "end": 70.06
+    },
+    {
+     "start": 70.06,
+     "shot": {
+      "subject": "you",
+      "variant": 39,
+      "type": "close"
+     },
+     "tr": "cut",
+     "end": 71.703
+    }
+   ],
+   "speaker": "vo",
+   "place": "stairwell",
+   "cast": [
+    {
+     "name": "you",
+     "char": "worker",
+     "spot": "landing",
+     "do": "think",
+     "face": "worried"
+    }
+   ],
+   "smoke": [
+    0.5,
+    0.5
+   ],
+   "say": "Option three: the elevators. The operators make trip after trip, until they can't anymore.",
+   "emph": [
+    "three"
+   ],
+   "subtitle": "Option three: the elevators. The operators make trip after trip, until they can't anymore.",
+   "pause": 0.05,
+   "voiceStart": 66.299,
+   "voiceEnd": 71.733,
+   "start": 66.219,
+   "end": 71.703,
+   "words": [
+    {
+     "word": "Option",
+     "start": 66.3,
+     "end": 66.56
+    },
+    {
+     "word": "three,",
+     "start": 66.56,
+     "end": 66.94
+    },
+    {
+     "word": "the",
+     "start": 67.32,
+     "end": 67.42
+    },
+    {
+     "word": "elevators.",
+     "start": 67.42,
+     "end": 67.92
+    },
+    {
+     "word": "The",
+     "start": 68.16,
+     "end": 68.22
+    },
+    {
+     "word": "operators",
+     "start": 68.22,
+     "end": 68.7
+    },
+    {
+     "word": "make",
+     "start": 68.7,
+     "end": 69.06
+    },
+    {
+     "word": "trip",
+     "start": 69.06,
+     "end": 69.3
+    },
+    {
+     "word": "after",
+     "start": 69.3,
+     "end": 69.74
+    },
+    {
+     "word": "trip",
+     "start": 69.74,
+     "end": 70.1
+    },
+    {
+     "word": "until",
+     "start": 70.1,
+     "end": 70.56
+    },
+    {
+     "word": "they",
+     "start": 70.56,
+     "end": 70.84
+    },
+    {
+     "word": "can't",
+     "start": 70.84,
+     "end": 71.14
+    },
+    {
+     "word": "anymore.",
+     "start": 71.14,
+     "end": 71.48
+    },
+    {
+     "word": "Option",
+     "start": 71.78,
+     "end": 72.04
+    }
+   ],
+   "cueAt": 66.299,
+   "aligned": [
+    [
+     "Option",
+     66.3,
+     66.56,
+     "Option"
+    ],
+    [
+     "three",
+     66.56,
+     66.94,
+     "three,"
+    ],
+    [
+     "the",
+     67.32,
+     67.42,
+     "the"
+    ],
+    [
+     "elevators.",
+     67.42,
+     67.92,
+     "elevators."
+    ],
+    [
+     "The",
+     68.16,
+     68.22,
+     "The"
+    ],
+    [
+     "operators",
+     68.22,
+     68.7,
+     "operators"
+    ],
+    [
+     "make",
+     68.7,
+     69.06,
+     "make"
+    ],
+    [
+     "trip",
+     69.06,
+     69.3,
+     "trip"
+    ],
+    [
+     "after",
+     69.3,
+     69.74,
+     "after"
+    ],
+    [
+     "trip,",
+     69.74,
+     70.1,
+     "trip"
+    ],
+    [
+     "until",
+     70.1,
+     70.56,
+     "until"
+    ],
+    [
+     "they",
+     70.56,
+     70.84,
+     "they"
+    ],
+    [
+     "can't",
+     70.84,
+     71.14,
+     "can't"
+    ],
+    [
+     "anymore.",
+     71.14,
+     71.48,
+     "anymore."
+    ]
+   ],
+   "fire": null,
+   "state": {},
+   "extras": true
+  },
+  {
+   "id": "b13",
+   "cuts": [
+    {
+     "start": 71.703,
+     "shot": {
+      "subject": "ff",
+      "variant": 40,
+      "type": "establish",
+      "shake": 0.08
+     },
+     "tr": "whip",
+     "end": 73.8
+    },
+    {
+     "start": 73.8,
+     "shot": {
+      "subject": "ff",
+      "variant": 42,
+      "type": "insert",
+      "prop": "fireescape",
+      "shake": 0.08
+     },
+     "tr": "cut",
+     "end": 75.642
+    }
+   ],
+   "speaker": "vo",
+   "place": "street",
+   "tr": "whip",
+   "fire": [
+    0.7,
+    0.7
+   ],
+   "cast": [
+    {
+     "name": "ff",
+     "char": "firefighter",
+     "spot": "firefighter",
+     "do": "point",
+     "face": "shocked"
+    }
+   ],
+   "say": "Option four: the fire escape. It twists, and collapses.",
+   "emph": [
+    "four",
+    "collapses"
+   ],
+   "shots": [
+    {
+     "cue": "twists",
+     "spec": "insert fireescape"
+    }
+   ],
+   "fx": "impact@collapses",
+   "shake": "0.08",
+   "subtitle": "Option four: the fire escape. It twists, and collapses.",
+   "pause": 0.05,
+   "voiceStart": 71.783,
+   "voiceEnd": 75.672,
+   "start": 71.703,
+   "end": 75.642,
+   "words": [
+    {
+     "word": "Option",
+     "start": 71.78,
+     "end": 72.04
+    },
+    {
+     "word": "four,",
+     "start": 72.04,
+     "end": 72.44
+    },
+    {
+     "word": "the",
+     "start": 72.82,
+     "end": 72.88
+    },
+    {
+     "word": "fire",
+     "start": 72.88,
+     "end": 73.16
+    },
+    {
+     "word": "escape.",
+     "start": 73.16,
+     "end": 73.56
+    },
+    {
+     "word": "It",
+     "start": 73.74,
+     "end": 73.84
+    },
+    {
+     "word": "twists",
+     "start": 73.84,
+     "end": 74.3
+    },
+    {
+     "word": "and",
+     "start": 74.3,
+     "end": 74.86
+    },
+    {
+     "word": "collapses.",
+     "start": 74.86,
+     "end": 75.32
+    },
+    {
+     "word": "Option",
+     "start": 75.7,
+     "end": 75.94
+    }
+   ],
+   "cueAt": 71.783,
+   "aligned": [
+    [
+     "Option",
+     71.78,
+     72.04,
+     "Option"
+    ],
+    [
+     "four",
+     72.04,
+     72.44,
+     "four,"
+    ],
+    [
+     "the",
+     72.82,
+     72.88,
+     "the"
+    ],
+    [
+     "fire",
+     72.88,
+     73.16,
+     "fire"
+    ],
+    [
+     "escape.",
+     73.16,
+     73.56,
+     "escape."
+    ],
+    [
+     "It",
+     73.74,
+     73.84,
+     "It"
+    ],
+    [
+     "twists,",
+     73.84,
+     74.3,
+     "twists"
+    ],
+    [
+     "and",
+     74.3,
+     74.86,
+     "and"
+    ],
+    [
+     "collapses.",
+     74.86,
+     75.32,
+     "collapses."
+    ]
+   ],
+   "smoke": null,
+   "state": {},
+   "extras": true
+  },
+  {
+   "id": "b14",
+   "cuts": [
+    {
+     "start": 75.642,
+     "shot": {
+      "subject": "ff",
+      "variant": 43,
+      "type": "insert",
+      "prop": "engine"
+     },
+     "tr": "cut",
+     "end": 77.8
+    },
+    {
+     "start": 77.8,
+     "shot": {
+      "subject": "ff",
+      "variant": 44,
+      "type": "low"
+     },
+     "tr": "cut",
+     "end": 78.82
+    },
+    {
+     "start": 78.82,
+     "shot": {
+      "subject": "ff",
+      "variant": 45,
+      "type": "insert",
+      "prop": "engine"
+     },
+     "tr": "cut",
+     "end": 79.66
+    },
+    {
+     "start": 79.66,
+     "shot": {
+      "subject": "ff",
+      "variant": 46,
+      "type": "medium"
+     },
+     "tr": "cut",
+     "end": 80.626
+    }
+   ],
+   "speaker": "vo",
+   "place": "street",
+   "fire": [
+    0.75,
+    0.75
+   ],
+   "cast": [
+    {
+     "name": "ff",
+     "char": "firefighter",
+     "spot": "firefighter",
+     "do": "cheer",
+     "face": "happy"
+    }
+   ],
+   "say": "Option five: the fire department! They arrive fast. Big ladders. Big hoses.",
+   "emph": [
+    "five"
+   ],
+   "shots": [
+    {
+     "cue": "big",
+     "spec": "insert engine"
+    }
+   ],
+   "fx": "bell@department",
+   "subtitle": "Option five: the fire department! They arrive fast. Big ladders. Big hoses.",
+   "pause": 0.05,
+   "voiceStart": 75.722,
+   "voiceEnd": 80.656,
+   "start": 75.642,
+   "end": 80.626,
+   "words": [
+    {
+     "word": "Option",
+     "start": 75.7,
+     "end": 75.94
+    },
+    {
+     "word": "five,",
+     "start": 75.94,
+     "end": 76.44
+    },
+    {
+     "word": "the",
+     "start": 76.76,
+     "end": 76.9
+    },
+    {
+     "word": "fire",
+     "start": 76.9,
+     "end": 77.18
+    },
+    {
+     "word": "department.",
+     "start": 77.18,
+     "end": 77.62
+    },
+    {
+     "word": "They",
+     "start": 77.84,
+     "end": 77.94
+    },
+    {
+     "word": "arrive",
+     "start": 77.94,
+     "end": 78.16
+    },
+    {
+     "word": "fast.",
+     "start": 78.16,
+     "end": 78.58
+    },
+    {
+     "word": "They",
+     "start": 78.86,
+     "end": 78.94
+    },
+    {
+     "word": "ladders.",
+     "start": 78.94,
+     "end": 79.56
+    },
+    {
+     "word": "They",
+     "start": 79.7,
+     "end": 79.82
+    },
+    {
+     "word": "hoses.",
+     "start": 79.82,
+     "end": 80.34
+    }
+   ],
+   "cueAt": 75.722,
+   "aligned": [
+    [
+     "Option",
+     75.7,
+     75.94,
+     "Option"
+    ],
+    [
+     "five",
+     75.94,
+     76.44,
+     "five,"
+    ],
+    [
+     "the",
+     76.76,
+     76.9,
+     "the"
+    ],
+    [
+     "fire",
+     76.9,
+     77.18,
+     "fire"
+    ],
+    [
+     "department!",
+     77.18,
+     77.62,
+     "department."
+    ],
+    [
+     "They",
+     77.84,
+     77.94,
+     "They"
+    ],
+    [
+     "arrive",
+     77.94,
+     78.16,
+     "arrive"
+    ],
+    [
+     "fast.",
+     78.16,
+     78.58,
+     "fast."
+    ],
+    [
+     "Big",
+     78.86,
+     78.94,
+     null
+    ],
+    [
+     "ladders.",
+     78.94,
+     79.56,
+     "ladders."
+    ],
+    [
+     "Big",
+     79.7,
+     79.82,
+     null
+    ],
+    [
+     "hoses.",
+     79.82,
+     80.34,
+     "hoses."
+    ]
+   ],
+   "smoke": null,
+   "state": {},
+   "extras": true
+  },
+  {
+   "id": "b15",
+   "cuts": [
+    {
+     "start": 80.626,
+     "shot": {
+      "subject": "ff",
+      "variant": 47,
+      "type": "insert",
+      "prop": "ladder"
+     },
+     "tr": "cut",
+     "end": 82.56
+    },
+    {
+     "start": 82.56,
+     "shot": {
+      "subject": "ff",
+      "variant": 49,
+      "type": "close"
+     },
+     "tr": "cut",
+     "face": "sad",
+     "do": "facepalm",
+     "end": 84.325
+    }
+   ],
+   "speaker": "vo",
+   "place": "street",
+   "fire": [
+    0.8,
+    0.8
+   ],
+   "cast": [
+    {
+     "name": "ff",
+     "char": "firefighter",
+     "spot": "firefighter",
+     "do": "facepalm",
+     "face": "sad"
+    }
+   ],
+   "say": "The ladders stop floors below you. The water can't reach either.",
+   "shots": [
+    {
+     "cue": "the",
+     "spec": "insert ladder"
+    },
+    {
+     "cue": "water",
+     "spec": "close ff",
+     "face": "sad",
+     "do": "facepalm"
+    }
+   ],
+   "music": "tense",
+   "subtitle": "The ladders stop floors below you. The water can't reach either.",
+   "pause": 0.05,
+   "emph": [],
+   "voiceStart": 80.706,
+   "voiceEnd": 83.876,
+   "start": 80.626,
+   "end": 84.325,
+   "words": [
+    {
+     "word": "The",
+     "start": 80.72,
+     "end": 80.84
+    },
+    {
+     "word": "ladders",
+     "start": 80.84,
+     "end": 81.22
+    },
+    {
+     "word": "stop",
+     "start": 81.22,
+     "end": 81.44
+    },
+    {
+     "word": "floors",
+     "start": 81.44,
+     "end": 81.82
+    },
+    {
+     "word": "below",
+     "start": 81.82,
+     "end": 82.14
+    },
+    {
+     "word": "you.",
+     "start": 82.14,
+     "end": 82.42
+    },
+    {
+     "word": "The",
+     "start": 82.52,
+     "end": 82.6
+    },
+    {
+     "word": "water",
+     "start": 82.6,
+     "end": 82.82
+    },
+    {
+     "word": "can't",
+     "start": 82.82,
+     "end": 83.24
+    },
+    {
+     "word": "reach",
+     "start": 83.24,
+     "end": 83.32
+    },
+    {
+     "word": "either.",
+     "start": 83.32,
+     "end": 83.7
+    }
+   ],
+   "cueAt": 80.706,
+   "aligned": [
+    [
+     "The",
+     80.72,
+     80.84,
+     "The"
+    ],
+    [
+     "ladders",
+     80.84,
+     81.22,
+     "ladders"
+    ],
+    [
+     "stop",
+     81.22,
+     81.44,
+     "stop"
+    ],
+    [
+     "floors",
+     81.44,
+     81.82,
+     "floors"
+    ],
+    [
+     "below",
+     81.82,
+     82.14,
+     "below"
+    ],
+    [
+     "you.",
+     82.14,
+     82.42,
+     "you."
+    ],
+    [
+     "The",
+     82.52,
+     82.6,
+     "The"
+    ],
+    [
+     "water",
+     82.6,
+     82.82,
+     "water"
+    ],
+    [
+     "can't",
+     82.82,
+     83.24,
+     "can't"
+    ],
+    [
+     "reach",
+     83.24,
+     83.32,
+     "reach"
+    ],
+    [
+     "either.",
+     83.32,
+     83.7,
+     "either."
+    ]
+   ],
+   "smoke": null,
+   "state": {},
+   "extras": true
+  },
+  {
+   "id": "b16",
+   "cuts": [
+    {
+     "start": 84.325,
+     "shot": {
+      "subject": "perkins",
+      "variant": 50,
+      "type": "insert",
+      "prop": "windows"
+     },
+     "tr": "fade",
+     "end": 86.26
+    },
+    {
+     "start": 86.26,
+     "shot": {
+      "subject": "perkins",
+      "variant": 51,
+      "type": "establish"
+     },
+     "tr": "cut",
+     "end": 87.271
+    }
+   ],
+   "speaker": "vo",
+   "place": "street",
+   "tr": "fade",
+   "pause": 0.5,
+   "fire": [
+    0.8,
+    0.8
+   ],
+   "extras": false,
+   "cast": [
+    {
+     "name": "perkins",
+     "char": "perkins",
+     "spot": "perkins",
+     "face": "sad"
+    }
+   ],
+   "say": "Some people make the last choice there is. They jump.",
+   "shots": [
+    {
+     "cue": "some",
+     "spec": "insert windows"
+    },
+    {
+     "cue": "they",
+     "spec": "establish"
+    }
+   ],
+   "music": "somber",
+   "subtitle": "Some people make the last choice there is. They jump.",
+   "emph": [],
+   "voiceStart": 84.405,
+   "voiceEnd": 86.994,
+   "start": 84.325,
+   "end": 87.271,
+   "words": [
+    {
+     "word": "people",
+     "start": 84.64,
+     "end": 84.88
+    },
+    {
+     "word": "make",
+     "start": 84.88,
+     "end": 85.08
+    },
+    {
+     "word": "the",
+     "start": 85.08,
+     "end": 85.22
+    },
+    {
+     "word": "last",
+     "start": 85.22,
+     "end": 85.48
+    },
+    {
+     "word": "choice",
+     "start": 85.48,
+     "end": 85.78
+    },
+    {
+     "word": "there",
+     "start": 85.78,
+     "end": 86.04
+    },
+    {
+     "word": "is.",
+     "start": 86.04,
+     "end": 86.3
+    },
+    {
+     "word": "They",
+     "start": 86.3,
+     "end": 86.54
+    },
+    {
+     "word": "jump.",
+     "start": 86.54,
+     "end": 86.84
+    }
+   ],
+   "cueAt": 84.405,
+   "aligned": [
+    [
+     "Some",
+     84.64,
+     84.64,
+     null
+    ],
+    [
+     "people",
+     84.64,
+     84.88,
+     "people"
+    ],
+    [
+     "make",
+     84.88,
+     85.08,
+     "make"
+    ],
+    [
+     "the",
+     85.08,
+     85.22,
+     "the"
+    ],
+    [
+     "last",
+     85.22,
+     85.48,
+     "last"
+    ],
+    [
+     "choice",
+     85.48,
+     85.78,
+     "choice"
+    ],
+    [
+     "there",
+     85.78,
+     86.04,
+     "there"
+    ],
+    [
+     "is.",
+     86.04,
+     86.3,
+     "is."
+    ],
+    [
+     "They",
+     86.3,
+     86.54,
+     "They"
+    ],
+    [
+     "jump.",
+     86.54,
+     86.84,
+     "jump."
+    ]
+   ],
+   "smoke": null,
+   "state": {}
+  },
+  {
+   "id": "b17",
+   "cuts": [
+    {
+     "start": 87.271,
+     "shot": {
+      "subject": "perkins",
+      "variant": 52,
+      "type": "establish"
+     },
+     "tr": "cut",
+     "end": 89.24
+    },
+    {
+     "start": 89.24,
+     "shot": {
+      "subject": "perkins",
+      "variant": 53,
+      "type": "medium"
+     },
+     "tr": "cut",
+     "end": 90.48
+    },
+    {
+     "start": 90.48,
+     "shot": {
+      "subject": "perkins",
+      "variant": 54,
+      "type": "close"
+     },
+     "tr": "cut",
+     "end": 92.093
+    }
+   ],
+   "speaker": "vo",
+   "place": "street",
+   "pause": 0.4,
+   "fire": [
+    0.6,
+    0.6
+   ],
+   "cast": [
+    {
+     "name": "perkins",
+     "char": "perkins",
+     "spot": "perkins",
+     "face": "sad"
+    }
+   ],
+   "say": "One hundred forty-six people die. Most of them young women. The youngest were fourteen.",
+   "shots": [
+    {
+     "cue": "one",
+     "spec": "establish"
+    },
+    {
+     "cue": "most",
+     "spec": "medium perkins"
+    }
+   ],
+   "music": "somber",
+   "subtitle": "One hundred forty-six people die. Most of them young women. The youngest were fourteen.",
+   "emph": [],
+   "voiceStart": 87.351,
+   "voiceEnd": 91.716,
+   "start": 87.271,
+   "end": 92.093,
+   "words": [
+    {
+     "word": "146",
+     "start": 87.92,
+     "end": 88.4
+    },
+    {
+     "word": "people",
+     "start": 88.4,
+     "end": 88.74
+    },
+    {
+     "word": "die.",
+     "start": 88.74,
+     "end": 89.1
+    },
+    {
+     "word": "Most",
+     "start": 89.28,
+     "end": 89.48
+    },
+    {
+     "word": "of",
+     "start": 89.48,
+     "end": 89.66
+    },
+    {
+     "word": "them",
+     "start": 89.66,
+     "end": 89.8
+    },
+    {
+     "word": "young",
+     "start": 89.8,
+     "end": 90.02
+    },
+    {
+     "word": "women.",
+     "start": 90.02,
+     "end": 90.36
+    },
+    {
+     "word": "The",
+     "start": 90.52,
+     "end": 90.62
+    },
+    {
+     "word": "youngest",
+     "start": 90.62,
+     "end": 90.84
+    },
+    {
+     "word": "were",
+     "start": 90.84,
+     "end": 91.12
+    },
+    {
+     "word": "14.",
+     "start": 91.12,
+     "end": 91.52
+    }
+   ],
+   "cueAt": 87.351,
+   "aligned": [
+    [
+     "One",
+     87.92,
+     88.08,
+     "146"
+    ],
+    [
+     "hundred",
+     88.08,
+     88.24,
+     ""
+    ],
+    [
+     "forty-six",
+     88.24,
+     88.4,
+     ""
+    ],
+    [
+     "people",
+     88.4,
+     88.74,
+     "people"
+    ],
+    [
+     "die.",
+     88.74,
+     89.1,
+     "die."
+    ],
+    [
+     "Most",
+     89.28,
+     89.48,
+     "Most"
+    ],
+    [
+     "of",
+     89.48,
+     89.66,
+     "of"
+    ],
+    [
+     "them",
+     89.66,
+     89.8,
+     "them"
+    ],
+    [
+     "young",
+     89.8,
+     90.02,
+     "young"
+    ],
+    [
+     "women.",
+     90.02,
+     90.36,
+     "women."
+    ],
+    [
+     "The",
+     90.52,
+     90.62,
+     "The"
+    ],
+    [
+     "youngest",
+     90.62,
+     90.84,
+     "youngest"
+    ],
+    [
+     "were",
+     90.84,
+     91.12,
+     "were"
+    ],
+    [
+     "fourteen.",
+     91.12,
+     91.52,
+     "14."
+    ]
+   ],
+   "smoke": null,
+   "state": {},
+   "extras": true
+  },
+  {
+   "id": "b18",
+   "cuts": [
+    {
+     "start": 92.093,
+     "shot": {
+      "subject": "insp",
+      "variant": 55,
+      "type": "establish"
+     },
+     "tr": "fade",
+     "end": 94.18
+    },
+    {
+     "start": 94.18,
+     "shot": {
+      "subject": "insp",
+      "variant": 56,
+      "type": "insert",
+      "prop": "exit"
+     },
+     "tr": "cut",
+     "end": 96.4
+    },
+    {
+     "start": 96.4,
+     "shot": {
+      "subject": "insp",
+      "variant": 57,
+      "type": "close",
+      "punch": true
+     },
+     "tr": "cut",
+     "end": 98.64
+    },
+    {
+     "start": 98.64,
+     "shot": {
+      "subject": "insp",
+      "variant": 58,
+      "type": "medium"
+     },
+     "tr": "cut",
+     "end": 99.7
+    },
+    {
+     "start": 99.7,
+     "shot": {
+      "subject": "insp",
+      "variant": 59,
+      "type": "close",
+      "punch": true
+     },
+     "tr": "cut",
+     "face": "sad",
+     "do": "facepalm",
+     "end": 100.618
+    }
+   ],
+   "speaker": "inspector",
+   "place": "office",
+   "tr": "fade",
+   "pause": 0.5,
+   "cast": [
+    {
+     "name": "insp",
+     "char": "inspector",
+     "spot": "center",
+     "do": "point",
+     "face": "angry"
+    }
+   ],
+   "say": "Now here's the part that should make you angry. New York's law already said factory doors must not be locked during working hours. The rule existed. Nobody checked.",
+   "emph": [
+    "already",
+    "locked",
+    "nobody"
+   ],
+   "shots": [
+    {
+     "cue": "nobody",
+     "spec": "close insp",
+     "do": "facepalm",
+     "face": "sad",
+     "punch": true
+    }
+   ],
+   "music": "investigate",
+   "subtitle": "Now here's the part that should make you angry. New York's law already said factory doors must not be locked during working hours. The rule existed. Nobody checked.",
+   "voiceStart": 92.173,
+   "voiceEnd": 100.648,
+   "start": 92.093,
+   "end": 100.618,
+   "words": [
+    {
+     "word": "here's",
+     "start": 92.36,
+     "end": 92.64
+    },
+    {
+     "word": "the",
+     "start": 92.64,
+     "end": 92.74
+    },
+    {
+     "word": "part",
+     "start": 92.74,
+     "end": 92.94
+    },
+    {
+     "word": "that",
+     "start": 92.94,
+     "end": 93.16
+    },
+    {
+     "word": "should",
+     "start": 93.16,
+     "end": 93.3
+    },
+    {
+     "word": "make",
+     "start": 93.3,
+     "end": 93.46
+    },
+    {
+     "word": "you",
+     "start": 93.46,
+     "end": 93.62
+    },
+    {
+     "word": "angry.",
+     "start": 93.62,
+     "end": 94.0
+    },
+    {
+     "word": "New",
+     "start": 94.22,
+     "end": 94.32
+    },
+    {
+     "word": "York's",
+     "start": 94.32,
+     "end": 94.66
+    },
+    {
+     "word": "law",
+     "start": 94.66,
+     "end": 94.92
+    },
+    {
+     "word": "already",
+     "start": 94.92,
+     "end": 95.32
+    },
+    {
+     "word": "said",
+     "start": 95.32,
+     "end": 95.68
+    },
+    {
+     "word": "factory",
+     "start": 95.68,
+     "end": 96.1
+    },
+    {
+     "word": "doors",
+     "start": 96.1,
+     "end": 96.44
+    },
+    {
+     "word": "must",
+     "start": 96.44,
+     "end": 96.72
+    },
+    {
+     "word": "not",
+     "start": 96.72,
+     "end": 96.98
+    },
+    {
+     "word": "be",
+     "start": 96.98,
+     "end": 97.12
+    },
+    {
+     "word": "locked",
+     "start": 97.12,
+     "end": 97.4
+    },
+    {
+     "word": "during",
+     "start": 97.4,
+     "end": 97.72
+    },
+    {
+     "word": "working",
+     "start": 97.72,
+     "end": 98.08
+    },
+    {
+     "word": "hours.",
+     "start": 98.08,
+     "end": 98.42
+    },
+    {
+     "word": "The",
+     "start": 98.68,
+     "end": 98.76
+    },
+    {
+     "word": "rule",
+     "start": 98.76,
+     "end": 98.98
+    },
+    {
+     "word": "existed.",
+     "start": 98.98,
+     "end": 99.48
+    },
+    {
+     "word": "Nobody",
+     "start": 99.74,
+     "end": 100.0
+    },
+    {
+     "word": "checked.",
+     "start": 100.0,
+     "end": 100.4
+    }
+   ],
+   "cueAt": 92.173,
+   "aligned": [
+    [
+     "Now",
+     92.36,
+     92.36,
+     null
+    ],
+    [
+     "here's",
+     92.36,
+     92.64,
+     "here's"
+    ],
+    [
+     "the",
+     92.64,
+     92.74,
+     "the"
+    ],
+    [
+     "part",
+     92.74,
+     92.94,
+     "part"
+    ],
+    [
+     "that",
+     92.94,
+     93.16,
+     "that"
+    ],
+    [
+     "should",
+     93.16,
+     93.3,
+     "should"
+    ],
+    [
+     "make",
+     93.3,
+     93.46,
+     "make"
+    ],
+    [
+     "you",
+     93.46,
+     93.62,
+     "you"
+    ],
+    [
+     "angry.",
+     93.62,
+     94.0,
+     "angry."
+    ],
+    [
+     "New",
+     94.22,
+     94.32,
+     "New"
+    ],
+    [
+     "York's",
+     94.32,
+     94.66,
+     "York's"
+    ],
+    [
+     "law",
+     94.66,
+     94.92,
+     "law"
+    ],
+    [
+     "already",
+     94.92,
+     95.32,
+     "already"
+    ],
+    [
+     "said",
+     95.32,
+     95.68,
+     "said"
+    ],
+    [
+     "factory",
+     95.68,
+     96.1,
+     "factory"
+    ],
+    [
+     "doors",
+     96.1,
+     96.44,
+     "doors"
+    ],
+    [
+     "must",
+     96.44,
+     96.72,
+     "must"
+    ],
+    [
+     "not",
+     96.72,
+     96.98,
+     "not"
+    ],
+    [
+     "be",
+     96.98,
+     97.12,
+     "be"
+    ],
+    [
+     "locked",
+     97.12,
+     97.4,
+     "locked"
+    ],
+    [
+     "during",
+     97.4,
+     97.72,
+     "during"
+    ],
+    [
+     "working",
+     97.72,
+     98.08,
+     "working"
+    ],
+    [
+     "hours.",
+     98.08,
+     98.42,
+     "hours."
+    ],
+    [
+     "The",
+     98.68,
+     98.76,
+     "The"
+    ],
+    [
+     "rule",
+     98.76,
+     98.98,
+     "rule"
+    ],
+    [
+     "existed.",
+     98.98,
+     99.48,
+     "existed."
+    ],
+    [
+     "Nobody",
+     99.74,
+     100.0,
+     "Nobody"
+    ],
+    [
+     "checked.",
+     100.0,
+     100.4,
+     "checked."
+    ]
+   ],
+   "fire": null,
+   "smoke": null,
+   "state": {},
+   "extras": true
+  },
+  {
+   "id": "b19",
+   "cuts": [
+    {
+     "start": 100.618,
+     "shot": {
+      "subject": "judge",
+      "other": "boss",
+      "variant": 60,
+      "type": "establish"
+     },
+     "tr": "whip",
+     "end": 102.46
+    },
+    {
+     "start": 102.46,
+     "shot": {
+      "subject": "judge",
+      "other": "boss",
+      "variant": 61,
+      "type": "close"
+     },
+     "tr": "cut",
+     "face": "determined",
+     "end": 103.18
+    },
+    {
+     "start": 103.18,
+     "shot": {
+      "subject": "boss2",
+      "other": "boss",
+      "variant": 62,
+      "type": "two"
+     },
+     "tr": "cut",
+     "face": "happy",
+     "end": 104.06
+    },
+    {
+     "start": 104.06,
+     "shot": {
+      "subject": "judge",
+      "other": "boss",
+      "variant": 63,
+      "type": "low"
+     },
+     "tr": "cut",
+     "end": 105.12
+    },
+    {
+     "start": 105.12,
+     "shot": {
+      "subject": "boss",
+      "other": "boss",
+      "variant": 64,
+      "type": "close",
+      "punch": true
+     },
+     "tr": "cut",
+     "face": "happy",
+     "end": 106.462
+    }
+   ],
+   "speaker": "vo",
+   "place": "courtroom",
+   "tr": "whip",
+   "cast": [
+    {
+     "name": "judge",
+     "char": "judge",
+     "spot": "judge",
+     "face": "neutral"
+    },
+    {
+     "name": "boss",
+     "char": "owner",
+     "spot": "owner",
+     "face": "worried"
+    },
+    {
+     "name": "boss2",
+     "char": "owner",
+     "spot": "owner2",
+     "face": "worried"
+    }
+   ],
+   "say": "The owners were tried for manslaughter. Not guilty. Later they settled the lawsuits: seventy-five dollars per life.",
+   "emph": [
+    "guilty",
+    "seventy-five",
+    "life"
+   ],
+   "shots": [
+    {
+     "cue": "not",
+     "spec": "close judge",
+     "face": "determined"
+    },
+    {
+     "cue": "later",
+     "spec": "two boss boss2",
+     "face": "happy"
+    },
+    {
+     "cue": "seventy-five",
+     "spec": "close boss",
+     "face": "happy",
+     "punch": true
+    }
+   ],
+   "fx": "stamp@guilty",
+   "subtitle": "The owners were tried for manslaughter. Not guilty. Later they settled the lawsuits: seventy-five dollars per life.",
+   "pause": 0.05,
+   "voiceStart": 100.698,
+   "voiceEnd": 106.492,
+   "start": 100.618,
+   "end": 106.462,
+   "words": [
+    {
+     "word": "The",
+     "start": 100.72,
+     "end": 100.82
+    },
+    {
+     "word": "owners",
+     "start": 100.82,
+     "end": 101.04
+    },
+    {
+     "word": "were",
+     "start": 101.04,
+     "end": 101.28
+    },
+    {
+     "word": "tried",
+     "start": 101.28,
+     "end": 101.5
+    },
+    {
+     "word": "for",
+     "start": 101.5,
+     "end": 101.7
+    },
+    {
+     "word": "manslaughter.",
+     "start": 101.7,
+     "end": 102.28
+    },
+    {
+     "word": "Not",
+     "start": 102.5,
+     "end": 102.66
+    },
+    {
+     "word": "guilty.",
+     "start": 102.66,
+     "end": 102.92
+    },
+    {
+     "word": "Later,",
+     "start": 103.22,
+     "end": 103.4
+    },
+    {
+     "word": "they",
+     "start": 103.5,
+     "end": 103.62
+    },
+    {
+     "word": "settled",
+     "start": 103.62,
+     "end": 103.9
+    },
+    {
+     "word": "the",
+     "start": 103.9,
+     "end": 104.1
+    },
+    {
+     "word": "lawsuits.",
+     "start": 104.1,
+     "end": 104.44
+    },
+    {
+     "word": "$75",
+     "start": 105.16,
+     "end": 105.64
+    },
+    {
+     "word": "per",
+     "start": 105.64,
+     "end": 106.12
+    },
+    {
+     "word": "life.",
+     "start": 106.12,
+     "end": 106.42
+    }
+   ],
+   "cueAt": 100.698,
+   "aligned": [
+    [
+     "The",
+     100.72,
+     100.82,
+     "The"
+    ],
+    [
+     "owners",
+     100.82,
+     101.04,
+     "owners"
+    ],
+    [
+     "were",
+     101.04,
+     101.28,
+     "were"
+    ],
+    [
+     "tried",
+     101.28,
+     101.5,
+     "tried"
+    ],
+    [
+     "for",
+     101.5,
+     101.7,
+     "for"
+    ],
+    [
+     "manslaughter.",
+     101.7,
+     102.28,
+     "manslaughter."
+    ],
+    [
+     "Not",
+     102.5,
+     102.66,
+     "Not"
+    ],
+    [
+     "guilty.",
+     102.66,
+     102.92,
+     "guilty."
+    ],
+    [
+     "Later",
+     103.22,
+     103.4,
+     "Later,"
+    ],
+    [
+     "they",
+     103.5,
+     103.62,
+     "they"
+    ],
+    [
+     "settled",
+     103.62,
+     103.9,
+     "settled"
+    ],
+    [
+     "the",
+     103.9,
+     104.1,
+     "the"
+    ],
+    [
+     "lawsuits",
+     104.1,
+     104.44,
+     "lawsuits."
+    ],
+    [
+     "seventy-five",
+     105.16,
+     105.4,
+     "$75"
+    ],
+    [
+     "dollars",
+     105.4,
+     105.64,
+     null
+    ],
+    [
+     "per",
+     105.64,
+     106.12,
+     "per"
+    ],
+    [
+     "life.",
+     106.12,
+     106.42,
+     "life."
+    ]
+   ],
+   "fire": null,
+   "smoke": null,
+   "state": {},
+   "extras": true
+  },
+  {
+   "id": "b20",
+   "cuts": [
+    {
+     "start": 106.462,
+     "shot": {
+      "subject": "perkins",
+      "variant": 65,
+      "type": "establish"
+     },
+     "tr": "whip",
+     "end": 107.88
+    },
+    {
+     "start": 107.88,
+     "shot": {
+      "subject": "perkins",
+      "variant": 66,
+      "type": "medium"
+     },
+     "tr": "cut",
+     "end": 108.58
+    },
+    {
+     "start": 108.58,
+     "shot": {
+      "subject": "perkins",
+      "variant": 67,
+      "type": "close"
+     },
+     "tr": "cut",
+     "end": 109.56
+    },
+    {
+     "start": 109.56,
+     "shot": {
+      "subject": "perkins",
+      "variant": 68,
+      "type": "wide"
+     },
+     "tr": "cut",
+     "end": 111.132
+    }
+   ],
+   "speaker": "vo",
+   "place": "street",
+   "tr": "whip",
+   "fire": [
+    0.6,
+    0.6
+   ],
+   "cast": [
+    {
+     "name": "perkins",
+     "char": "perkins",
+     "spot": "perkins",
+     "face": "determined"
+    }
+   ],
+   "say": "But New York didn't let it go. A young woman named Frances Perkins watched the fire from the street.",
+   "emph": [
+    "perkins"
+   ],
+   "shots": [
+    {
+     "cue": "frances",
+     "spec": "close perkins"
+    }
+   ],
+   "music": "hopeful",
+   "subtitle": "But New York didn't let it go. A young woman named Frances Perkins watched the fire from the street.",
+   "pause": 0.05,
+   "voiceStart": 106.542,
+   "voiceEnd": 111.162,
+   "start": 106.462,
+   "end": 111.132,
+   "words": [
+    {
+     "word": "But",
+     "start": 106.56,
+     "end": 106.62
+    },
+    {
+     "word": "New",
+     "start": 106.62,
+     "end": 106.8
+    },
+    {
+     "word": "York",
+     "start": 106.8,
+     "end": 107.0
+    },
+    {
+     "word": "didn't",
+     "start": 107.0,
+     "end": 107.3
+    },
+    {
+     "word": "let",
+     "start": 107.3,
+     "end": 107.44
+    },
+    {
+     "word": "it",
+     "start": 107.44,
+     "end": 107.54
+    },
+    {
+     "word": "go.",
+     "start": 107.54,
+     "end": 107.74
+    },
+    {
+     "word": "A",
+     "start": 107.92,
+     "end": 108.02
+    },
+    {
+     "word": "young",
+     "start": 108.02,
+     "end": 108.2
+    },
+    {
+     "word": "woman",
+     "start": 108.2,
+     "end": 108.4
+    },
+    {
+     "word": "named",
+     "start": 108.4,
+     "end": 108.62
+    },
+    {
+     "word": "Frances",
+     "start": 108.62,
+     "end": 109.16
+    },
+    {
+     "word": "Perkins",
+     "start": 109.16,
+     "end": 109.6
+    },
+    {
+     "word": "watched",
+     "start": 109.6,
+     "end": 109.94
+    },
+    {
+     "word": "the",
+     "start": 109.94,
+     "end": 110.18
+    },
+    {
+     "word": "fire",
+     "start": 110.18,
+     "end": 110.42
+    },
+    {
+     "word": "from",
+     "start": 110.42,
+     "end": 110.68
+    },
+    {
+     "word": "the",
+     "start": 110.68,
+     "end": 110.78
+    },
+    {
+     "word": "street.",
+     "start": 110.78,
+     "end": 111.04
+    }
+   ],
+   "cueAt": 106.542,
+   "aligned": [
+    [
+     "But",
+     106.56,
+     106.62,
+     "But"
+    ],
+    [
+     "New",
+     106.62,
+     106.8,
+     "New"
+    ],
+    [
+     "York",
+     106.8,
+     107.0,
+     "York"
+    ],
+    [
+     "didn't",
+     107.0,
+     107.3,
+     "didn't"
+    ],
+    [
+     "let",
+     107.3,
+     107.44,
+     "let"
+    ],
+    [
+     "it",
+     107.44,
+     107.54,
+     "it"
+    ],
+    [
+     "go.",
+     107.54,
+     107.74,
+     "go."
+    ],
+    [
+     "A",
+     107.92,
+     108.02,
+     "A"
+    ],
+    [
+     "young",
+     108.02,
+     108.2,
+     "young"
+    ],
+    [
+     "woman",
+     108.2,
+     108.4,
+     "woman"
+    ],
+    [
+     "named",
+     108.4,
+     108.62,
+     "named"
+    ],
+    [
+     "Frances",
+     108.62,
+     109.16,
+     "Frances"
+    ],
+    [
+     "Perkins",
+     109.16,
+     109.6,
+     "Perkins"
+    ],
+    [
+     "watched",
+     109.6,
+     109.94,
+     "watched"
+    ],
+    [
+     "the",
+     109.94,
+     110.18,
+     "the"
+    ],
+    [
+     "fire",
+     110.18,
+     110.42,
+     "fire"
+    ],
+    [
+     "from",
+     110.42,
+     110.68,
+     "from"
+    ],
+    [
+     "the",
+     110.68,
+     110.78,
+     "the"
+    ],
+    [
+     "street.",
+     110.78,
+     111.04,
+     "street."
+    ]
+   ],
+   "smoke": null,
+   "state": {},
+   "extras": true
+  },
+  {
+   "id": "b21",
+   "cuts": [
+    {
+     "start": 111.132,
+     "shot": {
+      "subject": "perkins",
+      "other": "insp",
+      "variant": 69,
+      "type": "establish"
+     },
+     "tr": "flash",
+     "end": 113.38
+    },
+    {
+     "start": 113.38,
+     "shot": {
+      "subject": "perkins",
+      "other": "insp",
+      "variant": 70,
+      "type": "two"
+     },
+     "tr": "cut",
+     "end": 114.82
+    },
+    {
+     "start": 114.82,
+     "shot": {
+      "subject": "perkins",
+      "other": "insp",
+      "variant": 71,
+      "type": "close"
+     },
+     "tr": "cut",
+     "end": 116.2
+    },
+    {
+     "start": 116.2,
+     "shot": {
+      "subject": "perkins",
+      "other": "insp",
+      "variant": 72,
+      "type": "close",
+      "punch": true
+     },
+     "tr": "cut",
+     "end": 118.717
+    }
+   ],
+   "speaker": "vo",
+   "place": "factory",
+   "tr": "flash",
+   "cast": [
+    {
+     "name": "perkins",
+     "char": "perkins",
+     "spot": "aisle",
+     "do": "talk",
+     "face": "determined"
+    },
+    {
+     "name": "insp",
+     "char": "inspector",
+     "spot": "aisle2",
+     "do": "tick",
+     "face": "determined"
+    }
+   ],
+   "say": "She joined a new Factory Investigating Commission. Inspectors walked into factory after factory, and the state passed more than twenty new laws.",
+   "emph": [
+    "twenty"
+   ],
+   "music": "hopeful",
+   "subtitle": "She joined a new Factory Investigating Commission. Inspectors walked into factory after factory, and the state passed more than twenty new laws.",
+   "pause": 0.05,
+   "voiceStart": 111.212,
+   "voiceEnd": 118.747,
+   "start": 111.132,
+   "end": 118.717,
+   "words": [
+    {
+     "word": "She",
+     "start": 111.22,
+     "end": 111.36
+    },
+    {
+     "word": "joined",
+     "start": 111.36,
+     "end": 111.68
+    },
+    {
+     "word": "a",
+     "start": 111.68,
+     "end": 111.8
+    },
+    {
+     "word": "new",
+     "start": 111.8,
+     "end": 111.94
+    },
+    {
+     "word": "factory",
+     "start": 111.94,
+     "end": 112.26
+    },
+    {
+     "word": "investigating",
+     "start": 112.26,
+     "end": 112.96
+    },
+    {
+     "word": "commission.",
+     "start": 112.96,
+     "end": 113.42
+    },
+    {
+     "word": "Inspectors",
+     "start": 113.42,
+     "end": 114.26
+    },
+    {
+     "word": "walked",
+     "start": 114.26,
+     "end": 114.54
+    },
+    {
+     "word": "into",
+     "start": 114.54,
+     "end": 114.86
+    },
+    {
+     "word": "factory",
+     "start": 114.86,
+     "end": 115.28
+    },
+    {
+     "word": "after",
+     "start": 115.28,
+     "end": 115.74
+    },
+    {
+     "word": "factory",
+     "start": 115.74,
+     "end": 116.24
+    },
+    {
+     "word": "and",
+     "start": 116.24,
+     "end": 116.64
+    },
+    {
+     "word": "the",
+     "start": 116.64,
+     "end": 116.78
+    },
+    {
+     "word": "state",
+     "start": 116.78,
+     "end": 117.0
+    },
+    {
+     "word": "passed",
+     "start": 117.0,
+     "end": 117.32
+    },
+    {
+     "word": "more",
+     "start": 117.32,
+     "end": 117.62
+    },
+    {
+     "word": "than",
+     "start": 117.62,
+     "end": 117.76
+    },
+    {
+     "word": "20",
+     "start": 117.76,
+     "end": 118.06
+    },
+    {
+     "word": "new",
+     "start": 118.06,
+     "end": 118.28
+    },
+    {
+     "word": "laws.",
+     "start": 118.28,
+     "end": 118.6
+    }
+   ],
+   "cueAt": 111.212,
+   "aligned": [
+    [
+     "She",
+     111.22,
+     111.36,
+     "She"
+    ],
+    [
+     "joined",
+     111.36,
+     111.68,
+     "joined"
+    ],
+    [
+     "a",
+     111.68,
+     111.8,
+     "a"
+    ],
+    [
+     "new",
+     111.8,
+     111.94,
+     "new"
+    ],
+    [
+     "Factory",
+     111.94,
+     112.26,
+     "factory"
+    ],
+    [
+     "Investigating",
+     112.26,
+     112.96,
+     "investigating"
+    ],
+    [
+     "Commission.",
+     112.96,
+     113.42,
+     "commission."
+    ],
+    [
+     "Inspectors",
+     113.42,
+     114.26,
+     "Inspectors"
+    ],
+    [
+     "walked",
+     114.26,
+     114.54,
+     "walked"
+    ],
+    [
+     "into",
+     114.54,
+     114.86,
+     "into"
+    ],
+    [
+     "factory",
+     114.86,
+     115.28,
+     "factory"
+    ],
+    [
+     "after",
+     115.28,
+     115.74,
+     "after"
+    ],
+    [
+     "factory,",
+     115.74,
+     116.24,
+     "factory"
+    ],
+    [
+     "and",
+     116.24,
+     116.64,
+     "and"
+    ],
+    [
+     "the",
+     116.64,
+     116.78,
+     "the"
+    ],
+    [
+     "state",
+     116.78,
+     117.0,
+     "state"
+    ],
+    [
+     "passed",
+     117.0,
+     117.32,
+     "passed"
+    ],
+    [
+     "more",
+     117.32,
+     117.62,
+     "more"
+    ],
+    [
+     "than",
+     117.62,
+     117.76,
+     "than"
+    ],
+    [
+     "twenty",
+     117.76,
+     118.06,
+     "20"
+    ],
+    [
+     "new",
+     118.06,
+     118.28,
+     "new"
+    ],
+    [
+     "laws.",
+     118.28,
+     118.6,
+     "laws."
+    ]
+   ],
+   "fire": null,
+   "smoke": null,
+   "state": {},
+   "extras": true
+  },
+  {
+   "id": "b22",
+   "cuts": [
+    {
+     "start": 118.717,
+     "shot": {
+      "subject": "insp",
+      "variant": 73,
+      "type": "establish"
+     },
+     "tr": "whip",
+     "end": 121.82
+    },
+    {
+     "start": 121.82,
+     "shot": {
+      "subject": "insp",
+      "variant": 74,
+      "type": "close"
+     },
+     "tr": "cut",
+     "face": "shocked",
+     "do": "recoil",
+     "end": 124.34
+    },
+    {
+     "start": 124.34,
+     "shot": {
+      "subject": "insp",
+      "variant": 75,
+      "type": "insert",
+      "prop": "alarm"
+     },
+     "tr": "cut",
+     "end": 126.44
+    },
+    {
+     "start": 126.44,
+     "shot": {
+      "subject": "insp",
+      "variant": 76,
+      "type": "medium"
+     },
+     "tr": "cut",
+     "end": 127.54
+    },
+    {
+     "start": 127.54,
+     "shot": {
+      "subject": "insp",
+      "variant": 77,
+      "type": "low"
+     },
+     "tr": "cut",
+     "end": 129.414
+    }
+   ],
+   "speaker": "inspector",
+   "place": "office",
+   "tr": "whip",
+   "cast": [
+    {
+     "name": "insp",
+     "char": "inspector",
+     "spot": "center",
+     "do": "point",
+     "face": "happy"
+    }
+   ],
+   "dooropen": "0-1",
+   "sprinkler": "1",
+   "say": "Doors that open outward, and stay unlocked while you work. Automatic sprinklers in tall factories. Fire drills. Fire alarms. And New York City set up a Bureau of Fire Prevention.",
+   "emph": [
+    "outward",
+    "unlocked",
+    "sprinklers",
+    "drills",
+    "alarms"
+   ],
+   "shots": [
+    {
+     "cue": "automatic",
+     "spec": "close insp",
+     "face": "shocked",
+     "do": "recoil"
+    }
+   ],
+   "subtitle": "Doors that open outward, and stay unlocked while you work. Automatic sprinklers in tall factories. Fire drills. Fire alarms. And New York City set up a Bureau of Fire Prevention.",
+   "pause": 0.05,
+   "voiceStart": 118.797,
+   "voiceEnd": 129.444,
+   "start": 118.717,
+   "end": 129.414,
+   "words": [
+    {
+     "word": "Doors",
+     "start": 118.94,
+     "end": 119.16
+    },
+    {
+     "word": "that",
+     "start": 119.16,
+     "end": 119.32
+    },
+    {
+     "word": "open",
+     "start": 119.32,
+     "end": 119.58
+    },
+    {
+     "word": "outward",
+     "start": 119.58,
+     "end": 119.92
+    },
+    {
+     "word": "and",
+     "start": 119.92,
+     "end": 120.3
+    },
+    {
+     "word": "stay",
+     "start": 120.3,
+     "end": 120.58
+    },
+    {
+     "word": "unlocked",
+     "start": 120.58,
+     "end": 120.98
+    },
+    {
+     "word": "while",
+     "start": 120.98,
+     "end": 121.28
+    },
+    {
+     "word": "you",
+     "start": 121.28,
+     "end": 121.46
+    },
+    {
+     "word": "work.",
+     "start": 121.46,
+     "end": 121.74
+    },
+    {
+     "word": "Automatic",
+     "start": 121.86,
+     "end": 122.28
+    },
+    {
+     "word": "sprinklers",
+     "start": 122.28,
+     "end": 122.9
+    },
+    {
+     "word": "in",
+     "start": 122.9,
+     "end": 123.22
+    },
+    {
+     "word": "tall",
+     "start": 123.22,
+     "end": 123.56
+    },
+    {
+     "word": "factories.",
+     "start": 123.56,
+     "end": 124.04
+    },
+    {
+     "word": "Fire",
+     "start": 124.38,
+     "end": 124.68
+    },
+    {
+     "word": "drills.",
+     "start": 124.68,
+     "end": 125.1
+    },
+    {
+     "word": "Fire",
+     "start": 125.42,
+     "end": 125.66
+    },
+    {
+     "word": "alarms.",
+     "start": 125.66,
+     "end": 126.22
+    },
+    {
+     "word": "And",
+     "start": 126.48,
+     "end": 126.58
+    },
+    {
+     "word": "New",
+     "start": 126.58,
+     "end": 126.8
+    },
+    {
+     "word": "York",
+     "start": 126.8,
+     "end": 126.98
+    },
+    {
+     "word": "City",
+     "start": 126.98,
+     "end": 127.28
+    },
+    {
+     "word": "set",
+     "start": 127.28,
+     "end": 127.58
+    },
+    {
+     "word": "up",
+     "start": 127.58,
+     "end": 127.74
+    },
+    {
+     "word": "a",
+     "start": 127.74,
+     "end": 127.9
+    },
+    {
+     "word": "Bureau",
+     "start": 127.9,
+     "end": 128.16
+    },
+    {
+     "word": "of",
+     "start": 128.16,
+     "end": 128.48
+    },
+    {
+     "word": "Fire",
+     "start": 128.48,
+     "end": 128.72
+    },
+    {
+     "word": "Prevention.",
+     "start": 128.72,
+     "end": 129.18
+    }
+   ],
+   "cueAt": 118.797,
+   "aligned": [
+    [
+     "Doors",
+     118.94,
+     119.16,
+     "Doors"
+    ],
+    [
+     "that",
+     119.16,
+     119.32,
+     "that"
+    ],
+    [
+     "open",
+     119.32,
+     119.58,
+     "open"
+    ],
+    [
+     "outward,",
+     119.58,
+     119.92,
+     "outward"
+    ],
+    [
+     "and",
+     119.92,
+     120.3,
+     "and"
+    ],
+    [
+     "stay",
+     120.3,
+     120.58,
+     "stay"
+    ],
+    [
+     "unlocked",
+     120.58,
+     120.98,
+     "unlocked"
+    ],
+    [
+     "while",
+     120.98,
+     121.28,
+     "while"
+    ],
+    [
+     "you",
+     121.28,
+     121.46,
+     "you"
+    ],
+    [
+     "work.",
+     121.46,
+     121.74,
+     "work."
+    ],
+    [
+     "Automatic",
+     121.86,
+     122.28,
+     "Automatic"
+    ],
+    [
+     "sprinklers",
+     122.28,
+     122.9,
+     "sprinklers"
+    ],
+    [
+     "in",
+     122.9,
+     123.22,
+     "in"
+    ],
+    [
+     "tall",
+     123.22,
+     123.56,
+     "tall"
+    ],
+    [
+     "factories.",
+     123.56,
+     124.04,
+     "factories."
+    ],
+    [
+     "Fire",
+     124.38,
+     124.68,
+     "Fire"
+    ],
+    [
+     "drills.",
+     124.68,
+     125.1,
+     "drills."
+    ],
+    [
+     "Fire",
+     125.42,
+     125.66,
+     "Fire"
+    ],
+    [
+     "alarms.",
+     125.66,
+     126.22,
+     "alarms."
+    ],
+    [
+     "And",
+     126.48,
+     126.58,
+     "And"
+    ],
+    [
+     "New",
+     126.58,
+     126.8,
+     "New"
+    ],
+    [
+     "York",
+     126.8,
+     126.98,
+     "York"
+    ],
+    [
+     "City",
+     126.98,
+     127.28,
+     "City"
+    ],
+    [
+     "set",
+     127.28,
+     127.58,
+     "set"
+    ],
+    [
+     "up",
+     127.58,
+     127.74,
+     "up"
+    ],
+    [
+     "a",
+     127.74,
+     127.9,
+     "a"
+    ],
+    [
+     "Bureau",
+     127.9,
+     128.16,
+     "Bureau"
+    ],
+    [
+     "of",
+     128.16,
+     128.48,
+     "of"
+    ],
+    [
+     "Fire",
+     128.48,
+     128.72,
+     "Fire"
+    ],
+    [
+     "Prevention.",
+     128.72,
+     129.18,
+     "Prevention."
+    ]
+   ],
+   "fire": null,
+   "smoke": null,
+   "state": {
+    "doorOpen": [
+     0.0,
+     1.0
+    ],
+    "sprinkler": 1.0
+   },
+   "extras": true
+  },
+  {
+   "id": "b23",
+   "cuts": [
+    {
+     "start": 129.414,
+     "shot": {
+      "subject": "insp",
+      "other": "perkins",
+      "variant": 78,
+      "type": "two"
+     },
+     "tr": "cut",
+     "end": 131.87
+    },
+    {
+     "start": 131.87,
+     "shot": {
+      "subject": "insp",
+      "other": "perkins",
+      "variant": 79,
+      "type": "medium"
+     },
+     "tr": "cut",
+     "end": 133.144
+    }
+   ],
+   "speaker": "inspector",
+   "place": "office",
+   "cast": [
+    {
+     "name": "insp",
+     "char": "inspector",
+     "spot": "center",
+     "do": "thumbsup",
+     "face": "happy"
+    },
+    {
+     "name": "perkins",
+     "char": "perkins",
+     "spot": "left",
+     "do": "wave",
+     "face": "happy"
+    }
+   ],
+   "say": "Perkins later became the first woman in a U.S. president's cabinet.",
+   "emph": [
+    "first"
+   ],
+   "shots": [
+    {
+     "cue": "perkins",
+     "spec": "two perkins insp"
+    }
+   ],
+   "subtitle": "Perkins later became the first woman in a U.S. president's cabinet.",
+   "pause": 0.05,
+   "voiceStart": 129.494,
+   "voiceEnd": 133.174,
+   "start": 129.414,
+   "end": 133.144,
+   "words": [
+    {
+     "word": "Perkins",
+     "start": 129.5,
+     "end": 129.74
+    },
+    {
+     "word": "later",
+     "start": 129.74,
+     "end": 130.06
+    },
+    {
+     "word": "became",
+     "start": 130.06,
+     "end": 130.42
+    },
+    {
+     "word": "the",
+     "start": 130.42,
+     "end": 130.74
+    },
+    {
+     "word": "first",
+     "start": 130.74,
+     "end": 130.98
+    },
+    {
+     "word": "woman",
+     "start": 130.98,
+     "end": 131.36
+    },
+    {
+     "word": "in",
+     "start": 131.36,
+     "end": 131.68
+    },
+    {
+     "word": "a",
+     "start": 131.68,
+     "end": 131.78
+    },
+    {
+     "word": "US",
+     "start": 131.78,
+     "end": 132.04
+    },
+    {
+     "word": "president's",
+     "start": 132.04,
+     "end": 132.68
+    },
+    {
+     "word": "cabinet.",
+     "start": 132.68,
+     "end": 133.0
+    }
+   ],
+   "cueAt": 129.494,
+   "aligned": [
+    [
+     "Perkins",
+     129.5,
+     129.74,
+     "Perkins"
+    ],
+    [
+     "later",
+     129.74,
+     130.06,
+     "later"
+    ],
+    [
+     "became",
+     130.06,
+     130.42,
+     "became"
+    ],
+    [
+     "the",
+     130.42,
+     130.74,
+     "the"
+    ],
+    [
+     "first",
+     130.74,
+     130.98,
+     "first"
+    ],
+    [
+     "woman",
+     130.98,
+     131.36,
+     "woman"
+    ],
+    [
+     "in",
+     131.36,
+     131.68,
+     "in"
+    ],
+    [
+     "a",
+     131.68,
+     131.78,
+     "a"
+    ],
+    [
+     "U.",
+     131.78,
+     131.91,
+     null
+    ],
+    [
+     "S.",
+     131.91,
+     132.04,
+     null
+    ],
+    [
+     "president's",
+     132.04,
+     132.68,
+     "president's"
+    ],
+    [
+     "cabinet.",
+     132.68,
+     133.0,
+     "cabinet."
+    ]
+   ],
+   "fire": null,
+   "smoke": null,
+   "state": {},
+   "extras": true
+  },
+  {
+   "id": "b24",
+   "cuts": [
+    {
+     "start": 133.144,
+     "shot": {
+      "subject": "insp",
+      "variant": 80,
+      "type": "wide"
+     },
+     "tr": "cut",
+     "end": 134.52
+    },
+    {
+     "start": 134.52,
+     "shot": {
+      "subject": "insp",
+      "variant": 81,
+      "type": "close"
+     },
+     "tr": "cut",
+     "end": 135.82
+    },
+    {
+     "start": 135.82,
+     "shot": {
+      "subject": "insp",
+      "variant": 82,
+      "type": "close",
+      "punch": true
+     },
+     "tr": "cut",
+     "end": 137.548
+    }
+   ],
+   "speaker": "inspector",
+   "place": "office",
+   "cast": [
+    {
+     "name": "insp",
+     "char": "inspector",
+     "spot": "center",
+     "do": "count",
+     "face": "determined"
+    }
+   ],
+   "say": "Look at it rule by rule. Every one of them fixes a way out that failed on the ninth floor.",
+   "emph": [
+    "ninth"
+   ],
+   "music": "investigate",
+   "subtitle": "Look at it rule by rule. Every one of them fixes a way out that failed on the ninth floor.",
+   "pause": 0.05,
+   "voiceStart": 133.224,
+   "voiceEnd": 137.578,
+   "start": 133.144,
+   "end": 137.548,
+   "words": [
+    {
+     "word": "Look",
+     "start": 133.24,
+     "end": 133.38
+    },
+    {
+     "word": "at",
+     "start": 133.38,
+     "end": 133.52
+    },
+    {
+     "word": "it",
+     "start": 133.52,
+     "end": 133.62
+    },
+    {
+     "word": "rule",
+     "start": 133.62,
+     "end": 133.8
+    },
+    {
+     "word": "by",
+     "start": 133.8,
+     "end": 134.04
+    },
+    {
+     "word": "rule.",
+     "start": 134.04,
+     "end": 134.38
+    },
+    {
+     "word": "Every",
+     "start": 134.56,
+     "end": 134.74
+    },
+    {
+     "word": "one",
+     "start": 134.74,
+     "end": 134.92
+    },
+    {
+     "word": "of",
+     "start": 134.92,
+     "end": 135.02
+    },
+    {
+     "word": "them",
+     "start": 135.02,
+     "end": 135.16
+    },
+    {
+     "word": "fixes",
+     "start": 135.16,
+     "end": 135.46
+    },
+    {
+     "word": "a",
+     "start": 135.46,
+     "end": 135.68
+    },
+    {
+     "word": "way",
+     "start": 135.68,
+     "end": 135.86
+    },
+    {
+     "word": "out",
+     "start": 135.86,
+     "end": 136.08
+    },
+    {
+     "word": "that",
+     "start": 136.08,
+     "end": 136.28
+    },
+    {
+     "word": "failed",
+     "start": 136.28,
+     "end": 136.54
+    },
+    {
+     "word": "on",
+     "start": 136.54,
+     "end": 136.74
+    },
+    {
+     "word": "the",
+     "start": 136.74,
+     "end": 136.86
+    },
+    {
+     "word": "ninth",
+     "start": 136.86,
+     "end": 137.04
+    },
+    {
+     "word": "floor.",
+     "start": 137.04,
+     "end": 137.44
+    },
+    {
+     "word": "A",
+     "start": 137.62,
+     "end": 137.72
+    }
+   ],
+   "cueAt": 133.224,
+   "aligned": [
+    [
+     "Look",
+     133.24,
+     133.38,
+     "Look"
+    ],
+    [
+     "at",
+     133.38,
+     133.52,
+     "at"
+    ],
+    [
+     "it",
+     133.52,
+     133.62,
+     "it"
+    ],
+    [
+     "rule",
+     133.62,
+     133.8,
+     "rule"
+    ],
+    [
+     "by",
+     133.8,
+     134.04,
+     "by"
+    ],
+    [
+     "rule.",
+     134.04,
+     134.38,
+     "rule."
+    ],
+    [
+     "Every",
+     134.56,
+     134.74,
+     "Every"
+    ],
+    [
+     "one",
+     134.74,
+     134.92,
+     "one"
+    ],
+    [
+     "of",
+     134.92,
+     135.02,
+     "of"
+    ],
+    [
+     "them",
+     135.02,
+     135.16,
+     "them"
+    ],
+    [
+     "fixes",
+     135.16,
+     135.46,
+     "fixes"
+    ],
+    [
+     "a",
+     135.46,
+     135.68,
+     "a"
+    ],
+    [
+     "way",
+     135.68,
+     135.86,
+     "way"
+    ],
+    [
+     "out",
+     135.86,
+     136.08,
+     "out"
+    ],
+    [
+     "that",
+     136.08,
+     136.28,
+     "that"
+    ],
+    [
+     "failed",
+     136.28,
+     136.54,
+     "failed"
+    ],
+    [
+     "on",
+     136.54,
+     136.74,
+     "on"
+    ],
+    [
+     "the",
+     136.74,
+     136.86,
+     "the"
+    ],
+    [
+     "ninth",
+     136.86,
+     137.04,
+     "ninth"
+    ],
+    [
+     "floor.",
+     137.04,
+     137.44,
+     "floor."
+    ]
+   ],
+   "fire": null,
+   "smoke": null,
+   "state": {},
+   "extras": true
+  },
+  {
+   "id": "b25",
+   "cuts": [
+    {
+     "start": 137.548,
+     "shot": {
+      "subject": "you",
+      "variant": 83,
+      "type": "insert",
+      "prop": "door"
+     },
+     "tr": "whip",
+     "end": 138.434
+    }
+   ],
+   "speaker": "inspector",
+   "place": "stairwell",
+   "tr": "whip",
+   "cast": [
+    {
+     "name": "you",
+     "char": "worker",
+     "spot": "door",
+     "do": "rattle",
+     "face": "shocked"
+    }
+   ],
+   "doorshake": "1",
+   "say": "A locked door?",
+   "shots": [
+    {
+     "cue": "a",
+     "spec": "insert door"
+    }
+   ],
+   "subtitle": "A locked door?",
+   "pause": 0.05,
+   "emph": [],
+   "voiceStart": 137.628,
+   "voiceEnd": 138.464,
+   "start": 137.548,
+   "end": 138.434,
+   "words": [
+    {
+     "word": "A",
+     "start": 137.62,
+     "end": 137.72
+    },
+    {
+     "word": "locked",
+     "start": 137.72,
+     "end": 137.98
+    },
+    {
+     "word": "door?",
+     "start": 137.98,
+     "end": 138.32
+    }
+   ],
+   "cueAt": 137.628,
+   "aligned": [
+    [
+     "A",
+     137.62,
+     137.72,
+     "A"
+    ],
+    [
+     "locked",
+     137.72,
+     137.98,
+     "locked"
+    ],
+    [
+     "door?",
+     137.98,
+     138.32,
+     "door?"
+    ]
+   ],
+   "fire": null,
+   "smoke": null,
+   "state": {
+    "doorShake": 1.0
+   },
+   "extras": true
+  },
+  {
+   "id": "b26",
+   "cuts": [
+    {
+     "start": 138.434,
+     "shot": {
+      "subject": "insp",
+      "variant": 84,
+      "type": "establish"
+     },
+     "tr": "whip",
+     "end": 141.282
+    }
+   ],
+   "speaker": "inspector",
+   "place": "office",
+   "tr": "whip",
+   "cast": [
+    {
+     "name": "insp",
+     "char": "inspector",
+     "spot": "center",
+     "do": "tick",
+     "face": "determined"
+    }
+   ],
+   "say": "Now it's illegal, and someone actually comes to check.",
+   "emph": [
+    "illegal"
+   ],
+   "subtitle": "Now it's illegal, and someone actually comes to check.",
+   "pause": 0.05,
+   "voiceStart": 138.514,
+   "voiceEnd": 141.312,
+   "start": 138.434,
+   "end": 141.282,
+   "words": [
+    {
+     "word": "Now",
+     "start": 138.54,
+     "end": 138.7
+    },
+    {
+     "word": "it's",
+     "start": 138.7,
+     "end": 138.9
+    },
+    {
+     "word": "illegal",
+     "start": 138.9,
+     "end": 139.18
+    },
+    {
+     "word": "and",
+     "start": 139.18,
+     "end": 139.66
+    },
+    {
+     "word": "someone",
+     "start": 139.66,
+     "end": 139.98
+    },
+    {
+     "word": "actually",
+     "start": 139.98,
+     "end": 140.4
+    },
+    {
+     "word": "comes",
+     "start": 140.4,
+     "end": 140.76
+    },
+    {
+     "word": "to",
+     "start": 140.76,
+     "end": 140.94
+    },
+    {
+     "word": "check.",
+     "start": 140.94,
+     "end": 141.18
+    },
+    {
+     "word": "A",
+     "start": 141.36,
+     "end": 141.48
+    }
+   ],
+   "cueAt": 138.514,
+   "aligned": [
+    [
+     "Now",
+     138.54,
+     138.7,
+     "Now"
+    ],
+    [
+     "it's",
+     138.7,
+     138.9,
+     "it's"
+    ],
+    [
+     "illegal,",
+     138.9,
+     139.18,
+     "illegal"
+    ],
+    [
+     "and",
+     139.18,
+     139.66,
+     "and"
+    ],
+    [
+     "someone",
+     139.66,
+     139.98,
+     "someone"
+    ],
+    [
+     "actually",
+     139.98,
+     140.4,
+     "actually"
+    ],
+    [
+     "comes",
+     140.4,
+     140.76,
+     "comes"
+    ],
+    [
+     "to",
+     140.76,
+     140.94,
+     "to"
+    ],
+    [
+     "check.",
+     140.94,
+     141.18,
+     "check."
+    ]
+   ],
+   "fire": null,
+   "smoke": null,
+   "state": {},
+   "extras": true
+  },
+  {
+   "id": "b27",
+   "cuts": [
+    {
+     "start": 141.282,
+     "shot": {
+      "subject": "you",
+      "variant": 85,
+      "type": "establish"
+     },
+     "tr": "whip",
+     "end": 142.98
+    },
+    {
+     "start": 142.98,
+     "shot": {
+      "subject": "you",
+      "variant": 86,
+      "type": "low"
+     },
+     "tr": "cut",
+     "end": 145.209
+    }
+   ],
+   "speaker": "inspector",
+   "place": "stairwell",
+   "tr": "whip",
+   "cast": [
+    {
+     "name": "you",
+     "char": "worker",
+     "spot": "door",
+     "do": "pushbar",
+     "face": "worried"
+    }
+   ],
+   "say": "A door that opens the wrong way, against a crowd pushing to get out?",
+   "subtitle": "A door that opens the wrong way, against a crowd pushing to get out?",
+   "pause": 0.05,
+   "emph": [],
+   "voiceStart": 141.362,
+   "voiceEnd": 145.239,
+   "start": 141.282,
+   "end": 145.209,
+   "words": [
+    {
+     "word": "A",
+     "start": 141.36,
+     "end": 141.48
+    },
+    {
+     "word": "door",
+     "start": 141.48,
+     "end": 141.68
+    },
+    {
+     "word": "that",
+     "start": 141.68,
+     "end": 141.86
+    },
+    {
+     "word": "opens",
+     "start": 141.86,
+     "end": 142.2
+    },
+    {
+     "word": "the",
+     "start": 142.2,
+     "end": 142.4
+    },
+    {
+     "word": "wrong",
+     "start": 142.4,
+     "end": 142.64
+    },
+    {
+     "word": "way.",
+     "start": 142.64,
+     "end": 143.02
+    },
+    {
+     "word": "Against",
+     "start": 143.02,
+     "end": 143.64
+    },
+    {
+     "word": "a",
+     "start": 143.64,
+     "end": 143.9
+    },
+    {
+     "word": "crowd",
+     "start": 143.9,
+     "end": 144.08
+    },
+    {
+     "word": "pushing",
+     "start": 144.08,
+     "end": 144.48
+    },
+    {
+     "word": "to",
+     "start": 144.48,
+     "end": 144.68
+    },
+    {
+     "word": "get",
+     "start": 144.68,
+     "end": 144.84
+    },
+    {
+     "word": "out.",
+     "start": 144.84,
+     "end": 145.06
+    }
+   ],
+   "cueAt": 141.362,
+   "aligned": [
+    [
+     "A",
+     141.36,
+     141.48,
+     "A"
+    ],
+    [
+     "door",
+     141.48,
+     141.68,
+     "door"
+    ],
+    [
+     "that",
+     141.68,
+     141.86,
+     "that"
+    ],
+    [
+     "opens",
+     141.86,
+     142.2,
+     "opens"
+    ],
+    [
+     "the",
+     142.2,
+     142.4,
+     "the"
+    ],
+    [
+     "wrong",
+     142.4,
+     142.64,
+     "wrong"
+    ],
+    [
+     "way,",
+     142.64,
+     143.02,
+     "way."
+    ],
+    [
+     "against",
+     143.02,
+     143.64,
+     "Against"
+    ],
+    [
+     "a",
+     143.64,
+     143.9,
+     "a"
+    ],
+    [
+     "crowd",
+     143.9,
+     144.08,
+     "crowd"
+    ],
+    [
+     "pushing",
+     144.08,
+     144.48,
+     "pushing"
+    ],
+    [
+     "to",
+     144.48,
+     144.68,
+     "to"
+    ],
+    [
+     "get",
+     144.68,
+     144.84,
+     "get"
+    ],
+    [
+     "out?",
+     144.84,
+     145.06,
+     "out."
+    ]
+   ],
+   "fire": null,
+   "smoke": null,
+   "state": {},
+   "extras": true
+  },
+  {
+   "id": "b28",
+   "cuts": [
+    {
+     "start": 145.209,
+     "shot": {
+      "subject": "you",
+      "other": "insp",
+      "variant": 87,
+      "type": "insert",
+      "prop": "exit"
+     },
+     "tr": "whip",
+     "end": 146.745
+    }
+   ],
+   "speaker": "inspector",
+   "place": "office",
+   "tr": "whip",
+   "cast": [
+    {
+     "name": "you",
+     "char": "worker",
+     "spot": "door",
+     "do": "pushbar",
+     "face": "happy"
+    },
+    {
+     "name": "insp",
+     "char": "inspector",
+     "spot": "center",
+     "do": "thumbsup",
+     "face": "happy"
+    }
+   ],
+   "dooropen": "0-1",
+   "say": "Now it swings outward.",
+   "emph": [
+    "outward"
+   ],
+   "shots": [
+    {
+     "cue": "now",
+     "spec": "insert exit"
+    }
+   ],
+   "subtitle": "Now it swings outward.",
+   "pause": 0.05,
+   "voiceStart": 145.289,
+   "voiceEnd": 146.775,
+   "start": 145.209,
+   "end": 146.745,
+   "words": [
+    {
+     "word": "Now",
+     "start": 145.36,
+     "end": 145.54
+    },
+    {
+     "word": "it",
+     "start": 145.54,
+     "end": 145.78
+    },
+    {
+     "word": "swings",
+     "start": 145.78,
+     "end": 146.06
+    },
+    {
+     "word": "outward.",
+     "start": 146.06,
+     "end": 146.62
+    }
+   ],
+   "cueAt": 145.289,
+   "aligned": [
+    [
+     "Now",
+     145.36,
+     145.54,
+     "Now"
+    ],
+    [
+     "it",
+     145.54,
+     145.78,
+     "it"
+    ],
+    [
+     "swings",
+     145.78,
+     146.06,
+     "swings"
+    ],
+    [
+     "outward.",
+     146.06,
+     146.62,
+     "outward."
+    ]
+   ],
+   "fire": null,
+   "smoke": null,
+   "state": {
+    "doorOpen": [
+     0.0,
+     1.0
+    ]
+   },
+   "extras": true
+  },
+  {
+   "id": "b29",
+   "cuts": [
+    {
+     "start": 146.745,
+     "shot": {
+      "subject": "ff",
+      "variant": 88,
+      "type": "insert",
+      "prop": "ladder"
+     },
+     "tr": "whip",
+     "end": 148.049
+    }
+   ],
+   "speaker": "inspector",
+   "place": "street",
+   "tr": "whip",
+   "fire": [
+    0.6,
+    0.6
+   ],
+   "cast": [
+    {
+     "name": "ff",
+     "char": "firefighter",
+     "spot": "firefighter",
+     "do": "facepalm",
+     "face": "sad"
+    }
+   ],
+   "say": "Ladders that can't reach?",
+   "shots": [
+    {
+     "cue": "ladders",
+     "spec": "insert ladder"
+    }
+   ],
+   "subtitle": "Ladders that can't reach?",
+   "pause": 0.05,
+   "emph": [],
+   "voiceStart": 146.825,
+   "voiceEnd": 148.079,
+   "start": 146.745,
+   "end": 148.049,
+   "words": [
+    {
+     "word": "Ladders",
+     "start": 146.9,
+     "end": 147.16
+    },
+    {
+     "word": "that",
+     "start": 147.16,
+     "end": 147.34
+    },
+    {
+     "word": "can't",
+     "start": 147.34,
+     "end": 147.7
+    },
+    {
+     "word": "reach.",
+     "start": 147.7,
+     "end": 147.94
+    }
+   ],
+   "cueAt": 146.825,
+   "aligned": [
+    [
+     "Ladders",
+     146.9,
+     147.16,
+     "Ladders"
+    ],
+    [
+     "that",
+     147.16,
+     147.34,
+     "that"
+    ],
+    [
+     "can't",
+     147.34,
+     147.7,
+     "can't"
+    ],
+    [
+     "reach?",
+     147.7,
+     147.94,
+     "reach."
+    ]
+   ],
+   "smoke": null,
+   "state": {},
+   "extras": true
+  },
+  {
+   "id": "b30",
+   "cuts": [
+    {
+     "start": 148.049,
+     "shot": {
+      "subject": "insp",
+      "variant": 89,
+      "type": "insert",
+      "prop": "sprinkler"
+     },
+     "tr": "whip",
+     "end": 148.62
+    },
+    {
+     "start": 148.62,
+     "shot": {
+      "subject": "insp",
+      "variant": 90,
+      "type": "close"
+     },
+     "tr": "cut",
+     "face": "shocked",
+     "end": 150.5
+    },
+    {
+     "start": 150.5,
+     "shot": {
+      "subject": "insp",
+      "variant": 91,
+      "type": "medium"
+     },
+     "tr": "cut",
+     "end": 151.513
+    }
+   ],
+   "speaker": "inspector",
+   "place": "office",
+   "tr": "whip",
+   "cast": [
+    {
+     "name": "insp",
+     "char": "inspector",
+     "spot": "center",
+     "do": "recoil",
+     "face": "shocked"
+    }
+   ],
+   "sprinkler": "1",
+   "say": "Sprinklers fight the fire from the inside, before it grows.",
+   "shots": [
+    {
+     "cue": "sprinklers",
+     "spec": "insert sprinkler"
+    },
+    {
+     "cue": "fight",
+     "spec": "close insp",
+     "face": "shocked"
+    }
+   ],
+   "subtitle": "Sprinklers fight the fire from the inside, before it grows.",
+   "pause": 0.05,
+   "emph": [],
+   "voiceStart": 148.129,
+   "voiceEnd": 151.543,
+   "start": 148.049,
+   "end": 151.513,
+   "words": [
+    {
+     "word": "Sprinklers",
+     "start": 148.18,
+     "end": 148.66
+    },
+    {
+     "word": "fight",
+     "start": 148.66,
+     "end": 148.94
+    },
+    {
+     "word": "the",
+     "start": 148.94,
+     "end": 149.12
+    },
+    {
+     "word": "fire",
+     "start": 149.12,
+     "end": 149.4
+    },
+    {
+     "word": "from",
+     "start": 149.4,
+     "end": 149.6
+    },
+    {
+     "word": "the",
+     "start": 149.6,
+     "end": 149.7
+    },
+    {
+     "word": "inside.",
+     "start": 149.7,
+     "end": 150.2
+    },
+    {
+     "word": "Before",
+     "start": 150.54,
+     "end": 150.78
+    },
+    {
+     "word": "it",
+     "start": 150.78,
+     "end": 151.0
+    },
+    {
+     "word": "grows.",
+     "start": 151.0,
+     "end": 151.28
+    }
+   ],
+   "cueAt": 148.129,
+   "aligned": [
+    [
+     "Sprinklers",
+     148.18,
+     148.66,
+     "Sprinklers"
+    ],
+    [
+     "fight",
+     148.66,
+     148.94,
+     "fight"
+    ],
+    [
+     "the",
+     148.94,
+     149.12,
+     "the"
+    ],
+    [
+     "fire",
+     149.12,
+     149.4,
+     "fire"
+    ],
+    [
+     "from",
+     149.4,
+     149.6,
+     "from"
+    ],
+    [
+     "the",
+     149.6,
+     149.7,
+     "the"
+    ],
+    [
+     "inside,",
+     149.7,
+     150.2,
+     "inside."
+    ],
+    [
+     "before",
+     150.54,
+     150.78,
+     "Before"
+    ],
+    [
+     "it",
+     150.78,
+     151.0,
+     "it"
+    ],
+    [
+     "grows.",
+     151.0,
+     151.28,
+     "grows."
+    ]
+   ],
+   "fire": null,
+   "smoke": null,
+   "state": {
+    "sprinkler": 1.0
+   },
+   "extras": true
+  },
+  {
+   "id": "b31",
+   "cuts": [
+    {
+     "start": 151.513,
+     "shot": {
+      "subject": "you",
+      "variant": 92,
+      "type": "establish"
+     },
+     "tr": "whip",
+     "end": 152.886
+    }
+   ],
+   "speaker": "inspector",
+   "place": "factory",
+   "tr": "whip",
+   "fire": [
+    0.5,
+    0.5
+   ],
+   "smoke": [
+    0.5,
+    0.5
+   ],
+   "cast": [
+    {
+     "name": "you",
+     "char": "worker",
+     "spot": "aisle",
+     "do": "panic",
+     "face": "scared"
+    }
+   ],
+   "say": "Nobody knows where to go?",
+   "subtitle": "Nobody knows where to go?",
+   "pause": 0.05,
+   "emph": [],
+   "voiceStart": 151.593,
+   "voiceEnd": 152.916,
+   "start": 151.513,
+   "end": 152.886,
+   "words": [
+    {
+     "word": "Nobody",
+     "start": 151.6,
+     "end": 151.82
+    },
+    {
+     "word": "knows",
+     "start": 151.82,
+     "end": 152.18
+    },
+    {
+     "word": "where",
+     "start": 152.18,
+     "end": 152.48
+    },
+    {
+     "word": "to",
+     "start": 152.48,
+     "end": 152.62
+    },
+    {
+     "word": "go.",
+     "start": 152.62,
+     "end": 152.8
+    }
+   ],
+   "cueAt": 151.593,
+   "aligned": [
+    [
+     "Nobody",
+     151.6,
+     151.82,
+     "Nobody"
+    ],
+    [
+     "knows",
+     151.82,
+     152.18,
+     "knows"
+    ],
+    [
+     "where",
+     152.18,
+     152.48,
+     "where"
+    ],
+    [
+     "to",
+     152.48,
+     152.62,
+     "to"
+    ],
+    [
+     "go?",
+     152.62,
+     152.8,
+     "go."
+    ]
+   ],
+   "state": {},
+   "extras": true
+  },
+  {
+   "id": "b32",
+   "cuts": [
+    {
+     "start": 152.886,
+     "shot": {
+      "subject": "insp",
+      "other": "you",
+      "variant": 93,
+      "type": "establish"
+     },
+     "tr": "whip",
+     "end": 155.978
+    }
+   ],
+   "speaker": "inspector",
+   "place": "office",
+   "tr": "whip",
+   "cast": [
+    {
+     "name": "insp",
+     "char": "inspector",
+     "spot": "center",
+     "do": "point",
+     "face": "determined"
+    },
+    {
+     "name": "you",
+     "char": "worker",
+     "spot": "left",
+     "do": "walk",
+     "face": "happy"
+    }
+   ],
+   "say": "Fire drills. You practise until your feet know the way.",
+   "emph": [
+    "drills"
+   ],
+   "subtitle": "Fire drills. You practise until your feet know the way.",
+   "pause": 0.05,
+   "voiceStart": 152.966,
+   "voiceEnd": 156.008,
+   "start": 152.886,
+   "end": 155.978,
+   "words": [
+    {
+     "word": "Fire",
+     "start": 153.06,
+     "end": 153.34
+    },
+    {
+     "word": "drills.",
+     "start": 153.34,
+     "end": 153.8
+    },
+    {
+     "word": "You",
+     "start": 154.08,
+     "end": 154.16
+    },
+    {
+     "word": "practice",
+     "start": 154.16,
+     "end": 154.52
+    },
+    {
+     "word": "until",
+     "start": 154.52,
+     "end": 154.9
+    },
+    {
+     "word": "your",
+     "start": 154.9,
+     "end": 155.1
+    },
+    {
+     "word": "feet",
+     "start": 155.1,
+     "end": 155.32
+    },
+    {
+     "word": "know",
+     "start": 155.32,
+     "end": 155.54
+    },
+    {
+     "word": "the",
+     "start": 155.54,
+     "end": 155.66
+    },
+    {
+     "word": "way.",
+     "start": 155.66,
+     "end": 155.92
+    }
+   ],
+   "cueAt": 152.966,
+   "aligned": [
+    [
+     "Fire",
+     153.06,
+     153.34,
+     "Fire"
+    ],
+    [
+     "drills.",
+     153.34,
+     153.8,
+     "drills."
+    ],
+    [
+     "You",
+     154.08,
+     154.16,
+     "You"
+    ],
+    [
+     "practise",
+     154.16,
+     154.52,
+     null
+    ],
+    [
+     "until",
+     154.52,
+     154.9,
+     "until"
+    ],
+    [
+     "your",
+     154.9,
+     155.1,
+     "your"
+    ],
+    [
+     "feet",
+     155.1,
+     155.32,
+     "feet"
+    ],
+    [
+     "know",
+     155.32,
+     155.54,
+     "know"
+    ],
+    [
+     "the",
+     155.54,
+     155.66,
+     "the"
+    ],
+    [
+     "way.",
+     155.66,
+     155.92,
+     "way."
+    ]
+   ],
+   "fire": null,
+   "smoke": null,
+   "state": {},
+   "extras": true
+  },
+  {
+   "id": "b33",
+   "cuts": [
+    {
+     "start": 155.978,
+     "shot": {
+      "subject": "insp",
+      "variant": 95,
+      "type": "insert",
+      "prop": "alarm"
+     },
+     "tr": "cut",
+     "end": 159.057
+    }
+   ],
+   "speaker": "inspector",
+   "place": "office",
+   "cast": [
+    {
+     "name": "insp",
+     "char": "inspector",
+     "spot": "center",
+     "do": "tap",
+     "face": "determined"
+    }
+   ],
+   "say": "And the alarm? It rings on every floor, not just one.",
+   "emph": [
+    "every"
+   ],
+   "shots": [
+    {
+     "cue": "alarm",
+     "spec": "insert alarm"
+    }
+   ],
+   "fx": "bell@rings",
+   "subtitle": "And the alarm? It rings on every floor, not just one.",
+   "pause": 0.05,
+   "voiceStart": 156.058,
+   "voiceEnd": 158.81,
+   "start": 155.978,
+   "end": 159.057,
+   "words": [
+    {
+     "word": "And",
+     "start": 156.08,
+     "end": 156.16
+    },
+    {
+     "word": "they",
+     "start": 156.16,
+     "end": 156.28
+    },
+    {
+     "word": "alarm?",
+     "start": 156.28,
+     "end": 156.58
+    },
+    {
+     "word": "It",
+     "start": 156.82,
+     "end": 156.9
+    },
+    {
+     "word": "rings",
+     "start": 156.9,
+     "end": 157.1
+    },
+    {
+     "word": "on",
+     "start": 157.1,
+     "end": 157.3
+    },
+    {
+     "word": "every",
+     "start": 157.3,
+     "end": 157.5
+    },
+    {
+     "word": "floor.",
+     "start": 157.5,
+     "end": 157.76
+    },
+    {
+     "word": "Not",
+     "start": 158.1,
+     "end": 158.22
+    },
+    {
+     "word": "just",
+     "start": 158.22,
+     "end": 158.42
+    },
+    {
+     "word": "one.",
+     "start": 158.42,
+     "end": 158.7
+    }
+   ],
+   "cueAt": 156.058,
+   "aligned": [
+    [
+     "And",
+     156.08,
+     156.16,
+     "And"
+    ],
+    [
+     "the",
+     156.16,
+     156.28,
+     null
+    ],
+    [
+     "alarm?",
+     156.28,
+     156.58,
+     "alarm?"
+    ],
+    [
+     "It",
+     156.82,
+     156.9,
+     "It"
+    ],
+    [
+     "rings",
+     156.9,
+     157.1,
+     "rings"
+    ],
+    [
+     "on",
+     157.1,
+     157.3,
+     "on"
+    ],
+    [
+     "every",
+     157.3,
+     157.5,
+     "every"
+    ],
+    [
+     "floor,",
+     157.5,
+     157.76,
+     "floor."
+    ],
+    [
+     "not",
+     158.1,
+     158.22,
+     "Not"
+    ],
+    [
+     "just",
+     158.22,
+     158.42,
+     "just"
+    ],
+    [
+     "one.",
+     158.42,
+     158.7,
+     "one."
+    ]
+   ],
+   "fire": null,
+   "smoke": null,
+   "state": {},
+   "extras": true
+  },
+  {
+   "id": "b34",
+   "cuts": [
+    {
+     "start": 159.057,
+     "shot": {
+      "subject": "insp",
+      "variant": 96,
+      "type": "medium"
+     },
+     "tr": "cut",
+     "end": 162.06
+    },
+    {
+     "start": 162.06,
+     "shot": {
+      "subject": "insp",
+      "variant": 97,
+      "type": "close",
+      "punch": true
+     },
+     "tr": "cut",
+     "end": 163.22
+    },
+    {
+     "start": 163.22,
+     "shot": {
+      "subject": "insp",
+      "variant": 98,
+      "type": "medium"
+     },
+     "tr": "cut",
+     "face": "happy",
+     "end": 164.64
+    },
+    {
+     "start": 164.64,
+     "shot": {
+      "subject": "insp",
+      "variant": 99,
+      "type": "insert",
+      "prop": "exit"
+     },
+     "tr": "cut",
+     "end": 166.12
+    },
+    {
+     "start": 166.12,
+     "shot": {
+      "subject": "insp",
+      "variant": 100,
+      "type": "insert",
+      "prop": "exit"
+     },
+     "tr": "cut",
+     "end": 167.78
+    },
+    {
+     "start": 167.78,
+     "shot": {
+      "subject": "insp",
+      "variant": 101,
+      "type": "close"
+     },
+     "tr": "cut",
+     "face": "happy",
+     "do": "thumbsup",
+     "end": 169.19
+    }
+   ],
+   "speaker": "inspector",
+   "place": "office",
+   "pause": 0.3,
+   "cast": [
+    {
+     "name": "insp",
+     "char": "inspector",
+     "spot": "center",
+     "do": "talk",
+     "face": "determined"
+    }
+   ],
+   "dooropen": "1",
+   "say": "So next time a fire drill ruins your afternoon, remember the ninth floor. And that's why, today, exit doors swing outward, stay unlocked, and lead somewhere safe.",
+   "emph": [
+    "ninth",
+    "today",
+    "outward",
+    "unlocked",
+    "safe"
+   ],
+   "shots": [
+    {
+     "cue": "and",
+     "spec": "medium insp",
+     "face": "happy"
+    },
+    {
+     "cue": "exit",
+     "spec": "insert exit"
+    },
+    {
+     "cue": "safe",
+     "spec": "close insp",
+     "face": "happy",
+     "do": "thumbsup"
+    }
+   ],
+   "music": "hopeful",
+   "subtitle": "So next time a fire drill ruins your afternoon, remember the ninth floor. And that's why, today, exit doors swing outward, stay unlocked, and lead somewhere safe.",
+   "voiceStart": 159.137,
+   "voiceEnd": 168.39,
+   "start": 159.057,
+   "end": 169.19,
+   "words": [
+    {
+     "word": "So",
+     "start": 159.12,
+     "end": 159.38
+    },
+    {
+     "word": "next",
+     "start": 159.38,
+     "end": 159.6
+    },
+    {
+     "word": "time",
+     "start": 159.6,
+     "end": 159.96
+    },
+    {
+     "word": "a",
+     "start": 159.96,
+     "end": 160.14
+    },
+    {
+     "word": "fire",
+     "start": 160.14,
+     "end": 160.36
+    },
+    {
+     "word": "drill",
+     "start": 160.36,
+     "end": 160.76
+    },
+    {
+     "word": "ruins",
+     "start": 160.76,
+     "end": 161.08
+    },
+    {
+     "word": "your",
+     "start": 161.08,
+     "end": 161.24
+    },
+    {
+     "word": "afternoon.",
+     "start": 161.24,
+     "end": 161.72
+    },
+    {
+     "word": "Remember",
+     "start": 162.1,
+     "end": 162.3
+    },
+    {
+     "word": "the",
+     "start": 162.3,
+     "end": 162.56
+    },
+    {
+     "word": "ninth",
+     "start": 162.56,
+     "end": 162.78
+    },
+    {
+     "word": "floor.",
+     "start": 162.78,
+     "end": 163.12
+    },
+    {
+     "word": "And",
+     "start": 163.26,
+     "end": 163.32
+    },
+    {
+     "word": "that's",
+     "start": 163.32,
+     "end": 163.56
+    },
+    {
+     "word": "why.",
+     "start": 163.56,
+     "end": 163.82
+    },
+    {
+     "word": "Today,",
+     "start": 164.06,
+     "end": 164.26
+    },
+    {
+     "word": "eggs",
+     "start": 164.68,
+     "end": 164.9
+    },
+    {
+     "word": "doors",
+     "start": 164.9,
+     "end": 165.16
+    },
+    {
+     "word": "swing",
+     "start": 165.16,
+     "end": 165.48
+    },
+    {
+     "word": "outward.",
+     "start": 165.48,
+     "end": 165.88
+    },
+    {
+     "word": "Stay",
+     "start": 166.16,
+     "end": 166.4
+    },
+    {
+     "word": "unlocked",
+     "start": 166.4,
+     "end": 166.94
+    },
+    {
+     "word": "and",
+     "start": 166.94,
+     "end": 167.36
+    },
+    {
+     "word": "lead",
+     "start": 167.36,
+     "end": 167.56
+    },
+    {
+     "word": "somewhere",
+     "start": 167.56,
+     "end": 167.82
+    },
+    {
+     "word": "safe.",
+     "start": 167.82,
+     "end": 168.2
+    }
+   ],
+   "cueAt": 159.137,
+   "aligned": [
+    [
+     "So",
+     159.12,
+     159.38,
+     "So"
+    ],
+    [
+     "next",
+     159.38,
+     159.6,
+     "next"
+    ],
+    [
+     "time",
+     159.6,
+     159.96,
+     "time"
+    ],
+    [
+     "a",
+     159.96,
+     160.14,
+     "a"
+    ],
+    [
+     "fire",
+     160.14,
+     160.36,
+     "fire"
+    ],
+    [
+     "drill",
+     160.36,
+     160.76,
+     "drill"
+    ],
+    [
+     "ruins",
+     160.76,
+     161.08,
+     "ruins"
+    ],
+    [
+     "your",
+     161.08,
+     161.24,
+     "your"
+    ],
+    [
+     "afternoon,",
+     161.24,
+     161.72,
+     "afternoon."
+    ],
+    [
+     "remember",
+     162.1,
+     162.3,
+     "Remember"
+    ],
+    [
+     "the",
+     162.3,
+     162.56,
+     "the"
+    ],
+    [
+     "ninth",
+     162.56,
+     162.78,
+     "ninth"
+    ],
+    [
+     "floor.",
+     162.78,
+     163.12,
+     "floor."
+    ],
+    [
+     "And",
+     163.26,
+     163.32,
+     "And"
+    ],
+    [
+     "that's",
+     163.32,
+     163.56,
+     "that's"
+    ],
+    [
+     "why,",
+     163.56,
+     163.82,
+     "why."
+    ],
+    [
+     "today,",
+     164.06,
+     164.26,
+     "Today,"
+    ],
+    [
+     "exit",
+     164.68,
+     164.9,
+     null
+    ],
+    [
+     "doors",
+     164.9,
+     165.16,
+     "doors"
+    ],
+    [
+     "swing",
+     165.16,
+     165.48,
+     "swing"
+    ],
+    [
+     "outward,",
+     165.48,
+     165.88,
+     "outward."
+    ],
+    [
+     "stay",
+     166.16,
+     166.4,
+     "Stay"
+    ],
+    [
+     "unlocked,",
+     166.4,
+     166.94,
+     "unlocked"
+    ],
+    [
+     "and",
+     166.94,
+     167.36,
+     "and"
+    ],
+    [
+     "lead",
+     167.36,
+     167.56,
+     "lead"
+    ],
+    [
+     "somewhere",
+     167.56,
+     167.82,
+     "somewhere"
+    ],
+    [
+     "safe.",
+     167.82,
+     168.2,
+     "safe."
+    ]
+   ],
+   "fire": null,
+   "smoke": null,
+   "state": {
+    "doorOpen": [
+     1.0,
+     1.0
+    ]
+   },
+   "extras": true
+  }
+ ],
+ "captionWords": [
+  {
+   "text": "That",
+   "start": 0.4,
+   "end": 0.4,
+   "emph": false
+  },
+  {
+   "text": "door",
+   "start": 0.4,
+   "end": 0.56,
+   "emph": false
+  },
+  {
+   "text": "that",
+   "start": 0.56,
+   "end": 0.74,
+   "emph": false
+  },
+  {
+   "text": "swings",
+   "start": 0.74,
+   "end": 0.96,
+   "emph": false
+  },
+  {
+   "text": "outward",
+   "start": 0.96,
+   "end": 1.38,
+   "emph": true
+  },
+  {
+   "text": "when",
+   "start": 1.38,
+   "end": 1.6,
+   "emph": false
+  },
+  {
+   "text": "you",
+   "start": 1.6,
+   "end": 1.76,
+   "emph": false
+  },
+  {
+   "text": "push",
+   "start": 1.76,
+   "end": 2.02,
+   "emph": false
+  },
+  {
+   "text": "it",
+   "start": 2.02,
+   "end": 2.16,
+   "emph": false
+  },
+  {
+   "text": "The",
+   "start": 2.24,
+   "end": 2.32,
+   "emph": false
+  },
+  {
+   "text": "sprinkler",
+   "start": 2.32,
+   "end": 2.78,
+   "emph": true
+  },
+  {
+   "text": "over",
+   "start": 2.78,
+   "end": 3.1,
+   "emph": false
+  },
+  {
+   "text": "your",
+   "start": 3.1,
+   "end": 3.3,
+   "emph": false
+  },
+  {
+   "text": "head",
+   "start": 3.3,
+   "end": 3.6,
+   "emph": false
+  },
+  {
+   "text": "The",
+   "start": 3.78,
+   "end": 3.86,
+   "emph": false
+  },
+  {
+   "text": "fire",
+   "start": 3.86,
+   "end": 4.16,
+   "emph": false
+  },
+  {
+   "text": "drill",
+   "start": 4.16,
+   "end": 4.44,
+   "emph": true
+  },
+  {
+   "text": "you",
+   "start": 4.44,
+   "end": 4.66,
+   "emph": false
+  },
+  {
+   "text": "groan",
+   "start": 4.66,
+   "end": 4.96,
+   "emph": false
+  },
+  {
+   "text": "about",
+   "start": 4.96,
+   "end": 5.14,
+   "emph": false
+  },
+  {
+   "text": "every",
+   "start": 5.14,
+   "end": 5.44,
+   "emph": false
+  },
+  {
+   "text": "year",
+   "start": 5.44,
+   "end": 5.76,
+   "emph": false
+  },
+  {
+   "text": "All",
+   "start": 5.84,
+   "end": 5.96,
+   "emph": false
+  },
+  {
+   "text": "three",
+   "start": 5.96,
+   "end": 6.2,
+   "emph": false
+  },
+  {
+   "text": "exist",
+   "start": 6.2,
+   "end": 6.54,
+   "emph": false
+  },
+  {
+   "text": "because",
+   "start": 6.54,
+   "end": 6.82,
+   "emph": false
+  },
+  {
+   "text": "of",
+   "start": 6.82,
+   "end": 7.02,
+   "emph": false
+  },
+  {
+   "text": "one",
+   "start": 7.02,
+   "end": 7.24,
+   "emph": false
+  },
+  {
+   "text": "Saturday",
+   "start": 7.24,
+   "end": 7.6,
+   "emph": false
+  },
+  {
+   "text": "afternoon",
+   "start": 7.6,
+   "end": 8.24,
+   "emph": false
+  },
+  {
+   "text": "in",
+   "start": 8.24,
+   "end": 8.66,
+   "emph": false
+  },
+  {
+   "text": "New",
+   "start": 8.66,
+   "end": 8.84,
+   "emph": false
+  },
+  {
+   "text": "York",
+   "start": 8.84,
+   "end": 9.16,
+   "emph": false
+  },
+  {
+   "text": "in",
+   "start": 9.16,
+   "end": 9.46,
+   "emph": false
+  },
+  {
+   "text": "1911",
+   "start": 9.46,
+   "end": 10.09,
+   "emph": true
+  },
+  {
+   "text": "It's",
+   "start": 10.54,
+   "end": 10.72,
+   "emph": false
+  },
+  {
+   "text": "March",
+   "start": 10.72,
+   "end": 10.86,
+   "emph": false
+  },
+  {
+   "text": "25th, 1911",
+   "start": 10.86,
+   "end": 11.487,
+   "emph": true
+  },
+  {
+   "text": "You're",
+   "start": 12.88,
+   "end": 13.04,
+   "emph": false
+  },
+  {
+   "text": "a",
+   "start": 13.04,
+   "end": 13.14,
+   "emph": false
+  },
+  {
+   "text": "young",
+   "start": 13.14,
+   "end": 13.32,
+   "emph": false
+  },
+  {
+   "text": "immigrant",
+   "start": 13.32,
+   "end": 13.68,
+   "emph": false
+  },
+  {
+   "text": "and",
+   "start": 14.1,
+   "end": 14.26,
+   "emph": false
+  },
+  {
+   "text": "you",
+   "start": 14.26,
+   "end": 14.4,
+   "emph": false
+  },
+  {
+   "text": "sew",
+   "start": 14.4,
+   "end": 14.56,
+   "emph": false
+  },
+  {
+   "text": "blouses",
+   "start": 14.56,
+   "end": 15.08,
+   "emph": false
+  },
+  {
+   "text": "called",
+   "start": 15.08,
+   "end": 15.5,
+   "emph": false
+  },
+  {
+   "text": "shirtwaists",
+   "start": 15.5,
+   "end": 16.2,
+   "emph": false
+  },
+  {
+   "text": "on",
+   "start": 16.2,
+   "end": 16.34,
+   "emph": false
+  },
+  {
+   "text": "the",
+   "start": 16.34,
+   "end": 16.44,
+   "emph": false
+  },
+  {
+   "text": "ninth",
+   "start": 16.44,
+   "end": 16.64,
+   "emph": true
+  },
+  {
+   "text": "floor",
+   "start": 16.64,
+   "end": 17.04,
+   "emph": false
+  },
+  {
+   "text": "of",
+   "start": 17.04,
+   "end": 17.32,
+   "emph": false
+  },
+  {
+   "text": "the",
+   "start": 17.32,
+   "end": 17.46,
+   "emph": false
+  },
+  {
+   "text": "Asch",
+   "start": 17.46,
+   "end": 17.76,
+   "emph": false
+  },
+  {
+   "text": "Building",
+   "start": 17.76,
+   "end": 18.14,
+   "emph": false
+  },
+  {
+   "text": "The",
+   "start": 18.34,
+   "end": 18.42,
+   "emph": false
+  },
+  {
+   "text": "Triangle",
+   "start": 18.42,
+   "end": 18.82,
+   "emph": false
+  },
+  {
+   "text": "Waist",
+   "start": 18.82,
+   "end": 19.1,
+   "emph": false
+  },
+  {
+   "text": "Company",
+   "start": 19.1,
+   "end": 19.56,
+   "emph": false
+  },
+  {
+   "text": "fills",
+   "start": 19.56,
+   "end": 19.86,
+   "emph": false
+  },
+  {
+   "text": "the",
+   "start": 19.86,
+   "end": 20.08,
+   "emph": false
+  },
+  {
+   "text": "top",
+   "start": 20.08,
+   "end": 20.34,
+   "emph": false
+  },
+  {
+   "text": "three",
+   "start": 20.34,
+   "end": 20.64,
+   "emph": false
+  },
+  {
+   "text": "floors",
+   "start": 20.64,
+   "end": 21.0,
+   "emph": false
+  },
+  {
+   "text": "eight",
+   "start": 21.4,
+   "end": 21.66,
+   "emph": false
+  },
+  {
+   "text": "nine",
+   "start": 21.92,
+   "end": 22.22,
+   "emph": false
+  },
+  {
+   "text": "and",
+   "start": 22.46,
+   "end": 22.58,
+   "emph": false
+  },
+  {
+   "text": "ten",
+   "start": 22.58,
+   "end": 22.86,
+   "emph": false
+  },
+  {
+   "text": "About",
+   "start": 23.0,
+   "end": 23.16,
+   "emph": false
+  },
+  {
+   "text": "500",
+   "start": 23.16,
+   "end": 23.45,
+   "emph": true
+  },
+  {
+   "text": "workers",
+   "start": 23.74,
+   "end": 24.3,
+   "emph": false
+  },
+  {
+   "text": "Mostly",
+   "start": 24.68,
+   "end": 24.92,
+   "emph": false
+  },
+  {
+   "text": "young",
+   "start": 24.92,
+   "end": 25.18,
+   "emph": false
+  },
+  {
+   "text": "women",
+   "start": 25.18,
+   "end": 25.52,
+   "emph": false
+  },
+  {
+   "text": "and",
+   "start": 25.52,
+   "end": 25.92,
+   "emph": false
+  },
+  {
+   "text": "girls",
+   "start": 25.92,
+   "end": 26.24,
+   "emph": false
+  },
+  {
+   "text": "Rows",
+   "start": 26.48,
+   "end": 26.74,
+   "emph": false
+  },
+  {
+   "text": "and",
+   "start": 26.74,
+   "end": 27.12,
+   "emph": false
+  },
+  {
+   "text": "rows",
+   "start": 27.12,
+   "end": 27.4,
+   "emph": false
+  },
+  {
+   "text": "of",
+   "start": 27.4,
+   "end": 27.64,
+   "emph": false
+  },
+  {
+   "text": "sewing",
+   "start": 27.64,
+   "end": 27.86,
+   "emph": false
+  },
+  {
+   "text": "machines",
+   "start": 27.86,
+   "end": 28.5,
+   "emph": false
+  },
+  {
+   "text": "It's",
+   "start": 29.02,
+   "end": 29.02,
+   "emph": false
+  },
+  {
+   "text": "Saturday",
+   "start": 29.02,
+   "end": 29.36,
+   "emph": false
+  },
+  {
+   "text": "almost",
+   "start": 29.84,
+   "end": 30.14,
+   "emph": false
+  },
+  {
+   "text": "quitting",
+   "start": 30.14,
+   "end": 30.42,
+   "emph": false
+  },
+  {
+   "text": "time",
+   "start": 30.42,
+   "end": 30.82,
+   "emph": false
+  },
+  {
+   "text": "And",
+   "start": 31.02,
+   "end": 31.04,
+   "emph": false
+  },
+  {
+   "text": "there's",
+   "start": 31.04,
+   "end": 31.3,
+   "emph": false
+  },
+  {
+   "text": "one",
+   "start": 31.3,
+   "end": 31.5,
+   "emph": false
+  },
+  {
+   "text": "house",
+   "start": 31.5,
+   "end": 31.8,
+   "emph": false
+  },
+  {
+   "text": "rule",
+   "start": 31.8,
+   "end": 32.16,
+   "emph": false
+  },
+  {
+   "text": "the",
+   "start": 32.5,
+   "end": 32.58,
+   "emph": false
+  },
+  {
+   "text": "doors",
+   "start": 32.58,
+   "end": 32.82,
+   "emph": false
+  },
+  {
+   "text": "stay",
+   "start": 32.82,
+   "end": 33.14,
+   "emph": false
+  },
+  {
+   "text": "locked",
+   "start": 33.14,
+   "end": 33.5,
+   "emph": true
+  },
+  {
+   "text": "The",
+   "start": 33.66,
+   "end": 33.72,
+   "emph": false
+  },
+  {
+   "text": "bosses",
+   "start": 33.72,
+   "end": 34.0,
+   "emph": false
+  },
+  {
+   "text": "say",
+   "start": 34.0,
+   "end": 34.28,
+   "emph": false
+  },
+  {
+   "text": "it",
+   "start": 34.28,
+   "end": 34.4,
+   "emph": false
+  },
+  {
+   "text": "stops",
+   "start": 34.4,
+   "end": 34.64,
+   "emph": false
+  },
+  {
+   "text": "stealing",
+   "start": 34.64,
+   "end": 35.12,
+   "emph": false
+  },
+  {
+   "text": "And",
+   "start": 35.34,
+   "end": 35.48,
+   "emph": false
+  },
+  {
+   "text": "unplanned",
+   "start": 35.48,
+   "end": 35.94,
+   "emph": false
+  },
+  {
+   "text": "breaks",
+   "start": 35.94,
+   "end": 36.36,
+   "emph": false
+  },
+  {
+   "text": "Downstairs",
+   "start": 37.58,
+   "end": 37.58,
+   "emph": false
+  },
+  {
+   "text": "on",
+   "start": 37.58,
+   "end": 38.2,
+   "emph": false
+  },
+  {
+   "text": "eight",
+   "start": 38.2,
+   "end": 38.44,
+   "emph": false
+  },
+  {
+   "text": "someone",
+   "start": 38.8,
+   "end": 38.98,
+   "emph": false
+  },
+  {
+   "text": "drops",
+   "start": 38.98,
+   "end": 39.32,
+   "emph": false
+  },
+  {
+   "text": "a",
+   "start": 39.32,
+   "end": 39.56,
+   "emph": false
+  },
+  {
+   "text": "match",
+   "start": 39.56,
+   "end": 39.84,
+   "emph": false
+  },
+  {
+   "text": "or",
+   "start": 39.84,
+   "end": 40.16,
+   "emph": false
+  },
+  {
+   "text": "a",
+   "start": 40.16,
+   "end": 40.36,
+   "emph": false
+  },
+  {
+   "text": "cigarette",
+   "start": 40.36,
+   "end": 40.64,
+   "emph": false
+  },
+  {
+   "text": "into",
+   "start": 40.64,
+   "end": 40.96,
+   "emph": false
+  },
+  {
+   "text": "a",
+   "start": 40.96,
+   "end": 41.18,
+   "emph": false
+  },
+  {
+   "text": "bin",
+   "start": 41.18,
+   "end": 41.34,
+   "emph": false
+  },
+  {
+   "text": "of",
+   "start": 41.34,
+   "end": 41.46,
+   "emph": false
+  },
+  {
+   "text": "fabric",
+   "start": 41.46,
+   "end": 41.74,
+   "emph": false
+  },
+  {
+   "text": "scraps",
+   "start": 41.74,
+   "end": 42.1,
+   "emph": false
+  },
+  {
+   "text": "Within",
+   "start": 42.48,
+   "end": 42.68,
+   "emph": false
+  },
+  {
+   "text": "five",
+   "start": 42.68,
+   "end": 43.06,
+   "emph": true
+  },
+  {
+   "text": "minutes",
+   "start": 43.06,
+   "end": 43.44,
+   "emph": true
+  },
+  {
+   "text": "the",
+   "start": 43.7,
+   "end": 43.78,
+   "emph": false
+  },
+  {
+   "text": "whole",
+   "start": 43.78,
+   "end": 44.02,
+   "emph": false
+  },
+  {
+   "text": "eighth",
+   "start": 44.02,
+   "end": 44.28,
+   "emph": false
+  },
+  {
+   "text": "floor",
+   "start": 44.28,
+   "end": 44.52,
+   "emph": false
+  },
+  {
+   "text": "is",
+   "start": 44.52,
+   "end": 44.68,
+   "emph": false
+  },
+  {
+   "text": "on",
+   "start": 44.68,
+   "end": 44.82,
+   "emph": false
+  },
+  {
+   "text": "fire",
+   "start": 44.82,
+   "end": 45.14,
+   "emph": false
+  },
+  {
+   "text": "Up",
+   "start": 45.32,
+   "end": 45.5,
+   "emph": false
+  },
+  {
+   "text": "on",
+   "start": 45.5,
+   "end": 45.68,
+   "emph": false
+  },
+  {
+   "text": "ten",
+   "start": 45.68,
+   "end": 45.94,
+   "emph": false
+  },
+  {
+   "text": "they",
+   "start": 46.32,
+   "end": 46.44,
+   "emph": false
+  },
+  {
+   "text": "get",
+   "start": 46.44,
+   "end": 46.58,
+   "emph": false
+  },
+  {
+   "text": "a",
+   "start": 46.58,
+   "end": 46.68,
+   "emph": false
+  },
+  {
+   "text": "warning",
+   "start": 46.68,
+   "end": 46.96,
+   "emph": false
+  },
+  {
+   "text": "They",
+   "start": 47.16,
+   "end": 47.24,
+   "emph": false
+  },
+  {
+   "text": "run",
+   "start": 47.24,
+   "end": 47.42,
+   "emph": false
+  },
+  {
+   "text": "for",
+   "start": 47.42,
+   "end": 47.62,
+   "emph": false
+  },
+  {
+   "text": "the",
+   "start": 47.62,
+   "end": 47.74,
+   "emph": false
+  },
+  {
+   "text": "roof",
+   "start": 47.74,
+   "end": 47.96,
+   "emph": true
+  },
+  {
+   "text": "and",
+   "start": 47.96,
+   "end": 48.34,
+   "emph": false
+  },
+  {
+   "text": "students",
+   "start": 48.34,
+   "end": 48.64,
+   "emph": false
+  },
+  {
+   "text": "from",
+   "start": 48.64,
+   "end": 48.98,
+   "emph": false
+  },
+  {
+   "text": "the",
+   "start": 48.98,
+   "end": 49.12,
+   "emph": false
+  },
+  {
+   "text": "university",
+   "start": 49.12,
+   "end": 49.52,
+   "emph": false
+  },
+  {
+   "text": "next",
+   "start": 49.52,
+   "end": 49.92,
+   "emph": false
+  },
+  {
+   "text": "door",
+   "start": 49.92,
+   "end": 50.14,
+   "emph": false
+  },
+  {
+   "text": "push",
+   "start": 50.14,
+   "end": 50.38,
+   "emph": false
+  },
+  {
+   "text": "ladders",
+   "start": 50.38,
+   "end": 50.78,
+   "emph": false
+  },
+  {
+   "text": "across",
+   "start": 50.78,
+   "end": 51.04,
+   "emph": false
+  },
+  {
+   "text": "to",
+   "start": 51.04,
+   "end": 51.3,
+   "emph": false
+  },
+  {
+   "text": "them",
+   "start": 51.3,
+   "end": 51.46,
+   "emph": false
+  },
+  {
+   "text": "Almost",
+   "start": 51.54,
+   "end": 51.78,
+   "emph": false
+  },
+  {
+   "text": "everyone",
+   "start": 51.78,
+   "end": 52.22,
+   "emph": false
+  },
+  {
+   "text": "on",
+   "start": 52.22,
+   "end": 52.48,
+   "emph": false
+  },
+  {
+   "text": "ten",
+   "start": 52.48,
+   "end": 52.74,
+   "emph": false
+  },
+  {
+   "text": "gets",
+   "start": 52.74,
+   "end": 53.02,
+   "emph": false
+  },
+  {
+   "text": "out",
+   "start": 53.02,
+   "end": 53.36,
+   "emph": false
+  },
+  {
+   "text": "On",
+   "start": 53.52,
+   "end": 53.68,
+   "emph": false
+  },
+  {
+   "text": "nine",
+   "start": 53.68,
+   "end": 53.98,
+   "emph": false
+  },
+  {
+   "text": "you",
+   "start": 54.2,
+   "end": 54.24,
+   "emph": false
+  },
+  {
+   "text": "look",
+   "start": 54.24,
+   "end": 54.38,
+   "emph": false
+  },
+  {
+   "text": "up",
+   "start": 54.38,
+   "end": 54.54,
+   "emph": false
+  },
+  {
+   "text": "from",
+   "start": 54.54,
+   "end": 54.74,
+   "emph": false
+  },
+  {
+   "text": "your",
+   "start": 54.74,
+   "end": 54.88,
+   "emph": false
+  },
+  {
+   "text": "machine",
+   "start": 54.88,
+   "end": 55.26,
+   "emph": false
+  },
+  {
+   "text": "and",
+   "start": 55.58,
+   "end": 55.66,
+   "emph": false
+  },
+  {
+   "text": "there's",
+   "start": 55.66,
+   "end": 55.88,
+   "emph": false
+  },
+  {
+   "text": "fire",
+   "start": 55.88,
+   "end": 56.12,
+   "emph": false
+  },
+  {
+   "text": "in",
+   "start": 56.12,
+   "end": 56.34,
+   "emph": false
+  },
+  {
+   "text": "the",
+   "start": 56.34,
+   "end": 56.42,
+   "emph": false
+  },
+  {
+   "text": "windows",
+   "start": 56.42,
+   "end": 56.66,
+   "emph": false
+  },
+  {
+   "text": "OK",
+   "start": 57.02,
+   "end": 57.26,
+   "emph": false
+  },
+  {
+   "text": "Exits",
+   "start": 57.44,
+   "end": 57.78,
+   "emph": false
+  },
+  {
+   "text": "You've",
+   "start": 57.78,
+   "end": 58.26,
+   "emph": false
+  },
+  {
+   "text": "got",
+   "start": 58.26,
+   "end": 58.44,
+   "emph": false
+  },
+  {
+   "text": "options",
+   "start": 58.44,
+   "end": 58.88,
+   "emph": true
+  },
+  {
+   "text": "Option",
+   "start": 59.16,
+   "end": 59.38,
+   "emph": false
+  },
+  {
+   "text": "one",
+   "start": 59.38,
+   "end": 59.7,
+   "emph": true
+  },
+  {
+   "text": "the",
+   "start": 60.06,
+   "end": 60.16,
+   "emph": false
+  },
+  {
+   "text": "stairs",
+   "start": 60.16,
+   "end": 60.46,
+   "emph": false
+  },
+  {
+   "text": "to",
+   "start": 60.46,
+   "end": 60.7,
+   "emph": false
+  },
+  {
+   "text": "Washington",
+   "start": 60.7,
+   "end": 61.14,
+   "emph": false
+  },
+  {
+   "text": "Place",
+   "start": 61.14,
+   "end": 61.64,
+   "emph": false
+  },
+  {
+   "text": "Locked",
+   "start": 61.84,
+   "end": 61.94,
+   "emph": true
+  },
+  {
+   "text": "Option",
+   "start": 62.42,
+   "end": 62.72,
+   "emph": false
+  },
+  {
+   "text": "two",
+   "start": 62.72,
+   "end": 63.16,
+   "emph": true
+  },
+  {
+   "text": "the",
+   "start": 63.5,
+   "end": 63.58,
+   "emph": false
+  },
+  {
+   "text": "other",
+   "start": 63.58,
+   "end": 63.78,
+   "emph": false
+  },
+  {
+   "text": "stairs",
+   "start": 63.78,
+   "end": 64.1,
+   "emph": false
+  },
+  {
+   "text": "The",
+   "start": 64.5,
+   "end": 64.5,
+   "emph": false
+  },
+  {
+   "text": "fire",
+   "start": 64.5,
+   "end": 64.8,
+   "emph": false
+  },
+  {
+   "text": "is",
+   "start": 64.8,
+   "end": 65.04,
+   "emph": false
+  },
+  {
+   "text": "already",
+   "start": 65.04,
+   "end": 65.42,
+   "emph": false
+  },
+  {
+   "text": "coming",
+   "start": 65.42,
+   "end": 65.66,
+   "emph": false
+  },
+  {
+   "text": "up",
+   "start": 65.66,
+   "end": 65.92,
+   "emph": false
+  },
+  {
+   "text": "them",
+   "start": 65.92,
+   "end": 66.14,
+   "emph": false
+  },
+  {
+   "text": "Option",
+   "start": 66.3,
+   "end": 66.56,
+   "emph": false
+  },
+  {
+   "text": "three",
+   "start": 66.56,
+   "end": 66.94,
+   "emph": true
+  },
+  {
+   "text": "the",
+   "start": 67.32,
+   "end": 67.42,
+   "emph": false
+  },
+  {
+   "text": "elevators",
+   "start": 67.42,
+   "end": 67.92,
+   "emph": false
+  },
+  {
+   "text": "The",
+   "start": 68.16,
+   "end": 68.22,
+   "emph": false
+  },
+  {
+   "text": "operators",
+   "start": 68.22,
+   "end": 68.7,
+   "emph": false
+  },
+  {
+   "text": "make",
+   "start": 68.7,
+   "end": 69.06,
+   "emph": false
+  },
+  {
+   "text": "trip",
+   "start": 69.06,
+   "end": 69.3,
+   "emph": false
+  },
+  {
+   "text": "after",
+   "start": 69.3,
+   "end": 69.74,
+   "emph": false
+  },
+  {
+   "text": "trip",
+   "start": 69.74,
+   "end": 70.1,
+   "emph": false
+  },
+  {
+   "text": "until",
+   "start": 70.1,
+   "end": 70.56,
+   "emph": false
+  },
+  {
+   "text": "they",
+   "start": 70.56,
+   "end": 70.84,
+   "emph": false
+  },
+  {
+   "text": "can't",
+   "start": 70.84,
+   "end": 71.14,
+   "emph": false
+  },
+  {
+   "text": "anymore",
+   "start": 71.14,
+   "end": 71.48,
+   "emph": false
+  },
+  {
+   "text": "Option",
+   "start": 71.78,
+   "end": 72.04,
+   "emph": false
+  },
+  {
+   "text": "four",
+   "start": 72.04,
+   "end": 72.44,
+   "emph": true
+  },
+  {
+   "text": "the",
+   "start": 72.82,
+   "end": 72.88,
+   "emph": false
+  },
+  {
+   "text": "fire",
+   "start": 72.88,
+   "end": 73.16,
+   "emph": false
+  },
+  {
+   "text": "escape",
+   "start": 73.16,
+   "end": 73.56,
+   "emph": false
+  },
+  {
+   "text": "It",
+   "start": 73.74,
+   "end": 73.84,
+   "emph": false
+  },
+  {
+   "text": "twists",
+   "start": 73.84,
+   "end": 74.3,
+   "emph": false
+  },
+  {
+   "text": "and",
+   "start": 74.3,
+   "end": 74.86,
+   "emph": false
+  },
+  {
+   "text": "collapses",
+   "start": 74.86,
+   "end": 75.32,
+   "emph": true
+  },
+  {
+   "text": "Option",
+   "start": 75.7,
+   "end": 75.94,
+   "emph": false
+  },
+  {
+   "text": "five",
+   "start": 75.94,
+   "end": 76.44,
+   "emph": true
+  },
+  {
+   "text": "the",
+   "start": 76.76,
+   "end": 76.9,
+   "emph": false
+  },
+  {
+   "text": "fire",
+   "start": 76.9,
+   "end": 77.18,
+   "emph": false
+  },
+  {
+   "text": "department",
+   "start": 77.18,
+   "end": 77.62,
+   "emph": false
+  },
+  {
+   "text": "They",
+   "start": 77.84,
+   "end": 77.94,
+   "emph": false
+  },
+  {
+   "text": "arrive",
+   "start": 77.94,
+   "end": 78.16,
+   "emph": false
+  },
+  {
+   "text": "fast",
+   "start": 78.16,
+   "end": 78.58,
+   "emph": false
+  },
+  {
+   "text": "Big",
+   "start": 78.86,
+   "end": 78.94,
+   "emph": false
+  },
+  {
+   "text": "ladders",
+   "start": 78.94,
+   "end": 79.56,
+   "emph": false
+  },
+  {
+   "text": "Big",
+   "start": 79.7,
+   "end": 79.82,
+   "emph": false
+  },
+  {
+   "text": "hoses",
+   "start": 79.82,
+   "end": 80.34,
+   "emph": false
+  },
+  {
+   "text": "The",
+   "start": 80.72,
+   "end": 80.84,
+   "emph": false
+  },
+  {
+   "text": "ladders",
+   "start": 80.84,
+   "end": 81.22,
+   "emph": false
+  },
+  {
+   "text": "stop",
+   "start": 81.22,
+   "end": 81.44,
+   "emph": false
+  },
+  {
+   "text": "floors",
+   "start": 81.44,
+   "end": 81.82,
+   "emph": false
+  },
+  {
+   "text": "below",
+   "start": 81.82,
+   "end": 82.14,
+   "emph": false
+  },
+  {
+   "text": "you",
+   "start": 82.14,
+   "end": 82.42,
+   "emph": false
+  },
+  {
+   "text": "The",
+   "start": 82.52,
+   "end": 82.6,
+   "emph": false
+  },
+  {
+   "text": "water",
+   "start": 82.6,
+   "end": 82.82,
+   "emph": false
+  },
+  {
+   "text": "can't",
+   "start": 82.82,
+   "end": 83.24,
+   "emph": false
+  },
+  {
+   "text": "reach",
+   "start": 83.24,
+   "end": 83.32,
+   "emph": false
+  },
+  {
+   "text": "either",
+   "start": 83.32,
+   "end": 83.7,
+   "emph": false
+  },
+  {
+   "text": "Some",
+   "start": 84.64,
+   "end": 84.64,
+   "emph": false
+  },
+  {
+   "text": "people",
+   "start": 84.64,
+   "end": 84.88,
+   "emph": false
+  },
+  {
+   "text": "make",
+   "start": 84.88,
+   "end": 85.08,
+   "emph": false
+  },
+  {
+   "text": "the",
+   "start": 85.08,
+   "end": 85.22,
+   "emph": false
+  },
+  {
+   "text": "last",
+   "start": 85.22,
+   "end": 85.48,
+   "emph": false
+  },
+  {
+   "text": "choice",
+   "start": 85.48,
+   "end": 85.78,
+   "emph": false
+  },
+  {
+   "text": "there",
+   "start": 85.78,
+   "end": 86.04,
+   "emph": false
+  },
+  {
+   "text": "is",
+   "start": 86.04,
+   "end": 86.3,
+   "emph": false
+  },
+  {
+   "text": "They",
+   "start": 86.3,
+   "end": 86.54,
+   "emph": false
+  },
+  {
+   "text": "jump",
+   "start": 86.54,
+   "end": 86.84,
+   "emph": false
+  },
+  {
+   "text": "146",
+   "start": 87.92,
+   "end": 88.08,
+   "emph": true
+  },
+  {
+   "text": "people",
+   "start": 88.4,
+   "end": 88.74,
+   "emph": false
+  },
+  {
+   "text": "die",
+   "start": 88.74,
+   "end": 89.1,
+   "emph": false
+  },
+  {
+   "text": "Most",
+   "start": 89.28,
+   "end": 89.48,
+   "emph": false
+  },
+  {
+   "text": "of",
+   "start": 89.48,
+   "end": 89.66,
+   "emph": false
+  },
+  {
+   "text": "them",
+   "start": 89.66,
+   "end": 89.8,
+   "emph": false
+  },
+  {
+   "text": "young",
+   "start": 89.8,
+   "end": 90.02,
+   "emph": false
+  },
+  {
+   "text": "women",
+   "start": 90.02,
+   "end": 90.36,
+   "emph": false
+  },
+  {
+   "text": "The",
+   "start": 90.52,
+   "end": 90.62,
+   "emph": false
+  },
+  {
+   "text": "youngest",
+   "start": 90.62,
+   "end": 90.84,
+   "emph": false
+  },
+  {
+   "text": "were",
+   "start": 90.84,
+   "end": 91.12,
+   "emph": false
+  },
+  {
+   "text": "14",
+   "start": 91.12,
+   "end": 91.52,
+   "emph": true
+  },
+  {
+   "text": "Now",
+   "start": 92.36,
+   "end": 92.36,
+   "emph": false
+  },
+  {
+   "text": "here's",
+   "start": 92.36,
+   "end": 92.64,
+   "emph": false
+  },
+  {
+   "text": "the",
+   "start": 92.64,
+   "end": 92.74,
+   "emph": false
+  },
+  {
+   "text": "part",
+   "start": 92.74,
+   "end": 92.94,
+   "emph": false
+  },
+  {
+   "text": "that",
+   "start": 92.94,
+   "end": 93.16,
+   "emph": false
+  },
+  {
+   "text": "should",
+   "start": 93.16,
+   "end": 93.3,
+   "emph": false
+  },
+  {
+   "text": "make",
+   "start": 93.3,
+   "end": 93.46,
+   "emph": false
+  },
+  {
+   "text": "you",
+   "start": 93.46,
+   "end": 93.62,
+   "emph": false
+  },
+  {
+   "text": "angry",
+   "start": 93.62,
+   "end": 94.0,
+   "emph": false
+  },
+  {
+   "text": "New",
+   "start": 94.22,
+   "end": 94.32,
+   "emph": false
+  },
+  {
+   "text": "York's",
+   "start": 94.32,
+   "end": 94.66,
+   "emph": false
+  },
+  {
+   "text": "law",
+   "start": 94.66,
+   "end": 94.92,
+   "emph": false
+  },
+  {
+   "text": "already",
+   "start": 94.92,
+   "end": 95.32,
+   "emph": true
+  },
+  {
+   "text": "said",
+   "start": 95.32,
+   "end": 95.68,
+   "emph": false
+  },
+  {
+   "text": "factory",
+   "start": 95.68,
+   "end": 96.1,
+   "emph": false
+  },
+  {
+   "text": "doors",
+   "start": 96.1,
+   "end": 96.44,
+   "emph": false
+  },
+  {
+   "text": "must",
+   "start": 96.44,
+   "end": 96.72,
+   "emph": false
+  },
+  {
+   "text": "not",
+   "start": 96.72,
+   "end": 96.98,
+   "emph": false
+  },
+  {
+   "text": "be",
+   "start": 96.98,
+   "end": 97.12,
+   "emph": false
+  },
+  {
+   "text": "locked",
+   "start": 97.12,
+   "end": 97.4,
+   "emph": true
+  },
+  {
+   "text": "during",
+   "start": 97.4,
+   "end": 97.72,
+   "emph": false
+  },
+  {
+   "text": "working",
+   "start": 97.72,
+   "end": 98.08,
+   "emph": false
+  },
+  {
+   "text": "hours",
+   "start": 98.08,
+   "end": 98.42,
+   "emph": false
+  },
+  {
+   "text": "The",
+   "start": 98.68,
+   "end": 98.76,
+   "emph": false
+  },
+  {
+   "text": "rule",
+   "start": 98.76,
+   "end": 98.98,
+   "emph": false
+  },
+  {
+   "text": "existed",
+   "start": 98.98,
+   "end": 99.48,
+   "emph": false
+  },
+  {
+   "text": "Nobody",
+   "start": 99.74,
+   "end": 100.0,
+   "emph": true
+  },
+  {
+   "text": "checked",
+   "start": 100.0,
+   "end": 100.4,
+   "emph": false
+  },
+  {
+   "text": "The",
+   "start": 100.72,
+   "end": 100.82,
+   "emph": false
+  },
+  {
+   "text": "owners",
+   "start": 100.82,
+   "end": 101.04,
+   "emph": false
+  },
+  {
+   "text": "were",
+   "start": 101.04,
+   "end": 101.28,
+   "emph": false
+  },
+  {
+   "text": "tried",
+   "start": 101.28,
+   "end": 101.5,
+   "emph": false
+  },
+  {
+   "text": "for",
+   "start": 101.5,
+   "end": 101.7,
+   "emph": false
+  },
+  {
+   "text": "manslaughter",
+   "start": 101.7,
+   "end": 102.28,
+   "emph": false
+  },
+  {
+   "text": "Not",
+   "start": 102.5,
+   "end": 102.66,
+   "emph": false
+  },
+  {
+   "text": "guilty",
+   "start": 102.66,
+   "end": 102.92,
+   "emph": true
+  },
+  {
+   "text": "Later",
+   "start": 103.22,
+   "end": 103.4,
+   "emph": false
+  },
+  {
+   "text": "they",
+   "start": 103.5,
+   "end": 103.62,
+   "emph": false
+  },
+  {
+   "text": "settled",
+   "start": 103.62,
+   "end": 103.9,
+   "emph": false
+  },
+  {
+   "text": "the",
+   "start": 103.9,
+   "end": 104.1,
+   "emph": false
+  },
+  {
+   "text": "lawsuits",
+   "start": 104.1,
+   "end": 104.44,
+   "emph": false
+  },
+  {
+   "text": "75",
+   "start": 105.16,
+   "end": 105.4,
+   "emph": true
+  },
+  {
+   "text": "dollars",
+   "start": 105.4,
+   "end": 105.64,
+   "emph": false
+  },
+  {
+   "text": "per",
+   "start": 105.64,
+   "end": 106.12,
+   "emph": false
+  },
+  {
+   "text": "life",
+   "start": 106.12,
+   "end": 106.42,
+   "emph": true
+  },
+  {
+   "text": "But",
+   "start": 106.56,
+   "end": 106.62,
+   "emph": false
+  },
+  {
+   "text": "New",
+   "start": 106.62,
+   "end": 106.8,
+   "emph": false
+  },
+  {
+   "text": "York",
+   "start": 106.8,
+   "end": 107.0,
+   "emph": false
+  },
+  {
+   "text": "didn't",
+   "start": 107.0,
+   "end": 107.3,
+   "emph": false
+  },
+  {
+   "text": "let",
+   "start": 107.3,
+   "end": 107.44,
+   "emph": false
+  },
+  {
+   "text": "it",
+   "start": 107.44,
+   "end": 107.54,
+   "emph": false
+  },
+  {
+   "text": "go",
+   "start": 107.54,
+   "end": 107.74,
+   "emph": false
+  },
+  {
+   "text": "A",
+   "start": 107.92,
+   "end": 108.02,
+   "emph": false
+  },
+  {
+   "text": "young",
+   "start": 108.02,
+   "end": 108.2,
+   "emph": false
+  },
+  {
+   "text": "woman",
+   "start": 108.2,
+   "end": 108.4,
+   "emph": false
+  },
+  {
+   "text": "named",
+   "start": 108.4,
+   "end": 108.62,
+   "emph": false
+  },
+  {
+   "text": "Frances",
+   "start": 108.62,
+   "end": 109.16,
+   "emph": false
+  },
+  {
+   "text": "Perkins",
+   "start": 109.16,
+   "end": 109.6,
+   "emph": true
+  },
+  {
+   "text": "watched",
+   "start": 109.6,
+   "end": 109.94,
+   "emph": false
+  },
+  {
+   "text": "the",
+   "start": 109.94,
+   "end": 110.18,
+   "emph": false
+  },
+  {
+   "text": "fire",
+   "start": 110.18,
+   "end": 110.42,
+   "emph": false
+  },
+  {
+   "text": "from",
+   "start": 110.42,
+   "end": 110.68,
+   "emph": false
+  },
+  {
+   "text": "the",
+   "start": 110.68,
+   "end": 110.78,
+   "emph": false
+  },
+  {
+   "text": "street",
+   "start": 110.78,
+   "end": 111.04,
+   "emph": false
+  },
+  {
+   "text": "She",
+   "start": 111.22,
+   "end": 111.36,
+   "emph": false
+  },
+  {
+   "text": "joined",
+   "start": 111.36,
+   "end": 111.68,
+   "emph": false
+  },
+  {
+   "text": "a",
+   "start": 111.68,
+   "end": 111.8,
+   "emph": false
+  },
+  {
+   "text": "new",
+   "start": 111.8,
+   "end": 111.94,
+   "emph": false
+  },
+  {
+   "text": "Factory",
+   "start": 111.94,
+   "end": 112.26,
+   "emph": false
+  },
+  {
+   "text": "Investigating",
+   "start": 112.26,
+   "end": 112.96,
+   "emph": false
+  },
+  {
+   "text": "Commission",
+   "start": 112.96,
+   "end": 113.42,
+   "emph": false
+  },
+  {
+   "text": "Inspectors",
+   "start": 113.42,
+   "end": 114.26,
+   "emph": false
+  },
+  {
+   "text": "walked",
+   "start": 114.26,
+   "end": 114.54,
+   "emph": false
+  },
+  {
+   "text": "into",
+   "start": 114.54,
+   "end": 114.86,
+   "emph": false
+  },
+  {
+   "text": "factory",
+   "start": 114.86,
+   "end": 115.28,
+   "emph": false
+  },
+  {
+   "text": "after",
+   "start": 115.28,
+   "end": 115.74,
+   "emph": false
+  },
+  {
+   "text": "factory",
+   "start": 115.74,
+   "end": 116.24,
+   "emph": false
+  },
+  {
+   "text": "and",
+   "start": 116.24,
+   "end": 116.64,
+   "emph": false
+  },
+  {
+   "text": "the",
+   "start": 116.64,
+   "end": 116.78,
+   "emph": false
+  },
+  {
+   "text": "state",
+   "start": 116.78,
+   "end": 117.0,
+   "emph": false
+  },
+  {
+   "text": "passed",
+   "start": 117.0,
+   "end": 117.32,
+   "emph": false
+  },
+  {
+   "text": "more",
+   "start": 117.32,
+   "end": 117.62,
+   "emph": false
+  },
+  {
+   "text": "than",
+   "start": 117.62,
+   "end": 117.76,
+   "emph": false
+  },
+  {
+   "text": "20",
+   "start": 117.76,
+   "end": 118.06,
+   "emph": true
+  },
+  {
+   "text": "new",
+   "start": 118.06,
+   "end": 118.28,
+   "emph": false
+  },
+  {
+   "text": "laws",
+   "start": 118.28,
+   "end": 118.6,
+   "emph": false
+  },
+  {
+   "text": "Doors",
+   "start": 118.94,
+   "end": 119.16,
+   "emph": false
+  },
+  {
+   "text": "that",
+   "start": 119.16,
+   "end": 119.32,
+   "emph": false
+  },
+  {
+   "text": "open",
+   "start": 119.32,
+   "end": 119.58,
+   "emph": false
+  },
+  {
+   "text": "outward",
+   "start": 119.58,
+   "end": 119.92,
+   "emph": true
+  },
+  {
+   "text": "and",
+   "start": 119.92,
+   "end": 120.3,
+   "emph": false
+  },
+  {
+   "text": "stay",
+   "start": 120.3,
+   "end": 120.58,
+   "emph": false
+  },
+  {
+   "text": "unlocked",
+   "start": 120.58,
+   "end": 120.98,
+   "emph": true
+  },
+  {
+   "text": "while",
+   "start": 120.98,
+   "end": 121.28,
+   "emph": false
+  },
+  {
+   "text": "you",
+   "start": 121.28,
+   "end": 121.46,
+   "emph": false
+  },
+  {
+   "text": "work",
+   "start": 121.46,
+   "end": 121.74,
+   "emph": false
+  },
+  {
+   "text": "Automatic",
+   "start": 121.86,
+   "end": 122.28,
+   "emph": false
+  },
+  {
+   "text": "sprinklers",
+   "start": 122.28,
+   "end": 122.9,
+   "emph": true
+  },
+  {
+   "text": "in",
+   "start": 122.9,
+   "end": 123.22,
+   "emph": false
+  },
+  {
+   "text": "tall",
+   "start": 123.22,
+   "end": 123.56,
+   "emph": false
+  },
+  {
+   "text": "factories",
+   "start": 123.56,
+   "end": 124.04,
+   "emph": false
+  },
+  {
+   "text": "Fire",
+   "start": 124.38,
+   "end": 124.68,
+   "emph": false
+  },
+  {
+   "text": "drills",
+   "start": 124.68,
+   "end": 125.1,
+   "emph": true
+  },
+  {
+   "text": "Fire",
+   "start": 125.42,
+   "end": 125.66,
+   "emph": false
+  },
+  {
+   "text": "alarms",
+   "start": 125.66,
+   "end": 126.22,
+   "emph": true
+  },
+  {
+   "text": "And",
+   "start": 126.48,
+   "end": 126.58,
+   "emph": false
+  },
+  {
+   "text": "New",
+   "start": 126.58,
+   "end": 126.8,
+   "emph": false
+  },
+  {
+   "text": "York",
+   "start": 126.8,
+   "end": 126.98,
+   "emph": false
+  },
+  {
+   "text": "City",
+   "start": 126.98,
+   "end": 127.28,
+   "emph": false
+  },
+  {
+   "text": "set",
+   "start": 127.28,
+   "end": 127.58,
+   "emph": false
+  },
+  {
+   "text": "up",
+   "start": 127.58,
+   "end": 127.74,
+   "emph": false
+  },
+  {
+   "text": "a",
+   "start": 127.74,
+   "end": 127.9,
+   "emph": false
+  },
+  {
+   "text": "Bureau",
+   "start": 127.9,
+   "end": 128.16,
+   "emph": false
+  },
+  {
+   "text": "of",
+   "start": 128.16,
+   "end": 128.48,
+   "emph": false
+  },
+  {
+   "text": "Fire",
+   "start": 128.48,
+   "end": 128.72,
+   "emph": false
+  },
+  {
+   "text": "Prevention",
+   "start": 128.72,
+   "end": 129.18,
+   "emph": false
+  },
+  {
+   "text": "Perkins",
+   "start": 129.5,
+   "end": 129.74,
+   "emph": false
+  },
+  {
+   "text": "later",
+   "start": 129.74,
+   "end": 130.06,
+   "emph": false
+  },
+  {
+   "text": "became",
+   "start": 130.06,
+   "end": 130.42,
+   "emph": false
+  },
+  {
+   "text": "the",
+   "start": 130.42,
+   "end": 130.74,
+   "emph": false
+  },
+  {
+   "text": "first",
+   "start": 130.74,
+   "end": 130.98,
+   "emph": true
+  },
+  {
+   "text": "woman",
+   "start": 130.98,
+   "end": 131.36,
+   "emph": false
+  },
+  {
+   "text": "in",
+   "start": 131.36,
+   "end": 131.68,
+   "emph": false
+  },
+  {
+   "text": "a",
+   "start": 131.68,
+   "end": 131.78,
+   "emph": false
+  },
+  {
+   "text": "U",
+   "start": 131.78,
+   "end": 131.91,
+   "emph": false
+  },
+  {
+   "text": "S",
+   "start": 131.91,
+   "end": 132.04,
+   "emph": false
+  },
+  {
+   "text": "president's",
+   "start": 132.04,
+   "end": 132.68,
+   "emph": false
+  },
+  {
+   "text": "cabinet",
+   "start": 132.68,
+   "end": 133.0,
+   "emph": false
+  },
+  {
+   "text": "Look",
+   "start": 133.24,
+   "end": 133.38,
+   "emph": false
+  },
+  {
+   "text": "at",
+   "start": 133.38,
+   "end": 133.52,
+   "emph": false
+  },
+  {
+   "text": "it",
+   "start": 133.52,
+   "end": 133.62,
+   "emph": false
+  },
+  {
+   "text": "rule",
+   "start": 133.62,
+   "end": 133.8,
+   "emph": false
+  },
+  {
+   "text": "by",
+   "start": 133.8,
+   "end": 134.04,
+   "emph": false
+  },
+  {
+   "text": "rule",
+   "start": 134.04,
+   "end": 134.38,
+   "emph": false
+  },
+  {
+   "text": "Every",
+   "start": 134.56,
+   "end": 134.74,
+   "emph": false
+  },
+  {
+   "text": "one",
+   "start": 134.74,
+   "end": 134.92,
+   "emph": false
+  },
+  {
+   "text": "of",
+   "start": 134.92,
+   "end": 135.02,
+   "emph": false
+  },
+  {
+   "text": "them",
+   "start": 135.02,
+   "end": 135.16,
+   "emph": false
+  },
+  {
+   "text": "fixes",
+   "start": 135.16,
+   "end": 135.46,
+   "emph": false
+  },
+  {
+   "text": "a",
+   "start": 135.46,
+   "end": 135.68,
+   "emph": false
+  },
+  {
+   "text": "way",
+   "start": 135.68,
+   "end": 135.86,
+   "emph": false
+  },
+  {
+   "text": "out",
+   "start": 135.86,
+   "end": 136.08,
+   "emph": false
+  },
+  {
+   "text": "that",
+   "start": 136.08,
+   "end": 136.28,
+   "emph": false
+  },
+  {
+   "text": "failed",
+   "start": 136.28,
+   "end": 136.54,
+   "emph": false
+  },
+  {
+   "text": "on",
+   "start": 136.54,
+   "end": 136.74,
+   "emph": false
+  },
+  {
+   "text": "the",
+   "start": 136.74,
+   "end": 136.86,
+   "emph": false
+  },
+  {
+   "text": "ninth",
+   "start": 136.86,
+   "end": 137.04,
+   "emph": true
+  },
+  {
+   "text": "floor",
+   "start": 137.04,
+   "end": 137.44,
+   "emph": false
+  },
+  {
+   "text": "A",
+   "start": 137.62,
+   "end": 137.72,
+   "emph": false
+  },
+  {
+   "text": "locked",
+   "start": 137.72,
+   "end": 137.98,
+   "emph": false
+  },
+  {
+   "text": "door?",
+   "start": 137.98,
+   "end": 138.32,
+   "emph": false
+  },
+  {
+   "text": "Now",
+   "start": 138.54,
+   "end": 138.7,
+   "emph": false
+  },
+  {
+   "text": "it's",
+   "start": 138.7,
+   "end": 138.9,
+   "emph": false
+  },
+  {
+   "text": "illegal",
+   "start": 138.9,
+   "end": 139.18,
+   "emph": true
+  },
+  {
+   "text": "and",
+   "start": 139.18,
+   "end": 139.66,
+   "emph": false
+  },
+  {
+   "text": "someone",
+   "start": 139.66,
+   "end": 139.98,
+   "emph": false
+  },
+  {
+   "text": "actually",
+   "start": 139.98,
+   "end": 140.4,
+   "emph": false
+  },
+  {
+   "text": "comes",
+   "start": 140.4,
+   "end": 140.76,
+   "emph": false
+  },
+  {
+   "text": "to",
+   "start": 140.76,
+   "end": 140.94,
+   "emph": false
+  },
+  {
+   "text": "check",
+   "start": 140.94,
+   "end": 141.18,
+   "emph": false
+  },
+  {
+   "text": "A",
+   "start": 141.36,
+   "end": 141.48,
+   "emph": false
+  },
+  {
+   "text": "door",
+   "start": 141.48,
+   "end": 141.68,
+   "emph": false
+  },
+  {
+   "text": "that",
+   "start": 141.68,
+   "end": 141.86,
+   "emph": false
+  },
+  {
+   "text": "opens",
+   "start": 141.86,
+   "end": 142.2,
+   "emph": false
+  },
+  {
+   "text": "the",
+   "start": 142.2,
+   "end": 142.4,
+   "emph": false
+  },
+  {
+   "text": "wrong",
+   "start": 142.4,
+   "end": 142.64,
+   "emph": false
+  },
+  {
+   "text": "way",
+   "start": 142.64,
+   "end": 143.02,
+   "emph": false
+  },
+  {
+   "text": "against",
+   "start": 143.02,
+   "end": 143.64,
+   "emph": false
+  },
+  {
+   "text": "a",
+   "start": 143.64,
+   "end": 143.9,
+   "emph": false
+  },
+  {
+   "text": "crowd",
+   "start": 143.9,
+   "end": 144.08,
+   "emph": false
+  },
+  {
+   "text": "pushing",
+   "start": 144.08,
+   "end": 144.48,
+   "emph": false
+  },
+  {
+   "text": "to",
+   "start": 144.48,
+   "end": 144.68,
+   "emph": false
+  },
+  {
+   "text": "get",
+   "start": 144.68,
+   "end": 144.84,
+   "emph": false
+  },
+  {
+   "text": "out?",
+   "start": 144.84,
+   "end": 145.06,
+   "emph": false
+  },
+  {
+   "text": "Now",
+   "start": 145.36,
+   "end": 145.54,
+   "emph": false
+  },
+  {
+   "text": "it",
+   "start": 145.54,
+   "end": 145.78,
+   "emph": false
+  },
+  {
+   "text": "swings",
+   "start": 145.78,
+   "end": 146.06,
+   "emph": false
+  },
+  {
+   "text": "outward",
+   "start": 146.06,
+   "end": 146.62,
+   "emph": true
+  },
+  {
+   "text": "Ladders",
+   "start": 146.9,
+   "end": 147.16,
+   "emph": false
+  },
+  {
+   "text": "that",
+   "start": 147.16,
+   "end": 147.34,
+   "emph": false
+  },
+  {
+   "text": "can't",
+   "start": 147.34,
+   "end": 147.7,
+   "emph": false
+  },
+  {
+   "text": "reach?",
+   "start": 147.7,
+   "end": 147.94,
+   "emph": false
+  },
+  {
+   "text": "Sprinklers",
+   "start": 148.18,
+   "end": 148.66,
+   "emph": false
+  },
+  {
+   "text": "fight",
+   "start": 148.66,
+   "end": 148.94,
+   "emph": false
+  },
+  {
+   "text": "the",
+   "start": 148.94,
+   "end": 149.12,
+   "emph": false
+  },
+  {
+   "text": "fire",
+   "start": 149.12,
+   "end": 149.4,
+   "emph": false
+  },
+  {
+   "text": "from",
+   "start": 149.4,
+   "end": 149.6,
+   "emph": false
+  },
+  {
+   "text": "the",
+   "start": 149.6,
+   "end": 149.7,
+   "emph": false
+  },
+  {
+   "text": "inside",
+   "start": 149.7,
+   "end": 150.2,
+   "emph": false
+  },
+  {
+   "text": "before",
+   "start": 150.54,
+   "end": 150.78,
+   "emph": false
+  },
+  {
+   "text": "it",
+   "start": 150.78,
+   "end": 151.0,
+   "emph": false
+  },
+  {
+   "text": "grows",
+   "start": 151.0,
+   "end": 151.28,
+   "emph": false
+  },
+  {
+   "text": "Nobody",
+   "start": 151.6,
+   "end": 151.82,
+   "emph": false
+  },
+  {
+   "text": "knows",
+   "start": 151.82,
+   "end": 152.18,
+   "emph": false
+  },
+  {
+   "text": "where",
+   "start": 152.18,
+   "end": 152.48,
+   "emph": false
+  },
+  {
+   "text": "to",
+   "start": 152.48,
+   "end": 152.62,
+   "emph": false
+  },
+  {
+   "text": "go?",
+   "start": 152.62,
+   "end": 152.8,
+   "emph": false
+  },
+  {
+   "text": "Fire",
+   "start": 153.06,
+   "end": 153.34,
+   "emph": false
+  },
+  {
+   "text": "drills",
+   "start": 153.34,
+   "end": 153.8,
+   "emph": true
+  },
+  {
+   "text": "You",
+   "start": 154.08,
+   "end": 154.16,
+   "emph": false
+  },
+  {
+   "text": "practise",
+   "start": 154.16,
+   "end": 154.52,
+   "emph": false
+  },
+  {
+   "text": "until",
+   "start": 154.52,
+   "end": 154.9,
+   "emph": false
+  },
+  {
+   "text": "your",
+   "start": 154.9,
+   "end": 155.1,
+   "emph": false
+  },
+  {
+   "text": "feet",
+   "start": 155.1,
+   "end": 155.32,
+   "emph": false
+  },
+  {
+   "text": "know",
+   "start": 155.32,
+   "end": 155.54,
+   "emph": false
+  },
+  {
+   "text": "the",
+   "start": 155.54,
+   "end": 155.66,
+   "emph": false
+  },
+  {
+   "text": "way",
+   "start": 155.66,
+   "end": 155.92,
+   "emph": false
+  },
+  {
+   "text": "And",
+   "start": 156.08,
+   "end": 156.16,
+   "emph": false
+  },
+  {
+   "text": "the",
+   "start": 156.16,
+   "end": 156.28,
+   "emph": false
+  },
+  {
+   "text": "alarm?",
+   "start": 156.28,
+   "end": 156.58,
+   "emph": false
+  },
+  {
+   "text": "It",
+   "start": 156.82,
+   "end": 156.9,
+   "emph": false
+  },
+  {
+   "text": "rings",
+   "start": 156.9,
+   "end": 157.1,
+   "emph": false
+  },
+  {
+   "text": "on",
+   "start": 157.1,
+   "end": 157.3,
+   "emph": false
+  },
+  {
+   "text": "every",
+   "start": 157.3,
+   "end": 157.5,
+   "emph": true
+  },
+  {
+   "text": "floor",
+   "start": 157.5,
+   "end": 157.76,
+   "emph": false
+  },
+  {
+   "text": "not",
+   "start": 158.1,
+   "end": 158.22,
+   "emph": false
+  },
+  {
+   "text": "just",
+   "start": 158.22,
+   "end": 158.42,
+   "emph": false
+  },
+  {
+   "text": "one",
+   "start": 158.42,
+   "end": 158.7,
+   "emph": false
+  },
+  {
+   "text": "So",
+   "start": 159.12,
+   "end": 159.38,
+   "emph": false
+  },
+  {
+   "text": "next",
+   "start": 159.38,
+   "end": 159.6,
+   "emph": false
+  },
+  {
+   "text": "time",
+   "start": 159.6,
+   "end": 159.96,
+   "emph": false
+  },
+  {
+   "text": "a",
+   "start": 159.96,
+   "end": 160.14,
+   "emph": false
+  },
+  {
+   "text": "fire",
+   "start": 160.14,
+   "end": 160.36,
+   "emph": false
+  },
+  {
+   "text": "drill",
+   "start": 160.36,
+   "end": 160.76,
+   "emph": false
+  },
+  {
+   "text": "ruins",
+   "start": 160.76,
+   "end": 161.08,
+   "emph": false
+  },
+  {
+   "text": "your",
+   "start": 161.08,
+   "end": 161.24,
+   "emph": false
+  },
+  {
+   "text": "afternoon",
+   "start": 161.24,
+   "end": 161.72,
+   "emph": false
+  },
+  {
+   "text": "remember",
+   "start": 162.1,
+   "end": 162.3,
+   "emph": false
+  },
+  {
+   "text": "the",
+   "start": 162.3,
+   "end": 162.56,
+   "emph": false
+  },
+  {
+   "text": "ninth",
+   "start": 162.56,
+   "end": 162.78,
+   "emph": true
+  },
+  {
+   "text": "floor",
+   "start": 162.78,
+   "end": 163.12,
+   "emph": false
+  },
+  {
+   "text": "And",
+   "start": 163.26,
+   "end": 163.32,
+   "emph": false
+  },
+  {
+   "text": "that's",
+   "start": 163.32,
+   "end": 163.56,
+   "emph": false
+  },
+  {
+   "text": "why",
+   "start": 163.56,
+   "end": 163.82,
+   "emph": false
+  },
+  {
+   "text": "today",
+   "start": 164.06,
+   "end": 164.26,
+   "emph": true
+  },
+  {
+   "text": "exit",
+   "start": 164.68,
+   "end": 164.9,
+   "emph": false
+  },
+  {
+   "text": "doors",
+   "start": 164.9,
+   "end": 165.16,
+   "emph": false
+  },
+  {
+   "text": "swing",
+   "start": 165.16,
+   "end": 165.48,
+   "emph": false
+  },
+  {
+   "text": "outward",
+   "start": 165.48,
+   "end": 165.88,
+   "emph": true
+  },
+  {
+   "text": "stay",
+   "start": 166.16,
+   "end": 166.4,
+   "emph": false
+  },
+  {
+   "text": "unlocked",
+   "start": 166.4,
+   "end": 166.94,
+   "emph": true
+  },
+  {
+   "text": "and",
+   "start": 166.94,
+   "end": 167.36,
+   "emph": false
+  },
+  {
+   "text": "lead",
+   "start": 167.36,
+   "end": 167.56,
+   "emph": false
+  },
+  {
+   "text": "somewhere",
+   "start": 167.56,
+   "end": 167.82,
+   "emph": false
+  },
+  {
+   "text": "safe",
+   "start": 167.82,
+   "end": 168.2,
+   "emph": true
+  }
+ ]
+}
