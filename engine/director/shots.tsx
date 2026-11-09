@@ -164,7 +164,7 @@ export const shotCamera = (place: Place, spec: ShotSpec, cast: Record<string, Sp
       // if a cast member stands in the way, lift / slide the camera until the prop is clear
       const heads = Object.values(cast).map((sp) => faceOf(sp, 0.95));
       const tries: Vec3[] = [[0, 0, 0], [0, 0.9, 0], [0.9, 0.6, 0], [-0.9, 0.6, 0], [0, 1.6, 0.6], [1.4, 1.0, 0], [-1.4, 1.0, 0]];
-      const pos = tries.map((o) => add(p.cam.position, o)).find((q) => !blocked(q, p.cam.target, heads)) ?? p.cam.position;
+      const pos = tries.map((o) => add(p.cam.position, o)).find((q) => !blocked(q, p.cam.target, heads, 0.95)) ?? p.cam.position; // 0.95: heads + hat brims
       out = { camera: { ...p.cam, position: pos }, focus: p.at, range: 1.4, bokeh: 9 };
       break;
     }

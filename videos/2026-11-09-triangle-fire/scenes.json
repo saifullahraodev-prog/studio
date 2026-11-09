@@ -7989,7 +7989,7 @@
      "face": "determined"
     }
    ],
-   "dooropen": "1",
+   "dooropen": "0.55",
    "say": "So next time a fire drill ruins your afternoon, remember the ninth floor. And that's why, today, exit doors swing outward, stay unlocked, and lead somewhere safe.",
    "emph": [
     "ninth",
@@ -8327,8 +8327,8 @@
    "smoke": null,
    "state": {
     "doorOpen": [
-     1.0,
-     1.0
+     0.55,
+     0.55
     ]
    },
    "extras": true

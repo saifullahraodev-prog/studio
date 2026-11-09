@@ -357,7 +357,7 @@ speaker: inspector
 place: office
 pause: 0.3
 cast: insp=inspector@center do=talk face=determined
-dooropen: 1
+dooropen: 0.55
 say: So next time a fire drill ruins your afternoon, remember the ninth floor. And that's why, today, exit doors swing outward, stay unlocked, and lead somewhere safe.
 emph: ninth, today, outward, unlocked, safe
 shot: and | medium insp | face=happy

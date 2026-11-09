@@ -92,10 +92,26 @@ export const OfficeToday: React.FC<{ t?: number; doorOpen?: number; sprinklerOn?
       ))}
       {/* EXIT door: steel, push bar, swings OUTWARD (away from camera) */}
       <group position={OFFICE.exitDoor}>
-        <M p={[0, 1.25, 0.04]}>
-          <boxGeometry args={[1.5, 2.6, 0.12]} />
+        {/* steel frame (sides + head) around a doorway that opens onto bright daylight */}
+        {[-0.69, 0.69].map((x) => (
+          <M key={x} p={[x, 1.25, 0.04]}>
+            <boxGeometry args={[0.12, 2.6, 0.14]} />
+            <Toon color="#7A848E" kind="metal" />
+          </M>
+        ))}
+        <M p={[0, 2.5, 0.04]}>
+          <boxGeometry args={[1.5, 0.12, 0.14]} />
           <Toon color="#7A848E" kind="metal" />
         </M>
+        <mesh position={[0, 1.2, -0.05]}>
+          <planeGeometry args={[1.26, 2.4]} />
+          <meshBasicMaterial color="#DFF3E4" />
+        </mesh>
+        {/* outside: grass + sky glow, seen through the open door */}
+        <mesh position={[0, 0.45, -0.06]}>
+          <planeGeometry args={[1.26, 0.9]} />
+          <meshBasicMaterial color="#9ED69A" />
+        </mesh>
         <group position={[-0.62, 0, 0.11]} rotation={[0, -doorOpen * 1.2, 0]}>
           <M p={[0.62, 1.2, 0]}>
             <boxGeometry args={[1.24, 2.38, 0.06]} />

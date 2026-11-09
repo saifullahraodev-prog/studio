@@ -66,7 +66,7 @@ export const PLACES: Record<string, Place> = {
     preset: "day",
     spots: { center: { pos: [0, 0, 0.6], rotY: 0 }, left: { pos: [-1.6, 0, 0.5], rotY: 0.35 }, right: { pos: [1.4, 0, 0.6], rotY: -0.3 }, door: { pos: [1.05, 0, -0.9], rotY: Math.PI * 0.92 } },
     props: {
-      exit: { at: [1.6, 1.4, -1.8], cam: { position: [2.7, 1.8, 1.2], target: [1.6, 1.4, -1.8], fov: 42 } },
+      exit: { at: [1.6, 1.4, -1.8], cam: { position: [2.3, 1.9, 1.8], target: [1.5, 1.6, -1.8], fov: 44 } },
       sprinkler: { at: [-1.8, 3.3, 0.6], cam: { position: [-1.0, 2.2, 1.9], target: [-1.8, 3.25, 0.6], fov: 40 } },
       alarm: { at: OFFICE.alarm, cam: { position: [-1.1, 1.5, -0.6], target: [-1.6, 1.4, -1.85], fov: 36 } },
     },
