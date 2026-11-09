@@ -1,8 +1,38 @@
 # PROGRESS
 
-## Current phase: GATE 3 (First Short final rendered, 2026-11-09): waiting for owner sign-off
+## Current phase: Phase 4 (Kit growth), started 2026-11-09. GATE 3 passed.
 
-### GATE 3 result (2026-11-09)
+### Phase 4 decisions (owner, 2026-11-09)
+- Bodies: keep code-built chibi bodies (no CC0 rigged models).
+- Sound: procedural + small CC0 pack (list files and sizes before downloading).
+- GATE 4 test video (3 min): Triangle Shirtwaist Factory fire, 1911 (fire exits, doors, sprinklers).
+  Script + sources first, owner approval before building.
+
+### Phase 4 plan (draft 2026-11-09, waiting for owner approval of script + downloads)
+Script draft: `videos/2026-11-09-triangle-fire/script.md` (~3:00, 21 checked claims, 9 sources).
+Build order (each step shown to the owner as stills):
+1. **Characters**: worker (shirtwaist blouse, long skirt, hair bun/braid variants), 1911 firefighter
+   (helmet), factory owner (suit, bowler), Frances Perkins (hat), judge. Crowd = random mix of
+   hair, colours, heights (`makeCrowd` variants).
+2. **Core actions** (code, frame-driven): walk, run, point, talk, panic (have) + fall, carry,
+   climb, cheer, shiver; story extras: sew, rattle-door, push-bar.
+   Tone rule: nobody is shown jumping or dying; those beats use empty windows, smoke, slow camera.
+3. **Worlds**: factory floor (machines, tables, scrap bins, windows), stairwell + locked door +
+   elevator cage + exterior fire escape, street (10-storey facade, horse-drawn engine, short
+   ladder, crowd). Small sets: courtroom, commission office, today's office (exit door, sprinkler).
+4. **Generic shot templates (8)**: establishing wide, two-shot, over-the-shoulder, prop insert,
+   crowd wide, POV, low hero, top-down. Placed by actor/prop names, not hard-coded coordinates.
+5. **Sound library**: `audio/library.json` name -> procedural or CC0 file (+ variants);
+   **music themes 6**: comedy pluck, tense pulse (have) + somber piano, investigation, period
+   ragtime-style, resolve/hopeful.
+6. **Director**: scene file lists place + actors + lines; it picks shots automatically
+   (new place -> establishing, emphasis -> punch-in, prop words -> insert, speaker -> two-shot)
+   unless a `cut:` overrides; chapters for long videos.
+7. **GATE 4**: render the 3-minute video from the scene file alone. Estimate: 720p preview
+   ~16 min, 1080p final ~35 min.
+
+
+### GATE 3 result (2026-11-09, passed)
 - Owner approved preview v2c ("Good, continue"). Final: `videos/2026-11-08-titanic-lifeboats-v2/out/titanic-lifeboats-v2-1080p.mp4`
   (not in git; 29 MB) + contact sheet `...-1080p-contact.png`.
 - QC: 1080x1920, 30 fps, 31.8 s (953 frames), no black/frozen frames, -14.0 LUFS, peak -1.4 dBFS.

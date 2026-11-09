@@ -36,7 +36,10 @@ Ask before installing anything large, deleting files, or spending money.
 ## Tech
 - Node LTS + Remotion 4 + @remotion/three + react-three-fiber + three.js, TypeScript.
 - Python 3 + FFmpeg (audio, mixing, joining, QC). faster-whisper for word timings.
-- Characters from CC0 rigged models (Quaternius, Kenney), restyled. Hand-build only missing animations.
+- Characters: **code-built chibi bodies** (owner decision 2026-11-09, Phase 4), all motion from code
+  (`engine/characters/gestures.ts` + actions). No downloaded rigged models.
+- Sound: procedural SFX/music in `audio/sfx.py` + a small owner-approved CC0 pack for what code
+  can't fake well (screams, crowds, ambience). List every downloaded file + licence in `audio/LICENSES.md`.
 - Remotion licence: free for individuals / teams up to 3.
 - Remotion agent skills are installed in `.agents/skills` (linked in `.claude/skills`): follow them.
   Key 3D rules: wrap 3D in `<ThreeCanvas width height>`; **never use `useFrame()`**; animate only from
