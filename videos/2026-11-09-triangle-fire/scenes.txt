@@ -52,7 +52,7 @@ place: factory
 cast: you=worker@aisle do=sew face=worried; boss=owner@aisle2 do=point face=angry
 say: It's Saturday, almost quitting time. And there's one house rule: the doors stay locked. The bosses say it stops stealing. And unplanned breaks.
 emph: locked
-shot: bosses | close boss | punch
+shot: bosses | ots boss you | punch
 shot: breaks | two you boss | face=angry
 
 # ── 3. The fire ──

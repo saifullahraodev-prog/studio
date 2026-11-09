@@ -28,6 +28,17 @@ const rot = (v: Vec3, yaw: number): Vec3 => {
 };
 const faceOf = (sp: Spot, scale = 1): Vec3 => add(sp.pos, [0, HEAD_HEIGHT * scale, 0]);
 
+// does any head (sphere) sit between the camera and what it looks at?
+const blocked = (cam: Vec3, target: Vec3, heads: Vec3[], r = 0.68) =>
+  heads.some((h) => {
+    const d = [target[0] - cam[0], target[1] - cam[1], target[2] - cam[2]];
+    const L2 = d[0] * d[0] + d[1] * d[1] + d[2] * d[2] || 1;
+    const k = Math.max(0, Math.min(1, ((h[0] - cam[0]) * d[0] + (h[1] - cam[1]) * d[1] + (h[2] - cam[2]) * d[2]) / L2));
+    if (k > 0.97) return false; // the head IS the target
+    const q = [cam[0] + d[0] * k - h[0], cam[1] + d[1] * k - h[1], cam[2] + d[2] * k - h[2]];
+    return Math.hypot(q[0], q[1], q[2]) < r;
+  });
+
 const inZone = (place: Place, p: Vec3) => {
   const b = place.bounds;
   return !b || (p[0] >= b.x[0] && p[0] <= b.x[1] && p[1] >= b.y[0] - 0.01 && p[1] <= b.y[1] + 0.01 && p[2] >= b.z[0] && p[2] <= b.z[1]);
@@ -39,16 +50,42 @@ export const shotCamera = (place: Place, spec: ShotSpec, cast: Record<string, Sp
   const subj = (spec.subject && cast[spec.subject]) || Object.values(cast)[0] || { pos: [0, 0, 0] as Vec3, rotY: 0 };
   // preferred angle first; in tight places fall back to straighter / other-side angles
   const wanted = side * (0.3 + (v % 3) * 0.12);
-  // try the preferred angle, then straighter ones, then from BEHIND (subject facing a wall/door)
-  const yawTry = (offset: Vec3, base: Vec3 = subj.pos, behind = true): number | null => {
-    const ks = [wanted, -wanted, wanted * 0.5, -wanted * 0.5, 0.12 * side, 0, ...(behind ? [Math.PI - wanted, Math.PI + wanted, Math.PI] : [])];
+  // heads of everyone except the subject (things that can block the lens)
+  const others = Object.entries(cast)
+    .filter(([n]) => n !== spec.subject && cast[n] !== subj)
+    .map(([, sp]) => faceOf(sp, 0.95));
+  // try the preferred angle, then straighter ones, then from BEHIND (subject facing a wall/door);
+  // an angle must keep the camera in the place's zone AND have a clear view of the face
+  // returns the camera POSITION (also tries moving in closer, in front of a blocker)
+  let fromBehind = false;
+  const aimTry = (offset: Vec3, base: Vec3 = subj.pos, behind = true, scales = [1, 0.75, 0.55, 0.42]): Vec3 | null => {
+    fromBehind = false;
+    const front = [wanted, -wanted, wanted * 0.5, -wanted * 0.5, 0.12 * side, 0, wanted * 1.8, -wanted * 1.8];
+    const back = behind ? [Math.PI - wanted, Math.PI + wanted, Math.PI] : [];
+    const ks = [...front, ...back];
+    const scaled = (f: number): Vec3 => [offset[0] * f, offset[1] + (1 - f) * 0.1, offset[2] * f];
+    // front angles first (moving in closer if someone is in the way), only then from behind
+    for (const group of [front, back])
+      for (const f of scales)
+        for (const k of group) {
+          const pos = add(base, rot(scaled(f), subj.rotY + k));
+          if (inZone(place, pos) && !blocked(pos, faceOf(subj), others, 0.72)) {
+            fromBehind = group === back;
+            return pos;
+          }
+        }
     for (const k of ks) {
-      const y = subj.rotY + k;
-      if (inZone(place, add(base, rot(offset, y)))) return y;
+      const pos = add(base, rot(offset, subj.rotY + k));
+      if (inZone(place, pos)) {
+        fromBehind = back.includes(k);
+        return pos;
+      }
     }
     return null;
   };
-  const yawFor = (offset: Vec3, base: Vec3 = subj.pos) => yawTry(offset, base) ?? subj.rotY;
+  // seen from behind, look past the subject at what they face (not at the back of the head)
+  const ahead = (): Vec3 => add(faceOf(subj), [Math.sin(subj.rotY) * 2.2, 0.25, Math.cos(subj.rotY) * 2.2]);
+  const aim = (offset: Vec3, base: Vec3 = subj.pos) => aimTry(offset, base) ?? add(base, rot(offset, subj.rotY));
   const yaw = subj.rotY + wanted;
   let out: ShotCam;
   switch (spec.type) {
@@ -58,22 +95,33 @@ export const shotCamera = (place: Place, spec: ShotSpec, cast: Record<string, Sp
       break;
     }
     case "wide": {
-      const y = yawTry([0, 2.3, 6.8], subj.pos, false);
-      if (y === null) {
+      const pw = aimTry([0, 2.3, 6.8], subj.pos, false);
+      if (pw === null) {
         const e = place.establish[v % place.establish.length]; // no room for a wide: use the establishing view
         out = { camera: e.cam, focus: e.focus, range: e.range };
-      } else out = { camera: { position: add(subj.pos, rot([0, 2.3, 6.8], y)), target: add(subj.pos, [0, 1.2, 0]), fov: 46 }, focus: faceOf(subj), range: 4 };
+      } else out = { camera: { position: pw, target: add(subj.pos, [0, 1.2, 0]), fov: 46 }, focus: faceOf(subj), range: 4 };
       break;
     }
     case "medium":
-      out = { camera: { position: add(subj.pos, rot([0, 1.9, 4.2], yawFor([0, 1.9, 4.2]))), target: add(subj.pos, [0, 1.4, 0]), fov: 40 }, focus: faceOf(subj), range: 1.8 };
+      {
+        const pos = aim([0, 1.9, 4.2]);
+        out = { camera: { position: pos, target: fromBehind ? ahead() : add(subj.pos, [0, 1.4, 0]), fov: 40 }, focus: faceOf(subj), range: 1.8 };
+      }
       break;
     case "close":
       // vertical frame is narrow: 2.7 m at 54 deg keeps the whole round head in frame
-      out = { camera: wideClose(faceOf(subj), yawFor([0, 0.05, 2.7], faceOf(subj)), 2.7, 54), focus: faceOf(subj), range: 1.0, bokeh: 12 }; // yaw is world-space
+      {
+        const pos = aimTry([0, 0.05, 2.7], faceOf(subj), true, [1, 0.82]) ?? aim([0, 0.05, 2.7], faceOf(subj));
+        out = { camera: { position: pos, target: fromBehind ? ahead() : faceOf(subj), fov: 54 }, focus: faceOf(subj), range: 1.0, bokeh: 12 };
+      }
       break;
     case "low":
-      out = { camera: { position: add(subj.pos, rot([0.45 * side, 0.85, 2.7], yawFor([0.45 * side, 0.85, 2.7]))), target: add(faceOf(subj), [0, 0.35, 0]), fov: 50, roll: 0.12 * side }, focus: faceOf(subj), range: 2 };
+      {
+        let pos = aim([0.45 * side, 0.85, 2.7]);
+        // a low camera behind someone only sees the back of their head: go high instead
+        if (fromBehind) pos = aim([0.75 * side, 3.0, 2.4]);
+        out = { camera: { position: pos, target: fromBehind ? ahead() : add(faceOf(subj), [0, 0.35, 0]), fov: 50, roll: 0.12 * side }, focus: faceOf(subj), range: 2 };
+      }
       break;
     case "top":
       out = { camera: { position: add(subj.pos, rot([0, 7.5, 1.4], subj.rotY)), target: add(subj.pos, [0, 0.4, 0]), fov: 40 }, focus: subj.pos, range: 5 };
@@ -105,14 +153,19 @@ export const shotCamera = (place: Place, spec: ShotSpec, cast: Record<string, Sp
         }
       } else {
         // behind `other`, over the shoulder, looking at the subject
-        const behind: Vec3 = [b[0] + d.x * 1.3 + -d.z * 0.45 * side, b[1] + 0.15, b[2] + d.z * 1.3 + d.x * 0.45 * side];
-        out = { camera: { position: behind, target: a, fov: 38 }, focus: a, range: 1.4, bokeh: 10 };
+        // over the shoulder AND a little above it, so the near head frames the shot instead of filling it
+        const behind: Vec3 = [b[0] + d.x * 1.9 + -d.z * 0.6 * side, b[1] + 0.75, b[2] + d.z * 1.9 + d.x * 0.6 * side];
+        out = { camera: { position: behind, target: [a[0], a[1] - 0.15, a[2]], fov: 40 }, focus: a, range: 1.4, bokeh: 10 };
       }
       break;
     }
     case "insert": {
       const p = place.props[spec.prop ?? ""] ?? Object.values(place.props)[0];
-      out = { camera: p.cam, focus: p.at, range: 1.4, bokeh: 9 };
+      // if a cast member stands in the way, lift / slide the camera until the prop is clear
+      const heads = Object.values(cast).map((sp) => faceOf(sp, 0.95));
+      const tries: Vec3[] = [[0, 0, 0], [0, 0.9, 0], [0.9, 0.6, 0], [-0.9, 0.6, 0], [0, 1.6, 0.6], [1.4, 1.0, 0], [-1.4, 1.0, 0]];
+      const pos = tries.map((o) => add(p.cam.position, o)).find((q) => !blocked(q, p.cam.target, heads)) ?? p.cam.position;
+      out = { camera: { ...p.cam, position: pos }, focus: p.at, range: 1.4, bokeh: 9 };
       break;
     }
     case "pov": {

@@ -1263,9 +1263,9 @@
      "start": 33.68,
      "shot": {
       "subject": "boss",
-      "other": "boss",
+      "other": "you",
       "variant": 17,
-      "type": "close",
+      "type": "ots",
       "punch": true
      },
      "tr": "cut",
@@ -1320,7 +1320,7 @@
    "shots": [
     {
      "cue": "bosses",
-     "spec": "close boss",
+     "spec": "ots boss you",
      "punch": true
     },
     {
@@ -4787,8 +4787,8 @@
     {
      "start": 103.18,
      "shot": {
-      "subject": "boss2",
-      "other": "boss",
+      "subject": "boss",
+      "other": "boss2",
       "variant": 62,
       "type": "two"
      },
@@ -4811,7 +4811,7 @@
      "start": 105.12,
      "shot": {
       "subject": "boss",
-      "other": "boss",
+      "other": "judge",
       "variant": 64,
       "type": "close",
       "punch": true
@@ -6137,8 +6137,8 @@
     {
      "start": 129.414,
      "shot": {
-      "subject": "insp",
-      "other": "perkins",
+      "subject": "perkins",
+      "other": "insp",
       "variant": 78,
       "type": "two"
      },

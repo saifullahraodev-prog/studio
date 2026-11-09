@@ -102,14 +102,13 @@ def plan(beat, prev_place, pacing, counter):
             sh = exp_at[i0]
             parts = sh["spec"].split()
             spec["type"] = parts[0]
-            for p in parts[1:]:
-                if p in cast:
-                    if spec["subject"] == subject and p != subject and parts.index(p) > 1:
-                        spec["other"] = p
-                    else:
-                        spec["subject"] = p
-                else:
-                    spec["prop"] = p
+            named = [x for x in parts[1:] if x in cast]  # first cast name = subject, second = other
+            if named:
+                spec["subject"] = named[0]
+                spec["other"] = named[1] if len(named) > 1 else next((c for c in cast if c != named[0]), None)
+            for x in parts[1:]:
+                if x not in cast:
+                    spec["prop"] = x
             face, do = sh.get("face"), sh.get("do")
             if sh.get("punch"):
                 spec["punch"] = True
