@@ -336,6 +336,11 @@ def render_events(events, duration):
             k += 1
             if key not in cache:
                 cache[key] = WHOOSHES[key[1]]() * GAINS[name]
+        elif name in LIBRARY:
+            dur = ev[3] if len(ev) > 3 else None
+            key = (name, dur)
+            if key not in cache:
+                cache[key] = library_sound(name, dur)
         elif name in SOUNDS:
             key = name
             if key not in cache:
@@ -344,3 +349,46 @@ def render_events(events, duration):
             continue
         _add(out, cache[key] * g, max(0.0, t))
     return out[: int(duration * SR) + SR]
+
+
+# ── recorded library sounds (CC0 files, audio/library.json) ─────────────────
+import json as _json
+import subprocess as _sp
+from pathlib import Path as _Path
+
+_LIB_DIR = _Path(__file__).resolve().parent / "library"
+LIBRARY = _json.loads((_Path(__file__).resolve().parent / "library.json").read_text(encoding="utf-8"))["sounds"]
+_decoded = {}
+
+
+def _decode(rel):
+    """file -> mono float32 at SR (decoded once with ffmpeg)."""
+    if rel not in _decoded:
+        pcm = _sp.run(["ffmpeg", "-v", "error", "-i", str(_LIB_DIR / rel), "-f", "s16le", "-ac", "1", "-ar", str(SR), "-"], capture_output=True, check=True).stdout
+        _decoded[rel] = np.frombuffer(pcm, np.int16).astype(np.float32) / 32768.0
+    return _decoded[rel]
+
+
+def library_sound(name, dur=None):
+    """A named library sound. Beds are looped (with a 1 s crossfade) or cropped to `dur`
+    and faded in/out; one-shots use their configured slice."""
+    e = LIBRARY[name]
+    x = _decode(e["file"])
+    if e["type"] == "oneshot":
+        a = int(e.get("start", 0) * SR)
+        y = x[a : a + int(e.get("dur", len(x) / SR) * SR)].copy()
+    else:
+        n = int((dur or 4.0) * SR)
+        xf = SR
+        y = x[:n].copy()
+        while len(y) < n:  # loop with crossfade
+            seg = x.copy()
+            ramp = np.linspace(0, 1, xf, dtype=np.float32)
+            y[-xf:] = y[-xf:] * (1 - ramp) + seg[:xf] * ramp
+            y = np.concatenate([y, seg[xf:]])[:n]
+    f = min(len(y) // 4, int(0.3 * SR))
+    if f > 0:
+        y[:f] *= np.linspace(0, 1, f, dtype=np.float32)
+        y[-f:] *= np.linspace(1, 0, f, dtype=np.float32)
+    peak = float(np.max(np.abs(y))) or 1.0
+    return (y / peak * 0.9 * e.get("gain", 1.0)).astype(np.float32)

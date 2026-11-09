@@ -1,0 +1,13 @@
+{
+ "note": "Named sounds for scene files (fx=<name>). 'oneshot' plays once; 'bed' loops/crops to a length with fades. Files are CC0 (see audio/LICENSES.md); procedural sounds live in audio/sfx.py.",
+ "sounds": {
+  "sewing":     {"file": "cc0/bigsoundbank/sewing-machine-fast_s1116.flac", "type": "bed", "gain": 0.5},
+  "sewing_slow":{"file": "cc0/bigsoundbank/sewing-machine-slow_s1115.flac", "type": "bed", "gain": 0.5},
+  "fire_bed":   {"file": "cc0/bigsoundbank/fire-foley-loop_s3322.flac", "type": "bed", "gain": 0.6},
+  "fire_big":   {"file": "cc0/bigsoundbank/fire-big-branching_s0987.flac", "type": "bed", "gain": 0.7},
+  "match":      {"file": "cc0/bigsoundbank/match-strike_s1271.flac", "type": "oneshot", "start": 0.0, "dur": 2.0, "gain": 0.8},
+  "crowd_bed":  {"file": "cc0/bigsoundbank/crowd-50-60-people_s3515.ogg", "type": "bed", "gain": 0.5},
+  "street_bed": {"file": "cc0/bigsoundbank/street-outside-talks_s2969.ogg", "type": "bed", "gain": 0.45},
+  "bell":       {"file": "cc0/bigsoundbank/bell-level-crossing_s1064.ogg", "type": "oneshot", "start": 0.0, "dur": 4.0, "gain": 0.5}
+ }
+}

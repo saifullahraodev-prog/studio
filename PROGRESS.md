@@ -15,6 +15,11 @@
   style/colour, blouse, skirt, height (`makeCrowd({kind: "workers" | "mixed"})`).
   Review: `out/phase4/lineup.png`, `out/phase4/turnaround-worker.png` (composition `Lineup`).
   Golden 14/14.
+- 2026-11-09: owner approved CC0 sound download. 8 BigSoundBank CC0 files (13 MB) in
+  `audio/library/cc0/bigsoundbank/`: sewing machines x2, fire x2, match, crowd, street, bell.
+  Licences: `audio/LICENSES.md`. Named in `audio/library.json`; usable as `fx=<name>` (beds loop
+  with crossfade to any length). No adult screams available there (only children), so screams stay
+  procedural.
 
 ### Phase 4 plan (2026-11-09)
 Script draft: `videos/2026-11-09-triangle-fire/script.md` (~3:00, 21 checked claims, 9 sources).
