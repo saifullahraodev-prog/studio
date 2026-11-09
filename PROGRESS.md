@@ -1,6 +1,16 @@
 # PROGRESS
 
-## Current phase: Phase 3 (First Short): v1 rendered, owner wants a faster/funnier v2
+## Current phase: GATE 3 (First Short final rendered, 2026-11-09): waiting for owner sign-off
+
+### GATE 3 result (2026-11-09)
+- Owner approved preview v2c ("Good, continue"). Final: `videos/2026-11-08-titanic-lifeboats-v2/out/titanic-lifeboats-v2-1080p.mp4`
+  (not in git; 29 MB) + contact sheet `...-1080p-contact.png`.
+- QC: 1080x1920, 30 fps, 31.8 s (953 frames), no black/frozen frames, -14.0 LUFS, peak -1.4 dBFS.
+- **Render time: 1080p final 353 s (370 ms/frame)**; 720p preview 172 s (180 ms/frame).
+- Usage at gate: Claude Pro plan, 5-hour window 12% used, weekly 2% used; session context 18%.
+- Open before Phase 4: code-built bodies vs CC0 rigged models; optional CC0 SFX pack (real scream);
+  owner's own voice recording (`--recording`).
+
 
 ### Phase 3 status (2026-11-08)
 - Short v1 done end-to-end from `videos/2026-11-08-titanic-lifeboats/scenes.txt`:
