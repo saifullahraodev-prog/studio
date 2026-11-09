@@ -6,6 +6,7 @@ import firefighter from "./firefighter.json";
 import owner from "./owner.json";
 import perkins from "./perkins.json";
 import judge from "./judge.json";
+import officer from "./officer.json";
 import type { FaceExtras, FaceVariant } from "./face";
 
 // Character bible: the ONLY way new characters enter the engine.
@@ -44,6 +45,7 @@ export const BIBLE: Record<string, CharacterDef> = {
   owner: owner as CharacterDef,
   perkins: perkins as CharacterDef,
   judge: judge as CharacterDef,
+  officer: officer as CharacterDef,
 };
 
 export const CHARACTER_IDS = Object.keys(BIBLE);

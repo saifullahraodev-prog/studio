@@ -271,6 +271,9 @@ export const TextLabel: React.FC<{ text: string; color?: string; bg?: string; po
         g.fillRect(0, 0, w, h);
       }
       g.font = font;
+      // shrink long labels so they never run off the texture ("20 BOATS", "2,200 PEOPLE")
+      const tw = g.measureText(text).width;
+      if (tw > w * 0.9) g.font = font.replace(/(\d+)px/, (_, n) => `${Math.floor((Number(n) * w * 0.9) / tw)}px`);
       g.textAlign = "center";
       g.textBaseline = "middle";
       g.lineWidth = 18;

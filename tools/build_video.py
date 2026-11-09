@@ -140,7 +140,8 @@ def align(say: str, words):
                 # fold only the NUMBER words into the digits; ordinary words keep their own caption
                 heard[i1] = " ".join(words[j]["word"] for j in range(j1, j2) if any(ch.isdigit() for ch in words[j]["word"]))
                 for k in range(1, n):
-                    if norm(toks[i1 + k]) in NUMBER_WORDS:
+                    parts = re.split(r"[-\s]", toks[i1 + k].lower())
+                    if all(norm(x) in NUMBER_WORDS or norm(x) == "oh" for x in parts if norm(x)):
                         heard[i1 + k] = ""
     # interpolate anything still missing between known neighbours
     known = [i for i in range(len(toks)) if t_start[i] is not None]
@@ -406,6 +407,8 @@ def main():
             text = heard if heard and any(ch.isdigit() for ch in heard) else tok
             text = re.sub(r"[^\w'’?,\- ]", "", text).strip(", ")
             text = re.sub(r",(?=\S)", ", ", text)  # "25th,1911" -> "25th, 1911"
+            if re.fullmatch(r"\d{1,2}[ .:]\d{2}", text):  # clock times: "2 05" / "2.05" -> "2:05"
+                text = re.sub(r"[ .]", ":", text)
             if not text:
                 continue
             # numbers read better with thousands separators (but leave years like 1894 / 1912 alone)

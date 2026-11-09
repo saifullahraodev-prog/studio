@@ -114,3 +114,18 @@ Commit and push at every gate. Private repo: https://github.com/saifullahraodev-
   camera `bounds`). Shot types live in `engine/director/shots.tsx`.
 - Rebundle after every `build_video.py` run: the bundle copies `public/` (scenes.json, mix.wav).
 
+## Locked decisions from revision 2 (owner review, 2026-11-10)
+- **Faces:** keep Variant D "Comic" (owner re-confirmed after seeing paper-panel options E/F/G, which stay
+  available in `face.tsx`). Faces must stay clean: NO pen hatching on heads (it aliased into stripes);
+  `tools/facecheck.py` (all characters x all presets) runs inside `node tools/golden.mjs check`.
+- **World realism:** stylised characters in a near-real world: CC0 photo textures on near/mid surfaces
+  (`<Real tex=...>` in `engine/look/materials.tsx`, files in `public/textures/`), photographic CC0 skies per
+  preset (`public/sky/`, `<HdrSky>`), strong lens blur on the face, film grade (desaturate, warm highlights,
+  vignette, deterministic grain). Every asset + licence in `CREDITS.md`. Values live in `style-v1.3.json`.
+- **Preview mode:** `{"quality":"preview"}` in the props file switches off lens blur, grain and MSAA.
+- **Camera grammar** (`style.camera`): every shot drifts (handheld), quick push-in on every emphasised
+  word, an extreme close-up / low / top-down every ~4-6 shots, motion blur on fast action (sideways moves,
+  sprints); whips between places, camera moves within a place.
+- **Subtitles:** big centre keyword (yellow for numbers/emphasis) + small sentence subtitle at the top
+  (white on a dark box, synced, inside the Shorts safe area) for muted viewers.
+

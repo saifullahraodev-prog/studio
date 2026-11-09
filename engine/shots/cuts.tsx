@@ -66,6 +66,7 @@ const face = (p: Vec3, s = 1): Vec3 => [p[0], p[1] + HY * s, p[2] + 0.45 * s];
 
 // ── crowd for the lifeboat beats (spawn times give the "piling in" gag) ──
 const CROWD = makeCrowd({ seed: "v2-deck", count: 30, area: { x: [-2.6, 2.7], z: [-12, 2.2] }, faceToward: [3, -9], minGap: 0.85 });
+const WOMEN = makeCrowd({ seed: "v3-women", count: 9, area: { x: [-3, 0], z: [-2, 2] }, kind: "workers", minGap: 0.5 });
 
 type T = (i: CutInput) => ShotOutput;
 
@@ -401,6 +402,95 @@ const TPL: Record<string, T> = {
     ),
   }),
 
+  // ── revision 2 (POV survival script) ──
+  // 2:05 a.m., the deck is tilting: the whole world is rolled, the Inspector braces
+  "insp-tilt": ({ beat, cut, t, dur, abs }) => ({
+    camera: live({ position: [-0.15, 1.95, 5.8], target: [0.55, 1.45, 1.4], fov: 36, roll: 0.16 + Math.sin(t * 0.8) * 0.02 }, t, dur, { push: 0.08 }),
+    focus: face(INSP),
+    focusRange: 1.4,
+    content: (
+      <>
+        <ShipDeck preset={P(beat)} />
+        <Actor def={BIBLE.inspector} cut={cut} t={t} position={INSP} rotationY={-0.12} mouth={talk(beat, abs)} pose={{ lean: -0.05, armL: [0.6, 0.6] }} />
+      </>
+    ),
+  }),
+  // 20 boats on the crate, number on screen
+  "boats-20": ({ beat, cut, t, dur }) => ({
+    camera: live({ position: [0.5, 2.9, 5.4], target: [0.5, 1.05, 1.7], fov: 42 }, t, dur, { punch: 0.12 }),
+    focus: [0.5, 0.8, 1.95],
+    focusRange: 1.8,
+    content: (
+      <>
+        <ShipDeck preset={P(beat)} />
+        <pointLight position={[0.2, 3, 3.4]} color="#FFD9A0" intensity={4} distance={8} decay={1.6} />
+        <Crate position={[0.5, 0, 2.0]} />
+        <Boats count={20} t={t} each={Math.min(0.05, (dur * 0.6) / 20)} perRow={10} />
+        {t > 0.4 && <TextLabel text="20 BOATS" position={[0.5, 1.5, 2.3]} width={1.3} />}
+      </>
+    ),
+  }),
+  // the crowd from above, number on screen
+  "crowd-2200": ({ beat, t, dur }) => ({
+    camera: live({ position: [0.6, 15, -2.0], target: [0.5, 0, -4.6], fov: 44, roll: 0.25 }, t, dur, { push: -0.06 }),
+    focus: [0.5, 1.5, -4.6],
+    focusRange: 12,
+    bokeh: 2,
+    content: (
+      <>
+        <ShipDeck preset={P(beat)} />
+        {CROWD.map((e, i) => (
+          <Character key={i} def={e.def} expression={e.expression} position={e.position} rotationY={e.rotationY} pose={{ headNod: -0.4, bob: Math.abs(Math.sin(t * 5 + e.phase)) * 0.03 }} />
+        ))}
+        {t > 0.3 && <TextLabel text="2,200 PEOPLE" position={[0.5, 4.5, -3.8]} rotation={[-1.25, 0, -0.25]} width={4.2} />}
+      </>
+    ),
+  }),
+  // an officer waves women and children in
+  "officer-wave": ({ beat, cut, t, dur }) => ({
+    camera: live({ position: [1.6, 1.9, 5.6], target: [0.9, 1.4, 1.2], fov: 38 }, t, dur, { push: 0.08 }),
+    focus: face([1.4, 0, 1.2]),
+    focusRange: 2.2,
+    content: (
+      <>
+        <ShipDeck preset={P(beat)} />
+        <Actor def={BIBLE.officer} cut={{ ...cut, do: cut.do ?? "wave" }} t={t} position={[1.4, 0, 1.2]} rotationY={-0.7} face={cut.face} />
+        {WOMEN.map((e, i) => (
+          <Character key={i} def={e.def} expression={i % 2 ? "scared" : "worried"} position={[-0.3 - (i % 3) * 0.9, 0, 1.6 - Math.floor(i / 3) * 1.1]} rotationY={1.2} pose={{ walk: t * 6 + i, stride: 0.35 }} />
+        ))}
+      </>
+    ),
+  }),
+  // an earlier boat rows away half empty
+  "boat-away": ({ beat, t, dur }) => ({
+    camera: live({ position: [3.6, 1.2, 3], target: [7.5, -7.0, -4 - t * 0.6], fov: 44 }, t, dur, { push: 0.04 }),
+    focus: [7.5, -6.8, -4],
+    focusRange: 6,
+    bokeh: 4,
+    content: (
+      <>
+        <ShipDeck preset={P(beat)} />
+        <group position={[7.5, -6.9, -4 - t * 0.6]} rotation={[0, 0.3, Math.sin(t * 1.3) * 0.04]}>
+          {/* hull floats ON the sea (bottom above the water plane, so it never looks flooded) */}
+          <mesh rotation={[Math.PI, 0, 0]} scale={[1.6, 0.45, 4.2]} castShadow>
+            <sphereGeometry args={[1, 24, 12, 0, Math.PI * 2, 0, Math.PI / 2]} />
+            <meshStandardMaterial color="#EDE8DC" side={THREE.DoubleSide} roughness={0.7} />
+          </mesh>
+          {/* a lantern on the boat so it reads on the night sea */}
+          <pointLight position={[0, 1.6, 0]} color="#FFD08A" intensity={14} distance={10} decay={1.4} />
+          <mesh position={[0, 0.9, 0.4]}>
+            <sphereGeometry args={[0.12, 10, 8]} />
+            <meshBasicMaterial color="#FFE2A8" toneMapped={false} />
+          </mesh>
+          {[[-0.4, -2.2], [0.4, -1.6], [0, 2.4]].map(([x, z], i) => (
+            <Character key={i} def={WOMEN[i].def} expression="sad" position={[x, -0.4, z]} rotationY={Math.PI} pose={{ headNod: 0.2 }} />
+          ))}
+        </group>
+        <TextLabel text="HALF EMPTY" position={[7.5, -5.4, -4 - t * 0.6]} rotation={[-0.7, -0.4, 0]} width={3.2} />
+      </>
+    ),
+  }),
+
   // ── extreme close-ups + top-down (camera grammar: one every ~4-6 shots) ──
   "insp-eyes": ({ beat, cut, t, dur, abs }) => ({
     camera: live(wideClose([INSP[0], INSP[1] + HY - 0.04, INSP[2] + 0.45], -0.12, 1.45, 40), t, dur, { push: 0.05 }),
@@ -500,7 +590,7 @@ const TPL: Record<string, T> = {
 };
 
 // rows of mini boats popping in one by one on the crate top
-const Boats: React.FC<{ count: number; t: number; each: number; offset?: number; color?: string }> = ({ count, t, each, offset = 0, color }) => {
+const Boats: React.FC<{ count: number; t: number; each: number; offset?: number; color?: string; perRow?: number }> = ({ count, t, each, offset = 0, color, perRow = 8 }) => {
   const items = useMemo(() => Array.from({ length: count }, (_, i) => i + offset), [count, offset]);
   return (
     <group>
@@ -508,9 +598,10 @@ const Boats: React.FC<{ count: number; t: number; each: number; offset?: number;
         const k = t - i * each;
         if (k < 0) return null;
         const s = spring({ frame: k * 30, fps: 30, config: { damping: 9, stiffness: 260 } });
-        const row = Math.floor(n / 8);
-        const col = n % 8;
-        return <MiniBoat key={n} position={[-0.34 + col * 0.24, 0.74, 1.72 + row * 0.42 + random(`b${n}`) * 0.02]} rotationY={0} scale={1.25 * s} color={color} />;
+        const row = Math.floor(n / perRow);
+        const col = n % perRow;
+        const dx = perRow > 8 ? 0.21 : 0.24;
+        return <MiniBoat key={n} position={[0.5 - ((perRow - 1) * dx) / 2 + col * dx, 0.74, 1.78 + row * 0.42 + random(`b${n}`) * 0.02]} rotationY={0} scale={1.25 * s} color={color} />;
       })}
     </group>
   );

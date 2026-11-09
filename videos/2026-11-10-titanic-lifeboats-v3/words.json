@@ -1,0 +1,467 @@
+[
+ {
+  "word": "It's",
+  "start": 0.0,
+  "end": 0.46
+ },
+ {
+  "word": "2",
+  "start": 0.46,
+  "end": 0.64
+ },
+ {
+  "word": ".05",
+  "start": 0.64,
+  "end": 1.0
+ },
+ {
+  "word": "am.",
+  "start": 1.0,
+  "end": 1.4
+ },
+ {
+  "word": "The",
+  "start": 1.52,
+  "end": 1.6
+ },
+ {
+  "word": "deck",
+  "start": 1.6,
+  "end": 1.88
+ },
+ {
+  "word": "is",
+  "start": 1.88,
+  "end": 2.1
+ },
+ {
+  "word": "tilting,",
+  "start": 2.1,
+  "end": 2.62
+ },
+ {
+  "word": "and",
+  "start": 2.76,
+  "end": 2.86
+ },
+ {
+  "word": "you're",
+  "start": 2.86,
+  "end": 3.02
+ },
+ {
+  "word": "standing",
+  "start": 3.02,
+  "end": 3.4
+ },
+ {
+  "word": "in",
+  "start": 3.4,
+  "end": 3.68
+ },
+ {
+  "word": "line",
+  "start": 3.68,
+  "end": 3.96
+ },
+ {
+  "word": "for",
+  "start": 3.96,
+  "end": 4.2
+ },
+ {
+  "word": "a",
+  "start": 4.2,
+  "end": 4.36
+ },
+ {
+  "word": "lifeboat.",
+  "start": 4.36,
+  "end": 4.74
+ },
+ {
+  "word": "You",
+  "start": 5.12,
+  "end": 5.22
+ },
+ {
+  "word": "count",
+  "start": 5.22,
+  "end": 5.52
+ },
+ {
+  "word": "the",
+  "start": 5.52,
+  "end": 5.72
+ },
+ {
+  "word": "boats,",
+  "start": 5.72,
+  "end": 6.0
+ },
+ {
+  "word": "then",
+  "start": 6.22,
+  "end": 6.34
+ },
+ {
+  "word": "you",
+  "start": 6.34,
+  "end": 6.46
+ },
+ {
+  "word": "count",
+  "start": 6.46,
+  "end": 6.68
+ },
+ {
+  "word": "the",
+  "start": 6.68,
+  "end": 6.82
+ },
+ {
+  "word": "people.",
+  "start": 6.82,
+  "end": 7.04
+ },
+ {
+  "word": "The",
+  "start": 7.56,
+  "end": 7.68
+ },
+ {
+  "word": "math",
+  "start": 7.68,
+  "end": 7.98
+ },
+ {
+  "word": "doesn't",
+  "start": 7.98,
+  "end": 8.28
+ },
+ {
+  "word": "work.",
+  "start": 8.28,
+  "end": 8.5
+ },
+ {
+  "word": "There",
+  "start": 8.66,
+  "end": 8.76
+ },
+ {
+  "word": "are",
+  "start": 8.76,
+  "end": 8.86
+ },
+ {
+  "word": "seats",
+  "start": 8.86,
+  "end": 9.1
+ },
+ {
+  "word": "for",
+  "start": 9.1,
+  "end": 9.32
+ },
+ {
+  "word": "about",
+  "start": 9.32,
+  "end": 9.56
+ },
+ {
+  "word": "half",
+  "start": 9.56,
+  "end": 9.88
+ },
+ {
+  "word": "of",
+  "start": 9.88,
+  "end": 10.04
+ },
+ {
+  "word": "you.",
+  "start": 10.04,
+  "end": 10.26
+ },
+ {
+  "word": "An",
+  "start": 10.7,
+  "end": 10.86
+ },
+ {
+  "word": "officer",
+  "start": 10.86,
+  "end": 11.26
+ },
+ {
+  "word": "waves",
+  "start": 11.26,
+  "end": 11.74
+ },
+ {
+  "word": "the",
+  "start": 11.74,
+  "end": 11.96
+ },
+ {
+  "word": "next",
+  "start": 11.96,
+  "end": 12.22
+ },
+ {
+  "word": "group",
+  "start": 12.22,
+  "end": 12.52
+ },
+ {
+  "word": "in.",
+  "start": 12.52,
+  "end": 12.88
+ },
+ {
+  "word": "Women",
+  "start": 13.0,
+  "end": 13.2
+ },
+ {
+  "word": "and",
+  "start": 13.2,
+  "end": 13.66
+ },
+ {
+  "word": "children",
+  "start": 13.66,
+  "end": 14.02
+ },
+ {
+  "word": "only.",
+  "start": 14.02,
+  "end": 14.52
+ },
+ {
+  "word": "That",
+  "start": 15.04,
+  "end": 15.18
+ },
+ {
+  "word": "new",
+  "start": 15.18,
+  "end": 15.34
+ },
+ {
+  "word": "seat.",
+  "start": 15.34,
+  "end": 15.62
+ },
+ {
+  "word": "Earlier",
+  "start": 15.92,
+  "end": 16.12
+ },
+ {
+  "word": "boats",
+  "start": 16.12,
+  "end": 16.48
+ },
+ {
+  "word": "rode",
+  "start": 16.48,
+  "end": 16.86
+ },
+ {
+  "word": "away",
+  "start": 16.86,
+  "end": 17.12
+ },
+ {
+  "word": "half",
+  "start": 17.12,
+  "end": 17.46
+ },
+ {
+  "word": "empty.",
+  "start": 17.46,
+  "end": 17.86
+ },
+ {
+  "word": "The",
+  "start": 18.44,
+  "end": 18.6
+ },
+ {
+  "word": "worst",
+  "start": 18.6,
+  "end": 18.86
+ },
+ {
+  "word": "part?",
+  "start": 18.86,
+  "end": 19.18
+ },
+ {
+  "word": "It",
+  "start": 19.38,
+  "end": 19.44
+ },
+ {
+  "word": "was",
+  "start": 19.44,
+  "end": 19.6
+ },
+ {
+  "word": "all",
+  "start": 19.6,
+  "end": 19.92
+ },
+ {
+  "word": "legal.",
+  "start": 19.92,
+  "end": 20.24
+ },
+ {
+  "word": "The",
+  "start": 20.5,
+  "end": 20.58
+ },
+ {
+  "word": "rulebook",
+  "start": 20.58,
+  "end": 20.88
+ },
+ {
+  "word": "stopped",
+  "start": 20.88,
+  "end": 21.18
+ },
+ {
+  "word": "at",
+  "start": 21.18,
+  "end": 21.4
+ },
+ {
+  "word": "ships",
+  "start": 21.4,
+  "end": 21.62
+ },
+ {
+  "word": "less",
+  "start": 21.62,
+  "end": 21.94
+ },
+ {
+  "word": "than",
+  "start": 21.94,
+  "end": 22.14
+ },
+ {
+  "word": "a",
+  "start": 22.14,
+  "end": 22.24
+ },
+ {
+  "word": "quarter",
+  "start": 22.24,
+  "end": 22.42
+ },
+ {
+  "word": "this",
+  "start": 22.42,
+  "end": 22.68
+ },
+ {
+  "word": "size.",
+  "start": 22.68,
+  "end": 23.08
+ },
+ {
+  "word": "And",
+  "start": 23.42,
+  "end": 23.7
+ },
+ {
+  "word": "that's",
+  "start": 23.7,
+  "end": 23.94
+ },
+ {
+  "word": "why,",
+  "start": 23.94,
+  "end": 24.2
+ },
+ {
+  "word": "today,",
+  "start": 24.38,
+  "end": 24.6
+ },
+ {
+  "word": "every",
+  "start": 25.1,
+  "end": 25.34
+ },
+ {
+  "word": "ship",
+  "start": 25.34,
+  "end": 25.6
+ },
+ {
+  "word": "must",
+  "start": 25.6,
+  "end": 25.78
+ },
+ {
+  "word": "carry",
+  "start": 25.78,
+  "end": 26.1
+ },
+ {
+  "word": "a",
+  "start": 26.1,
+  "end": 26.38
+ },
+ {
+  "word": "lifeboat",
+  "start": 26.38,
+  "end": 26.82
+ },
+ {
+  "word": "or",
+  "start": 26.82,
+  "end": 26.96
+ },
+ {
+  "word": "life",
+  "start": 26.96,
+  "end": 27.22
+ },
+ {
+  "word": "raft",
+  "start": 27.22,
+  "end": 27.46
+ },
+ {
+  "word": "seat",
+  "start": 27.46,
+  "end": 27.82
+ },
+ {
+  "word": "for",
+  "start": 27.82,
+  "end": 28.06
+ },
+ {
+  "word": "everyone",
+  "start": 28.06,
+  "end": 28.44
+ },
+ {
+  "word": "on",
+  "start": 28.44,
+  "end": 28.58
+ },
+ {
+  "word": "board.",
+  "start": 28.58,
+  "end": 28.86
+ }
+]

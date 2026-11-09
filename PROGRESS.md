@@ -7,9 +7,14 @@
 - Task 3 DONE: CC0 textures + skies (CREDITS.md), stronger DOF, film grade, preview quality mode, style v1.3.
 - Task 4 DONE: camera grammar in style v1.3 (handheld drift, key-word push, motion blur), eye XCUs, top-down.
 - Task 5 DONE: top sentence subtitles.
-- Task 6 IN PROGRESS: draft script `videos/2026-11-10-titanic-lifeboats-v3/script.md` (one fact still to verify),
-  needs owner approval, then scenes + 720p preview, v1-vs-v2 contact sheet, docs, golden re-approve,
-  render-time comparison. Stills: out/rev2/task*.png.
+- Task 6 DONE: POV script approved 2026-11-10 (all facts sourced). New shots: insp-tilt, boats-20, crowd-2200,
+  officer-wave (new character `officer`), boat-away. 29.8 s, 22 cuts (avg 1.35 s).
+- 720p preview: `videos/2026-11-10-titanic-lifeboats-v3/out/preview-720p.mp4`, -14.0 LUFS, no black/frozen frames.
+  v1 vs v2 sheet: `out/rev2/v1-vs-v2.png`.
+- Render cost (720p): old Short 172 s for 31.8 s = 5.4 s per second of video; revision 187 s for 29.8 s =
+  6.3 s per second (+16%, textures/skies/grade). 1080p estimate ~12.9 s per second (~6.4 min).
+- WAITING ON OWNER: approve preview -> 1080p final; approve style v1.3 look -> re-approve golden frames
+  (golden check now differs by design: no hatching, textures, grade).
 
 ## Earlier: PAUSED by owner (2026-11-09) at GATE 4
 Video production is on hold. Nothing is pending in the background. When resuming: owner reviews the

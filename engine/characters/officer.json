@@ -1,0 +1,20 @@
+{
+  "id": "officer",
+  "name": "Ship's officer (1912)",
+  "role": "Generic White Star-style deck officer (navy uniform, peaked cap) loading the lifeboats. Not a real person.",
+  "faceVariant": "D",
+  "skin": "#E6BF97",
+  "faceExtras": { "mustache": true },
+  "body": {
+    "torso": "#1E2433",
+    "torsoStyle": "coat",
+    "trim": "#C9A24A",
+    "sleeve": "#1E2433",
+    "legs": "#1A1E28",
+    "shoes": "#121212",
+    "scale": 1.0
+  },
+  "headgear": { "type": "peakedCap", "color": "#1A1F2C", "band": "#11141C", "badge": "#E2B84A" },
+  "prop": null,
+  "accessories": ["tie"]
+}

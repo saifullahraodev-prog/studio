@@ -1,0 +1,87 @@
+# Scene file: Short #1 revision 2 (owner's "v2"), POV survival script (approved 2026-11-10)
+# Facts and sources: script.md. Cut format as v2:
+#   cut: <cue word> | <shot> | face=<expression> | do=<gesture> | fx=<sound>[+<sound>] | pre=riser | tr=<cut|whip|flash>
+# After editing:  python -I tools/build_video.py videos/2026-11-10-titanic-lifeboats-v3
+
+slug: titanic-lifeboats-v3
+format: short
+world: ship-deck
+voice: piper
+# POV survival: slower, tenser read than the old Short (0.82)
+voice_scale: 1.1
+
+[beat 1]
+speaker: inspector
+preset: night
+say: It's two-oh-five a.m. The deck is tilting. And you're standing in line for a lifeboat.
+emph: tilting, lifeboat
+cut: it's     | insp-tilt         | face=worried | do=think
+cut: deck     | ship-sinking      | fx=boom      | tr=whip
+cut: you're   | stoker-shocked-cu | face=scared  | do=recoil | tr=whip
+cut: line     | crowd-pile        | fx=pop       | tr=cut
+
+[beat 2]
+speaker: vo
+preset: night
+pause: 0.3
+say: You count the boats. Then you count the people.
+emph: boats, people
+cut: you      | count-fingers     | face=worried | do=count
+cut: boats    | boats-20          | fx=pop       | tr=whip
+cut: people   | crowd-2200        | fx=whoosh    | tr=whip
+
+[beat 3]
+speaker: vo
+preset: night
+pause: 0.25
+say: The math doesn't work. There are seats for about half of you.
+emph: half
+cut: the      | stoker-eyes       | face=shocked | fx=hit | tr=cut
+cut: seats    | crowd-half        | fx=pop       | tr=cut
+cut: half     | crowd-stare       | face=sad     | tr=cut
+
+[beat 4]
+speaker: vo
+preset: night
+pause: 0.3
+say: An officer waves the next group in. Women and children only.
+emph: women, children, only
+cut: an       | officer-wave      | face=determined | do=wave | tr=whip
+cut: only     | stoker-shocked-cu | face=sad        | do=shrug | tr=cut
+
+[beat 5]
+speaker: vo
+preset: night
+pause: 0.2
+say: Then you see it. Earlier boats rowed away half empty.
+emph: half, empty
+cut: then     | stoker-eyes       | face=shocked
+cut: earlier  | boat-away         | fx=whoosh    | tr=whip
+
+[beat 6]
+speaker: vo
+preset: night
+pause: 0.45
+say: The worst part? It was all legal.
+emph: legal
+cut: the      | insp-dutch        | face=worried    | do=think | tr=whip
+cut: legal    | stamp             | face=determined | do=stamp | fx=stamp | tr=cut
+
+[beat 7]
+speaker: vo
+preset: night
+say: The rulebook stopped at ships less than a quarter this size.
+emph: quarter
+cut: the      | rulebook-row      | fx=whoosh    | tr=whip
+cut: ships    | ship-too-big      | face=shocked | fx=boing | tr=cut
+
+[beat 8]
+speaker: inspector
+preset: day
+pause: 0.4
+say: And that's why, today, every ship must carry a lifeboat or life-raft seat for everyone on board.
+emph: today, everyone
+cut: and       | today-medium | face=determined | do=tap   | tr=flash | fx=whoosh
+cut: every     | today-low    | face=happy      | do=point | tr=whip
+cut: lifeboat  | today-boat   | tr=cut
+cut: everyone  | today-punch  | face=happy      | do=tick  | fx=ding | tr=cut
