@@ -28,6 +28,9 @@ export type Pose = {
   fingersL?: number; // digits extended on each glove (0 fist … 4 open)
   fingersR?: number;
   holdR?: "stamp"; // something held in the right hand for this shot
+  roll?: number; // whole-body sideways tilt (radians, about the feet): falls, wobbles
+  legs?: [number, number]; // explicit leg swing [left, right] (radians, + = forward): climbing, kneeling
+  sink?: number; // lower the whole body (crouch / sit), metres
 };
 
 const F = style.face;
@@ -551,14 +554,14 @@ const Arm: React.FC<{ side: 1 | -1; sleeve: string; rot: [number, number]; prop?
 
 // ─── body ───────────────────────────────────────────────────────────────────
 const HIP_Y = 0.44;
-const Body: React.FC<{ def: CharacterDef; legSwing?: number }> = ({ def, legSwing = 0 }) => {
+const Body: React.FC<{ def: CharacterDef; legSwing?: number; legs?: [number, number] }> = ({ def, legSwing = 0, legs }) => {
   const b = def.body;
   const acc = def.accessories ?? [];
   return (
     <group>
       {[-1, 1].map((sd) => (
         // legs pivot at the hip so they can swing for walk/run cycles
-        <group key={sd} position={[sd * 0.18, HIP_Y, 0]} rotation={[sd * legSwing, 0, 0]}>
+        <group key={sd} position={[sd * 0.18, HIP_Y, 0]} rotation={[legs ? -legs[sd > 0 ? 0 : 1] : sd * legSwing, 0, 0]}>
           <group position={[0, -HIP_Y, 0]}>
             {b.lower !== "skirt" && (
               <S p={[0, 0.26, 0]}>
@@ -696,8 +699,8 @@ export const Character: React.FC<CharacterProps> = ({ def, expression = "neutral
   const armR: [number, number] = def.prop === "shovel" || def.prop === "axe" ? pose.armR ?? [0.95, 0.12] : pose.armR ?? [0.05 + armSwing, 0.18 + 0.1 * stride];
   return (
     <group position={position} rotation={[0, rotationY, 0]} scale={def.body.scale}>
-      <group position={[0, bob, 0]} rotation={[lean, 0, 0]}>
-        <Body def={def} legSwing={swing} />
+      <group position={[0, bob - (pose.sink ?? 0), 0]} rotation={[lean, 0, pose.roll ?? 0]}>
+        <Body def={def} legSwing={swing} legs={pose.legs} />
         <Arm
           side={1}
           sleeve={def.body.sleeve}

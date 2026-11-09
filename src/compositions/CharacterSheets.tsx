@@ -1,9 +1,10 @@
 import { loadFont } from "@remotion/google-fonts/Fredoka";
 import { ThreeCanvas } from "@remotion/three";
-import { AbsoluteFill, useVideoConfig } from "remotion";
+import { AbsoluteFill, useCurrentFrame, useVideoConfig } from "remotion";
 import { BIBLE } from "../../engine/characters/bible";
 import { Character, Pose } from "../../engine/characters/Character";
 import { makeCrowd } from "../../engine/characters/crowd";
+import { gesture } from "../../engine/characters/gestures";
 import { Expression, FACE_VARIANTS, FaceVariant, VARIANT_NAMES } from "../../engine/characters/face";
 import { CameraRig } from "../../engine/cameras/CameraRig";
 import { EnvMap } from "../../engine/shots/WorldShot";
@@ -124,6 +125,27 @@ export const Lineup: React.FC<{ ids: string[]; crowd: boolean }> = ({ ids, crowd
       {ids.map((id, i) => (
         <Label key={id} x={`${50 + (xs[i] / (2 * halfW)) * 100}%`} text={BIBLE[id].name.split(" (")[0]} />
       ))}
+    </AbsoluteFill>
+  );
+};
+
+// Phase 4 action clip: one character doing one action, 3/4 view, label on top.
+// Tiled into a grid by tools/actions.mjs.
+export const ActionPose: React.FC<{ action: string; character: string }> = ({ action, character }) => {
+  const { width, height } = useVideoConfig();
+  const frame = useCurrentFrame();
+  const oneShot = action === "fall" || action === "pushbar";
+  const t = oneShot ? Math.max(0, frame / 30 - 0.3) : frame / 30;
+  const g = gesture(action, t);
+  const expr: Expression = action === "cheer" || action === "wave" ? "happy" : action === "shiver" || action === "cower" ? "scared" : action === "panic" || action === "rattle" || action === "fall" ? "shocked" : action === "facepalm" ? "sad" : "determined";
+  return (
+    <AbsoluteFill style={{ background: bg }}>
+      <ThreeCanvas width={width} height={height} shadows gl={{ alpha: true }}>
+        <CameraRig position={[3.4, 2.4, 5.6]} target={[0, 1.05, 0]} fov={34} />
+        <StudioLights />
+        <Character def={BIBLE[character]} expression={expr} mouth={g.mouth ?? "rest"} rotationY={action === "climb" ? Math.PI * 0.85 : 0.25} pose={g} />
+      </ThreeCanvas>
+      <div style={{ position: "absolute", bottom: 14, width: "100%", textAlign: "center", fontFamily, fontSize: 44, fontWeight: 600, color: "#2A2A30" }}>{action}</div>
     </AbsoluteFill>
   );
 };

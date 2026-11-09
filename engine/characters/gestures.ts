@@ -10,7 +10,9 @@ import type { Pose } from "./Character";
 
 export type GestureName =
   | "tap" | "point" | "think" | "recoil" | "count" | "panic" | "stamp" | "thumbsup"
-  | "tick" | "yawn" | "shovel" | "shrug";
+  | "tick" | "yawn" | "shovel" | "shrug"
+  // Phase 4 core actions
+  | "walk" | "run" | "talk" | "fall" | "carry" | "climb" | "cheer" | "shiver" | "sew" | "rattle" | "pushbar" | "wave" | "facepalm" | "cower";
 
 export type GestureOut = Partial<Pose> & { mouth?: MouthSlot };
 
@@ -67,9 +69,60 @@ export const gesture = (name: GestureName | string | undefined, t: number): Gest
       return { lean: 0.2 + Math.sin(t * 5) * 0.12, bob: -Math.abs(Math.sin(t * 5)) * 0.04, armL: [0.9 + Math.sin(t * 5) * 0.35, 0.1] };
     case "shrug":
       return { armL: [mix(0.05, 0.5, k), 0.95 * clamp01(k)], armR: [mix(0.05, 0.5, k), 0.95 * clamp01(k)], headTilt: 0.18 * clamp01(k), fingersL: 4, fingersR: 4 };
+    // ── Phase 4 core actions (loops unless noted) ──
+    case "walk":
+      return { walk: t * 7, stride: 0.5 };
+    case "run":
+      return { walk: t * 12, stride: 1 };
+    case "talk": // explaining with both hands, small beats
+      return { armL: [0.55 + Math.sin(t * 4.2) * 0.25, 0.35], armR: [0.7 + Math.sin(t * 3.4 + 1) * 0.3, 0.3], fingersL: 4, fingersR: 4, headTilt: Math.sin(t * 2.1) * 0.06, headNod: Math.sin(t * 4.2) * 0.04 };
+    case "fall": { // one-shot cartoon slip: feet fly up, lands on the back at 0.45 s, bounce, lies flat
+      const tip = t < 0.1 ? 0.1 * (t / 0.1) : -Math.min(1.42, 1.42 * backOut((t - 0.1) / 0.35, 1.2));
+      const land = t > 0.45 ? Math.abs(Math.sin((t - 0.45) * 16)) * 0.07 * decay(t - 0.45, 6) : 0;
+      const kick = clamp01((t - 0.05) / 0.3);
+      return {
+        lean: tip,
+        bob: land,
+        armL: t < 0.45 ? [1.2 + Math.sin(t * 30) * 0.4, 1.4] : [0.4, 1.2],
+        armR: t < 0.45 ? [1.2 + Math.sin(t * 30 + 2) * 0.4, 1.4] : [0.4, 1.2],
+        legs: [1.1 * kick, 0.6 * kick],
+        fingersL: 4,
+        fingersR: 4,
+        mouth: t < 0.45 ? "wide" : "closed",
+      };
+    }
+    case "carry": // arms out front holding something (bolt of cloth / box), leaning back, walking
+      return { armL: [1.3, -0.12], armR: [1.3, -0.12], fingersL: 4, fingersR: 4, lean: -0.06, walk: t * 6.5, stride: 0.4, noProp: true };
+    case "climb": { // ladder / stairs: alternating reach and step
+      const a = Math.sin(t * 6);
+      return { armL: [2.7 + a * 0.35, 0.15], armR: [2.7 - a * 0.35, 0.15], legs: [0.5 + a * 0.5, 0.5 - a * 0.5], lean: 0.08, bob: Math.max(0, a) * 0.05, fingersL: 2, fingersR: 2, noProp: true };
+    }
+    case "cheer": { // fists pumping, little hops
+      const h = Math.abs(Math.sin(t * 7));
+      return { armL: [2.9 - h * 0.4, 0.35], armR: [2.9 - (1 - h) * 0.4, 0.35], fingersL: 0, fingersR: 0, bob: h * 0.1, headNod: -0.12, mouth: "wide" };
+    }
+    case "shiver": // arms hugging the body, fast jitter
+      return { armL: [0.9, -0.85], armR: [0.9, -0.85], roll: Math.sin(t * 55) * 0.02, bob: Math.sin(t * 47) * 0.006, headNod: 0.1, headTilt: Math.sin(t * 61) * 0.03, fingersL: 4, fingersR: 4, noProp: true };
+    case "sew": // hunched over a machine, hands feeding fabric, quick little motions
+      return { armL: [1.15 + Math.sin(t * 14) * 0.05, -0.18], armR: [1.1 + Math.sin(t * 14 + 1.5) * 0.06, -0.2], headNod: 0.32, lean: 0.12, fingersL: 4, fingersR: 2, noProp: true };
+    case "rattle": { // yanking a locked door handle: both hands, violent back-and-forth
+      const y = Math.sin(t * 24);
+      return { armL: [1.45 + y * 0.12, -0.05], armR: [1.45 + y * 0.12, -0.05], lean: 0.08 + y * 0.06, roll: Math.sin(t * 11) * 0.03, fingersL: 0, fingersR: 0, mouth: "wide", noProp: true };
+    }
+    case "pushbar": { // one-shot: step forward and shove a door bar with both hands
+      const p = backOut(clamp01((t - 0.08) / 0.25));
+      return { armL: [mix(0.3, 1.5, p), -0.1], armR: [mix(0.3, 1.5, p), -0.1], lean: 0.18 * p, legs: [0.35 * p, -0.2 * p], fingersL: 4, fingersR: 4, noProp: true };
+    }
+    case "wave":
+      return { armR: [mix(0.05, 2.7, k), 0.35 + Math.sin(t * 10) * 0.3 * clamp01(k)], fingersR: 4, headTilt: 0.08 };
+    case "facepalm": // hand slaps the face, head drops
+      return { armR: [mix(0.05, 2.45, k), -0.72 * clamp01(k)], fingersR: 4, headNod: 0.28 * clamp01(t / 0.3), headTilt: -0.08 };
+    case "cower": // crouch, arms over the head
+      return { sink: 0.12 * clamp01(t / 0.2), armL: [2.6, -0.5], armR: [2.6, -0.5], headNod: 0.3, lean: 0.12, roll: Math.sin(t * 40) * 0.01, fingersL: 4, fingersR: 4, noProp: true };
     default:
       return {};
   }
 };
 
 export const GESTURES: GestureName[] = ["tap", "point", "think", "recoil", "count", "panic", "stamp", "thumbsup", "tick", "yawn", "shovel", "shrug"];
+export const ACTIONS: GestureName[] = ["walk", "run", "talk", "point", "panic", "fall", "carry", "climb", "cheer", "shiver", "sew", "rattle", "pushbar", "wave", "facepalm", "cower"];

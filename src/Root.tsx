@@ -1,6 +1,6 @@
 import { Composition } from "remotion";
 import { Expression, FaceVariant, SHEET_H, SHEET_W } from "../engine/characters/face";
-import { FaceVariants, Lineup, Turnaround } from "./compositions/CharacterSheets";
+import { ActionPose, FaceVariants, Lineup, Turnaround } from "./compositions/CharacterSheets";
 import { ResProps, verticalSize } from "../engine/look/units";
 import { FaceSheet, FaceSheetProps } from "./compositions/FaceSheet";
 import { GLInfo } from "./compositions/GLInfo";
@@ -107,6 +107,7 @@ export const RemotionRoot: React.FC = () => {
         height={1200}
         defaultProps={{ ids: ["inspector", "worker", "perkins", "firefighter", "owner", "judge", "stoker"], crowd: true }}
       />
+      <Composition id="ActionPose" component={ActionPose} durationInFrames={48} fps={30} width={400} height={480} defaultProps={{ action: "walk", character: "worker" }} />
       <Composition id="GLInfo" component={GLInfo} durationInFrames={1} fps={30} width={1600} height={240} />
     </>
   );

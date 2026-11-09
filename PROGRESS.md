@@ -20,6 +20,10 @@
   Licences: `audio/LICENSES.md`. Named in `audio/library.json`; usable as `fx=<name>` (beds loop
   with crossfade to any length). No adult screams available there (only children), so screams stay
   procedural.
+- 2026-11-09: step 2 actions. 16 core actions in `engine/characters/gestures.ts` (`ACTIONS`):
+  walk, run, talk, point, panic, fall (cartoon slip onto the back), carry, climb, cheer, shiver,
+  sew, rattle (locked door), pushbar, wave, facepalm, cower. Pose gained `roll`, `legs`, `sink`.
+  Review: `node tools/actions.mjs` -> `out/phase4/actions.mp4` (animated 4x4) + `actions.png`.
 
 ### Phase 4 plan (2026-11-09)
 Script draft: `videos/2026-11-09-triangle-fire/script.md` (~3:00, 21 checked claims, 9 sources).
