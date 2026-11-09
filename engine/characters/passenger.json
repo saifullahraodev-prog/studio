@@ -3,6 +3,7 @@
   "name": "Passenger (crowd extra)",
   "role": "Generic early-1900s passenger. The crowd module recolours clothes and swaps hats per extra.",
   "faceVariant": "D",
+  "skin": "#E3B58D",
   "faceExtras": {},
   "body": {
     "torso": "#5A4A3E",

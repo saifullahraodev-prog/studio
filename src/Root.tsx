@@ -1,8 +1,9 @@
 import { Composition } from "remotion";
 import { Expression, FaceVariant, SHEET_H, SHEET_W } from "../engine/characters/face";
-import { ActionPose, FaceVariants, Lineup, Turnaround } from "./compositions/CharacterSheets";
+import { ActionPose, FaceOption, FaceVariants, Lineup, Turnaround } from "./compositions/CharacterSheets";
 import { ResProps, verticalSize } from "../engine/look/units";
 import { FaceSheet, FaceSheetProps } from "./compositions/FaceSheet";
+import { FaceCheck, FaceCheckProps } from "./compositions/FaceCheck";
 import { GLInfo } from "./compositions/GLInfo";
 import { LookTest, LookTestProps } from "./compositions/LookTest";
 import { calculateShortMetadata, Short, ShortProps } from "./compositions/Short";
@@ -128,6 +129,8 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{ res: 720, slug: "triangle-fire" } as VideoProps}
         calculateMetadata={calculateVideoMetadata}
       />
+      <Composition id="FaceCheck" component={FaceCheck} durationInFrames={1} fps={30} width={2400} height={600} defaultProps={{ preset: "day", hatch: true } as FaceCheckProps} />
+      <Composition id="FaceOption" component={FaceOption} durationInFrames={1} fps={30} width={1200} height={900} defaultProps={{ variant: "E" as FaceVariant }} />
       <Composition id="GLInfo" component={GLInfo} durationInFrames={1} fps={30} width={1600} height={240} />
     </>
   );

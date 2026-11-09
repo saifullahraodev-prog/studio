@@ -3,6 +3,7 @@
   "name": "Judge",
   "role": "1911 New York judge in a black robe with a gavel. Generic, not a real person.",
   "faceVariant": "D",
+  "skin": "#E2B993",
   "faceExtras": { "glasses": true },
   "body": {
     "torso": "#16161A",

@@ -131,7 +131,8 @@ const frag = /* glsl */ `
       col += lightColor * sp * sheen * lit;
     }
 
-    if (hatch > 0.5) {
+    // faces stay clean: never hatch the drawn face panel, only the bare head around it
+    if (hatch > 0.5 && !useMap) {
       // two hatch layers in panel space: light side clean, terminator single, deep shadow cross
       float s1 = 1.0 - smoothstep(-0.32, -0.12, ndl);   // only surfaces turned away get strokes
       float s2 = 1.0 - smoothstep(-0.7, -0.45, ndl);    // cross-hatch only in the deepest shadow
@@ -141,7 +142,11 @@ const frag = /* glsl */ `
       float h1 = lines((hp.x * 1.3 + hp.y) * hatchDensity + wob, 0.13) * s1;
       float h2 = lines((hp.x * 1.3 - hp.y) * hatchDensity * 0.85 - wob, 0.12) * s2;
       float h = clamp(h1 + h2, 0.0, 1.0);
-      col = mix(col, ink * light * 0.9, h * 0.62);
+      // anti-moire: when strokes get closer than ~4 px on screen they fade out instead of
+      // aliasing into wavy stripes (the "stripe pattern" bug in video frames)
+      float period = fwidth((hp.x * 1.3 + hp.y) * hatchDensity);
+      h *= 1.0 - smoothstep(0.07, 0.14, period); // strokes must be >= ~14 px apart to show
+      col = mix(col, ink * light * 0.9, h * 0.5);
       col *= 1.0 + 0.08 * s1;  // hatched paper stays lighter than flat grey
     }
     col += c.rgb * glow;

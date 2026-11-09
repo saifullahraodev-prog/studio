@@ -16,6 +16,7 @@ export type CharacterDef = {
   role: string;
   faceVariant: FaceVariant;
   faceExtras: FaceExtras;
+  skin?: string; // head colour around a paper face panel (revision-2 faces)
   body: {
     torso: string;
     torsoStyle: "coat" | "vest" | "shirt" | "blouse" | "robe";

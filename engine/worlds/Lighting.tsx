@@ -28,8 +28,8 @@ export const Lighting: React.FC<{ preset: LightingPreset; focus?: [number, numbe
         shadow-camera-bottom={-shadowSize}
         shadow-camera-near={1}
         shadow-camera-far={80}
-        shadow-bias={-0.0004}
-        shadow-normalBias={0.02}
+        shadow-bias={-0.0006}
+        shadow-normalBias={0.045}
       >
         <object3D attach="target" position={focus} />
       </directionalLight>

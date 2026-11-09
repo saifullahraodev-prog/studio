@@ -3,6 +3,7 @@
   "name": "Factory owner",
   "role": "Generic 1911 factory boss (suit, waistcoat, watch chain, bowler). Not a likeness of any real person.",
   "faceVariant": "D",
+  "skin": "#E8C4A0",
   "faceExtras": { "mustache": true },
   "body": {
     "torso": "#33302E",

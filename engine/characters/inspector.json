@@ -3,6 +3,7 @@
   "name": "The Inspector",
   "role": "Recurring narrator. A safety inspector with a clipboard who opens and closes every video.",
   "faceVariant": "D",
+  "skin": "#E6BF97",
   "faceExtras": { "glasses": true },
   "body": {
     "torso": "#C9A36A",

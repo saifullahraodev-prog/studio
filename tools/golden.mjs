@@ -80,4 +80,11 @@ for (const f of manifest.frames) {
 const report = [`Golden-frame ${mode} (${new Date().toISOString()}), threshold ${manifest.threshold}`, ...rows, failed ? `${failed} problem(s): see out/golden-report/` : "All good."].join("\n");
 console.log(report);
 if (mode === "check") writeFileSync(path.join(reportDir, "report.txt"), report);
-process.exit(failed ? 1 : 0);
+// face cleanliness: no stripe pattern on any character's face in any lighting preset
+let faceFail = 0;
+if (mode === "check") {
+  const fc = spawnSync("python", ["-I", "tools/facecheck.py"], { cwd: root, encoding: "utf8" });
+  console.log(fc.stdout.trim());
+  faceFail = fc.status === 0 ? 0 : 1;
+}
+process.exit(failed || faceFail ? 1 : 0);

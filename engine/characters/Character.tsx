@@ -98,12 +98,13 @@ const S: React.FC<React.PropsWithChildren<{ p?: [number, number, number]; r?: [n
 );
 
 // ─── head + face ────────────────────────────────────────────────────────────
-const Head: React.FC<{ sheet: string; variant: FaceVariant; expression: Expression; mouth: MouthSlot }> = ({ sheet, variant, expression, mouth }) => {
+const Head: React.FC<{ sheet: string; variant: FaceVariant; expression: Expression; mouth: MouthSlot; skin?: string }> = ({ sheet, variant, expression, mouth, skin }) => {
   const headFace = isHeadFace(variant);
   const light = useSceneLight();
   const look = useFaceLook();
   const base = useStaticTexture(sheet);
-  const headMat = useMemo(() => makeInkPaperMaterial({ paper: F.headPaper, hatchDensity: 30 }), []);
+  // whole-head comic faces are paper-coloured; paper-panel faces sit on a skin-toned head
+  const headMat = useMemo(() => makeInkPaperMaterial({ paper: headFace ? F.headPaper : skin ?? "#E2B993", hatchDensity: 30 }), [headFace, skin]);
   const faceMat = useMemo(() => (base ? makeInkPaperMaterial({ map: base, paper: style.ink.paper, hatchDensity: 30 }) : null), [base]);
   const rimTex = useMemo(() => {
     if (!base) return null;
@@ -133,7 +134,7 @@ const Head: React.FC<{ sheet: string; variant: FaceVariant; expression: Expressi
           <meshBasicMaterial color={style.ink.ink} side={THREE.BackSide} />
         </mesh>
       )}
-      {look.rim && !headFace && rimTex && (
+      {look.rim && !headFace && variant !== "E" && rimTex && (
         <mesh geometry={rimGeo}>
           <meshBasicMaterial map={rimTex} color={style.ink.ink} alphaTest={0.5} />
         </mesh>
@@ -720,7 +721,7 @@ export const Character: React.FC<CharacterProps> = ({ def, expression = "neutral
         {def.prop === "shovel" && !pose.noProp && <ShovelOnShoulder />}
         {def.prop === "axe" && !pose.noProp && <AxeOnShoulder />}
         <group position={[0, HEAD_Y, 0]} rotation={[pose.headNod ?? 0, pose.headYaw ?? 0, pose.headTilt ?? 0]}>
-          <Head sheet={faceSheetPath(def.id, v)} variant={v} expression={expression} mouth={mouth} />
+          <Head sheet={faceSheetPath(def.id, v)} variant={v} expression={expression} mouth={mouth} skin={def.skin} />
           {def.hair && <Hair h={def.hair} />}
           {def.faceExtras.glasses && <Spectacles variant={v} />}
           <Headgear g={def.headgear} />

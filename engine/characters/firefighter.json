@@ -3,6 +3,7 @@
   "name": "Firefighter (FDNY, 1911)",
   "role": "New York firefighter with the classic leather helmet (long back brim, front shield) and rubber coat.",
   "faceVariant": "D",
+  "skin": "#D7A27A",
   "faceExtras": { "soot": true, "mustache": true },
   "body": {
     "torso": "#23252B",

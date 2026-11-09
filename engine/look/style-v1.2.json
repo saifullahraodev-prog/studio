@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "note": "v1.2 (Phase 4, 2026-11-09): v1.1 + two lighting presets for indoor worlds ('interior' warm afternoon through factory windows, 'fire' smoky orange). Existing presets and all other values identical to v1.1. Owner reviews at GATE 4.",
+  "note": "v1.2 (Phase 4, 2026-11-09): v1.1 + two lighting presets for indoor worlds ('interior' warm afternoon through factory windows, 'fire' smoky orange). Existing presets and all other values identical to v1.1. Owner reviews at GATE 4. Revision 2 (owner review): pen hatching OFF on heads/faces (it aliased into stripes in video frames); faces stay clean.",
   "render": {
     "materials": "pbr",
     "envIntensity": 0.55,
@@ -31,7 +31,7 @@
     "panelH": 0.8,
     "headPaper": "#EAE3D3",
     "shading": {
-      "hatch": true,
+      "hatch": false,
       "rim": true
     },
     "relief": 0.5,

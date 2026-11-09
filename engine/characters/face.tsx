@@ -8,14 +8,20 @@ import { style } from "../look/style";
 // Our own design; deliberately NOT a white round circle face.
 // ─────────────────────────────────────────────────────────────────────────────
 
-export const FACE_VARIANTS = ["A", "B", "C", "D"] as const;
+export const FACE_VARIANTS = ["A", "B", "C", "D", "E", "F", "G"] as const;
 export type FaceVariant = (typeof FACE_VARIANTS)[number];
 export const VARIANT_NAMES: Record<FaceVariant, string> = {
   A: "Ink Dot",
   B: "Bean & Blush",
   C: "Woodcut",
   D: "Comic", // whole head is the face; big expressive eyes (current channel look)
+  // Revision 2: our own design. Off-white rounded-square paper panel on a skin-toned head,
+  // charcoal ink, faint paper grain, Comic expressions redrawn for the panel.
+  E: "Paper Card",
+  F: "Ink Frame",
+  G: "Torn Paper",
 };
+export const isPanelComic = (v: FaceVariant) => v === "E" || v === "F" || v === "G";
 // Variants whose cells are transparent (features only, drawn straight onto the head).
 export const isHeadFace = (v: FaceVariant) => v === "D";
 
@@ -79,6 +85,9 @@ const LOOK: Record<FaceVariant, VariantLook> = {
   B: { scale: 1, radius: 54, border: 4, browW: 5, browCap: "round", mouthW: 5 },
   C: { scale: 1, radius: 34, border: 3, browW: 13, browCap: "butt", mouthW: 7 },
   D: { scale: 1, radius: 0, border: 0, browW: 11, browCap: "round", mouthW: 7 },
+  E: { scale: 0.8, radius: 64, border: 0, browW: 11, browCap: "round", mouthW: 7 },
+  F: { scale: 0.78, radius: 48, border: 6, browW: 11, browCap: "round", mouthW: 7 },
+  G: { scale: 0.8, radius: 30, border: 0, browW: 11, browCap: "round", mouthW: 7 },
 };
 
 const INK = style.ink.ink;
@@ -321,6 +330,7 @@ export const FaceCell: React.FC<{
   uid: string;
 }> = ({ variant: v, expression, mouth, extras = {}, uid }) => {
   if (v === "D") return <ComicCell expression={expression} mouth={mouth} extras={extras} uid={uid} />;
+  if (isPanelComic(v)) return <PanelComicCell v={v} expression={expression} mouth={mouth} extras={extras} uid={uid} />;
   const e = EXPR[expression];
   const L = LOOK[v];
   const inset = 6;
@@ -465,7 +475,7 @@ const ComicLashes: React.FC<{ c: ComicExpr; side: -1 | 1 }> = ({ c, side }) => {
   );
 };
 
-const ComicCell: React.FC<{ expression: Expression; mouth: MouthSlot; extras: FaceExtras; uid: string }> = ({ expression, mouth, extras, uid }) => {
+const ComicCell: React.FC<{ expression: Expression; mouth: MouthSlot; extras: FaceExtras; uid: string; ink?: string }> = ({ expression, mouth, extras, uid, ink }) => {
   const e = EXPR[expression];
   const c = COMIC[expression];
   const shape = mouth === "rest" ? e.mouth : mouth === "closed" ? (e.mouth === "openSmile" ? "smile" : e.mouth === "bigO" || e.mouth === "oTall" ? "small" : e.mouth) : mouth;
@@ -477,7 +487,7 @@ const ComicCell: React.FC<{ expression: Expression; mouth: MouthSlot; extras: Fa
           <feDisplacementMap in="SourceGraphic" in2="t" scale={style.ink.wobble * 2} />
         </filter>
       </defs>
-      <g filter={`url(#wobble-${uid})`}>
+      <g filter={`url(#wobble-${uid})`} style={ink ? { color: ink } : undefined}>
         <Extras v="D" x={{ ...extras, glasses: false, mustache: false }} e={e} />
         <ComicEye c={c} side={-1} uid={uid} />
         <ComicEye c={c} side={1} uid={uid} />
@@ -501,6 +511,43 @@ const ComicCell: React.FC<{ expression: Expression; mouth: MouthSlot; extras: Fa
         )}
         <Drops e={e} />
       </g>
+    </g>
+  );
+};
+
+// ─── Revision-2 faces: comic features on an off-white rounded-square paper panel ───
+const PanelComicCell: React.FC<{ v: FaceVariant; expression: Expression; mouth: MouthSlot; extras: FaceExtras; uid: string }> = ({ v, expression, mouth, extras, uid }) => {
+  const L = LOOK[v];
+  const ix = 30; // smaller panel: the skin-toned head shows around it
+  const iy = 14;
+  const torn = v === "G";
+  const charcoal = "#2B2A2E";
+  const panel = (props: React.SVGProps<SVGRectElement>) => <rect x={ix} y={iy} width={W - ix * 2} height={H - iy * 2} rx={L.radius} {...props} />;
+  return (
+    <g>
+      <defs>
+        <clipPath id={`pc-${uid}`}>{panel({})}</clipPath>
+        <filter id={`pg-${uid}`} x="0" y="0" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed={11} result="n" />
+          <feColorMatrix type="matrix" values="0 0 0 0 0.4  0 0 0 0 0.35  0 0 0 0 0.28  0 0 0 -1.5 1.0" />
+        </filter>
+        <filter id={`pt-${uid}`} x="-5%" y="-5%" width="110%" height="110%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.07" numOctaves="3" seed={5} result="t" />
+          <feDisplacementMap in="SourceGraphic" in2="t" scale={14} />
+        </filter>
+      </defs>
+      {/* the paper itself (torn edge only affects the paper, never the drawing) */}
+      <g filter={torn ? `url(#pt-${uid})` : undefined}>
+        {panel({ fill: PAPER })}
+        <g clipPath={`url(#pc-${uid})`}>
+          <rect x={0} y={0} width={W} height={H} filter={`url(#pg-${uid})`} opacity={0.22} style={{ mixBlendMode: "multiply" }} />
+        </g>
+        {torn && panel({ fill: "none", stroke: "#9A8A70", strokeWidth: 3, opacity: 0.7 })}
+      </g>
+      <g transform={`translate(${CX} 122) scale(${L.scale}) translate(${-CX} -128)`}>
+        <ComicCell expression={expression} mouth={mouth} extras={extras} uid={`${uid}-f`} ink={charcoal} />
+      </g>
+      {L.border > 0 && panel({ fill: "none", stroke: charcoal, strokeWidth: L.border, filter: `url(#wobble-${uid}-f)` })}
     </g>
   );
 };
@@ -536,6 +583,10 @@ export const cellUV = (expression: Expression, mouth: MouthSlot) => {
 // Eye centre + glasses ring radius in cell pixels (for 3D props placed on the face).
 export const eyeCellPos = (v: FaceVariant) => {
   if (v === "D") return { dx: CD.dx, y: CD.eyeY, ringR: CD.ry + 9 };
+  if (isPanelComic(v)) {
+    const k = LOOK[v].scale;
+    return { dx: CD.dx * k, y: 122 + (CD.eyeY - 128) * k, ringR: (CD.ry + 9) * k };
+  }
   const s = LOOK[v].scale;
   return { dx: EYE_DX * s, y: 128 + (EYE_Y + 2 - 128) * s, ringR: 27 * s };
 };

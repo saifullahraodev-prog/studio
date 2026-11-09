@@ -3,6 +3,7 @@
   "name": "Frances Perkins (stylised)",
   "role": "Young reformer, witness to the fire, later Secretary of Labor. Stylised chibi, not a portrait: dark dress, tricorn-style hat, notebook.",
   "faceVariant": "D",
+  "skin": "#EDCBAA",
   "faceExtras": { "lashes": true },
   "body": {
     "torso": "#2E3A4A",

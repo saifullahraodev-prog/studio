@@ -149,3 +149,22 @@ export const ActionPose: React.FC<{ action: string; character: string }> = ({ ac
     </AbsoluteFill>
   );
 };
+
+// Revision 2 face options: the Inspector with one face variant, three expressions, medium-close.
+export const FaceOption: React.FC<{ variant: FaceVariant }> = ({ variant }) => {
+  const { width, height } = useVideoConfig();
+  const ex: Expression[] = ["neutral", "angry", "shocked"];
+  return (
+    <AbsoluteFill style={{ background: bg }}>
+      <ThreeCanvas width={width} height={height} shadows gl={{ alpha: true }}>
+        <CameraRig position={[0, 2.3, 8.4]} target={[0, 1.75, 0]} fov={26} />
+        <StudioLights />
+        {ex.map((e, i) => (
+          <Character key={e} def={BIBLE.inspector} faceVariant={variant} expression={e} position={[(i - 1) * 1.75, 0, 0]} rotationY={(1 - i) * 0.25} pose={{ armL: [0.3, 0.2] }} />
+        ))}
+      </ThreeCanvas>
+      <Label x="50%" text={`${variant}: ${VARIANT_NAMES[variant]}`} />
+    </AbsoluteFill>
+  );
+};
+
