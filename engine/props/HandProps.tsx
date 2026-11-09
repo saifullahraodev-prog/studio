@@ -7,7 +7,7 @@ import { Toon } from "../look/style";
 // Keep them chunky and readable at Shorts size.
 // ─────────────────────────────────────────────────────────────────────────────
 
-export type HeldProp = "flamegun" | "stamp" | "oar" | "lantern" | "lifejacket" | "rope" | "binoculars" | "telegram" | "rulebook" | "rifle" | "rocket" | "whistle" | "hammer";
+export type HeldProp = "rifleport" | "riflehip" | "flamegun" | "stamp" | "oar" | "lantern" | "lifejacket" | "rope" | "binoculars" | "telegram" | "rulebook" | "rifle" | "rocket" | "whistle" | "hammer";
 
 const M: React.FC<React.PropsWithChildren<{ p?: [number, number, number]; r?: [number, number, number]; s?: [number, number, number] }>> = ({ p, r, s, children }) => (
   <mesh position={p} rotation={r} scale={s} castShadow receiveShadow>
@@ -121,15 +121,36 @@ const RulebookHand: React.FC = () => (
   </group>
 );
 
-const Rifle: React.FC = () => (
-  <group position={[0, -0.05, 0.05]} rotation={[Math.PI / 2 - 0.2, 0, 0]}>
-    <M p={[0, 0.25, 0]}>
-      <boxGeometry args={[0.06, 0.9, 0.08]} />
-      <Toon color="#6A4428" kind="wood" />
+// chunky bolt-action rifle with bayonet; origin = right-hand grip, barrel along +y before `rot`
+const Rifle: React.FC<{ rot?: [number, number, number] }> = ({ rot = [Math.PI / 2 - 0.2, 0, 0] }) => (
+  <group position={[0, -0.05, 0.05]} rotation={rot}>
+    {/* butt stock behind the grip */}
+    <M p={[0, -0.32, -0.03]} r={[0.12, 0, 0]}>
+      <boxGeometry args={[0.1, 0.5, 0.16]} />
+      <Toon color="#8A5A32" kind="wood" />
     </M>
-    <M p={[0, 0.65, 0.02]}>
-      <cylinderGeometry args={[0.018, 0.018, 0.6, 8]} />
+    {/* forestock */}
+    <M p={[0, 0.32, 0]}>
+      <boxGeometry args={[0.085, 0.8, 0.1]} />
+      <Toon color="#8A5A32" kind="wood" />
+    </M>
+    {/* receiver + bolt */}
+    <M p={[0, 0.02, 0.04]}>
+      <boxGeometry args={[0.07, 0.22, 0.09]} />
       <Toon color="#2A2B2F" kind="metal" />
+    </M>
+    <M p={[0.07, 0.04, 0.05]}>
+      <sphereGeometry args={[0.03, 8, 6]} />
+      <Toon color="#2A2B2F" kind="metal" />
+    </M>
+    {/* barrel + bayonet */}
+    <M p={[0, 0.88, 0.03]}>
+      <cylinderGeometry args={[0.022, 0.022, 0.42, 8]} />
+      <Toon color="#2A2B2F" kind="metal" />
+    </M>
+    <M p={[0, 1.24, 0.0]}>
+      <boxGeometry args={[0.018, 0.36, 0.045]} />
+      <Toon color="#C9CCD0" kind="metal" />
     </M>
   </group>
 );
@@ -184,7 +205,7 @@ const Hammer: React.FC = () => (
   </group>
 );
 
-const BIG: Partial<Record<string, number>> = { lantern: 1.7, lifejacket: 1.8, binoculars: 1.8, telegram: 1.6, rulebook: 1.5, rope: 1.6, rocket: 1.6, whistle: 1.6, hammer: 1.4 };
+const BIG: Partial<Record<string, number>> = { rifle: 1.35, rifleport: 1.35, riflehip: 1.35, lantern: 1.7, lifejacket: 1.8, binoculars: 1.8, telegram: 1.6, rulebook: 1.5, rope: 1.6, rocket: 1.6, whistle: 1.6, hammer: 1.4 };
 export const HandProp: React.FC<{ name?: HeldProp | string; Stamp?: React.FC }> = ({ name, Stamp }) => <group scale={BIG[name ?? ""] ?? 1}>{propFor(name, Stamp)}</group>;
 const propFor = (name: string | undefined, Stamp?: React.FC) => {
   switch (name) {
@@ -206,6 +227,10 @@ const propFor = (name: string | undefined, Stamp?: React.FC) => {
       return <RulebookHand />;
     case "rifle":
       return <Rifle />;
+    case "rifleport": // carried across the chest, muzzle up and out (running)
+      return <Rifle rot={[0.5, 0, 0.9]} />;
+    case "riflehip": // held low at the hip, bayonet pointing ahead (charging)
+      return <Rifle rot={[1.35, 0, 0.0]} />;
     case "rocket":
       return <Rocket />;
     case "whistle":

@@ -23,7 +23,7 @@
   "enemies-charge": "trench",
   "mg-reveal": "trench",
   "mg-final": "trench",
-  "enemies-advance": "trench",
-  "you-surrounded": "trench"
+  "enemies-close-in": "trench",
+  "you-trapped": "trench"
  }
 }

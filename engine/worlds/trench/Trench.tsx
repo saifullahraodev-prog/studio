@@ -189,10 +189,25 @@ const Crater: React.FC<{ p: [number, number]; r: number }> = ({ p, r }) => (
       <circleGeometry args={[r, 24]} />
       <meshStandardMaterial color="#3A3026" roughness={0.4} />
     </mesh>
-    <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.05, 0]} scale={[1, 1, 0.5]}>
-      <torusGeometry args={[r, r * 0.22, 6, 24]} />
-      <meshStandardMaterial color="#5A4A3A" roughness={1} />
+    <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.0, 0]} scale={[1, 1, 0.22]}>
+      <torusGeometry args={[r, r * 0.3, 5, 14]} />
+      <Real tex="Ground054" tint="#7A6650" repeat={[3, 1]} />
     </mesh>
+  </group>
+);
+
+export const Barrel: React.FC<{ p: [number, number, number]; tipped?: boolean }> = ({ p, tipped }) => (
+  <group position={p} rotation={tipped ? [Math.PI / 2, 0, 0.4] : [0, 0, 0]}>
+    <M p={[0, tipped ? 0 : 0.55, tipped ? -0.45 : 0]}>
+      <cylinderGeometry args={[0.42, 0.42, 1.1, 18]} />
+      <Real tex="Planks037A" tint="#7A5A3A" repeat={[2, 1]} />
+    </M>
+    {[-0.35, 0.35].map((y) => (
+      <M key={y} p={[0, (tipped ? 0 : 0.55) + y, tipped ? -0.45 : 0]}>
+        <torusGeometry args={[0.43, 0.025, 6, 24]} />
+        <Toon color="#2E2E2C" kind="metal" />
+      </M>
+    ))}
   </group>
 );
 

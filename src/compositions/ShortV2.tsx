@@ -91,13 +91,15 @@ const CutSeq: React.FC<{ item: Item; prev?: Item; idx: number }> = ({ item, prev
   const id = `wb-${item.b.id}-${idx}`;
 
   // 1) same place: camera move from where the previous shot ended
-  if (samePlace && c.tr !== "flash" && c.tr !== "hard" && frame < MOVE) {
-    const k = swing(Math.min(1, (frame + 1) / MOVE));
+  // tr=dive: a longer, faster-feeling fly (e.g. swooping down into the trench), more blur
+  const moveN = c.tr === "dive" ? Math.round(fps * 0.5) : MOVE;
+  if (samePlace && c.tr !== "flash" && c.tr !== "hard" && frame < moveN) {
+    const k = swing(Math.min(1, (frame + 1) / moveN));
     const from = shotAt(prev!, prevDur);
     const to = shotAt(item, t);
     return (
       <AbsoluteFill style={{ backgroundColor: "#000" }}>
-        <Layer key="in" item={item} t={t} id={id} camera={blendCam(from.camera, to.camera, k)} focus={lerp3(from.focus as Vec3, to.focus as Vec3, k)} blur={(1 - k) * 10} />
+        <Layer key="in" item={item} t={t} id={id} camera={blendCam(from.camera, to.camera, k)} focus={lerp3(from.focus as Vec3, to.focus as Vec3, k)} blur={Math.sin(Math.PI * k) * (c.tr === "dive" ? 22 : 0) + (1 - k) * 10} />
       </AbsoluteFill>
     );
   }

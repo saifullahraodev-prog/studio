@@ -12,4 +12,4 @@ Workflow for every line:
 
 | # | Narration | Scenes (owner) | Shots | Status |
 |---|---|---|---|---|
-| 1 | Enemy soldiers trap you in a trench. | (a) enemies running toward you, guns in their hands; (b) you down in the trench, seeing enemies surround you | `enemies-advance`, `you-surrounded` | preview sent, waiting |
+| 1 | Enemy soldiers trap you in a trench. | (a) enemies running toward you, guns in their hands; (b) you down in the trench, seeing enemies surround you | `enemies-close-in` -> camera dive (`tr=dive`) -> `you-trapped` (v2, after the reference's first 2 s; rifles now chunky + carried across the chest) | v2 preview sent, waiting |

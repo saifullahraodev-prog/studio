@@ -268,7 +268,7 @@ REACTION_SHOTS = {"stoker-eyes", "insp-eyes", "stoker-shocked-cu", "insp-punch",
 ACTION_SHOTS = {"run-low", "crowd-pile", "crowd-half", "stamp", "ship-too-big", "boats-16", "boats-20", "boats-plus4", "officer-wave",
                 "boat-away", "iceberg-hit", "ship-sinking", "count-fingers", "fingers-out", "furnace-insert", "stoker-furnace", "crowd-2200",
                 "deck-surge", "officer-shove", "climb-boat", "rocket-fire", "stoker-dash", "boat-lowering", "man-leap",
-                "enemies-advance", "you-surrounded", "trench-cornered", "you-plan", "flame-climb", "flame-blast", "you-drop", "you-stagger", "you-corner", "you-quiet", "enemies-charge", "mg-reveal", "mg-final"}
+                "enemies-close-in", "you-trapped", "trench-cornered", "you-plan", "flame-climb", "flame-blast", "you-drop", "you-stagger", "you-corner", "you-quiet", "enemies-charge", "mg-reveal", "mg-final"}
 STILL_GESTURES = {"", "think", "tap", "tick", "talk", "point", "shrug", "count"}
 
 

@@ -16,7 +16,7 @@ export type GestureName =
   // review 2: big, travelling, prop-using actions
   | "jump" | "leap" | "stumble" | "shove" | "pushed" | "climbin" | "row" | "throw" | "binoculars" | "lantern" | "rocket" | "crouch" | "surge" | "runacross"
   // trench Short
-  | "aim" | "spray" | "scream" | "stagger" | "hush" | "mgfire" | "charge" | "jumpdown";
+  | "aim" | "spray" | "scream" | "stagger" | "hush" | "mgfire" | "charge" | "jumpdown" | "advance";
 
 export type GestureOut = Partial<Pose> & { mouth?: MouthSlot };
 
@@ -293,7 +293,9 @@ export const gesture = (name: GestureName | string | undefined, t: number): Gest
     case "mgfire": // kneeling behind the gun, both hands on the grips, shaking when it fires
       return { sink: 0.6, legs: [1.3, 0.2], kneeL: 1.6, kneeR: 2.2, lean: 0.3, armL: [1.5, -0.2], armR: [1.5, -0.15], elbowL: 0.4, elbowR: 0.4, fingersL: 0, fingersR: 0, headNod: 0.1, noProp: true };
     case "charge": // run forward, rifle at the hip (3.6 m/s)
-      return { walk: t * 12, stride: 1, root: [0, 0, t * 3.6], holdR: "rifle", armR: [0.9, -0.15], elbowR: 1.1, armL: [1.2, -0.35], elbowL: 0.9, lean: 0.22, fingersL: 0, noProp: true };
+      return { walk: t * 12, stride: 1, root: [0, 0, t * 3.6], holdR: "rifleport", armR: [0.9, -0.15], elbowR: 1.1, armL: [1.2, -0.35], elbowL: 0.9, lean: 0.22, fingersL: 0, noProp: true };
+    case "advance": // walk in fast and crouched, rifle across the chest (2.2 m/s)
+      return { walk: t * 8, stride: 0.75, root: [0, 0, t * 2.2], holdR: "rifleport", armR: [0.9, -0.15], elbowR: 1.1, armL: [1.2, -0.35], elbowL: 0.9, lean: 0.3, sink: 0.08, headNod: -0.1, fingersL: 0, noProp: true };
     case "jumpdown": { // hop down from the parapet (3.3 m) in 0.55 s, land with a squash
       const k = clamp01(t / 0.55);
       const land = t > 0.55 ? decay(t - 0.55, 8) : 0;

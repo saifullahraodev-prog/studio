@@ -14,5 +14,6 @@ preset: day
 music: tense
 say: Enemy soldiers trap you in a trench.
 emph: soldiers, trap
-cut: enemy    | enemies-advance | fx=hit
-cut: trap     | you-surrounded  | fx=boom | tr=hard
+cut: enemy    | enemies-close-in | fx=hit
+# tr=dive: same place, so the camera DIVES from the enemies down into the trench (like the reference)
+cut: trap     | you-trapped      | fx=whoosh+boom | tr=dive

@@ -16,7 +16,7 @@ import { ShipDeck } from "../worlds/ship-deck/ShipDeck";
 import { ShotOutput } from "./templates";
 import { DeckBoat, RocketFlare } from "../props/ActionProps";
 import { FireJet, FloorRifle, MachineGun } from "../props/TrenchProps";
-import { Trench, TRENCH } from "../worlds/trench/Trench";
+import { Barrel, Trench, TRENCH } from "../worlds/trench/Trench";
 import { Flames, Smoke } from "../fx/Fire";
 import SETS from "./sets.json";
 
@@ -26,7 +26,7 @@ import SETS from "./sets.json";
 // punch-in on entry, slow push, handheld drift. Gestures come from the gesture kit.
 // ─────────────────────────────────────────────────────────────────────────────
 
-export type Cut = { cue: string; shot: string; face: Expression; do?: string; fx?: string; tr: "cut" | "whip" | "flash" | "hard"; start: number; end: number };
+export type Cut = { cue: string; shot: string; face: Expression; do?: string; fx?: string; tr: "cut" | "whip" | "flash" | "hard" | "dive"; start: number; end: number };
 export type CutBeat = { id: string; speaker: "inspector" | "vo"; preset: LightingPresetName; words: WordTiming[]; start: number; end: number };
 export type CutInput = { beat: CutBeat; cut: Cut; t: number; dur: number; abs: number };
 
@@ -636,54 +636,56 @@ const TPL: Record<string, T> = {
     };
   },
 
-  // -- "Trench Trap" line 1 --
-  // (a) enemy soldiers run straight at you across no-man's-land, rifles in hand (camera at the parapet)
-  "enemies-advance": ({ beat, t, dur }) => ({
+  // -- "Trench Trap" line 1 (after the reference's first 2 s) --
+  // (a) high, behind the enemy: soldiers with rifles close in on the trench; barrels in the foreground.
+  //     The next shot (same place) makes the camera DIVE down into the trench.
+  "enemies-close-in": ({ beat, t, dur }) => ({
     real: true,
-    camera: live({ position: [2.9, TRENCH.H + 1.9, 0.6], target: [16, TRENCH.H + 1.7, 0.2], fov: 50 }, t, dur, { push: 0.05, shake: 0.012 }),
-    focus: [15.5 - 3 * t, TRENCH.H + 2.2, 0.4],
+    camera: live({ position: [21, TRENCH.H + 7.5, 5.0], target: [2.0, 1.0, 0.8], fov: 46 }, t, dur, { push: 0.1 }),
+    focus: [9.5, TRENCH.H + 1.5, 1.4],
     focusRange: 7,
-    bokeh: 2,
+    bokeh: 3,
     content: (
       <>
         <Trench preset={P(beat)} />
+        <Barrel p={[17.6, TRENCH.H, 4.6]} />
+        <Barrel p={[18.4, TRENCH.H, 3.3]} tipped />
+        <Barrel p={[17.0, TRENCH.H, 6.0]} />
         {[
-          { x: 15.5, z: 0.4, ph: 0 },
-          { x: 17.2, z: -2.6, ph: 0.3 },
-          { x: 18.0, z: 3.1, ph: 0.55 },
-          { x: 20.0, z: -0.5, ph: 0.8 },
-          { x: 21.5, z: 4.8, ph: 0.2 },
-          { x: 22.8, z: -4.4, ph: 0.65 },
-          { x: 25.0, z: 1.8, ph: 0.4 },
+          { x: 10.6, z: 1.0, ph: 0 },
+          { x: 11.6, z: 3.6, ph: 0.35 },
+          { x: 9.4, z: -1.6, ph: 0.6 },
+          { x: 12.4, z: -0.8, ph: 0.2 },
+          { x: 13.6, z: 5.6, ph: 0.8 },
+          { x: 14.8, z: -3.0, ph: 0.45 },
         ].map((e, i) => (
-          <Character key={i} def={BIBLE.enemy} expression="angry" mouth={i % 2 ? "wide" : "rest"} position={[e.x, TRENCH.H, e.z]} rotationY={-Math.PI / 2 + (e.z > 0 ? -0.08 : 0.08)} pose={{ ...gesture("charge", t + e.ph), root: [0, 0, t * 3.0] }} />
+          <Character key={i} def={BIBLE.enemy} expression="angry" position={[e.x, TRENCH.H, e.z]} rotationY={-Math.PI / 2 + (e.z - 1) * 0.04} pose={{ ...gesture("advance", t + e.ph), root: [0, 0, t * 2.2] }} />
         ))}
       </>
     ),
   }),
-  // (b) you, down in the trench, spin round as enemies pop up over every edge and aim down at you
-  "you-surrounded": ({ beat, t, dur }) => {
+  // (b) you, crouched and cornered at the end of the trench, hand up; rifles aimed down over every edge
+  "you-trapped": ({ beat, t, dur }) => {
     const rise = (d: number) => {
-      const k = Math.max(0, Math.min(1, (t - d) / 0.28));
+      const k = Math.max(0, Math.min(1, (t - d) / 0.25));
       const p = k - 1;
       return TRENCH.H - 1.8 * (1 - (1 + 2.6 * p * p * p + 1.6 * p * p));
     };
     return {
       real: true,
-      camera: live({ position: [0.8, 1.3, 9.6], target: [-0.1, 3.5, 1.6], fov: 58 }, t, dur, { push: 0.14 }),
-      focus: [0, 2.4, 2.6],
-      focusRange: 4,
-      bokeh: 5,
+      camera: live({ position: [-0.6, 1.6, -2.2], target: [0.4, 2.7, -6.6], fov: 58 }, t, dur, { push: 0.12, shake: 0.015 }),
+      focus: [0.5, 1.8, -6.4],
+      focusRange: 1.8,
+      bokeh: 6,
       content: (
         <>
           <Trench preset={P(beat)} />
-          <Character def={BIBLE.tommy} expression="scared" mouth={t > 0.4 ? "round" : "rest"} position={[0.1, 0, 2.8]} rotationY={0.15} pose={{ turn: Math.sin(t * 3.2) * 0.75, headNod: -0.35, headYaw: Math.sin(t * 3.2 + 0.6) * 0.3, armL: [0.6, 0.35], armR: [0.7, 0.3], bob: Math.abs(Math.sin(t * 8)) * 0.03, holdR: "rifle", noProp: true }} />
+          <Character def={BIBLE.tommy} expression="scared" mouth={t > 0.3 ? "round" : "rest"} position={[0.55, 0, -6.5]} rotationY={-0.25} pose={{ ...gesture("crouch", t), lean: 0.05, headNod: -0.3, headYaw: Math.sin(t * 2.6) * 0.35, armR: [2.0, 0.55], elbowR: 0.7, fingersR: 4, armL: [1.0, -0.3], elbowL: 1.2, holdL: "rifle" }} />
           {[
-            { x: -2.4, z: 0.3, r: Math.PI / 2 - 0.3, d: 0 },
-            { x: 2.5, z: 1.5, r: -Math.PI / 2 + 0.25, d: 0.12 },
-            { x: -2.5, z: 3.9, r: Math.PI / 2 + 0.2, d: 0.26 },
-            { x: 2.4, z: 5.2, r: -Math.PI / 2 - 0.2, d: 0.38 },
-            { x: 0.2, z: -8.4, r: 0, d: 0.5 },
+            { x: 2.6, z: -5.4, r: -Math.PI / 2 - 0.4, d: 0.15 },
+            { x: 0.2, z: -8.6, r: 0.15, d: 0.3 },
+            { x: -1.9, z: -8.7, r: 0.5, d: 0.45 },
+            { x: 2.7, z: -3.0, r: -Math.PI / 2 - 0.1, d: 0.6 },
           ].map((e, i) => (
             <Character key={i} def={BIBLE.enemy} expression="angry" position={[e.x, rise(e.d), e.z]} rotationY={e.r} pose={gesture("aim", t + i * 0.6)} />
           ))}
