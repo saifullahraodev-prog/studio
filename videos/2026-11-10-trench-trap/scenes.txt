@@ -1,10 +1,10 @@
-# "Trench Trap": built line by line (see lines.md). Placeholder voice until the owner records.
+# "Trench Trap": built line by line (see lines.md). Voice: owner's recording (line 1 = first sentence of the CapCut take, 1.1 s silence in front).
 # Build:  HF_HUB_OFFLINE=1 python -I tools/build_video.py videos/2026-11-10-trench-trap
 
 slug: trench-trap
 format: short
 world: trench
-voice: piper
+voice: recording
 # the enemies charge for a moment before the first word
 lead: 1.1
 
@@ -12,8 +12,8 @@ lead: 1.1
 speaker: vo
 preset: day
 music: tense
-say: Enemy soldiers trap you in a trench.
-emph: soldiers, trap
+say: Enemy soldiers have you cornered in your own trench,
+emph: soldiers, cornered
 cut: enemy    | enemies-close-in | fx=hit
 # tr=dive: same place, so the camera DIVES from the enemies down into the trench (like the reference)
-cut: trap     | you-trapped      | fx=whoosh+boom | tr=dive
+cut: cornered | you-trapped      | fx=whoosh+boom | tr=dive

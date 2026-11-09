@@ -3,7 +3,7 @@
  "format": "short",
  "world": "trench",
  "fps": 30,
- "duration": 3.56,
+ "duration": 4.02,
  "beats": [
   {
    "id": "b1",
@@ -13,108 +13,135 @@
      "shot": "enemies-close-in",
      "fx": "hit",
      "start": 0.0,
-     "end": 1.52,
+     "end": 2.18,
      "face": "neutral",
      "tr": "cut"
     },
     {
-     "cue": "trap",
+     "cue": "cornered",
      "shot": "you-trapped",
      "fx": "whoosh+boom",
      "tr": "dive",
-     "start": 1.52,
-     "end": 3.56,
+     "start": 2.18,
+     "end": 4.02,
      "face": "neutral"
     }
    ],
    "speaker": "vo",
    "preset": "day",
    "music": "tense",
-   "say": "Enemy soldiers trap you in a trench.",
+   "say": "Enemy soldiers have you cornered in your own trench,",
    "emph": [
     "soldiers",
-    "trap"
+    "cornered"
    ],
-   "subtitle": "Enemy soldiers trap you in a trench.",
+   "subtitle": "Enemy soldiers have you cornered in your own trench,",
    "pause": 0.05,
-   "voiceStart": 1.1,
-   "voiceEnd": 2.76,
+   "voiceStart": 0.78,
+   "voiceEnd": 3.38,
    "start": 0.0,
-   "end": 3.56,
+   "end": 4.02,
    "words": [
     {
-     "word": "soldiers",
-     "start": 1.3,
-     "end": 1.56
+     "word": "Enemy",
+     "start": 0.78,
+     "end": 1.42
     },
     {
-     "word": "trap",
-     "start": 1.56,
-     "end": 2.0
+     "word": "soldiers",
+     "start": 1.42,
+     "end": 1.76
+    },
+    {
+     "word": "have",
+     "start": 1.76,
+     "end": 2.08
     },
     {
      "word": "you",
-     "start": 2.0,
-     "end": 2.16
+     "start": 2.08,
+     "end": 2.22
+    },
+    {
+     "word": "cornered",
+     "start": 2.22,
+     "end": 2.64
     },
     {
      "word": "in",
-     "start": 2.16,
-     "end": 2.3
+     "start": 2.64,
+     "end": 2.72
     },
     {
-     "word": "a",
-     "start": 2.3,
-     "end": 2.4
+     "word": "your",
+     "start": 2.72,
+     "end": 2.86
+    },
+    {
+     "word": "own",
+     "start": 2.86,
+     "end": 3.06
     },
     {
      "word": "trench.",
-     "start": 2.4,
-     "end": 2.6
+     "start": 3.06,
+     "end": 3.38
     }
    ],
-   "cueAt": 1.1,
+   "cueAt": 0.78,
    "aligned": [
     [
      "Enemy",
-     1.3,
-     1.3,
-     null
+     0.78,
+     1.42,
+     "Enemy"
     ],
     [
      "soldiers",
-     1.3,
-     1.56,
+     1.42,
+     1.76,
      "soldiers"
     ],
     [
-     "trap",
-     1.56,
-     2.0,
-     "trap"
+     "have",
+     1.76,
+     2.08,
+     "have"
     ],
     [
      "you",
-     2.0,
-     2.16,
+     2.08,
+     2.22,
      "you"
     ],
     [
+     "cornered",
+     2.22,
+     2.64,
+     "cornered"
+    ],
+    [
      "in",
-     2.16,
-     2.3,
+     2.64,
+     2.72,
      "in"
     ],
     [
-     "a",
-     2.3,
-     2.4,
-     "a"
+     "your",
+     2.72,
+     2.86,
+     "your"
     ],
     [
-     "trench.",
-     2.4,
-     2.6,
+     "own",
+     2.86,
+     3.06,
+     "own"
+    ],
+    [
+     "trench,",
+     3.06,
+     3.38,
      "trench."
     ]
    ]
@@ -123,50 +150,64 @@
  "captionWords": [
   {
    "text": "Enemy",
-   "start": 1.3,
-   "end": 1.3,
+   "start": 0.78,
+   "end": 1.42,
    "emph": false,
    "brk": false
   },
   {
    "text": "soldiers",
-   "start": 1.3,
-   "end": 1.56,
+   "start": 1.42,
+   "end": 1.76,
    "emph": true,
    "brk": false
   },
   {
-   "text": "trap",
-   "start": 1.56,
-   "end": 2.0,
-   "emph": true,
+   "text": "have",
+   "start": 1.76,
+   "end": 2.08,
+   "emph": false,
    "brk": false
   },
   {
    "text": "you",
-   "start": 2.0,
-   "end": 2.16,
+   "start": 2.08,
+   "end": 2.22,
    "emph": false,
+   "brk": false
+  },
+  {
+   "text": "cornered",
+   "start": 2.22,
+   "end": 2.64,
+   "emph": true,
    "brk": false
   },
   {
    "text": "in",
-   "start": 2.16,
-   "end": 2.3,
+   "start": 2.64,
+   "end": 2.72,
    "emph": false,
    "brk": false
   },
   {
-   "text": "a",
-   "start": 2.3,
-   "end": 2.4,
+   "text": "your",
+   "start": 2.72,
+   "end": 2.86,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "own",
+   "start": 2.86,
+   "end": 3.06,
    "emph": false,
    "brk": false
   },
   {
    "text": "trench",
-   "start": 2.4,
-   "end": 2.6,
+   "start": 3.06,
+   "end": 3.38,
    "emph": false,
    "brk": true
   }
