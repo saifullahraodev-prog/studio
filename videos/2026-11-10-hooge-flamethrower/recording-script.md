@@ -1,39 +1,31 @@
-# Recording script: "First flamethrower attack" Short (~35 seconds)
+# Recording script: "The Flamethrower Trap" Short (~22 seconds)
 
-Read in one take, top to bottom, with a short breath between lines.
+Owner's choice (2026-11-10): follow the reference video's story. Written in our own words.
+This is a DRAMATIZED scenario (not a documented event); the video description should say so.
+
+Read in one take, fast and punchy, almost no gaps between lines.
 If you stumble, pause and say the whole line again; I'll keep the last clean take.
 
 ---
 
-**[THE INSPECTOR: low, tense, like you're whispering in the trench]**
+**[THE INSPECTOR: quick, conspiratorial]**
 
-It's three in the morning, July 1915. You're in a British trench at a place called Hooge, near Ypres.
-And the enemy is about to use something you've never seen.
+Enemy soldiers have you cornered in your own trench. So you make a plan.
 
-*(short pause)*
+**[NARRATOR: fast, building]**
 
-**[NARRATOR: building fast]**
+One of them climbs up and hoses the trench with fire.
+You scream, throw down your rifle, and stagger away like you've lost your mind.
 
-A hiss. Then a jet of fire pours over the parapet. Liquid fire.
+You duck around the corner… and go dead quiet.
 
-Men drop their rifles and run. Within minutes, the enemy takes the trench.
+They think you're finished. So they charge in after you…
 
-*(short pause)*
+**[THE INSPECTOR: slow, with a grin]**
 
-**[NARRATOR: calmer, "here's the trick"]**
-
-But the soldiers who survive notice two things. The fire only reaches about twenty metres.
-And the tank runs dry in seconds.
-
-So next time, they don't run. They back off, let the flame burn out, and aim at the man carrying the tank.
-
-*(pause)*
-
-**[THE INSPECTOR: firm, slower]**
-
-Decades later, the world agreed on limits for fire weapons.
-And that's why, today, international law bans attacking civilians with flamethrowers and other fire weapons.
+…straight into the machine gun you set up there an hour ago.
 
 ---
 
-Tips: Hooge is said "HOAG-uh"; Ypres "EE-pruh". Any audio file is fine (phone memo, .mp3, .wav).
+Tips: the first half is panic (fast), then "go dead quiet" drops to a whisper, then the last line lands
+slowly. Any audio file is fine (phone memo, .mp3, .wav).

@@ -1,3 +1,14 @@
+# Short: "The Flamethrower Trap". DRAMATIZED (owner decision 2026-11-10)
+
+The owner chose to follow the reference Short's story (Q0g-PUwRfTw) instead of the documented Hooge version
+below. Our own wording; current recording script: `recording-script.md`.
+Not fact-checked (no reliable source for the anecdote). Mark it as a dramatization in the description,
+e.g. "A dramatized trench scenario."
+
+The earlier documented (Hooge 1915) draft is kept below for reference.
+
+---
+
 # Short: "POV: the first flamethrower attack on the British Army". DRAFT for approval
 
 Our own take on the idea of the reference Short (Q0g-PUwRfTw). Same kind of story (fire in a trench,
