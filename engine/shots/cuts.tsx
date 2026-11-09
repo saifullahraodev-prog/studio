@@ -29,6 +29,10 @@ export type CutInput = { beat: CutBeat; cut: Cut; t: number; dur: number; abs: n
 const HY = HEAD_HEIGHT;
 const P = (b: CutBeat) => style.lighting[b.preset];
 const clamp01 = (x: number) => Math.max(0, Math.min(1, x));
+// these templates were framed for the original body (head centre at 1.7684 m); taller bodies (style.body)
+// lift every camera height by the same ratio so heads stay in frame
+const BODY_K = HY / 1.7684;
+const lift = (c: CameraState): CameraState => ({ ...c, position: [c.position[0], c.position[1] * BODY_K, c.position[2]], target: [c.target[0], c.target[1] * BODY_K, c.target[2]] });
 const live = (cam: CameraState, t: number, dur: number, opts: { punch?: number; push?: number; shake?: number } = {}) => {
   let c = push(cam, t / Math.max(dur, 0.3), opts.push ?? 0.07);
   if (opts.punch) c = punchIn(c, t, opts.punch);
@@ -62,7 +66,8 @@ const handWorld = (pos: Vec3, rotY: number, scale: number, side: 1 | -1, arm: [n
 };
 
 const INSP: Vec3 = [0.6, 0, 1.4];
-const face = (p: Vec3, s = 1): Vec3 => [p[0], p[1] + HY * s, p[2] + 0.45 * s];
+// templates are authored for the original body; cutShot() lifts camera + focus to the real height
+const face = (p: Vec3, s = 1): Vec3 => [p[0], p[1] + 1.7684 * s, p[2] + 0.45 * s];
 
 // ── crowd for the lifeboat beats (spawn times give the "piling in" gag) ──
 const CROWD = makeCrowd({ seed: "v2-deck", count: 30, area: { x: [-2.6, 2.7], z: [-12, 2.2] }, faceToward: [3, -9], minGap: 0.85 });
@@ -493,8 +498,8 @@ const TPL: Record<string, T> = {
 
   // ── extreme close-ups + top-down (camera grammar: one every ~4-6 shots) ──
   "insp-eyes": ({ beat, cut, t, dur, abs }) => ({
-    camera: live(wideClose([INSP[0], INSP[1] + HY - 0.04, INSP[2] + 0.45], -0.12, 1.45, 40), t, dur, { push: 0.05 }),
-    focus: [INSP[0], INSP[1] + HY, INSP[2] + 0.5],
+    camera: live(wideClose([INSP[0], INSP[1] + 1.7684 - 0.04, INSP[2] + 0.45], -0.12, 1.45, 40), t, dur, { push: 0.05 }),
+    focus: [INSP[0], INSP[1] + 1.7684, INSP[2] + 0.5],
     focusRange: 0.35,
     bokeh: 14,
     content: (
@@ -505,8 +510,8 @@ const TPL: Record<string, T> = {
     ),
   }),
   "stoker-eyes": ({ beat, cut, t, dur }) => ({
-    camera: live(wideClose([1.2, HY * 0.97 - 0.04, 1.6 + 0.45], 0.35, 1.45, 40), t, dur, { push: 0.05, shake: 0.02 }),
-    focus: [1.2, HY * 0.97, 2.05],
+    camera: live(wideClose([1.2, 1.7684 * 0.97 - 0.04, 1.6 + 0.45], 0.35, 1.45, 40), t, dur, { push: 0.05, shake: 0.02 }),
+    focus: [1.2, 1.7684 * 0.97, 2.05],
     focusRange: 0.35,
     bokeh: 14,
     content: (
@@ -610,7 +615,8 @@ const Boats: React.FC<{ count: number; t: number; each: number; offset?: number;
 export const cutShot = (i: CutInput): ShotOutput => {
   const tpl = TPL[i.cut.shot];
   if (!tpl) throw new Error(`Unknown cut template "${i.cut.shot}" (${i.beat.id}). Known: ${Object.keys(TPL).join(", ")}`);
-  return tpl(i);
+  const o = tpl(i);
+  return { ...o, camera: lift(o.camera), focus: [o.focus[0], o.focus[1] * BODY_K, o.focus[2]] };
 };
 export const CUT_TEMPLATES = Object.keys(TPL);
 

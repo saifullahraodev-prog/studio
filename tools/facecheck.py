@@ -12,7 +12,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "out" / "facecheck"
-STYLE = json.loads((ROOT / "engine" / "look" / "style-v1.3.json").read_text(encoding="utf-8"))
+STYLE = json.loads((ROOT / "engine" / "look" / "style-v1.4.json").read_text(encoding="utf-8"))
 W, H = 2400, 600
 N = len(list((ROOT / 'engine' / 'characters').glob('*.json')))  # one head per character in the bible
 PX_PER_UNIT = H / (2 * 26 * np.tan(np.radians(3.3)))

@@ -1,6 +1,20 @@
 # PROGRESS
 
-## Current phase: Phase 5 (Long-form pipeline), started 2026-11-10
+## Current: Review 2 (owner, 2026-11-10): "movement too little, video not engaging"
+- Reference compared frame by frame: `out/review2/analysis.md`, `out/review2/reference-vs-ours.png`.
+- Step 1 DONE (story + animation + props):
+  - Action-first storyboard rules `docs/storyboard-rules.md` + checker in build_video (Short #1 v2 scores
+    50% action shots vs the 80% rule).
+  - Skeleton: elbows + knees, longer arms, root motion (travel / jump height), squash & stretch, body turn.
+  - Held props (`engine/props/HandProps.tsx`): oar, lantern, life jacket, rope, binoculars, telegram,
+    rulebook, rifle, rocket, whistle, hammer (pose.holdL / holdR).
+  - 14 new actions: jump, leap, stumble, shove, pushed, climbin, row, throw, binoculars, lantern, rocket,
+    crouch, surge, runacross (`node tools/actions.mjs --v2` -> out/phase4/actions-v2.mp4).
+  - Owner picked TALLEST bodies (~3 heads) -> style v1.4 (`body` legScale 2.1 / torsoScale 1.3 / armScale 1.4);
+    old cut templates auto-lift their cameras; golden frames re-approved; face check 6/6.
+- Next: an action-first demo sequence with the new moves; then dense sets, brighter nights, framing, effects.
+
+## Paused: Phase 5 (Long-form pipeline), started 2026-11-10
 - Owner decisions: topic = Titanic, full story; format = 16:9 landscape; owner records the narration.
   Outline + phase plan: `videos/2026-11-10-titanic-full/outline.md` (waiting for owner approval).
 - Owner accepted Short #1 v2 at 720p ("video is fine, no 1080p needed") and moved on. Style v1.3 is now the

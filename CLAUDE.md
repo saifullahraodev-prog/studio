@@ -82,7 +82,8 @@ Ask before installing anything large, deleting files, or spending money.
 - Keep 10–20 golden frames in `golden/`; check every engine change against them:
   `node tools/golden.mjs check` (must pass before committing engine changes). Only run
   `node tools/golden.mjs approve` after the owner approves a new look/version.
-- Approved look now: `engine/look/style-v1.3.json` (owner-accepted 2026-11-10, tag `style-v1.3`).
+- Approved look now: `engine/look/style-v1.4.json` (v1.3 + tall ~3-head bodies, owner-picked 2026-11-10).
+- Storyboards are ACTION FIRST: follow `docs/storyboard-rules.md` (>= 80% action shots, held props, travelling bodies).
 - First locked look: `engine/look/style-v1.0.json` (GATE 2, 2026-11-08). Never edit it; a look
   change means a new `style-v1.x.json` + owner approval + new golden frames.
   In use: `style-v1.2.json` (v1.1 word captions + pacing; v1.2 adds `interior` + `fire` presets).
