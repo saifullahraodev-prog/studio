@@ -1,6 +1,8 @@
 # PROGRESS
 
 ## Current phase: Phase 5 (Long-form pipeline), started 2026-11-10
+- Owner decisions: topic = Titanic, full story; format = 16:9 landscape; owner records the narration.
+  Outline + phase plan: `videos/2026-11-10-titanic-full/outline.md` (waiting for owner approval).
 - Owner accepted Short #1 v2 at 720p ("video is fine, no 1080p needed") and moved on. Style v1.3 is now the
   approved look (git tag `style-v1.3`); golden frames re-approved; face check 6/6 presets.
 
