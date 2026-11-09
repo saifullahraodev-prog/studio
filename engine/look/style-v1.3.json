@@ -394,5 +394,30 @@
       "shadowMap": 1024
     },
     "note": "pass props {\"quality\":\"preview\"} for fast checks (no lens blur/grain/MSAA)"
+  },
+  "camera": {
+    "handheld": {
+      "pos": 0.035,
+      "target": 0.03,
+      "roll": 0.007,
+      "note": "every shot drifts slowly (sum of slow sines; deterministic)"
+    },
+    "keyPush": {
+      "amount": 0.14,
+      "attack": 0.09,
+      "release": 0.55,
+      "note": "quick push-in on every emphasised word (captions emph)"
+    },
+    "motionBlur": {
+      "threshold": 0.6,
+      "max": 22,
+      "note": "directional blur when the camera/subject moves fast (sprints, falls, whips); px at 1080 wide"
+    },
+    "rules": [
+      "every shot moves (drift + slow push); never a locked-off frame",
+      "push in on key words; punch-in when a shot starts on an emphasised word",
+      "every ~4-6 shots: one extreme close-up (eyes, hands or an object), one low angle or top-down",
+      "fast action gets motion blur; whips between places, camera moves within a place"
+    ]
   }
 }

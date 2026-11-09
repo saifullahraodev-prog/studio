@@ -70,3 +70,32 @@ export const wideClose = (face: Vec3, yaw: number, dist = 1.45, fov = 60, height
   target: face,
   fov,
 });
+
+// handheld drift: slow, small, random-looking (incommensurate sines), deterministic per t
+export const handheld = (cam: CameraState, t: number, pos = 0.035, tgt = 0.03, roll = 0.007, seed = 0): CameraState => {
+  const n = (f: number, ph: number) => Math.sin(t * f + ph + seed) * 0.6 + Math.sin(t * f * 2.13 + ph * 1.7 + seed * 0.5) * 0.4;
+  return {
+    ...cam,
+    position: [cam.position[0] + n(0.37, 0.1) * pos, cam.position[1] + n(0.53, 1.3) * pos * 0.7, cam.position[2] + n(0.29, 2.2) * pos * 0.5],
+    target: [cam.target[0] + n(0.44, 3.1) * tgt, cam.target[1] + n(0.61, 4.0) * tgt * 0.8, cam.target[2]],
+    roll: (cam.roll ?? 0) + n(0.31, 5.2) * roll,
+  };
+};
+
+// quick push toward the target on key words: `hits` are seconds (relative to the shot) of emphasised words
+export const keyPush = (cam: CameraState, t: number, hits: number[], amount = 0.14, attack = 0.09, release = 0.55): CameraState => {
+  let k = 0;
+  for (const h of hits) {
+    const d = t - h;
+    if (d < -attack || d > release + 0.4) continue;
+    const up = d < 0 ? 1 - -d / attack : 1; // ease in over `attack` before the word lands
+    const down = d > 0 ? Math.exp(-d / release) : 1;
+    k = Math.max(k, Math.max(0, up) * down);
+  }
+  if (k <= 0) return cam;
+  const p = cam.position;
+  const g = cam.target;
+  const f = amount * k;
+  return { ...cam, position: [p[0] + (g[0] - p[0]) * f, p[1] + (g[1] - p[1]) * f, p[2] + (g[2] - p[2]) * f] };
+};
+

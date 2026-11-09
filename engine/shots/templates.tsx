@@ -46,6 +46,7 @@ export type ShotOutput = {
   focus: Vec3;
   focusRange?: number;
   bokeh?: number;
+  motionBlur?: number; // extra speed blur (px at 1080 wide) for fast action: sprints, falls
   content: React.ReactNode;
 };
 

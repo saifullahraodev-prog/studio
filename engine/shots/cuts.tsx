@@ -8,7 +8,7 @@ import { Expression, MouthSlot } from "../characters/face";
 import { gesture } from "../characters/gestures";
 import { mouthAt, WordTiming } from "../characters/lipsync";
 import { CameraState, Vec3 } from "../cameras/CameraRig";
-import { breathe, punchIn, push, shake, wideClose } from "../cameras/moves";
+import { handheld, punchIn, push, shake, wideClose } from "../cameras/moves";
 import { LightingPresetName, style } from "../look/style";
 import { BoilerRoom, Certificate, Crate, Iceberg, MiniBoat, Rulebook, TextLabel, ToyShip } from "../props/Props";
 import { Sea } from "../worlds/Sea";
@@ -33,7 +33,8 @@ const live = (cam: CameraState, t: number, dur: number, opts: { punch?: number; 
   let c = push(cam, t / Math.max(dur, 0.3), opts.push ?? 0.07);
   if (opts.punch) c = punchIn(c, t, opts.punch);
   if (opts.shake) c = shake(c, t, opts.shake);
-  return breathe(c, t + 3, 0.012);
+  const H = (style as unknown as { camera: { handheld: { pos: number; target: number; roll: number } } }).camera.handheld;
+  return handheld(c, t + 3, H.pos, H.target, H.roll);
 };
 const talk = (b: CutBeat, abs: number): MouthSlot => (b.speaker === "inspector" ? mouthAt(b.words, abs) : "rest");
 
@@ -200,6 +201,7 @@ const TPL: Record<string, T> = {
     const z = -7 + t * 3.6;
     return {
       camera: { position: [1.0, 0.45, z + 3.4], target: [1.3, 1.7, z], fov: 52, roll: 0.12 },
+      motionBlur: 7, // sprint: speed blur
       focus: face([1.3, 0, z], 0.97),
       focusRange: 2,
       content: (
@@ -395,6 +397,60 @@ const TPL: Record<string, T> = {
         <Boats count={4} t={t - 0.15} each={0.12} offset={16} color="#FFB13B" />
         {t > 0.7 && <TextLabel text="+4" position={[1.45, 1.25, 2.3]} width={0.6} />}
         <Actor def={BIBLE.inspector} cut={cut} t={t} position={[0.5, 0, 0.75]} rotationY={0} />
+      </>
+    ),
+  }),
+
+  // ── extreme close-ups + top-down (camera grammar: one every ~4-6 shots) ──
+  "insp-eyes": ({ beat, cut, t, dur, abs }) => ({
+    camera: live(wideClose([INSP[0], INSP[1] + HY - 0.04, INSP[2] + 0.45], -0.12, 1.45, 40), t, dur, { push: 0.05 }),
+    focus: [INSP[0], INSP[1] + HY, INSP[2] + 0.5],
+    focusRange: 0.35,
+    bokeh: 14,
+    content: (
+      <>
+        <ShipDeck preset={P(beat)} />
+        <Actor def={BIBLE.inspector} cut={cut} t={t} position={INSP} rotationY={-0.12} mouth={talk(beat, abs)} />
+      </>
+    ),
+  }),
+  "stoker-eyes": ({ beat, cut, t, dur }) => ({
+    camera: live(wideClose([1.2, HY * 0.97 - 0.04, 1.6 + 0.45], 0.35, 1.45, 40), t, dur, { push: 0.05, shake: 0.02 }),
+    focus: [1.2, HY * 0.97, 2.05],
+    focusRange: 0.35,
+    bokeh: 14,
+    content: (
+      <>
+        <ShipDeck preset={P(beat)} />
+        <Actor def={BIBLE.stoker} cut={cut} t={t} position={[1.2, 0, 1.6]} rotationY={0.35} />
+      </>
+    ),
+  }),
+  "crowd-top": ({ beat, t, dur }) => ({
+    camera: live({ position: [0.6, 15, -2.0], target: [0.5, 0, -4.6], fov: 42, roll: 0.25 }, t, dur, { push: 0.06 }),
+    focus: [0.5, 1.5, -4.6],
+    focusRange: 12,
+    bokeh: 2,
+    content: (
+      <>
+        <ShipDeck preset={P(beat)} />
+        {CROWD.map((e, i) => (
+          <Character key={i} def={e.def} expression={e.expression} position={e.position} rotationY={e.rotationY + Math.sin(t * 2 + e.phase) * 0.3} pose={{ headNod: -0.4, armL: [0.4 + Math.sin(t * 6 + i) * 0.3, 0.4], bob: Math.abs(Math.sin(t * 5 + e.phase)) * 0.03 }} />
+        ))}
+      </>
+    ),
+  }),
+  "boats-top": ({ beat, cut, t, dur }) => ({
+    camera: live({ position: [0.55, 5.2, 2.3], target: [0.55, 0.7, 1.95], fov: 40, roll: 0.0 }, t, dur, { push: 0.08 }),
+    focus: [0.55, 0.75, 1.95],
+    focusRange: 1.5,
+    content: (
+      <>
+        <ShipDeck preset={P(beat)} />
+        <pointLight position={[0.2, 3, 3.4]} color="#FFD9A0" intensity={4} distance={8} decay={1.6} />
+        <Crate position={[0.5, 0, 2.0]} />
+        <Boats count={16} t={99} each={0} />
+        <Boats count={4} t={t - 0.1} each={0.12} offset={16} color="#FFB13B" />
       </>
     ),
   }),

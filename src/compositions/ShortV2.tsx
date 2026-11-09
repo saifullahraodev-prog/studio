@@ -5,6 +5,7 @@ import { ResProps, verticalSize } from "../../engine/look/units";
 import { style } from "../../engine/look/style";
 import { WorldShot } from "../../engine/shots/WorldShot";
 import { Cut, CutBeat, cutSet, cutShot } from "../../engine/shots/cuts";
+import { keyPush } from "../../engine/cameras/moves";
 
 // Short v2: micro-beat editing.
 // - Next shot in the SAME place: no cut. The camera flies from the old framing to the new one
@@ -31,10 +32,40 @@ const blendCam = (a: CameraState, b: CameraState, k: number): CameraState => ({
 // fast start, soft landing: reads as a quick camera swing that settles on the new framing
 const swing = Easing.bezier(0.25, 0.9, 0.3, 1);
 
-const shotAt = ({ b, c }: Item, t: number) => cutShot({ beat: b, cut: c, t, dur: c.end - c.start, abs: c.start + t });
+const CAM = (style as unknown as { camera: { keyPush: { amount: number; attack: number; release: number }; motionBlur: { threshold: number; max: number } } }).camera;
+// emphasised caption words (absolute seconds) drive quick push-ins
+let HITS: number[] = [];
+const shotAt = ({ b, c }: Item, t: number) => {
+  const s = cutShot({ beat: b, cut: c, t, dur: c.end - c.start, abs: c.start + t });
+  const hits = HITS.filter((h) => h > c.start - 0.1 && h < c.end).map((h) => h - c.start);
+  return { ...s, camera: keyPush(s.camera, t, hits, CAM.keyPush.amount, CAM.keyPush.attack, CAM.keyPush.release) };
+};
+// motion blur: how far the picture moves between frames (px at frame width), from the camera path
+const motionPx = (a: CameraState, b: CameraState, width: number) => {
+  const dir = (c: CameraState) => {
+    const d = [c.target[0] - c.position[0], c.target[1] - c.position[1], c.target[2] - c.position[2]];
+    const l = Math.hypot(d[0], d[1], d[2]) || 1;
+    return [d[0] / l, d[1] / l, d[2] / l, l];
+  };
+  const da = dir(a);
+  const db = dir(b);
+  const turn = Math.acos(Math.max(-1, Math.min(1, da[0] * db[0] + da[1] * db[1] + da[2] * db[2])));
+  // only SIDEWAYS camera movement smears the picture; pushing straight in (key-word push) does not
+  const mv = [b.position[0] - a.position[0], b.position[1] - a.position[1], b.position[2] - a.position[2]];
+  const along = mv[0] * da[0] + mv[1] * da[1] + mv[2] * da[2];
+  const slide = Math.hypot(mv[0] - along * da[0], mv[1] - along * da[1], mv[2] - along * da[2]) / da[3];
+  const hfov = 2 * Math.atan(Math.tan(((a.fov / 2) * Math.PI) / 180) * (9 / 16));
+  return ((turn + slide * 0.6) / hfov) * width;
+};
 
-const Layer: React.FC<{ item: Item; t: number; x?: number; blur?: number; id: string; camera?: CameraState; focus?: Vec3 }> = ({ item, t, x = 0, blur = 0, id, camera, focus }) => {
+const Layer: React.FC<{ item: Item; t: number; x?: number; blur?: number; id: string; camera?: CameraState; focus?: Vec3 }> = ({ item, t, x = 0, blur: blurIn = 0, id, camera, focus }) => {
+  const { width, fps } = useVideoConfig();
   const shot = shotAt(item, t);
+  // fast camera / subject motion -> directional blur (sprints, falls, fast pans)
+  const prev = t > 1 / fps ? shotAt(item, t - 1 / fps).camera : shot.camera;
+  const px = camera ? 0 : motionPx(prev, shot.camera, width);
+  const mb = Math.min(CAM.motionBlur.max * (width / 1080), Math.max(0, px - CAM.motionBlur.threshold * (width / 1080)) * 0.8);
+  const blur = Math.max(blurIn, mb, (shot.motionBlur ?? 0) * (width / 1080));
   return (
     <AbsoluteFill style={{ transform: `translateX(${x}px)`, filter: blur > 0.5 ? `url(#${id})` : undefined }}>
       <svg width={0} height={0} style={{ position: "absolute" }}>
@@ -95,6 +126,7 @@ const CutSeq: React.FC<{ item: Item; prev?: Item; idx: number }> = ({ item, prev
 export const ShortV2: React.FC<ShortV2Props> = ({ slug, data }) => {
   const { fps } = useVideoConfig();
   if (!data) return null;
+  HITS = data.captionWords.filter((w) => w.emph).map((w) => w.start);
   const f = (s: number) => Math.round(s * fps);
   const items: Item[] = data.beats.flatMap((b) => b.cuts.map((c) => ({ b, c })));
   return (

@@ -9,6 +9,7 @@ import { LookTest, LookTestProps } from "./compositions/LookTest";
 import { calculateShortMetadata, Short, ShortProps } from "./compositions/Short";
 import { calculateShortV2Metadata, ShortV2, ShortV2Props } from "./compositions/ShortV2";
 import { calculateVideoMetadata, Video, VideoProps } from "./compositions/Video";
+import { ShotPreview, ShotPreviewProps } from "./compositions/ShotPreview";
 import { StressTest } from "./compositions/StressTest";
 import { StyleTest, StyleTestProps } from "./compositions/StyleTest";
 import { TalkTest, TalkTestProps } from "./compositions/TalkTest";
@@ -131,6 +132,14 @@ export const RemotionRoot: React.FC = () => {
       />
       <Composition id="FaceCheck" component={FaceCheck} durationInFrames={1} fps={30} width={2400} height={600} defaultProps={{ preset: "day", hatch: true } as FaceCheckProps} />
       <Composition id="FaceOption" component={FaceOption} durationInFrames={1} fps={30} width={1200} height={900} defaultProps={{ variant: "E" as FaceVariant }} />
+      <Composition
+        id="ShotPreview"
+        component={ShotPreview}
+        durationInFrames={90}
+        {...vertical}
+        defaultProps={{ res: 720, shot: "insp-eyes", preset: "night", face: "shocked" } as ShotPreviewProps}
+        calculateMetadata={({ props }: { props: ShotPreviewProps }) => verticalSize(props.res)}
+      />
       <Composition id="GLInfo" component={GLInfo} durationInFrames={1} fps={30} width={1600} height={240} />
     </>
   );
