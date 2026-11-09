@@ -82,7 +82,8 @@ Ask before installing anything large, deleting files, or spending money.
 - Keep 10–20 golden frames in `golden/`; check every engine change against them:
   `node tools/golden.mjs check` (must pass before committing engine changes). Only run
   `node tools/golden.mjs approve` after the owner approves a new look/version.
-- Current locked look: `engine/look/style-v1.0.json` (GATE 2, 2026-11-08). Never edit it; a look
+- Approved look now: `engine/look/style-v1.3.json` (owner-accepted 2026-11-10, tag `style-v1.3`).
+- First locked look: `engine/look/style-v1.0.json` (GATE 2, 2026-11-08). Never edit it; a look
   change means a new `style-v1.x.json` + owner approval + new golden frames.
   In use: `style-v1.2.json` (v1.1 word captions + pacing; v1.2 adds `interior` + `fire` presets).
 - Edit files with the Edit/Write tools or Python (UTF-8). Do NOT use PowerShell Get-Content/

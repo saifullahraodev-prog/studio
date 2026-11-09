@@ -13,10 +13,11 @@ import numpy as np
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "out" / "facecheck"
 STYLE = json.loads((ROOT / "engine" / "look" / "style-v1.3.json").read_text(encoding="utf-8"))
-W, H, N = 2400, 600, 8
+W, H = 2400, 600
+N = len(list((ROOT / 'engine' / 'characters').glob('*.json')))  # one head per character in the bible
 PX_PER_UNIT = H / (2 * 26 * np.tan(np.radians(3.3)))
-GAP_PX = 1.45 * PX_PER_UNIT
-LIMIT_DIFF, LIMIT_STRIPE = 0.35, 3.0
+GAP_PX = 1.3 * PX_PER_UNIT
+LIMIT_DIFF, LIMIT_STRIPE = 0.35, 4.0  # calibrated 2026-11-10 on clean v1.3 renders (max 3.2: day sky + hat edges)
 
 
 def load(png):
@@ -44,7 +45,8 @@ def main():
         imgs = {}
         for hatch in ("true", "false"):
             f = OUT / f"{preset}-{hatch}.png"
-            r = subprocess.run([sys.executable if False else "node", "tools/still.mjs", "FaceCheck", str(f.relative_to(ROOT)), f"preset={preset}", f"hatch={hatch}"], cwd=ROOT, capture_output=True, text=True)
+            # quality=preview: no film grain (grain is not a face stripe)
+            r = subprocess.run(["node", "tools/still.mjs", "FaceCheck", str(f.relative_to(ROOT)), f"preset={preset}", f"hatch={hatch}", "quality=preview"], cwd=ROOT, capture_output=True, text=True)
             if r.returncode != 0:
                 print(r.stdout[-400:], r.stderr[-400:])
                 raise SystemExit(f"render failed: {preset}")

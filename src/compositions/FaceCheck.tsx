@@ -9,7 +9,7 @@ import { WorldShot } from "../../engine/shots/WorldShot";
 // side, in one lighting preset, rendered at video size. tools/facecheck.py measures fine-stripe
 // energy on each face. `hatch` toggles the pen hatching so the test can compare on vs off.
 export type FaceCheckProps = { preset: LightingPresetName; hatch: boolean };
-export const FACECHECK_GAP = 1.45;
+export const FACECHECK_GAP = 1.3;
 export const FaceCheck: React.FC<FaceCheckProps> = ({ preset, hatch }) => {
   const n = CHARACTER_IDS.length;
   return (

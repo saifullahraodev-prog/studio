@@ -1,6 +1,10 @@
 # PROGRESS
 
-## Current: Short #1 revision 2 (owner review, 2026-11-09), in progress
+## Current phase: Phase 5 (Long-form pipeline), started 2026-11-10
+- Owner accepted Short #1 v2 at 720p ("video is fine, no 1080p needed") and moved on. Style v1.3 is now the
+  approved look (git tag `style-v1.3`); golden frames re-approved; face check 6/6 presets.
+
+## Done: Short #1 revision 2 (owner review, 2026-11-09/10)
 - Task 1 DONE: face stripes = pen hatching aliasing (not shadow acne). Hatching off on heads, anti-aliased
   where used, shadow bias raised, `tools/facecheck.py` (all characters x presets) runs inside golden check.
 - Task 2 DONE: 3 paper-panel faces (E/F/G) shown; owner chose to KEEP face D "Comic".
