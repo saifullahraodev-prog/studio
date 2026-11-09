@@ -265,7 +265,8 @@ def director_audio(beats, total, sfx):
 # storyboard rules (docs/storyboard-rules.md): action first
 REACTION_SHOTS = {"stoker-eyes", "insp-eyes", "stoker-shocked-cu", "insp-punch", "today-punch", "close"}
 ACTION_SHOTS = {"run-low", "crowd-pile", "crowd-half", "stamp", "ship-too-big", "boats-16", "boats-20", "boats-plus4", "officer-wave",
-                "boat-away", "iceberg-hit", "ship-sinking", "count-fingers", "fingers-out", "furnace-insert", "stoker-furnace", "crowd-2200"}
+                "boat-away", "iceberg-hit", "ship-sinking", "count-fingers", "fingers-out", "furnace-insert", "stoker-furnace", "crowd-2200",
+                "deck-surge", "officer-shove", "climb-boat", "rocket-fire", "stoker-dash", "boat-lowering", "man-leap"}
 STILL_GESTURES = {"", "think", "tap", "tick", "talk", "point", "shrug", "count"}
 
 

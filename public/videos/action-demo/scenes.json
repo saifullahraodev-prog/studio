@@ -1,0 +1,956 @@
+{
+ "slug": "action-demo",
+ "format": "short",
+ "world": "ship-deck",
+ "fps": 30,
+ "duration": 13.973,
+ "beats": [
+  {
+   "id": "b1",
+   "cuts": [
+    {
+     "cue": "the",
+     "shot": "deck-surge",
+     "fx": "whoosh",
+     "start": 0.0,
+     "end": 2.066,
+     "face": "neutral",
+     "tr": "cut"
+    }
+   ],
+   "speaker": "vo",
+   "preset": "night",
+   "say": "The crowd surges toward the last boats.",
+   "emph": [
+    "surges"
+   ],
+   "subtitle": "The crowd surges toward the last boats.",
+   "pause": 0.05,
+   "voiceStart": 0.25,
+   "voiceEnd": 2.096,
+   "start": 0.0,
+   "end": 2.066,
+   "words": [
+    {
+     "word": "crowd",
+     "start": 0.32,
+     "end": 0.6
+    },
+    {
+     "word": "surges",
+     "start": 0.6,
+     "end": 0.94
+    },
+    {
+     "word": "toward",
+     "start": 0.94,
+     "end": 1.18
+    },
+    {
+     "word": "the",
+     "start": 1.18,
+     "end": 1.34
+    },
+    {
+     "word": "last",
+     "start": 1.34,
+     "end": 1.56
+    },
+    {
+     "word": "boats.",
+     "start": 1.56,
+     "end": 1.9
+    }
+   ],
+   "cueAt": 0.25,
+   "aligned": [
+    [
+     "The",
+     0.32,
+     0.32,
+     null
+    ],
+    [
+     "crowd",
+     0.32,
+     0.6,
+     "crowd"
+    ],
+    [
+     "surges",
+     0.6,
+     0.94,
+     "surges"
+    ],
+    [
+     "toward",
+     0.94,
+     1.18,
+     "toward"
+    ],
+    [
+     "the",
+     1.18,
+     1.34,
+     "the"
+    ],
+    [
+     "last",
+     1.34,
+     1.56,
+     "last"
+    ],
+    [
+     "boats.",
+     1.56,
+     1.9,
+     "boats."
+    ]
+   ]
+  },
+  {
+   "id": "b2",
+   "cuts": [
+    {
+     "cue": "an",
+     "shot": "officer-shove",
+     "fx": "hit",
+     "start": 2.066,
+     "end": 3.82,
+     "face": "neutral",
+     "tr": "cut"
+    },
+    {
+     "cue": "women",
+     "shot": "climb-boat",
+     "tr": "whip",
+     "start": 3.82,
+     "end": 5.274,
+     "face": "neutral"
+    }
+   ],
+   "speaker": "vo",
+   "preset": "night",
+   "say": "An officer shoves a man back. Women and children only!",
+   "emph": [
+    "shoves",
+    "only"
+   ],
+   "subtitle": "An officer shoves a man back. Women and children only!",
+   "pause": 0.05,
+   "voiceStart": 2.146,
+   "voiceEnd": 5.304,
+   "start": 2.066,
+   "end": 5.274,
+   "words": [
+    {
+     "word": "An",
+     "start": 2.18,
+     "end": 2.24
+    },
+    {
+     "word": "officer",
+     "start": 2.24,
+     "end": 2.6
+    },
+    {
+     "word": "shoves",
+     "start": 2.6,
+     "end": 3.06
+    },
+    {
+     "word": "a",
+     "start": 3.06,
+     "end": 3.18
+    },
+    {
+     "word": "man",
+     "start": 3.18,
+     "end": 3.34
+    },
+    {
+     "word": "back.",
+     "start": 3.34,
+     "end": 3.64
+    },
+    {
+     "word": "Women",
+     "start": 3.86,
+     "end": 4.06
+    },
+    {
+     "word": "and",
+     "start": 4.06,
+     "end": 4.4
+    },
+    {
+     "word": "children",
+     "start": 4.4,
+     "end": 4.72
+    },
+    {
+     "word": "only.",
+     "start": 4.72,
+     "end": 5.2
+    }
+   ],
+   "cueAt": 2.146,
+   "aligned": [
+    [
+     "An",
+     2.18,
+     2.24,
+     "An"
+    ],
+    [
+     "officer",
+     2.24,
+     2.6,
+     "officer"
+    ],
+    [
+     "shoves",
+     2.6,
+     3.06,
+     "shoves"
+    ],
+    [
+     "a",
+     3.06,
+     3.18,
+     "a"
+    ],
+    [
+     "man",
+     3.18,
+     3.34,
+     "man"
+    ],
+    [
+     "back.",
+     3.34,
+     3.64,
+     "back."
+    ],
+    [
+     "Women",
+     3.86,
+     4.06,
+     "Women"
+    ],
+    [
+     "and",
+     4.06,
+     4.4,
+     "and"
+    ],
+    [
+     "children",
+     4.4,
+     4.72,
+     "children"
+    ],
+    [
+     "only!",
+     4.72,
+     5.2,
+     "only."
+    ]
+   ]
+  },
+  {
+   "id": "b3",
+   "cuts": [
+    {
+     "cue": "a",
+     "shot": "rocket-fire",
+     "fx": "boom",
+     "tr": "whip",
+     "start": 5.274,
+     "end": 7.379,
+     "face": "neutral"
+    }
+   ],
+   "speaker": "vo",
+   "preset": "night",
+   "say": "A sailor fires a distress rocket.",
+   "emph": [
+    "rocket"
+   ],
+   "subtitle": "A sailor fires a distress rocket.",
+   "pause": 0.05,
+   "voiceStart": 5.354,
+   "voiceEnd": 7.409,
+   "start": 5.274,
+   "end": 7.379,
+   "words": [
+    {
+     "word": "A",
+     "start": 5.4,
+     "end": 5.42
+    },
+    {
+     "word": "sailor",
+     "start": 5.42,
+     "end": 5.86
+    },
+    {
+     "word": "fires",
+     "start": 5.86,
+     "end": 6.14
+    },
+    {
+     "word": "a",
+     "start": 6.14,
+     "end": 6.42
+    },
+    {
+     "word": "distress",
+     "start": 6.42,
+     "end": 6.74
+    },
+    {
+     "word": "rocket.",
+     "start": 6.74,
+     "end": 7.28
+    }
+   ],
+   "cueAt": 5.354,
+   "aligned": [
+    [
+     "A",
+     5.4,
+     5.42,
+     "A"
+    ],
+    [
+     "sailor",
+     5.42,
+     5.86,
+     "sailor"
+    ],
+    [
+     "fires",
+     5.86,
+     6.14,
+     "fires"
+    ],
+    [
+     "a",
+     6.14,
+     6.42,
+     "a"
+    ],
+    [
+     "distress",
+     6.42,
+     6.74,
+     "distress"
+    ],
+    [
+     "rocket.",
+     6.74,
+     7.28,
+     "rocket."
+    ]
+   ]
+  },
+  {
+   "id": "b4",
+   "cuts": [
+    {
+     "cue": "below",
+     "shot": "stoker-dash",
+     "fx": "whoosh",
+     "tr": "whip",
+     "start": 7.379,
+     "end": 9.681,
+     "face": "neutral"
+    }
+   ],
+   "speaker": "vo",
+   "preset": "night",
+   "say": "Below, a stoker sprints for the stairs.",
+   "emph": [
+    "sprints"
+   ],
+   "subtitle": "Below, a stoker sprints for the stairs.",
+   "pause": 0.05,
+   "voiceStart": 7.459,
+   "voiceEnd": 9.711,
+   "start": 7.379,
+   "end": 9.681,
+   "words": [
+    {
+     "word": "Below",
+     "start": 7.46,
+     "end": 7.64
+    },
+    {
+     "word": "is",
+     "start": 7.64,
+     "end": 8.14
+    },
+    {
+     "word": "Stoker's",
+     "start": 8.14,
+     "end": 8.64
+    },
+    {
+     "word": "Sprints",
+     "start": 8.64,
+     "end": 8.9
+    },
+    {
+     "word": "for",
+     "start": 8.9,
+     "end": 9.08
+    },
+    {
+     "word": "the",
+     "start": 9.08,
+     "end": 9.18
+    },
+    {
+     "word": "stairs.",
+     "start": 9.18,
+     "end": 9.5
+    }
+   ],
+   "cueAt": 7.459,
+   "aligned": [
+    [
+     "Below,",
+     7.46,
+     7.64,
+     "Below"
+    ],
+    [
+     "a",
+     7.64,
+     8.14,
+     null
+    ],
+    [
+     "stoker",
+     8.14,
+     8.64,
+     null
+    ],
+    [
+     "sprints",
+     8.64,
+     8.9,
+     "Sprints"
+    ],
+    [
+     "for",
+     8.9,
+     9.08,
+     "for"
+    ],
+    [
+     "the",
+     9.08,
+     9.18,
+     "the"
+    ],
+    [
+     "stairs.",
+     9.18,
+     9.5,
+     "stairs."
+    ]
+   ]
+  },
+  {
+   "id": "b5",
+   "cuts": [
+    {
+     "cue": "the",
+     "shot": "boat-lowering",
+     "tr": "whip",
+     "start": 9.681,
+     "end": 11.468,
+     "face": "neutral"
+    }
+   ],
+   "speaker": "vo",
+   "preset": "night",
+   "say": "The boat drops down the side.",
+   "emph": [
+    "drops"
+   ],
+   "subtitle": "The boat drops down the side.",
+   "pause": 0.05,
+   "voiceStart": 9.761,
+   "voiceEnd": 11.201,
+   "start": 9.681,
+   "end": 11.468,
+   "words": [
+    {
+     "word": "The",
+     "start": 9.82,
+     "end": 9.84
+    },
+    {
+     "word": "boat",
+     "start": 9.84,
+     "end": 10.02
+    },
+    {
+     "word": "drops",
+     "start": 10.02,
+     "end": 10.36
+    },
+    {
+     "word": "down",
+     "start": 10.36,
+     "end": 10.66
+    },
+    {
+     "word": "the",
+     "start": 10.66,
+     "end": 10.84
+    },
+    {
+     "word": "side.",
+     "start": 10.84,
+     "end": 11.12
+    }
+   ],
+   "cueAt": 9.761,
+   "aligned": [
+    [
+     "The",
+     9.82,
+     9.84,
+     "The"
+    ],
+    [
+     "boat",
+     9.84,
+     10.02,
+     "boat"
+    ],
+    [
+     "drops",
+     10.02,
+     10.36,
+     "drops"
+    ],
+    [
+     "down",
+     10.36,
+     10.66,
+     "down"
+    ],
+    [
+     "the",
+     10.66,
+     10.84,
+     "the"
+    ],
+    [
+     "side.",
+     10.84,
+     11.12,
+     "side."
+    ]
+   ]
+  },
+  {
+   "id": "b6",
+   "cuts": [
+    {
+     "cue": "and",
+     "shot": "man-leap",
+     "fx": "whoosh",
+     "tr": "whip",
+     "start": 11.468,
+     "end": 13.973,
+     "face": "neutral"
+    }
+   ],
+   "speaker": "vo",
+   "preset": "night",
+   "pause": 0.2,
+   "say": "And one man takes his chance.",
+   "emph": [
+    "chance"
+   ],
+   "subtitle": "And one man takes his chance.",
+   "voiceStart": 11.548,
+   "voiceEnd": 13.173,
+   "start": 11.468,
+   "end": 13.973,
+   "words": [
+    {
+     "word": "And",
+     "start": 11.54,
+     "end": 11.66
+    },
+    {
+     "word": "one",
+     "start": 11.66,
+     "end": 11.88
+    },
+    {
+     "word": "man",
+     "start": 11.88,
+     "end": 12.12
+    },
+    {
+     "word": "takes",
+     "start": 12.12,
+     "end": 12.42
+    },
+    {
+     "word": "his",
+     "start": 12.42,
+     "end": 12.62
+    },
+    {
+     "word": "chance.",
+     "start": 12.62,
+     "end": 13.0
+    }
+   ],
+   "cueAt": 11.548,
+   "aligned": [
+    [
+     "And",
+     11.54,
+     11.66,
+     "And"
+    ],
+    [
+     "one",
+     11.66,
+     11.88,
+     "one"
+    ],
+    [
+     "man",
+     11.88,
+     12.12,
+     "man"
+    ],
+    [
+     "takes",
+     12.12,
+     12.42,
+     "takes"
+    ],
+    [
+     "his",
+     12.42,
+     12.62,
+     "his"
+    ],
+    [
+     "chance.",
+     12.62,
+     13.0,
+     "chance."
+    ]
+   ]
+  }
+ ],
+ "captionWords": [
+  {
+   "text": "The",
+   "start": 0.32,
+   "end": 0.32,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "crowd",
+   "start": 0.32,
+   "end": 0.6,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "surges",
+   "start": 0.6,
+   "end": 0.94,
+   "emph": true,
+   "brk": false
+  },
+  {
+   "text": "toward",
+   "start": 0.94,
+   "end": 1.18,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "the",
+   "start": 1.18,
+   "end": 1.34,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "last",
+   "start": 1.34,
+   "end": 1.56,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "boats",
+   "start": 1.56,
+   "end": 1.9,
+   "emph": false,
+   "brk": true
+  },
+  {
+   "text": "An",
+   "start": 2.18,
+   "end": 2.24,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "officer",
+   "start": 2.24,
+   "end": 2.6,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "shoves",
+   "start": 2.6,
+   "end": 3.06,
+   "emph": true,
+   "brk": false
+  },
+  {
+   "text": "a",
+   "start": 3.06,
+   "end": 3.18,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "man",
+   "start": 3.18,
+   "end": 3.34,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "back",
+   "start": 3.34,
+   "end": 3.64,
+   "emph": false,
+   "brk": true
+  },
+  {
+   "text": "Women",
+   "start": 3.86,
+   "end": 4.06,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "and",
+   "start": 4.06,
+   "end": 4.4,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "children",
+   "start": 4.4,
+   "end": 4.72,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "only",
+   "start": 4.72,
+   "end": 5.2,
+   "emph": true,
+   "brk": true
+  },
+  {
+   "text": "A",
+   "start": 5.4,
+   "end": 5.42,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "sailor",
+   "start": 5.42,
+   "end": 5.86,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "fires",
+   "start": 5.86,
+   "end": 6.14,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "a",
+   "start": 6.14,
+   "end": 6.42,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "distress",
+   "start": 6.42,
+   "end": 6.74,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "rocket",
+   "start": 6.74,
+   "end": 7.28,
+   "emph": true,
+   "brk": true
+  },
+  {
+   "text": "Below",
+   "start": 7.46,
+   "end": 7.64,
+   "emph": false,
+   "brk": true
+  },
+  {
+   "text": "a",
+   "start": 7.64,
+   "end": 8.14,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "stoker",
+   "start": 8.14,
+   "end": 8.64,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "sprints",
+   "start": 8.64,
+   "end": 8.9,
+   "emph": true,
+   "brk": false
+  },
+  {
+   "text": "for",
+   "start": 8.9,
+   "end": 9.08,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "the",
+   "start": 9.08,
+   "end": 9.18,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "stairs",
+   "start": 9.18,
+   "end": 9.5,
+   "emph": false,
+   "brk": true
+  },
+  {
+   "text": "The",
+   "start": 9.82,
+   "end": 9.84,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "boat",
+   "start": 9.84,
+   "end": 10.02,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "drops",
+   "start": 10.02,
+   "end": 10.36,
+   "emph": true,
+   "brk": false
+  },
+  {
+   "text": "down",
+   "start": 10.36,
+   "end": 10.66,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "the",
+   "start": 10.66,
+   "end": 10.84,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "side",
+   "start": 10.84,
+   "end": 11.12,
+   "emph": false,
+   "brk": true
+  },
+  {
+   "text": "And",
+   "start": 11.54,
+   "end": 11.66,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "one",
+   "start": 11.66,
+   "end": 11.88,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "man",
+   "start": 11.88,
+   "end": 12.12,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "takes",
+   "start": 12.12,
+   "end": 12.42,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "his",
+   "start": 12.42,
+   "end": 12.62,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "chance",
+   "start": 12.62,
+   "end": 13.0,
+   "emph": true,
+   "brk": true
+  }
+ ]
+}

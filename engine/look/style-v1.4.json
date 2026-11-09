@@ -1,6 +1,6 @@
 {
   "version": "1.4",
-  "note": "v1.4 (review 2, 2026-11-10): v1.3 + taller bodies (owner picked 'tallest': about 3 heads), elbow/knee skeleton, longer arms. Everything else identical to v1.3.",
+  "note": "v1.4 (review 2, 2026-11-10): v1.3 + taller bodies (owner picked 'tallest': about 3 heads), elbow/knee skeleton, longer arms. Everything else identical to v1.3. Night is brighter (moonlit blue key + fill) so action stays readable.",
   "render": {
     "materials": "pbr",
     "envIntensity": 0.55,
@@ -221,7 +221,7 @@
     },
     "night": {
       "label": "Night",
-      "env": 0.22,
+      "env": 0.45,
       "sky": {
         "top": "#0B1430",
         "horizon": "#26365E",
@@ -235,8 +235,8 @@
         }
       },
       "sunLight": {
-        "color": "#9DB4FF",
-        "intensity": 0.7,
+        "color": "#A9C0FF",
+        "intensity": 1.7,
         "dir": [
           5,
           9,
@@ -244,14 +244,14 @@
         ]
       },
       "hemi": {
-        "sky": "#3A4C80",
-        "ground": "#141824",
-        "intensity": 0.7
+        "sky": "#5A72B8",
+        "ground": "#24283A",
+        "intensity": 1.35
       },
       "fog": {
-        "color": "#1B2646",
-        "near": 15,
-        "far": 120
+        "color": "#22305A",
+        "near": 20,
+        "far": 140
       },
       "sea": {
         "color": "#101E36",
@@ -263,7 +263,7 @@
       "rain": false,
       "grade": null,
       "skyHdr": "rogland_clear_night.hdr",
-      "skyIntensity": 0.55,
+      "skyIntensity": 0.75,
       "skyRotation": 0.0,
       "skyTilt": -0.12
     },
@@ -410,7 +410,7 @@
     },
     "motionBlur": {
       "threshold": 0.6,
-      "max": 22,
+      "max": 9,
       "note": "directional blur when the camera/subject moves fast (sprints, falls, whips); px at 1080 wide"
     },
     "rules": [

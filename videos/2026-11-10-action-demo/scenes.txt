@@ -1,0 +1,52 @@
+# Review 2 demo: ACTION-FIRST storyboard with the new body, moves and props (not a channel video)
+# Every cut is "someone does something" (docs/storyboard-rules.md).
+
+slug: action-demo
+format: short
+world: ship-deck
+voice: piper
+voice_scale: 1.0
+
+[beat 1]
+speaker: vo
+preset: night
+say: The crowd surges toward the last boats.
+emph: surges
+cut: the      | deck-surge     | fx=whoosh
+
+[beat 2]
+speaker: vo
+preset: night
+say: An officer shoves a man back. Women and children only!
+emph: shoves, only
+cut: an       | officer-shove  | fx=hit
+cut: women    | climb-boat     | tr=whip
+
+[beat 3]
+speaker: vo
+preset: night
+say: A sailor fires a distress rocket.
+emph: rocket
+cut: a        | rocket-fire    | fx=boom | tr=whip
+
+[beat 4]
+speaker: vo
+preset: night
+say: Below, a stoker sprints for the stairs.
+emph: sprints
+cut: below    | stoker-dash    | fx=whoosh | tr=whip
+
+[beat 5]
+speaker: vo
+preset: night
+say: The boat drops down the side.
+emph: drops
+cut: the      | boat-lowering  | tr=whip
+
+[beat 6]
+speaker: vo
+preset: night
+pause: 0.2
+say: And one man takes his chance.
+emph: chance
+cut: and      | man-leap       | fx=whoosh | tr=whip

@@ -6,3 +6,5 @@ Config.setChromiumOpenGlRenderer("angle");
 Config.setConcurrency(2);
 Config.setVideoImageFormat("jpeg");
 Config.setOverwriteOutput(true);
+// heavy shots (many textured props + photo sky) can take longer than the 30 s default on this PC
+Config.setDelayRenderTimeoutInMilliseconds(120000);

@@ -47,6 +47,7 @@ export type ShotOutput = {
   focusRange?: number;
   bokeh?: number;
   motionBlur?: number; // extra speed blur (px at 1080 wide) for fast action: sprints, falls
+  real?: boolean; // authored at the real (current) body size: cutShot() must not lift the camera
   content: React.ReactNode;
 };
 

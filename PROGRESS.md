@@ -12,7 +12,14 @@
     crouch, surge, runacross (`node tools/actions.mjs --v2` -> out/phase4/actions-v2.mp4).
   - Owner picked TALLEST bodies (~3 heads) -> style v1.4 (`body` legScale 2.1 / torsoScale 1.3 / armScale 1.4);
     old cut templates auto-lift their cameras; golden frames re-approved; face check 6/6.
-- Next: an action-first demo sequence with the new moves; then dense sets, brighter nights, framing, effects.
+- Demo built: `videos/2026-11-10-action-demo/out/action-demo-720p.mp4` (14 s, 7 shots, storyboard check
+  100% action): crowd surge, officer shove, climb into boat with life jacket, distress rocket, stoker sprint with
+  lantern, boat lowering, man leaping. New props: DeckBoat, RocketFlare. Night made brighter (moonlit blue).
+  Perf fix: shared texture copies (heavy shots 9 s/still instead of timing out); delayRender timeout 120 s;
+  texture/sky loaders release their hold on unmount.
+- Lessons: with ~3-head bodies in a 9:16 frame, over-the-shoulder shots fail (the near head fills the frame);
+  use 3/4 front-side or side views; keep 1.2 m+ between characters who interact.
+- Next (waiting on owner feedback): dense sets, framing rules, bigger effects.
 
 ## Paused: Phase 5 (Long-form pipeline), started 2026-11-10
 - Owner decisions: topic = Titanic, full story; format = 16:9 landscape; owner records the narration.

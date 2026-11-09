@@ -14,6 +14,7 @@ import { BoilerRoom, Certificate, Crate, Iceberg, MiniBoat, Rulebook, TextLabel,
 import { Sea } from "../worlds/Sea";
 import { ShipDeck } from "../worlds/ship-deck/ShipDeck";
 import { ShotOutput } from "./templates";
+import { DeckBoat, RocketFlare } from "../props/ActionProps";
 import SETS from "./sets.json";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -496,7 +497,143 @@ const TPL: Record<string, T> = {
     ),
   }),
 
-  // ── extreme close-ups + top-down (camera grammar: one every ~4-6 shots) ──
+  // -- review 2: ACTION-FIRST demo shots (real body size; every shot = someone does something) --
+  // the crowd surges toward the rail and the last boat; an officer holds them back with a lantern
+  "deck-surge": ({ beat, t, dur }) => ({
+    real: true,
+    camera: live({ position: [3.4, 4.4, 8.2], target: [0.4, 1.4, 0.2], fov: 46 }, t, dur, { push: 0.1 }),
+    focus: [1.4, 1.9, 0.8],
+    focusRange: 4,
+    bokeh: 6,
+    content: (
+      <>
+        <ShipDeck preset={P(beat)} />
+        <DeckBoat position={[4.35, 0.8, 1.4]} falls={false} />
+        <Character def={BIBLE.officer} expression="angry" mouth="wide" position={[2.65, 0, 1.4]} rotationY={-Math.PI / 2} pose={gesture("lantern", t)} />
+        {CROWD.slice(0, 22).map((e, i) => {
+          const g = gesture("surge", t + e.phase);
+          return <Character key={i} def={e.def} expression={i % 3 ? "scared" : "shocked"} mouth={i % 2 ? "wide" : "rest"} position={[e.position[0] * 0.7 - 0.2, 0, e.position[2] * 0.35 + 1.2]} rotationY={Math.PI / 2 + (e.rotationY % 0.5) - 0.25} pose={g} />;
+        })}
+      </>
+    ),
+  }),
+  // an officer shoves a man back from the boat; the man flies backwards
+  "officer-shove": ({ beat, t, dur }) => ({
+    real: true,
+    camera: live({ position: [1.7, 2.3, 7.6], target: [1.9, 1.8, 1.2], fov: 46 }, t, dur, { push: 0.06, shake: t > 0.3 && t < 0.6 ? 0.04 : 0 }),
+    focus: [1.9, 1.9, 1.2],
+    focusRange: 2,
+    content: (
+      <>
+        <ShipDeck preset={P(beat)} />
+        <DeckBoat position={[4.35, 0.8, 1.4]} falls={false} />
+        <Character def={BIBLE.officer} expression="angry" mouth="wide" position={[2.8, 0, 1.2]} rotationY={-Math.PI / 2 + 0.35} pose={gesture("shove", t)} />
+        <Character def={BIBLE.passenger} expression={t > 0.3 ? "shocked" : "angry"} mouth="wide" position={[1.35, 0, 1.2]} rotationY={Math.PI / 2 + 0.35} pose={t > 0.3 ? gesture("pushed", t - 0.3) : gesture("surge", t)} />
+        {CROWD.slice(0, 10).map((e, i) => (
+          <Character key={i} def={e.def} expression="scared" position={[-0.8 - (i % 4) * 0.9, 0, -1.2 + Math.floor(i / 4) * 1.1]} rotationY={Math.PI / 2} pose={gesture("surge", t + e.phase)} />
+        ))}
+      </>
+    ),
+  }),
+  // a woman climbs over the rail into the boat, clutching a life jacket; the officer waves her in
+  "climb-boat": ({ beat, t, dur }) => ({
+    real: true,
+    camera: live({ position: [4.2, 2.5, 6.8], target: [2.9, 1.6, 1.8], fov: 44 }, t, dur, { push: 0.08 }),
+    focus: [2.8, 1.8, 1.9],
+    focusRange: 2.2,
+    content: (
+      <>
+        <ShipDeck preset={P(beat)} />
+        <DeckBoat position={[4.35, 0.8, 1.9]} falls={false}>
+          {[-1.9].map((z, i) => (
+            <Character key={z} def={WOMEN[i + 3].def} expression="worried" position={[0, -0.55, z]} rotationY={-Math.PI / 2} pose={gesture("crouch", t)} />
+          ))}
+        </DeckBoat>
+        <Character def={WOMEN[0].def} expression="scared" position={[2.45, 0, 2.0]} rotationY={Math.PI / 2} pose={{ ...gesture("climbin", t), holdR: "lifejacket" }} />
+        <Character def={BIBLE.officer} expression="determined" mouth="wide" position={[2.55, 0, 0.6]} rotationY={-0.6} pose={gesture("wave", t)} />
+      </>
+    ),
+  }),
+  // a sailor fires a distress rocket; it streaks up and bursts over the ship
+  "rocket-fire": ({ beat, t, dur }) => ({
+    real: true,
+    camera: live({ position: [-0.2, 0.9, 5.4], target: [1.6, 4.4, -1.6], fov: 54, roll: -0.08 }, t, dur, { push: 0.04, shake: t > 0.3 && t < 0.7 ? 0.05 : 0 }),
+    focus: [1.5, 2.2, -0.6],
+    focusRange: 6,
+    bokeh: 3,
+    content: (
+      <>
+        <ShipDeck preset={P(beat)} />
+        <Character def={BIBLE.officer} expression="determined" position={[1.5, 0, -0.6]} rotationY={0.35} pose={gesture("rocket", t)} />
+        <RocketFlare t={t - 0.3} from={[1.25, 3.4, -0.4]} height={7.5} />
+      </>
+    ),
+  }),
+  // a stoker sprints along the deck with a lantern; the camera tracks with him
+  "stoker-dash": ({ beat, t, dur }) => {
+    const x = -3.2 + 4 * t;
+    return {
+      real: true,
+      camera: { position: [x + 3.4, 2.0, 3.6], target: [x + 0.2, 1.8, 0.4], fov: 46, roll: 0.05 },
+      motionBlur: 3,
+      focus: [x, 1.9, 0.4],
+      focusRange: 2.5,
+      content: (
+        <>
+          <ShipDeck preset={P(beat)} />
+          <Character def={BIBLE.stoker} expression="scared" mouth="wide" position={[-3.2, 0, 0.4]} rotationY={Math.PI / 2} pose={{ ...gesture("runacross", t), holdR: "lantern", armR: [2.2, 0.3], elbowR: 0.3, noProp: true }} />
+          {CROWD.slice(10, 16).map((e, i) => (
+            <Character key={i} def={e.def} expression="scared" position={[-1 + i * 1.6, 0, -1.6 - (i % 2) * 0.8]} rotationY={Math.PI / 2 + 0.3} pose={gesture("panic", t + e.phase)} />
+          ))}
+        </>
+      ),
+    };
+  },
+  // the lifeboat drops down the ship's side, people clinging on
+  "boat-lowering": ({ beat, t, dur }) => {
+    const y = 0.8 - 2.2 * t;
+    return {
+      real: true,
+      camera: live({ position: [9.0, y + 1.8, 4.0], target: [4.3, y + 0.3, 0.3], fov: 46 }, t, dur, { push: 0.03, shake: 0.015 }),
+      focus: [4.4, y, 0.3],
+      focusRange: 3,
+      content: (
+        <>
+          <ShipDeck preset={P(beat)} />
+          <DeckBoat position={[4.45, y, 0.3]} rotationY={Math.sin(t * 2.3) * 0.04}>
+            {[-1.6, -0.5, 0.6].map((z, i) => (
+              <Character key={z} def={WOMEN[i + 5].def} expression={i === 1 ? "sad" : "scared"} position={[0, -0.55, z]} rotationY={Math.PI / 2 + (i - 1) * 0.3} pose={gesture("crouch", t)} />
+            ))}
+            <Character def={BIBLE.passenger} expression="worried" position={[0, -0.55, 1.6]} rotationY={Math.PI / 2} pose={{ ...gesture("wave", t), sink: 0.25 }} />
+          </DeckBoat>
+        </>
+      ),
+    };
+  },
+  // a man takes his chance: leaps from the rail toward the boat below
+  "man-leap": ({ beat, t, dur }) => {
+    const g = gesture("leap", t);
+    const r = (g.root as [number, number, number]) ?? [0, 0, 0];
+    const drop = Math.max(0, t - 0.5) ** 2 * 11;
+    const my = r[1] * 1.2 - drop; // the man's height above the deck: the camera follows him
+    const mx = 2.35 + r[2] * 1.25;
+    return {
+      real: true,
+      camera: live({ position: [5.8, my + 0.6, 4.2], target: [mx, my + 1.9, 0.6], fov: 54 }, t, dur, { push: 0.03 }),
+      motionBlur: t > 0.4 ? 5 : 0,
+      focus: [3.5, 1.2, 0.6],
+      focusRange: 3,
+      content: (
+        <>
+          <ShipDeck preset={P(beat)} />
+          <DeckBoat position={[4.6, -1.7, 0.6]} />
+          <Character def={BIBLE.passenger} expression={t > 0.3 ? "shocked" : "determined"} mouth={t > 0.3 ? "wide" : "rest"} position={[2.35, 0, 0.6]} rotationY={Math.PI / 2} pose={{ ...g, root: [r[0], r[1] * 1.2 - drop, r[2] * 1.25] }} />
+        </>
+      ),
+    };
+  },
+
+  // -- extreme close-ups + top-down (camera grammar: one every ~4-6 shots) ──
   "insp-eyes": ({ beat, cut, t, dur, abs }) => ({
     camera: live(wideClose([INSP[0], INSP[1] + 1.7684 - 0.04, INSP[2] + 0.45], -0.12, 1.45, 40), t, dur, { push: 0.05 }),
     focus: [INSP[0], INSP[1] + 1.7684, INSP[2] + 0.5],
@@ -616,6 +753,7 @@ export const cutShot = (i: CutInput): ShotOutput => {
   const tpl = TPL[i.cut.shot];
   if (!tpl) throw new Error(`Unknown cut template "${i.cut.shot}" (${i.beat.id}). Known: ${Object.keys(TPL).join(", ")}`);
   const o = tpl(i);
+  if (o.real) return o;
   return { ...o, camera: lift(o.camera), focus: [o.focus[0], o.focus[1] * BODY_K, o.focus[2]] };
 };
 export const CUT_TEMPLATES = Object.keys(TPL);

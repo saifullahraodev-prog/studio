@@ -18,6 +18,7 @@ const Q = (style as unknown as { quality: Record<string, QualityFlags> }).qualit
 export const QUALITY: QualityFlags = Q[(getInputProps() as { quality?: string }).quality ?? "final"] ?? Q.final;
 
 const texCache = new Map<string, Promise<THREE.Texture>>();
+const cloneCache = new Map<string, THREE.Texture>();
 const loadImage = (url: string) =>
   new Promise<HTMLImageElement>((res, rej) => {
     const img = new Image();
@@ -69,10 +70,20 @@ const useMaps = (id: string, gray: boolean) => {
   const h = useRef<number | null>(null);
   useLayoutEffect(() => {
     if (!QUALITY.textures) return;
+    let alive = true;
     h.current = delayRender(`texture ${id}`);
     Promise.all([loadTex(`textures/${id}/Color.jpg`, gray ? "gray" : "color"), loadTex(`textures/${id}/NormalGL.jpg`, "data"), loadTex(`textures/${id}/Roughness.jpg`, "data")])
-      .then(setMaps)
+      .then((m) => alive && setMaps(m))
       .catch((e) => cancelRender(e));
+    // unmounted before the maps arrived (e.g. a shot that only lives for a whip transition):
+    // release the hold, or the render waits forever
+    return () => {
+      alive = false;
+      if (h.current !== null) {
+        continueRender(h.current);
+        h.current = null;
+      }
+    };
   }, [id, gray]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (!maps || h.current === null) return;
@@ -99,12 +110,19 @@ export const Real: React.FC<RealProps> = ({ tex, repeat = [1, 1], rotate = 0, ti
   const maps = useMaps(tex, gray);
   const [map, normal, rough] = useMemo(() => {
     if (!maps) return [null, null, null];
-    return maps.map((m) => {
-      const c = m.clone(); // own repeat/rotation, shared image
-      c.repeat.set(repeat[0], repeat[1]);
-      c.center.set(0.5, 0.5);
-      c.rotation = rotate;
-      c.needsUpdate = true;
+    // one texture object per (map, repeat, rotation): identical surfaces share it, so the GPU
+    // uploads each image a handful of times instead of once per mesh (huge speed-up)
+    return maps.map((m, k) => {
+      const key = `${tex}|${gray}|${k}|${repeat[0]}|${repeat[1]}|${rotate}`;
+      let c = cloneCache.get(key);
+      if (!c) {
+        c = m.clone();
+        c.repeat.set(repeat[0], repeat[1]);
+        c.center.set(0.5, 0.5);
+        c.rotation = rotate;
+        c.needsUpdate = true;
+        cloneCache.set(key, c);
+      }
       return c;
     });
   }, [maps, repeat[0], repeat[1], rotate]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -139,13 +157,22 @@ export const HdrSky: React.FC<{ file: string; intensity: number; envIntensity: n
       p = new RGBELoader().loadAsync(staticFile(`sky/${file}`));
       hdrCache.set(file, p);
     }
+    let alive = true;
     p.then((t) => {
+      if (!alive) return;
       t.mapping = THREE.EquirectangularReflectionMapping;
       const pm = new THREE.PMREMGenerator(gl);
       const env = pm.fromEquirectangular(t).texture;
       pm.dispose();
       setTex({ bg: t, env });
     }).catch((e) => cancelRender(e));
+    return () => {
+      alive = false;
+      if (h.current !== null) {
+        continueRender(h.current);
+        h.current = null;
+      }
+    };
   }, [file]); // eslint-disable-line react-hooks/exhaustive-deps
   useLayoutEffect(() => {
     if (!tex) return;
