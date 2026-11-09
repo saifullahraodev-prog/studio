@@ -15,6 +15,23 @@ const HATS: CharacterDef["headgear"][] = [
   { type: "none", color: "#000" },
 ];
 
+// 1911 garment workers: shirtwaists in light colours, dark skirts, period hair
+const BLOUSES = ["#EFE9DC", "#F4F1EA", "#E3EAF2", "#F0E2E0", "#E8E4D0", "#DCE4DA"];
+const SKIRTS = ["#2E3448", "#262428", "#4A3A2E", "#3A3E44", "#2F3A33", "#4A2E34"];
+const HAIR_COLORS = ["#3A2A20", "#1E1A18", "#5A3A24", "#7A5230", "#2A2420", "#8A6A3A"];
+const HAIR_STYLES: NonNullable<CharacterDef["hair"]>["style"][] = ["gibson", "bun", "braid", "gibson", "bun"];
+
+const workerDef = (r: (k: string) => number): CharacterDef => {
+  const base = BIBLE.worker;
+  const blouse = BLOUSES[Math.floor(r("b") * BLOUSES.length)];
+  const skirt = SKIRTS[Math.floor(r("k") * SKIRTS.length)];
+  return {
+    ...base,
+    body: { ...base.body, torso: blouse, sleeve: blouse, skirt, legs: skirt, trim: SKIRTS[Math.floor(r("tr") * SKIRTS.length)], scale: 0.84 + r("s") * 0.12 },
+    hair: { style: HAIR_STYLES[Math.floor(r("hs") * HAIR_STYLES.length)], color: HAIR_COLORS[Math.floor(r("hc") * HAIR_COLORS.length)] },
+  };
+};
+
 export type Extra = {
   def: CharacterDef;
   position: [number, number, number];
@@ -30,6 +47,7 @@ export const makeCrowd = (opts: {
   faceToward?: [number, number]; // x,z point most extras look at
   expressions?: Expression[];
   minGap?: number;
+  kind?: "passengers" | "workers" | "mixed"; // mixed = mostly workers + some men in shirt sleeves / caps
 }): Extra[] => {
   const r = (i: number, k: string) => random(`${opts.seed}-${i}-${k}`);
   const out: Extra[] = [];
@@ -40,13 +58,17 @@ export const makeCrowd = (opts: {
     const x = opts.area.x[0] + r(i, "x") * (opts.area.x[1] - opts.area.x[0]);
     const z = opts.area.z[0] + r(i, "z") * (opts.area.z[1] - opts.area.z[0]);
     if (out.some((e) => Math.hypot(e.position[0] - x, e.position[2] - z) < gap)) continue;
+    const kind = opts.kind ?? "passengers";
+    const isWorker = kind === "workers" || (kind === "mixed" && r(i, "w") < 0.78);
     const base = BIBLE.passenger;
     const coat = COATS[Math.floor(r(i, "c") * COATS.length)];
-    const def: CharacterDef = {
-      ...base,
-      body: { ...base.body, torso: coat, sleeve: coat, legs: TROUSERS[Math.floor(r(i, "t") * TROUSERS.length)], scale: 0.9 + r(i, "s") * 0.16 },
-      headgear: HATS[Math.floor(r(i, "h") * HATS.length)],
-    };
+    const def: CharacterDef = isWorker
+      ? workerDef((k) => r(i, k))
+      : {
+          ...base,
+          body: { ...base.body, torso: coat, sleeve: coat, legs: TROUSERS[Math.floor(r(i, "t") * TROUSERS.length)], scale: 0.9 + r(i, "s") * 0.16 },
+          headgear: HATS[Math.floor(r(i, "h") * HATS.length)],
+        };
     const look = opts.faceToward ? Math.atan2(opts.faceToward[0] - x, opts.faceToward[1] - z) : 0;
     const exprs = opts.expressions ?? ["worried", "scared", "shocked"];
     out.push({

@@ -56,7 +56,7 @@ export const EXPR: Record<Expression, ExprParams> = {
 };
 
 // Per-character extras drawn on top (defined in the character bible).
-export type FaceExtras = { glasses?: boolean; soot?: boolean; stubble?: boolean; mustache?: boolean };
+export type FaceExtras = { glasses?: boolean; soot?: boolean; stubble?: boolean; mustache?: boolean; lashes?: boolean; freckles?: boolean; lips?: boolean };
 
 // ─── geometry ───────────────────────────────────────────────────────────────
 const W = style.face.cellW; // 320
@@ -446,6 +446,25 @@ const ComicBrow: React.FC<{ c: ComicExpr; side: -1 | 1 }> = ({ c, side }) => {
   return <path d={`M${xo} ${yo} Q${(xi + xo) / 2} ${(yi + yo) / 2 - 4} ${xi} ${yi}`} fill="none" stroke={INK} strokeWidth={11} strokeLinecap="round" />;
 };
 
+// three short lashes flicking out of each eye's outer upper corner
+const ComicLashes: React.FC<{ c: ComicExpr; side: -1 | 1 }> = ({ c, side }) => {
+  const s = side < 0 ? c.sL : c.sR;
+  const cx = CX + side * CD.dx;
+  const rx = CD.rx * s;
+  const ry = CD.ry * s;
+  const out = side; // outer direction in image space
+  const pts = c.arcs ? [[0.85, 0.15]] : [[0.62, -0.78], [0.85, -0.5], [0.98, -0.18]];
+  return (
+    <g stroke={INK} strokeWidth={5} strokeLinecap="round">
+      {pts.map(([ax, ay], i) => {
+        const x = cx + out * rx * ax;
+        const y = CD.eyeY + ry * ay * (c.arcs ? 1 : 1) + (c.arcs ? 6 : 0);
+        return <line key={i} x1={x} y1={y} x2={x + out * 13} y2={y - 9 + i * 4} />;
+      })}
+    </g>
+  );
+};
+
 const ComicCell: React.FC<{ expression: Expression; mouth: MouthSlot; extras: FaceExtras; uid: string }> = ({ expression, mouth, extras, uid }) => {
   const e = EXPR[expression];
   const c = COMIC[expression];
@@ -462,11 +481,24 @@ const ComicCell: React.FC<{ expression: Expression; mouth: MouthSlot; extras: Fa
         <Extras v="D" x={{ ...extras, glasses: false, mustache: false }} e={e} />
         <ComicEye c={c} side={-1} uid={uid} />
         <ComicEye c={c} side={1} uid={uid} />
+        {extras.lashes && <ComicLashes c={c} side={-1} />}
+        {extras.lashes && <ComicLashes c={c} side={1} />}
         <ComicBrow c={c} side={-1} />
         <ComicBrow c={c} side={1} />
+        {extras.freckles && (
+          <g fill="#B0704A" opacity={0.55}>
+            {[-1, 1].map((sd) => [[0, 0], [10, 6], [-8, 8], [4, 14]].map(([dx, dy], i) => <circle key={`${sd}${i}`} cx={CX + sd * (86 + dx)} cy={150 + dy} r={2.6} />))}
+          </g>
+        )}
         <g transform={`translate(${CX} ${CD.mouthY}) scale(1.18) translate(${-CX} ${-MOUTH_Y})`}>
           <Mouth v="D" shape={shape as RestMouth | TalkMouth} />
         </g>
+        {extras.mustache && (
+          <path
+            d={`M${CX} ${CD.mouthY - 22} q-20 -12 -44 2 q-6 10 6 12 q18 2 38 -6 q20 8 38 6 q12 -2 6 -12 q-24 -14 -44 -2 Z`}
+            fill={INK}
+          />
+        )}
         <Drops e={e} />
       </g>
     </g>

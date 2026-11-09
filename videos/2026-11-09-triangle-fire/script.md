@@ -1,6 +1,6 @@
 # Script: "POV: You work on the ninth floor. Why couldn't you get out?" (Triangle fire, 1911)
 
-GATE 4 test video (Phase 4). Target 3:00. Status: **DRAFT, waiting for owner approval.**
+GATE 4 test video (Phase 4). Target 3:00. Status: **APPROVED by owner 2026-11-09.**
 Format: second person, the Inspector opens and closes, ends "…and that's why, today, ___."
 
 **Tone rule for this one:** 146 people died, most of them young women and girls. The comedy

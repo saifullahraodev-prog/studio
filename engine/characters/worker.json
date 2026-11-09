@@ -1,0 +1,23 @@
+{
+  "id": "worker",
+  "name": "Garment worker (1911)",
+  "role": "Young immigrant garment worker (Triangle Waist Company). Crowd module varies hair, blouse and skirt colours, height.",
+  "faceVariant": "D",
+  "faceExtras": { "lashes": true },
+  "body": {
+    "torso": "#EFE9DC",
+    "torsoStyle": "blouse",
+    "trim": "#3A3F55",
+    "sleeve": "#EFE9DC",
+    "legs": "#2E3448",
+    "lower": "skirt",
+    "skirt": "#2E3448",
+    "puffSleeves": true,
+    "shoes": "#1E1A18",
+    "scale": 0.9
+  },
+  "headgear": { "type": "none", "color": "#000" },
+  "hair": { "style": "gibson", "color": "#3A2A20" },
+  "prop": null,
+  "accessories": ["highCollar"]
+}

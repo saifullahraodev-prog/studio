@@ -76,7 +76,12 @@ const torsoGeo = (style_: "coat" | "vest" | "shirt") => {
   ].map(([x, y]) => new THREE.Vector2(x, y));
   return new THREE.LatheGeometry(pts, 40);
 };
-const TORSO = { coat: torsoGeo("coat"), vest: torsoGeo("vest"), shirt: torsoGeo("shirt") };
+const lathe = (pts: number[][]) => new THREE.LatheGeometry(pts.map(([x, y]) => new THREE.Vector2(x, y)), 40);
+// shirtwaist blouse: nipped waist, fuller chest, high neck
+const blouseGeo = lathe([[0, 0], [0.37, 0], [0.39, 0.04], [0.36, 0.22], [0.42, 0.45], [0.43, 0.58], [0.39, 0.72], [0.28, 0.82], [0.12, 0.86], [0, 0.86]]);
+const TORSO = { coat: torsoGeo("coat"), vest: torsoGeo("vest"), shirt: torsoGeo("shirt"), blouse: blouseGeo, robe: torsoGeo("coat") };
+// long 1910s skirt: waist at the torso bottom, hem just above the shoes
+const skirtGeo = lathe([[0, 0.08], [0.47, 0.08], [0.5, 0.11], [0.46, 0.24], [0.41, 0.4], [0.385, 0.46], [0, 0.46]]);
 
 const S: React.FC<React.PropsWithChildren<{ p?: [number, number, number]; r?: [number, number, number]; s?: [number, number, number] | number }>> = ({
   p,
@@ -182,6 +187,77 @@ const Spectacles: React.FC<{ variant: FaceVariant }> = ({ variant }) => {
   );
 };
 
+// ─── hair (1910s styles, chunky chibi volumes) ─────────────────────────────
+// Front hairline stays above the drawn brows (face panel), so expressions are never covered.
+// One hair shell: a sphere slightly bigger than the head with the face window cut out.
+// The window is a rounded arch (open over the drawn features, hair framing the temples),
+// so there are no hard seams from the side or back.
+const hairShell = (() => {
+  const R = HR * 1.045;
+  const g = new THREE.SphereGeometry(R, 96, 64);
+  const pos = g.attributes.position as THREE.BufferAttribute;
+  // hairline height (in units of R) for a direction around the head: arches over the face,
+  // drops in front of the ears, then runs round to the nape. One continuous curve.
+  const line = (ang: number) => {
+    if (ang < 1.2) return 0.39 - 0.75 * Math.pow(ang / 1.2, 3);
+    const k = Math.min(1, (ang - 1.2) / 0.8);
+    return -0.36 - 0.26 * k * k * (3 - 2 * k);
+  };
+  for (let i = 0; i < pos.count; i++) {
+    const x = pos.getX(i);
+    const y = pos.getY(i);
+    const z = pos.getZ(i);
+    const ang = Math.abs(Math.atan2(x, z));
+    const ly = line(ang) * R;
+    if (y < ly) {
+      // slide the vertex up onto the hairline, staying on the sphere: a clean curved edge
+      const hr = Math.hypot(x, z) || 1e-6;
+      const nh = Math.sqrt(Math.max(R * R - ly * ly, 0));
+      pos.setXYZ(i, (x / hr) * nh, ly, (z / hr) * nh);
+    }
+  }
+  g.computeVertexNormals();
+  return g;
+})();
+const hairFringe = new THREE.SphereGeometry(HR * 1.04, 48, 12, Math.PI * 0.9, Math.PI * 1.2, 1.45, 0.42);
+const Hair: React.FC<{ h: NonNullable<CharacterDef["hair"]> }> = ({ h }) => {
+  const m = <Toon color={h.color} kind="wool" roughness={0.75} />;
+  if (h.style === "bald") return <mesh geometry={hairFringe} castShadow>{m}</mesh>;
+  return (
+    <group>
+      <mesh geometry={hairShell} scale={h.style === "gibson" ? [1.03, 1.08, 1.03] : 1} castShadow>
+        {m}
+      </mesh>
+      {h.style === "gibson" && (
+        <>
+          {/* pompadour roll over the forehead + top knot */}
+          <S p={[0, HR * 0.86, HR * 0.5]} r={[-0.5, 0, 0]} s={[1.75, 0.7, 0.9]}>
+            <sphereGeometry args={[0.27, 28, 18]} />
+            {m}
+          </S>
+          <S p={[0, HR * 1.12, -HR * 0.22]}>
+            <sphereGeometry args={[0.24, 24, 16]} />
+            {m}
+          </S>
+        </>
+      )}
+      {h.style === "bun" && (
+        <S p={[0, HR * 0.42, -HR * 0.9]}>
+          <sphereGeometry args={[0.22, 24, 16]} />
+          {m}
+        </S>
+      )}
+      {h.style === "braid" &&
+        [0, 1, 2, 3, 4].map((i) => (
+          <S key={i} p={[0, -0.12 - i * 0.13, -HR * 0.92 + i * 0.03]} s={[1, 1.1, 0.9]}>
+            <sphereGeometry args={[0.095 - i * 0.008, 14, 10]} />
+            {m}
+          </S>
+        ))}
+    </group>
+  );
+};
+
 // ─── headgear (sits low on the round head, like a real helmet/cap) ──────────
 const Headgear: React.FC<{ g: CharacterDef["headgear"] }> = ({ g }) => {
   if (g.type === "peakedCap") {
@@ -235,6 +311,64 @@ const Headgear: React.FC<{ g: CharacterDef["headgear"] }> = ({ g }) => {
     );
   }
   if (g.type === "none") return null;
+  if (g.type === "fireHelmet") {
+    // 1910s New York leather fire helmet: tall dome, long back brim, front shield
+    return (
+      <group position={[0, 0.28, 0]} scale={1.1}>
+        <S p={[0, 0.12, 0]} s={[0.92, 1.1, 1.02]}>
+          <sphereGeometry args={[0.6, 40, 20, 0, Math.PI * 2, 0, Math.PI / 2]} />
+          <Toon color={g.color} kind="leather" roughness={0.35} />
+        </S>
+        {[-0.5, -0.25, 0, 0.25, 0.5].map((a) => (
+          <S key={a} p={[0, 0.12, 0]} r={[0, a, 0]} s={[0.93, 1.11, 1.03]}>
+            <torusGeometry args={[0.6, 0.012, 6, 30, Math.PI]} />
+            <Toon color={g.color} kind="leather" roughness={0.3} />
+          </S>
+        ))}
+        <S p={[0, 0.1, -0.16]} r={[0.12, 0, 0]} s={[1, 1, 1.45]}>
+          <cylinderGeometry args={[0.66, 0.68, 0.035, 40]} />
+          <Toon color={g.color} kind="leather" roughness={0.35} />
+        </S>
+        <S p={[0, 0.48, 0.5]} r={[-0.25, 0, 0]}>
+          <boxGeometry args={[0.36, 0.42, 0.03]} />
+          <Toon color={g.trim ?? "#B9862F"} kind="leather" />
+        </S>
+        <S p={[0, 0.5, 0.52]} r={[-0.25, 0, 0]}>
+          <boxGeometry args={[0.28, 0.32, 0.02]} />
+          <Toon color={g.badge ?? "#E9DFC6"} kind="paint" />
+        </S>
+        <S p={[0, 0.8, 0.02]}>
+          <sphereGeometry args={[0.07, 14, 10]} />
+          <Toon color={g.trim ?? "#B9862F"} kind="brass" />
+        </S>
+      </group>
+    );
+  }
+  if (g.type === "ladyHat") {
+    // wide-brim 1910s hat with a ribbon and bow, sitting on top of the hair
+    return (
+      <group position={[0, 0.5, -0.04]} rotation={[-0.12, 0, 0.06]} scale={1.05}>
+        <S p={[0, 0, 0]}>
+          <cylinderGeometry args={[0.9, 0.86, 0.04, 48]} />
+          <Toon color={g.color} kind="wool" />
+        </S>
+        <S p={[0, 0.16, 0]}>
+          <cylinderGeometry args={[0.42, 0.5, 0.3, 40]} />
+          <Toon color={g.color} kind="wool" />
+        </S>
+        <S p={[0, 0.07, 0]}>
+          <cylinderGeometry args={[0.505, 0.51, 0.1, 40]} />
+          <Toon color={g.band ?? g.color} kind="fabric" />
+        </S>
+        {[-1, 1].map((sd) => (
+          <S key={sd} p={[0.38 + sd * 0.08, 0.1, 0.32]} r={[0, 0.6, sd * 0.6]} s={[1, 0.6, 0.4]}>
+            <sphereGeometry args={[0.09, 12, 10]} />
+            <Toon color={g.trim ?? g.band ?? g.color} kind="fabric" />
+          </S>
+        ))}
+      </group>
+    );
+  }
   if (g.type === "bowler") {
     return (
       <group position={[0, 0.3, 0]} scale={1.05}>
@@ -351,9 +485,56 @@ const ShovelOnShoulder: React.FC = () => {
   );
 };
 
-const Arm: React.FC<{ side: 1 | -1; sleeve: string; rot: [number, number]; prop?: React.ReactNode; fingers?: number }> = ({ side, sleeve, rot, prop, fingers }) => (
+const Gavel: React.FC = () => (
+  <group position={[0, -0.12, 0.08]} rotation={[0.3, 0, 0]}>
+    <S p={[0, -0.05, 0.12]} r={[Math.PI / 2, 0, 0]}>
+      <cylinderGeometry args={[0.025, 0.025, 0.34, 10]} />
+      <Toon color="#6A4428" kind="wood" />
+    </S>
+    <S p={[0, -0.05, 0.3]} r={[0, 0, Math.PI / 2]}>
+      <cylinderGeometry args={[0.065, 0.065, 0.22, 16]} />
+      <Toon color="#5A3820" kind="wood" />
+    </S>
+  </group>
+);
+const Notebook: React.FC = () => (
+  <group position={[0, -0.12, 0.18]} rotation={[-0.4, 0, 0]}>
+    <S>
+      <boxGeometry args={[0.24, 0.32, 0.04]} />
+      <Toon color="#5C2A2E" kind="leather" />
+    </S>
+    <S p={[0, 0, 0.021]}>
+      <boxGeometry args={[0.2, 0.28, 0.004]} />
+      <Toon color="#F2EBDC" kind="paint" roughness={0.9} />
+    </S>
+  </group>
+);
+const AxeOnShoulder: React.FC = () => {
+  const { mid, len, rot, end, dir } = shovelPlacement;
+  const head = end.clone().add(dir.clone().multiplyScalar(0.04));
+  return (
+    <group>
+      <S p={[mid.x, mid.y, mid.z]} r={rot}>
+        <cylinderGeometry args={[0.032, 0.032, len, 12]} />
+        <Toon color="#9A6A3A" kind="wood" />
+      </S>
+      <group position={[head.x, head.y, head.z]} rotation={rot}>
+        <S p={[0.12, 0, 0]}>
+          <boxGeometry args={[0.26, 0.12, 0.05]} />
+          <Toon color="#A8322E" kind="paint" />
+        </S>
+        <S p={[-0.12, 0, 0]} r={[0, 0, 0.3]}>
+          <coneGeometry args={[0.05, 0.2, 4]} />
+          <Toon color="#A8322E" kind="paint" />
+        </S>
+      </group>
+    </group>
+  );
+};
+
+const Arm: React.FC<{ side: 1 | -1; sleeve: string; rot: [number, number]; prop?: React.ReactNode; fingers?: number; puff?: boolean }> = ({ side, sleeve, rot, prop, fingers, puff }) => (
   <group position={[side * 0.41, TORSO_Y + 0.66, 0]} rotation={[-rot[0], 0, side * rot[1]]}>
-    <S p={[0, -0.03, 0]}>
+    <S p={[0, puff ? -0.05 : -0.03, 0]} s={puff ? [1.45, 1.6, 1.45] : 1}>
       <sphereGeometry args={[0.11, 18, 14]} />
       <Toon color={sleeve} kind="fabric" />
     </S>
@@ -379,10 +560,12 @@ const Body: React.FC<{ def: CharacterDef; legSwing?: number }> = ({ def, legSwin
         // legs pivot at the hip so they can swing for walk/run cycles
         <group key={sd} position={[sd * 0.18, HIP_Y, 0]} rotation={[sd * legSwing, 0, 0]}>
           <group position={[0, -HIP_Y, 0]}>
-            <S p={[0, 0.26, 0]}>
-              <cylinderGeometry args={[0.13, 0.12, 0.36, 18]} />
-              <Toon color={b.legs} kind="fabric" />
-            </S>
+            {b.lower !== "skirt" && (
+              <S p={[0, 0.26, 0]}>
+                <cylinderGeometry args={[0.13, 0.12, 0.36, 18]} />
+                <Toon color={b.legs} kind="fabric" />
+              </S>
+            )}
             <S p={[0, 0.07, 0.05]} s={[1, 0.62, 1.35]}>
               <sphereGeometry args={[0.16, 18, 14]} />
               <Toon color={b.shoes} kind="leather" />
@@ -393,15 +576,54 @@ const Body: React.FC<{ def: CharacterDef; legSwing?: number }> = ({ def, legSwin
       <mesh geometry={TORSO[b.torsoStyle]} position={[0, TORSO_Y, 0]} castShadow receiveShadow>
         <Toon color={b.torso} kind="fabric" />
       </mesh>
+      {b.lower === "skirt" && (
+        // skirt sways a little with the stride
+        <mesh geometry={skirtGeo} rotation={[legSwing * 0.08, 0, 0]} castShadow receiveShadow>
+          <Toon color={b.skirt ?? b.legs} kind="wool" />
+        </mesh>
+      )}
       {/* collar */}
       <S p={[0, TORSO_Y + 0.8, 0]} r={[Math.PI / 2, 0, 0]}>
         <torusGeometry args={[0.24, 0.06, 10, 28]} />
         <Toon color={b.torso} kind="fabric" />
       </S>
-      <S p={[0, TORSO_Y + 0.3, 0]}>
-        <cylinderGeometry args={[0.455, 0.457, 0.07, 40]} />
-        <Toon color={b.trim} kind="leather" />
-      </S>
+      {acc.includes("highCollar") && (
+        <S p={[0, TORSO_Y + 0.86, 0]}>
+          <cylinderGeometry args={[0.2, 0.23, 0.14, 28, 1, true]} />
+          <Toon color={b.torso} kind="fabric" side={THREE.DoubleSide} />
+        </S>
+      )}
+      {b.torsoStyle === "blouse" ? (
+        <S p={[0, TORSO_Y + 0.03, 0]}>
+          <cylinderGeometry args={[0.395, 0.4, 0.07, 40]} />
+          <Toon color={b.trim} kind="leather" />
+        </S>
+      ) : b.torsoStyle !== "robe" ? (
+        <S p={[0, TORSO_Y + 0.3, 0]}>
+          <cylinderGeometry args={[0.455, 0.457, 0.07, 40]} />
+          <Toon color={b.trim} kind="leather" />
+        </S>
+      ) : null}
+      {b.torsoStyle === "blouse" &&
+        [0.3, 0.45, 0.6].map((y) => (
+          <S key={y} p={[0, TORSO_Y + y, (y < 0.4 ? 0.385 : 0.425) + 0.005]}>
+            <sphereGeometry args={[0.022, 10, 8]} />
+            <Toon color="#F7F4EC" kind="paint" roughness={0.3} />
+          </S>
+        ))}
+      {acc.includes("whiteCollar") &&
+        [-1, 1].map((sd) => (
+          <S key={sd} p={[sd * 0.05, TORSO_Y + 0.7, 0.33]} r={[-0.35, 0, sd * 0.12]}>
+            <boxGeometry args={[0.07, 0.2, 0.015]} />
+            <Toon color="#F4F1EA" kind="paint" />
+          </S>
+        ))}
+      {acc.includes("watchChain") && (
+        <S p={[0.12, TORSO_Y + 0.42, 0.44]} r={[0, 0, Math.PI / 2]}>
+          <torusGeometry args={[0.12, 0.012, 6, 20, Math.PI]} />
+          <Toon color="#D9B04A" kind="brass" />
+        </S>
+      )}
       {b.torsoStyle === "coat" && (
         <>
           <S p={[0, TORSO_Y + 0.45, 0.425]} r={[-0.05, 0, 0]}>
@@ -471,16 +693,32 @@ export const Character: React.FC<CharacterProps> = ({ def, expression = "neutral
   const bob = (pose.bob ?? 0) + Math.abs(Math.sin(ph)) * 0.07 * stride;
   const lean = (pose.lean ?? 0) + 0.18 * stride;
   const armL: [number, number] = pose.armL ?? [0.05 - armSwing, 0.18 + 0.1 * stride];
-  const armR: [number, number] = def.prop === "shovel" ? pose.armR ?? [0.95, 0.12] : pose.armR ?? [0.05 + armSwing, 0.18 + 0.1 * stride];
+  const armR: [number, number] = def.prop === "shovel" || def.prop === "axe" ? pose.armR ?? [0.95, 0.12] : pose.armR ?? [0.05 + armSwing, 0.18 + 0.1 * stride];
   return (
     <group position={position} rotation={[0, rotationY, 0]} scale={def.body.scale}>
       <group position={[0, bob, 0]} rotation={[lean, 0, 0]}>
         <Body def={def} legSwing={swing} />
-        <Arm side={1} sleeve={def.body.sleeve} rot={armL} prop={def.prop === "clipboard" && !pose.noProp ? <Clipboard /> : null} fingers={pose.fingersL} />
-        <Arm side={-1} sleeve={def.body.sleeve} rot={armR} fingers={pose.fingersR} prop={pose.holdR === "stamp" ? <StampTool /> : null} />
+        <Arm
+          side={1}
+          sleeve={def.body.sleeve}
+          rot={armL}
+          puff={def.body.puffSleeves}
+          prop={pose.noProp ? null : def.prop === "clipboard" ? <Clipboard /> : def.prop === "notebook" ? <Notebook /> : null}
+          fingers={pose.fingersL}
+        />
+        <Arm
+          side={-1}
+          sleeve={def.body.sleeve}
+          rot={armR}
+          puff={def.body.puffSleeves}
+          fingers={pose.fingersR}
+          prop={pose.holdR === "stamp" ? <StampTool /> : def.prop === "gavel" && !pose.noProp ? <Gavel /> : null}
+        />
         {def.prop === "shovel" && !pose.noProp && <ShovelOnShoulder />}
+        {def.prop === "axe" && !pose.noProp && <AxeOnShoulder />}
         <group position={[0, HEAD_Y, 0]} rotation={[pose.headNod ?? 0, pose.headYaw ?? 0, pose.headTilt ?? 0]}>
           <Head sheet={faceSheetPath(def.id, v)} variant={v} expression={expression} mouth={mouth} />
+          {def.hair && <Hair h={def.hair} />}
           {def.faceExtras.glasses && <Spectacles variant={v} />}
           <Headgear g={def.headgear} />
         </group>

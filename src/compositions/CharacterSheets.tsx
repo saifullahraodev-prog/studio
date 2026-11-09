@@ -3,6 +3,7 @@ import { ThreeCanvas } from "@remotion/three";
 import { AbsoluteFill, useVideoConfig } from "remotion";
 import { BIBLE } from "../../engine/characters/bible";
 import { Character, Pose } from "../../engine/characters/Character";
+import { makeCrowd } from "../../engine/characters/crowd";
 import { Expression, FACE_VARIANTS, FaceVariant, VARIANT_NAMES } from "../../engine/characters/face";
 import { CameraRig } from "../../engine/cameras/CameraRig";
 import { EnvMap } from "../../engine/shots/WorldShot";
@@ -92,6 +93,37 @@ export const Turnaround: React.FC<{ character: string; variant: FaceVariant }> =
       <div style={{ position: "absolute", top: 34, left: 0, right: 0, textAlign: "center", fontFamily, fontSize: 44, color: "#2A2A30" }}>
         {def.name}: turnaround (face variant {variant})
       </div>
+    </AbsoluteFill>
+  );
+};
+
+// Phase 4 line-up: every character in the bible, front-ish, with a name label,
+// plus a row of crowd extras behind (worker variations).
+const CAM_Z = 17;
+const LFOV = 26;
+export const Lineup: React.FC<{ ids: string[]; crowd: boolean }> = ({ ids, crowd }) => {
+  const { width, height } = useVideoConfig();
+  const n = ids.length;
+  const gap = 2.05;
+  const xs = ids.map((_, i) => (i - (n - 1) / 2) * gap);
+  const extras = crowd ? makeCrowd({ seed: "lineup", count: 9, area: { x: [-6.5, 6.5], z: [-3.8, -2.4] }, faceToward: [0, 12], minGap: 1.5, kind: "workers", expressions: ["neutral", "happy", "worried", "shocked"] }) : [];
+  const halfW = (CAM_Z + 0.5) * Math.tan(((LFOV / 2) * Math.PI) / 180) * (width / height);
+  const expr: Record<string, Expression> = { inspector: "determined", stoker: "worried", worker: "happy", firefighter: "determined", owner: "angry", perkins: "determined", judge: "neutral", passenger: "neutral" };
+  return (
+    <AbsoluteFill style={{ background: bg }}>
+      <ThreeCanvas width={width} height={height} shadows gl={{ alpha: true }}>
+        <CameraRig position={[0, 2.5, CAM_Z]} target={[0, 1.3, -0.5]} fov={LFOV} />
+        <StudioLights />
+        {ids.map((id, i) => (
+          <Character key={id} def={BIBLE[id]} expression={expr[id] ?? "neutral"} position={[xs[i], 0, 0]} rotationY={-xs[i] * 0.03} pose={{ armL: [0.25, 0.22], armR: [0.25, 0.22] }} />
+        ))}
+        {extras.map((e, i) => (
+          <Character key={`x${i}`} def={e.def} expression={e.expression} position={e.position} rotationY={e.rotationY} />
+        ))}
+      </ThreeCanvas>
+      {ids.map((id, i) => (
+        <Label key={id} x={`${50 + (xs[i] / (2 * halfW)) * 100}%`} text={BIBLE[id].name.split(" (")[0]} />
+      ))}
     </AbsoluteFill>
   );
 };

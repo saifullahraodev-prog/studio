@@ -8,7 +8,15 @@
 - GATE 4 test video (3 min): Triangle Shirtwaist Factory fire, 1911 (fire exits, doors, sprinklers).
   Script + sources first, owner approval before building.
 
-### Phase 4 plan (draft 2026-11-09, waiting for owner approval of script + downloads)
+### Phase 4 progress
+- 2026-11-09: script approved. Step 1 characters built: worker (shirtwaist, long skirt, Gibson/bun/braid
+  hair, lashes), firefighter (1910s leather helmet, axe), owner (bowler, mustache, watch chain),
+  Frances Perkins (stylised, wide hat, notebook), judge (robe, gavel). Worker crowds vary hair
+  style/colour, blouse, skirt, height (`makeCrowd({kind: "workers" | "mixed"})`).
+  Review: `out/phase4/lineup.png`, `out/phase4/turnaround-worker.png` (composition `Lineup`).
+  Golden 14/14.
+
+### Phase 4 plan (2026-11-09)
 Script draft: `videos/2026-11-09-triangle-fire/script.md` (~3:00, 21 checked claims, 9 sources).
 Build order (each step shown to the owner as stills):
 1. **Characters**: worker (shirtwaist blouse, long skirt, hair bun/braid variants), 1911 firefighter

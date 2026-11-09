@@ -1,0 +1,22 @@
+{
+  "id": "judge",
+  "name": "Judge",
+  "role": "1911 New York judge in a black robe with a gavel. Generic, not a real person.",
+  "faceVariant": "D",
+  "faceExtras": { "glasses": true },
+  "body": {
+    "torso": "#16161A",
+    "torsoStyle": "robe",
+    "trim": "#0C0C0E",
+    "sleeve": "#16161A",
+    "legs": "#16161A",
+    "lower": "skirt",
+    "skirt": "#16161A",
+    "shoes": "#101010",
+    "scale": 1.0
+  },
+  "headgear": { "type": "none", "color": "#000" },
+  "hair": { "style": "bald", "color": "#B9B4AC" },
+  "prop": "gavel",
+  "accessories": ["whiteCollar"]
+}

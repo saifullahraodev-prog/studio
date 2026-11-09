@@ -1,0 +1,19 @@
+{
+  "id": "owner",
+  "name": "Factory owner",
+  "role": "Generic 1911 factory boss (suit, waistcoat, watch chain, bowler). Not a likeness of any real person.",
+  "faceVariant": "D",
+  "faceExtras": { "mustache": true },
+  "body": {
+    "torso": "#33302E",
+    "torsoStyle": "coat",
+    "trim": "#1E1C1B",
+    "sleeve": "#33302E",
+    "legs": "#2A2827",
+    "shoes": "#141210",
+    "scale": 1.0
+  },
+  "headgear": { "type": "bowler", "color": "#1C1B1E", "band": "#0E0E10" },
+  "prop": null,
+  "accessories": ["watchChain", "tie"]
+}
