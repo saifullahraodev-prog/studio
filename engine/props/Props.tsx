@@ -1,5 +1,6 @@
 import React, { useMemo } from "react";
 import * as THREE from "three";
+import { Real } from "../look/materials";
 import { Toon } from "../look/style";
 
 // Shared props kit (recoloured, reusable). Every prop is built from code so it
@@ -291,7 +292,7 @@ export const TextLabel: React.FC<{ text: string; color?: string; bg?: string; po
 export const Crate: React.FC<{ position?: [number, number, number]; size?: [number, number, number] }> = ({ position, size = [2.4, 0.62, 0.9] }) => (
   <M p={position ? [position[0], position[1] + size[1] / 2, position[2]] : [0, size[1] / 2, 0]}>
     <boxGeometry args={size} />
-    <Toon color="#8A6440" kind="wood" />
+    <Real tex="Planks037A" tint="#C9A27A" repeat={[size[0] / 1.2, 1]} />
   </M>
 );
 
@@ -408,7 +409,7 @@ export const BoilerRoom: React.FC<{ t: number }> = ({ t }) => {
     <group>
       <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
         <planeGeometry args={[14, 14]} />
-        <meshStandardMaterial color="#2A2624" roughness={0.9} metalness={0.2} />
+        <Real tex="MetalPlates004" gray tint="#4A4440" repeat={[5, 5]} metalness={0.3} roughness={0.8} />
       </mesh>
       <mesh position={[0, 3, -2]} receiveShadow>
         <planeGeometry args={[14, 6]} />
@@ -422,7 +423,7 @@ export const BoilerRoom: React.FC<{ t: number }> = ({ t }) => {
       <group position={[-1.2, 0, -1.3]}>
         <M p={[0, 0.9, 0]}>
           <boxGeometry args={[2, 1.8, 1.2]} />
-          <Toon color="#2B2C30" kind="metal" />
+          <Real tex="Metal041B" tint="#6A5A50" repeat={[1.5, 1.4]} metalness={0.5} />
         </M>
         <mesh position={[0, 0.75, 0.61]}>
           <circleGeometry args={[0.38, 32, 0, Math.PI]} />

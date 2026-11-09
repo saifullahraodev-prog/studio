@@ -12,7 +12,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "out" / "facecheck"
-STYLE = json.loads((ROOT / "engine" / "look" / "style-v1.2.json").read_text(encoding="utf-8"))
+STYLE = json.loads((ROOT / "engine" / "look" / "style-v1.3.json").read_text(encoding="utf-8"))
 W, H, N = 2400, 600, 8
 PX_PER_UNIT = H / (2 * 26 * np.tan(np.radians(3.3)))
 GAP_PX = 1.45 * PX_PER_UNIT

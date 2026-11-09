@@ -1,0 +1,398 @@
+{
+  "version": "1.3",
+  "note": "v1.3 (revision 2, 2026-11-09): v1.2 + 'real place' world: CC0 photo textures on near/mid surfaces, photographic CC0 sky backdrops per preset, stronger lens blur, film grade (less saturation, warm highlights, grain, vignette), faces without hatching. Heavy effects switchable: render with props {quality:'preview'} for a cheap pass.",
+  "render": {
+    "materials": "pbr",
+    "envIntensity": 0.55,
+    "note": "pbr = soft realistic materials (cloth, leather, metal reflections); toon = flat bands"
+  },
+  "toon": {
+    "gradientSteps": [
+      110,
+      185,
+      255
+    ],
+    "outlines": false
+  },
+  "ink": {
+    "paper": "#F2ECDF",
+    "ink": "#2A2A30",
+    "accent": "#E0907E",
+    "grainOpacity": 0.1,
+    "wobble": 0.6
+  },
+  "face": {
+    "cellW": 320,
+    "cellH": 240,
+    "panelHeight": 0.7,
+    "panelArc": 0.93,
+    "headRadius": 0.62,
+    "panelW": 1.08,
+    "panelH": 0.8,
+    "headPaper": "#EAE3D3",
+    "shading": {
+      "hatch": false,
+      "rim": true
+    },
+    "relief": 0.5,
+    "occlusion": 0.3,
+    "sheen": 0.18
+  },
+  "dof": {
+    "mode": "real",
+    "bokehScale": 13,
+    "focusRange": 1.8,
+    "backdropBlurPx": 6,
+    "note": "real = lens blur on everything outside the focus range; fake = blurred sky only (cheap); off = sharp"
+  },
+  "captions": {
+    "font": "Fredoka",
+    "subtitle": {
+      "top": 250,
+      "sidePad": 110,
+      "rightPad": 160,
+      "size": 46,
+      "weight": 600
+    },
+    "keyword": {
+      "centerY": 1330,
+      "size": 168,
+      "weight": 700,
+      "stroke": 16,
+      "color": "#FFFFFF",
+      "strokeColor": "#1E1E26"
+    },
+    "safeArea": {
+      "top": 160,
+      "bottom": 400,
+      "left": 60,
+      "right": 140
+    },
+    "mode": "words",
+    "word": {
+      "centerY": 1300,
+      "size": 118,
+      "emphSize": 150,
+      "weight": 700,
+      "stroke": 15,
+      "color": "#FFFFFF",
+      "accent": "#FFD23F",
+      "strokeColor": "#16161C",
+      "maxHold": 0.7,
+      "pop": 0.12
+    }
+  },
+  "lighting": {
+    "day": {
+      "label": "Calm day",
+      "env": 1.0,
+      "sky": {
+        "top": "#6FA8DC",
+        "horizon": "#CFE3EE",
+        "clouds": "#FFFFFF",
+        "cloudOpacity": 0.9,
+        "sun": null,
+        "stars": false,
+        "moon": false
+      },
+      "sunLight": {
+        "color": "#FFF4E2",
+        "intensity": 2.4,
+        "dir": [
+          -4,
+          8,
+          5
+        ]
+      },
+      "hemi": {
+        "sky": "#CFE6FF",
+        "ground": "#8A7A66",
+        "intensity": 1.1
+      },
+      "fog": {
+        "color": "#CFE3EE",
+        "near": 25,
+        "far": 180
+      },
+      "sea": {
+        "color": "#2F6E8E",
+        "amp": 0.25
+      },
+      "faceTint": "#FFFFFF",
+      "faceGlow": 0.0,
+      "lamps": false,
+      "rain": false,
+      "grade": null,
+      "skyHdr": "kloofendal_48d_partly_cloudy_puresky.hdr",
+      "skyIntensity": 1.0,
+      "skyRotation": 0.6
+    },
+    "golden": {
+      "label": "Golden hour",
+      "env": 0.8,
+      "sky": {
+        "top": "#5E7FB3",
+        "horizon": "#F6C27A",
+        "clouds": "#F7B6A0",
+        "cloudOpacity": 0.85,
+        "sun": {
+          "x": 0.12,
+          "color": "#FFE2A0",
+          "size": 90
+        },
+        "stars": false,
+        "moon": false
+      },
+      "sunLight": {
+        "color": "#FFC48A",
+        "intensity": 2.6,
+        "dir": [
+          -9,
+          3.2,
+          -5
+        ]
+      },
+      "hemi": {
+        "sky": "#F1C9A4",
+        "ground": "#7A6050",
+        "intensity": 1.25
+      },
+      "fog": {
+        "color": "#F0C38F",
+        "near": 20,
+        "far": 160
+      },
+      "sea": {
+        "color": "#3D6A86",
+        "amp": 0.25
+      },
+      "faceTint": "#FFE9CF",
+      "faceGlow": 0.06,
+      "lamps": false,
+      "rain": false,
+      "grade": "rgba(255,170,90,0.08)",
+      "skyHdr": "belfast_sunset_puresky.hdr",
+      "skyIntensity": 0.9,
+      "skyRotation": 2.4
+    },
+    "storm": {
+      "label": "Storm",
+      "env": 0.55,
+      "sky": {
+        "top": "#3D4650",
+        "horizon": "#7D8A92",
+        "clouds": "#5B6570",
+        "cloudOpacity": 1,
+        "sun": null,
+        "stars": false,
+        "moon": false
+      },
+      "sunLight": {
+        "color": "#C9D6E0",
+        "intensity": 1.1,
+        "dir": [
+          3,
+          8,
+          4
+        ]
+      },
+      "hemi": {
+        "sky": "#9AA8B4",
+        "ground": "#3E3E40",
+        "intensity": 1.0
+      },
+      "fog": {
+        "color": "#7D8A92",
+        "near": 8,
+        "far": 90
+      },
+      "sea": {
+        "color": "#2B4450",
+        "amp": 0.7
+      },
+      "faceTint": "#D8DEE3",
+      "faceGlow": 0.18,
+      "lamps": false,
+      "rain": true,
+      "grade": "rgba(40,60,80,0.12)",
+      "skyHdr": "kloofendal_overcast_puresky.hdr",
+      "skyIntensity": 0.75,
+      "skyRotation": 0
+    },
+    "night": {
+      "label": "Night",
+      "env": 0.22,
+      "sky": {
+        "top": "#0B1430",
+        "horizon": "#26365E",
+        "clouds": "#2D3A5C",
+        "cloudOpacity": 0.5,
+        "sun": null,
+        "stars": true,
+        "moon": {
+          "x": 0.78,
+          "y": 0.2
+        }
+      },
+      "sunLight": {
+        "color": "#9DB4FF",
+        "intensity": 0.7,
+        "dir": [
+          5,
+          9,
+          2
+        ]
+      },
+      "hemi": {
+        "sky": "#3A4C80",
+        "ground": "#141824",
+        "intensity": 0.7
+      },
+      "fog": {
+        "color": "#1B2646",
+        "near": 15,
+        "far": 120
+      },
+      "sea": {
+        "color": "#101E36",
+        "amp": 0.2
+      },
+      "faceTint": "#B9C3DE",
+      "faceGlow": 0.32,
+      "lamps": true,
+      "rain": false,
+      "grade": null,
+      "skyHdr": "rogland_clear_night.hdr",
+      "skyIntensity": 0.55,
+      "skyRotation": 0.0,
+      "skyTilt": -0.12
+    },
+    "interior": {
+      "label": "Interior afternoon",
+      "env": 0.45,
+      "sky": {
+        "top": "#9FB8CF",
+        "horizon": "#E9D8B8",
+        "clouds": "#FFFFFF",
+        "cloudOpacity": 0.3,
+        "sun": null,
+        "stars": false,
+        "moon": false
+      },
+      "sunLight": {
+        "color": "#FFD9A8",
+        "intensity": 2.1,
+        "dir": [
+          6,
+          7,
+          3
+        ]
+      },
+      "hemi": {
+        "sky": "#F2E6D0",
+        "ground": "#6A5440",
+        "intensity": 1.15
+      },
+      "fog": {
+        "color": "#CDBFA6",
+        "near": 18,
+        "far": 70
+      },
+      "sea": {
+        "color": "#2F6E8E",
+        "amp": 0.25
+      },
+      "faceTint": "#FFFFFF",
+      "faceGlow": 0.08,
+      "lamps": false,
+      "rain": false,
+      "grade": null,
+      "skyHdr": "kloofendal_48d_partly_cloudy_puresky.hdr",
+      "skyIntensity": 1.0,
+      "skyRotation": 0.6
+    },
+    "fire": {
+      "label": "Fire and smoke",
+      "env": 0.25,
+      "sky": {
+        "top": "#2A1A14",
+        "horizon": "#7A3A1C",
+        "clouds": "#3A2A24",
+        "cloudOpacity": 0.7,
+        "sun": null,
+        "stars": false,
+        "moon": null
+      },
+      "sunLight": {
+        "color": "#FF9A55",
+        "intensity": 1.2,
+        "dir": [
+          3,
+          6,
+          4
+        ]
+      },
+      "hemi": {
+        "sky": "#8A4A2A",
+        "ground": "#1A120E",
+        "intensity": 0.9
+      },
+      "fog": {
+        "color": "#3A2A22",
+        "near": 9,
+        "far": 48
+      },
+      "sea": {
+        "color": "#2F6E8E",
+        "amp": 0.25
+      },
+      "faceTint": "#F2C6A0",
+      "faceGlow": 0.3,
+      "lamps": false,
+      "rain": false,
+      "grade": "#FFE2C4",
+      "skyHdr": "industrial_sunset_puresky.hdr",
+      "skyIntensity": 0.8,
+      "skyRotation": 0.8
+    }
+  },
+  "pacing": {
+    "lineGap": 0.05,
+    "minShot": 0.45,
+    "maxShot": 1.6,
+    "whipFrames": 6,
+    "moveFrames": 7,
+    "bpm": 112,
+    "flashFrames": 3,
+    "voiceLengthScale": 0.82
+  },
+  "grade": {
+    "saturate": 0.84,
+    "contrast": 1.06,
+    "sepia": 0.07,
+    "warm": "#FFB46E",
+    "warmOpacity": 0.1,
+    "vignette": 0.42,
+    "grain": 0.07,
+    "note": "film look: CSS filter on the 3D layer + warm soft-light wash + vignette + per-frame deterministic grain"
+  },
+  "quality": {
+    "final": {
+      "dof": true,
+      "grain": true,
+      "msaa": 4,
+      "sky": true,
+      "textures": true,
+      "shadowMap": 2048
+    },
+    "preview": {
+      "dof": false,
+      "grain": false,
+      "msaa": 0,
+      "sky": true,
+      "textures": true,
+      "shadowMap": 1024
+    },
+    "note": "pass props {\"quality\":\"preview\"} for fast checks (no lens blur/grain/MSAA)"
+  }
+}

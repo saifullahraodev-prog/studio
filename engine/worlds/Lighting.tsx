@@ -2,10 +2,11 @@ import { LightingPreset } from "../look/style";
 
 // 3D lights + fog for a lighting preset (values live in the style file).
 // `focus` = point the shadow camera is centred on (where the characters are).
-export const Lighting: React.FC<{ preset: LightingPreset; focus?: [number, number, number]; shadowSize?: number }> = ({
+export const Lighting: React.FC<{ preset: LightingPreset; focus?: [number, number, number]; shadowSize?: number; shadowMap?: number }> = ({
   preset,
   focus = [0, 0, 0],
   shadowSize = 10,
+  shadowMap = 2048,
 }) => {
   const d = preset.sunLight.dir;
   const len = Math.hypot(d[0], d[1], d[2]);
@@ -20,8 +21,8 @@ export const Lighting: React.FC<{ preset: LightingPreset; focus?: [number, numbe
         color={preset.sunLight.color}
         intensity={preset.sunLight.intensity}
         castShadow
-        shadow-mapSize-width={2048}
-        shadow-mapSize-height={2048}
+        shadow-mapSize-width={shadowMap}
+        shadow-mapSize-height={shadowMap}
         shadow-camera-left={-shadowSize}
         shadow-camera-right={shadowSize}
         shadow-camera-top={shadowSize}

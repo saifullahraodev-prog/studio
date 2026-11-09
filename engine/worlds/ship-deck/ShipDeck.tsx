@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import * as THREE from "three";
 import { LightingPreset, Toon } from "../../look/style";
+import { Real } from "../../look/materials";
 import { LiferaftCanisters, ModernLifeboat } from "../../props/Props";
 import { Sea } from "../Sea";
 
@@ -93,7 +94,7 @@ const Railing: React.FC = () => {
       ))}
       <M p={[0, 1.07, (Z_NEAR + Z_FAR) / 2]}>
         <boxGeometry args={[0.14, 0.08, LEN]} />
-        <Toon color={P.railTop} />
+        <Real tex="Planks037A" tint="#B08060" repeat={[0.2, LEN / 2]} rotate={Math.PI / 2} />
       </M>
       {[0.72, 0.38].map((y) => (
         <M key={y} p={[0, y, (Z_NEAR + Z_FAR) / 2]}>
@@ -110,11 +111,11 @@ const Hull: React.FC = () => (
     {/* white upper strake, black lower hull, seen when looking over the rail */}
     <M p={[RAIL_X + 0.2, -1.4, (Z_NEAR + Z_FAR) / 2]} noShadow>
       <boxGeometry args={[0.3, 2.8, LEN]} />
-      <Toon color={P.hullWhite} />
+      <Real tex="MetalPlates004" gray tint={P.hullWhite} repeat={[LEN / 3, 1]} metalness={0.2} />
     </M>
     <M p={[RAIL_X + 0.2, -5.6, (Z_NEAR + Z_FAR) / 2]} noShadow>
       <boxGeometry args={[0.3, 5.6, LEN]} />
-      <Toon color={P.hullBlack} />
+      <Real tex="MetalPlates004" gray tint={P.hullBlack} repeat={[LEN / 3, 2]} metalness={0.3} />
     </M>
   </group>
 );
@@ -127,7 +128,7 @@ const Deckhouse: React.FC<{ lit: boolean }> = ({ lit }) => {
     <group position={[-WALL_X, 0, 0]}>
       <M p={[-0.25, H / 2, (Z_NEAR + Z_FAR) / 2]}>
         <boxGeometry args={[0.5, H, LEN]} />
-        <Toon color={P.wall} />
+        <Real tex="PaintedMetal004" gray tint={P.wall} repeat={[LEN / 2.5, 1.2]} />
       </M>
       {/* roof overhang + upper railing */}
       <M p={[0.15, H + 0.06, (Z_NEAR + Z_FAR) / 2]}>
@@ -181,11 +182,11 @@ const Lifeboat: React.FC<{ z: number }> = ({ z }) => (
       <group key={dz} position={[0, 0, dz]}>
         <M p={[0.3, 1.5, 0]}>
           <cylinderGeometry args={[0.07, 0.09, 3, 10]} />
-          <Toon color={P.davit} />
+          <Real tex="Metal041B" repeat={[0.5, 2]} metalness={0.4} />
         </M>
         <M p={[-0.25, 3.0, 0]} r={[0, 0, Math.PI / 2.4]}>
           <cylinderGeometry args={[0.06, 0.06, 1.3, 8]} />
-          <Toon color={P.davit} />
+          <Real tex="Metal041B" repeat={[0.4, 1]} metalness={0.4} />
         </M>
         <M p={[-0.75, 2.75, 0]}>
           <cylinderGeometry args={[0.012, 0.012, 0.6, 4]} />
@@ -197,7 +198,7 @@ const Lifeboat: React.FC<{ z: number }> = ({ z }) => (
     <group position={[-0.75, 2.45, 0]}>
       <M r={[Math.PI, 0, 0]} s={[0.85, 0.55, 3.1]}>
         <sphereGeometry args={[1, 24, 12, 0, Math.PI * 2, 0, Math.PI / 2]} />
-        <Toon color={P.boat} side={THREE.DoubleSide} />
+        <Real tex="PaintedMetal004" gray tint={P.boat} repeat={[2, 1]} side={THREE.DoubleSide} />
       </M>
       <M p={[0, 0.0, 0]} r={[Math.PI / 2, 0, 0]} s={[0.86, 3.12, 1]}>
         <torusGeometry args={[1, 0.05, 6, 32]} />
@@ -216,7 +217,7 @@ const Funnel: React.FC<{ z: number }> = ({ z }) => (
   <group position={[-WALL_X - 3.5, 2.9, z]} rotation={[-0.12, 0, 0]}>
     <M p={[0, 6.5, 0]} s={[1, 1, 1.25]}>
       <cylinderGeometry args={[2.1, 2.1, 13, 32]} />
-      <Toon color={P.funnel} />
+      <Real tex="PaintedMetal004" gray tint={P.funnel} repeat={[3, 3]} />
     </M>
     <M p={[0, 12.1, 0]} s={[1, 1, 1.25]}>
       <cylinderGeometry args={[2.16, 2.16, 2.2, 32]} />
@@ -259,17 +260,32 @@ const Lamps: React.FC = () => {
   );
 };
 
+// a coil of rope on the deck (stacked rings)
+const RopeCoil: React.FC<{ p: [number, number, number] }> = ({ p }) => (
+  <group position={p}>
+    {[0, 1, 2, 3].map((i) => (
+      <mesh key={i} position={[0, 0.06 + i * 0.075, 0]} rotation={[Math.PI / 2, 0, i * 0.7]} castShadow receiveShadow>
+        <torusGeometry args={[0.32 - i * 0.03, 0.045, 10, 36]} />
+        <Real tex="Rope001" repeat={[8, 1]} tint="#D8C29A" />
+      </mesh>
+    ))}
+  </group>
+);
+
 // era "1912": wooden lifeboats on davits.  era "today": the same deck dressed with a
 // modern enclosed lifeboat + life-raft canisters (for "…and that's why, today" endings).
 export const ShipDeck: React.FC<{ preset: LightingPreset; era?: "1912" | "today" }> = ({ preset, era = "1912" }) => {
-  const plank = usePlankTexture();
   return (
     <group>
       {/* deck */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[(RAIL_X - WALL_X) / 2, 0, (Z_NEAR + Z_FAR) / 2]} receiveShadow>
         <planeGeometry args={[RAIL_X + WALL_X, LEN]} />
-        <Toon color="#FFFFFF" map={plank} />
+        {/* worn deck planks; wet (glossier) at night and in storms */}
+        <Real tex="Planks037A" tint="#D8C3A8" repeat={[(RAIL_X + WALL_X) / 2.2, LEN / 2.2]} rotate={Math.PI / 2} roughness={preset.lamps || preset.rain ? 0.55 : 0.95} />
       </mesh>
+      <RopeCoil p={[RAIL_X - 0.7, 0, 3.2]} />
+      <RopeCoil p={[-WALL_X + 0.7, 0, -1.6]} />
+      <RopeCoil p={[RAIL_X - 0.6, 0, -14]} />
       <Railing />
       <Hull />
       <Deckhouse lit={preset.lamps} />
