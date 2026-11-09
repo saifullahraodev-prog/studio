@@ -257,6 +257,13 @@ export const Trench: React.FC<{ preset: LightingPreset }> = ({ preset }) => {
       <Crater p={[-7, 1.5]} r={1.2} />
       <Crater p={[3.5, -13]} r={2} />
       <Crater p={[-10, -14]} r={1.8} />
+      <Crater p={[10, -3]} r={1.4} />
+      <Crater p={[15, 5]} r={2.2} />
+      <Crater p={[20, -6]} r={1.7} />
+      <Crater p={[24, 2]} r={2.4} />
+      <Stump p={[18, H, -8]} h={2.8} />
+      <Stump p={[23, H, 7]} h={1.8} />
+      <Stump p={[13, H, 9]} h={1.3} />
 
       {/* clutter in the trench */}
       <Crate p={[0.85, 0, 8.5]} r={0.2} />

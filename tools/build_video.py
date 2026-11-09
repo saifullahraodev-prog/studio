@@ -268,7 +268,7 @@ REACTION_SHOTS = {"stoker-eyes", "insp-eyes", "stoker-shocked-cu", "insp-punch",
 ACTION_SHOTS = {"run-low", "crowd-pile", "crowd-half", "stamp", "ship-too-big", "boats-16", "boats-20", "boats-plus4", "officer-wave",
                 "boat-away", "iceberg-hit", "ship-sinking", "count-fingers", "fingers-out", "furnace-insert", "stoker-furnace", "crowd-2200",
                 "deck-surge", "officer-shove", "climb-boat", "rocket-fire", "stoker-dash", "boat-lowering", "man-leap",
-                "trench-cornered", "you-plan", "flame-climb", "flame-blast", "you-drop", "you-stagger", "you-corner", "you-quiet", "enemies-charge", "mg-reveal", "mg-final"}
+                "enemies-advance", "you-surrounded", "trench-cornered", "you-plan", "flame-climb", "flame-blast", "you-drop", "you-stagger", "you-corner", "you-quiet", "enemies-charge", "mg-reveal", "mg-final"}
 STILL_GESTURES = {"", "think", "tap", "tick", "talk", "point", "shrug", "count"}
 
 
@@ -303,6 +303,7 @@ def main():
     tmp.mkdir(parents=True, exist_ok=True)
     linedir = vdir / "voice-lines"
     lead, tail = (0.25, 0.8) if cut_mode else (0.45, 1.1)
+    lead = float(meta.get("lead", lead))  # `lead: 1.0` = picture runs 1 s before the first word (cold open)
 
     # ── 2. voice ──
     if not recording:

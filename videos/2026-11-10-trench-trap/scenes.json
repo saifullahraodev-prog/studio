@@ -1,0 +1,174 @@
+{
+ "slug": "trench-trap",
+ "format": "short",
+ "world": "trench",
+ "fps": 30,
+ "duration": 3.56,
+ "beats": [
+  {
+   "id": "b1",
+   "cuts": [
+    {
+     "cue": "enemy",
+     "shot": "enemies-advance",
+     "fx": "hit",
+     "start": 0.0,
+     "end": 1.52,
+     "face": "neutral",
+     "tr": "cut"
+    },
+    {
+     "cue": "trap",
+     "shot": "you-surrounded",
+     "fx": "boom",
+     "tr": "hard",
+     "start": 1.52,
+     "end": 3.56,
+     "face": "neutral"
+    }
+   ],
+   "speaker": "vo",
+   "preset": "day",
+   "music": "tense",
+   "say": "Enemy soldiers trap you in a trench.",
+   "emph": [
+    "soldiers",
+    "trap"
+   ],
+   "subtitle": "Enemy soldiers trap you in a trench.",
+   "pause": 0.05,
+   "voiceStart": 1.1,
+   "voiceEnd": 2.76,
+   "start": 0.0,
+   "end": 3.56,
+   "words": [
+    {
+     "word": "soldiers",
+     "start": 1.3,
+     "end": 1.56
+    },
+    {
+     "word": "trap",
+     "start": 1.56,
+     "end": 2.0
+    },
+    {
+     "word": "you",
+     "start": 2.0,
+     "end": 2.16
+    },
+    {
+     "word": "in",
+     "start": 2.16,
+     "end": 2.3
+    },
+    {
+     "word": "a",
+     "start": 2.3,
+     "end": 2.4
+    },
+    {
+     "word": "trench.",
+     "start": 2.4,
+     "end": 2.6
+    }
+   ],
+   "cueAt": 1.1,
+   "aligned": [
+    [
+     "Enemy",
+     1.3,
+     1.3,
+     null
+    ],
+    [
+     "soldiers",
+     1.3,
+     1.56,
+     "soldiers"
+    ],
+    [
+     "trap",
+     1.56,
+     2.0,
+     "trap"
+    ],
+    [
+     "you",
+     2.0,
+     2.16,
+     "you"
+    ],
+    [
+     "in",
+     2.16,
+     2.3,
+     "in"
+    ],
+    [
+     "a",
+     2.3,
+     2.4,
+     "a"
+    ],
+    [
+     "trench.",
+     2.4,
+     2.6,
+     "trench."
+    ]
+   ]
+  }
+ ],
+ "captionWords": [
+  {
+   "text": "Enemy",
+   "start": 1.3,
+   "end": 1.3,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "soldiers",
+   "start": 1.3,
+   "end": 1.56,
+   "emph": true,
+   "brk": false
+  },
+  {
+   "text": "trap",
+   "start": 1.56,
+   "end": 2.0,
+   "emph": true,
+   "brk": false
+  },
+  {
+   "text": "you",
+   "start": 2.0,
+   "end": 2.16,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "in",
+   "start": 2.16,
+   "end": 2.3,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "a",
+   "start": 2.3,
+   "end": 2.4,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "trench",
+   "start": 2.4,
+   "end": 2.6,
+   "emph": false,
+   "brk": true
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+# "Trench Trap": built line by line (see lines.md). Placeholder voice until the owner records.
+# Build:  HF_HUB_OFFLINE=1 python -I tools/build_video.py videos/2026-11-10-trench-trap
+
+slug: trench-trap
+format: short
+world: trench
+voice: piper
+# the enemies charge for a moment before the first word
+lead: 1.1
+
+[beat 1]
+speaker: vo
+preset: day
+music: tense
+say: Enemy soldiers trap you in a trench.
+emph: soldiers, trap
+cut: enemy    | enemies-advance | fx=hit
+cut: trap     | you-surrounded  | fx=boom | tr=hard

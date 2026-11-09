@@ -22,6 +22,8 @@
   "you-quiet": "trench",
   "enemies-charge": "trench",
   "mg-reveal": "trench",
-  "mg-final": "trench"
+  "mg-final": "trench",
+  "enemies-advance": "trench",
+  "you-surrounded": "trench"
  }
 }

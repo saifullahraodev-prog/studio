@@ -306,3 +306,9 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
 - CC0 textures Ground054 + Fabric026 (ambientCG) added to `CREDITS.md`.
 - Preview: `videos/2026-11-10-hooge-flamethrower/out/flamethrower-trap-720p.mp4` (21.2 s, -14.2 LUFS,
   11/11 action shots). Waiting for owner feedback.
+
+## 2026-11-10: line-by-line workflow ("Trench Trap")
+- Owner's new step: decide and build ONE narration line at a time (scenes per line chosen by the owner),
+  preview each line, then record the whole voice at the end. Plan + status: `videos/2026-11-10-trench-trap/lines.md`.
+- Line 1 "Enemy soldiers trap you in a trench." -> `enemies-advance` + `you-surrounded`; preview
+  `out/line1-720p.mp4` (placeholder voice, 1.1 s cold-open `lead:`). Waiting for owner feedback.
