@@ -3,7 +3,7 @@
  "format": "short",
  "world": "ship-deck",
  "fps": 30,
- "duration": 31.78,
+ "duration": 31.745,
  "beats": [
   {
    "id": "b1",
@@ -14,7 +14,7 @@
      "face": "determined",
      "do": "tap",
      "start": 0.0,
-     "end": 1.04,
+     "end": 1.12,
      "tr": "cut"
     },
     {
@@ -24,8 +24,8 @@
      "do": "point",
      "fx": "hit",
      "tr": "cut",
-     "start": 1.04,
-     "end": 2.88
+     "start": 1.12,
+     "end": 2.86
     },
     {
      "cue": "so",
@@ -33,15 +33,15 @@
      "face": "worried",
      "do": "think",
      "tr": "whip",
-     "start": 2.88,
-     "end": 4.68
+     "start": 2.86,
+     "end": 4.78
     },
     {
      "cue": "die",
      "shot": "ship-sinking",
      "fx": "boom",
      "tr": "whip",
-     "start": 4.68,
+     "start": 4.78,
      "end": 5.307,
      "face": "neutral"
     }
@@ -58,89 +58,89 @@
    "subtitle": "The Titanic carried MORE lifeboats than the law required. So why did more than fifteen hundred people die?",
    "pause": 0.05,
    "voiceStart": 0.25,
-   "voiceEnd": 5.091,
+   "voiceEnd": 5.184,
    "start": 0.0,
    "end": 5.307,
    "words": [
     {
      "word": "Titanic",
      "start": 0.32,
-     "end": 0.64
+     "end": 0.68
     },
     {
      "word": "carried",
-     "start": 0.64,
-     "end": 1.08
+     "start": 0.68,
+     "end": 1.16
     },
     {
      "word": "more",
-     "start": 1.08,
-     "end": 1.34
+     "start": 1.16,
+     "end": 1.4
     },
     {
      "word": "lifeboats",
-     "start": 1.34,
+     "start": 1.4,
      "end": 1.88
     },
     {
      "word": "than",
      "start": 1.88,
-     "end": 2.06
+     "end": 2.04
     },
     {
      "word": "the",
-     "start": 2.06,
-     "end": 2.18
+     "start": 2.04,
+     "end": 2.14
     },
     {
      "word": "law",
-     "start": 2.18,
+     "start": 2.14,
      "end": 2.3
     },
     {
-     "word": "required.",
+     "word": "required,",
      "start": 2.3,
-     "end": 2.68
+     "end": 2.76
     },
     {
-     "word": "So",
-     "start": 2.92,
-     "end": 3.0
+     "word": "so",
+     "start": 2.9,
+     "end": 3.12
     },
     {
      "word": "why",
-     "start": 3.0,
-     "end": 3.34
-    },
-    {
-     "word": "did",
-     "start": 3.34,
+     "start": 3.12,
      "end": 3.5
     },
     {
-     "word": "more",
+     "word": "did",
      "start": 3.5,
-     "end": 3.68
+     "end": 3.64
     },
     {
-     "word": "than",
-     "start": 3.68,
+     "word": "more",
+     "start": 3.64,
      "end": 3.8
     },
     {
-     "word": "1500",
+     "word": "than",
      "start": 3.8,
-     "end": 4.24
+     "end": 3.96
+    },
+    {
+     "word": "1500",
+     "start": 3.96,
+     "end": 4.34
     },
     {
      "word": "people",
-     "start": 4.24,
-     "end": 4.72
+     "start": 4.34,
+     "end": 4.82
     },
     {
      "word": "die?",
-     "start": 4.72,
-     "end": 5.02
+     "start": 4.82,
+     "end": 5.12
     }
    ],
    "cueAt": 0.25,
@@ -154,103 +154,103 @@
     [
      "Titanic",
      0.32,
-     0.64,
+     0.68,
      "Titanic"
     ],
     [
      "carried",
-     0.64,
-     1.08,
+     0.68,
+     1.16,
      "carried"
     ],
     [
      "MORE",
-     1.08,
-     1.34,
+     1.16,
+     1.4,
      "more"
     ],
     [
      "lifeboats",
-     1.34,
+     1.4,
      1.88,
      "lifeboats"
     ],
     [
      "than",
      1.88,
-     2.06,
+     2.04,
      "than"
     ],
     [
      "the",
-     2.06,
-     2.18,
+     2.04,
+     2.14,
      "the"
     ],
     [
      "law",
-     2.18,
+     2.14,
      2.3,
      "law"
     ],
     [
      "required.",
      2.3,
-     2.68,
-     "required."
+     2.76,
+     "required,"
     ],
     [
      "So",
-     2.92,
-     3.0,
-     "So"
+     2.9,
+     3.12,
+     "so"
     ],
     [
      "why",
-     3.0,
-     3.34,
+     3.12,
+     3.5,
      "why"
     ],
     [
      "did",
-     3.34,
      3.5,
+     3.64,
      "did"
     ],
     [
      "more",
-     3.5,
-     3.68,
+     3.64,
+     3.8,
      "more"
     ],
     [
      "than",
-     3.68,
      3.8,
+     3.96,
      "than"
     ],
     [
      "fifteen",
-     3.8,
-     4.02,
+     3.96,
+     4.15,
      "1500"
     ],
     [
      "hundred",
-     4.02,
-     4.24,
+     4.15,
+     4.34,
      ""
     ],
     [
      "people",
-     4.24,
-     4.72,
+     4.34,
+     4.82,
      "people"
     ],
     [
      "die?",
-     4.72,
-     5.02,
+     4.82,
+     5.12,
      "die?"
     ]
    ]
@@ -264,7 +264,7 @@
      "fx": "fire",
      "tr": "flash",
      "start": 5.307,
-     "end": 6.34,
+     "end": 6.28,
      "face": "neutral"
     },
     {
@@ -272,8 +272,8 @@
      "shot": "stoker-furnace",
      "face": "neutral",
      "do": "shovel",
-     "start": 6.34,
-     "end": 7.06,
+     "start": 6.28,
+     "end": 7.02,
      "tr": "cut"
     },
     {
@@ -282,8 +282,8 @@
      "face": "sad",
      "do": "yawn",
      "tr": "cut",
-     "start": 7.06,
-     "end": 7.651
+     "start": 7.02,
+     "end": 7.605
     }
    ],
    "speaker": "vo",
@@ -297,9 +297,9 @@
    ],
    "subtitle": "It's nineteen twelve. You're a stoker. Night shift.",
    "voiceStart": 5.387,
-   "voiceEnd": 7.651,
+   "voiceEnd": 7.605,
    "start": 5.307,
-   "end": 7.651,
+   "end": 7.605,
    "words": [
     {
      "word": "It's",
@@ -309,32 +309,32 @@
     {
      "word": "1912.",
      "start": 5.54,
-     "end": 6.26
+     "end": 6.22
     },
     {
      "word": "You're",
-     "start": 6.38,
-     "end": 6.52
+     "start": 6.32,
+     "end": 6.46
     },
     {
      "word": "a",
-     "start": 6.52,
-     "end": 6.6
+     "start": 6.46,
+     "end": 6.52
     },
     {
      "word": "stoker.",
-     "start": 6.6,
-     "end": 6.92
+     "start": 6.52,
+     "end": 6.9
     },
     {
      "word": "Night",
-     "start": 7.1,
-     "end": 7.24
+     "start": 7.06,
+     "end": 7.18
     },
     {
      "word": "shift.",
-     "start": 7.24,
-     "end": 7.48
+     "start": 7.18,
+     "end": 7.44
     }
    ],
    "cueAt": 5.387,
@@ -348,43 +348,43 @@
     [
      "nineteen",
      5.54,
-     5.9,
+     5.88,
      "1912."
     ],
     [
      "twelve.",
-     5.9,
-     6.26,
+     5.88,
+     6.22,
      ""
     ],
     [
      "You're",
-     6.38,
-     6.52,
+     6.32,
+     6.46,
      "You're"
     ],
     [
      "a",
+     6.46,
      6.52,
-     6.6,
      "a"
     ],
     [
      "stoker.",
-     6.6,
-     6.92,
+     6.52,
+     6.9,
      "stoker."
     ],
     [
      "Night",
-     7.1,
-     7.24,
+     7.06,
+     7.18,
      "Night"
     ],
     [
      "shift.",
-     7.24,
-     7.48,
+     7.18,
+     7.44,
      "shift."
     ]
    ]
@@ -396,7 +396,7 @@
      "cue": "then",
      "shot": "stoker-yawn-hold",
      "face": "neutral",
-     "start": 7.651,
+     "start": 7.605,
      "end": 7.986,
      "tr": "cut"
     }
@@ -407,23 +407,23 @@
    "say": "Then...",
    "subtitle": "Then...",
    "emph": [],
-   "voiceStart": 7.731,
-   "voiceEnd": 7.882,
-   "start": 7.651,
+   "voiceStart": 7.685,
+   "voiceEnd": 7.824,
+   "start": 7.605,
    "end": 7.986,
    "words": [
     {
-     "word": "Eh,",
-     "start": 7.76,
-     "end": 7.86
+     "word": "Huh?",
+     "start": 7.72,
+     "end": 7.78
     }
    ],
-   "cueAt": 7.731,
+   "cueAt": 7.685,
    "aligned": [
     [
      "Then.",
-     7.76,
-     7.86,
+     7.72,
+     7.78,
      null
     ]
    ]
@@ -434,11 +434,11 @@
     {
      "cue": "crunch",
      "shot": "iceberg-hit",
-     "fx": "crunch",
+     "fx": "impact+scream",
      "pre": "riser",
      "tr": "cut",
      "start": 7.986,
-     "end": 8.434,
+     "end": 8.446,
      "face": "neutral"
     }
    ],
@@ -451,22 +451,22 @@
    ],
    "subtitle": "CRUNCH!",
    "voiceStart": 8.066,
-   "voiceEnd": 8.414,
+   "voiceEnd": 8.426,
    "start": 7.986,
-   "end": 8.434,
+   "end": 8.446,
    "words": [
     {
-     "word": "punch.",
-     "start": 8.12,
-     "end": 8.28
+     "word": "Quench.",
+     "start": 8.1,
+     "end": 8.26
     }
    ],
    "cueAt": 8.066,
    "aligned": [
     [
      "CRUNCH!",
-     8.12,
-     8.28,
+     8.1,
+     8.26,
      null
     ]
    ]
@@ -480,8 +480,8 @@
      "face": "shocked",
      "do": "recoil",
      "tr": "whip",
-     "start": 8.434,
-     "end": 8.72
+     "start": 8.446,
+     "end": 8.76
     },
     {
      "cue": "up",
@@ -489,16 +489,16 @@
      "face": "scared",
      "tr": "whip",
      "fx": "whoosh",
-     "start": 8.72,
-     "end": 9.46
+     "start": 8.76,
+     "end": 9.42
     },
     {
      "cue": "count",
      "shot": "count-fingers",
      "face": "worried",
      "do": "count",
-     "start": 9.46,
-     "end": 10.412,
+     "start": 9.42,
+     "end": 10.365,
      "tr": "cut"
     }
    ],
@@ -511,111 +511,111 @@
     "count"
    ],
    "subtitle": "You sprint up on deck and count the lifeboats.",
-   "voiceStart": 8.514,
-   "voiceEnd": 10.442,
-   "start": 8.434,
-   "end": 10.412,
+   "voiceStart": 8.526,
+   "voiceEnd": 10.395,
+   "start": 8.446,
+   "end": 10.365,
    "words": [
     {
      "word": "You",
-     "start": 8.58,
-     "end": 8.6
+     "start": 8.56,
+     "end": 8.62
     },
     {
      "word": "sprint",
-     "start": 8.6,
-     "end": 8.76
+     "start": 8.62,
+     "end": 8.8
     },
     {
      "word": "up",
-     "start": 8.76,
-     "end": 8.98
+     "start": 8.8,
+     "end": 9.0
     },
     {
      "word": "on",
-     "start": 8.98,
-     "end": 9.2
+     "start": 9.0,
+     "end": 9.16
     },
     {
      "word": "deck",
-     "start": 9.2,
-     "end": 9.36
+     "start": 9.16,
+     "end": 9.32
     },
     {
      "word": "and",
-     "start": 9.36,
-     "end": 9.5
+     "start": 9.32,
+     "end": 9.46
     },
     {
      "word": "count",
-     "start": 9.5,
-     "end": 9.76
+     "start": 9.46,
+     "end": 9.7
     },
     {
      "word": "the",
-     "start": 9.76,
-     "end": 9.9
+     "start": 9.7,
+     "end": 9.84
     },
     {
      "word": "lifeboats.",
-     "start": 9.9,
-     "end": 10.32
+     "start": 9.84,
+     "end": 10.3
     }
    ],
-   "cueAt": 8.514,
+   "cueAt": 8.526,
    "aligned": [
     [
      "You",
-     8.58,
-     8.6,
+     8.56,
+     8.62,
      "You"
     ],
     [
      "sprint",
-     8.6,
-     8.76,
+     8.62,
+     8.8,
      "sprint"
     ],
     [
      "up",
-     8.76,
-     8.98,
+     8.8,
+     9.0,
      "up"
     ],
     [
      "on",
-     8.98,
-     9.2,
+     9.0,
+     9.16,
      "on"
     ],
     [
      "deck",
-     9.2,
-     9.36,
+     9.16,
+     9.32,
      "deck"
     ],
     [
      "and",
-     9.36,
-     9.5,
+     9.32,
+     9.46,
      "and"
     ],
     [
      "count",
-     9.5,
-     9.76,
+     9.46,
+     9.7,
      "count"
     ],
     [
      "the",
-     9.76,
-     9.9,
+     9.7,
+     9.84,
      "the"
     ],
     [
      "lifeboats.",
-     9.9,
-     10.32,
+     9.84,
+     10.3,
      "lifeboats."
     ]
    ]
@@ -630,16 +630,16 @@
      "do": "panic",
      "fx": "boing",
      "tr": "cut",
-     "start": 10.412,
-     "end": 11.28
+     "start": 10.365,
+     "end": 11.2
     },
     {
      "cue": "two",
      "shot": "crowd-pile",
      "fx": "pop",
      "tr": "whip",
-     "start": 11.28,
-     "end": 12.772,
+     "start": 11.2,
+     "end": 12.726,
      "face": "neutral"
     }
    ],
@@ -654,90 +654,90 @@
    ],
    "subtitle": "Twenty. For over two thousand two hundred people.",
    "pause": 0.05,
-   "voiceStart": 10.492,
-   "voiceEnd": 12.802,
-   "start": 10.412,
-   "end": 12.772,
+   "voiceStart": 10.445,
+   "voiceEnd": 12.756,
+   "start": 10.365,
+   "end": 12.726,
    "words": [
     {
-     "word": "20",
-     "start": 10.52,
-     "end": 10.8
+     "word": "20.",
+     "start": 10.48,
+     "end": 10.72
     },
     {
-     "word": "for",
-     "start": 10.8,
-     "end": 11.06
+     "word": "For",
+     "start": 10.88,
+     "end": 10.96
     },
     {
      "word": "over",
-     "start": 11.06,
-     "end": 11.32
+     "start": 10.96,
+     "end": 11.24
     },
     {
      "word": "2",
-     "start": 11.32,
-     "end": 11.58
+     "start": 11.24,
+     "end": 11.5
     },
     {
      "word": ",200",
-     "start": 11.58,
-     "end": 12.12
+     "start": 11.5,
+     "end": 12.22
     },
     {
      "word": "people.",
-     "start": 12.12,
-     "end": 12.7
+     "start": 12.22,
+     "end": 12.64
     }
    ],
-   "cueAt": 10.492,
+   "cueAt": 10.445,
    "aligned": [
     [
      "Twenty.",
-     10.52,
-     10.8,
-     "20"
+     10.48,
+     10.72,
+     "20."
     ],
     [
      "For",
-     10.8,
-     11.06,
-     "for"
+     10.88,
+     10.96,
+     "For"
     ],
     [
      "over",
-     11.06,
-     11.32,
+     10.96,
+     11.24,
      "over"
     ],
     [
      "two",
-     11.32,
-     11.52,
+     11.24,
+     11.485,
      "2,200"
     ],
     [
      "thousand",
-     11.52,
-     11.72,
+     11.485,
+     11.73,
      ""
     ],
     [
      "two",
-     11.72,
-     11.92,
+     11.73,
+     11.975,
      ""
     ],
     [
      "hundred",
-     11.92,
-     12.12,
+     11.975,
+     12.22,
      ""
     ],
     [
      "people.",
-     12.12,
-     12.7,
+     12.22,
+     12.64,
      "people."
     ]
    ]
@@ -750,8 +750,8 @@
      "shot": "crowd-half",
      "fx": "pop",
      "tr": "cut",
-     "start": 12.772,
-     "end": 13.44,
+     "start": 12.726,
+     "end": 13.34,
      "face": "neutral"
     },
     {
@@ -759,7 +759,7 @@
      "shot": "crowd-stare",
      "face": "sad",
      "tr": "cut",
-     "start": 13.44,
+     "start": 13.34,
      "end": 14.146
     }
    ],
@@ -771,78 +771,78 @@
    ],
    "subtitle": "Seats for about half of you.",
    "pause": 0.05,
-   "voiceStart": 12.852,
-   "voiceEnd": 14.071,
-   "start": 12.772,
+   "voiceStart": 12.806,
+   "voiceEnd": 13.966,
+   "start": 12.726,
    "end": 14.146,
    "words": [
     {
      "word": "Seats",
-     "start": 12.86,
-     "end": 13.1
+     "start": 12.84,
+     "end": 13.02
     },
     {
      "word": "for",
-     "start": 13.1,
-     "end": 13.26
+     "start": 13.02,
+     "end": 13.2
     },
     {
      "word": "about",
-     "start": 13.26,
-     "end": 13.48
+     "start": 13.2,
+     "end": 13.38
     },
     {
      "word": "half",
-     "start": 13.48,
-     "end": 13.74
+     "start": 13.38,
+     "end": 13.64
     },
     {
      "word": "of",
-     "start": 13.74,
-     "end": 13.86
+     "start": 13.64,
+     "end": 13.76
     },
     {
      "word": "you.",
-     "start": 13.86,
-     "end": 14.04
+     "start": 13.76,
+     "end": 13.94
     }
    ],
-   "cueAt": 12.852,
+   "cueAt": 12.806,
    "aligned": [
     [
      "Seats",
-     12.86,
-     13.1,
+     12.84,
+     13.02,
      "Seats"
     ],
     [
      "for",
-     13.1,
-     13.26,
+     13.02,
+     13.2,
      "for"
     ],
     [
      "about",
-     13.26,
-     13.48,
+     13.2,
+     13.38,
      "about"
     ],
     [
      "half",
-     13.48,
-     13.74,
+     13.38,
+     13.64,
      "half"
     ],
     [
      "of",
-     13.74,
-     13.86,
+     13.64,
+     13.76,
      "of"
     ],
     [
      "you.",
-     13.86,
-     14.04,
+     13.76,
+     13.94,
      "you."
     ]
    ]
@@ -857,7 +857,7 @@
      "do": "think",
      "tr": "whip",
      "start": 14.146,
-     "end": 15.74
+     "end": 15.72
     },
     {
      "cue": "legal",
@@ -866,7 +866,7 @@
      "do": "stamp",
      "fx": "stamp",
      "tr": "cut",
-     "start": 15.74,
+     "start": 15.72,
      "end": 16.286
     }
    ],
@@ -885,43 +885,38 @@
    "end": 16.286,
    "words": [
     {
-     "word": "But",
-     "start": 14.2,
-     "end": 14.34
-    },
-    {
      "word": "here's",
      "start": 14.34,
-     "end": 14.64
+     "end": 14.62
     },
     {
      "word": "the",
-     "start": 14.64,
-     "end": 14.74
+     "start": 14.62,
+     "end": 14.72
     },
     {
      "word": "twist.",
-     "start": 14.74,
-     "end": 14.96
+     "start": 14.72,
+     "end": 14.94
     },
     {
      "word": "It",
-     "start": 15.22,
-     "end": 15.3
+     "start": 15.2,
+     "end": 15.26
     },
     {
      "word": "was",
-     "start": 15.3,
-     "end": 15.44
+     "start": 15.26,
+     "end": 15.4
     },
     {
      "word": "totally",
-     "start": 15.44,
-     "end": 15.78
+     "start": 15.4,
+     "end": 15.76
     },
     {
      "word": "legal.",
-     "start": 15.78,
+     "start": 15.76,
      "end": 16.14
     }
    ],
@@ -929,49 +924,49 @@
    "aligned": [
     [
      "But",
-     14.2,
      14.34,
-     "But"
+     14.34,
+     null
     ],
     [
      "here's",
      14.34,
-     14.64,
+     14.62,
      "here's"
     ],
     [
      "the",
-     14.64,
-     14.74,
+     14.62,
+     14.72,
      "the"
     ],
     [
      "twist.",
-     14.74,
-     14.96,
+     14.72,
+     14.94,
      "twist."
     ],
     [
      "It",
-     15.22,
-     15.3,
+     15.2,
+     15.26,
      "It"
     ],
     [
      "was",
-     15.3,
-     15.44,
+     15.26,
+     15.4,
      "was"
     ],
     [
      "totally",
-     15.44,
-     15.78,
+     15.4,
+     15.76,
      "totally"
     ],
     [
      "legal.",
-     15.78,
+     15.76,
      16.14,
      "legal."
     ]
@@ -987,7 +982,7 @@
      "tr": "whip",
      "fx": "whoosh",
      "start": 16.286,
-     "end": 18.32
+     "end": 18.24
     },
     {
      "cue": "and",
@@ -995,7 +990,7 @@
      "face": "angry",
      "do": "shrug",
      "tr": "whip",
-     "start": 18.32,
+     "start": 18.24,
      "end": 19.34
     },
     {
@@ -1004,7 +999,7 @@
      "fx": "ding",
      "tr": "cut",
      "start": 19.34,
-     "end": 20.736,
+     "end": 20.864,
      "face": "neutral"
     }
    ],
@@ -1020,84 +1015,89 @@
    "subtitle": "The rulebook was from eighteen ninety-four, and its biggest size was ten thousand tons and up.",
    "pause": 0.05,
    "voiceStart": 16.366,
-   "voiceEnd": 20.766,
+   "voiceEnd": 20.894,
    "start": 16.286,
-   "end": 20.736,
+   "end": 20.864,
    "words": [
     {
      "word": "The",
      "start": 16.38,
-     "end": 16.48
+     "end": 16.46
     },
     {
      "word": "rulebook",
-     "start": 16.48,
+     "start": 16.46,
      "end": 16.82
     },
     {
      "word": "was",
      "start": 16.82,
-     "end": 17.0
+     "end": 16.98
     },
     {
      "word": "from",
-     "start": 17.0,
-     "end": 17.18
+     "start": 16.98,
+     "end": 17.14
     },
     {
      "word": "1894,",
-     "start": 17.18,
-     "end": 18.04
+     "start": 17.14,
+     "end": 17.94
     },
     {
      "word": "and",
-     "start": 18.36,
-     "end": 18.48
+     "start": 18.28,
+     "end": 18.38
     },
     {
      "word": "its",
-     "start": 18.48,
-     "end": 18.6
+     "start": 18.38,
+     "end": 18.54
     },
     {
      "word": "biggest",
-     "start": 18.6,
-     "end": 18.82
+     "start": 18.54,
+     "end": 18.76
     },
     {
      "word": "size",
-     "start": 18.82,
-     "end": 19.22
+     "start": 18.76,
+     "end": 19.2
     },
     {
      "word": "was",
-     "start": 19.22,
+     "start": 19.2,
      "end": 19.38
     },
     {
      "word": "10",
      "start": 19.38,
-     "end": 19.66
+     "end": 19.68
     },
     {
      "word": ",000",
-     "start": 19.66,
-     "end": 20.1
+     "start": 19.68,
+     "end": 20.18
     },
     {
      "word": "tons",
-     "start": 20.1,
-     "end": 20.28
+     "start": 20.18,
+     "end": 20.36
     },
     {
      "word": "and",
-     "start": 20.28,
-     "end": 20.54
+     "start": 20.36,
+     "end": 20.66
     },
     {
      "word": "up.",
-     "start": 20.54,
-     "end": 20.7
+     "start": 20.66,
+     "end": 20.82
+    },
+    {
+     "word": "Titanic,",
+     "start": 20.94,
+     "end": 21.2
     }
    ],
    "cueAt": 16.366,
@@ -1105,97 +1105,97 @@
     [
      "The",
      16.38,
-     16.48,
+     16.46,
      "The"
     ],
     [
      "rulebook",
-     16.48,
+     16.46,
      16.82,
      "rulebook"
     ],
     [
      "was",
      16.82,
-     17.0,
+     16.98,
      "was"
     ],
     [
      "from",
-     17.0,
-     17.18,
+     16.98,
+     17.14,
      "from"
     ],
     [
      "eighteen",
-     17.18,
-     17.61,
+     17.14,
+     17.54,
      "1894,"
     ],
     [
      "ninety-four,",
-     17.61,
-     18.04,
+     17.54,
+     17.94,
      ""
     ],
     [
      "and",
-     18.36,
-     18.48,
+     18.28,
+     18.38,
      "and"
     ],
     [
      "its",
-     18.48,
-     18.6,
+     18.38,
+     18.54,
      "its"
     ],
     [
      "biggest",
-     18.6,
-     18.82,
+     18.54,
+     18.76,
      "biggest"
     ],
     [
      "size",
-     18.82,
-     19.22,
+     18.76,
+     19.2,
      "size"
     ],
     [
      "was",
-     19.22,
+     19.2,
      19.38,
      "was"
     ],
     [
      "ten",
      19.38,
-     19.74,
+     19.78,
      "10,000"
     ],
     [
      "thousand",
-     19.74,
-     20.1,
+     19.78,
+     20.18,
      ""
     ],
     [
      "tons",
-     20.1,
-     20.28,
+     20.18,
+     20.36,
      "tons"
     ],
     [
      "and",
-     20.28,
-     20.54,
+     20.36,
+     20.66,
      "and"
     ],
     [
      "up.",
-     20.54,
-     20.7,
+     20.66,
+     20.82,
      "up."
     ]
    ]
@@ -1209,8 +1209,8 @@
      "face": "shocked",
      "fx": "boing",
      "tr": "cut",
-     "start": 20.736,
-     "end": 22.54
+     "start": 20.864,
+     "end": 22.44
     },
     {
      "cue": "same",
@@ -1218,8 +1218,8 @@
      "face": "angry",
      "fx": "pop",
      "tr": "whip",
-     "start": 22.54,
-     "end": 24.2
+     "start": 22.44,
+     "end": 24.14
     },
     {
      "cue": "she",
@@ -1227,7 +1227,7 @@
      "face": "happy",
      "do": "thumbsup",
      "fx": "ding",
-     "start": 24.2,
+     "start": 24.14,
      "end": 25.664,
      "tr": "cut"
     }
@@ -1244,144 +1244,144 @@
    ],
    "subtitle": "Titanic? Forty-six thousand. Same rule. Sixteen boats. She even brought four extra.",
    "pause": 0.05,
-   "voiceStart": 20.816,
-   "voiceEnd": 25.588,
-   "start": 20.736,
+   "voiceStart": 20.944,
+   "voiceEnd": 25.669,
+   "start": 20.864,
    "end": 25.664,
    "words": [
     {
-     "word": "Titanic?",
-     "start": 20.82,
-     "end": 21.14
+     "word": "Titanic,",
+     "start": 20.94,
+     "end": 21.2
     },
     {
      "word": "46",
-     "start": 21.46,
-     "end": 21.84
+     "start": 21.48,
+     "end": 21.9
     },
     {
      "word": ",000.",
-     "start": 21.84,
-     "end": 22.44
+     "start": 21.9,
+     "end": 22.36
     },
     {
      "word": "Same",
-     "start": 22.58,
-     "end": 22.82
+     "start": 22.48,
+     "end": 22.7
     },
     {
      "word": "rule.",
-     "start": 22.82,
-     "end": 23.1
+     "start": 22.7,
+     "end": 22.96
     },
     {
      "word": "16",
-     "start": 23.34,
-     "end": 23.56
+     "start": 23.22,
+     "end": 23.46
     },
     {
      "word": "boats.",
-     "start": 23.56,
-     "end": 24.0
+     "start": 23.46,
+     "end": 23.9
     },
     {
      "word": "She",
-     "start": 24.24,
-     "end": 24.36
+     "start": 24.18,
+     "end": 24.32
     },
     {
      "word": "even",
-     "start": 24.36,
-     "end": 24.62
+     "start": 24.32,
+     "end": 24.6
     },
     {
      "word": "brought",
-     "start": 24.62,
-     "end": 24.86
+     "start": 24.6,
+     "end": 24.9
     },
     {
      "word": "four",
-     "start": 24.86,
-     "end": 25.1
+     "start": 24.9,
+     "end": 25.16
     },
     {
      "word": "extra.",
-     "start": 25.1,
-     "end": 25.4
+     "start": 25.16,
+     "end": 25.5
     }
    ],
-   "cueAt": 20.816,
+   "cueAt": 20.944,
    "aligned": [
     [
      "Titanic?",
-     20.82,
-     21.14,
-     "Titanic?"
+     20.94,
+     21.2,
+     "Titanic,"
     ],
     [
      "Forty-six",
-     21.46,
-     21.95,
+     21.48,
+     21.92,
      "46,000."
     ],
     [
      "thousand.",
-     21.95,
-     22.44,
+     21.92,
+     22.36,
      ""
     ],
     [
      "Same",
-     22.58,
-     22.82,
+     22.48,
+     22.7,
      "Same"
     ],
     [
      "rule.",
-     22.82,
-     23.1,
+     22.7,
+     22.96,
      "rule."
     ],
     [
      "Sixteen",
-     23.34,
-     23.56,
+     23.22,
+     23.46,
      "16"
     ],
     [
      "boats.",
-     23.56,
-     24.0,
+     23.46,
+     23.9,
      "boats."
     ],
     [
      "She",
-     24.24,
-     24.36,
+     24.18,
+     24.32,
      "She"
     ],
     [
      "even",
-     24.36,
-     24.62,
+     24.32,
+     24.6,
      "even"
     ],
     [
      "brought",
-     24.62,
-     24.86,
+     24.6,
+     24.9,
      "brought"
     ],
     [
      "four",
-     24.86,
-     25.1,
+     24.9,
+     25.16,
      "four"
     ],
     [
      "extra.",
-     25.1,
-     25.4,
+     25.16,
+     25.5,
      "extra."
     ]
    ]
@@ -1397,7 +1397,7 @@
      "tr": "flash",
      "fx": "whoosh",
      "start": 25.664,
-     "end": 26.98
+     "end": 26.56
     },
     {
      "cue": "every",
@@ -1405,14 +1405,14 @@
      "face": "happy",
      "do": "point",
      "tr": "whip",
-     "start": 26.98,
-     "end": 28.52
+     "start": 26.56,
+     "end": 28.54
     },
     {
      "cue": "lifeboat",
      "shot": "today-boat",
      "tr": "cut",
-     "start": 28.52,
+     "start": 28.54,
      "end": 30.02,
      "face": "neutral"
     },
@@ -1424,7 +1424,7 @@
      "fx": "ding",
      "tr": "cut",
      "start": 30.02,
-     "end": 31.78
+     "end": 31.745
     }
    ],
    "speaker": "inspector",
@@ -1437,83 +1437,83 @@
    ],
    "subtitle": "And that's why, today, every passenger ship must carry a lifeboat or life-raft seat for everyone on board.",
    "voiceStart": 25.744,
-   "voiceEnd": 30.98,
+   "voiceEnd": 30.945,
    "start": 25.664,
-   "end": 31.78,
+   "end": 31.745,
    "words": [
     {
+     "word": "And",
+     "start": 25.74,
+     "end": 25.84
+    },
+    {
      "word": "that's",
-     "start": 25.86,
-     "end": 26.08
+     "start": 25.84,
+     "end": 26.04
     },
     {
-     "word": "why,",
-     "start": 26.08,
-     "end": 26.32
+     "word": "why",
+     "start": 26.04,
+     "end": 26.24
     },
     {
-     "word": "today,",
-     "start": 26.5,
-     "end": 26.68
+     "word": "today.",
+     "start": 26.24,
+     "end": 26.6
     },
     {
-     "word": "every",
-     "start": 27.02,
-     "end": 27.18
+     "word": "Every",
+     "start": 26.6,
+     "end": 27.1
     },
     {
      "word": "passenger",
-     "start": 27.18,
-     "end": 27.5
+     "start": 27.1,
+     "end": 27.52
     },
     {
      "word": "ship",
-     "start": 27.5,
-     "end": 27.82
+     "start": 27.52,
+     "end": 27.84
     },
     {
      "word": "must",
-     "start": 27.82,
-     "end": 28.0
+     "start": 27.84,
+     "end": 28.02
     },
     {
      "word": "carry",
-     "start": 28.0,
-     "end": 28.34
+     "start": 28.02,
+     "end": 28.32
     },
     {
      "word": "a",
-     "start": 28.34,
-     "end": 28.56
+     "start": 28.32,
+     "end": 28.58
     },
     {
      "word": "lifeboat",
-     "start": 28.56,
-     "end": 28.96
+     "start": 28.58,
+     "end": 28.98
     },
     {
      "word": "or",
-     "start": 28.96,
-     "end": 29.06
-    },
-    {
-     "word": "a",
-     "start": 29.06,
-     "end": 29.16
+     "start": 28.98,
+     "end": 29.1
     },
     {
      "word": "life",
-     "start": 29.16,
-     "end": 29.38
+     "start": 29.1,
+     "end": 29.34
     },
     {
      "word": "raft",
-     "start": 29.38,
-     "end": 29.54
+     "start": 29.34,
+     "end": 29.56
     },
     {
      "word": "seat",
-     "start": 29.54,
+     "start": 29.56,
      "end": 29.84
     },
     {
@@ -1529,97 +1529,97 @@
     {
      "word": "on",
      "start": 30.42,
-     "end": 30.64
+     "end": 30.6
     },
     {
      "word": "board.",
-     "start": 30.64,
-     "end": 30.86
+     "start": 30.6,
+     "end": 30.82
     }
    ],
    "cueAt": 25.744,
    "aligned": [
     [
      "And",
-     25.86,
-     25.86,
-     null
+     25.74,
+     25.84,
+     "And"
     ],
     [
      "that's",
-     25.86,
-     26.08,
+     25.84,
+     26.04,
      "that's"
     ],
     [
      "why,",
-     26.08,
-     26.32,
-     "why,"
+     26.04,
+     26.24,
+     "why"
     ],
     [
      "today,",
-     26.5,
-     26.68,
-     "today,"
+     26.24,
+     26.6,
+     "today."
     ],
     [
      "every",
-     27.02,
-     27.18,
-     "every"
+     26.6,
+     27.1,
+     "Every"
     ],
     [
      "passenger",
-     27.18,
-     27.5,
+     27.1,
+     27.52,
      "passenger"
     ],
     [
      "ship",
-     27.5,
-     27.82,
+     27.52,
+     27.84,
      "ship"
     ],
     [
      "must",
-     27.82,
-     28.0,
+     27.84,
+     28.02,
      "must"
     ],
     [
      "carry",
-     28.0,
-     28.34,
+     28.02,
+     28.32,
      "carry"
     ],
     [
      "a",
-     28.34,
-     28.56,
+     28.32,
+     28.58,
      "a"
     ],
     [
      "lifeboat",
-     28.56,
-     28.96,
+     28.58,
+     28.98,
      "lifeboat"
     ],
     [
      "or",
-     28.96,
-     29.06,
+     28.98,
+     29.1,
      "or"
     ],
     [
      "life-raft",
-     29.06,
-     29.54,
+     29.1,
+     29.56,
      null
     ],
     [
      "seat",
-     29.54,
+     29.56,
      29.84,
      "seat"
     ],
@@ -1638,13 +1638,13 @@
     [
      "on",
      30.42,
-     30.64,
+     30.6,
      "on"
     ],
     [
      "board.",
-     30.64,
-     30.86,
+     30.6,
+     30.82,
      "board."
     ]
    ]
@@ -1660,97 +1660,97 @@
   {
    "text": "Titanic",
    "start": 0.32,
-   "end": 0.64,
+   "end": 0.68,
    "emph": false
   },
   {
    "text": "carried",
-   "start": 0.64,
-   "end": 1.08,
+   "start": 0.68,
+   "end": 1.16,
    "emph": false
   },
   {
    "text": "MORE",
-   "start": 1.08,
-   "end": 1.34,
+   "start": 1.16,
+   "end": 1.4,
    "emph": true
   },
   {
    "text": "lifeboats",
-   "start": 1.34,
+   "start": 1.4,
    "end": 1.88,
    "emph": false
   },
   {
    "text": "than",
    "start": 1.88,
-   "end": 2.06,
+   "end": 2.04,
    "emph": false
   },
   {
    "text": "the",
-   "start": 2.06,
-   "end": 2.18,
+   "start": 2.04,
+   "end": 2.14,
    "emph": false
   },
   {
    "text": "law",
-   "start": 2.18,
+   "start": 2.14,
    "end": 2.3,
    "emph": false
   },
   {
    "text": "required",
    "start": 2.3,
-   "end": 2.68,
+   "end": 2.76,
    "emph": false
   },
   {
    "text": "So",
-   "start": 2.92,
-   "end": 3.0,
+   "start": 2.9,
+   "end": 3.12,
    "emph": false
   },
   {
    "text": "why",
-   "start": 3.0,
-   "end": 3.34,
-   "emph": false
-  },
-  {
-   "text": "did",
-   "start": 3.34,
+   "start": 3.12,
    "end": 3.5,
    "emph": false
   },
   {
-   "text": "more",
+   "text": "did",
    "start": 3.5,
-   "end": 3.68,
+   "end": 3.64,
+   "emph": false
+  },
+  {
+   "text": "more",
+   "start": 3.64,
+   "end": 3.8,
    "emph": true
   },
   {
    "text": "than",
-   "start": 3.68,
-   "end": 3.8,
+   "start": 3.8,
+   "end": 3.96,
    "emph": false
   },
   {
    "text": "1,500",
-   "start": 3.8,
-   "end": 4.02,
+   "start": 3.96,
+   "end": 4.15,
    "emph": true
   },
   {
    "text": "people",
-   "start": 4.24,
-   "end": 4.72,
+   "start": 4.34,
+   "end": 4.82,
    "emph": false
   },
   {
    "text": "die?",
-   "start": 4.72,
-   "end": 5.02,
+   "start": 4.82,
+   "end": 5.12,
    "emph": true
   },
   {
@@ -1762,450 +1762,450 @@
   {
    "text": "1912",
    "start": 5.54,
-   "end": 5.9,
+   "end": 5.88,
    "emph": true
   },
   {
    "text": "You're",
-   "start": 6.38,
-   "end": 6.52,
+   "start": 6.32,
+   "end": 6.46,
    "emph": false
   },
   {
    "text": "a",
-   "start": 6.52,
-   "end": 6.6,
+   "start": 6.46,
+   "end": 6.52,
    "emph": false
   },
   {
    "text": "stoker",
-   "start": 6.6,
-   "end": 6.92,
+   "start": 6.52,
+   "end": 6.9,
    "emph": true
   },
   {
    "text": "Night",
-   "start": 7.1,
-   "end": 7.24,
+   "start": 7.06,
+   "end": 7.18,
    "emph": false
   },
   {
    "text": "shift",
-   "start": 7.24,
-   "end": 7.48,
+   "start": 7.18,
+   "end": 7.44,
    "emph": false
   },
   {
    "text": "Then",
-   "start": 7.76,
-   "end": 7.86,
+   "start": 7.72,
+   "end": 7.78,
    "emph": false
   },
   {
    "text": "CRUNCH",
-   "start": 8.12,
-   "end": 8.28,
+   "start": 8.1,
+   "end": 8.26,
    "emph": true
   },
   {
    "text": "You",
-   "start": 8.58,
-   "end": 8.6,
+   "start": 8.56,
+   "end": 8.62,
    "emph": false
   },
   {
    "text": "sprint",
-   "start": 8.6,
-   "end": 8.76,
+   "start": 8.62,
+   "end": 8.8,
    "emph": true
   },
   {
    "text": "up",
-   "start": 8.76,
-   "end": 8.98,
+   "start": 8.8,
+   "end": 9.0,
    "emph": false
   },
   {
    "text": "on",
-   "start": 8.98,
-   "end": 9.2,
+   "start": 9.0,
+   "end": 9.16,
    "emph": false
   },
   {
    "text": "deck",
-   "start": 9.2,
-   "end": 9.36,
+   "start": 9.16,
+   "end": 9.32,
    "emph": false
   },
   {
    "text": "and",
-   "start": 9.36,
-   "end": 9.5,
+   "start": 9.32,
+   "end": 9.46,
    "emph": false
   },
   {
    "text": "count",
-   "start": 9.5,
-   "end": 9.76,
+   "start": 9.46,
+   "end": 9.7,
    "emph": true
   },
   {
    "text": "the",
-   "start": 9.76,
-   "end": 9.9,
+   "start": 9.7,
+   "end": 9.84,
    "emph": false
   },
   {
    "text": "lifeboats",
-   "start": 9.9,
-   "end": 10.32,
+   "start": 9.84,
+   "end": 10.3,
    "emph": false
   },
   {
    "text": "20",
-   "start": 10.52,
-   "end": 10.8,
+   "start": 10.48,
+   "end": 10.72,
    "emph": true
   },
   {
    "text": "For",
-   "start": 10.8,
-   "end": 11.06,
+   "start": 10.88,
+   "end": 10.96,
    "emph": false
   },
   {
    "text": "over",
-   "start": 11.06,
-   "end": 11.32,
+   "start": 10.96,
+   "end": 11.24,
    "emph": false
   },
   {
    "text": "2,200",
-   "start": 11.32,
-   "end": 11.52,
+   "start": 11.24,
+   "end": 11.485,
    "emph": true
   },
   {
    "text": "people",
-   "start": 12.12,
-   "end": 12.7,
+   "start": 12.22,
+   "end": 12.64,
    "emph": false
   },
   {
    "text": "Seats",
-   "start": 12.86,
-   "end": 13.1,
+   "start": 12.84,
+   "end": 13.02,
    "emph": false
   },
   {
    "text": "for",
-   "start": 13.1,
-   "end": 13.26,
+   "start": 13.02,
+   "end": 13.2,
    "emph": false
   },
   {
    "text": "about",
-   "start": 13.26,
-   "end": 13.48,
+   "start": 13.2,
+   "end": 13.38,
    "emph": false
   },
   {
    "text": "half",
-   "start": 13.48,
-   "end": 13.74,
+   "start": 13.38,
+   "end": 13.64,
    "emph": true
   },
   {
    "text": "of",
-   "start": 13.74,
-   "end": 13.86,
+   "start": 13.64,
+   "end": 13.76,
    "emph": false
   },
   {
    "text": "you",
-   "start": 13.86,
-   "end": 14.04,
+   "start": 13.76,
+   "end": 13.94,
    "emph": false
   },
   {
    "text": "But",
-   "start": 14.2,
+   "start": 14.34,
    "end": 14.34,
    "emph": false
   },
   {
    "text": "here's",
    "start": 14.34,
-   "end": 14.64,
+   "end": 14.62,
    "emph": false
   },
   {
    "text": "the",
-   "start": 14.64,
-   "end": 14.74,
+   "start": 14.62,
+   "end": 14.72,
    "emph": false
   },
   {
    "text": "twist",
-   "start": 14.74,
-   "end": 14.96,
+   "start": 14.72,
+   "end": 14.94,
    "emph": true
   },
   {
    "text": "It",
-   "start": 15.22,
-   "end": 15.3,
+   "start": 15.2,
+   "end": 15.26,
    "emph": false
   },
   {
    "text": "was",
-   "start": 15.3,
-   "end": 15.44,
+   "start": 15.26,
+   "end": 15.4,
    "emph": false
   },
   {
    "text": "totally",
-   "start": 15.44,
-   "end": 15.78,
+   "start": 15.4,
+   "end": 15.76,
    "emph": false
   },
   {
    "text": "legal",
-   "start": 15.78,
+   "start": 15.76,
    "end": 16.14,
    "emph": true
   },
   {
    "text": "The",
    "start": 16.38,
-   "end": 16.48,
+   "end": 16.46,
    "emph": false
   },
   {
    "text": "rulebook",
-   "start": 16.48,
+   "start": 16.46,
    "end": 16.82,
    "emph": false
   },
   {
    "text": "was",
    "start": 16.82,
-   "end": 17.0,
+   "end": 16.98,
    "emph": false
   },
   {
    "text": "from",
-   "start": 17.0,
-   "end": 17.18,
+   "start": 16.98,
+   "end": 17.14,
    "emph": false
   },
   {
    "text": "1894",
-   "start": 17.18,
-   "end": 17.61,
+   "start": 17.14,
+   "end": 17.54,
    "emph": true
   },
   {
    "text": "and",
-   "start": 18.36,
-   "end": 18.48,
+   "start": 18.28,
+   "end": 18.38,
    "emph": false
   },
   {
    "text": "its",
-   "start": 18.48,
-   "end": 18.6,
+   "start": 18.38,
+   "end": 18.54,
    "emph": false
   },
   {
    "text": "biggest",
-   "start": 18.6,
-   "end": 18.82,
+   "start": 18.54,
+   "end": 18.76,
    "emph": false
   },
   {
    "text": "size",
-   "start": 18.82,
-   "end": 19.22,
+   "start": 18.76,
+   "end": 19.2,
    "emph": false
   },
   {
    "text": "was",
-   "start": 19.22,
+   "start": 19.2,
    "end": 19.38,
    "emph": false
   },
   {
    "text": "10,000",
    "start": 19.38,
-   "end": 19.74,
+   "end": 19.78,
    "emph": true
   },
   {
    "text": "tons",
-   "start": 20.1,
-   "end": 20.28,
+   "start": 20.18,
+   "end": 20.36,
    "emph": false
   },
   {
    "text": "and",
-   "start": 20.28,
-   "end": 20.54,
+   "start": 20.36,
+   "end": 20.66,
    "emph": false
   },
   {
    "text": "up",
-   "start": 20.54,
-   "end": 20.7,
+   "start": 20.66,
+   "end": 20.82,
    "emph": false
   },
   {
    "text": "Titanic?",
-   "start": 20.82,
-   "end": 21.14,
+   "start": 20.94,
+   "end": 21.2,
    "emph": false
   },
   {
    "text": "46,000",
-   "start": 21.46,
-   "end": 21.95,
+   "start": 21.48,
+   "end": 21.92,
    "emph": true
   },
   {
    "text": "Same",
-   "start": 22.58,
-   "end": 22.82,
+   "start": 22.48,
+   "end": 22.7,
    "emph": false
   },
   {
    "text": "rule",
-   "start": 22.82,
-   "end": 23.1,
+   "start": 22.7,
+   "end": 22.96,
    "emph": false
   },
   {
    "text": "16",
-   "start": 23.34,
-   "end": 23.56,
+   "start": 23.22,
+   "end": 23.46,
    "emph": true
   },
   {
    "text": "boats",
-   "start": 23.56,
-   "end": 24.0,
+   "start": 23.46,
+   "end": 23.9,
    "emph": false
   },
   {
    "text": "She",
-   "start": 24.24,
-   "end": 24.36,
+   "start": 24.18,
+   "end": 24.32,
    "emph": false
   },
   {
    "text": "even",
-   "start": 24.36,
-   "end": 24.62,
+   "start": 24.32,
+   "end": 24.6,
    "emph": false
   },
   {
    "text": "brought",
-   "start": 24.62,
-   "end": 24.86,
+   "start": 24.6,
+   "end": 24.9,
    "emph": false
   },
   {
    "text": "four",
-   "start": 24.86,
-   "end": 25.1,
+   "start": 24.9,
+   "end": 25.16,
    "emph": true
   },
   {
    "text": "extra",
-   "start": 25.1,
-   "end": 25.4,
+   "start": 25.16,
+   "end": 25.5,
    "emph": true
   },
   {
    "text": "And",
-   "start": 25.86,
-   "end": 25.86,
+   "start": 25.74,
+   "end": 25.84,
    "emph": false
   },
   {
    "text": "that's",
-   "start": 25.86,
-   "end": 26.08,
+   "start": 25.84,
+   "end": 26.04,
    "emph": false
   },
   {
    "text": "why",
-   "start": 26.08,
-   "end": 26.32,
+   "start": 26.04,
+   "end": 26.24,
    "emph": false
   },
   {
    "text": "today",
-   "start": 26.5,
-   "end": 26.68,
+   "start": 26.24,
+   "end": 26.6,
    "emph": true
   },
   {
    "text": "every",
-   "start": 27.02,
-   "end": 27.18,
+   "start": 26.6,
+   "end": 27.1,
    "emph": false
   },
   {
    "text": "passenger",
-   "start": 27.18,
-   "end": 27.5,
+   "start": 27.1,
+   "end": 27.52,
    "emph": false
   },
   {
    "text": "ship",
-   "start": 27.5,
-   "end": 27.82,
+   "start": 27.52,
+   "end": 27.84,
    "emph": false
   },
   {
    "text": "must",
-   "start": 27.82,
-   "end": 28.0,
+   "start": 27.84,
+   "end": 28.02,
    "emph": false
   },
   {
    "text": "carry",
-   "start": 28.0,
-   "end": 28.34,
+   "start": 28.02,
+   "end": 28.32,
    "emph": false
   },
   {
    "text": "a",
-   "start": 28.34,
-   "end": 28.56,
+   "start": 28.32,
+   "end": 28.58,
    "emph": false
   },
   {
    "text": "lifeboat",
-   "start": 28.56,
-   "end": 28.96,
+   "start": 28.58,
+   "end": 28.98,
    "emph": false
   },
   {
    "text": "or",
-   "start": 28.96,
-   "end": 29.06,
+   "start": 28.98,
+   "end": 29.1,
    "emph": false
   },
   {
    "text": "life-raft",
-   "start": 29.06,
-   "end": 29.54,
+   "start": 29.1,
+   "end": 29.56,
    "emph": false
   },
   {
    "text": "seat",
-   "start": 29.54,
+   "start": 29.56,
    "end": 29.84,
    "emph": false
   },
@@ -2224,13 +2224,13 @@
   {
    "text": "on",
    "start": 30.42,
-   "end": 30.64,
+   "end": 30.6,
    "emph": false
   },
   {
    "text": "board",
-   "start": 30.64,
-   "end": 30.86,
+   "start": 30.6,
+   "end": 30.82,
    "emph": false
   }
  ]

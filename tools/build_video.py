@@ -195,7 +195,8 @@ def main():
         for i, b in enumerate(beats):
             inputs += ["-i", str(linedir / f"{b['id']}.wav")]
             ms = int(b["voiceStart"] * 1000)
-            parts.append(f"[{i}]aresample=48000,adelay={ms}|{ms}[a{i}]")
+            d = b["voiceEnd"] - b["voiceStart"]
+            parts.append(f"[{i}]aresample=48000,afade=t=in:d=0.012,afade=t=out:st={max(0.0, d - 0.03):.3f}:d=0.03,adelay={ms}|{ms}[a{i}]")
         filt = ";".join(parts) + ";" + "".join(f"[a{i}]" for i in range(len(beats))) + f"amix=inputs={len(beats)}:normalize=0,apad,atrim=0:{total:.3f}[out]"
         run(["ffmpeg", "-v", "error", "-y", *inputs, "-filter_complex", filt, "-map", "[out]", "-ac", "1", "-ar", "48000", str(vdir / "voice.wav")])
     else:
@@ -290,18 +291,26 @@ def main():
     pre = tmp / "premix.wav"
     if cut_mode:
         sfx = load_sfx()
+        sets = json.loads((ROOT / "engine" / "shots" / "sets.json").read_text(encoding="utf-8"))
+        place = lambda shot: sets["sets"].get(shot, sets["default"])
+        offset = {"whoosh": -0.1, "stamp": 0.32, "impact": 0.06, "scream": 0.55}  # stamp lands at 0.32 s
         events = []
+        prev = None
         for b in beats:
             for c in b["cuts"]:
-                if c.get("fx"):
-                    at = c["start"] + {"whoosh": -0.1, "stamp": 0.32}.get(c["fx"], 0.0)  # stamp lands at 0.32 s
-                    events.append((at, c["fx"]))
+                fxs = [f for f in c.get("fx", "").split("+") if f]
+                for f in fxs:
+                    at = c["start"] + offset.get(f, 0.0)
+                    events.append((at, f))
                     if c.get("pre") == "riser":  # suck-in that ends exactly on the hit: no dead air
                         events.append((at - 0.5, "riser"))
-                if c["tr"] == "whip" and c.get("fx") != "whoosh":
-                    events.append((c["start"] - 0.08, "whoosh"))  # peaks mid-whip
+                # whoosh only where the picture really whips to a new place (same place = camera move, silent)
+                new_place = prev is None or place(prev) != place(c["shot"])
+                if c["tr"] == "whip" and new_place and "whoosh" not in fxs:
+                    events.append((c["start"] - 0.06, "whoosh"))
                 if c["tr"] == "flash":
                     events.append((c["start"], "tick"))
+                prev = c["shot"]
         fx_track = sfx.render_events(events, total)
         segs = []
         for b in beats:
@@ -314,9 +323,9 @@ def main():
         write_wav(tmp / "fx.wav", fx_track)
         write_wav(tmp / "music.wav", music)
         filt = (
-            # gentle, slow ducking: the music sits steady under the voice instead of pumping up in every gap
-            "[1]volume=-18dB[mus];[0]asplit=2[v][sc];[mus][sc]sidechaincompress=threshold=0.1:ratio=2:attack=80:release=1400[duck];"
-            "[2]volume=-4dB[fx];[v][duck][fx]amix=inputs=3:normalize=0[out]"
+            # no ducking: the music sits at one steady level ~18 dB under the voice, so it never
+            # pumps and never leaves a silent hole between lines
+            "[1]volume=-14dB[mus];[2]volume=-4dB[fx];[0][mus][fx]amix=inputs=3:normalize=0[out]"
         )
         run(["ffmpeg", "-v", "error", "-y", "-i", str(vdir / "voice.wav"), "-i", str(tmp / "music.wav"), "-i", str(tmp / "fx.wav"), "-filter_complex", filt, "-map", "[out]", "-ar", "48000", "-ac", "2", "-t", f"{total:.3f}", str(pre)])
         print(f"  sfx: {len(events)} events; music: {', '.join(f'{m} {a:.1f}-{e:.1f}s' for a, e, m in segs)}")

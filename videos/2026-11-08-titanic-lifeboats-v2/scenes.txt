@@ -7,7 +7,7 @@
 #            a pause >= 0.15 also snaps the line onto the music beat
 #   emph     words shown big + coloured in the word captions (comma separated)
 # Cuts: a new picture starting on a spoken word (the cue). Format:
-#   cut: <cue word> | <shot> | face=<expression> | do=<gesture> | fx=<sound> | pre=riser | tr=<cut|whip|flash>
+#   cut: <cue word> | <shot> | face=<expression> | do=<gesture> | fx=<sound>[+<sound>] | pre=riser | tr=<cut|whip|flash>
 #   Same location -> the camera MOVES to the new framing (no cut). New location -> whip/flash/cut.
 # After editing:  python -I tools/build_video.py videos/2026-11-08-titanic-lifeboats-v2
 
@@ -49,7 +49,7 @@ preset: night
 pause: 0.3
 say: CRUNCH!
 emph: crunch
-cut: crunch  | iceberg-hit      | fx=crunch | pre=riser | tr=cut
+cut: crunch  | iceberg-hit      | fx=impact+scream | pre=riser | tr=cut
 
 [beat 4]
 speaker: vo

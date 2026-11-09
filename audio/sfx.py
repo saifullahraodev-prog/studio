@@ -138,8 +138,85 @@ def riser(sec=0.5):
     return norm(x, 0.8)
 
 
-SOUNDS = {"riser": riser, "whoosh": whoosh, "hit": hit, "boom": boom, "crunch": crunch, "pop": pop, "boing": boing, "ding": ding, "stamp": stamp, "fire": fire, "tick": tick}
-GAINS = {"riser": 0.4, "whoosh": 0.45, "hit": 0.8, "boom": 0.9, "crunch": 0.95, "pop": 0.45, "boing": 0.5, "ding": 0.45, "stamp": 0.8, "fire": 0.35, "tick": 0.25}
+
+# ── soft whooshes: 4 variants (length / pitch / brightness), picked in turn so they never repeat
+def _whoosh_var(sec, lo, hi, seed):
+    r = np.random.default_rng(seed)
+    n = int(sec * SR)
+    t = np.linspace(0, 1, n)
+    centre = lo + (hi - lo) * np.sin(np.pi * t) ** 1.5
+    x = _bp(r.uniform(-1, 1, n), centre * 0.7, centre * 1.3)
+    x = _lp(x, 2500)  # airy, not hissy
+    return norm(x * np.sin(np.pi * t) ** 2.5, 0.8)
+
+
+WHOOSHES = [lambda: _whoosh_var(0.30, 300, 1400, 1), lambda: _whoosh_var(0.36, 250, 1100, 2),
+            lambda: _whoosh_var(0.26, 400, 1800, 3), lambda: _whoosh_var(0.40, 200, 900, 4)]
+
+
+def _reverb(x, sec=1.6, wet=0.35):
+    """cheap room/hull reverb: decaying noise convolution (FFT)"""
+    n = int(sec * SR)
+    ir = _rng.uniform(-1, 1, n) * np.exp(-_t(sec) * 4.5)
+    ir = _lp(ir, 3000)
+    L = len(x) + n
+    y = np.fft.irfft(np.fft.rfft(x, L) * np.fft.rfft(ir, L), L)
+    y = y / (np.max(np.abs(y)) or 1) * np.max(np.abs(x))
+    return np.concatenate([x, np.zeros(n)]) * (1 - wet) + y * wet
+
+
+def impact(sec=2.8):
+    """big iceberg hit: crack cluster + deep boom + long hull groan, with a reverb tail,
+    so the hit carries smoothly into the next shot instead of stopping dead"""
+    n = int(sec * SR)
+    x = np.zeros(n)
+    c = crunch(0.7)
+    x[: len(c)] += c * 0.9
+    x += _sine_sweep(75, 30, sec, 0.45) * np.exp(-_t(sec) * 1.4) * 1.1  # boom
+    x += _lp(_noise(n), 220) * np.exp(-_t(sec) * 1.1) * 2.2  # rumble
+    # metal hull groan: slow detuned low saws, bandpassed
+    t = _t(sec)
+    g = np.zeros(n)
+    for f0, d in [(62, 0.0), (64.5, 0.7), (93, 1.3)]:
+        f = f0 * (1 + 0.04 * np.sin(2 * np.pi * 0.7 * t + d))
+        ph = np.cumsum(f) / SR
+        g += 2 * (ph % 1) - 1
+    g = _bp(g, 80, 600) * np.clip((t - 0.15) / 0.4, 0, 1) * np.exp(-np.maximum(t - 0.6, 0) * 1.3)
+    x += g * 0.9
+    y = _reverb(x * _env(n, 0.001, 0.6), 1.4, 0.3)
+    return norm(y, 0.95)
+
+
+def scream(sec=1.8, seed=11):
+    """distant crowd screams: several voices (glottal saw + vibrato + pitch glide) through
+    'ah' / 'ee' vowel formants, staggered, with reverb (they are far away on deck)"""
+    r = np.random.default_rng(seed)
+    n = int(sec * SR)
+    out = np.zeros(n)
+    formants = {"ah": [(800, 1.0), (1150, 0.6), (2900, 0.25)], "ee": [(350, 0.8), (2300, 0.6), (3000, 0.3)], "eh": [(600, 1.0), (1900, 0.5), (2600, 0.25)]}
+    for v in range(6):
+        start = r.uniform(0, 0.45)
+        dur = r.uniform(0.7, 1.25)
+        m = int(dur * SR)
+        t = _t(dur)
+        base = r.choice([380.0, 450.0, 520.0, 300.0, 610.0])
+        # rise fast, hold with vibrato, fall at the end
+        f = base * (0.75 + 0.35 * np.clip(t / 0.12, 0, 1) - 0.3 * np.clip((t - dur * 0.7) / (dur * 0.3), 0, 1) ** 2)
+        f *= 1 + 0.025 * np.sin(2 * np.pi * r.uniform(5.5, 7.5) * t) + 0.01 * r.uniform(-1, 1, m).cumsum() / np.sqrt(m)
+        ph = np.cumsum(f) / SR
+        src = (2 * (ph % 1) - 1) + _rng.uniform(-1, 1, m) * 0.25  # rough, breathy
+        vowel = formants[r.choice(list(formants))]
+        y = sum(_bp(src, fc * 0.88, fc * 1.12) * a for fc, a in vowel)
+        y *= _env(m, 0.04, dur * 0.4) * r.uniform(0.5, 1.0)
+        p0 = int(start * SR)
+        L = min(m, n - p0)
+        out[p0 : p0 + L] += y[:L]
+    out = _lp(out, 3800)
+    return norm(_reverb(out, 1.2, 0.45), 0.8)
+
+
+SOUNDS = {"impact": impact, "scream": scream, "riser": riser, "whoosh": whoosh, "hit": hit, "boom": boom, "crunch": crunch, "pop": pop, "boing": boing, "ding": ding, "stamp": stamp, "fire": fire, "tick": tick}
+GAINS = {"impact": 1.0, "scream": 0.42, "riser": 0.3, "swish": 0.16, "whoosh": 0.22, "hit": 0.8, "boom": 0.9, "crunch": 0.95, "pop": 0.45, "boing": 0.5, "ding": 0.45, "stamp": 0.8, "fire": 0.35, "tick": 0.25}
 
 
 # ── music ───────────────────────────────────────────────────────────────────
@@ -200,6 +277,17 @@ def _beds(duration, bpm=112):
             _add(tense, get(("tt", ch[2]), lambda: _pluck(NOTE(ch[2] + 12), 0.3) * 0.35), t)
         i += 1
         t += step
+    # tense: a low sustained drone under the pulse, following the chord root, so the bed
+    # never drops to silence between notes
+    tt = np.arange(n) / SR
+    bar_idx = ((tt / (step * 8)).astype(int)) % 4
+    root = np.array([NOTE(c[0] - 12) for c in tense_prog])[bar_idx]
+    k = int(0.08 * SR)
+    root = np.convolve(root, np.ones(k) / k, mode="same")  # glide between chords
+    ph = np.cumsum(root) / SR
+    drone = (2 * (ph % 1) - 1) + (2 * ((ph * 1.004) % 1) - 1)
+    drone = _lp(drone, 380) * (0.75 + 0.25 * np.sin(2 * np.pi * 0.25 * tt))
+    tense += drone * 0.22
     return light, tense, step
 
 
@@ -217,6 +305,7 @@ def music_bed(segments, duration, xfade=0.35):
     k = max(1, int(xfade * SR))
     w = np.convolve(w, np.ones(k) / k, mode="same")  # smooth mood switches
     w = np.clip(w, 0.0, 1.0)
+    light = light * 2.2  # level-match the plucky bed to the tense one (measured ~7 dB quieter)
     out = light * np.sqrt(1 - w) + tense * np.sqrt(w)
     return norm(out[: int(duration * SR)], 0.8)
 
@@ -234,13 +323,24 @@ def _add(out, x, t):
 
 
 def render_events(events, duration):
-    """events: [(time_sec, name)] -> mono track."""
-    out = np.zeros(int(duration * SR) + SR, dtype=np.float32)
+    """events: [(time_sec, name)] or [(time_sec, name, gain)] -> mono track.
+    'whoosh' / 'swish' rotate through 4 variants so repeats never sound the same."""
+    out = np.zeros(int(duration * SR) + 3 * SR, dtype=np.float32)
     cache = {}
-    for t, name in events:
-        if name not in SOUNDS:
+    k = 0
+    for ev in events:
+        t, name = ev[0], ev[1]
+        g = ev[2] if len(ev) > 2 else 1.0
+        if name in ("whoosh", "swish"):
+            key = (name, k % len(WHOOSHES))
+            k += 1
+            if key not in cache:
+                cache[key] = WHOOSHES[key[1]]() * GAINS[name]
+        elif name in SOUNDS:
+            key = name
+            if key not in cache:
+                cache[key] = SOUNDS[name]() * GAINS[name]
+        else:
             continue
-        if name not in cache:
-            cache[name] = SOUNDS[name]() * GAINS[name]
-        _add(out, cache[name], max(0.0, t))
-    return out[: int(duration * SR)]
+        _add(out, cache[key] * g, max(0.0, t))
+    return out[: int(duration * SR) + SR]

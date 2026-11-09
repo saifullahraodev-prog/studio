@@ -1,0 +1,16 @@
+{
+ "note": "place of each cut template (default deck). Same place -> camera move; new place -> transition. Read by cuts.tsx and tools/build_video.py.",
+ "default": "deck",
+ "sets": {
+  "ship-sinking": "sea",
+  "furnace-insert": "boiler",
+  "stoker-furnace": "boiler",
+  "stoker-yawn": "boiler",
+  "stoker-yawn-hold": "boiler",
+  "iceberg-hit": "iceberg",
+  "today-medium": "today",
+  "today-low": "today",
+  "today-boat": "today",
+  "today-punch": "today"
+ }
+}

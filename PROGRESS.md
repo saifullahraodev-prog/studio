@@ -148,3 +148,17 @@ the gap into CRUNCH; same-place shots now join with a 7-frame camera move (no cu
 whip with both shots sliding together (no black). `cutSet()` in `engine/shots/cuts.tsx`.
 Result (720p): 31.8 s, -14.0 LUFS, LRA 2.5 LU, no black/frozen frames, render 166 s. Golden 14/14.
 File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
+
+### Short v2c (2026-11-09): owner: "whoosh too loud/repetitive; crash audio sounds cut; reference scream"
+- Voice clips started/stopped on non-zero samples (tiny clicks at every line join, 3 in a row at
+  the crash) -> 12 ms fade-in / 30 ms fade-out per line.
+- Crash: new `impact` sound (crack + deep boom + hull groan + reverb tail, 2.8 s) bridges into
+  the next shots; synthesized distant crowd `scream` 0.55 s after the hit. `fx=impact+scream`.
+- Whooshes: half as loud, 4 rotating variants, and only where the picture whips to a new place
+  (same-place camera moves are silent): 23 sound events instead of 27.
+- Music: no ducking (steady level ~18 dB under the voice), low drone under the tense pulse,
+  light/tense beds level-matched. Shared place map `engine/shots/sets.json`.
+- Result: 31.8 s, -14.0 LUFS, LRA 2.0 LU, no black/frozen frames, render 172 s, golden 14/14.
+  File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2c-720p.mp4`.
+- Note: scream/impact are synthesized in code; a real CC0 recorded scream would sound better
+  (needs a download -> ask owner).
