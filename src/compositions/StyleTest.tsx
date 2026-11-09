@@ -15,7 +15,7 @@ export type StyleTestProps = ResProps & {
   safeArea?: boolean;
 };
 
-const BEATS: Record<LightingPresetName, { inspector: Expression; stoker: Expression; caption: CaptionBeat }> = {
+const BEATS: Partial<Record<LightingPresetName, { inspector: Expression; stoker: Expression; caption: CaptionBeat }>> = {
   day: { inspector: "neutral", stoker: "happy", caption: { subtitle: "It's April 1912. The sea is calm.", keyword: "Calm", from: 0, to: 9999 } },
   golden: { inspector: "determined", stoker: "happy", caption: { subtitle: "The ship is called unsinkable.", keyword: "Unsinkable", from: 0, to: 9999 } },
   storm: { inspector: "worried", stoker: "scared", caption: { subtitle: "But there are only 20 lifeboats.", keyword: "20 boats", from: 0, to: 9999 } },
@@ -25,7 +25,7 @@ const BEATS: Record<LightingPresetName, { inspector: Expression; stoker: Express
 export const StyleTest: React.FC<StyleTestProps> = ({ preset, variant, safeArea }) => {
   const frame = useCurrentFrame();
   const p = style.lighting[preset];
-  const b = BEATS[preset];
+  const b = BEATS[preset] ?? BEATS.day!;
   const breathe = Math.sin(frame / 18) * 0.01;
   return (
     <WorldShot

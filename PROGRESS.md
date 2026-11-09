@@ -24,6 +24,15 @@
   walk, run, talk, point, panic, fall (cartoon slip onto the back), carry, climb, cheer, shiver,
   sew, rattle (locked door), pushbar, wave, facepalm, cower. Pose gained `roll`, `legs`, `sink`.
   Review: `node tools/actions.mjs` -> `out/phase4/actions.mp4` (animated 4x4) + `actions.png`.
+- 2026-11-09: step 3 worlds. `engine/worlds/factory/Factory.tsx` (garment loft: 5 long tables of
+  belt-driven machines, seats via `factorySeats()`, scrap bins, window walls, cast-iron columns,
+  locked "WASHINGTON PL." door with padlock; `fire`/`smoke` 0..1), `stairwell/Stairwell.tsx`
+  (landing, locked door that can shake, stairs, stair hole lit by fire from below, elevator cage,
+  window with fire escape), `street/Street.tsx` (10-storey loft facade, top floors burn, iron fire
+  escape, taller university building next door, horse-drawn steam pumper, ladder truck whose ladder
+  stops at the 7th floor, cobbles, lamps). Fire/smoke fx: `engine/fx/Fire.tsx`.
+  New style file **v1.2** = v1.1 + presets `interior` and `fire` (existing presets untouched;
+  owner reviews at GATE 4). Review: `out/phase4/worlds-review.png` (composition `WorldTest`).
 
 ### Phase 4 plan (2026-11-09)
 Script draft: `videos/2026-11-09-triangle-fire/script.md` (~3:00, 21 checked claims, 9 sources).

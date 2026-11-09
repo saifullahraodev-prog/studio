@@ -26,7 +26,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parent.parent
 FPS = 30
 TARGET_LUFS = -14.0  # YouTube's playback reference loudness
-STYLE = json.loads((ROOT / "engine" / "look" / "style-v1.1.json").read_text(encoding="utf-8"))
+STYLE = json.loads((ROOT / "engine" / "look" / "style-v1.2.json").read_text(encoding="utf-8"))
 PACING = STYLE.get("pacing", {})
 
 
