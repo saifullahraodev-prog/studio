@@ -17,6 +17,7 @@ import { ShotOutput } from "./templates";
 import { DeckBoat, RocketFlare } from "../props/ActionProps";
 import { FireJet, FloorRifle, MachineGun } from "../props/TrenchProps";
 import { Barrel, Trench, TRENCH } from "../worlds/trench/Trench";
+import { Prop } from "../props/Model";
 import { Flames, Smoke } from "../fx/Fire";
 import SETS from "./sets.json";
 
@@ -636,6 +637,29 @@ const TPL: Record<string, T> = {
     };
   },
 
+  // TEMP: real CC0 models in the trench (proof of loading + scale)
+  "props-test": ({ beat, t }) => ({
+    real: true,
+    camera: { position: [0.6, 2.4, 7.5], target: [0, 1.2, 0], fov: 55 },
+    focus: [0, 1.2, 1],
+    focusRange: 8,
+    content: (
+      <>
+        <Trench preset={P(beat)} />
+        <Prop id="barrel_03" position={[0.8, 0, 2.5]} />
+        <Prop id="wooden_military_crate" position={[-0.8, 0, 3.2]} rotation={[0, 0.4, 0]} />
+        <Prop id="ammo_box" position={[0.7, 0, 4.4]} rotation={[0, -0.6, 0]} />
+        <Prop id="cement_bag" position={[-0.7, 0, 1.0]} rotation={[0, 1.2, 0]} />
+        <Prop id="wooden_ladder" position={[1.25, 0, -0.5]} rotation={[-0.25, -Math.PI / 2, 0]} />
+        <Prop id="old_gas_mask" position={[-0.4, 0.1, 4.8]} />
+        <Prop id="rusted_spade_01" position={[-1.2, 0, -1.2]} rotation={[0, 0, 0.3]} />
+        <Prop id="dead_tree_trunk" position={[4, TRENCH.H, -3]} />
+        <Prop id="tree_stump_02" position={[-4, TRENCH.H, 1]} />
+        <Prop id="rock_07" position={[3, TRENCH.H, 4]} />
+        <Character def={BIBLE.tommy} expression="scared" position={[0, 0, 0.4]} rotationY={0.2} pose={gesture("aim", t)} />
+      </>
+    ),
+  }),
   // -- "Trench Trap" line 1 (after the reference's first 2 s) --
   // (a) high, behind the enemy: soldiers with rifles close in on the trench; barrels in the foreground.
   //     The next shot (same place) makes the camera DIVE down into the trench.

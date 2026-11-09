@@ -36,8 +36,10 @@ Ask before installing anything large, deleting files, or spending money.
 ## Tech
 - Node LTS + Remotion 4 + @remotion/three + react-three-fiber + three.js, TypeScript.
 - Python 3 + FFmpeg (audio, mixing, joining, QC). faster-whisper for word timings.
-- Characters: **code-built chibi bodies** (owner decision 2026-11-09, Phase 4), all motion from code
-  (`engine/characters/gestures.ts` + actions). No downloaded rigged models.
+- Characters: ~~code-built chibi bodies, no downloaded rigged models~~ (Phase 4) -> **CHANGED by owner 2026-11-10**:
+  to match the reference, use **real 3D models + motion capture** (free CC0/CC-BY models for props and
+  bodies, Mixamo mocap downloaded by the owner), loaded into the existing Remotion/three.js pipeline
+  (no Blender). Our drawn Variant D faces stay on the heads. Code-built bodies remain as fallback.
 - Sound: procedural SFX/music in `audio/sfx.py` + a small owner-approved CC0 pack for what code
   can't fake well (screams, crowds, ambience). List every downloaded file + licence in `audio/LICENSES.md`.
 - Remotion licence: free for individuals / teams up to 3.

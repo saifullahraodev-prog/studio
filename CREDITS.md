@@ -24,3 +24,10 @@ required. Credit is given here anyway. Audio credits: `audio/LICENSES.md`.
 | industrial_sunset_puresky.hdr | fire | https://polyhaven.com/a/industrial_sunset_puresky |
 
 Downloaded 2026-11-09 (owner-approved revision 2, task 3).
+
+## 3D models: Poly Haven (https://polyhaven.com, CC0), 1K glTF, downloaded 2026-11-10
+Folder `public/models/polyhaven/<id>/`. Owner decision "Real models + mocap" (2026-11-10).
+barrel_03, Barrel_01, wooden_barrels_01, old_military_crate, wooden_military_crate, wooden_crate_02, ammo_box,
+cement_bag, compost_bags, stick_grenade, old_gas_mask, rusted_spade_01, wooden_ladder, tree_stump_01,
+tree_stump_02, dead_tree_trunk, rock_07, stone_01, wooden_bucket_01, dry_branches_medium_01
+(each at https://polyhaven.com/a/<id>).
