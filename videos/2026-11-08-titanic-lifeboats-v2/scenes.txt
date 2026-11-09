@@ -3,10 +3,12 @@
 #
 # One [beat] per spoken line. Beat fields:
 #   speaker  inspector | vo        say    spoken text (spell numbers as spoken)
-#   preset   lighting              pause  silence before this line (s), for reveals (default 0.05)
+#   preset   lighting              pause  silence before this line (s), for reveals (default 0.05);
+#            a pause >= 0.15 also snaps the line onto the music beat
 #   emph     words shown big + coloured in the word captions (comma separated)
 # Cuts: a new picture starting on a spoken word (the cue). Format:
-#   cut: <cue word> | <shot> | face=<expression> | do=<gesture> | fx=<sound> | tr=<cut|whip|flash>
+#   cut: <cue word> | <shot> | face=<expression> | do=<gesture> | fx=<sound> | pre=riser | tr=<cut|whip|flash>
+#   Same location -> the camera MOVES to the new framing (no cut). New location -> whip/flash/cut.
 # After editing:  python -I tools/build_video.py videos/2026-11-08-titanic-lifeboats-v2
 
 slug: titanic-lifeboats-v2
@@ -27,7 +29,7 @@ cut: die     | ship-sinking  | fx=boom   | tr=whip
 [beat 2]
 speaker: vo
 preset: night
-pause: 0.3
+pause: 0.15
 say: It's nineteen twelve. You're a stoker. Night shift.
 emph: nineteen, twelve, stoker
 cut: it's    | furnace-insert | fx=fire | tr=flash
@@ -37,22 +39,22 @@ cut: night   | stoker-yawn    | face=sad     | do=yawn | tr=cut
 [beat 3]
 speaker: vo
 preset: night
-pause: 0.2
+pause: 0.08
 say: Then...
 cut: then    | stoker-yawn-hold | face=neutral
 
 [beat 3b]
 speaker: vo
 preset: night
-pause: 0.55
+pause: 0.3
 say: CRUNCH!
 emph: crunch
-cut: crunch  | iceberg-hit      | fx=crunch | tr=cut
+cut: crunch  | iceberg-hit      | fx=crunch | pre=riser | tr=cut
 
 [beat 4]
 speaker: vo
 preset: night
-pause: 0.5
+pause: 0.1
 say: You sprint up on deck and count the lifeboats.
 emph: sprint, count
 cut: you     | stoker-shocked-cu | face=shocked | do=recoil | tr=whip
@@ -78,7 +80,7 @@ cut: half    | crowd-stare   | face=sad | tr=cut
 [beat 7]
 speaker: vo
 preset: night
-pause: 0.4
+pause: 0.2
 say: But here's the twist. It was totally legal.
 emph: twist, legal
 cut: but     | insp-medium   | face=worried    | do=think | tr=whip
@@ -105,7 +107,7 @@ cut: she     | boats-plus4    | face=happy   | do=thumbsup | fx=ding
 [beat 10]
 speaker: inspector
 preset: day
-pause: 0.25
+pause: 0.15
 say: And that's why, today, every passenger ship must carry a lifeboat or life-raft seat for everyone on board.
 emph: today, everyone
 cut: and      | today-medium | face=determined | do=tap  | tr=flash | fx=whoosh

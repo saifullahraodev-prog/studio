@@ -259,7 +259,9 @@
     "lineGap": 0.05,
     "minShot": 0.45,
     "maxShot": 1.6,
-    "whipFrames": 4,
+    "whipFrames": 6,
+    "moveFrames": 7,
+    "bpm": 112,
     "flashFrames": 3,
     "voiceLengthScale": 0.82
   }

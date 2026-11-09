@@ -7,56 +7,56 @@
  {
   "word": "Titanic",
   "start": 0.32,
-  "end": 0.66
+  "end": 0.64
  },
  {
   "word": "carried",
-  "start": 0.66,
+  "start": 0.64,
   "end": 1.08
  },
  {
   "word": "more",
   "start": 1.08,
-  "end": 1.32
+  "end": 1.34
  },
  {
   "word": "lifeboats",
-  "start": 1.32,
-  "end": 1.84
+  "start": 1.34,
+  "end": 1.88
  },
  {
   "word": "than",
-  "start": 1.84,
-  "end": 2.0
+  "start": 1.88,
+  "end": 2.06
  },
  {
   "word": "the",
-  "start": 2.0,
-  "end": 2.08
+  "start": 2.06,
+  "end": 2.18
  },
  {
   "word": "law",
-  "start": 2.08,
-  "end": 2.26
+  "start": 2.18,
+  "end": 2.3
  },
  {
   "word": "required.",
-  "start": 2.26,
-  "end": 2.62
+  "start": 2.3,
+  "end": 2.68
  },
  {
-  "word": "So,",
-  "start": 2.88,
+  "word": "So",
+  "start": 2.92,
   "end": 3.0
  },
  {
   "word": "why",
-  "start": 3.18,
-  "end": 3.36
+  "start": 3.0,
+  "end": 3.34
  },
  {
   "word": "did",
-  "start": 3.36,
+  "start": 3.34,
   "end": 3.5
  },
  {
@@ -67,11 +67,11 @@
  {
   "word": "than",
   "start": 3.68,
-  "end": 3.82
+  "end": 3.8
  },
  {
   "word": "1500",
-  "start": 3.82,
+  "start": 3.8,
   "end": 4.24
  },
  {
@@ -87,421 +87,426 @@
  {
   "word": "It's",
   "start": 5.42,
-  "end": 5.6
+  "end": 5.54
  },
  {
   "word": "1912.",
-  "start": 5.6,
+  "start": 5.54,
   "end": 6.26
  },
  {
   "word": "You're",
   "start": 6.38,
-  "end": 6.54
+  "end": 6.52
  },
  {
   "word": "a",
-  "start": 6.54,
-  "end": 6.62
+  "start": 6.52,
+  "end": 6.6
  },
  {
   "word": "stoker.",
-  "start": 6.62,
-  "end": 6.96
+  "start": 6.6,
+  "end": 6.92
  },
  {
   "word": "Night",
-  "start": 7.14,
-  "end": 7.28
+  "start": 7.1,
+  "end": 7.24
  },
  {
   "word": "shift.",
-  "start": 7.28,
-  "end": 7.52
+  "start": 7.24,
+  "end": 7.48
  },
  {
-  "word": "Huh?",
-  "start": 7.88,
-  "end": 8.0
+  "word": "Eh,",
+  "start": 7.76,
+  "end": 7.86
  },
  {
-  "word": "Quatch.",
-  "start": 8.6,
-  "end": 8.82
+  "word": "punch.",
+  "start": 8.12,
+  "end": 8.28
  },
  {
   "word": "You",
-  "start": 9.48,
-  "end": 9.54
+  "start": 8.58,
+  "end": 8.6
  },
  {
   "word": "sprint",
-  "start": 9.54,
-  "end": 9.74
+  "start": 8.6,
+  "end": 8.76
  },
  {
   "word": "up",
-  "start": 9.74,
-  "end": 9.94
+  "start": 8.76,
+  "end": 8.98
  },
  {
   "word": "on",
-  "start": 9.94,
-  "end": 10.12
+  "start": 8.98,
+  "end": 9.2
  },
  {
   "word": "deck",
-  "start": 10.12,
-  "end": 10.3
+  "start": 9.2,
+  "end": 9.36
  },
  {
   "word": "and",
-  "start": 10.3,
-  "end": 10.46
+  "start": 9.36,
+  "end": 9.5
  },
  {
   "word": "count",
-  "start": 10.46,
-  "end": 10.68
+  "start": 9.5,
+  "end": 9.76
  },
  {
   "word": "the",
-  "start": 10.68,
-  "end": 10.8
+  "start": 9.76,
+  "end": 9.9
  },
  {
   "word": "lifeboats.",
-  "start": 10.8,
-  "end": 11.3
+  "start": 9.9,
+  "end": 10.32
  },
  {
   "word": "20",
-  "start": 11.48,
-  "end": 11.7
+  "start": 10.52,
+  "end": 10.8
  },
  {
   "word": "for",
-  "start": 11.7,
-  "end": 11.98
+  "start": 10.8,
+  "end": 11.06
  },
  {
   "word": "over",
-  "start": 11.98,
-  "end": 12.26
+  "start": 11.06,
+  "end": 11.32
  },
  {
   "word": "2",
-  "start": 12.26,
-  "end": 12.52
+  "start": 11.32,
+  "end": 11.58
  },
  {
   "word": ",200",
-  "start": 12.52,
-  "end": 13.0
+  "start": 11.58,
+  "end": 12.12
  },
  {
   "word": "people.",
-  "start": 13.0,
-  "end": 13.6
+  "start": 12.12,
+  "end": 12.7
  },
  {
   "word": "Seats",
-  "start": 13.74,
-  "end": 13.98
+  "start": 12.86,
+  "end": 13.1
  },
  {
   "word": "for",
-  "start": 13.98,
-  "end": 14.14
+  "start": 13.1,
+  "end": 13.26
  },
  {
   "word": "about",
-  "start": 14.14,
-  "end": 14.34
+  "start": 13.26,
+  "end": 13.48
  },
  {
   "word": "half",
-  "start": 14.34,
-  "end": 14.62
+  "start": 13.48,
+  "end": 13.74
  },
  {
   "word": "of",
-  "start": 14.62,
-  "end": 14.74
+  "start": 13.74,
+  "end": 13.86
  },
  {
   "word": "you.",
-  "start": 14.74,
-  "end": 14.9
+  "start": 13.86,
+  "end": 14.04
  },
  {
   "word": "But",
-  "start": 15.26,
-  "end": 15.44
+  "start": 14.2,
+  "end": 14.34
  },
  {
   "word": "here's",
-  "start": 15.44,
-  "end": 15.74
+  "start": 14.34,
+  "end": 14.64
  },
  {
   "word": "the",
-  "start": 15.74,
-  "end": 15.82
+  "start": 14.64,
+  "end": 14.74
  },
  {
   "word": "twist.",
-  "start": 15.82,
-  "end": 16.04
+  "start": 14.74,
+  "end": 14.96
  },
  {
   "word": "It",
-  "start": 16.34,
-  "end": 16.42
+  "start": 15.22,
+  "end": 15.3
  },
  {
   "word": "was",
-  "start": 16.42,
-  "end": 16.58
+  "start": 15.3,
+  "end": 15.44
  },
  {
   "word": "totally",
-  "start": 16.58,
-  "end": 16.88
+  "start": 15.44,
+  "end": 15.78
  },
  {
   "word": "legal.",
-  "start": 16.88,
-  "end": 17.3
+  "start": 15.78,
+  "end": 16.14
  },
  {
   "word": "The",
-  "start": 17.56,
-  "end": 17.64
+  "start": 16.38,
+  "end": 16.48
  },
  {
   "word": "rulebook",
-  "start": 17.64,
-  "end": 17.98
+  "start": 16.48,
+  "end": 16.82
  },
  {
   "word": "was",
-  "start": 17.98,
-  "end": 18.16
+  "start": 16.82,
+  "end": 17.0
  },
  {
   "word": "from",
-  "start": 18.16,
-  "end": 18.32
+  "start": 17.0,
+  "end": 17.18
  },
  {
   "word": "1894,",
-  "start": 18.32,
-  "end": 19.22
+  "start": 17.18,
+  "end": 18.04
  },
  {
   "word": "and",
-  "start": 19.48,
-  "end": 19.6
+  "start": 18.36,
+  "end": 18.48
  },
  {
   "word": "its",
-  "start": 19.6,
-  "end": 19.72
+  "start": 18.48,
+  "end": 18.6
  },
  {
   "word": "biggest",
-  "start": 19.72,
-  "end": 19.98
+  "start": 18.6,
+  "end": 18.82
  },
  {
   "word": "size",
-  "start": 19.98,
-  "end": 20.36
+  "start": 18.82,
+  "end": 19.22
  },
  {
   "word": "was",
-  "start": 20.36,
-  "end": 20.52
+  "start": 19.22,
+  "end": 19.38
  },
  {
   "word": "10",
-  "start": 20.52,
-  "end": 20.78
+  "start": 19.38,
+  "end": 19.66
  },
  {
   "word": ",000",
-  "start": 20.78,
-  "end": 21.24
+  "start": 19.66,
+  "end": 20.1
  },
  {
   "word": "tons",
-  "start": 21.24,
-  "end": 21.4
+  "start": 20.1,
+  "end": 20.28
  },
  {
   "word": "and",
-  "start": 21.4,
-  "end": 21.68
+  "start": 20.28,
+  "end": 20.54
  },
  {
   "word": "up.",
-  "start": 21.68,
-  "end": 21.84
+  "start": 20.54,
+  "end": 20.7
  },
  {
   "word": "Titanic?",
-  "start": 21.96,
-  "end": 22.24
+  "start": 20.82,
+  "end": 21.14
  },
  {
   "word": "46",
-  "start": 22.52,
-  "end": 22.9
+  "start": 21.46,
+  "end": 21.84
  },
  {
   "word": ",000.",
-  "start": 22.9,
-  "end": 23.46
+  "start": 21.84,
+  "end": 22.44
  },
  {
   "word": "Same",
-  "start": 23.6,
-  "end": 23.84
+  "start": 22.58,
+  "end": 22.82
  },
  {
   "word": "rule.",
-  "start": 23.84,
-  "end": 24.08
+  "start": 22.82,
+  "end": 23.1
  },
  {
   "word": "16",
-  "start": 24.36,
-  "end": 24.6
+  "start": 23.34,
+  "end": 23.56
  },
  {
   "word": "boats.",
-  "start": 24.6,
-  "end": 25.02
+  "start": 23.56,
+  "end": 24.0
  },
  {
   "word": "She",
-  "start": 25.28,
-  "end": 25.42
+  "start": 24.24,
+  "end": 24.36
  },
  {
   "word": "even",
-  "start": 25.42,
-  "end": 25.68
+  "start": 24.36,
+  "end": 24.62
  },
  {
   "word": "brought",
-  "start": 25.68,
-  "end": 25.94
+  "start": 24.62,
+  "end": 24.86
  },
  {
   "word": "four",
-  "start": 25.94,
-  "end": 26.22
+  "start": 24.86,
+  "end": 25.1
  },
  {
   "word": "extra.",
-  "start": 26.22,
-  "end": 26.54
+  "start": 25.1,
+  "end": 25.4
  },
  {
   "word": "And",
-  "start": 26.92,
-  "end": 27.12
+  "start": 25.68,
+  "end": 25.86
  },
  {
   "word": "that's",
-  "start": 27.12,
-  "end": 27.36
+  "start": 25.86,
+  "end": 26.08
  },
  {
   "word": "why,",
-  "start": 27.36,
-  "end": 27.56
+  "start": 26.08,
+  "end": 26.32
  },
  {
   "word": "today,",
-  "start": 27.72,
-  "end": 27.88
+  "start": 26.5,
+  "end": 26.68
  },
  {
   "word": "every",
-  "start": 27.88,
-  "end": 28.38
+  "start": 27.02,
+  "end": 27.18
  },
  {
   "word": "passenger",
-  "start": 28.38,
-  "end": 28.82
+  "start": 27.18,
+  "end": 27.5
  },
  {
-  "word": "should",
-  "start": 28.82,
-  "end": 29.08
+  "word": "ship",
+  "start": 27.5,
+  "end": 27.82
  },
  {
   "word": "must",
-  "start": 29.08,
-  "end": 29.26
+  "start": 27.82,
+  "end": 28.0
  },
  {
   "word": "carry",
-  "start": 29.26,
-  "end": 29.54
+  "start": 28.0,
+  "end": 28.34
  },
  {
   "word": "a",
-  "start": 29.54,
-  "end": 29.78
+  "start": 28.34,
+  "end": 28.56
  },
  {
   "word": "lifeboat",
-  "start": 29.78,
-  "end": 30.18
+  "start": 28.56,
+  "end": 28.96
  },
  {
   "word": "or",
-  "start": 30.18,
-  "end": 30.32
+  "start": 28.96,
+  "end": 29.06
+ },
+ {
+  "word": "a",
+  "start": 29.06,
+  "end": 29.16
  },
  {
   "word": "life",
-  "start": 30.32,
-  "end": 30.54
+  "start": 29.16,
+  "end": 29.38
  },
  {
   "word": "raft",
-  "start": 30.54,
-  "end": 30.78
+  "start": 29.38,
+  "end": 29.54
  },
  {
   "word": "seat",
-  "start": 30.78,
-  "end": 31.06
+  "start": 29.54,
+  "end": 29.84
  },
  {
   "word": "for",
-  "start": 31.06,
-  "end": 31.28
+  "start": 29.84,
+  "end": 30.06
  },
  {
   "word": "everyone",
-  "start": 31.28,
-  "end": 31.64
+  "start": 30.06,
+  "end": 30.42
  },
  {
   "word": "on",
-  "start": 31.64,
-  "end": 31.8
+  "start": 30.42,
+  "end": 30.64
  },
  {
   "word": "board.",
-  "start": 31.8,
-  "end": 32.0
+  "start": 30.64,
+  "end": 30.86
  }
 ]

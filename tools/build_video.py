@@ -178,9 +178,16 @@ def main():
                 run(["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", str(ROOT / "tools" / "tts_placeholder.ps1"), str(lj), str(linedir), "Microsoft David Desktop", "3"])
         t = lead
         parts, inputs = [], []
+        step = 60 / PACING.get("bpm", 112) / 2
         for i, b in enumerate(beats):
             if i > 0:
                 t += b["pause"]
+                # reveal lines (explicit pause) start on the music's eighth-note grid, so the
+                # hit lands in rhythm instead of the voice drifting against the beat
+                if b.get("snap") or b["pause"] >= 0.15:
+                    # nearest grid point, but keep at least half the pause (never adds more than half a step)
+                    g = round(np.round((t - 0.03) / step) * step + 0.03, 3)
+                    t = g if g >= t - b["pause"] * 0.5 else round(g + step, 3)
             d = wav_seconds(linedir / f"{b['id']}.wav")
             b["voiceStart"], b["voiceEnd"] = round(t, 3), round(t + d, 3)
             t += d
@@ -287,9 +294,12 @@ def main():
         for b in beats:
             for c in b["cuts"]:
                 if c.get("fx"):
-                    events.append((c["start"] + {"whoosh": -0.1, "stamp": 0.32}.get(c["fx"], 0.0), c["fx"]))  # stamp lands at 0.32 s
+                    at = c["start"] + {"whoosh": -0.1, "stamp": 0.32}.get(c["fx"], 0.0)  # stamp lands at 0.32 s
+                    events.append((at, c["fx"]))
+                    if c.get("pre") == "riser":  # suck-in that ends exactly on the hit: no dead air
+                        events.append((at - 0.5, "riser"))
                 if c["tr"] == "whip" and c.get("fx") != "whoosh":
-                    events.append((c["start"] - 0.12, "whoosh"))
+                    events.append((c["start"] - 0.08, "whoosh"))  # peaks mid-whip
                 if c["tr"] == "flash":
                     events.append((c["start"], "tick"))
         fx_track = sfx.render_events(events, total)
@@ -304,7 +314,8 @@ def main():
         write_wav(tmp / "fx.wav", fx_track)
         write_wav(tmp / "music.wav", music)
         filt = (
-            "[1]volume=-17dB[mus];[0]asplit=2[v][sc];[mus][sc]sidechaincompress=threshold=0.04:ratio=5:attack=15:release=350[duck];"
+            # gentle, slow ducking: the music sits steady under the voice instead of pumping up in every gap
+            "[1]volume=-18dB[mus];[0]asplit=2[v][sc];[mus][sc]sidechaincompress=threshold=0.1:ratio=2:attack=80:release=1400[duck];"
             "[2]volume=-4dB[fx];[v][duck][fx]amix=inputs=3:normalize=0[out]"
         )
         run(["ffmpeg", "-v", "error", "-y", "-i", str(vdir / "voice.wav"), "-i", str(tmp / "music.wav"), "-i", str(tmp / "fx.wav"), "-filter_complex", filt, "-map", "[out]", "-ar", "48000", "-ac", "2", "-t", f"{total:.3f}", str(pre)])

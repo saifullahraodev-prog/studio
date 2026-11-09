@@ -465,3 +465,19 @@ export const cutShot = (i: CutInput): ShotOutput => {
   return tpl(i);
 };
 export const CUT_TEMPLATES = Object.keys(TPL);
+
+// Which place each cut template shows. Consecutive cuts in the same place are joined by a
+// fast camera move (no cut); a change of place uses the cut's transition (whip / flash / cut).
+const SETS: Record<string, string> = {
+  "ship-sinking": "sea",
+  "furnace-insert": "boiler",
+  "stoker-furnace": "boiler",
+  "stoker-yawn": "boiler",
+  "stoker-yawn-hold": "boiler",
+  "iceberg-hit": "iceberg",
+  "today-medium": "today",
+  "today-low": "today",
+  "today-boat": "today",
+  "today-punch": "today",
+};
+export const cutSet = (shot: string) => SETS[shot] ?? "deck";

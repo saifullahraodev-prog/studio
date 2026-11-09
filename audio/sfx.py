@@ -129,8 +129,17 @@ def tick(sec=0.03):
     return norm(_lp(_noise(int(sec * SR)), 4000) * _env(int(sec * SR), 0.001, 0.02), 0.4)
 
 
-SOUNDS = {"whoosh": whoosh, "hit": hit, "boom": boom, "crunch": crunch, "pop": pop, "boing": boing, "ding": ding, "stamp": stamp, "fire": fire, "tick": tick}
-GAINS = {"whoosh": 0.45, "hit": 0.8, "boom": 0.9, "crunch": 0.95, "pop": 0.45, "boing": 0.5, "ding": 0.45, "stamp": 0.8, "fire": 0.35, "tick": 0.25}
+def riser(sec=0.5):
+    n = int(sec * SR)
+    t = np.linspace(0, 1, n)
+    centre = 300 + 3500 * t ** 2
+    x = _bp(_noise(n), centre * 0.6, centre * 1.4) * t ** 2.2
+    x[-int(0.01 * SR):] *= np.linspace(1, 0, int(0.01 * SR))
+    return norm(x, 0.8)
+
+
+SOUNDS = {"riser": riser, "whoosh": whoosh, "hit": hit, "boom": boom, "crunch": crunch, "pop": pop, "boing": boing, "ding": ding, "stamp": stamp, "fire": fire, "tick": tick}
+GAINS = {"riser": 0.4, "whoosh": 0.45, "hit": 0.8, "boom": 0.9, "crunch": 0.95, "pop": 0.45, "boing": 0.5, "ding": 0.45, "stamp": 0.8, "fire": 0.35, "tick": 0.25}
 
 
 # ── music ───────────────────────────────────────────────────────────────────
@@ -149,47 +158,71 @@ def _pluck(freq, sec=0.5):
 NOTE = lambda m: 440.0 * 2 ** ((m - 69) / 12)  # midi -> Hz
 
 
-def music_bed(segments, duration):
-    """segments: [(start_sec, end_sec, mood)] with mood 'light' | 'tense'."""
-    out = np.zeros(int(duration * SR) + SR)
-    bpm = 112
+def _beds(duration, bpm=112):
+    """Both moods rendered on ONE shared beat grid from t=0, so switching mood never
+    restarts or shifts the rhythm. Returns (light, tense, step)."""
     step = 60 / bpm / 2  # eighth notes
+    n = int(duration * SR) + SR
+    light, tense = np.zeros(n), np.zeros(n)
     light_prog = [[60, 64, 67], [57, 60, 64], [53, 57, 60], [55, 59, 62]]  # C Am F G
     tense_prog = [[45, 48, 52], [45, 48, 51], [44, 48, 51], [43, 46, 50]]  # Am-ish chromatic walk
-    plucks = {}
+    cache = {}
+
+    def get(key, make):
+        if key not in cache:
+            cache[key] = make()
+        return cache[key]
+
+    kick = lambda: _sine_sweep(110, 45, 0.16, 0.5) * np.exp(-_t(0.16) * 22) * 0.9
+    hat = lambda: _bp(_noise(int(0.035 * SR)), 6000, 12000) * _env(int(0.035 * SR), 0.001, 0.03) * 0.35
+    i, t = 0, 0.0
+    while t < duration:
+        bar = (i // 8) % 4
+        # shared groove in both moods: soft kick on beats 1+3, hat on every eighth
+        if i % 4 == 0:
+            _add(light, get("k", kick), t)
+            _add(tense, get("k", kick), t)
+        h = get("h", hat) * (1.0 if i % 2 else 0.55)
+        _add(light, h, t)
+        _add(tense, h, t)
+        # light: plucky arpeggio + bass on the bar
+        ch = light_prog[bar]
+        m = ch[[0, 2, 1, 2, 0, 2, 1, 2][i % 8]] + 12
+        _add(light, get(("l", m), lambda: _pluck(NOTE(m), 0.45) * 0.5), t)
+        if i % 8 == 0:
+            _add(light, get(("b", ch[0]), lambda: _pluck(NOTE(ch[0] - 12), 0.9) * 0.9), t)
+        # tense: driving low pulse on every eighth (accent on the beat) + a high tick
+        ch = tense_prog[bar]
+        m = ch[0] - 12
+        pulse = get(("t", m), lambda: np.sin(2 * np.pi * NOTE(m) * _t(0.2)) * np.exp(-_t(0.2) * 11))
+        _add(tense, pulse * (0.95 if i % 2 == 0 else 0.55), t)
+        if i % 8 == 4:
+            _add(tense, get(("tt", ch[2]), lambda: _pluck(NOTE(ch[2] + 12), 0.3) * 0.35), t)
+        i += 1
+        t += step
+    return light, tense, step
+
+
+def music_bed(segments, duration, xfade=0.35):
+    """segments: [(start_sec, end_sec, mood)] with mood 'light' | 'tense'.
+    One continuous groove; moods cross-fade instead of restarting."""
+    light, tense, _ = _beds(duration)
+    n = len(light)
+    w = np.zeros(n)  # 0 = light, 1 = tense
     for s0, s1, mood in segments:
-        i = 0
-        t = s0
-        while t < s1:
-            bar = int(i // 8) % 4
-            if mood == "light":
-                chord = light_prog[bar]
-                pattern = [0, 2, 1, 2, 0, 2, 1, 2]
-                m = chord[pattern[i % 8]] + 12
-                key = ("l", m)
-                if key not in plucks:
-                    plucks[key] = _pluck(NOTE(m), 0.45) * 0.5
-                note = plucks[key]
-                if i % 8 == 0:  # bass on the bar
-                    bk = ("b", chord[0] - 12)
-                    if bk not in plucks:
-                        plucks[bk] = _pluck(NOTE(chord[0] - 12), 0.9) * 0.9
-                    _add(out, plucks[bk], t)
-            else:
-                chord = tense_prog[bar]
-                if i % 2 == 0:  # low pulsing eighths
-                    m = chord[0] - 12
-                    key = ("t", m)
-                    if key not in plucks:
-                        plucks[key] = (np.sin(2 * np.pi * NOTE(m) * _t(0.22)) * np.exp(-_t(0.22) * 9)) * 0.9
-                    note = plucks[key]
-                else:
-                    note = None
-            if note is not None:
-                _add(out, note, t)
-            i += 1
-            t += step
+        if mood == "tense":
+            w[int(s0 * SR) : int(s1 * SR)] = 1.0
+    if segments:
+        w[int(segments[-1][1] * SR) :] = w[max(0, int(segments[-1][1] * SR) - 1)]
+    k = max(1, int(xfade * SR))
+    w = np.convolve(w, np.ones(k) / k, mode="same")  # smooth mood switches
+    w = np.clip(w, 0.0, 1.0)
+    out = light * np.sqrt(1 - w) + tense * np.sqrt(w)
     return norm(out[: int(duration * SR)], 0.8)
+
+
+def beat_step(bpm=112):
+    return 60 / bpm / 2
 
 
 def _add(out, x, t):

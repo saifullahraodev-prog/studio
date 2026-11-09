@@ -135,3 +135,16 @@ Review files: `out/gate2/` (not in git; regenerate with the commands below).
   -14.0 LUFS, no black/frozen frames, render 158 s (160 ms/frame).
 - Files: `videos/2026-11-08-titanic-lifeboats-v2/` (scenes.txt, script.md, out/preview-v2-720p.mp4).
 - Next: owner review of v2 preview → tweaks → 1080p final → GATE 3.
+
+### Short v2b (2026-11-09): owner: "audio lags, transitions not smooth, stoker -> crunch stutters"
+Causes found (not internet, not A/V sync: audio and video both start at 0, lengths match):
+1. Music restarted its beat at every mood change (5.3 s, 26.9 s) -> rhythm stumbled.
+2. Heavy ducking (ratio 5, release 0.35 s) -> music pumped up in every voice gap.
+3. 2.2 s of dead air from reveal pauses (1.1 s around "Then... CRUNCH").
+4. Whip slid the picture off-screen over black; 0.3 s shots were almost all blur.
+Fixes: one continuous beat grid for the music (kick + hat groove, moods cross-fade 0.35 s);
+gentle slow ducking; pauses cut to 0.08-0.3 s and reveal lines snap onto the beat; a riser fills
+the gap into CRUNCH; same-place shots now join with a 7-frame camera move (no cut); place changes
+whip with both shots sliding together (no black). `cutSet()` in `engine/shots/cuts.tsx`.
+Result (720p): 31.8 s, -14.0 LUFS, LRA 2.5 LU, no black/frozen frames, render 166 s. Golden 14/14.
+File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
