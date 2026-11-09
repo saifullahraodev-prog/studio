@@ -262,6 +262,32 @@ def director_audio(beats, total, sfx):
     return events, segs
 
 
+# storyboard rules (docs/storyboard-rules.md): action first
+REACTION_SHOTS = {"stoker-eyes", "insp-eyes", "stoker-shocked-cu", "insp-punch", "today-punch", "close"}
+ACTION_SHOTS = {"run-low", "crowd-pile", "crowd-half", "stamp", "ship-too-big", "boats-16", "boats-20", "boats-plus4", "officer-wave",
+                "boat-away", "iceberg-hit", "ship-sinking", "count-fingers", "fingers-out", "furnace-insert", "stoker-furnace", "crowd-2200"}
+STILL_GESTURES = {"", "think", "tap", "tick", "talk", "point", "shrug", "count"}
+
+
+def storyboard_report(beats):
+    shots = []
+    for b in beats:
+        for c in b["cuts"]:
+            name = c["shot"] if isinstance(c["shot"], str) else c["shot"].get("type", "")
+            act = (c.get("do") or "") not in STILL_GESTURES or name in ACTION_SHOTS
+            react = name in REACTION_SHOTS and not act
+            shots.append((name, act, react))
+    if not shots:
+        return
+    n = len(shots)
+    acts = sum(a for _, a, _ in shots)
+    reacts = sum(r for _, _, r in shots)
+    pairs = sum(1 for i in range(1, n) if shots[i][2] and shots[i - 1][2])
+    print(f"  storyboard: {acts}/{n} action shots ({acts / n:.0%}, rule >= 80%), {reacts} reaction close-ups ({reacts / n:.0%}, rule <= 20%), {pairs} back-to-back reactions (rule 0)")
+    if acts / n < 0.8 or reacts / n > 0.2 or pairs:
+        print("  storyboard WARNING: too few action shots, see docs/storyboard-rules.md")
+
+
 def main():
     vdir = (ROOT / sys.argv[1]).resolve()
     retts = "--retts" in sys.argv
@@ -461,6 +487,7 @@ def main():
     shutil.copy(vdir / "scenes.json", pub / "scenes.json")
     shutil.copy(mix, pub / "mix.wav")
 
+    storyboard_report(beats)
     ncuts = sum(len(b["cuts"]) for b in beats)
     print(f"{slug}: {len(beats)} beats, {ncuts} cuts, {total:.2f}s ({round(total * FPS)} frames), {len(words)} words = {len(words) / total:.2f} words/s")
     for b in beats:

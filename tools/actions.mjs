@@ -11,8 +11,12 @@ mkdirSync(out, { recursive: true });
 const rm = (...a) => spawnSync(process.execPath, ["tools/run.mjs", ...a], { cwd: root, encoding: "utf8" });
 const bundle = ".cache/bundle";
 if (process.argv.includes("--rebundle") || !existsSync(path.join(root, bundle, "index.html"))) rm("bundle", "src/index.ts", `--out-dir=${bundle}`, "--log=error");
-const ACTIONS = ["walk", "run", "talk", "point", "panic", "fall", "carry", "climb", "cheer", "shiver", "sew", "rattle", "pushbar", "wave", "facepalm", "cower"];
-const cast = ["worker", "firefighter", "inspector", "owner"];
+const V2 = process.argv.includes("--v2");
+const ACTIONS = V2
+  ? ["jump", "leap", "stumble", "shove", "pushed", "climbin", "row", "throw", "binoculars", "lantern", "rocket", "crouch", "surge", "runacross", "carry", "panic"]
+  : ["walk", "run", "talk", "point", "panic", "fall", "carry", "climb", "cheer", "shiver", "sew", "rattle", "pushbar", "wave", "facepalm", "cower"];
+const cast = V2 ? ["stoker", "officer", "worker", "inspector"] : ["worker", "firefighter", "inspector", "owner"];
+const NAME = V2 ? "actions-v2" : "actions";
 mkdirSync(path.join(root, ".cache", "tmp"), { recursive: true });
 const files = [];
 ACTIONS.forEach((a, i) => {
@@ -26,6 +30,6 @@ ACTIONS.forEach((a, i) => {
 });
 const inputs = files.flatMap((f) => ["-i", f]);
 const layout = files.map((_, i) => `${(i % 4) * 400}_${Math.floor(i / 4) * 480}`).join("|");
-spawnSync("ffmpeg", ["-v", "error", "-y", ...inputs, "-filter_complex", `xstack=inputs=${files.length}:layout=${layout}`, "-an", "-c:v", "libx264", "-crf", "22", "-pix_fmt", "yuv420p", path.join(root, "out", "phase4", "actions.mp4")], { stdio: "inherit" });
-spawnSync("ffmpeg", ["-v", "error", "-y", "-ss", "0.9", "-i", path.join(root, "out", "phase4", "actions.mp4"), "-frames:v", "1", path.join(root, "out", "phase4", "actions.png")], { stdio: "inherit" });
+spawnSync("ffmpeg", ["-v", "error", "-y", ...inputs, "-filter_complex", `xstack=inputs=${files.length}:layout=${layout}`, "-an", "-c:v", "libx264", "-crf", "22", "-pix_fmt", "yuv420p", path.join(root, "out", "phase4", `${NAME}.mp4`)], { stdio: "inherit" });
+spawnSync("ffmpeg", ["-v", "error", "-y", "-ss", "0.9", "-i", path.join(root, "out", "phase4", `${NAME}.mp4`), "-frames:v", "1", path.join(root, "out", "phase4", "actions.png")], { stdio: "inherit" });
 console.log("out/phase4/actions.mp4 + actions.png");

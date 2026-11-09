@@ -56,7 +56,7 @@ const Actor: React.FC<{ def: CharacterDef; cut: Cut; t: number; position: Vec3; 
 
 // world position of a glove (to frame hand inserts exactly)
 const handWorld = (pos: Vec3, rotY: number, scale: number, side: 1 | -1, arm: [number, number]): Vec3 => {
-  const v = new THREE.Vector3(0, -0.49, 0).applyEuler(new THREE.Euler(-arm[0], 0, side * arm[1]));
+  const v = new THREE.Vector3(0, -0.6, 0).applyEuler(new THREE.Euler(-arm[0], 0, side * arm[1])); // elbow arm reach
   v.add(new THREE.Vector3(side * 0.41, 1.06, 0)).multiplyScalar(scale).applyAxisAngle(new THREE.Vector3(0, 1, 0), rotY);
   return [v.x + pos[0], v.y + pos[1], v.z + pos[2]];
 };

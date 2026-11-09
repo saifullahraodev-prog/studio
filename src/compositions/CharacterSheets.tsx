@@ -134,14 +134,16 @@ export const Lineup: React.FC<{ ids: string[]; crowd: boolean }> = ({ ids, crowd
 export const ActionPose: React.FC<{ action: string; character: string }> = ({ action, character }) => {
   const { width, height } = useVideoConfig();
   const frame = useCurrentFrame();
-  const oneShot = action === "fall" || action === "pushbar";
-  const t = oneShot ? Math.max(0, frame / 30 - 0.3) : frame / 30;
+  const ONE_SHOT = ["fall", "pushbar", "jump", "leap", "stumble", "shove", "pushed", "climbin", "throw", "rocket"];
+  const oneShot = ONE_SHOT.includes(action);
+  // one-shots play once after a short hold; travelling loops restart so they stay in frame
+  const t = oneShot ? Math.max(0, frame / 30 - 0.3) : action === "runacross" ? (frame / 30) % 0.8 : frame / 30;
   const g = gesture(action, t);
   const expr: Expression = action === "cheer" || action === "wave" ? "happy" : action === "shiver" || action === "cower" ? "scared" : action === "panic" || action === "rattle" || action === "fall" ? "shocked" : action === "facepalm" ? "sad" : "determined";
   return (
     <AbsoluteFill style={{ background: bg }}>
       <ThreeCanvas width={width} height={height} shadows gl={{ alpha: true }}>
-        <CameraRig position={[3.4, 2.4, 5.6]} target={[0, 1.05, 0]} fov={34} />
+        <CameraRig position={[4.2, 2.5, 6.8]} target={[0, 1.15, 0.4]} fov={36} />
         <StudioLights />
         <Character def={BIBLE[character]} expression={expr} mouth={g.mouth ?? "rest"} rotationY={action === "climb" ? Math.PI * 0.85 : 0.25} pose={g} />
       </ThreeCanvas>

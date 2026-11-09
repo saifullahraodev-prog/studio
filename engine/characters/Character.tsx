@@ -1,9 +1,11 @@
 import React, { useMemo } from "react";
+import { getInputProps } from "remotion";
 import * as THREE from "three";
 import { useStaticTexture } from "../assets";
 import { applySceneLight, makeInkPaperMaterial, useFaceLook, useSceneLight } from "../look/faceShader";
 import { style, Toon } from "../look/style";
 import { StampTool } from "../props/Props";
+import { HandProp } from "../props/HandProps";
 import { CharacterDef } from "./bible";
 import { cellUV, Expression, eyeCellPos, faceSheetPath, FaceVariant, isHeadFace, MouthSlot } from "./face";
 
@@ -27,16 +29,33 @@ export type Pose = {
   noProp?: boolean; // hide the character's hand prop for this shot (e.g. holding something else)
   fingersL?: number; // digits extended on each glove (0 fist … 4 open)
   fingersR?: number;
-  holdR?: "stamp"; // something held in the right hand for this shot
+  holdR?: string; // prop held in the right glove: "stamp" | "oar" | "lantern" | ... (HandProps)
   roll?: number; // whole-body sideways tilt (radians, about the feet): falls, wobbles
   legs?: [number, number]; // explicit leg swing [left, right] (radians, + = forward): climbing, kneeling
   sink?: number; // lower the whole body (crouch / sit), metres
+  // animation upgrade (review 2): joints, travel, squash, props
+  elbowL?: number; // elbow bend (radians, + = forearm forward/up); default 0.15
+  elbowR?: number;
+  kneeL?: number; // knee bend (radians, + = shin back); default 0
+  kneeR?: number;
+  root?: [number, number, number]; // move the whole body (character space: +z = forward), metres
+  squash?: number; // 1 = normal, <1 squashed (landing), >1 stretched (jump); keeps volume
+  turn?: number; // extra body yaw (radians) on top of rotationY
+  holdL?: string; // prop held in the left glove (see engine/props/HandProps)
 };
 
 const F = style.face;
 const HR = F.headRadius; // 0.62
-const TORSO_Y = 0.4;
-const HEAD_Y = TORSO_Y + 0.86 + HR * 0.82;
+// Body proportions (review 2): longer legs / taller torso give movement room under the big head.
+// style.body = { legScale, torsoScale, armScale }; a render can override with input props of the same names.
+const PROP_IN = getInputProps() as { legScale?: number; torsoScale?: number; armScale?: number };
+const BODY = (style as unknown as { body?: { legScale?: number; torsoScale?: number; armScale?: number } }).body ?? {};
+const LS = PROP_IN.legScale ?? BODY.legScale ?? 1;
+const TS = PROP_IN.torsoScale ?? BODY.torsoScale ?? 1;
+const AS = PROP_IN.armScale ?? BODY.armScale ?? 1;
+const HIP_Y = 0.07 + 0.37 * LS;
+const TORSO_Y = HIP_Y - 0.04;
+const HEAD_Y = TORSO_Y + 0.86 * TS + HR * 0.82;
 const PANEL_YOFF = -0.08;
 
 // A rectangle (w x h) wrapped onto the front of a sphere of radius r.
@@ -536,26 +555,37 @@ const AxeOnShoulder: React.FC = () => {
   );
 };
 
-const Arm: React.FC<{ side: 1 | -1; sleeve: string; rot: [number, number]; prop?: React.ReactNode; fingers?: number; puff?: boolean }> = ({ side, sleeve, rot, prop, fingers, puff }) => (
-  <group position={[side * 0.41, TORSO_Y + 0.66, 0]} rotation={[-rot[0], 0, side * rot[1]]}>
+// Arm with an elbow (review 2): shoulder -> upper arm -> elbow -> forearm -> glove.
+// About a third longer than before so gestures read big; `elbow` bends the forearm forward/up.
+const Arm: React.FC<{ side: 1 | -1; sleeve: string; rot: [number, number]; elbow?: number; prop?: React.ReactNode; fingers?: number; puff?: boolean }> = ({ side, sleeve, rot, elbow = 0.15, prop, fingers, puff }) => (
+  <group position={[side * 0.41, TORSO_Y + 0.66 * TS, 0]} rotation={[-rot[0], 0, side * rot[1]]}>
     <S p={[0, puff ? -0.05 : -0.03, 0]} s={puff ? [1.45, 1.6, 1.45] : 1}>
       <sphereGeometry args={[0.11, 18, 14]} />
       <Toon color={sleeve} kind="fabric" />
     </S>
-    <S p={[0, -0.2, 0]}>
-      <capsuleGeometry args={[0.095, 0.26, 6, 16]} />
+    <S p={[0, -0.15 * AS, 0]}>
+      <capsuleGeometry args={[0.095, 0.17 * AS, 6, 16]} />
       <Toon color={sleeve} kind="fabric" />
     </S>
-    <group position={[0, -0.42, 0]}>
-      <Glove up={fingers} />
-      {prop}
+    <group position={[0, -0.29 * AS, 0]} rotation={[-elbow, 0, 0]}>
+      <S>
+        <sphereGeometry args={[0.092, 14, 10]} />
+        <Toon color={sleeve} kind="fabric" />
+      </S>
+      <S p={[0, -0.13 * AS, 0]}>
+        <capsuleGeometry args={[0.088, 0.16 * AS, 6, 16]} />
+        <Toon color={sleeve} kind="fabric" />
+      </S>
+      <group position={[0, -0.3 * AS, 0]}>
+        <Glove up={fingers} />
+        {prop}
+      </group>
     </group>
   </group>
 );
 
 // ─── body ───────────────────────────────────────────────────────────────────
-const HIP_Y = 0.44;
-const Body: React.FC<{ def: CharacterDef; legSwing?: number; legs?: [number, number] }> = ({ def, legSwing = 0, legs }) => {
+const Body: React.FC<{ def: CharacterDef; legSwing?: number; legs?: [number, number]; knees?: [number, number] }> = ({ def, legSwing = 0, legs, knees = [0, 0] }) => {
   const b = def.body;
   const acc = def.accessories ?? [];
   return (
@@ -563,85 +593,92 @@ const Body: React.FC<{ def: CharacterDef; legSwing?: number; legs?: [number, num
       {[-1, 1].map((sd) => (
         // legs pivot at the hip so they can swing for walk/run cycles
         <group key={sd} position={[sd * 0.18, HIP_Y, 0]} rotation={[legs ? -legs[sd > 0 ? 0 : 1] : sd * legSwing, 0, 0]}>
-          <group position={[0, -HIP_Y, 0]}>
+          {/* thigh, then a knee joint, then shin + shoe */}
+          {b.lower !== "skirt" && (
+            <S p={[0, -0.1 * LS, 0]}>
+              <cylinderGeometry args={[0.13, 0.125, 0.2 * LS, 18]} />
+              <Toon color={b.legs} kind="fabric" />
+            </S>
+          )}
+          <group position={[0, -0.2 * LS, 0]} rotation={[knees[sd > 0 ? 0 : 1], 0, 0]}>
             {b.lower !== "skirt" && (
-              <S p={[0, 0.26, 0]}>
-                <cylinderGeometry args={[0.13, 0.12, 0.36, 18]} />
+              <S p={[0, -0.085 * LS, 0]}>
+                <cylinderGeometry args={[0.125, 0.12, 0.18 * LS, 18]} />
                 <Toon color={b.legs} kind="fabric" />
               </S>
             )}
-            <S p={[0, 0.07, 0.05]} s={[1, 0.62, 1.35]}>
+            <S p={[0, -0.17 * LS, 0.05]} s={[1, 0.62, 1.35]}>
               <sphereGeometry args={[0.16, 18, 14]} />
               <Toon color={b.shoes} kind="leather" />
             </S>
           </group>
         </group>
       ))}
-      <mesh geometry={TORSO[b.torsoStyle]} position={[0, TORSO_Y, 0]} castShadow receiveShadow>
+      <mesh geometry={TORSO[b.torsoStyle]} position={[0, TORSO_Y, 0]} scale={[1, TS, 1]} castShadow receiveShadow>
         <Toon color={b.torso} kind="fabric" />
       </mesh>
       {b.lower === "skirt" && (
         // skirt sways a little with the stride
-        <mesh geometry={skirtGeo} rotation={[legSwing * 0.08, 0, 0]} castShadow receiveShadow>
+        <mesh geometry={skirtGeo} rotation={[legSwing * 0.08, 0, 0]} scale={[1, (TORSO_Y + 0.06) / 0.46, 1]} castShadow receiveShadow>
           <Toon color={b.skirt ?? b.legs} kind="wool" />
         </mesh>
       )}
       {/* collar */}
-      <S p={[0, TORSO_Y + 0.8, 0]} r={[Math.PI / 2, 0, 0]}>
+      <S p={[0, TORSO_Y + 0.8 * TS, 0]} r={[Math.PI / 2, 0, 0]}>
         <torusGeometry args={[0.24, 0.06, 10, 28]} />
         <Toon color={b.torso} kind="fabric" />
       </S>
       {acc.includes("highCollar") && (
-        <S p={[0, TORSO_Y + 0.86, 0]}>
+        <S p={[0, TORSO_Y + 0.86 * TS, 0]}>
           <cylinderGeometry args={[0.2, 0.23, 0.14, 28, 1, true]} />
           <Toon color={b.torso} kind="fabric" side={THREE.DoubleSide} />
         </S>
       )}
       {b.torsoStyle === "blouse" ? (
-        <S p={[0, TORSO_Y + 0.03, 0]}>
+        <S p={[0, TORSO_Y + 0.03 * TS, 0]}>
           <cylinderGeometry args={[0.395, 0.4, 0.07, 40]} />
           <Toon color={b.trim} kind="leather" />
         </S>
       ) : b.torsoStyle !== "robe" ? (
-        <S p={[0, TORSO_Y + 0.3, 0]}>
+        <S p={[0, TORSO_Y + 0.3 * TS, 0]}>
           <cylinderGeometry args={[0.455, 0.457, 0.07, 40]} />
           <Toon color={b.trim} kind="leather" />
         </S>
       ) : null}
       {b.torsoStyle === "blouse" &&
         [0.3, 0.45, 0.6].map((y) => (
-          <S key={y} p={[0, TORSO_Y + y, (y < 0.4 ? 0.385 : 0.425) + 0.005]}>
+          <S key={y} p={[0, TORSO_Y + y * TS, (y < 0.4 ? 0.385 : 0.425) + 0.005]}>
             <sphereGeometry args={[0.022, 10, 8]} />
             <Toon color="#F7F4EC" kind="paint" roughness={0.3} />
           </S>
         ))}
       {acc.includes("whiteCollar") &&
         [-1, 1].map((sd) => (
-          <S key={sd} p={[sd * 0.05, TORSO_Y + 0.7, 0.33]} r={[-0.35, 0, sd * 0.12]}>
+          <S key={sd} p={[sd * 0.05, TORSO_Y + 0.7 * TS, 0.33]} r={[-0.35, 0, sd * 0.12]}>
             <boxGeometry args={[0.07, 0.2, 0.015]} />
             <Toon color="#F4F1EA" kind="paint" />
           </S>
         ))}
       {acc.includes("watchChain") && (
-        <S p={[0.12, TORSO_Y + 0.42, 0.44]} r={[0, 0, Math.PI / 2]}>
+        <S p={[0.12, TORSO_Y + 0.42 * TS, 0.44]} r={[0, 0, Math.PI / 2]}>
           <torusGeometry args={[0.12, 0.012, 6, 20, Math.PI]} />
           <Toon color="#D9B04A" kind="brass" />
         </S>
       )}
       {b.torsoStyle === "coat" && (
         <>
-          <S p={[0, TORSO_Y + 0.45, 0.425]} r={[-0.05, 0, 0]}>
+          <S p={[0, TORSO_Y + 0.45 * TS, 0.425]} r={[-0.05, 0, 0]}>
             <boxGeometry args={[0.03, 0.62, 0.02]} />
             <Toon color={b.trim} kind="fabric" />
           </S>
           {[0.18, 0.46, 0.6].map((y) => (
-            <S key={y} p={[0.07, TORSO_Y + y, 0.44 - (y > 0.5 ? 0.02 : 0)]}>
+            <S key={y} p={[0.07, TORSO_Y + y * TS, 0.44 - (y > 0.5 ? 0.02 : 0)]}>
               <sphereGeometry args={[0.028, 10, 8]} />
               <Toon color="#B8913E" kind="brass" />
             </S>
           ))}
           {[-1, 1].map((sd) => (
-            <S key={sd} p={[sd * 0.25, TORSO_Y + 0.22, 0.43]} r={[-0.1, sd * 0.45, 0]}>
+            <S key={sd} p={[sd * 0.25, TORSO_Y + 0.22 * TS, 0.43]} r={[-0.1, sd * 0.45, 0]}>
               <boxGeometry args={[0.2, 0.06, 0.02]} />
               <Toon color={b.trim} kind="fabric" />
             </S>
@@ -649,26 +686,26 @@ const Body: React.FC<{ def: CharacterDef; legSwing?: number; legs?: [number, num
         </>
       )}
       {acc.includes("tie") && (
-        <S p={[0, TORSO_Y + 0.68, 0.36]} r={[-0.5, 0, Math.PI / 4]}>
+        <S p={[0, TORSO_Y + 0.68 * TS, 0.36]} r={[-0.5, 0, Math.PI / 4]}>
           <boxGeometry args={[0.09, 0.09, 0.03]} />
           <Toon color="#A8322E" kind="fabric" />
         </S>
       )}
       {acc.includes("badge") && (
-        <S p={[-0.22, TORSO_Y + 0.58, 0.39]} r={[-0.35, -0.35, 0]}>
+        <S p={[-0.22, TORSO_Y + 0.58 * TS, 0.39]} r={[-0.35, -0.35, 0]}>
           <cylinderGeometry args={[0.06, 0.06, 0.02, 5]} />
           <Toon color="#E2B84A" kind="brass" />
         </S>
       )}
       {acc.includes("suspenders") &&
         [-1, 1].map((sd) => (
-          <S key={sd} p={[sd * 0.2, TORSO_Y + 0.47, 0.41]} r={[-0.2, 0, sd * 0.05]}>
+          <S key={sd} p={[sd * 0.2, TORSO_Y + 0.47 * TS, 0.41]} r={[-0.2, 0, sd * 0.05]}>
             <boxGeometry args={[0.06, 0.62, 0.02]} />
             <Toon color={b.trim} kind="leather" />
           </S>
         ))}
       {acc.includes("neckerchief") && (
-        <S p={[0, TORSO_Y + 0.82, 0.12]} r={[0.5 + Math.PI / 2, 0, 0]}>
+        <S p={[0, TORSO_Y + 0.82 * TS, 0.12]} r={[0.5 + Math.PI / 2, 0, 0]}>
           <torusGeometry args={[0.22, 0.055, 10, 24]} />
           <Toon color="#B5432F" kind="fabric" />
         </S>
@@ -699,24 +736,27 @@ export const Character: React.FC<CharacterProps> = ({ def, expression = "neutral
   const armL: [number, number] = pose.armL ?? [0.05 - armSwing, 0.18 + 0.1 * stride];
   const armR: [number, number] = def.prop === "shovel" || def.prop === "axe" ? pose.armR ?? [0.95, 0.12] : pose.armR ?? [0.05 + armSwing, 0.18 + 0.1 * stride];
   return (
-    <group position={position} rotation={[0, rotationY, 0]} scale={def.body.scale}>
+    <group position={position} rotation={[0, rotationY + (pose.turn ?? 0), 0]} scale={def.body.scale}>
+      <group position={pose.root ?? [0, 0, 0]} scale={[1 / Math.sqrt(pose.squash ?? 1), pose.squash ?? 1, 1 / Math.sqrt(pose.squash ?? 1)]}>
       <group position={[0, bob - (pose.sink ?? 0), 0]} rotation={[lean, 0, pose.roll ?? 0]}>
-        <Body def={def} legSwing={swing} legs={pose.legs} />
+        <Body def={def} legSwing={swing} legs={pose.legs} knees={[pose.kneeL ?? Math.max(0, -swing) * 0.9 * stride, pose.kneeR ?? Math.max(0, swing) * 0.9 * stride]} />
         <Arm
           side={1}
           sleeve={def.body.sleeve}
           rot={armL}
           puff={def.body.puffSleeves}
-          prop={pose.noProp ? null : def.prop === "clipboard" ? <Clipboard /> : def.prop === "notebook" ? <Notebook /> : null}
-          fingers={pose.fingersL}
+          elbow={pose.elbowL ?? 0.15 + 0.5 * stride}
+          prop={pose.holdL ? <HandProp name={pose.holdL} Stamp={StampTool} /> : pose.noProp ? null : def.prop === "clipboard" ? <Clipboard /> : def.prop === "notebook" ? <Notebook /> : null}
+          fingers={pose.fingersL ?? (pose.holdL ? 0 : undefined)}
         />
         <Arm
           side={-1}
           sleeve={def.body.sleeve}
           rot={armR}
           puff={def.body.puffSleeves}
-          fingers={pose.fingersR}
-          prop={pose.holdR === "stamp" ? <StampTool /> : def.prop === "gavel" && !pose.noProp ? <Gavel /> : null}
+          elbow={pose.elbowR ?? 0.15 + 0.5 * stride}
+          fingers={pose.fingersR ?? (pose.holdR ? 0 : undefined)}
+          prop={pose.holdR ? <HandProp name={pose.holdR} Stamp={StampTool} /> : def.prop === "gavel" && !pose.noProp ? <Gavel /> : null}
         />
         {def.prop === "shovel" && !pose.noProp && <ShovelOnShoulder />}
         {def.prop === "axe" && !pose.noProp && <AxeOnShoulder />}
@@ -726,6 +766,7 @@ export const Character: React.FC<CharacterProps> = ({ def, expression = "neutral
           {def.faceExtras.glasses && <Spectacles variant={v} />}
           <Headgear g={def.headgear} />
         </group>
+      </group>
       </group>
     </group>
   );
