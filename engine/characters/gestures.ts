@@ -14,7 +14,9 @@ export type GestureName =
   // Phase 4 core actions
   | "walk" | "run" | "talk" | "fall" | "carry" | "climb" | "cheer" | "shiver" | "sew" | "rattle" | "pushbar" | "wave" | "facepalm" | "cower"
   // review 2: big, travelling, prop-using actions
-  | "jump" | "leap" | "stumble" | "shove" | "pushed" | "climbin" | "row" | "throw" | "binoculars" | "lantern" | "rocket" | "crouch" | "surge" | "runacross";
+  | "jump" | "leap" | "stumble" | "shove" | "pushed" | "climbin" | "row" | "throw" | "binoculars" | "lantern" | "rocket" | "crouch" | "surge" | "runacross"
+  // trench Short
+  | "aim" | "spray" | "scream" | "stagger" | "hush" | "mgfire" | "charge" | "jumpdown";
 
 export type GestureOut = Partial<Pose> & { mouth?: MouthSlot };
 
@@ -260,6 +262,43 @@ export const gesture = (name: GestureName | string | undefined, t: number): Gest
       return { lean: 0.28 + Math.sin(t * 6) * 0.06, root: [0, 0, 0.12 + Math.sin(t * 6) * 0.1], armL: [1.6 + Math.sin(t * 7) * 0.2, 0.15], armR: [1.8 + Math.sin(t * 7 + 1.5) * 0.2, 0.1], elbowL: 0.4, elbowR: 0.3, walk: t * 5, stride: 0.35, fingersL: 4, fingersR: 4 };
     case "runacross": // sprint that actually covers ground (4 m/s forward)
       return { walk: t * 13, stride: 1, root: [0, 0, t * 4] };
+    case "aim": // rifle at the shoulder, pointing ahead and down, small sway
+      return { holdR: "rifle", armR: [1.45 + Math.sin(t * 2) * 0.03, -0.1], elbowR: 1.0, armL: [1.55, -0.35], elbowL: 0.35, headNod: 0.2, lean: 0.12, fingersL: 0, noProp: true };
+    case "spray": { // flamethrower lance forward and down, body braced, shaking with the pressure
+      const j = Math.sin(t * 38) * 0.03;
+      return { holdR: "flamegun", armR: [1.15 + j, -0.25], elbowR: 0.6, armL: [1.25 + j, -0.4], elbowL: 0.8, lean: 0.2, headNod: 0.25, legs: [0.35, -0.25], fingersL: 0, noProp: true };
+    }
+    case "scream": { // arms flung up beside the head, head thrown back, shaking
+      const k = backOut(clamp01(t / 0.18));
+      const sh = Math.sin(t * 31) * 0.06;
+      return { armL: [mix(0.3, 2.7, k) + sh, 0.55], armR: [mix(0.3, 2.7, k) - sh, 0.55], elbowL: 0.9, elbowR: 0.9, headNod: -0.35 * k, lean: -0.18 * k, bob: Math.abs(Math.sin(t * 20)) * 0.05, fingersL: 4, fingersR: 4, mouth: "wide" };
+    }
+    case "stagger": { // reeling run, wobbling side to side, arms flailing (2.6 m/s forward)
+      return {
+        walk: t * 10,
+        stride: 0.8,
+        root: [Math.sin(t * 3.2) * 0.35, 0, t * 2.6],
+        roll: Math.sin(t * 5.5) * 0.14,
+        turn: Math.sin(t * 4.1) * 0.3,
+        armL: [0.5 + Math.sin(t * 15) * 0.6, 1.2 + Math.sin(t * 11) * 0.5],
+        armR: [0.5 + Math.sin(t * 15 + 2) * 0.6, 1.2 + Math.sin(t * 13 + 1) * 0.5],
+        headTilt: Math.sin(t * 6) * 0.2,
+        fingersL: 4,
+        fingersR: 4,
+        mouth: "wide",
+      };
+    }
+    case "hush": // back pressed to the wall, finger to the lips, breathing hard
+      return { armR: [2.25, -0.6], elbowR: 2.0, fingersR: 1, armL: [0.2, 0.25], sink: 0.12, kneeL: 0.3, kneeR: 0.3, legs: [0.15, 0.15], headNod: 0.05, bob: Math.sin(t * 5) * 0.02, lean: -0.05 };
+    case "mgfire": // kneeling behind the gun, both hands on the grips, shaking when it fires
+      return { sink: 0.6, legs: [1.3, 0.2], kneeL: 1.6, kneeR: 2.2, lean: 0.3, armL: [1.5, -0.2], armR: [1.5, -0.15], elbowL: 0.4, elbowR: 0.4, fingersL: 0, fingersR: 0, headNod: 0.1, noProp: true };
+    case "charge": // run forward, rifle at the hip (3.6 m/s)
+      return { walk: t * 12, stride: 1, root: [0, 0, t * 3.6], holdR: "rifle", armR: [0.9, -0.15], elbowR: 1.1, armL: [1.2, -0.35], elbowL: 0.9, lean: 0.22, fingersL: 0, noProp: true };
+    case "jumpdown": { // hop down from the parapet (3.3 m) in 0.55 s, land with a squash
+      const k = clamp01(t / 0.55);
+      const land = t > 0.55 ? decay(t - 0.55, 8) : 0;
+      return { root: [0, (1 - k * k) * 3.3 + Math.sin(k * Math.PI) * 0.5, 1.4 * k], legs: [0.6 * (1 - k), 0.2], armL: [2.2, 0.6], armR: [2.0, 0.6], squash: 1 - 0.25 * land, sink: 0.3 * land, kneeL: 0.9 * land, kneeR: 0.9 * land };
+    }
     default:
       return {};
   }

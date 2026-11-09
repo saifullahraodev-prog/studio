@@ -183,9 +183,10 @@ def cut_audio(beats):
         for c in b["cuts"]:
             fxs = [f for f in c.get("fx", "").split("+") if f]
             for f in fxs:
+                f, _, dur = f.partition(":")  # "fire_big:3.5" = library bed cropped to 3.5 s
                 at = c["start"] + offset.get(f, 0.0)
-                events.append((at, f))
-                if c.get("pre") == "riser":  # suck-in that ends exactly on the hit: no dead air
+                events.append((at, f, 1.0, float(dur)) if dur else (at, f))
+                if c.get("pre") == "riser" and f == fxs[0].partition(":")[0]:  # suck-in that ends exactly on the hit: no dead air
                     events.append((at - 0.5, "riser"))
             # whoosh only where the picture really whips to a new place (same place = camera move, silent)
             new_place = prev is None or place(prev) != place(c["shot"])
@@ -196,7 +197,7 @@ def cut_audio(beats):
             prev = c["shot"]
     segs = []
     for b in beats:
-        mood = "tense" if b.get("preset") in ("night", "storm") else "light"
+        mood = b.get("music") or ("tense" if b.get("preset") in ("night", "storm") else "light")
         if segs and segs[-1][2] == mood:
             segs[-1] = (segs[-1][0], b["end"], mood)
         else:
@@ -266,7 +267,8 @@ def director_audio(beats, total, sfx):
 REACTION_SHOTS = {"stoker-eyes", "insp-eyes", "stoker-shocked-cu", "insp-punch", "today-punch", "close"}
 ACTION_SHOTS = {"run-low", "crowd-pile", "crowd-half", "stamp", "ship-too-big", "boats-16", "boats-20", "boats-plus4", "officer-wave",
                 "boat-away", "iceberg-hit", "ship-sinking", "count-fingers", "fingers-out", "furnace-insert", "stoker-furnace", "crowd-2200",
-                "deck-surge", "officer-shove", "climb-boat", "rocket-fire", "stoker-dash", "boat-lowering", "man-leap"}
+                "deck-surge", "officer-shove", "climb-boat", "rocket-fire", "stoker-dash", "boat-lowering", "man-leap",
+                "trench-cornered", "you-plan", "flame-climb", "flame-blast", "you-drop", "you-stagger", "you-corner", "you-quiet", "enemies-charge", "mg-reveal", "mg-final"}
 STILL_GESTURES = {"", "think", "tap", "tick", "talk", "point", "shrug", "count"}
 
 

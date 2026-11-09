@@ -334,6 +334,50 @@ const Headgear: React.FC<{ g: CharacterDef["headgear"] }> = ({ g }) => {
     );
   }
   if (g.type === "none") return null;
+  if (g.type === "brodie") {
+    // British "Brodie" helmet: shallow dish sitting low on the head, wide flat brim
+    return (
+      <group position={[0, 0.32, -0.02]} rotation={[-0.06, 0, 0]}>
+        <S s={[1, 0.72, 1]}>
+          <sphereGeometry args={[0.72, 44, 18, 0, Math.PI * 2, 0, Math.PI / 2]} />
+          <Toon color={g.color} kind="metal" roughness={0.75} />
+        </S>
+        <S p={[0, 0.0, 0]}>
+          <cylinderGeometry args={[0.98, 1.0, 0.035, 48]} />
+          <Toon color={g.color} kind="metal" roughness={0.75} />
+        </S>
+        <S p={[0, -0.005, 0]} r={[Math.PI / 2, 0, 0]}>
+          <torusGeometry args={[0.99, 0.022, 6, 48]} />
+          <Toon color={g.band ?? g.color} kind="metal" />
+        </S>
+      </group>
+    );
+  }
+  if (g.type === "stahlhelm") {
+    // coal-scuttle steel helmet: deep dome, flared skirt over the ears and neck, short peak
+    return (
+      <group position={[0, 0.24, -0.02]} scale={1.1}>
+        <S p={[0, 0.14, 0]} s={[1, 0.95, 1.05]}>
+          <sphereGeometry args={[0.62, 40, 20, 0, Math.PI * 2, 0, Math.PI / 2]} />
+          <Toon color={g.color} kind="metal" roughness={0.7} />
+        </S>
+        <S p={[0, 0.06, -0.04]} s={[1, 1, 1.05]}>
+          <cylinderGeometry args={[0.64, 0.74, 0.2, 40, 1, true, Math.PI * 0.62, Math.PI * 1.76]} />
+          <Toon color={g.color} kind="metal" roughness={0.7} side={THREE.DoubleSide} />
+        </S>
+        <S p={[0, 0.13, 0.55]} r={[0.35, 0, 0]} s={[1, 1, 0.5]}>
+          <cylinderGeometry args={[0.45, 0.45, 0.03, 30, 1, false, -Math.PI / 2, Math.PI]} />
+          <Toon color={g.color} kind="metal" roughness={0.7} />
+        </S>
+        {[-1, 1].map((sd) => (
+          <S key={sd} p={[sd * 0.62, 0.22, 0.05]} r={[0, 0, Math.PI / 2]}>
+            <cylinderGeometry args={[0.05, 0.05, 0.04, 10]} />
+            <Toon color={g.band ?? g.color} kind="metal" />
+          </S>
+        ))}
+      </group>
+    );
+  }
   if (g.type === "fireHelmet") {
     // 1910s New York leather fire helmet: tall dome, long back brim, front shield
     return (
@@ -659,6 +703,40 @@ const Body: React.FC<{ def: CharacterDef; legSwing?: number; legs?: [number, num
             <Toon color="#F4F1EA" kind="paint" />
           </S>
         ))}
+      {acc.includes("webbing") && (
+        <>
+          {[-1, 1].map((sd) => (
+            <S key={`w${sd}`} p={[sd * 0.2, TORSO_Y + 0.5 * TS, 0.4]} r={[-0.15, 0, sd * 0.3]}>
+              <boxGeometry args={[0.07, 0.7 * TS, 0.02]} />
+              <Toon color="#8A7E58" kind="fabric" />
+            </S>
+          ))}
+          {[-0.25, 0, 0.25].map((x) => (
+            <S key={`p${x}`} p={[x, TORSO_Y + 0.22 * TS, 0.43]}>
+              <boxGeometry args={[0.18, 0.16, 0.08]} />
+              <Toon color="#8A7E58" kind="fabric" />
+            </S>
+          ))}
+        </>
+      )}
+      {acc.includes("fueltank") && (
+        <group position={[0, TORSO_Y + 0.45 * TS, -0.52]}>
+          {[-0.17, 0.17].map((x) => (
+            <S key={x} p={[x, 0, 0]}>
+              <capsuleGeometry args={[0.16, 0.62 * TS, 6, 16]} />
+              <Toon color="#3A3D36" kind="metal" roughness={0.45} />
+            </S>
+          ))}
+          <S p={[0, 0.48 * TS, 0]} r={[0, 0, Math.PI / 2]}>
+            <cylinderGeometry args={[0.04, 0.04, 0.5, 8]} />
+            <Toon color="#7A6A4A" kind="brass" />
+          </S>
+          <S p={[0.3, -0.25, 0.25]} r={[0.6, 0, 0.4]}>
+            <torusGeometry args={[0.3, 0.035, 6, 20, Math.PI]} />
+            <Toon color="#1E1E1E" kind="rubber" />
+          </S>
+        </group>
+      )}
       {acc.includes("watchChain") && (
         <S p={[0.12, TORSO_Y + 0.42 * TS, 0.44]} r={[0, 0, Math.PI / 2]}>
           <torusGeometry args={[0.12, 0.012, 6, 20, Math.PI]} />

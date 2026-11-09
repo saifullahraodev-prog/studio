@@ -91,7 +91,7 @@ const CutSeq: React.FC<{ item: Item; prev?: Item; idx: number }> = ({ item, prev
   const id = `wb-${item.b.id}-${idx}`;
 
   // 1) same place: camera move from where the previous shot ended
-  if (samePlace && c.tr !== "flash" && frame < MOVE) {
+  if (samePlace && c.tr !== "flash" && c.tr !== "hard" && frame < MOVE) {
     const k = swing(Math.min(1, (frame + 1) / MOVE));
     const from = shotAt(prev!, prevDur);
     const to = shotAt(item, t);

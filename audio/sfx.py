@@ -134,6 +134,23 @@ def stamp(sec=0.22):
     return norm(body, 0.95)
 
 
+def mgburst(sec=1.8, rate=11.0):
+    """machine-gun burst: a fast train of sharp cracks with a low thump each, slightly uneven"""
+    n = int(sec * SR)
+    x = np.zeros(n)
+    k = 0
+    while True:
+        p = int((k / rate + _rng.uniform(-0.006, 0.006)) * SR)
+        if p + int(0.12 * SR) >= n:
+            break
+        L = int(0.12 * SR)
+        crack = _lp(_noise(L), 5000) * np.exp(-_t(0.12) * 60)
+        thump = _sine_sweep(110, 50, 0.12, 0.6) * np.exp(-_t(0.12) * 30)
+        x[p : p + L] += (crack * 0.8 + thump * 0.7) * _rng.uniform(0.8, 1.0)
+        k += 1
+    return norm(x * _env(n, 0.002, 0.15), 0.95)
+
+
 def fire(sec=1.6):
     n = int(sec * SR)
     x = _lp(_noise(n), 900) * 0.4
@@ -234,8 +251,8 @@ def scream(sec=1.8, seed=11):
     return norm(_reverb(out, 1.2, 0.45), 0.8)
 
 
-SOUNDS = {"impact": impact, "scream": scream, "riser": riser, "whoosh": whoosh, "hit": hit, "boom": boom, "crunch": crunch, "pop": pop, "boing": boing, "ding": ding, "stamp": stamp, "fire": fire, "tick": tick}
-GAINS = {"impact": 1.0, "scream": 0.42, "riser": 0.3, "swish": 0.16, "whoosh": 0.22, "hit": 0.8, "boom": 0.9, "crunch": 0.95, "pop": 0.45, "boing": 0.5, "ding": 0.45, "stamp": 0.8, "fire": 0.35, "tick": 0.25}
+SOUNDS = {"impact": impact, "scream": scream, "riser": riser, "whoosh": whoosh, "hit": hit, "boom": boom, "crunch": crunch, "pop": pop, "boing": boing, "ding": ding, "stamp": stamp, "fire": fire, "tick": tick, "mgburst": mgburst}
+GAINS = {"impact": 1.0, "scream": 0.42, "riser": 0.3, "swish": 0.16, "whoosh": 0.22, "hit": 0.8, "boom": 0.9, "crunch": 0.95, "pop": 0.45, "boing": 0.5, "ding": 0.45, "stamp": 0.8, "fire": 0.35, "tick": 0.25, "mgburst": 0.55}
 
 
 # ── music ───────────────────────────────────────────────────────────────────

@@ -1,0 +1,352 @@
+[
+ {
+  "word": "Enemy",
+  "start": 0.0,
+  "end": 0.32
+ },
+ {
+  "word": "soldiers",
+  "start": 0.32,
+  "end": 0.64
+ },
+ {
+  "word": "have",
+  "start": 0.64,
+  "end": 0.98
+ },
+ {
+  "word": "you",
+  "start": 0.98,
+  "end": 1.1
+ },
+ {
+  "word": "cornered",
+  "start": 1.1,
+  "end": 1.54
+ },
+ {
+  "word": "in",
+  "start": 1.54,
+  "end": 1.62
+ },
+ {
+  "word": "your",
+  "start": 1.62,
+  "end": 1.76
+ },
+ {
+  "word": "own",
+  "start": 1.76,
+  "end": 1.96
+ },
+ {
+  "word": "trench,",
+  "start": 1.96,
+  "end": 2.32
+ },
+ {
+  "word": "so",
+  "start": 2.88,
+  "end": 3.04
+ },
+ {
+  "word": "you",
+  "start": 3.04,
+  "end": 3.16
+ },
+ {
+  "word": "make",
+  "start": 3.16,
+  "end": 3.3
+ },
+ {
+  "word": "a",
+  "start": 3.3,
+  "end": 3.42
+ },
+ {
+  "word": "plan.",
+  "start": 3.42,
+  "end": 3.68
+ },
+ {
+  "word": "One",
+  "start": 4.08,
+  "end": 4.28
+ },
+ {
+  "word": "of",
+  "start": 4.28,
+  "end": 4.38
+ },
+ {
+  "word": "them",
+  "start": 4.38,
+  "end": 4.54
+ },
+ {
+  "word": "climbs",
+  "start": 4.54,
+  "end": 4.84
+ },
+ {
+  "word": "up",
+  "start": 4.84,
+  "end": 5.18
+ },
+ {
+  "word": "and",
+  "start": 5.18,
+  "end": 5.34
+ },
+ {
+  "word": "hoses",
+  "start": 5.34,
+  "end": 5.68
+ },
+ {
+  "word": "the",
+  "start": 5.68,
+  "end": 5.88
+ },
+ {
+  "word": "trench",
+  "start": 5.88,
+  "end": 6.14
+ },
+ {
+  "word": "with",
+  "start": 6.14,
+  "end": 6.34
+ },
+ {
+  "word": "fire.",
+  "start": 6.34,
+  "end": 6.68
+ },
+ {
+  "word": "You",
+  "start": 7.12,
+  "end": 7.2
+ },
+ {
+  "word": "scream,",
+  "start": 7.2,
+  "end": 7.48
+ },
+ {
+  "word": "throw",
+  "start": 7.82,
+  "end": 8.04
+ },
+ {
+  "word": "down",
+  "start": 8.04,
+  "end": 8.32
+ },
+ {
+  "word": "your",
+  "start": 8.32,
+  "end": 8.48
+ },
+ {
+  "word": "rifle,",
+  "start": 8.48,
+  "end": 8.78
+ },
+ {
+  "word": "and",
+  "start": 9.24,
+  "end": 9.3
+ },
+ {
+  "word": "stagger",
+  "start": 9.3,
+  "end": 9.66
+ },
+ {
+  "word": "away",
+  "start": 9.66,
+  "end": 10.08
+ },
+ {
+  "word": "like",
+  "start": 10.08,
+  "end": 10.3
+ },
+ {
+  "word": "you've",
+  "start": 10.3,
+  "end": 10.56
+ },
+ {
+  "word": "lost",
+  "start": 10.56,
+  "end": 10.82
+ },
+ {
+  "word": "your",
+  "start": 10.82,
+  "end": 11.02
+ },
+ {
+  "word": "mind.",
+  "start": 11.02,
+  "end": 11.36
+ },
+ {
+  "word": "You",
+  "start": 11.94,
+  "end": 12.02
+ },
+ {
+  "word": "duck",
+  "start": 12.02,
+  "end": 12.26
+ },
+ {
+  "word": "around",
+  "start": 12.26,
+  "end": 12.52
+ },
+ {
+  "word": "the",
+  "start": 12.52,
+  "end": 12.7
+ },
+ {
+  "word": "corner,",
+  "start": 12.7,
+  "end": 12.98
+ },
+ {
+  "word": "and",
+  "start": 13.66,
+  "end": 13.74
+ },
+ {
+  "word": "go",
+  "start": 13.74,
+  "end": 13.92
+ },
+ {
+  "word": "dead",
+  "start": 13.92,
+  "end": 14.14
+ },
+ {
+  "word": "quiet.",
+  "start": 14.14,
+  "end": 14.52
+ },
+ {
+  "word": "They",
+  "start": 15.06,
+  "end": 15.16
+ },
+ {
+  "word": "think",
+  "start": 15.16,
+  "end": 15.36
+ },
+ {
+  "word": "you're",
+  "start": 15.36,
+  "end": 15.56
+ },
+ {
+  "word": "finished,",
+  "start": 15.56,
+  "end": 15.82
+ },
+ {
+  "word": "so",
+  "start": 16.4,
+  "end": 16.5
+ },
+ {
+  "word": "they",
+  "start": 16.5,
+  "end": 16.64
+ },
+ {
+  "word": "charge",
+  "start": 16.64,
+  "end": 16.92
+ },
+ {
+  "word": "in",
+  "start": 16.92,
+  "end": 17.04
+ },
+ {
+  "word": "after",
+  "start": 17.04,
+  "end": 17.28
+ },
+ {
+  "word": "you,",
+  "start": 17.28,
+  "end": 17.5
+ },
+ {
+  "word": "straight",
+  "start": 17.84,
+  "end": 18.08
+ },
+ {
+  "word": "into",
+  "start": 18.08,
+  "end": 18.32
+ },
+ {
+  "word": "the",
+  "start": 18.32,
+  "end": 18.46
+ },
+ {
+  "word": "machine",
+  "start": 18.46,
+  "end": 18.76
+ },
+ {
+  "word": "gun",
+  "start": 18.76,
+  "end": 18.98
+ },
+ {
+  "word": "you",
+  "start": 18.98,
+  "end": 19.14
+ },
+ {
+  "word": "set",
+  "start": 19.14,
+  "end": 19.34
+ },
+ {
+  "word": "up",
+  "start": 19.34,
+  "end": 19.5
+ },
+ {
+  "word": "there",
+  "start": 19.5,
+  "end": 19.68
+ },
+ {
+  "word": "an",
+  "start": 19.68,
+  "end": 19.82
+ },
+ {
+  "word": "hour",
+  "start": 19.82,
+  "end": 20.0
+ },
+ {
+  "word": "ago.",
+  "start": 20.0,
+  "end": 20.4
+ }
+]

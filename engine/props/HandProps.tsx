@@ -7,7 +7,7 @@ import { Toon } from "../look/style";
 // Keep them chunky and readable at Shorts size.
 // ─────────────────────────────────────────────────────────────────────────────
 
-export type HeldProp = "stamp" | "oar" | "lantern" | "lifejacket" | "rope" | "binoculars" | "telegram" | "rulebook" | "rifle" | "rocket" | "whistle" | "hammer";
+export type HeldProp = "flamegun" | "stamp" | "oar" | "lantern" | "lifejacket" | "rope" | "binoculars" | "telegram" | "rulebook" | "rifle" | "rocket" | "whistle" | "hammer";
 
 const M: React.FC<React.PropsWithChildren<{ p?: [number, number, number]; r?: [number, number, number]; s?: [number, number, number] }>> = ({ p, r, s, children }) => (
   <mesh position={p} rotation={r} scale={s} castShadow receiveShadow>
@@ -154,6 +154,23 @@ const Whistle: React.FC = () => (
   </M>
 );
 
+const FlameGun: React.FC = () => (
+  <group position={[0, -0.05, 0.05]} rotation={[Math.PI / 2, 0, 0]}>
+    <M p={[0, 0.35, 0]}>
+      <cylinderGeometry args={[0.035, 0.04, 0.95, 10]} />
+      <Toon color="#2E302C" kind="metal" />
+    </M>
+    <M p={[0, 0.85, 0]}>
+      <cylinderGeometry args={[0.05, 0.035, 0.1, 10]} />
+      <Toon color="#B8913E" kind="brass" />
+    </M>
+    <M p={[0, 0.05, 0.08]} r={[0.5, 0, 0]}>
+      <boxGeometry args={[0.05, 0.16, 0.05]} />
+      <Toon color="#4A3A2A" kind="wood" />
+    </M>
+  </group>
+);
+
 const Hammer: React.FC = () => (
   <group position={[0, -0.04, 0.04]} rotation={[Math.PI / 2, 0, 0]}>
     <M p={[0, 0.2, 0]}>
@@ -195,8 +212,10 @@ const propFor = (name: string | undefined, Stamp?: React.FC) => {
       return <Whistle />;
     case "hammer":
       return <Hammer />;
+    case "flamegun":
+      return <FlameGun />;
     default:
       return null;
   }
 };
-export const HELD_PROPS: HeldProp[] = ["oar", "lantern", "lifejacket", "rope", "binoculars", "telegram", "rulebook", "rifle", "rocket", "whistle", "hammer"];
+export const HELD_PROPS: HeldProp[] = ["flamegun", "oar", "lantern", "lifejacket", "rope", "binoculars", "telegram", "rulebook", "rifle", "rocket", "whistle", "hammer"];

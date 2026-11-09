@@ -11,6 +11,17 @@
   "today-medium": "today",
   "today-low": "today",
   "today-boat": "today",
-  "today-punch": "today"
+  "today-punch": "today",
+  "trench-cornered": "trench",
+  "you-plan": "trench",
+  "flame-climb": "trench",
+  "flame-blast": "trench",
+  "you-drop": "trench",
+  "you-stagger": "trench",
+  "you-corner": "trench",
+  "you-quiet": "trench",
+  "enemies-charge": "trench",
+  "mg-reveal": "trench",
+  "mg-final": "trench"
  }
 }

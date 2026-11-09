@@ -1,0 +1,63 @@
+# Short: "The Flamethrower Trap" (DRAMATIZED trench scenario, owner's choice; see script.md)
+# Owner's voice: voice.wav (CapCut TTS "Dan", 2026-11-10). Action-first storyboard.
+#   cut: <cue word> | <shot> | face=<expression> | do=<gesture> | fx=<sound>[+<sound>] | pre=riser | tr=<cut|whip|flash|hard>
+#   tr=hard = instant cut inside the same place (no camera fly)
+# Build:  HF_HUB_OFFLINE=1 python -I tools/build_video.py videos/2026-11-10-hooge-flamethrower --recording
+
+slug: hooge-flamethrower
+format: short
+world: trench
+voice: recording
+
+[beat 1]
+speaker: vo
+preset: day
+music: tense
+say: Enemy soldiers have you cornered in your own trench, so you make a plan.
+emph: cornered, plan
+cut: enemy    | trench-cornered | fx=hit
+cut: so       | you-plan        | fx=pop
+
+[beat 2]
+speaker: vo
+preset: day
+music: tense
+say: One of them climbs up and hoses the trench with fire.
+emph: fire
+cut: one      | flame-climb     | fx=hit        | tr=hard
+cut: hoses    | flame-blast     | fx=boom+fire_big:5 | tr=hard | pre=riser
+
+[beat 3]
+speaker: vo
+preset: day
+music: tense
+say: You scream, throw down your rifle, and stagger away like you've lost your mind.
+emph: scream, rifle
+cut: you      | you-drop        | fx=impact     | tr=hard
+cut: stagger  | you-stagger     | fx=whoosh     | tr=hard
+
+[beat 4]
+speaker: vo
+preset: day
+music: tense
+say: You duck around the corner, and go dead quiet.
+emph: corner, quiet
+cut: duck     | you-corner      | fx=whoosh     | tr=hard
+cut: dead     | you-quiet       | tr=flash
+
+[beat 5]
+speaker: vo
+preset: day
+music: tense
+say: They think you're finished, so they charge in after you,
+emph: charge
+cut: they     | enemies-charge  | fx=hit        | tr=hard
+
+[beat 6]
+speaker: vo
+preset: day
+music: tense
+say: straight into the machine gun you set up there an hour ago.
+emph: machine, hour
+cut: straight | mg-reveal       | fx=boom       | tr=hard | pre=riser
+cut: set      | mg-final        | fx=mgburst    | tr=hard

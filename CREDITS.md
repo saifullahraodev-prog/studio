@@ -11,6 +11,8 @@ required. Credit is given here anyway. Audio credits: `audio/LICENSES.md`.
 | PaintedMetal004 (scuffed paint, desaturated + tinted in code) | https://ambientcg.com/view?id=PaintedMetal004 |
 | MetalPlates004 (steel plates / hull) | https://ambientcg.com/view?id=MetalPlates004 |
 | Rope001 (rope) | https://ambientcg.com/view?id=Rope001 |
+| Ground054 (wet mud, trench floor + walls; added 2026-11-10) | https://ambientcg.com/view?id=Ground054 |
+| Fabric026 (coarse cloth, used for sandbags; added 2026-11-10) | https://ambientcg.com/view?id=Fabric026 |
 
 ## Sky backdrops: Poly Haven (https://polyhaven.com, CC0), 2K HDR, "pure sky" versions
 | File (`public/sky/`) | Used for preset | Source |

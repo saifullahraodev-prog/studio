@@ -297,3 +297,12 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2c-720p.mp4`.
 - Note: scream/impact are synthesized in code; a real CC0 recorded scream would sound better
   (needs a download -> ask owner).
+
+## 2026-11-10: "The Flamethrower Trap" Short (dramatized, owner's voice)
+- Follows the reference Short's story (owner decision), marked as dramatized in `script.md`.
+- New: trench world (`engine/worlds/trench/Trench.tsx`), soldiers `tommy`/`enemy`/`flamer` (Brodie + steel
+  helmets, webbing, fuel tanks), flamethrower lance, `TrenchProps.tsx` (machine gun, fire jet, muzzle flash,
+  falling rifle), 8 new gestures, 11 action shots, `tr=hard` cut, `mgburst` sound, `fx=name:dur` crop.
+- CC0 textures Ground054 + Fabric026 (ambientCG) added to `CREDITS.md`.
+- Preview: `videos/2026-11-10-hooge-flamethrower/out/flamethrower-trap-720p.mp4` (21.2 s, -14.2 LUFS,
+  11/11 action shots). Waiting for owner feedback.

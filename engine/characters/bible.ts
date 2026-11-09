@@ -7,6 +7,9 @@ import owner from "./owner.json";
 import perkins from "./perkins.json";
 import judge from "./judge.json";
 import officer from "./officer.json";
+import tommy from "./tommy.json";
+import enemy from "./enemy.json";
+import flamer from "./flamer.json";
 import type { FaceExtras, FaceVariant } from "./face";
 
 // Character bible: the ONLY way new characters enter the engine.
@@ -30,7 +33,7 @@ export type CharacterDef = {
     shoes: string;
     scale: number;
   };
-  headgear: { type: "peakedCap" | "flatCap" | "hardHat" | "helmet" | "bowler" | "fireHelmet" | "ladyHat" | "none"; color: string; band?: string; badge?: string; trim?: string };
+  headgear: { type: "peakedCap" | "flatCap" | "hardHat" | "helmet" | "bowler" | "fireHelmet" | "ladyHat" | "brodie" | "stahlhelm" | "none"; color: string; band?: string; badge?: string; trim?: string };
   hair?: { style: "gibson" | "bun" | "braid" | "short" | "bald"; color: string };
   prop?: "clipboard" | "shovel" | "axe" | "gavel" | "notebook" | null;
   accessories?: string[];
@@ -46,6 +49,9 @@ export const BIBLE: Record<string, CharacterDef> = {
   perkins: perkins as CharacterDef,
   judge: judge as CharacterDef,
   officer: officer as CharacterDef,
+  tommy: tommy as CharacterDef,
+  enemy: enemy as CharacterDef,
+  flamer: flamer as CharacterDef,
 };
 
 export const CHARACTER_IDS = Object.keys(BIBLE);

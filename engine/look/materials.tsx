@@ -95,7 +95,7 @@ const useMaps = (id: string, gray: boolean) => {
 };
 
 export type RealProps = {
-  tex: "Planks037A" | "Metal041B" | "PaintedMetal004" | "MetalPlates004" | "Rope001";
+  tex: "Planks037A" | "Metal041B" | "PaintedMetal004" | "MetalPlates004" | "Rope001" | "Ground054" | "Fabric026";
   repeat?: [number, number];
   rotate?: number; // texture rotation (radians), e.g. to run planks along the deck
   tint?: string; // colour (gray mode for painted surfaces; multiplies the photo otherwise)
