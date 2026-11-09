@@ -1,6 +1,17 @@
 # PROGRESS
 
-## Current phase: PAUSED by owner (2026-11-09) at GATE 4
+## Current: Short #1 revision 2 (owner review, 2026-11-09), in progress
+- Task 1 DONE: face stripes = pen hatching aliasing (not shadow acne). Hatching off on heads, anti-aliased
+  where used, shadow bias raised, `tools/facecheck.py` (all characters x presets) runs inside golden check.
+- Task 2 DONE: 3 paper-panel faces (E/F/G) shown; owner chose to KEEP face D "Comic".
+- Task 3 DONE: CC0 textures + skies (CREDITS.md), stronger DOF, film grade, preview quality mode, style v1.3.
+- Task 4 DONE: camera grammar in style v1.3 (handheld drift, key-word push, motion blur), eye XCUs, top-down.
+- Task 5 DONE: top sentence subtitles.
+- Task 6 IN PROGRESS: draft script `videos/2026-11-10-titanic-lifeboats-v3/script.md` (one fact still to verify),
+  needs owner approval, then scenes + 720p preview, v1-vs-v2 contact sheet, docs, golden re-approve,
+  render-time comparison. Stills: out/rev2/task*.png.
+
+## Earlier: PAUSED by owner (2026-11-09) at GATE 4
 Video production is on hold. Nothing is pending in the background. When resuming: owner reviews the
 GATE 4 preview + style v1.2 lighting, then 1080p final, then Phase 5 (long-form pipeline).
 
