@@ -1,6 +1,12 @@
 # PROGRESS
 
-## Current phase: Phase 4 (Kit growth), started 2026-11-09. GATE 3 passed.
+## Current phase: GATE 4 (2026-11-09): 3-minute test video rendered from the scene file alone, waiting for owner review
+
+### GATE 4 result
+- `videos/2026-11-09-triangle-fire/out/preview-720p.mp4`: 2:49, 34 beats, 97 director-chosen shots,
+  -14.0 LUFS, peak -1.4 dBFS, no black/frozen frames. 720p render ~12 min (137 ms/frame).
+  Golden 14/14. Owner to approve: the video, style v1.2 (interior + fire presets). 1080p final after approval.
+
 
 ### Phase 4 decisions (owner, 2026-11-09)
 - Bodies: keep code-built chibi bodies (no CC0 rigged models).
