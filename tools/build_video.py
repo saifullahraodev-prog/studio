@@ -412,7 +412,7 @@ def main():
             if text.isdigit() and len(text) >= 4 and not (1800 <= int(text) <= 2099):
                 text = f"{int(text):,}"
             n = norm(text)
-            cap.append({"text": text, "start": a, "end": e, "emph": bool(n in emph or norm(tok) in emph or any(ch.isdigit() for ch in n))})
+            cap.append({"text": text, "start": a, "end": e, "emph": bool(n in emph or norm(tok) in emph or any(ch.isdigit() for ch in n)), "brk": bool(re.search(r"[.?!,;:]$", tok))})
     data = {"slug": slug, "format": meta.get("format", "short"), "world": meta.get("world"), "fps": FPS, "duration": round(total, 3), "beats": beats, "captionWords": cap}
     (vdir / "scenes.json").write_text(json.dumps(data, indent=1), encoding="utf-8")
 

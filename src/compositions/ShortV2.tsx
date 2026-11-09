@@ -1,5 +1,6 @@
 import { AbsoluteFill, Audio, CalculateMetadataFunction, Easing, Sequence, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { CapWord, WordCaptions } from "../../engine/captions/WordCaptions";
+import { TopSubtitles } from "../../engine/captions/TopSubtitles";
 import { CameraState, Vec3 } from "../../engine/cameras/CameraRig";
 import { ResProps, verticalSize } from "../../engine/look/units";
 import { style } from "../../engine/look/style";
@@ -141,6 +142,7 @@ export const ShortV2: React.FC<ShortV2Props> = ({ slug, data }) => {
         );
       })}
       <WordCaptions words={data.captionWords} />
+      <TopSubtitles words={data.captionWords} />
       <Audio src={staticFile(`videos/${slug}/mix.wav`)} />
     </AbsoluteFill>
   );

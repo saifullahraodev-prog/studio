@@ -1,5 +1,6 @@
 import { AbsoluteFill, Audio, CalculateMetadataFunction, Easing, Sequence, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { CapWord, WordCaptions } from "../../engine/captions/WordCaptions";
+import { TopSubtitles } from "../../engine/captions/TopSubtitles";
 import { BIBLE } from "../../engine/characters/bible";
 import { Character } from "../../engine/characters/Character";
 import { Expression } from "../../engine/characters/face";
@@ -176,6 +177,7 @@ export const Video: React.FC<VideoProps> = ({ slug, data }) => {
       })}
       {dip > 0 && <AbsoluteFill style={{ backgroundColor: "#000", opacity: dip }} />}
       <WordCaptions words={data.captionWords} />
+      <TopSubtitles words={data.captionWords} />
       <Audio src={staticFile(`videos/${slug}/mix.wav`)} />
     </AbsoluteFill>
   );

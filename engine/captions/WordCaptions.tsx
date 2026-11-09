@@ -7,7 +7,7 @@ import { useUnit } from "../look/units";
 // lower-middle of the frame. Emphasised words are bigger and accent-coloured.
 const { fontFamily } = loadFont("normal", { weights: ["700"], subsets: ["latin"] });
 
-export type CapWord = { text: string; start: number; end: number; emph?: boolean };
+export type CapWord = { text: string; start: number; end: number; emph?: boolean; brk?: boolean }; // brk: sentence/comma break after this word
 
 export const WordCaptions: React.FC<{ words: CapWord[] }> = ({ words }) => {
   const frame = useCurrentFrame();
