@@ -6,6 +6,7 @@ import { applySceneLight, makeInkPaperMaterial, useFaceLook, useSceneLight } fro
 import { style, Toon } from "../look/style";
 import { StampTool } from "../props/Props";
 import { HandProp } from "../props/HandProps";
+import { Real } from "../look/materials";
 import { CharacterDef } from "./bible";
 import { cellUV, Expression, eyeCellPos, faceSheetPath, FaceVariant, isHeadFace, MouthSlot } from "./face";
 
@@ -123,7 +124,7 @@ export const Head: React.FC<{ sheet: string; variant: FaceVariant; expression: E
   const look = useFaceLook();
   const base = useStaticTexture(sheet);
   // whole-head comic faces are paper-coloured; paper-panel faces sit on a skin-toned head
-  const headMat = useMemo(() => makeInkPaperMaterial({ paper: headFace ? F.headPaper : skin ?? "#E2B993", hatchDensity: 30 }), [headFace, skin]);
+  const headMat = useMemo(() => makeInkPaperMaterial({ paper: variant === "R" ? "#F7F6F2" : headFace ? F.headPaper : skin ?? "#E2B993", hatchDensity: 30 }), [headFace, skin, variant]);
   const faceMat = useMemo(() => (base ? makeInkPaperMaterial({ map: base, paper: style.ink.paper, hatchDensity: 30 }) : null), [base]);
   const rimTex = useMemo(() => {
     if (!base) return null;
@@ -335,45 +336,50 @@ export const Headgear: React.FC<{ g: CharacterDef["headgear"] }> = ({ g }) => {
   }
   if (g.type === "none") return null;
   if (g.type === "brodie") {
-    // British "Brodie" helmet: shallow dish sitting low on the head, wide flat brim
+    // British Brodie helmet, realistic: worn painted steel dome sitting low (to the brows),
+    // wide flat brim with a rolled edge. Head radius = 0.62.
     return (
-      <group position={[0, 0.32, -0.02]} rotation={[-0.06, 0, 0]}>
-        <S s={[1, 0.72, 1]}>
-          <sphereGeometry args={[0.72, 44, 18, 0, Math.PI * 2, 0, Math.PI / 2]} />
-          <Toon color={g.color} kind="metal" roughness={0.75} />
-        </S>
-        <S p={[0, 0.0, 0]}>
-          <cylinderGeometry args={[0.98, 1.0, 0.035, 48]} />
-          <Toon color={g.color} kind="metal" roughness={0.75} />
-        </S>
-        <S p={[0, -0.005, 0]} r={[Math.PI / 2, 0, 0]}>
-          <torusGeometry args={[0.99, 0.022, 6, 48]} />
-          <Toon color={g.band ?? g.color} kind="metal" />
-        </S>
+      <group position={[0, 0.0, 0]} rotation={[-0.06, 0, 0]}>
+        <mesh scale={[1, 0.97, 1]} castShadow>
+          <sphereGeometry args={[0.68, 48, 20, 0, Math.PI * 2, 0, 1.2]} />
+          <Real tex="PaintedMetal004" gray tint={g.color} roughness={0.9} />
+        </mesh>
+        <mesh position={[0, 0.68 * Math.cos(1.2) * 0.97, 0]} castShadow>
+          <latheGeometry args={[[new THREE.Vector2(0.6, 0.02), new THREE.Vector2(0.85, -0.04), new THREE.Vector2(0.86, -0.06)], 56]} />
+          <Real tex="PaintedMetal004" gray tint={g.color} roughness={0.9} side={THREE.DoubleSide} />
+        </mesh>
+        <mesh position={[0, 0.68 * Math.cos(1.2) * 0.97 - 0.05, 0]} rotation={[Math.PI / 2, 0, 0]}>
+          <torusGeometry args={[0.855, 0.016, 6, 64]} />
+          <Real tex="PaintedMetal004" gray tint={g.band ?? g.color} roughness={0.7} metalness={0.3} />
+        </mesh>
       </group>
     );
   }
   if (g.type === "stahlhelm") {
-    // coal-scuttle steel helmet: deep dome, flared skirt over the ears and neck, short peak
+    // German steel helmet, realistic: deep dome to the brows, flared skirt over the ears and
+    // neck, short front visor, side lugs. Worn field-grey paint.
+    const rimY = 0.69 * Math.cos(1.22) * 0.95;
     return (
-      <group position={[0, 0.24, -0.02]} scale={1.1}>
-        <S p={[0, 0.14, 0]} s={[1, 0.95, 1.05]}>
-          <sphereGeometry args={[0.62, 40, 20, 0, Math.PI * 2, 0, Math.PI / 2]} />
-          <Toon color={g.color} kind="metal" roughness={0.7} />
-        </S>
-        <S p={[0, 0.06, -0.04]} s={[1, 1, 1.05]}>
-          <cylinderGeometry args={[0.64, 0.74, 0.2, 40, 1, true, Math.PI * 0.62, Math.PI * 1.76]} />
-          <Toon color={g.color} kind="metal" roughness={0.7} side={THREE.DoubleSide} />
-        </S>
-        <S p={[0, 0.13, 0.55]} r={[0.35, 0, 0]} s={[1, 1, 0.5]}>
-          <cylinderGeometry args={[0.45, 0.45, 0.03, 30, 1, false, -Math.PI / 2, Math.PI]} />
-          <Toon color={g.color} kind="metal" roughness={0.7} />
-        </S>
+      <group position={[0, 0.02, -0.02]}>
+        <mesh scale={[1, 0.95, 1.04]} castShadow>
+          <sphereGeometry args={[0.69, 48, 22, 0, Math.PI * 2, 0, 1.22]} />
+          <Real tex="PaintedMetal004" gray tint={g.color} roughness={0.85} />
+        </mesh>
+        {/* skirt: flares out round the sides and back (front left open for the visor) */}
+        <mesh position={[0, rimY, 0]} scale={[1, 1, 1.04]} castShadow>
+          <latheGeometry args={[[new THREE.Vector2(0.65, 0.0), new THREE.Vector2(0.71, -0.14), new THREE.Vector2(0.78, -0.26)], 48, Math.PI * 0.72, Math.PI * 1.56]} />
+          <Real tex="PaintedMetal004" gray tint={g.color} roughness={0.85} side={THREE.DoubleSide} />
+        </mesh>
+        {/* short visor over the eyes */}
+        <mesh position={[0, rimY, 0]} scale={[1, 1, 1.04]} castShadow>
+          <latheGeometry args={[[new THREE.Vector2(0.65, 0.0), new THREE.Vector2(0.76, -0.04)], 24, -Math.PI * 0.28, Math.PI * 0.56]} />
+          <Real tex="PaintedMetal004" gray tint={g.color} roughness={0.85} side={THREE.DoubleSide} />
+        </mesh>
         {[-1, 1].map((sd) => (
-          <S key={sd} p={[sd * 0.62, 0.22, 0.05]} r={[0, 0, Math.PI / 2]}>
-            <cylinderGeometry args={[0.05, 0.05, 0.04, 10]} />
-            <Toon color={g.band ?? g.color} kind="metal" />
-          </S>
+          <mesh key={sd} position={[sd * 0.68, rimY + 0.16, 0.02]} rotation={[0, 0, Math.PI / 2]}>
+            <cylinderGeometry args={[0.05, 0.05, 0.05, 12]} />
+            <Real tex="PaintedMetal004" gray tint={g.band ?? g.color} roughness={0.6} metalness={0.4} />
+          </mesh>
         ))}
       </group>
     );

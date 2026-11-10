@@ -6,7 +6,7 @@ import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader.js";
 import { clone as cloneSkinned } from "three/examples/jsm/utils/SkeletonUtils.js";
 import { CharacterDef } from "./bible";
 import { Glove, Head, Headgear } from "./Character";
-import { Expression, faceSheetPath, MouthSlot } from "./face";
+import { Expression, faceSheetPath, FaceVariant, MouthSlot } from "./face";
 import { HandProp } from "../props/HandProps";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -132,7 +132,8 @@ export const MocapActor: React.FC<{
   mouth?: MouthSlot;
   look?: MocapStyle;
   holdR?: string; // prop in the right hand (e.g. "rifle")
-}> = ({ def, clip, t, loop = true, speed = 1, position, rotationY = 0, expression = "neutral", mouth = "rest", look = {}, holdR }) => {
+  face?: FaceVariant; // default "R" (reference-style bean eyes)
+}> = ({ def, clip, t, loop = true, speed = 1, position, rotationY = 0, expression = "neutral", mouth = "rest", look = {}, holdR, face = "R" }) => {
   const assets = useMocapAssets(clip);
   const { headK = 1, gloves = false, slim = 1, tint, bodyK = BODY_K } = look;
   const pk = bodyK / BODY_K; // props shrink with the body
@@ -187,7 +188,7 @@ export const MocapActor: React.FC<{
     const dir = l.clone().sub(r).normalize();
     rifle = { p: r, q: new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), dir) };
   }
-  const v = def.faceVariant;
+  const v = face;
   // our head units are metres in the old chibi world; neck space is cm x BODY_K
   const hs = headK / (CM * bodyK);
   return (
@@ -205,7 +206,7 @@ export const MocapActor: React.FC<{
       {gloves &&
         (["Left", "Right"] as const).map((side) =>
           createPortal(
-            <group key={side} position={rig.bone(`${side}Hand`).position.toArray()} rotation={[0, 0, side === "Left" ? -Math.PI / 2 : Math.PI / 2]} scale={Math.sqrt(pk) / (CM * bodyK)}>
+            <group key={side} position={rig.bone(`${side}Hand`).position.toArray()} rotation={[0, 0, side === "Left" ? -Math.PI / 2 : Math.PI / 2]} scale={(1.9 * Math.sqrt(pk)) / (CM * bodyK)}>
               <Glove up={1} />
             </group>,
             rig.bone(`${side}ForeArm`),

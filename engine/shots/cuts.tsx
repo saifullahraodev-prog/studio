@@ -19,6 +19,9 @@ import { FireJet, FloorRifle, MachineGun } from "../props/TrenchProps";
 import { Barrel, Trench, TRENCH } from "../worlds/trench/Trench";
 import { Prop } from "../props/Model";
 import { MocapActor } from "../characters/MocapActor";
+import { ChubbyBodyPreview } from "../characters/ChubbyBody";
+import { Head, Headgear } from "../characters/Character";
+import { faceSheetPath } from "../characters/face";
 import { Flames, Smoke } from "../fx/Fire";
 import SETS from "./sets.json";
 
@@ -638,23 +641,45 @@ const TPL: Record<string, T> = {
     };
   },
 
-  // TEMP: real body + mocap style options (do=A|B|C picks the option)
-  "mocap-test": ({ beat, cut, t }) => {
-    const looks = {
-      A: { headK: 0.85, gloves: true, slim: 0.75, tint: "#C9B88C", bodyK: 1.25 },
-      B: { headK: 0.85, gloves: true, slim: 0.65, tint: "#C9B88C", bodyK: 1.0 },
-      C: { headK: 0.9, gloves: true, slim: 0.55, tint: "#C9B88C", bodyK: 0.8 },
-    } as const;
-    const look = looks[(cut.do as "A" | "B" | "C") ?? "B"] ?? looks.B;
+  // TEMP: chubby soldier body (T-pose, before rigging) with our head + helmet
+  "chubby-test": ({ beat, cut }) => {
+    const side = cut.do === "side";
+    const K = 1.7;
     return {
       real: true,
-      camera: { position: [13.7, TRENCH.H + 1.6, 3.6], target: [14.5, TRENCH.H + 1.25, -2], fov: 40 },
+      camera: side ? { position: [17.5, TRENCH.H + 1.6, 1.0], target: [14.5, TRENCH.H + 1.3, -2], fov: 42 } : { position: [14.5, TRENCH.H + 1.5, 3.0], target: [14.5, TRENCH.H + 1.35, -2], fov: 42 },
       focus: [14.5, TRENCH.H + 1.4, -2],
-      focusRange: 4,
+      focusRange: 3,
       content: (
         <>
           <Trench preset={P(beat)} />
-          <MocapActor def={BIBLE.tommy} clip="rifle-aim" t={t} position={[14.5, TRENCH.H, -2]} rotationY={0.55} expression="scared" look={look} holdR="rifle" />
+          <ChubbyBodyPreview position={[14.5, TRENCH.H, -2]} scale={K}>
+            <group position={[0, 1.4, 0.0]} scale={0.48}>
+              <Head sheet={faceSheetPath("tommy", "R")} variant="R" expression="neutral" mouth="rest" />
+              <Headgear g={BIBLE.tommy.headgear} />
+            </group>
+          </ChubbyBodyPreview>
+        </>
+      ),
+    };
+  },
+  // TEMP: new look test (reference face + real helmets + big gloves on the small mocap body)
+  "mocap-test": ({ beat, cut, t }) => {
+    const look = { headK: 0.72, gloves: true, slim: 0.65, tint: "#C9B88C", bodyK: 1.0 };
+    const enemyLook = { ...look, tint: "#9AA290" };
+    const close = cut.do === "close";
+    return {
+      real: true,
+      camera: close ? { position: [13.7, TRENCH.H + 1.7, 1.2], target: [13.5, TRENCH.H + 1.6, -2], fov: 40 } : { position: [14.3, TRENCH.H + 1.5, 5.0], target: [14.3, TRENCH.H + 1.3, -2], fov: 42 },
+      focus: [14.2, TRENCH.H + 1.5, -2],
+      focusRange: 3,
+      content: (
+        <>
+          <Trench preset={P(beat)} />
+          <Prop id="wooden_military_crate" position={[16.4, TRENCH.H, -3.4]} rotation={[0, 0.5, 0]} size={1.0} />
+          <Prop id="dead_tree_trunk" position={[18, TRENCH.H, -9]} size={1.0} />
+          <MocapActor def={BIBLE.tommy} clip="rifle-aim" t={t} position={[13.5, TRENCH.H, -2]} rotationY={0.25} expression={close ? "neutral" : "scared"} look={look} holdR="rifle" />
+          <MocapActor def={BIBLE.enemy} clip="rifle-aim" t={t + 1} position={[15.1, TRENCH.H, -2.4]} rotationY={-0.35} expression="happy" look={enemyLook} holdR="rifle" />
         </>
       ),
     };

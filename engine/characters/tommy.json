@@ -1,12 +1,28 @@
 {
-  "id": "tommy",
-  "name": "Trench soldier (you)",
-  "role": "WW1-style British infantryman: khaki tunic, flat 'Brodie' helmet, webbing. Generic, not a real person.",
-  "faceVariant": "D",
-  "skin": "#E2B993",
-  "faceExtras": { "stubble": true },
-  "body": { "torso": "#7A7048", "torsoStyle": "coat", "trim": "#5A5236", "sleeve": "#7A7048", "legs": "#6A6040", "shoes": "#3A2A1E", "scale": 1.0 },
-  "headgear": { "type": "brodie", "color": "#5C6248", "band": "#3A3E2E" },
-  "prop": null,
-  "accessories": ["webbing"]
+ "id": "tommy",
+ "name": "Trench soldier (you)",
+ "role": "WW1-style British infantryman: khaki tunic, flat 'Brodie' helmet, webbing. Generic, not a real person.",
+ "faceVariant": "D",
+ "skin": "#E2B993",
+ "faceExtras": {
+  "stubble": true
+ },
+ "body": {
+  "torso": "#7A7048",
+  "torsoStyle": "coat",
+  "trim": "#5A5236",
+  "sleeve": "#7A7048",
+  "legs": "#6A6040",
+  "shoes": "#3A2A1E",
+  "scale": 1.0
+ },
+ "headgear": {
+  "type": "brodie",
+  "color": "#7A8058",
+  "band": "#3A3E2E"
+ },
+ "prop": null,
+ "accessories": [
+  "webbing"
+ ]
 }

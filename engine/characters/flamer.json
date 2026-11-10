@@ -1,12 +1,28 @@
 {
-  "id": "flamer",
-  "name": "Enemy flamethrower operator",
-  "role": "Enemy soldier carrying a two-tank flamethrower on his back. Generic, not a real person.",
-  "faceVariant": "D",
-  "skin": "#E6BF97",
-  "faceExtras": { "soot": true },
-  "body": { "torso": "#5E6658", "torsoStyle": "coat", "trim": "#3C4238", "sleeve": "#5E6658", "legs": "#4A5046", "shoes": "#2A2420", "scale": 1.0 },
-  "headgear": { "type": "stahlhelm", "color": "#4C5248", "band": "#33372F" },
-  "prop": null,
-  "accessories": ["fueltank"]
+ "id": "flamer",
+ "name": "Enemy flamethrower operator",
+ "role": "Enemy soldier carrying a two-tank flamethrower on his back. Generic, not a real person.",
+ "faceVariant": "D",
+ "skin": "#E6BF97",
+ "faceExtras": {
+  "soot": true
+ },
+ "body": {
+  "torso": "#5E6658",
+  "torsoStyle": "coat",
+  "trim": "#3C4238",
+  "sleeve": "#5E6658",
+  "legs": "#4A5046",
+  "shoes": "#2A2420",
+  "scale": 1.0
+ },
+ "headgear": {
+  "type": "stahlhelm",
+  "color": "#6A7064",
+  "band": "#33372F"
+ },
+ "prop": null,
+ "accessories": [
+  "fueltank"
+ ]
 }
