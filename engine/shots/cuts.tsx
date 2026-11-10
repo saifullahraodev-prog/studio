@@ -641,15 +641,15 @@ const TPL: Record<string, T> = {
   // TEMP: real body + mocap style options (do=A|B|C picks the option)
   "mocap-test": ({ beat, cut, t }) => {
     const looks = {
-      A: { headK: 0.55 },
-      B: { headK: 0.85, gloves: true, tint: "#C9B88C" },
-      C: { headK: 0.85, gloves: true, slim: 0.7, tint: "#C9B88C" },
+      A: { headK: 0.85, gloves: true, slim: 0.75, tint: "#C9B88C", bodyK: 1.25 },
+      B: { headK: 0.85, gloves: true, slim: 0.65, tint: "#C9B88C", bodyK: 1.0 },
+      C: { headK: 0.9, gloves: true, slim: 0.55, tint: "#C9B88C", bodyK: 0.8 },
     } as const;
     const look = looks[(cut.do as "A" | "B" | "C") ?? "B"] ?? looks.B;
     return {
       real: true,
-      camera: { position: [13.6, TRENCH.H + 2.0, 4.6], target: [14.5, TRENCH.H + 1.6, -2], fov: 40 },
-      focus: [14.5, TRENCH.H + 1.8, -2],
+      camera: { position: [13.7, TRENCH.H + 1.6, 3.6], target: [14.5, TRENCH.H + 1.25, -2], fov: 40 },
+      focus: [14.5, TRENCH.H + 1.4, -2],
       focusRange: 4,
       content: (
         <>

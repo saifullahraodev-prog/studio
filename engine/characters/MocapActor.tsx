@@ -117,6 +117,7 @@ export type MocapStyle = {
   gloves?: boolean; // swap the real hands for our white cartoon gloves
   slim?: number; // limb thickness (1 = real)
   tint?: string; // multiply the uniform colour
+  bodyK?: number; // body size vs a real person (1.7 = old 3 m chibi height; smaller = big-head comedy proportions)
 };
 
 export const MocapActor: React.FC<{
@@ -133,7 +134,8 @@ export const MocapActor: React.FC<{
   holdR?: string; // prop in the right hand (e.g. "rifle")
 }> = ({ def, clip, t, loop = true, speed = 1, position, rotationY = 0, expression = "neutral", mouth = "rest", look = {}, holdR }) => {
   const assets = useMocapAssets(clip);
-  const { headK = 1, gloves = false, slim = 1, tint } = look;
+  const { headK = 1, gloves = false, slim = 1, tint, bodyK = BODY_K } = look;
+  const pk = bodyK / BODY_K; // props shrink with the body
 
   const rig = useMemo(() => {
     if (!assets) return null;
@@ -187,9 +189,9 @@ export const MocapActor: React.FC<{
   }
   const v = def.faceVariant;
   // our head units are metres in the old chibi world; neck space is cm x BODY_K
-  const hs = headK / (CM * BODY_K);
+  const hs = headK / (CM * bodyK);
   return (
-    <group position={position} rotation={[0, rotationY, 0]} scale={CM * BODY_K}>
+    <group position={position} rotation={[0, rotationY, 0]} scale={CM * bodyK}>
       <primitive object={rig.root} />
       {createPortal(
         <group position={headP.toArray()} quaternion={headQ}>
@@ -203,14 +205,14 @@ export const MocapActor: React.FC<{
       {gloves &&
         (["Left", "Right"] as const).map((side) =>
           createPortal(
-            <group key={side} position={rig.bone(`${side}Hand`).position.toArray()} rotation={[0, 0, side === "Left" ? -Math.PI / 2 : Math.PI / 2]} scale={1 / (CM * BODY_K)}>
+            <group key={side} position={rig.bone(`${side}Hand`).position.toArray()} rotation={[0, 0, side === "Left" ? -Math.PI / 2 : Math.PI / 2]} scale={Math.sqrt(pk) / (CM * bodyK)}>
               <Glove up={1} />
             </group>,
             rig.bone(`${side}ForeArm`),
           ),
         )}
       {rifle && (
-        <group position={rifle.p.toArray()} quaternion={rifle.q} scale={1 / (CM * BODY_K)}>
+        <group position={rifle.p.toArray()} quaternion={rifle.q} scale={pk / (CM * bodyK)}>
           <group scale={1.35}>
             <HandProp name="rifleraw" />
           </group>
@@ -219,7 +221,7 @@ export const MocapActor: React.FC<{
       {holdR &&
         holdR !== "rifle" &&
         createPortal(
-          <group scale={1 / (CM * BODY_K)}>
+          <group scale={pk / (CM * bodyK)}>
             <HandProp name={holdR} />
           </group>,
           rig.bone("RightHand"),
