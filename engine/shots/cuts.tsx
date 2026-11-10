@@ -19,7 +19,7 @@ import { FireJet, FloorRifle, MachineGun } from "../props/TrenchProps";
 import { Barrel, Trench, TRENCH } from "../worlds/trench/Trench";
 import { Prop } from "../props/Model";
 import { MocapActor } from "../characters/MocapActor";
-import { ChubbyBodyPreview } from "../characters/ChubbyBody";
+import { ChubbyBodyPreview, FbxPreview } from "../characters/ChubbyBody";
 import { Head, Headgear } from "../characters/Character";
 import { faceSheetPath } from "../characters/face";
 import { Flames, Smoke } from "../fx/Fire";
@@ -641,6 +641,25 @@ const TPL: Record<string, T> = {
     };
   },
 
+  // TEMP: the owner's downloaded low-poly chubby character, as delivered, next to ours
+  "sketch-test": ({ beat }) => ({
+    real: true,
+    camera: { position: [14.5, TRENCH.H + 1.6, 4.4], target: [14.5, TRENCH.H + 1.3, -2], fov: 46 },
+    focus: [14.5, TRENCH.H + 1.4, -2],
+    focusRange: 4,
+    content: (
+      <>
+        <Trench preset={P(beat)} />
+        <FbxPreview path="models/sketchchubby/body.fbx" height={2.6} position={[13.1, TRENCH.H, -2]} rotationY={0} tint="#B8B4AA" />
+        <ChubbyBodyPreview position={[15.9, TRENCH.H, -2]} scale={1.7}>
+          <group position={[0, 1.4, 0.0]} scale={0.48}>
+            <Head sheet={faceSheetPath("tommy", "R")} variant="R" expression="neutral" mouth="rest" />
+            <Headgear g={BIBLE.tommy.headgear} />
+          </group>
+        </ChubbyBodyPreview>
+      </>
+    ),
+  }),
   // TEMP: chubby soldier body (T-pose, before rigging) with our head + helmet
   "chubby-test": ({ beat, cut }) => {
     const side = cut.do === "side";

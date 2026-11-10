@@ -3,6 +3,8 @@ import * as THREE from "three";
 import { useThree } from "@react-three/fiber";
 import { staticFile, useDelayRender } from "remotion";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader.js";
+import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader.js";
+import { clone as cloneSkinned } from "three/examples/jsm/utils/SkeletonUtils.js";
 import { Real } from "../look/materials";
 import { Toon } from "../look/style";
 
@@ -76,6 +78,61 @@ export const ChubbyBodyPreview: React.FC<{ position?: [number, number, number]; 
           );
         })}
       {children}
+    </group>
+  );
+};
+
+// TEMP: look at any FBX character as delivered (bind pose), scaled to `height` metres
+const fbxCache = new Map<string, Promise<THREE.Group>>();
+export const FbxPreview: React.FC<{ path: string; height: number; position?: [number, number, number]; rotationY?: number; tint?: string }> = ({ path, height, position, rotationY = 0, tint }) => {
+  const { delayRender, continueRender, cancelRender } = useDelayRender();
+  const advance = useThree((s) => s.advance);
+  const [g, setG] = useState<THREE.Group | null>(null);
+  const h = useRef<number | null>(null);
+  useLayoutEffect(() => {
+    let alive = true;
+    h.current = delayRender(`fbx ${path}`);
+    let p = fbxCache.get(path);
+    if (!p) {
+      p = new FBXLoader().loadAsync(staticFile(path));
+      fbxCache.set(path, p);
+    }
+    p.then((x) => alive && setG(x)).catch((e) => cancelRender(e));
+    return () => {
+      alive = false;
+      if (h.current !== null) {
+        continueRender(h.current);
+        h.current = null;
+      }
+    };
+  }, [path]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    if (!g || h.current === null) return;
+    advance(performance.now());
+    continueRender(h.current);
+    h.current = null;
+  }, [g, advance, continueRender]);
+  const obj = useMemo(() => {
+    if (!g) return null;
+    const c = cloneSkinned(g) as THREE.Group;
+    c.traverse((o) => {
+      const m = o as THREE.Mesh;
+      if (m.isMesh) {
+        m.castShadow = true;
+        m.frustumCulled = false;
+        if (tint) m.material = new THREE.MeshStandardMaterial({ color: tint, roughness: 0.8 });
+      }
+    });
+    const box = new THREE.Box3().setFromObject(c);
+    const k = height / (box.max.y - box.min.y);
+    c.scale.multiplyScalar(k);
+    c.position.y = -box.min.y * k;
+    return c;
+  }, [g, height, tint]);
+  if (!obj) return null;
+  return (
+    <group position={position} rotation={[0, rotationY, 0]}>
+      <primitive object={obj} />
     </group>
   );
 };
