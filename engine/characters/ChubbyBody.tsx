@@ -20,6 +20,7 @@ export const PART_LOOK: Record<string, { tex?: "Fabric026"; tint: string; kind?:
   boots: { tint: "#33241A", kind: "leather" },
   brass: { tint: "#C9A04A", kind: "brass" },
   glove: { tint: "#FFFFFF", kind: "glove" },
+  skin: { tint: "#F4F4F2", kind: "glove" },
 };
 
 const objCache = new Map<string, Promise<THREE.Group>>();
@@ -54,8 +55,8 @@ const useObj = (path: string) => {
   return g;
 };
 
-export const ChubbyBodyPreview: React.FC<{ position?: [number, number, number]; rotationY?: number; scale?: number; children?: React.ReactNode }> = ({ position, rotationY = 0, scale = 1, children }) => {
-  const g = useObj("models/chubby/chubby_soldier.obj");
+export const ChubbyBodyPreview: React.FC<{ position?: [number, number, number]; rotationY?: number; scale?: number; children?: React.ReactNode; src?: string; showSkin?: boolean }> = ({ position, rotationY = 0, scale = 1, children, src = "models/chubby/chubby_soldier.obj", showSkin = false }) => {
+  const g = useObj(src);
   const meshes = useMemo(() => {
     if (!g) return [];
     const out: { name: string; geo: THREE.BufferGeometry }[] = [];
@@ -68,7 +69,7 @@ export const ChubbyBodyPreview: React.FC<{ position?: [number, number, number]; 
   return (
     <group position={position} rotation={[0, rotationY, 0]} scale={scale}>
       {meshes
-        .filter((m) => m.name !== "skin")
+        .filter((m) => showSkin || m.name !== "skin")
         .map((m) => {
           const L = PART_LOOK[m.name] ?? { tint: "#888888" };
           return (

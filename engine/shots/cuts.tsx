@@ -641,25 +641,28 @@ const TPL: Record<string, T> = {
     };
   },
 
-  // TEMP: the owner's downloaded low-poly chubby character, as delivered, next to ours
-  "sketch-test": ({ beat }) => ({
-    real: true,
-    camera: { position: [14.5, TRENCH.H + 1.6, 4.4], target: [14.5, TRENCH.H + 1.3, -2], fov: 46 },
-    focus: [14.5, TRENCH.H + 1.4, -2],
-    focusRange: 4,
-    content: (
-      <>
-        <Trench preset={P(beat)} />
-        <FbxPreview path="models/sketchchubby/body.fbx" height={2.6} position={[13.1, TRENCH.H, -2]} rotationY={0} tint="#B8B4AA" />
-        <ChubbyBodyPreview position={[15.9, TRENCH.H, -2]} scale={1.7}>
-          <group position={[0, 1.4, 0.0]} scale={0.48}>
-            <Head sheet={faceSheetPath("tommy", "R")} variant="R" expression="neutral" mouth="rest" />
-            <Headgear g={BIBLE.tommy.headgear} />
-          </group>
-        </ChubbyBodyPreview>
-      </>
-    ),
-  }),
+  // TEMP: the owner's chubby character, dressed in the WW1 uniform, with the reference face + helmet
+  "sketch-test": ({ beat, cut }) => {
+    const side = cut.do === "side";
+    const K = 1.7;
+    return {
+      real: true,
+      camera: side ? { position: [17.3, TRENCH.H + 1.5, 0.6], target: [14.5, TRENCH.H + 1.4, -2], fov: 44 } : { position: [14.5, TRENCH.H + 1.5, 3.0], target: [14.5, TRENCH.H + 1.4, -2], fov: 44 },
+      focus: [14.5, TRENCH.H + 1.4, -2],
+      focusRange: 3,
+      content: (
+        <>
+          <Trench preset={P(beat)} />
+          <ChubbyBodyPreview src="models/dressed/dressed_soldier.obj" showSkin position={[14.5, TRENCH.H, -2]} scale={K}>
+            <group position={[0, 1.28, 0.02]} scale={0.5}>
+              <Head sheet={faceSheetPath("tommy", "R")} variant="R" expression="neutral" mouth="rest" />
+              <Headgear g={BIBLE.tommy.headgear} />
+            </group>
+          </ChubbyBodyPreview>
+        </>
+      ),
+    };
+  },
   // TEMP: chubby soldier body (T-pose, before rigging) with our head + helmet
   "chubby-test": ({ beat, cut }) => {
     const side = cut.do === "side";

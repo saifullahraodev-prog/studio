@@ -1,18 +1,19 @@
 # Mixamo auto-rig: our chubby soldier (owner does this; ~5 minutes)
 
-The file is ready: **`D:\Test\chubby_soldier.zip`** (the chubby WW1 soldier body I built).
+The file is ready: **`D:\Test\dressed_soldier.zip`** (YOUR chubby character, dressed in the WW1 uniform;
+owner's choice 2026-11-10). The older body I built is `D:\Test\chubby_soldier.zip` (fallback).
 Mixamo adds a skeleton to it for free, so all 12 moves you already downloaded play on it.
 
 ## Steps
 1. Go to https://www.mixamo.com and sign in.
 2. On the right, under the character preview, click **UPLOAD CHARACTER**.
-3. Drag **`chubby_soldier.zip`** into the box (or click "Select character file").
+3. Drag **`dressed_soldier.zip`** into the box (or click "Select character file").
 4. **Orient**: the soldier should face you, standing up. If it does, click **NEXT**.
 5. **Place markers** (drag each circle onto the body, front view):
-   - **CHIN**: bottom of the small round ball on top (the placeholder head).
-   - **WRISTS**: where the sleeve meets the white mitten, both sides.
+   - **CHIN**: bottom of the big white head.
+   - **WRISTS**: where the sleeve meets the white hand, both sides.
    - **ELBOWS**: middle of each sleeve.
-   - **KNEES**: top of the striped leg wraps (puttees).
+   - **KNEES**: top of the leg wraps (puttees), just under the trousers.
    - **GROIN**: between the legs, at the bottom of the tunic.
    - Leave **Use Symmetry** ticked. **Skeleton LOD**: **Standard Skeleton (65)**. Click **NEXT**.
 6. Wait for it to finish, check it moves in the preview, click **NEXT**.
