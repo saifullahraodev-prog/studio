@@ -227,6 +227,8 @@ const propFor = (name: string | undefined, Stamp?: React.FC) => {
       return <RulebookHand />;
     case "rifle":
       return <Rifle />;
+    case "rifleraw": // barrel along +y from the grip (two-hand rifles placed by MocapActor)
+      return <Rifle rot={[0, 0, 0]} />;
     case "rifleport": // carried across the chest, muzzle up and out (running)
       return <Rifle rot={[0.5, 0, 0.9]} />;
     case "riflehip": // held low at the hip, bayonet pointing ahead (charging)

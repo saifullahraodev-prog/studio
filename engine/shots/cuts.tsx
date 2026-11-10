@@ -18,6 +18,7 @@ import { DeckBoat, RocketFlare } from "../props/ActionProps";
 import { FireJet, FloorRifle, MachineGun } from "../props/TrenchProps";
 import { Barrel, Trench, TRENCH } from "../worlds/trench/Trench";
 import { Prop } from "../props/Model";
+import { MocapActor } from "../characters/MocapActor";
 import { Flames, Smoke } from "../fx/Fire";
 import SETS from "./sets.json";
 
@@ -637,6 +638,27 @@ const TPL: Record<string, T> = {
     };
   },
 
+  // TEMP: real body + mocap style options (do=A|B|C picks the option)
+  "mocap-test": ({ beat, cut, t }) => {
+    const looks = {
+      A: { headK: 0.55 },
+      B: { headK: 0.85, gloves: true, tint: "#C9B88C" },
+      C: { headK: 0.85, gloves: true, slim: 0.7, tint: "#C9B88C" },
+    } as const;
+    const look = looks[(cut.do as "A" | "B" | "C") ?? "B"] ?? looks.B;
+    return {
+      real: true,
+      camera: { position: [13.6, TRENCH.H + 2.0, 4.6], target: [14.5, TRENCH.H + 1.6, -2], fov: 40 },
+      focus: [14.5, TRENCH.H + 1.8, -2],
+      focusRange: 4,
+      content: (
+        <>
+          <Trench preset={P(beat)} />
+          <MocapActor def={BIBLE.tommy} clip="rifle-aim" t={t} position={[14.5, TRENCH.H, -2]} rotationY={0.55} expression="scared" look={look} holdR="rifle" />
+        </>
+      ),
+    };
+  },
   // TEMP: real CC0 models in the trench (proof of loading + scale)
   "props-test": ({ beat, t }) => ({
     real: true,

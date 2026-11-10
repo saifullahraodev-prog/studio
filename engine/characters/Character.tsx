@@ -117,7 +117,7 @@ const S: React.FC<React.PropsWithChildren<{ p?: [number, number, number]; r?: [n
 );
 
 // ─── head + face ────────────────────────────────────────────────────────────
-const Head: React.FC<{ sheet: string; variant: FaceVariant; expression: Expression; mouth: MouthSlot; skin?: string }> = ({ sheet, variant, expression, mouth, skin }) => {
+export const Head: React.FC<{ sheet: string; variant: FaceVariant; expression: Expression; mouth: MouthSlot; skin?: string }> = ({ sheet, variant, expression, mouth, skin }) => {
   const headFace = isHeadFace(variant);
   const light = useSceneLight();
   const look = useFaceLook();
@@ -282,7 +282,7 @@ const Hair: React.FC<{ h: NonNullable<CharacterDef["hair"]> }> = ({ h }) => {
 };
 
 // ─── headgear (sits low on the round head, like a real helmet/cap) ──────────
-const Headgear: React.FC<{ g: CharacterDef["headgear"] }> = ({ g }) => {
+export const Headgear: React.FC<{ g: CharacterDef["headgear"] }> = ({ g }) => {
   if (g.type === "peakedCap") {
     return (
       <group position={[0, 0.31, 0]} scale={1.13}>
@@ -472,7 +472,7 @@ const Headgear: React.FC<{ g: CharacterDef["headgear"] }> = ({ g }) => {
 // ─── white 4-finger cartoon glove ───────────────────────────────────────────
 // `up` = how many digits are extended (0 = fist … 4 = open hand). Order: index,
 // middle, ring, thumb. Folded digits curl into the palm.
-const Glove: React.FC<{ up?: number }> = ({ up = 4 }) => (
+export const Glove: React.FC<{ up?: number }> = ({ up = 4 }) => (
   <group>
     <S p={[0, 0.05, 0]}>
       <cylinderGeometry args={[0.13, 0.105, 0.1, 20]} />
