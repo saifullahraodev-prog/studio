@@ -13,6 +13,8 @@ os.makedirs(out, exist_ok=True)
 
 S.reset()
 S.render_setup("CYCLES", 540, 960, samples)
+if samples <= 8:  # quick motion preview: half size
+    bpy.context.scene.render.resolution_percentage = 50
 S.sky("lilienstein_4k.hdr", 1.0, rot=1.2)
 S.sun(elev=55, azim=200, energy=3.6)
 S.build_trench()
