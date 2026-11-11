@@ -17,7 +17,7 @@ HUMAN_SPEED = {"Rifle Run": 4.3, "Running": 5.9, "Walk With Rifle": 1.18, "Rifle
 HUMAN_HIP = 0.98  # hip height of that body (m)
 DROP_LAST = False  # loop seam: drop the last frame if it repeats the first pose
 WRINKLES = False
-SMOOTH = False  # subdivision: off (it distorts the cloth UVs; fix later)
+SMOOTH = True  # subdivision (uv_smooth NONE keeps the cloth weave right)
 GRIP = 0.55  # where the fist closes, along the hand bone (0 = wrist, 1 = knuckles)  # procedural folds: off until the scale problem is solved
 
 
@@ -284,10 +284,19 @@ def soldier(move, loc, rot_z=0.0, who="tommy", uniform="khaki", expr="neutral", 
         if o.type != "MESH":
             continue
         key = o.name.split(".")[0]
-        if SMOOTH and key not in ("skin", "brass"):
+        if SMOOTH and key not in ("skin",):
+            # the body was exported as loose triangles: weld them into one surface first
+            bm_ = bmesh.new()
+            bm_.from_mesh(o.data)
+            ext = max(o.dimensions) / max(1e-9, max(o.scale)) if max(o.scale) else 1.0
+            bmesh.ops.remove_doubles(bm_, verts=bm_.verts, dist=1e-4 * max(1e-6, max(v.co.length for v in bm_.verts)))
+            bm_.to_mesh(o.data)
+            bm_.free()
+        if SMOOTH and key not in ("skin", "brass", "webbing"):  # straps/pouches stay crisp boxes
             sub = o.modifiers.new("smooth", "SUBSURF")
             sub.levels = 1
             sub.render_levels = 2
+            sub.uv_smooth = "NONE"  # keep the cloth UVs as they are (smoothed UVs stretch the weave)
         for p in o.data.polygons:
             p.use_smooth = True
         o.data.materials.clear()
