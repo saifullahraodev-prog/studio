@@ -312,3 +312,12 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   preview each line, then record the whole voice at the end. Plan + status: `videos/2026-11-10-trench-trap/lines.md`.
 - Line 1 "Enemy soldiers trap you in a trench." -> `enemies-advance` + `you-surrounded`; preview
   `out/line1-720p.mp4` (placeholder voice, 1.1 s cold-open `lead:`). Waiting for owner feedback.
+
+## 2026-11-11: Trench Trap lines 1-6 done (three.js); Blender test started
+- Lines 1-6 approved one by one, following the reference; line 7 (machine gun) paused by owner.
+- Owner asked why it still differs from the reference: answer = assets + lighting/renderer (see chat).
+- Blender 4.5.16 LTS (owner-downloaded, signature checked: Blender Foundation) unpacked portable to
+  `D:\Blender\Blender Foundation\Blender 4.5lender.exe` (893 MB, no system install).
+  Headless works; Cycles sees the Quadro P620 (CUDA/OptiX). First test (`blender/test_soldier.py`):
+  chubby Mixamo soldier + move + photo sky + mud, 540x960: Cycles GPU 64 spp 16 s/frame,
+  Eevee ~50 s first frame (shader compile). Next: docs/blender-test-plan.md Step 1 (the world).
