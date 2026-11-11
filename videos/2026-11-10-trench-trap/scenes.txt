@@ -1,4 +1,4 @@
-# "Trench Trap": built line by line (see lines.md). Voice: owner's recording (line 1 = first sentence of the CapCut take, 1.1 s silence in front).
+# "Trench Trap": built line by line (see lines.md). Voice: owner's recording (lines 1-2 = CapCut take 0-3.88 s, 1.1 s silence in front).
 # Build:  HF_HUB_OFFLINE=1 python -I tools/build_video.py videos/2026-11-10-trench-trap
 
 slug: trench-trap
@@ -17,3 +17,11 @@ emph: soldiers, cornered
 cut: enemy    | enemies-close-in | fx=hit
 # tr=dive: same place, so the camera DIVES from the enemies down into the trench (like the reference)
 cut: cornered | you-trapped      | fx=whoosh+boom | tr=dive
+
+[beat 2]
+speaker: vo
+preset: day
+music: tense
+say: so you make a plan.
+emph: plan
+cut: so       | you-plan-chin    | fx=pop | tr=hard

@@ -25,6 +25,32 @@ export type ChubbyClip =
   | "hit-reaction" | "jump-down" | "run" | "stagger-run" | "scream";
 
 const ROOT = "models/mixamo/chubby";
+
+// Two-bone IK: bend upper arm + forearm so the hand reaches `target` (world space), elbow
+// staying on the side it already bends to. `k` blends from the mocap pose (0) to the reach (1).
+const reach = (upper: THREE.Bone, lower: THREE.Bone, hand: THREE.Bone, target: THREE.Vector3, k: number) => {
+  if (k <= 0) return;
+  const wp = (o: THREE.Object3D) => new THREE.Vector3().setFromMatrixPosition(o.matrixWorld);
+  const aim = (bone: THREE.Bone, from: THREE.Vector3, to: THREE.Vector3) => {
+    const q = new THREE.Quaternion().setFromUnitVectors(from.clone().normalize(), to.clone().normalize());
+    const world = bone.getWorldQuaternion(new THREE.Quaternion());
+    const parentQ = bone.parent!.getWorldQuaternion(new THREE.Quaternion()).invert();
+    const local = parentQ.multiply(q.multiply(world));
+    bone.quaternion.slerp(local, k);
+    bone.updateMatrixWorld(true);
+  };
+  const S = wp(upper), E = wp(lower), H = wp(hand);
+  const a = S.distanceTo(E), b = E.distanceTo(H);
+  const st = target.clone().sub(S);
+  const d = Math.min(st.length(), a + b - 1e-4);
+  const dir = st.normalize();
+  const pole = E.clone().sub(S);
+  pole.sub(dir.clone().multiplyScalar(pole.dot(dir))).normalize();
+  const cosA = Math.max(-1, Math.min(1, (a * a + d * d - b * b) / (2 * a * d)));
+  const E2 = S.clone().add(dir.clone().multiplyScalar(a * cosA)).add(pole.multiplyScalar(a * Math.sqrt(1 - cosA * cosA)));
+  aim(upper, E.clone().sub(S), E2.clone().sub(S));
+  aim(lower, wp(hand).sub(wp(lower)), target.clone().sub(wp(lower)));
+};
 let bodyPromise: Promise<THREE.Group> | null = null;
 const loadBody = () => {
   if (!bodyPromise)
@@ -105,7 +131,8 @@ export const ChubbyActor: React.FC<{
   headK?: number; // head size multiplier
   handK?: number; // mitten size
   headTilt?: number; // 0 = head stays upright, 1 = full mocap head motion
-}> = ({ def, clip, t, loop = true, speed = 1, position, rotationY = 0, size = 1.8, expression = "neutral", mouth = "rest", face = "R", uniform = "khaki", rifle = false, headK = 1, handK = 1.5, headTilt = 0.0 }) => {
+  chin?: number; // 0..1: bring the right glove to the chin (thinking / scheming)
+}> = ({ def, clip, t, loop = true, speed = 1, position, rotationY = 0, size = 1.8, expression = "neutral", mouth = "rest", face = "R", uniform = "khaki", rifle = false, headK = 1, handK = 1.5, headTilt = 0.0, chin = 0 }) => {
   const a = useAssets(clip);
   const rig = useMemo(() => {
     if (!a) return null;
@@ -144,6 +171,13 @@ export const ChubbyActor: React.FC<{
   const yawQ = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), Math.atan2(fwd.x, fwd.z));
   const headQ = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), upK).multiply(yawQ);
   const headP = at("Head").add(upK.clone().multiplyScalar(0.2 * headK));
+  if (chin > 0) {
+    // under the chin, a little in front of the face (actor space -> world)
+    const fwdFlat = new THREE.Vector3(Math.sin(Math.atan2(fwd.x, fwd.z)), 0, Math.cos(Math.atan2(fwd.x, fwd.z)));
+    const side = new THREE.Vector3(fwdFlat.z, 0, -fwdFlat.x); // character's right
+    const chinP = headP.clone().add(fwdFlat.multiplyScalar(0.24 * headK)).add(side.multiplyScalar(-0.06 * headK)).add(new THREE.Vector3(0, -0.36 * headK, 0)).applyMatrix4(parentWorld);
+    reach(rig.bone("RightArm"), rig.bone("RightForeArm"), rig.bone("RightHand"), chinP, chin);
+  }
 
   let gun: { p: THREE.Vector3; q: THREE.Quaternion } | null = null;
   if (rifle) {
@@ -164,7 +198,7 @@ export const ChubbyActor: React.FC<{
       {(["LeftHand", "RightHand"] as const).map((hb) =>
         createPortal(
           <group key={hb} position={[0, 0.05, 0.0]} rotation={[0, hb === "LeftHand" ? Math.PI / 2 : -Math.PI / 2, Math.PI]} scale={0.62 / handK}>
-            <Glove up={rifle ? 0 : 4} />
+            <Glove up={rifle || (chin > 0.5 && hb === "RightHand") ? 1 : 4} />
           </group>,
           rig.bone(hb),
         ),

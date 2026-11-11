@@ -1,7 +1,7 @@
 [
  {
   "word": "Enemy",
-  "start": 0.78,
+  "start": 0.98,
   "end": 1.42
  },
  {
@@ -40,8 +40,33 @@
   "end": 3.06
  },
  {
-  "word": "trench.",
+  "word": "trench,",
   "start": 3.06,
-  "end": 3.38
+  "end": 3.42
+ },
+ {
+  "word": "so",
+  "start": 3.8,
+  "end": 4.14
+ },
+ {
+  "word": "you",
+  "start": 4.14,
+  "end": 4.26
+ },
+ {
+  "word": "make",
+  "start": 4.26,
+  "end": 4.4
+ },
+ {
+  "word": "a",
+  "start": 4.4,
+  "end": 4.52
+ },
+ {
+  "word": "plan.",
+  "start": 4.52,
+  "end": 4.76
  }
 ]

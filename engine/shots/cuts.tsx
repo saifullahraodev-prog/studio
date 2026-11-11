@@ -833,6 +833,24 @@ const TPL: Record<string, T> = {
     };
   },
 
+  // -- "Trench Trap" line 2: "so you make a plan." (after the reference's 5.2 s close-up) --
+  // you, against the plank wall, eyes narrowing, glove to the chin: scheming
+  "you-plan-chin": ({ beat, t, dur }) => ({
+    real: true,
+    camera: live({ position: [0.4, 1.85, -2.9], target: [0.2, 1.9, -6.3], fov: 42, roll: 0.06 }, t, dur, { push: 0.22 }),
+    focus: [0.25, 2.05, -6.2],
+    focusRange: 1.1,
+    bokeh: 7,
+    content: (
+      <>
+        <Trench preset={P(beat)} />
+        <Prop id="wooden_military_crate" position={[-0.8, 0, -6.9]} rotation={[0, 0.3, 0]} />
+        <Prop id="wooden_ladder" position={[1.25, 0, -4.6]} rotation={[-0.22, -Math.PI / 2, 0]} />
+        <ChubbyActor def={BIBLE.tommy} clip="scream" t={0.15} speed={0.05} position={[0.25, 0, -6.6]} rotationY={0.05} expression="determined" chin={Math.min(1, t / 0.25)} />
+      </>
+    ),
+  }),
+
   // -- trench Short ("The Flamethrower Trap", dramatized). Real body size. --
   // "Enemy soldiers have you cornered": you, looking up; rifles aimed down from both parapets
   "trench-cornered": ({ beat, t, dur }) => ({
