@@ -10,3 +10,6 @@ models/
 public/models/mixamo/body.fbx
 public/models/sketchchubby/
 public/models/dressed/
+
+# Blender test renders + local asset copies
+out/blender/

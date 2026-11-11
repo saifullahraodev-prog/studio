@@ -25,9 +25,14 @@ required. Credit is given here anyway. Audio credits: `audio/LICENSES.md`.
 
 Downloaded 2026-11-09 (owner-approved revision 2, task 3).
 
+Blender test (2026-11-11), 4K HDR backdrops with forest + sky: lilienstein_4k.hdr (https://polyhaven.com/a/lilienstein),
+hausdorf_clear_sky_4k.hdr (https://polyhaven.com/a/hausdorf_clear_sky). CC0.
+
 ## 3D models: Poly Haven (https://polyhaven.com, CC0), 1K glTF, downloaded 2026-11-10
 Folder `public/models/polyhaven/<id>/`. Owner decision "Real models + mocap" (2026-11-10).
 barrel_03, Barrel_01, wooden_barrels_01, old_military_crate, wooden_military_crate, wooden_crate_02, ammo_box,
 cement_bag, compost_bags, stick_grenade, old_gas_mask, rusted_spade_01, wooden_ladder, tree_stump_01,
 tree_stump_02, dead_tree_trunk, rock_07, stone_01, wooden_bucket_01, dry_branches_medium_01
 (each at https://polyhaven.com/a/<id>).
+
+Blender test textures (2026-11-11), Poly Haven CC0 1K: brown_mud_02, muddy_tracks, sparse_grass, weathered_planks (https://polyhaven.com/a/<id>), in blender/assets/tex/.
