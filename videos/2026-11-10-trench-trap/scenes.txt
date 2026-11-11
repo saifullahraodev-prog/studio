@@ -1,4 +1,4 @@
-# "Trench Trap": built line by line (see lines.md). Voice: owner's recording (lines 1-5 = CapCut take 0-14.8 s, 1.1 s silence in front).
+# "Trench Trap": built line by line (see lines.md). Voice: owner's recording (lines 1-6 = CapCut take 0-17.72 s, 1.1 s silence in front).
 # Build:  HF_HUB_OFFLINE=1 python -I tools/build_video.py videos/2026-11-10-trench-trap
 
 slug: trench-trap
@@ -55,3 +55,13 @@ say: You duck around the corner, and go dead quiet.
 emph: corner, quiet
 cut: you      | you-duck-corner  | fx=whoosh | tr=hard
 cut: dead     | you-dead-quiet   | tr=flash
+
+[beat 6]
+speaker: vo
+preset: day
+music: tense
+say: They think you're finished, so they charge in after you,
+emph: finished, charge
+cut: they     | they-think-smug     | fx=pop  | tr=hard
+cut: so       | enemies-charge-down | fx=hit  | tr=hard
+cut: after    | enemies-rush-past   | fx=whoosh | tr=hard

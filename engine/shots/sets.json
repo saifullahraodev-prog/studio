@@ -34,6 +34,9 @@
   "you-drop-rifle": "trench",
   "you-stagger-away": "trench",
   "you-duck-corner": "trench",
-  "you-dead-quiet": "trench"
+  "you-dead-quiet": "trench",
+  "they-think-smug": "trench",
+  "enemies-charge-down": "trench",
+  "enemies-rush-past": "trench"
  }
 }

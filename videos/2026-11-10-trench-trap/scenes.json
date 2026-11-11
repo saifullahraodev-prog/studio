@@ -3,7 +3,7 @@
  "format": "short",
  "world": "trench",
  "fps": 30,
- "duration": 16.2,
+ "duration": 19.12,
  "beats": [
   {
    "id": "b1",
@@ -23,7 +23,7 @@
      "fx": "whoosh+boom",
      "tr": "dive",
      "start": 2.18,
-     "end": 3.86,
+     "end": 3.88,
      "face": "neutral"
     }
    ],
@@ -37,14 +37,14 @@
    ],
    "subtitle": "Enemy soldiers have you cornered in your own trench,",
    "pause": 0.05,
-   "voiceStart": 0.9,
+   "voiceStart": 0.94,
    "voiceEnd": 3.42,
    "start": 0.0,
-   "end": 3.86,
+   "end": 3.88,
    "words": [
     {
      "word": "Enemy",
-     "start": 0.9,
+     "start": 0.94,
      "end": 1.42
     },
     {
@@ -88,11 +88,11 @@
      "end": 3.42
     }
    ],
-   "cueAt": 0.9,
+   "cueAt": 0.94,
    "aligned": [
     [
      "Enemy",
-     0.9,
+     0.94,
      1.42,
      "Enemy"
     ],
@@ -154,7 +154,7 @@
      "shot": "you-plan-chin",
      "fx": "pop",
      "tr": "hard",
-     "start": 3.86,
+     "start": 3.88,
      "end": 5.12,
      "face": "neutral"
     }
@@ -168,14 +168,14 @@
    ],
    "subtitle": "so you make a plan.",
    "pause": 0.05,
-   "voiceStart": 3.94,
+   "voiceStart": 3.96,
    "voiceEnd": 4.78,
-   "start": 3.86,
+   "start": 3.88,
    "end": 5.12,
    "words": [
     {
      "word": "So",
-     "start": 3.94,
+     "start": 3.96,
      "end": 4.14
     },
     {
@@ -199,11 +199,11 @@
      "end": 4.78
     }
    ],
-   "cueAt": 3.94,
+   "cueAt": 3.96,
    "aligned": [
     [
      "so",
-     3.94,
+     3.96,
      4.14,
      "So"
     ],
@@ -321,16 +321,16 @@
     {
      "word": "hoses",
      "start": 6.44,
-     "end": 6.76
+     "end": 6.78
     },
     {
      "word": "the",
-     "start": 6.76,
-     "end": 6.96
+     "start": 6.78,
+     "end": 6.98
     },
     {
      "word": "trench",
-     "start": 6.96,
+     "start": 6.98,
      "end": 7.24
     },
     {
@@ -385,18 +385,18 @@
     [
      "hoses",
      6.44,
-     6.76,
+     6.78,
      "hoses"
     ],
     [
      "the",
-     6.76,
-     6.96,
+     6.78,
+     6.98,
      "the"
     ],
     [
      "trench",
-     6.96,
+     6.98,
      7.24,
      "trench"
     ],
@@ -441,7 +441,7 @@
      "fx": "whoosh",
      "tr": "hard",
      "start": 10.36,
-     "end": 12.94,
+     "end": 12.96,
      "face": "neutral"
     }
    ],
@@ -458,7 +458,7 @@
    "voiceStart": 8.22,
    "voiceEnd": 12.46,
    "start": 8.14,
-   "end": 12.94,
+   "end": 12.96,
    "words": [
     {
      "word": "You",
@@ -473,11 +473,11 @@
     {
      "word": "throw",
      "start": 8.9,
-     "end": 9.16
+     "end": 9.14
     },
     {
      "word": "down",
-     "start": 9.16,
+     "start": 9.14,
      "end": 9.42
     },
     {
@@ -498,11 +498,11 @@
     {
      "word": "stagger",
      "start": 10.4,
-     "end": 10.78
+     "end": 10.76
     },
     {
      "word": "away",
-     "start": 10.78,
+     "start": 10.76,
      "end": 11.2
     },
     {
@@ -548,12 +548,12 @@
     [
      "throw",
      8.9,
-     9.16,
+     9.14,
      "throw"
     ],
     [
      "down",
-     9.16,
+     9.14,
      9.42,
      "down"
     ],
@@ -578,12 +578,12 @@
     [
      "stagger",
      10.4,
-     10.78,
+     10.76,
      "stagger"
     ],
     [
      "away",
-     10.78,
+     10.76,
      11.2,
      "away"
     ],
@@ -627,7 +627,7 @@
      "shot": "you-duck-corner",
      "fx": "whoosh",
      "tr": "hard",
-     "start": 12.94,
+     "start": 12.96,
      "end": 14.98,
      "face": "neutral"
     },
@@ -636,7 +636,7 @@
      "shot": "you-dead-quiet",
      "tr": "flash",
      "start": 14.98,
-     "end": 16.2,
+     "end": 16.06,
      "face": "neutral"
     }
    ],
@@ -650,14 +650,14 @@
    ],
    "subtitle": "You duck around the corner, and go dead quiet.",
    "pause": 0.05,
-   "voiceStart": 13.02,
-   "voiceEnd": 15.64,
-   "start": 12.94,
-   "end": 16.2,
+   "voiceStart": 13.04,
+   "voiceEnd": 15.62,
+   "start": 12.96,
+   "end": 16.06,
    "words": [
     {
      "word": "You",
-     "start": 13.02,
+     "start": 13.04,
      "end": 13.12
     },
     {
@@ -682,7 +682,7 @@
     },
     {
      "word": "and",
-     "start": 14.58,
+     "start": 14.6,
      "end": 14.84
     },
     {
@@ -693,19 +693,19 @@
     {
      "word": "dead",
      "start": 15.02,
-     "end": 15.26
+     "end": 15.24
     },
     {
      "word": "quiet.",
-     "start": 15.26,
-     "end": 15.64
+     "start": 15.24,
+     "end": 15.62
     }
    ],
-   "cueAt": 13.02,
+   "cueAt": 13.04,
    "aligned": [
     [
      "You",
-     13.02,
+     13.04,
      13.12,
      "You"
     ],
@@ -735,7 +735,7 @@
     ],
     [
      "and",
-     14.58,
+     14.6,
      14.84,
      "and"
     ],
@@ -748,14 +748,175 @@
     [
      "dead",
      15.02,
-     15.26,
+     15.24,
      "dead"
     ],
     [
      "quiet.",
-     15.26,
-     15.64,
+     15.24,
+     15.62,
      "quiet."
+    ]
+   ]
+  },
+  {
+   "id": "b6",
+   "cuts": [
+    {
+     "cue": "they",
+     "shot": "they-think-smug",
+     "fx": "pop",
+     "tr": "hard",
+     "start": 16.06,
+     "end": 17.42,
+     "face": "neutral"
+    },
+    {
+     "cue": "so",
+     "shot": "enemies-charge-down",
+     "fx": "hit",
+     "tr": "hard",
+     "start": 17.42,
+     "end": 18.12,
+     "face": "neutral"
+    },
+    {
+     "cue": "after",
+     "shot": "enemies-rush-past",
+     "fx": "whoosh",
+     "tr": "hard",
+     "start": 18.12,
+     "end": 19.12,
+     "face": "neutral"
+    }
+   ],
+   "speaker": "vo",
+   "preset": "day",
+   "music": "tense",
+   "say": "They think you're finished, so they charge in after you,",
+   "emph": [
+    "finished",
+    "charge"
+   ],
+   "subtitle": "They think you're finished, so they charge in after you,",
+   "pause": 0.05,
+   "voiceStart": 16.14,
+   "voiceEnd": 18.58,
+   "start": 16.06,
+   "end": 19.12,
+   "words": [
+    {
+     "word": "They",
+     "start": 16.14,
+     "end": 16.26
+    },
+    {
+     "word": "think",
+     "start": 16.26,
+     "end": 16.48
+    },
+    {
+     "word": "you're",
+     "start": 16.48,
+     "end": 16.66
+    },
+    {
+     "word": "finished,",
+     "start": 16.66,
+     "end": 16.98
+    },
+    {
+     "word": "so",
+     "start": 17.46,
+     "end": 17.6
+    },
+    {
+     "word": "they",
+     "start": 17.6,
+     "end": 17.74
+    },
+    {
+     "word": "charge",
+     "start": 17.74,
+     "end": 18.0
+    },
+    {
+     "word": "in",
+     "start": 18.0,
+     "end": 18.16
+    },
+    {
+     "word": "after",
+     "start": 18.16,
+     "end": 18.38
+    },
+    {
+     "word": "you.",
+     "start": 18.38,
+     "end": 18.58
+    }
+   ],
+   "cueAt": 16.14,
+   "aligned": [
+    [
+     "They",
+     16.14,
+     16.26,
+     "They"
+    ],
+    [
+     "think",
+     16.26,
+     16.48,
+     "think"
+    ],
+    [
+     "you're",
+     16.48,
+     16.66,
+     "you're"
+    ],
+    [
+     "finished,",
+     16.66,
+     16.98,
+     "finished,"
+    ],
+    [
+     "so",
+     17.46,
+     17.6,
+     "so"
+    ],
+    [
+     "they",
+     17.6,
+     17.74,
+     "they"
+    ],
+    [
+     "charge",
+     17.74,
+     18.0,
+     "charge"
+    ],
+    [
+     "in",
+     18.0,
+     18.16,
+     "in"
+    ],
+    [
+     "after",
+     18.16,
+     18.38,
+     "after"
+    ],
+    [
+     "you,",
+     18.38,
+     18.58,
+     "you."
     ]
    ]
   }
@@ -763,7 +924,7 @@
  "captionWords": [
   {
    "text": "Enemy",
-   "start": 0.9,
+   "start": 0.94,
    "end": 1.42,
    "emph": false,
    "brk": false
@@ -826,7 +987,7 @@
   },
   {
    "text": "so",
-   "start": 3.94,
+   "start": 3.96,
    "end": 4.14,
    "emph": false,
    "brk": false
@@ -904,20 +1065,20 @@
   {
    "text": "hoses",
    "start": 6.44,
-   "end": 6.76,
+   "end": 6.78,
    "emph": false,
    "brk": false
   },
   {
    "text": "the",
-   "start": 6.76,
-   "end": 6.96,
+   "start": 6.78,
+   "end": 6.98,
    "emph": false,
    "brk": false
   },
   {
    "text": "trench",
-   "start": 6.96,
+   "start": 6.98,
    "end": 7.24,
    "emph": false,
    "brk": false
@@ -953,13 +1114,13 @@
   {
    "text": "throw",
    "start": 8.9,
-   "end": 9.16,
+   "end": 9.14,
    "emph": false,
    "brk": false
   },
   {
    "text": "down",
-   "start": 9.16,
+   "start": 9.14,
    "end": 9.42,
    "emph": false,
    "brk": false
@@ -988,13 +1149,13 @@
   {
    "text": "stagger",
    "start": 10.4,
-   "end": 10.78,
+   "end": 10.76,
    "emph": false,
    "brk": false
   },
   {
    "text": "away",
-   "start": 10.78,
+   "start": 10.76,
    "end": 11.2,
    "emph": false,
    "brk": false
@@ -1036,7 +1197,7 @@
   },
   {
    "text": "You",
-   "start": 13.02,
+   "start": 13.04,
    "end": 13.12,
    "emph": false,
    "brk": false
@@ -1071,7 +1232,7 @@
   },
   {
    "text": "and",
-   "start": 14.58,
+   "start": 14.6,
    "end": 14.84,
    "emph": false,
    "brk": false
@@ -1086,15 +1247,85 @@
   {
    "text": "dead",
    "start": 15.02,
-   "end": 15.26,
+   "end": 15.24,
    "emph": false,
    "brk": false
   },
   {
    "text": "quiet",
-   "start": 15.26,
-   "end": 15.64,
+   "start": 15.24,
+   "end": 15.62,
    "emph": true,
+   "brk": true
+  },
+  {
+   "text": "They",
+   "start": 16.14,
+   "end": 16.26,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "think",
+   "start": 16.26,
+   "end": 16.48,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "you're",
+   "start": 16.48,
+   "end": 16.66,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "finished",
+   "start": 16.66,
+   "end": 16.98,
+   "emph": true,
+   "brk": true
+  },
+  {
+   "text": "so",
+   "start": 17.46,
+   "end": 17.6,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "they",
+   "start": 17.6,
+   "end": 17.74,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "charge",
+   "start": 17.74,
+   "end": 18.0,
+   "emph": true,
+   "brk": false
+  },
+  {
+   "text": "in",
+   "start": 18.0,
+   "end": 18.16,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "after",
+   "start": 18.16,
+   "end": 18.38,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "you",
+   "start": 18.38,
+   "end": 18.58,
+   "emph": false,
    "brk": true
   }
  ]

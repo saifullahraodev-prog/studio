@@ -1,7 +1,7 @@
 [
  {
   "word": "Enemy",
-  "start": 0.9,
+  "start": 0.94,
   "end": 1.42
  },
  {
@@ -46,7 +46,7 @@
  },
  {
   "word": "So",
-  "start": 3.94,
+  "start": 3.96,
   "end": 4.14
  },
  {
@@ -102,16 +102,16 @@
  {
   "word": "hoses",
   "start": 6.44,
-  "end": 6.76
+  "end": 6.78
  },
  {
   "word": "the",
-  "start": 6.76,
-  "end": 6.96
+  "start": 6.78,
+  "end": 6.98
  },
  {
   "word": "trench",
-  "start": 6.96,
+  "start": 6.98,
   "end": 7.24
  },
  {
@@ -137,11 +137,11 @@
  {
   "word": "throw",
   "start": 8.9,
-  "end": 9.16
+  "end": 9.14
  },
  {
   "word": "down",
-  "start": 9.16,
+  "start": 9.14,
   "end": 9.42
  },
  {
@@ -162,11 +162,11 @@
  {
   "word": "stagger",
   "start": 10.4,
-  "end": 10.78
+  "end": 10.76
  },
  {
   "word": "away",
-  "start": 10.78,
+  "start": 10.76,
   "end": 11.2
  },
  {
@@ -196,7 +196,7 @@
  },
  {
   "word": "You",
-  "start": 13.02,
+  "start": 13.04,
   "end": 13.12
  },
  {
@@ -221,7 +221,7 @@
  },
  {
   "word": "and",
-  "start": 14.58,
+  "start": 14.6,
   "end": 14.84
  },
  {
@@ -232,11 +232,61 @@
  {
   "word": "dead",
   "start": 15.02,
-  "end": 15.26
+  "end": 15.24
  },
  {
   "word": "quiet.",
-  "start": 15.26,
-  "end": 15.64
+  "start": 15.24,
+  "end": 15.62
+ },
+ {
+  "word": "They",
+  "start": 16.14,
+  "end": 16.26
+ },
+ {
+  "word": "think",
+  "start": 16.26,
+  "end": 16.48
+ },
+ {
+  "word": "you're",
+  "start": 16.48,
+  "end": 16.66
+ },
+ {
+  "word": "finished,",
+  "start": 16.66,
+  "end": 16.98
+ },
+ {
+  "word": "so",
+  "start": 17.46,
+  "end": 17.6
+ },
+ {
+  "word": "they",
+  "start": 17.6,
+  "end": 17.74
+ },
+ {
+  "word": "charge",
+  "start": 17.74,
+  "end": 18.0
+ },
+ {
+  "word": "in",
+  "start": 18.0,
+  "end": 18.16
+ },
+ {
+  "word": "after",
+  "start": 18.16,
+  "end": 18.38
+ },
+ {
+  "word": "you.",
+  "start": 18.38,
+  "end": 18.58
  }
 ]

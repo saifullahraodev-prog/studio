@@ -997,6 +997,69 @@ const TPL: Record<string, T> = {
     ),
   }),
 
+  // -- "Trench Trap" line 6: "They think you're finished, so they charge in after you,"
+  // (after the reference's 13.2-15.3 s: smug flamethrower close-up, grinning pack charging down the trench, rushing past)
+  "they-think-smug": ({ beat, t, dur }) => ({
+    real: true,
+    camera: live({ position: [0.6, 2.0, -0.6], target: [0.0, 1.9, 4.4], fov: 46 }, t, dur, { push: 0.12 }),
+    focus: [0.0, 2.1, 4.4],
+    focusRange: 1.4,
+    bokeh: 6,
+    content: (
+      <>
+        <Trench preset={P(beat)} />
+        <Flames t={t + 5} position={[-0.5, 0.1, 8.5]} size={2.2} seed={5} />
+        <Flames t={t + 7} position={[0.6, 0.1, 10.5]} size={1.8} seed={9} light={false} />
+        <ChubbyActor def={BIBLE.flamer} clip="rifle-aim" t={t + 1} position={[0.0, 0, 4.4]} rotationY={Math.PI - 0.5} expression="happy" uniform="fieldgrey" rifle weapon="flamegun" />
+        <ChubbyActor def={BIBLE.enemy} clip="rifle-walk" t={t} position={[-0.75, 0, 7.4 - t * 1.4]} rotationY={Math.PI} expression="happy" uniform="fieldgrey" rifle />
+      </>
+    ),
+  }),
+  "enemies-charge-down": ({ beat, t, dur }) => ({
+    real: true,
+    camera: live({ position: [0.5, 1.1, -5.4], target: [0.0, 1.9, 4.0], fov: 52 }, t, dur, { push: 0.05, shake: 0.03 }),
+    focus: [0, 1.8, 2.5 - 3.4 * t],
+    focusRange: 3,
+    bokeh: 3,
+    content: (
+      <>
+        <Trench preset={P(beat)} />
+        <Prop id="wooden_military_crate" position={[0.9, 0, -3.6]} rotation={[0, 0.5, 0]} />
+        <Prop id="ammo_box" position={[-0.9, 0, -2.8]} rotation={[0, -0.4, 0]} />
+        <Flames t={t + 6} position={[-0.6, 0.1, 9]} size={2.3} seed={4} />
+        <Flames t={t + 8} position={[0.6, 0.1, 11]} size={1.9} seed={7} light={false} />
+        {[
+          { x: 0.05, z: 3.0, ph: 0, uni: "fieldgrey", def: BIBLE.enemy },
+          { x: -0.55, z: 4.4, ph: 0.25, uni: "fieldgrey", def: BIBLE.enemy },
+          { x: 0.6, z: 5.0, ph: 0.5, uni: "fieldgrey", def: BIBLE.flamer },
+          { x: -0.2, z: 6.6, ph: 0.15, uni: "fieldgrey", def: BIBLE.enemy },
+        ].map((e, i) => (
+          <ChubbyActor key={i} def={e.def} clip="rifle-run" t={t + e.ph} position={[e.x, 0, e.z - t * 3.4]} rotationY={Math.PI} expression={i % 2 ? "happy" : "determined"} mouth={i % 2 ? "rest" : "wide"} uniform="fieldgrey" rifle weapon={e.def === BIBLE.flamer ? "flamegun" : "rifle"} />
+        ))}
+      </>
+    ),
+  }),
+  "enemies-rush-past": ({ beat, t, dur }) => ({
+    real: true,
+    camera: live({ position: [1.05, 0.7, -4.2], target: [-0.2, 1.7, 1.0], fov: 62, roll: -0.08 }, t, dur, { shake: 0.05 }),
+    motionBlur: 3,
+    focus: [0, 1.6, -2],
+    focusRange: 3,
+    content: (
+      <>
+        <Trench preset={P(beat)} />
+        <Flames t={t + 9} position={[0, 0.1, 6]} size={2.0} seed={2} />
+        {[
+          { x: -0.3, z: 3.2, ph: 0.1 },
+          { x: 0.3, z: 4.6, ph: 0.4 },
+          { x: -0.45, z: 5.9, ph: 0.7 },
+        ].map((e, i) => (
+          <ChubbyActor key={i} def={BIBLE.enemy} clip="rifle-run" t={t + e.ph} position={[e.x, 0, e.z - t * 4.0]} rotationY={Math.PI} expression="determined" mouth="wide" uniform="fieldgrey" rifle />
+        ))}
+      </>
+    ),
+  }),
+
   // -- trench Short ("The Flamethrower Trap", dramatized). Real body size. --
   // "Enemy soldiers have you cornered": you, looking up; rifles aimed down from both parapets
   "trench-cornered": ({ beat, t, dur }) => ({
