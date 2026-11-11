@@ -12,4 +12,5 @@ Workflow for every line:
 
 | # | Narration | Scenes (owner) | Shots | Status |
 |---|---|---|---|---|
-| 1 | Enemy soldiers trap you in a trench. | (a) enemies running toward you, guns in their hands; (b) you down in the trench, seeing enemies surround you | `enemies-close-in` -> camera dive (`tr=dive`) -> `you-trapped` (v2, after the reference's first 2 s; rifles now chunky + carried across the chest) | v2 preview sent, waiting |
+| 1 | Enemy soldiers have you cornered in your own trench, (owner voice, CapCut take 0.00-2.62 s) | (a) enemies running toward you, guns in their hands; (b) you down in the trench, seeing enemies surround you | `enemies-close-in` -> camera dive (`tr=dive`) -> `you-trapped`; chubby mocap soldiers (ChubbyActor), real props | **APPROVED 2026-11-11** |
+| 2 | so you make a plan. (owner voice, CapCut take 2.88-3.68 s) | waiting for owner | - | - |
