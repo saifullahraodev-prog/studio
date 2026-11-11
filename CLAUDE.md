@@ -40,6 +40,12 @@ Ask before installing anything large, deleting files, or spending money.
   to match the reference, use **real 3D models + motion capture** (free CC0/CC-BY models for props and
   bodies, Mixamo mocap downloaded by the owner), loaded into the existing Remotion/three.js pipeline
   (no Blender). Our drawn Variant D faces stay on the heads. Code-built bodies remain as fallback.
+- **RENDERER CHANGED by owner 2026-11-12: production moves to BLENDER** (after the 3-shot test,
+  `docs/blender-test-plan.md`). Blender 4.5 LTS portable at `D:/Blender/Blender Foundation/Blender 4.5/blender.exe`,
+  driven headless by Python (`blender/*.py`), Cycles on the Quadro P620 (CUDA). Scenes: `blender/studio_bl.py`
+  (world, materials, camera), `blender/studio_chars.py` (chubby Mixamo soldier, bean-eye face R, steel helmets,
+  gloves, weapons), `blender/studio_fx.py` (volumetric fire). Remotion stays for captions + sound on top of the
+  Blender frames. Show stills for approval before any long render (~3 h per 20 s Short at 540x960).
 - Sound: procedural SFX/music in `audio/sfx.py` + a small owner-approved CC0 pack for what code
   can't fake well (screams, crowds, ambience). List every downloaded file + licence in `audio/LICENSES.md`.
 - Remotion licence: free for individuals / teams up to 3.

@@ -27,7 +27,7 @@ if shot == "A":
     # high, behind the enemy: soldiers with rifles cross no-man's-land toward the trench
     for i, (x, y, off) in enumerate([(9.5, 1.0, 0), (10.8, 3.2, 7), (11.4, -1.4, 13), (12.6, 1.6, 4), (13.8, 4.6, 10), (14.6, -0.6, 16)]):
         C.soldier("Rifle Run", (x, y, H(x, y) - 0.02), rot_z=-math.pi / 2, who="enemy", uniform="fieldgrey", expr="angry",
-                  helmet_kind="stahl", offset=off, travel=(-2.6, 0, 0), frames=(1, 90), weapon="rifle")
+                  helmet_kind="stahl", offset=off, run_dir=(-1, 0), frames=(1, 90), weapon="rifle")
     S.camera((19.5, 3.0, D + 4.2), (4.0, 1.4, D + 0.2), lens=32, fstop=4.0, focus=10.0)
 elif shot == "B":
     # low from the trench floor: the flamethrower man leaps onto the lip against the sky

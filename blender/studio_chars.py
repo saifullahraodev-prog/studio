@@ -11,6 +11,10 @@ UNIFORM = {
     "fieldgrey": {"tunic": (0.33, 0.35, 0.3), "trousers": (0.28, 0.3, 0.26), "puttees": (0.22, 0.2, 0.17), "webbing": (0.32, 0.27, 0.2)},
 }
 _mats = {}
+# original root-motion speeds of the Mixamo moves on the real-size body (m/s; from tools/fbx_clips.mjs logs)
+HUMAN_SPEED = {"Rifle Run": 4.3, "Running": 5.9, "Walk With Rifle": 1.18, "Rifle Walk": 1.18, "Drunk Run Forward": 2.58,
+               "Firing Rifle": 1.02, "Rifle Crouch Walk To Kneel": 0.6}
+HUMAN_HIP = 0.98  # hip height of that body (m)
 WRINKLES = False
 SMOOTH = False  # subdivision: off (it distorts the cloth UVs; fix later)
 GRIP = 0.55  # where the fist closes, along the hand bone (0 = wrist, 1 = knuckles)  # procedural folds: off until the scale problem is solved
@@ -207,9 +211,11 @@ def weapon_mesh(kind="rifle"):
 
 
 def soldier(move, loc, rot_z=0.0, who="tommy", uniform="khaki", expr="neutral", helmet_kind="brodie",
-            offset=0, travel=(0.0, 0.0, 0.0), frames=(1, 120), weapon=None, tanks=False, size=1.0, head_r=0.3, path=None):
+            offset=0, travel=(0.0, 0.0, 0.0), frames=(1, 120), weapon=None, tanks=False, size=1.0, head_r=0.3, path=None,
+            run_dir=None, stride_k=1.0):
     """One soldier: Mixamo FBX (body + move) from MOVES, looping from `offset`; moves by `travel` (m/s)
-    or along `path` [(frame, (x, y, z)), ...]."""
+    or along `path` [(frame, (x, y, z)), ...]. With `run_dir` (x, y) the speed is measured from the feet
+    (planted foot speed) so the soldier doesn't slide; `stride_k` scales it."""
     sc = bpy.context.scene
     before = set(sc.objects)
     bpy.ops.import_scene.fbx(filepath=os.path.join(MOVES, move + ".fbx"))
@@ -221,12 +227,28 @@ def soldier(move, loc, rot_z=0.0, who="tommy", uniform="khaki", expr="neutral", 
     arm.scale = arm.scale * k
     arm.rotation_euler = (arm.rotation_euler[0], arm.rotation_euler[1], rot_z)
     act = arm.animation_data.action
+    fps = sc.render.fps
+    a0, a1 = int(act.frame_range[0]), int(act.frame_range[1])
+    if run_dir is not None:
+        # Ground speed from the original Mixamo move (measured on the real-size body when the clips were
+        # extracted, with root motion), scaled by leg length: short chubby legs cover less ground per step.
+        arm.location = (0, 0, 0)
+        sc.frame_set(a0)
+        bpy.context.view_layer.update()
+        hip_z = (arm.matrix_world @ arm.pose.bones["mixamorig:Hips"].head).z
+        speed = HUMAN_SPEED.get(move, 1.5) * hip_z / HUMAN_HIP * stride_k
+        d = Vector((run_dir[0], run_dir[1], 0)).normalized()
+        travel = (d.x * speed, d.y * speed, 0.0)
+        print(f"STRIDE {move}: hips {hip_z:.2f} m -> {speed:.2f} m/s")
     arm.animation_data.action = None
     tr = arm.animation_data.nla_tracks.new()
-    L = max(1.0, act.frame_range[1] - act.frame_range[0])
+    # Mixamo loops end on the same pose they start with: drop that last frame or every repeat stutters
+    L = max(1.0, (a1 - a0))
     st = tr.strips.new("move", int(frames[0] - offset), act)
+    st.action_frame_start = a0
+    st.action_frame_end = a1 - 1 if (a1 - a0) > 4 else a1
+    L = st.action_frame_end - st.action_frame_start
     st.repeat = max(1.0, (frames[1] - frames[0] + offset) / L + 1)
-    fps = sc.render.fps
     keys = path or [(f, (loc[0] + travel[0] * (f - frames[0]) / fps, loc[1] + travel[1] * (f - frames[0]) / fps, loc[2] + travel[2] * (f - frames[0]) / fps)) for f in (frames[0], frames[1])]
     for f, p in keys:
         arm.location = p

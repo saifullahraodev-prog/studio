@@ -321,3 +321,9 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   Headless works; Cycles sees the Quadro P620 (CUDA/OptiX). First test (`blender/test_soldier.py`):
   chubby Mixamo soldier + move + photo sky + mud, 540x960: Cycles GPU 64 spp 16 s/frame,
   Eevee ~50 s first frame (shader compile). Next: docs/blender-test-plan.md Step 1 (the world).
+
+## 2026-11-12: switch to Blender (owner decision)
+- 3-shot Blender test done (`out/blender/blender-test-3shots.mp4`, compare sheet): Blender wins on world, light, fire;
+  framing/character size/run stutter to fix. Owner: "Yes, switch to Blender".
+- Plan: fix run stutter + foot sliding, body smoothing + cloth folds, bridge Blender frames into Remotion for
+  captions/sound, then rebuild Trench Trap lines 1-6 (already approved in three.js) shot by shot, stills first.
