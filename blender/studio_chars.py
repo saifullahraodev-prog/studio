@@ -15,6 +15,7 @@ _mats = {}
 HUMAN_SPEED = {"Rifle Run": 4.3, "Running": 5.9, "Walk With Rifle": 1.18, "Rifle Walk": 1.18, "Drunk Run Forward": 2.58,
                "Firing Rifle": 1.02, "Rifle Crouch Walk To Kneel": 0.6}
 HUMAN_HIP = 0.98  # hip height of that body (m)
+DROP_LAST = False  # loop seam: drop the last frame if it repeats the first pose
 WRINKLES = False
 SMOOTH = False  # subdivision: off (it distorts the cloth UVs; fix later)
 GRIP = 0.55  # where the fist closes, along the hand bone (0 = wrist, 1 = knuckles)  # procedural folds: off until the scale problem is solved
@@ -229,24 +230,45 @@ def soldier(move, loc, rot_z=0.0, who="tommy", uniform="khaki", expr="neutral", 
     act = arm.animation_data.action
     fps = sc.render.fps
     a0, a1 = int(act.frame_range[0]), int(act.frame_range[1])
+    # Root motion: Mixamo moves (even "In Place" ones) keep some forward drift in the hips. Played in a
+    # loop it snaps the body back every cycle (the "lag"). Measure the drift (that IS the true ground
+    # speed, so feet don't slide), then remove it from the hips; we move the whole soldier instead.
+    arm.location = (0, 0, 0)
+    sc.frame_set(a0)
+    bpy.context.view_layer.update()
+    h0 = arm.matrix_world @ arm.pose.bones["mixamorig:Hips"].head
+    sc.frame_set(a1 - 1)
+    bpy.context.view_layer.update()
+    h1 = arm.matrix_world @ arm.pose.bones["mixamorig:Hips"].head
+    drift = Vector((h1.x - h0.x, h1.y - h0.y, 0)) * ((a1 - a0) / max(1, (a1 - 1 - a0)))
+    for fc in act.fcurves:
+        if fc.data_path == 'pose.bones["mixamorig:Hips"].location':
+            kps = fc.keyframe_points
+            v0, v1 = kps[0].co.y, kps[-1].co.y
+            if abs(v1 - v0) > 1e-4:
+                t0, t1 = kps[0].co.x, kps[-1].co.x
+                for kp in kps:
+                    shift = (v1 - v0) * (kp.co.x - t0) / max(1e-6, t1 - t0)
+                    kp.co.y -= shift
+                    kp.handle_left.y -= shift
+                    kp.handle_right.y -= shift
+            fc.update()
     if run_dir is not None:
-        # Ground speed from the original Mixamo move (measured on the real-size body when the clips were
-        # extracted, with root motion), scaled by leg length: short chubby legs cover less ground per step.
-        arm.location = (0, 0, 0)
-        sc.frame_set(a0)
-        bpy.context.view_layer.update()
-        hip_z = (arm.matrix_world @ arm.pose.bones["mixamorig:Hips"].head).z
-        speed = HUMAN_SPEED.get(move, 1.5) * hip_z / HUMAN_HIP * stride_k
+        speed = drift.length / ((a1 - a0) / fps) * stride_k
+        if speed < 0.2:  # move has no real drift: fall back to the leg-length estimate
+            sc.frame_set(a0)
+            hip_z = (arm.matrix_world @ arm.pose.bones["mixamorig:Hips"].head).z
+            speed = HUMAN_SPEED.get(move, 1.5) * hip_z / HUMAN_HIP * stride_k
         d = Vector((run_dir[0], run_dir[1], 0)).normalized()
         travel = (d.x * speed, d.y * speed, 0.0)
-        print(f"STRIDE {move}: hips {hip_z:.2f} m -> {speed:.2f} m/s")
+        print(f"STRIDE {move}: drift {drift.length:.2f} m per cycle -> {speed:.2f} m/s")
     arm.animation_data.action = None
     tr = arm.animation_data.nla_tracks.new()
     # Mixamo loops end on the same pose they start with: drop that last frame or every repeat stutters
     L = max(1.0, (a1 - a0))
     st = tr.strips.new("move", int(frames[0] - offset), act)
     st.action_frame_start = a0
-    st.action_frame_end = a1 - 1 if (a1 - a0) > 4 else a1
+    st.action_frame_end = a1 - 1 if (DROP_LAST and (a1 - a0) > 4) else a1
     L = st.action_frame_end - st.action_frame_start
     st.repeat = max(1.0, (frames[1] - frames[0] + offset) / L + 1)
     keys = path or [(f, (loc[0] + travel[0] * (f - frames[0]) / fps, loc[1] + travel[1] * (f - frames[0]) / fps, loc[2] + travel[2] * (f - frames[0]) / fps)) for f in (frames[0], frames[1])]
