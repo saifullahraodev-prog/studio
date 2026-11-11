@@ -5,7 +5,7 @@ import { staticFile, useDelayRender } from "remotion";
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader.js";
 import { clone as cloneSkinned } from "three/examples/jsm/utils/SkeletonUtils.js";
 import { CharacterDef } from "./bible";
-import { Head, Headgear } from "./Character";
+import { Glove, Head, Headgear } from "./Character";
 import { Expression, faceSheetPath, FaceVariant, MouthSlot } from "./face";
 import { PART_LOOK } from "./ChubbyBody";
 import { HandProp } from "../props/HandProps";
@@ -104,7 +104,8 @@ export const ChubbyActor: React.FC<{
   rifle?: boolean; // two-hand rifle from right hand through left hand
   headK?: number; // head size multiplier
   handK?: number; // mitten size
-}> = ({ def, clip, t, loop = true, speed = 1, position, rotationY = 0, size = 1.8, expression = "neutral", mouth = "rest", face = "R", uniform = "khaki", rifle = false, headK = 1, handK = 1.5 }) => {
+  headTilt?: number; // 0 = head stays upright, 1 = full mocap head motion
+}> = ({ def, clip, t, loop = true, speed = 1, position, rotationY = 0, size = 1.8, expression = "neutral", mouth = "rest", face = "R", uniform = "khaki", rifle = false, headK = 1, handK = 1.5, headTilt = 0.0 }) => {
   const a = useAssets(clip);
   const rig = useMemo(() => {
     if (!a) return null;
@@ -113,7 +114,7 @@ export const ChubbyActor: React.FC<{
     root.traverse((o) => {
       const m = o as THREE.Mesh;
       if (m.isMesh) {
-        if (m.name === "skin") m.visible = false; // placeholder head + neck: ours goes on instead
+        if (m.name === "skin" || m.name === "glove") m.visible = false; // placeholder head/neck + mittens: ours go on instead
         else meshes.push(m);
       }
     });
@@ -129,14 +130,23 @@ export const ChubbyActor: React.FC<{
   rig.bone("LeftHand").scale.setScalar(handK);
   rig.bone("RightHand").scale.setScalar(handK);
   rig.root.updateMatrixWorld(true);
-  const head = rig.bone("Head");
-  const neck = rig.bone("Neck");
+  // everything below is in the actor's own space (the rig root's parent)
+  const parentWorld = rig.root.matrixWorld.clone().multiply(rig.root.matrix.clone().invert());
+  const inv = parentWorld.clone().invert();
+  const at = (n: string) => new THREE.Vector3().setFromMatrixPosition(rig.bone(n).matrixWorld).applyMatrix4(inv);
+  // Our head is ~3x a real one: if it copied the mocap's lean and tilt (aiming crouch, cheek on
+  // the rifle) it would flop over. It follows where the head TURNS, and only part of the lean.
+  const pq = new THREE.Quaternion().setFromRotationMatrix(parentWorld).invert();
+  const hq = pq.multiply(rig.bone("Head").getWorldQuaternion(new THREE.Quaternion()));
+  const fwd = new THREE.Vector3(0, 0, 1).applyQuaternion(hq);
+  const up = new THREE.Vector3(0, 1, 0).applyQuaternion(hq);
+  const upK = new THREE.Vector3(0, 1, 0).lerp(up, headTilt).normalize();
+  const yawQ = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), Math.atan2(fwd.x, fwd.z));
+  const headQ = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), upK).multiply(yawQ);
+  const headP = at("Head").add(upK.clone().multiplyScalar(0.2 * headK));
 
   let gun: { p: THREE.Vector3; q: THREE.Quaternion } | null = null;
   if (rifle) {
-    const parentWorld = rig.root.matrixWorld.clone().multiply(rig.root.matrix.clone().invert());
-    const inv = parentWorld.invert();
-    const at = (n: string) => new THREE.Vector3().setFromMatrixPosition(rig.bone(n).matrixWorld).applyMatrix4(inv);
     const r = at("RightHand");
     const l = at("LeftHand");
     gun = { p: r, q: new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), l.sub(r).normalize()) };
@@ -148,17 +158,23 @@ export const ChubbyActor: React.FC<{
       <primitive object={rig.root} />
       {rig.meshes.map((m) => {
         const L = PART_LOOK[m.name] ?? { tint: "#888888" };
-        return createPortal(L.tex ? <Real key={m.uuid} tex={L.tex} gray tint={colours[m.name] ?? L.tint} repeat={[5, 5]} /> : <Toon key={m.uuid} color={colours[m.name] ?? L.tint} kind={L.kind ?? "paint"} />, m);
+        return createPortal(L.tex ? <Real key={m.uuid} tex={L.tex} gray tint={colours[m.name] ?? L.tint} repeat={[9, 9]} normalScale={2.4} roughness={1} /> : <Toon key={m.uuid} color={colours[m.name] ?? L.tint} kind={L.kind ?? "paint"} />, m);
       })}
-      {createPortal(
-        <group position={head.position.toArray()} quaternion={head.quaternion}>
-          <group position={[0, 0.2 * headK, 0.01]} scale={HS}>
-            <Head sheet={faceSheetPath(def.id, face)} variant={face} expression={expression} mouth={mouth} skin={def.skin} />
-            <Headgear g={def.headgear} />
-          </group>
-        </group>,
-        neck,
+      {/* our white 4-finger cartoon gloves on the hand bones (fists round the rifle) */}
+      {(["LeftHand", "RightHand"] as const).map((hb) =>
+        createPortal(
+          <group key={hb} position={[0, 0.05, 0.0]} rotation={[0, hb === "LeftHand" ? Math.PI / 2 : -Math.PI / 2, Math.PI]} scale={0.62 / handK}>
+            <Glove up={rifle ? 0 : 4} />
+          </group>,
+          rig.bone(hb),
+        ),
       )}
+      <group position={headP.toArray()} quaternion={headQ}>
+        <group scale={HS}>
+          <Head sheet={faceSheetPath(def.id, face)} variant={face} expression={expression} mouth={mouth} skin={def.skin} />
+          <Headgear g={def.headgear} />
+        </group>
+      </group>
       {gun && (
         <group position={gun.p.toArray()} quaternion={gun.q}>
           <group scale={0.55}>

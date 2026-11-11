@@ -642,6 +642,23 @@ const TPL: Record<string, T> = {
     };
   },
 
+  // TEMP: helmet close-ups (do=front|side|back)
+  "helmet-test": ({ beat, cut, t }) => {
+    const v = cut.do ?? "front";
+    const cam: [number, number, number] = v === "side" ? [19.0, TRENCH.H + 2.4, -2.3] : v === "back" ? [14.6, TRENCH.H + 2.6, -7.0] : [14.7, TRENCH.H + 2.4, 2.4];
+    return {
+      real: true,
+      camera: { position: cam, target: [14.6, TRENCH.H + 2.2, -2.3], fov: 40 },
+      focus: [14.6, TRENCH.H + 2.05, -2.3],
+      focusRange: 3,
+      content: (
+        <>
+          <Trench preset={P(beat)} />
+          <ChubbyActor def={BIBLE.enemy} clip="rifle-aim" t={0.5} position={[14.6, TRENCH.H, -2.3]} rotationY={0} expression={(beat.preset === "day" ? "neutral" : "angry")} uniform="fieldgrey" rifle />
+        </>
+      ),
+    };
+  },
   // TEMP: chubby rigged soldier playing mocap (do = clip name)
   "chubby-mocap": ({ beat, cut, t }) => ({
     real: true,

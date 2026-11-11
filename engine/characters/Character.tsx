@@ -135,6 +135,7 @@ export const Head: React.FC<{ sheet: string; variant: FaceVariant; expression: E
 
   const uv = cellUV(expression, mouth);
   applySceneLight(headMat, light, look.hatch);
+  if (variant === "R") headMat.uniforms.sheen.value = 0.03; // reference heads are matte
   if (faceMat) {
     applySceneLight(faceMat, light, look.hatch);
     faceMat.uniforms.uvRepeat.value.set(...uv.repeat);
@@ -341,14 +342,14 @@ export const Headgear: React.FC<{ g: CharacterDef["headgear"] }> = ({ g }) => {
     return (
       <group position={[0, 0.0, 0]} rotation={[-0.06, 0, 0]}>
         <mesh scale={[1, 0.97, 1]} castShadow>
-          <sphereGeometry args={[0.68, 48, 20, 0, Math.PI * 2, 0, 1.2]} />
+          <sphereGeometry args={[0.68, 48, 20, 0, Math.PI * 2, 0, 1.3]} />
           <Real tex="PaintedMetal004" gray tint={g.color} roughness={0.9} />
         </mesh>
-        <mesh position={[0, 0.68 * Math.cos(1.2) * 0.97, 0]} castShadow>
+        <mesh position={[0, 0.68 * Math.cos(1.3) * 0.97, 0]} castShadow>
           <latheGeometry args={[[new THREE.Vector2(0.6, 0.02), new THREE.Vector2(0.85, -0.04), new THREE.Vector2(0.86, -0.06)], 56]} />
           <Real tex="PaintedMetal004" gray tint={g.color} roughness={0.9} side={THREE.DoubleSide} />
         </mesh>
-        <mesh position={[0, 0.68 * Math.cos(1.2) * 0.97 - 0.05, 0]} rotation={[Math.PI / 2, 0, 0]}>
+        <mesh position={[0, 0.68 * Math.cos(1.3) * 0.97 - 0.05, 0]} rotation={[Math.PI / 2, 0, 0]}>
           <torusGeometry args={[0.855, 0.016, 6, 64]} />
           <Real tex="PaintedMetal004" gray tint={g.band ?? g.color} roughness={0.7} metalness={0.3} />
         </mesh>
@@ -356,28 +357,32 @@ export const Headgear: React.FC<{ g: CharacterDef["headgear"] }> = ({ g }) => {
     );
   }
   if (g.type === "stahlhelm") {
-    // German steel helmet, realistic: deep dome to the brows, flared skirt over the ears and
-    // neck, short front visor, side lugs. Worn field-grey paint.
-    const rimY = 0.69 * Math.cos(1.22) * 0.95;
+    // German steel helmet, realistic: deep dome down to the brows, flared skirt over the ears
+    // and the neck, short front visor, side lugs. Worn field-grey paint. Head radius = 0.62.
+    const R = 0.69;
+    const front = 1.28; // dome reaches this polar angle at the front (brow line, above the eyes)
+    const rimY = R * Math.cos(front);
+    const M = <Real tex="PaintedMetal004" gray tint={g.color} roughness={0.85} side={THREE.DoubleSide} />;
     return (
-      <group position={[0, 0.02, -0.02]}>
-        <mesh scale={[1, 0.95, 1.04]} castShadow>
-          <sphereGeometry args={[0.69, 48, 22, 0, Math.PI * 2, 0, 1.22]} />
-          <Real tex="PaintedMetal004" gray tint={g.color} roughness={0.85} />
+      <group position={[0, 0.03, -0.03]}>
+        <mesh scale={[1, 1, 1.04]} castShadow>
+          <sphereGeometry args={[R, 48, 24, 0, Math.PI * 2, 0, front]} />
+          {M}
         </mesh>
-        {/* skirt: flares out round the sides and back (front left open for the visor) */}
+        {/* skirt: flares out over the ears and down the back of the neck */}
         <mesh position={[0, rimY, 0]} scale={[1, 1, 1.04]} castShadow>
-          <latheGeometry args={[[new THREE.Vector2(0.65, 0.0), new THREE.Vector2(0.71, -0.14), new THREE.Vector2(0.78, -0.26)], 48, Math.PI * 0.72, Math.PI * 1.56]} />
-          <Real tex="PaintedMetal004" gray tint={g.color} roughness={0.85} side={THREE.DoubleSide} />
+          <latheGeometry args={[[new THREE.Vector2(R * Math.sin(front), 0.0), new THREE.Vector2(0.72, -0.2), new THREE.Vector2(0.8, -0.38)], 48, Math.PI * 0.3, Math.PI * 1.4]} />
+          {M}
         </mesh>
-        {/* short visor over the eyes */}
+        {/* short visor over the brow */}
         <mesh position={[0, rimY, 0]} scale={[1, 1, 1.04]} castShadow>
-          <latheGeometry args={[[new THREE.Vector2(0.65, 0.0), new THREE.Vector2(0.76, -0.04)], 24, -Math.PI * 0.28, Math.PI * 0.56]} />
-          <Real tex="PaintedMetal004" gray tint={g.color} roughness={0.85} side={THREE.DoubleSide} />
+          <latheGeometry args={[[new THREE.Vector2(R * Math.sin(front), 0.0), new THREE.Vector2(0.76, -0.02)], 24, -Math.PI * 0.34, Math.PI * 0.68]} />
+          {M}
         </mesh>
+        {/* side lugs, set into the dome */}
         {[-1, 1].map((sd) => (
-          <mesh key={sd} position={[sd * 0.68, rimY + 0.16, 0.02]} rotation={[0, 0, Math.PI / 2]}>
-            <cylinderGeometry args={[0.05, 0.05, 0.05, 12]} />
+          <mesh key={sd} position={[sd * 0.665, rimY + 0.14, 0.04]} rotation={[0, 0, Math.PI / 2]}>
+            <cylinderGeometry args={[0.045, 0.045, 0.04, 12]} />
             <Real tex="PaintedMetal004" gray tint={g.band ?? g.color} roughness={0.6} metalness={0.4} />
           </mesh>
         ))}
