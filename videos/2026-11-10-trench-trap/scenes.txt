@@ -1,4 +1,4 @@
-# "Trench Trap": built line by line (see lines.md). Voice: owner's recording (lines 1-2 = CapCut take 0-3.88 s, 1.1 s silence in front).
+# "Trench Trap": built line by line (see lines.md). Voice: owner's recording (lines 1-3 = CapCut take 0-6.9 s, 1.1 s silence in front).
 # Build:  HF_HUB_OFFLINE=1 python -I tools/build_video.py videos/2026-11-10-trench-trap
 
 slug: trench-trap
@@ -25,3 +25,14 @@ music: tense
 say: so you make a plan.
 emph: plan
 cut: so       | you-plan-chin    | fx=pop | tr=hard
+
+[beat 3]
+speaker: vo
+preset: day
+music: tense
+say: One of them climbs up and hoses the trench with fire.
+emph: climbs, fire
+cut: one      | flame-leap       | fx=whoosh | tr=hard
+cut: up       | flame-scowl      | fx=hit    | tr=hard
+cut: hoses    | flame-fire-side  | fx=fire_big:4+boom | tr=hard
+cut: fire     | fire-wall        | fx=boom   | tr=hard

@@ -9,6 +9,7 @@ import { Glove, Head, Headgear } from "./Character";
 import { Expression, faceSheetPath, FaceVariant, MouthSlot } from "./face";
 import { PART_LOOK } from "./ChubbyBody";
 import { HandProp } from "../props/HandProps";
+import { FireJet } from "../props/TrenchProps";
 import { Real } from "../look/materials";
 import { Toon } from "../look/style";
 
@@ -132,7 +133,11 @@ export const ChubbyActor: React.FC<{
   handK?: number; // mitten size
   headTilt?: number; // 0 = head stays upright, 1 = full mocap head motion
   chin?: number; // 0..1: bring the right glove to the chin (thinking / scheming)
-}> = ({ def, clip, t, loop = true, speed = 1, position, rotationY = 0, size = 1.8, expression = "neutral", mouth = "rest", face = "R", uniform = "khaki", rifle = false, headK = 1, handK = 1.5, headTilt = 0.0, chin = 0 }) => {
+  weapon?: "rifle" | "flamegun"; // what the two hands hold (with rifle=true)
+  fireT?: number; // flamethrower: seconds since the jet started (< 0 = off)
+  fireLen?: number; // jet length (actor units, x size in the world)
+  fireDrop?: number; // how far the jet bends down at its end (actor units)
+}> = ({ def, clip, t, loop = true, speed = 1, position, rotationY = 0, size = 1.8, expression = "neutral", mouth = "rest", face = "R", uniform = "khaki", rifle = false, headK = 1, handK = 1.5, headTilt = 0.0, chin = 0, weapon = "rifle", fireT = -1, fireLen = 4, fireDrop = 1.2 }) => {
   const a = useAssets(clip);
   const rig = useMemo(() => {
     if (!a) return null;
@@ -211,10 +216,36 @@ export const ChubbyActor: React.FC<{
       </group>
       {gun && (
         <group position={gun.p.toArray()} quaternion={gun.q}>
-          <group scale={0.55}>
-            <HandProp name="rifleraw" />
+          <group scale={weapon === "flamegun" ? 0.75 : 0.55}>
+            <HandProp name={weapon === "flamegun" ? "flamegunraw" : "rifleraw"} />
           </group>
         </group>
+      )}
+      {weapon === "flamegun" && (
+        // fuel tanks on the back, on the upper spine
+        <>
+          {createPortal(
+            <group position={[0, 0.02, -0.2]}>
+              {[-0.09, 0.09].map((x) => (
+                <mesh key={x} position={[x, 0, 0]} castShadow>
+                  <capsuleGeometry args={[0.075, 0.3, 6, 16]} />
+                  <Real tex="PaintedMetal004" gray tint="#4A4E46" roughness={0.6} metalness={0.3} />
+                </mesh>
+              ))}
+              <mesh position={[0, 0.2, 0]} rotation={[0, 0, Math.PI / 2]}>
+                <cylinderGeometry args={[0.02, 0.02, 0.24, 8]} />
+                <Toon color="#7A6A4A" kind="brass" />
+              </mesh>
+            </group>,
+            rig.bone("Spine2"),
+          )}
+          {gun && fireT >= 0 && (() => {
+            const dir = new THREE.Vector3(0, 1, 0).applyQuaternion(gun.q);
+            const nozzle = gun.p.clone().add(dir.clone().multiplyScalar(0.72));
+            const end = nozzle.clone().add(dir.clone().multiplyScalar(fireLen)).add(new THREE.Vector3(0, -fireDrop, 0));
+            return <FireJet t={fireT} from={nozzle.toArray()} to={end.toArray()} />;
+          })()}
+        </>
       )}
     </group>
   );

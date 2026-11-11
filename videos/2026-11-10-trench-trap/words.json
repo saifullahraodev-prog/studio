@@ -40,13 +40,13 @@
   "end": 3.06
  },
  {
-  "word": "trench,",
+  "word": "trench.",
   "start": 3.06,
   "end": 3.42
  },
  {
-  "word": "so",
-  "start": 3.8,
+  "word": "So",
+  "start": 3.94,
   "end": 4.14
  },
  {
@@ -68,5 +68,60 @@
   "word": "plan.",
   "start": 4.52,
   "end": 4.76
+ },
+ {
+  "word": "One",
+  "start": 5.22,
+  "end": 5.38
+ },
+ {
+  "word": "of",
+  "start": 5.38,
+  "end": 5.48
+ },
+ {
+  "word": "them",
+  "start": 5.48,
+  "end": 5.64
+ },
+ {
+  "word": "climbs",
+  "start": 5.64,
+  "end": 5.96
+ },
+ {
+  "word": "up",
+  "start": 5.96,
+  "end": 6.3
+ },
+ {
+  "word": "and",
+  "start": 6.3,
+  "end": 6.44
+ },
+ {
+  "word": "hoses",
+  "start": 6.44,
+  "end": 6.78
+ },
+ {
+  "word": "the",
+  "start": 6.78,
+  "end": 6.96
+ },
+ {
+  "word": "trench",
+  "start": 6.96,
+  "end": 7.22
+ },
+ {
+  "word": "with",
+  "start": 7.22,
+  "end": 7.44
+ },
+ {
+  "word": "fire.",
+  "start": 7.44,
+  "end": 7.76
  }
 ]

@@ -175,8 +175,8 @@ const Whistle: React.FC = () => (
   </M>
 );
 
-const FlameGun: React.FC = () => (
-  <group position={[0, -0.05, 0.05]} rotation={[Math.PI / 2, 0, 0]}>
+const FlameGun: React.FC<{ raw?: boolean }> = ({ raw }) => (
+  <group position={raw ? [0, 0, 0] : [0, -0.05, 0.05]} rotation={raw ? [0, 0, 0] : [Math.PI / 2, 0, 0]}>
     <M p={[0, 0.35, 0]}>
       <cylinderGeometry args={[0.035, 0.04, 0.95, 10]} />
       <Toon color="#2E302C" kind="metal" />
@@ -241,6 +241,8 @@ const propFor = (name: string | undefined, Stamp?: React.FC) => {
       return <Hammer />;
     case "flamegun":
       return <FlameGun />;
+    case "flamegunraw": // lance along +y from the grip (two-hand, placed by ChubbyActor)
+      return <FlameGun raw />;
     default:
       return null;
   }

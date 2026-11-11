@@ -851,6 +851,65 @@ const TPL: Record<string, T> = {
     ),
   }),
 
+  // -- "Trench Trap" line 3: "One of them climbs up and hoses the trench with fire."
+  // (after the reference's 6.0-8.1 s: leap against the sky, scowl, side-on blast, wall of fire)
+  "flame-leap": ({ beat, t, dur }) => {
+    const k = Math.min(1, t / 0.55);
+    return {
+      real: true,
+      camera: live({ position: [-0.7, 0.9, 2.2], target: [2.2, TRENCH.H + 2.4, -0.2], fov: 62, roll: -0.08 }, t, dur, { push: 0.06, shake: 0.02 }),
+      motionBlur: 3,
+      focus: [2.5, TRENCH.H + 1.6, 0],
+      focusRange: 4,
+      content: (
+        <>
+          <Trench preset={P(beat)} />
+          <ChubbyActor def={BIBLE.flamer} clip={k < 1 ? "rifle-run" : "rifle-aim"} t={t} position={[4.6 - 2.7 * k, TRENCH.H + Math.sin(k * Math.PI) * 1.3, 0]} rotationY={-Math.PI / 2} expression="angry" mouth="wide" uniform="fieldgrey" rifle weapon="flamegun" />
+        </>
+      ),
+    };
+  },
+  "flame-scowl": ({ beat, t, dur }) => ({
+    real: true,
+    camera: live({ position: [-1.0, TRENCH.H + 1.1, -0.9], target: [1.85, TRENCH.H + 2.25, -0.15], fov: 44 }, t, dur, { push: 0.15 }),
+    focus: [1.9, TRENCH.H + 2.3, 0],
+    focusRange: 1.4,
+    bokeh: 6,
+    content: (
+      <>
+        <Trench preset={P(beat)} />
+        <ChubbyActor def={BIBLE.flamer} clip="rifle-aim" t={t + 0.4} position={[1.95, TRENCH.H, 0]} rotationY={-Math.PI / 2 - 0.55} expression="angry" uniform="fieldgrey" rifle weapon="flamegun" />
+      </>
+    ),
+  }),
+  "flame-fire-side": ({ beat, t, dur }) => ({
+    real: true,
+    camera: live({ position: [6.6, TRENCH.H + 2.7, -1.6], target: [0.9, TRENCH.H + 1.0, -0.6], fov: 52 }, t, dur, { push: 0.05, shake: 0.04 }),
+    focus: [1.9, TRENCH.H + 1.5, 1.0],
+    focusRange: 4,
+    content: (
+      <>
+        <Trench preset={P(beat)} />
+        <ChubbyActor def={BIBLE.flamer} clip="rifle-fire" t={t} position={[1.95, TRENCH.H, 1.0]} rotationY={-2.68} expression="angry" mouth="wide" uniform="fieldgrey" rifle weapon="flamegun" fireT={t} fireLen={4.2} fireDrop={1.9} />
+        <Smoke t={t} position={[0, TRENCH.H, -3]} amount={0.7} height={6} />
+      </>
+    ),
+  }),
+  "fire-wall": ({ beat, t, dur }) => ({
+    real: true,
+    camera: live({ position: [0.25, 1.4, -6.6], target: [0.0, 1.9, 3.0], fov: 56 }, t, dur, { shake: 0.06, punch: 0.15 }),
+    focus: [0, 1.6, -1],
+    focusRange: 6,
+    content: (
+      <>
+        <Trench preset={P(beat)} />
+        <FireJet t={t + 0.15} from={[1.0, TRENCH.H + 1.6, 5.0]} to={[0.0, 0.9, -2.2]} />
+        {[3.5, 1.5, -0.5].map((z, i) => (t > 0.1 * (i + 1) ? <Flames key={z} t={t + i} position={[(i % 2 ? 0.45 : -0.45), 0.1, z]} size={1.9 - i * 0.15} seed={i + 2} light={i === 0} intensity={0.85} /> : null))}
+        <Smoke t={t} position={[0, 2.5, 1]} amount={1} height={6} spread={2.5} />
+      </>
+    ),
+  }),
+
   // -- trench Short ("The Flamethrower Trap", dramatized). Real body size. --
   // "Enemy soldiers have you cornered": you, looking up; rifles aimed down from both parapets
   "trench-cornered": ({ beat, t, dur }) => ({
