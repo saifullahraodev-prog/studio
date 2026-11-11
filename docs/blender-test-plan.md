@@ -16,6 +16,21 @@ What that reference does (frames sampled every 0.75 s):
   fire jet + explosion flash, stagger, machine-gun close-ups.
 - **Captions:** one big white word per spoken word.
 
+## Your part, in short
+
+Claude does the work; you only do what needs a person:
+
+| When | You | Time |
+|---|---|---|
+| Start | Say **yes** when Claude asks to install Blender and download free textures/sky (no logins needed) | 1 min |
+| After Step 1 (the world) | Look at 3 stills next to the reference, say what's good/bad | 5 min |
+| After Step 2 (the characters) | Look at stills + a frame strip, give your opinion | 5 min |
+| After Step 3 (the preview) | Watch the 6-second preview, score it (section 2) | 5 min |
+| Only if needed | Log in to **Mixamo** for a move you don't have yet (it needs your Adobe account) | 5 min |
+
+Everything else (installing, downloading, building the trench, characters, fire, cameras,
+rendering, comparing with the reference) is Claude's job.
+
 **If the test passes:** the studio pipeline (scene files, Whisper timings, sound, captions) moves
 to Blender step by step, starting with the Trench Trap. **If not:** compare with Unreal Engine 5
 plus a better graphics card.
@@ -50,27 +65,31 @@ Pass = average 4 or more, nothing below 3.
 
 ## 3. What you need
 
-### Software (free)
-- **Blender 4.5 LTS** (about 400 MB). Long-term support, so the scripts stay stable.
-- Optional: the **BlenderKit** add-on (free account) for more assets.
+### Software (free, installed by Claude)
+- **Blender 4.5 LTS** (about 400 MB), installed by Claude with one command
+  (`winget install BlenderFoundation.Blender`) after you say yes. Long-term support, so the scripts stay stable.
+- No add-ons and no accounts needed for the test.
 
-### Assets (all free; licence written into `CREDITS.md`)
+### Assets (all free; Claude downloads them; licence written into `CREDITS.md`)
 | What | Where | Licence |
 |---|---|---|
 | Trench geometry (walls, floor, parapet, duckboards) | **built by Claude's script** (planks, posts and sandbags placed procedurally along a zig-zag trench path) | ours |
 | Mud, forest ground, wood planks, sandbag cloth, rusty metal textures | Poly Haven / ambientCG (studio already uses ambientCG) | CC0 |
-| Sandbags, crates, ammo boxes, barrels | Poly Haven / BlenderKit free / Sketchfab | CC0 / CC-BY |
+| Sandbags, crates, ammo boxes, barrels | built by script, plus Poly Haven models (no login) | ours / CC0 |
 | Barbed wire + posts | built by script (curves + simple posts) | ours |
-| Pine trees | BlenderKit free / Sketchfab CC0 low-poly pines, or tree cards | CC0 / CC-BY |
+| Pine trees | built by script (low-poly pines) or Poly Haven tree models (no login) | ours / CC0 |
 | Sky | Poly Haven HDRI (sunny, clouds) | CC0 |
 | Fire + smoke | Blender's built-in fire/smoke simulation (Mantaflow), small, baked once | — |
-| Soldiers | the studio's **ChubbyActor** (Mixamo-rigged chubby WW1 soldier) as FBX; enemy variant with the German helmet | ours / Mixamo |
-| Animations | Mixamo: "Running", "Jump", "Rifle run", "Crouch/Duck", "Firing" style clips (the owner downloads) | Mixamo terms (free for videos) |
+| Soldiers | the studio's **ChubbyActor** (Mixamo-rigged chubby WW1 soldier), already on the laptop in `public/models/` (not in git: 115 MB); enemy variant with the German helmet | Mixamo + model licence (see note) |
+| Animations | the Mixamo clips **already downloaded** for the Trench Trap (rifle run, jump down, crouch, terrified, scream, stagger…), in `public/models/mixamo/` | Mixamo terms (free for videos) |
 | Flamethrower (tanks + lance) | built by script from simple shapes, or a CC0/CC-BY model | ours / CC |
 | Faces | our existing face sprites from `public/characters/faces/` | ours |
 
-Downloads that need an account (Mixamo, Sketchfab, BlenderKit) are done by the owner; Claude
-gives the exact list and file names first.
+No new downloads that need an account are planned. If a move is missing (e.g. a specific jump),
+Claude names the exact Mixamo clip and the owner downloads it (Mixamo needs the owner's Adobe login).
+
+**Licence note:** an earlier commit says the downloaded chubby body's licence is unknown. Fine for this
+test; it must be checked (or the body replaced) before publishing videos that use it.
 
 ### Hardware (laptop: i5-10300H, 16 GB RAM, Quadro P620 2 GB)
 - Render engine **Eevee** (fast). The 2 GB graphics memory is the limit: textures 2K, trees as
@@ -84,19 +103,20 @@ gives the exact list and file names first.
 
 | Owner | Claude |
 |---|---|
-| Install Blender | Writes all Python scripts (no clicking needed) |
-| Download assets that need an account (list from Claude) | Builds the trench, wire and landscape by script; imports and places assets |
-| Choose between options Claude shows | Characters: ChubbyActor FBX + our faces + Mixamo clips; flamethrower |
-| Score the side-by-side sheets | Cameras, depth of field, fire, light, render settings |
-| Approve each step | Headless renders (`blender -b … -P script.py`), frame strips, side-by-side sheets, timing |
+| Says yes to the Blender install and the free downloads | Installs Blender, downloads textures/sky/props (no logins) |
+| Looks at the stills/preview after Steps 1, 2 and 3 and says what's good or bad | Writes all Python scripts (no clicking needed) |
+| Scores the final preview (section 2) | Builds the trench, wire, landscape and trees by script; places assets |
+| Only if a move is missing: downloads one Mixamo clip | Characters: ChubbyActor + our faces + the existing Mixamo clips; flamethrower |
+| | Cameras, depth of field, fire, light, render settings |
+| | Headless renders (`blender -b … -P script.py`), frame strips, side-by-side sheets, timing |
 
 Claude can't see the Blender window; it checks everything through rendered stills and frame
 strips. Small, fast preview stills keep that loop quick.
 
 ## 5. Steps (each ends with stills for the owner to approve)
 
-**Step 0: setup and speed check (½ session)**
-- Install Blender 4.5 LTS; Claude runs a headless test render (ground plane + a few planks + sun + HDRI sky + a small smoke volume).
+**Step 0: setup and speed check (½ session, owner: say yes to the install)**
+- Claude installs Blender 4.5 LTS and runs a headless test render (ground plane + a few planks + sun + HDRI sky + a small smoke volume).
 - Measure seconds per frame for Eevee and Cycles at 540×960 and 1080×1920.
 - Stop if Eevee can't render at all → Cycles-on-CPU plan or a cloud GPU.
 
@@ -104,26 +124,27 @@ strips. Small, fast preview stills keep that loop quick.
 - Trench by script: zig-zag path, plank walls with posts, duckboard floor, sandbag parapet, mud
   textures, puddles; no-man's-land with craters, barbed wire, posts; pine forest + sunny HDRI sky; haze.
 - Deliverable: stills for the 3 camera angles (A, B, C) + side-by-side with 3 reference frames.
-  **Owner scores set, landscape, light.**
+  **Owner check-in (5 min):** set, landscape, light good or not?
 
 **Step 2: the characters (1 session)**
 - ChubbyActor FBX in Blender: Allied hero (round helmet) and German enemies (deep helmet);
   our faces on the heads; rifles; flamethrower tanks + lance.
 - Animations: enemies running (shot A), leap onto the edge (shot B), hero duck (shot C).
-- Deliverable: stills + 540×960 frame strips (every 3rd frame). **Owner scores fit and motion.**
+- Deliverable: stills + 540×960 frame strips (every 3rd frame). **Owner check-in (5 min):** characters and motion good or not?
 
 **Step 3: fire, cameras, preview (1 session)**
 - Fire jet from the lance + rolling flames along the trench (small baked simulation), orange
   light that flickers with it, smoke, camera shake; explosion flash option.
 - Cameras: A high wide push-in, B low angle against the sky, C side view along the trench; hard cuts.
 - Deliverable: 540×960 preview video (~6 s) with the owner's voice for lines 1 and 3 + render time.
+  **Owner check-in (5 min):** watch and score it (section 2).
 
 **Step 4: final and decision (½ session)**
 - 1080×1920 final (overnight if needed) + sound mix with the studio's sound tools.
 - Side-by-side sheet: ours (Blender) vs reference vs the current three.js Trench Trap line 1/3 renders.
 - **Decision:** move to Blender / try Unreal / keep three.js.
 
-About **4 sessions** in total.
+About **4 sessions** of Claude work in total; about **15–20 minutes** of the owner's time.
 
 ## 6. Folder layout (inside the studio repo)
 
@@ -164,8 +185,8 @@ channel isn't flagged as reused content.
 
 ## 9. Prompt to start the test with Claude (in the studio project)
 
-> Read `docs/blender-test-plan.md`. We are doing Step 0 only: give me the exact Blender 4.5 LTS
-> download to install, then write a headless test script that renders a ground plane with a few
+> Read `docs/blender-test-plan.md`. We are doing Step 0 only: ask me once, then install Blender 4.5 LTS
+> yourself (winget), then write a headless test script that renders a ground plane with a few
 > planks, a sun, an HDRI sky and a small smoke volume with Eevee and Cycles at 540×960 and
 > 1080×1920, and report the seconds per frame. Don't change the three.js engine. Stop after Step 0
 > and show me the results.
