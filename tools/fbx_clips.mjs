@@ -6,7 +6,7 @@ globalThis.self = globalThis; globalThis.window = globalThis;
 globalThis.document = { createElementNS: () => ({ addEventListener() {}, removeEventListener() {}, setAttribute() {}, style: {} }) };
 const THREE = await import("three");
 const { FBXLoader } = await import("three/examples/jsm/loaders/FBXLoader.js");
-const out = "public/models/mixamo/clips";
+const out = process.env.CLIPS_OUT ?? "public/models/mixamo/clips";
 fs.mkdirSync(out, { recursive: true });
 console.warn = () => {};
 for (const f of process.argv.slice(2)) {

@@ -19,6 +19,7 @@ import { FireJet, FloorRifle, MachineGun } from "../props/TrenchProps";
 import { Barrel, Trench, TRENCH } from "../worlds/trench/Trench";
 import { Prop } from "../props/Model";
 import { MocapActor } from "../characters/MocapActor";
+import { ChubbyActor } from "../characters/ChubbyActor";
 import { ChubbyBodyPreview, FbxPreview } from "../characters/ChubbyBody";
 import { Head, Headgear } from "../characters/Character";
 import { faceSheetPath } from "../characters/face";
@@ -641,6 +642,21 @@ const TPL: Record<string, T> = {
     };
   },
 
+  // TEMP: chubby rigged soldier playing mocap (do = clip name)
+  "chubby-mocap": ({ beat, cut, t }) => ({
+    real: true,
+    camera: { position: [14.6, TRENCH.H + 1.6, 4.8], target: [14.6, TRENCH.H + 1.25, -2], fov: 46 },
+    focus: [14.6, TRENCH.H + 1.3, -2],
+    focusRange: 3,
+    content: (
+      <>
+        <Trench preset={P(beat)} />
+        <ChubbyActor def={BIBLE.tommy} clip={(cut.do as "rifle-aim") ?? "rifle-aim"} t={t} position={[13.6, TRENCH.H, -2]} rotationY={0.35} expression="scared" rifle />
+        <ChubbyActor def={BIBLE.enemy} clip="rifle-walk" t={t + 0.3} position={[15.7, TRENCH.H, -2.6]} rotationY={-0.4} expression="angry" uniform="fieldgrey" rifle />
+        <ChubbyActor def={BIBLE.enemy} clip="rifle-run" t={t + 0.1} position={[17.2, TRENCH.H, -4.6]} rotationY={-0.9} expression="angry" uniform="fieldgrey" rifle />
+      </>
+    ),
+  }),
   // TEMP: the owner's chubby character, dressed in the WW1 uniform, with the reference face + helmet
   "sketch-test": ({ beat, cut }) => {
     const side = cut.do === "side";
