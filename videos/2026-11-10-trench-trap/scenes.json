@@ -3,7 +3,7 @@
  "format": "short",
  "world": "trench",
  "fps": 30,
- "duration": 8.3,
+ "duration": 13.0,
  "beats": [
   {
    "id": "b1",
@@ -23,7 +23,7 @@
      "fx": "whoosh+boom",
      "tr": "dive",
      "start": 2.18,
-     "end": 3.86,
+     "end": 3.9,
      "face": "neutral"
     }
    ],
@@ -37,19 +37,19 @@
    ],
    "subtitle": "Enemy soldiers have you cornered in your own trench,",
    "pause": 0.05,
-   "voiceStart": 0.98,
+   "voiceStart": 0.88,
    "voiceEnd": 3.42,
    "start": 0.0,
-   "end": 3.86,
+   "end": 3.9,
    "words": [
     {
      "word": "Enemy",
-     "start": 0.98,
-     "end": 1.42
+     "start": 0.88,
+     "end": 1.4
     },
     {
      "word": "soldiers",
-     "start": 1.42,
+     "start": 1.4,
      "end": 1.76
     },
     {
@@ -88,17 +88,17 @@
      "end": 3.42
     }
    ],
-   "cueAt": 0.98,
+   "cueAt": 0.88,
    "aligned": [
     [
      "Enemy",
-     0.98,
-     1.42,
+     0.88,
+     1.4,
      "Enemy"
     ],
     [
      "soldiers",
-     1.42,
+     1.4,
      1.76,
      "soldiers"
     ],
@@ -154,8 +154,8 @@
      "shot": "you-plan-chin",
      "fx": "pop",
      "tr": "hard",
-     "start": 3.86,
-     "end": 5.14,
+     "start": 3.9,
+     "end": 5.12,
      "face": "neutral"
     }
    ],
@@ -168,14 +168,14 @@
    ],
    "subtitle": "so you make a plan.",
    "pause": 0.05,
-   "voiceStart": 3.94,
+   "voiceStart": 3.98,
    "voiceEnd": 4.76,
-   "start": 3.86,
-   "end": 5.14,
+   "start": 3.9,
+   "end": 5.12,
    "words": [
     {
      "word": "So",
-     "start": 3.94,
+     "start": 3.98,
      "end": 4.14
     },
     {
@@ -199,11 +199,11 @@
      "end": 4.76
     }
    ],
-   "cueAt": 3.94,
+   "cueAt": 3.98,
    "aligned": [
     [
      "so",
-     3.94,
+     3.98,
      4.14,
      "So"
     ],
@@ -241,7 +241,7 @@
      "shot": "flame-leap",
      "fx": "whoosh",
      "tr": "hard",
-     "start": 5.14,
+     "start": 5.12,
      "end": 5.92,
      "face": "neutral"
     },
@@ -269,7 +269,7 @@
      "fx": "boom",
      "tr": "hard",
      "start": 7.4,
-     "end": 8.3,
+     "end": 8.14,
      "face": "neutral"
     }
    ],
@@ -283,14 +283,14 @@
    ],
    "subtitle": "One of them climbs up and hoses the trench with fire.",
    "pause": 0.05,
-   "voiceStart": 5.22,
-   "voiceEnd": 7.76,
-   "start": 5.14,
-   "end": 8.3,
+   "voiceStart": 5.2,
+   "voiceEnd": 7.78,
+   "start": 5.12,
+   "end": 8.14,
    "words": [
     {
      "word": "One",
-     "start": 5.22,
+     "start": 5.2,
      "end": 5.38
     },
     {
@@ -321,34 +321,34 @@
     {
      "word": "hoses",
      "start": 6.44,
-     "end": 6.78
+     "end": 6.76
     },
     {
      "word": "the",
-     "start": 6.78,
-     "end": 6.96
+     "start": 6.76,
+     "end": 6.98
     },
     {
      "word": "trench",
-     "start": 6.96,
-     "end": 7.22
+     "start": 6.98,
+     "end": 7.24
     },
     {
      "word": "with",
-     "start": 7.22,
+     "start": 7.24,
      "end": 7.44
     },
     {
      "word": "fire.",
      "start": 7.44,
-     "end": 7.76
+     "end": 7.78
     }
    ],
-   "cueAt": 5.22,
+   "cueAt": 5.2,
    "aligned": [
     [
      "One",
-     5.22,
+     5.2,
      5.38,
      "One"
     ],
@@ -385,32 +385,237 @@
     [
      "hoses",
      6.44,
-     6.78,
+     6.76,
      "hoses"
     ],
     [
      "the",
-     6.78,
-     6.96,
+     6.76,
+     6.98,
      "the"
     ],
     [
      "trench",
-     6.96,
-     7.22,
+     6.98,
+     7.24,
      "trench"
     ],
     [
      "with",
-     7.22,
+     7.24,
      7.44,
      "with"
     ],
     [
      "fire.",
      7.44,
-     7.76,
+     7.78,
      "fire."
+    ]
+   ]
+  },
+  {
+   "id": "b4",
+   "cuts": [
+    {
+     "cue": "you",
+     "shot": "you-scream-low",
+     "fx": "impact",
+     "tr": "hard",
+     "start": 8.14,
+     "end": 8.88,
+     "face": "neutral"
+    },
+    {
+     "cue": "throw",
+     "shot": "you-drop-rifle",
+     "fx": "hit",
+     "tr": "hard",
+     "start": 8.88,
+     "end": 10.36,
+     "face": "neutral"
+    },
+    {
+     "cue": "stagger",
+     "shot": "you-stagger-away",
+     "fx": "whoosh",
+     "tr": "hard",
+     "start": 10.36,
+     "end": 13.0,
+     "face": "neutral"
+    }
+   ],
+   "speaker": "vo",
+   "preset": "day",
+   "music": "tense",
+   "say": "You scream, throw down your rifle, and stagger away like you've lost your mind.",
+   "emph": [
+    "scream",
+    "rifle"
+   ],
+   "subtitle": "You scream, throw down your rifle, and stagger away like you've lost your mind.",
+   "pause": 0.05,
+   "voiceStart": 8.22,
+   "voiceEnd": 12.46,
+   "start": 8.14,
+   "end": 13.0,
+   "words": [
+    {
+     "word": "You",
+     "start": 8.22,
+     "end": 8.3
+    },
+    {
+     "word": "scream,",
+     "start": 8.3,
+     "end": 8.58
+    },
+    {
+     "word": "throw",
+     "start": 8.92,
+     "end": 9.16
+    },
+    {
+     "word": "down",
+     "start": 9.16,
+     "end": 9.42
+    },
+    {
+     "word": "your",
+     "start": 9.42,
+     "end": 9.58
+    },
+    {
+     "word": "rifle,",
+     "start": 9.58,
+     "end": 9.88
+    },
+    {
+     "word": "and",
+     "start": 10.36,
+     "end": 10.4
+    },
+    {
+     "word": "stagger",
+     "start": 10.4,
+     "end": 10.78
+    },
+    {
+     "word": "away",
+     "start": 10.78,
+     "end": 11.18
+    },
+    {
+     "word": "like",
+     "start": 11.18,
+     "end": 11.4
+    },
+    {
+     "word": "you've",
+     "start": 11.4,
+     "end": 11.66
+    },
+    {
+     "word": "lost",
+     "start": 11.66,
+     "end": 11.92
+    },
+    {
+     "word": "your",
+     "start": 11.92,
+     "end": 12.12
+    },
+    {
+     "word": "mind.",
+     "start": 12.12,
+     "end": 12.46
+    }
+   ],
+   "cueAt": 8.22,
+   "aligned": [
+    [
+     "You",
+     8.22,
+     8.3,
+     "You"
+    ],
+    [
+     "scream,",
+     8.3,
+     8.58,
+     "scream,"
+    ],
+    [
+     "throw",
+     8.92,
+     9.16,
+     "throw"
+    ],
+    [
+     "down",
+     9.16,
+     9.42,
+     "down"
+    ],
+    [
+     "your",
+     9.42,
+     9.58,
+     "your"
+    ],
+    [
+     "rifle,",
+     9.58,
+     9.88,
+     "rifle,"
+    ],
+    [
+     "and",
+     10.36,
+     10.4,
+     "and"
+    ],
+    [
+     "stagger",
+     10.4,
+     10.78,
+     "stagger"
+    ],
+    [
+     "away",
+     10.78,
+     11.18,
+     "away"
+    ],
+    [
+     "like",
+     11.18,
+     11.4,
+     "like"
+    ],
+    [
+     "you've",
+     11.4,
+     11.66,
+     "you've"
+    ],
+    [
+     "lost",
+     11.66,
+     11.92,
+     "lost"
+    ],
+    [
+     "your",
+     11.92,
+     12.12,
+     "your"
+    ],
+    [
+     "mind.",
+     12.12,
+     12.46,
+     "mind."
     ]
    ]
   }
@@ -418,14 +623,14 @@
  "captionWords": [
   {
    "text": "Enemy",
-   "start": 0.98,
-   "end": 1.42,
+   "start": 0.88,
+   "end": 1.4,
    "emph": false,
    "brk": false
   },
   {
    "text": "soldiers",
-   "start": 1.42,
+   "start": 1.4,
    "end": 1.76,
    "emph": true,
    "brk": false
@@ -481,7 +686,7 @@
   },
   {
    "text": "so",
-   "start": 3.94,
+   "start": 3.98,
    "end": 4.14,
    "emph": false,
    "brk": false
@@ -516,7 +721,7 @@
   },
   {
    "text": "One",
-   "start": 5.22,
+   "start": 5.2,
    "end": 5.38,
    "emph": false,
    "brk": false
@@ -559,27 +764,27 @@
   {
    "text": "hoses",
    "start": 6.44,
-   "end": 6.78,
+   "end": 6.76,
    "emph": false,
    "brk": false
   },
   {
    "text": "the",
-   "start": 6.78,
-   "end": 6.96,
+   "start": 6.76,
+   "end": 6.98,
    "emph": false,
    "brk": false
   },
   {
    "text": "trench",
-   "start": 6.96,
-   "end": 7.22,
+   "start": 6.98,
+   "end": 7.24,
    "emph": false,
    "brk": false
   },
   {
    "text": "with",
-   "start": 7.22,
+   "start": 7.24,
    "end": 7.44,
    "emph": false,
    "brk": false
@@ -587,8 +792,106 @@
   {
    "text": "fire",
    "start": 7.44,
-   "end": 7.76,
+   "end": 7.78,
    "emph": true,
+   "brk": true
+  },
+  {
+   "text": "You",
+   "start": 8.22,
+   "end": 8.3,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "scream",
+   "start": 8.3,
+   "end": 8.58,
+   "emph": true,
+   "brk": true
+  },
+  {
+   "text": "throw",
+   "start": 8.92,
+   "end": 9.16,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "down",
+   "start": 9.16,
+   "end": 9.42,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "your",
+   "start": 9.42,
+   "end": 9.58,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "rifle",
+   "start": 9.58,
+   "end": 9.88,
+   "emph": true,
+   "brk": true
+  },
+  {
+   "text": "and",
+   "start": 10.36,
+   "end": 10.4,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "stagger",
+   "start": 10.4,
+   "end": 10.78,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "away",
+   "start": 10.78,
+   "end": 11.18,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "like",
+   "start": 11.18,
+   "end": 11.4,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "you've",
+   "start": 11.4,
+   "end": 11.66,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "lost",
+   "start": 11.66,
+   "end": 11.92,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "your",
+   "start": 11.92,
+   "end": 12.12,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "mind",
+   "start": 12.12,
+   "end": 12.46,
+   "emph": false,
    "brk": true
   }
  ]

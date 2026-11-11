@@ -137,7 +137,11 @@ export const ChubbyActor: React.FC<{
   fireT?: number; // flamethrower: seconds since the jet started (< 0 = off)
   fireLen?: number; // jet length (actor units, x size in the world)
   fireDrop?: number; // how far the jet bends down at its end (actor units)
-}> = ({ def, clip, t, loop = true, speed = 1, position, rotationY = 0, size = 1.8, expression = "neutral", mouth = "rest", face = "R", uniform = "khaki", rifle = false, headK = 1, handK = 1.5, headTilt = 0.0, chin = 0, weapon = "rifle", fireT = -1, fireLen = 4, fireDrop = 1.2 }) => {
+  holdR?: "rifle"; // a one-hand prop in the right glove (e.g. a rifle waved in panic)
+  reachR?: [number, number, number]; // put the right glove here (actor space, body units: 1 = ~1.8 m)
+  reachL?: [number, number, number];
+  reachK?: number; // 0..1 blend for reachR/reachL
+}> = ({ def, clip, t, loop = true, speed = 1, position, rotationY = 0, size = 1.8, expression = "neutral", mouth = "rest", face = "R", uniform = "khaki", rifle = false, headK = 1, handK = 1.5, headTilt = 0.0, chin = 0, weapon = "rifle", fireT = -1, fireLen = 4, fireDrop = 1.2, holdR, reachR, reachL, reachK = 1 }) => {
   const a = useAssets(clip);
   const rig = useMemo(() => {
     if (!a) return null;
@@ -184,6 +188,9 @@ export const ChubbyActor: React.FC<{
     reach(rig.bone("RightArm"), rig.bone("RightForeArm"), rig.bone("RightHand"), chinP, chin);
   }
 
+  if (reachR) reach(rig.bone("RightArm"), rig.bone("RightForeArm"), rig.bone("RightHand"), new THREE.Vector3(...reachR).applyMatrix4(parentWorld), reachK);
+  if (reachL) reach(rig.bone("LeftArm"), rig.bone("LeftForeArm"), rig.bone("LeftHand"), new THREE.Vector3(...reachL).applyMatrix4(parentWorld), reachK);
+
   let gun: { p: THREE.Vector3; q: THREE.Quaternion } | null = null;
   if (rifle) {
     const r = at("RightHand");
@@ -203,7 +210,7 @@ export const ChubbyActor: React.FC<{
       {(["LeftHand", "RightHand"] as const).map((hb) =>
         createPortal(
           <group key={hb} position={[0, 0.05, 0.0]} rotation={[0, hb === "LeftHand" ? Math.PI / 2 : -Math.PI / 2, Math.PI]} scale={0.62 / handK}>
-            <Glove up={rifle || (chin > 0.5 && hb === "RightHand") ? 1 : 4} />
+            <Glove up={rifle || (chin > 0.5 && hb === "RightHand") || (holdR && hb === "RightHand") ? 1 : 4} />
           </group>,
           rig.bone(hb),
         ),
@@ -221,6 +228,15 @@ export const ChubbyActor: React.FC<{
           </group>
         </group>
       )}
+      {holdR === "rifle" &&
+        createPortal(
+          <group position={[0, 0.06, 0.02]} rotation={[0, 0, Math.PI / 2]} scale={0.55 / handK}>
+            <group position={[0, -0.25, 0]}>
+              <HandProp name="rifleraw" />
+            </group>
+          </group>,
+          rig.bone("RightHand"),
+        )}
       {weapon === "flamegun" && (
         // fuel tanks on the back, on the upper spine
         <>

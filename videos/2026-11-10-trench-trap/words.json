@@ -1,12 +1,12 @@
 [
  {
   "word": "Enemy",
-  "start": 0.98,
-  "end": 1.42
+  "start": 0.88,
+  "end": 1.4
  },
  {
   "word": "soldiers",
-  "start": 1.42,
+  "start": 1.4,
   "end": 1.76
  },
  {
@@ -46,7 +46,7 @@
  },
  {
   "word": "So",
-  "start": 3.94,
+  "start": 3.98,
   "end": 4.14
  },
  {
@@ -71,7 +71,7 @@
  },
  {
   "word": "One",
-  "start": 5.22,
+  "start": 5.2,
   "end": 5.38
  },
  {
@@ -102,26 +102,96 @@
  {
   "word": "hoses",
   "start": 6.44,
-  "end": 6.78
+  "end": 6.76
  },
  {
   "word": "the",
-  "start": 6.78,
-  "end": 6.96
+  "start": 6.76,
+  "end": 6.98
  },
  {
   "word": "trench",
-  "start": 6.96,
-  "end": 7.22
+  "start": 6.98,
+  "end": 7.24
  },
  {
   "word": "with",
-  "start": 7.22,
+  "start": 7.24,
   "end": 7.44
  },
  {
   "word": "fire.",
   "start": 7.44,
-  "end": 7.76
+  "end": 7.78
+ },
+ {
+  "word": "You",
+  "start": 8.22,
+  "end": 8.3
+ },
+ {
+  "word": "scream,",
+  "start": 8.3,
+  "end": 8.58
+ },
+ {
+  "word": "throw",
+  "start": 8.92,
+  "end": 9.16
+ },
+ {
+  "word": "down",
+  "start": 9.16,
+  "end": 9.42
+ },
+ {
+  "word": "your",
+  "start": 9.42,
+  "end": 9.58
+ },
+ {
+  "word": "rifle,",
+  "start": 9.58,
+  "end": 9.88
+ },
+ {
+  "word": "and",
+  "start": 10.36,
+  "end": 10.4
+ },
+ {
+  "word": "stagger",
+  "start": 10.4,
+  "end": 10.78
+ },
+ {
+  "word": "away",
+  "start": 10.78,
+  "end": 11.18
+ },
+ {
+  "word": "like",
+  "start": 11.18,
+  "end": 11.4
+ },
+ {
+  "word": "you've",
+  "start": 11.4,
+  "end": 11.66
+ },
+ {
+  "word": "lost",
+  "start": 11.66,
+  "end": 11.92
+ },
+ {
+  "word": "your",
+  "start": 11.92,
+  "end": 12.12
+ },
+ {
+  "word": "mind.",
+  "start": 12.12,
+  "end": 12.46
  }
 ]

@@ -1,4 +1,4 @@
-# "Trench Trap": built line by line (see lines.md). Voice: owner's recording (lines 1-3 = CapCut take 0-6.9 s, 1.1 s silence in front).
+# "Trench Trap": built line by line (see lines.md). Voice: owner's recording (lines 1-4 = CapCut take 0-11.6 s, 1.1 s silence in front).
 # Build:  HF_HUB_OFFLINE=1 python -I tools/build_video.py videos/2026-11-10-trench-trap
 
 slug: trench-trap
@@ -36,3 +36,13 @@ cut: one      | flame-leap       | fx=whoosh | tr=hard
 cut: up       | flame-scowl      | fx=hit    | tr=hard
 cut: hoses    | flame-fire-side  | fx=fire_big:4+boom | tr=hard
 cut: fire     | fire-wall        | fx=boom   | tr=hard
+
+[beat 4]
+speaker: vo
+preset: day
+music: tense
+say: You scream, throw down your rifle, and stagger away like you've lost your mind.
+emph: scream, rifle
+cut: you      | you-scream-low   | fx=impact | tr=hard
+cut: throw    | you-drop-rifle   | fx=hit    | tr=hard
+cut: stagger  | you-stagger-away | fx=whoosh | tr=hard

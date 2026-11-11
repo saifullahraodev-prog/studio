@@ -910,6 +910,56 @@ const TPL: Record<string, T> = {
     ),
   }),
 
+  // -- "Trench Trap" line 4: "You scream, throw down your rifle, and stagger away like you've lost your mind."
+  // (after the reference's 8.7-10.1 s: low close scream, rifle dropped, staggering toward camera)
+  "you-scream-low": ({ beat, t, dur }) => ({
+    real: true,
+    camera: live({ position: [0.3, 1.0, -1.8], target: [0.1, 2.4, -5.6], fov: 52, roll: 0.07 }, t, dur, { punch: 0.2, shake: 0.04 }),
+    focus: [0.1, 2.3, -5.6],
+    focusRange: 1.6,
+    bokeh: 6,
+    content: (
+      <>
+        <Trench preset={P(beat)} />
+        <Flames t={t + 2} position={[0.4, 0.1, -9]} size={2.2} seed={4} />
+        <ChubbyActor def={BIBLE.tommy} clip="scream" t={0.6 + t} position={[0.1, 0, -5.6]} rotationY={0.05} expression="shocked" mouth="rest" holdR="rifle" headTilt={0.35} reachR={[-0.5 + Math.sin(t * 14) * 0.05, 1.5, 0.35]} reachL={[0.5 - Math.sin(t * 13) * 0.05, 1.45, 0.32]} reachK={Math.min(1, t / 0.15)} />
+      </>
+    ),
+  }),
+  "you-drop-rifle": ({ beat, t, dur }) => ({
+    real: true,
+    camera: live({ position: [0.6, 1.9, -1.4], target: [0.0, 1.4, -5.5], fov: 50 }, t, dur, { push: 0.08 }),
+    focus: [0.0, 1.6, -5.5],
+    focusRange: 2,
+    bokeh: 4,
+    content: (
+      <>
+        <Trench preset={P(beat)} />
+        <Flames t={t + 3} position={[-0.3, 0.1, -9.5]} size={2.0} seed={6} />
+        <ChubbyActor def={BIBLE.tommy} clip="scream" t={0.05 + t * 0.1} position={[0.0, 0, -5.5]} rotationY={0.15} expression="sad" mouth="small" holdR={t < 0.3 ? "rifle" : undefined} />
+        {t >= 0.3 && <FloorRifle position={[0.45, 0, -4.9]} rotationY={0.9} drop={t - 0.3} fromY={1.4} />}
+      </>
+    ),
+  }),
+  "you-stagger-away": ({ beat, t, dur }) => {
+    const z = -6.2 + 2.4 * t; // reeling up the trench toward the camera
+    return {
+      real: true,
+      camera: live({ position: [0.4, 1.6, z + 6.2], target: [0.0, 1.7, z], fov: 50 }, t, dur, { shake: 0.03 }),
+      focus: [0, 2.2, z],
+      focusRange: 3,
+      bokeh: 3,
+      content: (
+        <>
+          <Trench preset={P(beat)} />
+          <Flames t={t + 4} position={[0.3, 0.1, -9.5]} size={2.3} seed={3} />
+          <FloorRifle position={[0.45, 0, -4.9]} rotationY={0.9} />
+          <ChubbyActor def={BIBLE.tommy} clip="stagger-run" t={t} position={[Math.sin(t * 3.1) * 0.3, 0, z]} rotationY={0} expression="shocked" mouth="round" headTilt={0.2} />
+        </>
+      ),
+    };
+  },
+
   // -- trench Short ("The Flamethrower Trap", dramatized). Real body size. --
   // "Enemy soldiers have you cornered": you, looking up; rifles aimed down from both parapets
   "trench-cornered": ({ beat, t, dur }) => ({
