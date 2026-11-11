@@ -960,6 +960,43 @@ const TPL: Record<string, T> = {
     };
   },
 
+  // -- "Trench Trap" line 5: "You duck around the corner, and go dead quiet."
+  // (after the reference's 10.8-12.0 s: panic act dropped, slips round the corner past sandbags, sly hidden grin)
+  "you-duck-corner": ({ beat, t, dur }) => {
+    const x = 0.2 - 2.2 * t; // crouch-walking out of the main trench into the side trench, toward camera
+    return {
+      real: true,
+      camera: live({ position: [-8.2, 1.4, -6.4], target: [-1.0, 1.4, -5.8], fov: 46 }, t, dur, { push: 0.06 }),
+      focus: [x, 1.5, -6.0],
+      focusRange: 2.5,
+      bokeh: 5,
+      content: (
+        <>
+          <Trench preset={P(beat)} />
+          {/* foreground sandbag pile at the camera (layered depth, like the reference) */}
+          {[[-6.9, 0, -7.0, 0.2], [-6.6, 0, -6.6, 1.3], [-6.8, 0.35, -6.85, 0.7]].map(([px, py, pz, r], i) => (
+            <Prop key={i} id="cement_bag" position={[px, py, pz]} rotation={[0, r, 0]} tint="#9C8A66" />
+          ))}
+          <Flames t={t + 6} position={[0.2, 0.1, -1.5]} size={1.8} seed={8} />
+          <ChubbyActor def={BIBLE.tommy} clip="crouch-walk-kneel" t={0.3 + t} position={[x, 0, -6.0]} rotationY={-Math.PI / 2 + 0.35} expression="determined" />
+        </>
+      ),
+    };
+  },
+  "you-dead-quiet": ({ beat, t, dur }) => ({
+    real: true,
+    camera: live({ position: [-0.2, 1.6, -7.0], target: [-3.0, 1.45, -5.1], fov: 46 }, t, dur, { push: 0.12 }),
+    focus: [-3.0, 1.6, -5.1],
+    focusRange: 1.2,
+    bokeh: 6,
+    content: (
+      <>
+        <Trench preset={P(beat)} />
+        <ChubbyActor def={BIBLE.tommy} clip="crouch-idle" t={t} position={[-3.0, 0, -5.05]} rotationY={2.4} expression="determined" hush={Math.min(1, t / 0.25)} />
+      </>
+    ),
+  }),
+
   // -- trench Short ("The Flamethrower Trap", dramatized). Real body size. --
   // "Enemy soldiers have you cornered": you, looking up; rifles aimed down from both parapets
   "trench-cornered": ({ beat, t, dur }) => ({

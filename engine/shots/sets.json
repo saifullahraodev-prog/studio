@@ -32,6 +32,8 @@
   "fire-wall": "trench",
   "you-scream-low": "trench",
   "you-drop-rifle": "trench",
-  "you-stagger-away": "trench"
+  "you-stagger-away": "trench",
+  "you-duck-corner": "trench",
+  "you-dead-quiet": "trench"
  }
 }

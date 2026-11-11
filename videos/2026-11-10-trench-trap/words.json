@@ -1,17 +1,17 @@
 [
  {
   "word": "Enemy",
-  "start": 0.88,
-  "end": 1.4
+  "start": 0.9,
+  "end": 1.42
  },
  {
   "word": "soldiers",
-  "start": 1.4,
-  "end": 1.76
+  "start": 1.42,
+  "end": 1.74
  },
  {
   "word": "have",
-  "start": 1.76,
+  "start": 1.74,
   "end": 2.08
  },
  {
@@ -46,7 +46,7 @@
  },
  {
   "word": "So",
-  "start": 3.98,
+  "start": 3.94,
   "end": 4.14
  },
  {
@@ -67,7 +67,7 @@
  {
   "word": "plan.",
   "start": 4.52,
-  "end": 4.76
+  "end": 4.78
  },
  {
   "word": "One",
@@ -107,11 +107,11 @@
  {
   "word": "the",
   "start": 6.76,
-  "end": 6.98
+  "end": 6.96
  },
  {
   "word": "trench",
-  "start": 6.98,
+  "start": 6.96,
   "end": 7.24
  },
  {
@@ -136,7 +136,7 @@
  },
  {
   "word": "throw",
-  "start": 8.92,
+  "start": 8.9,
   "end": 9.16
  },
  {
@@ -156,7 +156,7 @@
  },
  {
   "word": "and",
-  "start": 10.36,
+  "start": 10.34,
   "end": 10.4
  },
  {
@@ -167,11 +167,11 @@
  {
   "word": "away",
   "start": 10.78,
-  "end": 11.18
+  "end": 11.2
  },
  {
   "word": "like",
-  "start": 11.18,
+  "start": 11.2,
   "end": 11.4
  },
  {
@@ -193,5 +193,50 @@
   "word": "mind.",
   "start": 12.12,
   "end": 12.46
+ },
+ {
+  "word": "You",
+  "start": 13.02,
+  "end": 13.12
+ },
+ {
+  "word": "duck",
+  "start": 13.12,
+  "end": 13.38
+ },
+ {
+  "word": "around",
+  "start": 13.38,
+  "end": 13.62
+ },
+ {
+  "word": "the",
+  "start": 13.62,
+  "end": 13.8
+ },
+ {
+  "word": "corner,",
+  "start": 13.8,
+  "end": 14.08
+ },
+ {
+  "word": "and",
+  "start": 14.58,
+  "end": 14.84
+ },
+ {
+  "word": "go",
+  "start": 14.84,
+  "end": 15.02
+ },
+ {
+  "word": "dead",
+  "start": 15.02,
+  "end": 15.26
+ },
+ {
+  "word": "quiet.",
+  "start": 15.26,
+  "end": 15.64
  }
 ]

@@ -3,7 +3,7 @@
  "format": "short",
  "world": "trench",
  "fps": 30,
- "duration": 13.0,
+ "duration": 16.2,
  "beats": [
   {
    "id": "b1",
@@ -23,7 +23,7 @@
      "fx": "whoosh+boom",
      "tr": "dive",
      "start": 2.18,
-     "end": 3.9,
+     "end": 3.86,
      "face": "neutral"
     }
    ],
@@ -37,24 +37,24 @@
    ],
    "subtitle": "Enemy soldiers have you cornered in your own trench,",
    "pause": 0.05,
-   "voiceStart": 0.88,
+   "voiceStart": 0.9,
    "voiceEnd": 3.42,
    "start": 0.0,
-   "end": 3.9,
+   "end": 3.86,
    "words": [
     {
      "word": "Enemy",
-     "start": 0.88,
-     "end": 1.4
+     "start": 0.9,
+     "end": 1.42
     },
     {
      "word": "soldiers",
-     "start": 1.4,
-     "end": 1.76
+     "start": 1.42,
+     "end": 1.74
     },
     {
      "word": "have",
-     "start": 1.76,
+     "start": 1.74,
      "end": 2.08
     },
     {
@@ -88,23 +88,23 @@
      "end": 3.42
     }
    ],
-   "cueAt": 0.88,
+   "cueAt": 0.9,
    "aligned": [
     [
      "Enemy",
-     0.88,
-     1.4,
+     0.9,
+     1.42,
      "Enemy"
     ],
     [
      "soldiers",
-     1.4,
-     1.76,
+     1.42,
+     1.74,
      "soldiers"
     ],
     [
      "have",
-     1.76,
+     1.74,
      2.08,
      "have"
     ],
@@ -154,7 +154,7 @@
      "shot": "you-plan-chin",
      "fx": "pop",
      "tr": "hard",
-     "start": 3.9,
+     "start": 3.86,
      "end": 5.12,
      "face": "neutral"
     }
@@ -168,14 +168,14 @@
    ],
    "subtitle": "so you make a plan.",
    "pause": 0.05,
-   "voiceStart": 3.98,
-   "voiceEnd": 4.76,
-   "start": 3.9,
+   "voiceStart": 3.94,
+   "voiceEnd": 4.78,
+   "start": 3.86,
    "end": 5.12,
    "words": [
     {
      "word": "So",
-     "start": 3.98,
+     "start": 3.94,
      "end": 4.14
     },
     {
@@ -196,14 +196,14 @@
     {
      "word": "plan.",
      "start": 4.52,
-     "end": 4.76
+     "end": 4.78
     }
    ],
-   "cueAt": 3.98,
+   "cueAt": 3.94,
    "aligned": [
     [
      "so",
-     3.98,
+     3.94,
      4.14,
      "So"
     ],
@@ -228,7 +228,7 @@
     [
      "plan.",
      4.52,
-     4.76,
+     4.78,
      "plan."
     ]
    ]
@@ -326,11 +326,11 @@
     {
      "word": "the",
      "start": 6.76,
-     "end": 6.98
+     "end": 6.96
     },
     {
      "word": "trench",
-     "start": 6.98,
+     "start": 6.96,
      "end": 7.24
     },
     {
@@ -391,12 +391,12 @@
     [
      "the",
      6.76,
-     6.98,
+     6.96,
      "the"
     ],
     [
      "trench",
-     6.98,
+     6.96,
      7.24,
      "trench"
     ],
@@ -423,7 +423,7 @@
      "fx": "impact",
      "tr": "hard",
      "start": 8.14,
-     "end": 8.88,
+     "end": 8.86,
      "face": "neutral"
     },
     {
@@ -431,7 +431,7 @@
      "shot": "you-drop-rifle",
      "fx": "hit",
      "tr": "hard",
-     "start": 8.88,
+     "start": 8.86,
      "end": 10.36,
      "face": "neutral"
     },
@@ -441,7 +441,7 @@
      "fx": "whoosh",
      "tr": "hard",
      "start": 10.36,
-     "end": 13.0,
+     "end": 12.94,
      "face": "neutral"
     }
    ],
@@ -458,7 +458,7 @@
    "voiceStart": 8.22,
    "voiceEnd": 12.46,
    "start": 8.14,
-   "end": 13.0,
+   "end": 12.94,
    "words": [
     {
      "word": "You",
@@ -472,7 +472,7 @@
     },
     {
      "word": "throw",
-     "start": 8.92,
+     "start": 8.9,
      "end": 9.16
     },
     {
@@ -492,7 +492,7 @@
     },
     {
      "word": "and",
-     "start": 10.36,
+     "start": 10.34,
      "end": 10.4
     },
     {
@@ -503,11 +503,11 @@
     {
      "word": "away",
      "start": 10.78,
-     "end": 11.18
+     "end": 11.2
     },
     {
      "word": "like",
-     "start": 11.18,
+     "start": 11.2,
      "end": 11.4
     },
     {
@@ -547,7 +547,7 @@
     ],
     [
      "throw",
-     8.92,
+     8.9,
      9.16,
      "throw"
     ],
@@ -571,7 +571,7 @@
     ],
     [
      "and",
-     10.36,
+     10.34,
      10.4,
      "and"
     ],
@@ -584,12 +584,12 @@
     [
      "away",
      10.78,
-     11.18,
+     11.2,
      "away"
     ],
     [
      "like",
-     11.18,
+     11.2,
      11.4,
      "like"
     ],
@@ -618,26 +618,166 @@
      "mind."
     ]
    ]
+  },
+  {
+   "id": "b5",
+   "cuts": [
+    {
+     "cue": "you",
+     "shot": "you-duck-corner",
+     "fx": "whoosh",
+     "tr": "hard",
+     "start": 12.94,
+     "end": 14.98,
+     "face": "neutral"
+    },
+    {
+     "cue": "dead",
+     "shot": "you-dead-quiet",
+     "tr": "flash",
+     "start": 14.98,
+     "end": 16.2,
+     "face": "neutral"
+    }
+   ],
+   "speaker": "vo",
+   "preset": "day",
+   "music": "tense",
+   "say": "You duck around the corner, and go dead quiet.",
+   "emph": [
+    "corner",
+    "quiet"
+   ],
+   "subtitle": "You duck around the corner, and go dead quiet.",
+   "pause": 0.05,
+   "voiceStart": 13.02,
+   "voiceEnd": 15.64,
+   "start": 12.94,
+   "end": 16.2,
+   "words": [
+    {
+     "word": "You",
+     "start": 13.02,
+     "end": 13.12
+    },
+    {
+     "word": "duck",
+     "start": 13.12,
+     "end": 13.38
+    },
+    {
+     "word": "around",
+     "start": 13.38,
+     "end": 13.62
+    },
+    {
+     "word": "the",
+     "start": 13.62,
+     "end": 13.8
+    },
+    {
+     "word": "corner,",
+     "start": 13.8,
+     "end": 14.08
+    },
+    {
+     "word": "and",
+     "start": 14.58,
+     "end": 14.84
+    },
+    {
+     "word": "go",
+     "start": 14.84,
+     "end": 15.02
+    },
+    {
+     "word": "dead",
+     "start": 15.02,
+     "end": 15.26
+    },
+    {
+     "word": "quiet.",
+     "start": 15.26,
+     "end": 15.64
+    }
+   ],
+   "cueAt": 13.02,
+   "aligned": [
+    [
+     "You",
+     13.02,
+     13.12,
+     "You"
+    ],
+    [
+     "duck",
+     13.12,
+     13.38,
+     "duck"
+    ],
+    [
+     "around",
+     13.38,
+     13.62,
+     "around"
+    ],
+    [
+     "the",
+     13.62,
+     13.8,
+     "the"
+    ],
+    [
+     "corner,",
+     13.8,
+     14.08,
+     "corner,"
+    ],
+    [
+     "and",
+     14.58,
+     14.84,
+     "and"
+    ],
+    [
+     "go",
+     14.84,
+     15.02,
+     "go"
+    ],
+    [
+     "dead",
+     15.02,
+     15.26,
+     "dead"
+    ],
+    [
+     "quiet.",
+     15.26,
+     15.64,
+     "quiet."
+    ]
+   ]
   }
  ],
  "captionWords": [
   {
    "text": "Enemy",
-   "start": 0.88,
-   "end": 1.4,
+   "start": 0.9,
+   "end": 1.42,
    "emph": false,
    "brk": false
   },
   {
    "text": "soldiers",
-   "start": 1.4,
-   "end": 1.76,
+   "start": 1.42,
+   "end": 1.74,
    "emph": true,
    "brk": false
   },
   {
    "text": "have",
-   "start": 1.76,
+   "start": 1.74,
    "end": 2.08,
    "emph": false,
    "brk": false
@@ -686,7 +826,7 @@
   },
   {
    "text": "so",
-   "start": 3.98,
+   "start": 3.94,
    "end": 4.14,
    "emph": false,
    "brk": false
@@ -715,7 +855,7 @@
   {
    "text": "plan",
    "start": 4.52,
-   "end": 4.76,
+   "end": 4.78,
    "emph": true,
    "brk": true
   },
@@ -771,13 +911,13 @@
   {
    "text": "the",
    "start": 6.76,
-   "end": 6.98,
+   "end": 6.96,
    "emph": false,
    "brk": false
   },
   {
    "text": "trench",
-   "start": 6.98,
+   "start": 6.96,
    "end": 7.24,
    "emph": false,
    "brk": false
@@ -812,7 +952,7 @@
   },
   {
    "text": "throw",
-   "start": 8.92,
+   "start": 8.9,
    "end": 9.16,
    "emph": false,
    "brk": false
@@ -840,7 +980,7 @@
   },
   {
    "text": "and",
-   "start": 10.36,
+   "start": 10.34,
    "end": 10.4,
    "emph": false,
    "brk": false
@@ -855,13 +995,13 @@
   {
    "text": "away",
    "start": 10.78,
-   "end": 11.18,
+   "end": 11.2,
    "emph": false,
    "brk": false
   },
   {
    "text": "like",
-   "start": 11.18,
+   "start": 11.2,
    "end": 11.4,
    "emph": false,
    "brk": false
@@ -892,6 +1032,69 @@
    "start": 12.12,
    "end": 12.46,
    "emph": false,
+   "brk": true
+  },
+  {
+   "text": "You",
+   "start": 13.02,
+   "end": 13.12,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "duck",
+   "start": 13.12,
+   "end": 13.38,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "around",
+   "start": 13.38,
+   "end": 13.62,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "the",
+   "start": 13.62,
+   "end": 13.8,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "corner",
+   "start": 13.8,
+   "end": 14.08,
+   "emph": true,
+   "brk": true
+  },
+  {
+   "text": "and",
+   "start": 14.58,
+   "end": 14.84,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "go",
+   "start": 14.84,
+   "end": 15.02,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "dead",
+   "start": 15.02,
+   "end": 15.26,
+   "emph": false,
+   "brk": false
+  },
+  {
+   "text": "quiet",
+   "start": 15.26,
+   "end": 15.64,
+   "emph": true,
    "brk": true
   }
  ]

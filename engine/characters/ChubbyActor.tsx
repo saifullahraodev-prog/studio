@@ -133,6 +133,7 @@ export const ChubbyActor: React.FC<{
   handK?: number; // mitten size
   headTilt?: number; // 0 = head stays upright, 1 = full mocap head motion
   chin?: number; // 0..1: bring the right glove to the chin (thinking / scheming)
+  hush?: number; // 0..1: index finger to the lips (shh)
   weapon?: "rifle" | "flamegun"; // what the two hands hold (with rifle=true)
   fireT?: number; // flamethrower: seconds since the jet started (< 0 = off)
   fireLen?: number; // jet length (actor units, x size in the world)
@@ -141,7 +142,7 @@ export const ChubbyActor: React.FC<{
   reachR?: [number, number, number]; // put the right glove here (actor space, body units: 1 = ~1.8 m)
   reachL?: [number, number, number];
   reachK?: number; // 0..1 blend for reachR/reachL
-}> = ({ def, clip, t, loop = true, speed = 1, position, rotationY = 0, size = 1.8, expression = "neutral", mouth = "rest", face = "R", uniform = "khaki", rifle = false, headK = 1, handK = 1.5, headTilt = 0.0, chin = 0, weapon = "rifle", fireT = -1, fireLen = 4, fireDrop = 1.2, holdR, reachR, reachL, reachK = 1 }) => {
+}> = ({ def, clip, t, loop = true, speed = 1, position, rotationY = 0, size = 1.8, expression = "neutral", mouth = "rest", face = "R", uniform = "khaki", rifle = false, headK = 1, handK = 1.5, headTilt = 0.0, chin = 0, hush = 0, weapon = "rifle", fireT = -1, fireLen = 4, fireDrop = 1.2, holdR, reachR, reachL, reachK = 1 }) => {
   const a = useAssets(clip);
   const rig = useMemo(() => {
     if (!a) return null;
@@ -180,6 +181,12 @@ export const ChubbyActor: React.FC<{
   const yawQ = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), Math.atan2(fwd.x, fwd.z));
   const headQ = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), upK).multiply(yawQ);
   const headP = at("Head").add(upK.clone().multiplyScalar(0.2 * headK));
+  if (hush > 0) {
+    const yaw = Math.atan2(fwd.x, fwd.z);
+    const f2 = new THREE.Vector3(Math.sin(yaw), 0, Math.cos(yaw));
+    const lipsP = headP.clone().add(f2.multiplyScalar(0.36 * headK)).add(new THREE.Vector3(0, -0.24 * headK, 0)).applyMatrix4(parentWorld);
+    reach(rig.bone("RightArm"), rig.bone("RightForeArm"), rig.bone("RightHand"), lipsP, hush);
+  }
   if (chin > 0) {
     // under the chin, a little in front of the face (actor space -> world)
     const fwdFlat = new THREE.Vector3(Math.sin(Math.atan2(fwd.x, fwd.z)), 0, Math.cos(Math.atan2(fwd.x, fwd.z)));
@@ -210,7 +217,7 @@ export const ChubbyActor: React.FC<{
       {(["LeftHand", "RightHand"] as const).map((hb) =>
         createPortal(
           <group key={hb} position={[0, 0.05, 0.0]} rotation={[0, hb === "LeftHand" ? Math.PI / 2 : -Math.PI / 2, Math.PI]} scale={0.62 / handK}>
-            <Glove up={rifle || (chin > 0.5 && hb === "RightHand") || (holdR && hb === "RightHand") ? 1 : 4} />
+            <Glove up={rifle || ((chin > 0.5 || hush > 0.5) && hb === "RightHand") || (holdR && hb === "RightHand") ? 1 : 4} />
           </group>,
           rig.bone(hb),
         ),
