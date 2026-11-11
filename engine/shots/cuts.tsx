@@ -767,53 +767,66 @@ const TPL: Record<string, T> = {
   //     The next shot (same place) makes the camera DIVE down into the trench.
   "enemies-close-in": ({ beat, t, dur }) => ({
     real: true,
-    camera: live({ position: [21, TRENCH.H + 7.5, 5.0], target: [2.0, 1.0, 0.8], fov: 46 }, t, dur, { push: 0.1 }),
-    focus: [9.5, TRENCH.H + 1.5, 1.4],
+    camera: live({ position: [21, TRENCH.H + 6.5, 5.0], target: [3.0, 1.6, 0.8], fov: 44 }, t, dur, { push: 0.1 }),
+    focus: [10.5, TRENCH.H + 1.4, 1.2],
     focusRange: 7,
     bokeh: 3,
     content: (
       <>
         <Trench preset={P(beat)} />
-        <Barrel p={[17.6, TRENCH.H, 4.6]} />
-        <Barrel p={[18.4, TRENCH.H, 3.3]} tipped />
-        <Barrel p={[17.0, TRENCH.H, 6.0]} />
+        {/* foreground clutter (real CC0 models) */}
+        <Prop id="wooden_barrels_01" position={[17.8, TRENCH.H, 4.4]} rotation={[0, 0.6, 0]} />
+        <Prop id="wooden_military_crate" position={[16.6, TRENCH.H, 6.4]} rotation={[0, -0.3, 0]} />
+        <Prop id="ammo_box" position={[17.2, TRENCH.H, 2.6]} rotation={[0, 1.1, 0]} />
+        <Prop id="cement_bag" position={[18.6, TRENCH.H, 2.9]} rotation={[0, 0.4, 0]} tint="#8E7E5E" />
+        <Prop id="old_military_crate" position={[6.5, TRENCH.H, 6.5]} rotation={[0, 0.9, 0]} />
+        <Prop id="dead_tree_trunk" position={[4, TRENCH.H, -6]} rotation={[0, 1.2, 0]} />
+        <Prop id="tree_stump_02" position={[8, TRENCH.H, 7.5]} />
+        <Prop id="rock_07" position={[12.5, TRENCH.H, -4.5]} />
         {[
-          { x: 10.6, z: 1.0, ph: 0 },
-          { x: 11.6, z: 3.6, ph: 0.35 },
-          { x: 9.4, z: -1.6, ph: 0.6 },
-          { x: 12.4, z: -0.8, ph: 0.2 },
-          { x: 13.6, z: 5.6, ph: 0.8 },
-          { x: 14.8, z: -3.0, ph: 0.45 },
+          { x: 10.2, z: 1.0, ph: 0 },
+          { x: 11.4, z: 3.4, ph: 0.35 },
+          { x: 9.0, z: -1.6, ph: 0.6 },
+          { x: 12.2, z: -0.6, ph: 0.2 },
+          { x: 13.4, z: 5.2, ph: 0.8 },
+          { x: 14.4, z: -2.8, ph: 0.45 },
         ].map((e, i) => (
-          <Character key={i} def={BIBLE.enemy} expression="angry" position={[e.x, TRENCH.H, e.z]} rotationY={-Math.PI / 2 + (e.z - 1) * 0.04} pose={{ ...gesture("advance", t + e.ph), root: [0, 0, t * 2.2] }} />
+          <ChubbyActor key={i} def={BIBLE.enemy} clip="rifle-walk" t={t + e.ph} position={[e.x - t * 2.3, TRENCH.H, e.z]} rotationY={-Math.PI / 2 + (e.z - 1) * 0.04} expression="angry" uniform="fieldgrey" rifle />
         ))}
       </>
     ),
   }),
-  // (b) you, crouched and cornered at the end of the trench, hand up; rifles aimed down over every edge
+  // (b) you, cornered at the end of the trench, cowering; rifles aimed down over every edge
   "you-trapped": ({ beat, t, dur }) => {
     const rise = (d: number) => {
       const k = Math.max(0, Math.min(1, (t - d) / 0.25));
       const p = k - 1;
-      return TRENCH.H - 1.8 * (1 - (1 + 2.6 * p * p * p + 1.6 * p * p));
+      return TRENCH.H - 2.2 * (1 - (1 + 2.6 * p * p * p + 1.6 * p * p));
     };
     return {
       real: true,
-      camera: live({ position: [-0.6, 1.6, -2.2], target: [0.4, 2.7, -6.6], fov: 58 }, t, dur, { push: 0.12, shake: 0.015 }),
-      focus: [0.5, 1.8, -6.4],
+      camera: live({ position: [-0.6, 1.5, -0.9], target: [0.4, 2.5, -6.6], fov: 56 }, t, dur, { push: 0.12, shake: 0.015 }),
+      focus: [0.45, 1.8, -6.3],
       focusRange: 1.8,
       bokeh: 6,
       content: (
         <>
           <Trench preset={P(beat)} />
-          <Character def={BIBLE.tommy} expression="scared" mouth={t > 0.3 ? "round" : "rest"} position={[0.55, 0, -6.5]} rotationY={-0.25} pose={{ ...gesture("crouch", t), lean: 0.05, headNod: -0.3, headYaw: Math.sin(t * 2.6) * 0.35, armR: [2.0, 0.55], elbowR: 0.7, fingersR: 4, armL: [1.0, -0.3], elbowL: 1.2, holdL: "rifle" }} />
+          <Prop id="wooden_ladder" position={[1.25, 0, -4.6]} rotation={[-0.22, -Math.PI / 2, 0]} />
+          <Prop id="wooden_military_crate" position={[-0.75, 0, -6.8]} rotation={[0, 0.3, 0]} />
+          <Prop id="stick_grenade" position={[-0.75, 0.75, -6.8]} rotation={[0, 0.8, Math.PI / 2]} />
+          <Prop id="old_gas_mask" position={[0.3, 0.05, -4.4]} rotation={[0, 2.2, 0]} />
+          <Prop id="rusted_spade_01" position={[-1.25, 0, -5.4]} rotation={[0, 0, 0.25]} />
+          <Prop id="wooden_bucket_01" position={[1.0, 0, -3.4]} />
+          <FloorRifle position={[0.95, 0, -5.6]} rotationY={0.4} />
+          <ChubbyActor def={BIBLE.tommy} clip="terrified" t={t + 3} position={[0.45, 0, -6.4]} rotationY={-0.15} expression="scared" mouth={t > 0.3 ? "round" : "rest"} />
           {[
             { x: 2.6, z: -5.4, r: -Math.PI / 2 - 0.4, d: 0.15 },
-            { x: 0.2, z: -8.6, r: 0.15, d: 0.3 },
-            { x: -1.9, z: -8.7, r: 0.5, d: 0.45 },
+            { x: 0.2, z: -8.7, r: 0.1, d: 0.3 },
+            { x: -1.9, z: -8.8, r: 0.5, d: 0.45 },
             { x: 2.7, z: -3.0, r: -Math.PI / 2 - 0.1, d: 0.6 },
           ].map((e, i) => (
-            <Character key={i} def={BIBLE.enemy} expression="angry" position={[e.x, rise(e.d), e.z]} rotationY={e.r} pose={gesture("aim", t + i * 0.6)} />
+            <ChubbyActor key={i} def={BIBLE.enemy} clip="rifle-aim" t={t + i * 0.6} position={[e.x, rise(e.d), e.z]} rotationY={e.r} expression="angry" uniform="fieldgrey" rifle />
           ))}
         </>
       ),
