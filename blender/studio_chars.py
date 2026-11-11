@@ -321,8 +321,7 @@ def soldier(move, loc, rot_z=0.0, who="tommy", uniform="khaki", expr="neutral", 
     c1.subtarget = "mixamorig:Head"
     c1.head_tail = 0.3
     c2 = piv.constraints.new("COPY_ROTATION")
-    c2.target = arm
-    c2.subtarget = "mixamorig:Hips"
+    c2.target = arm  # the soldier's facing (object), not the hip bone: some moves turn the hips round
     c2.use_x = False
     c2.use_y = False
     r = head_r * size

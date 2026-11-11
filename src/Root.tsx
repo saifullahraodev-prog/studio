@@ -10,6 +10,7 @@ import { calculateShortMetadata, Short, ShortProps } from "./compositions/Short"
 import { calculateShortV2Metadata, ShortV2, ShortV2Props } from "./compositions/ShortV2";
 import { calculateVideoMetadata, Video, VideoProps } from "./compositions/Video";
 import { ShotPreview, ShotPreviewProps } from "./compositions/ShotPreview";
+import { BlenderShort, BlenderShortProps, calculateBlenderShortMetadata } from "./compositions/BlenderShort";
 import { StressTest } from "./compositions/StressTest";
 import { StyleTest, StyleTestProps } from "./compositions/StyleTest";
 import { TalkTest, TalkTestProps } from "./compositions/TalkTest";
@@ -101,6 +102,16 @@ export const RemotionRoot: React.FC = () => {
         height={1280}
         defaultProps={{ res: 720, slug: "titanic-lifeboats-v2" } as ShortV2Props}
         calculateMetadata={calculateShortV2Metadata}
+      />
+      <Composition
+        id="BlenderShort"
+        component={BlenderShort}
+        durationInFrames={300}
+        fps={30}
+        width={720}
+        height={1280}
+        defaultProps={{ res: 720, slug: "trench-trap" } as BlenderShortProps}
+        calculateMetadata={calculateBlenderShortMetadata}
       />
       <Composition
         id="Lineup"
