@@ -13,6 +13,26 @@ def empty_at(name, loc):
     return e
 
 
+def held_lance(arm, grip, toward, n, length=0.62):
+    """Flamethrower lance placed in the world (grip at `grip`, nozzle pointing at `toward`);
+    the right hand grips it, the left hand holds it further along (IK)."""
+    from mathutils import Vector
+    g, t = Vector(grip), Vector(toward)
+    d = (t - g).normalized()
+    lance = C.weapon_mesh("lance")
+    lance.scale = (1.4,) * 3
+    lance.location = g
+    aim = empty_at("lance_aim", t)
+    tr = lance.constraints.new("DAMPED_TRACK")
+    tr.target = aim
+    tr.track_axis = "TRACK_Y"
+    r_t = empty_at("grip_r", g - d * 0.02)
+    l_t = empty_at("grip_l", g + d * length * 0.55)
+    C.reach(arm, "Right", r_t, [(1, 1.0), (n, 1.0)])
+    C.reach(arm, "Left", l_t, [(1, 1.0), (n, 1.0)])
+    return lance
+
+
 def fire_light(loc, energy=600):
     bpy.ops.object.light_add(type="POINT", location=loc)
     L = bpy.context.object
@@ -47,9 +67,10 @@ def flame_leap(n):
 
 def flame_scowl(n):
     """Looking up at his angry face on the lip, nozzle toward us (reference 6.7 s)."""
-    aim = empty_at("scowl_aim", (-0.4, -0.3, 0.9))  # nozzle points down at the camera, not across his face
-    C.soldier("Rifle Aiming Idle", (1.3, 0.4, D), rot_z=-math.pi / 2 + 0.75, who="flamer", uniform="fieldgrey", expr="angry",
-              helmet_kind="stahl", frames=(1, n), offset=10, weapon="lance", tanks=True, aim_at=aim)
+    arm, head, piv = C.soldier("Rifle Aiming Idle", (1.3, 0.4, D), rot_z=-math.pi / 2 + 0.35, who="flamer", uniform="fieldgrey",
+                               expr="angry", helmet_kind="stahl", frames=(1, n), offset=10, tanks=True, fists=True)
+    # nozzle angled down past the camera's left (pointing straight into the lens it read as a black box)
+    held_lance(arm, grip=(1.12, 0.22, D + 0.72), toward=(-0.6, 1.0, 1.0), n=n)
     cam = S.camera((-0.25, -0.5, 1.55), (1.25, 0.35, D + 1.3), lens=38, fstop=2.8, focus=2.3)
     cam_keys(cam, [(1, (-0.25, -0.5, 1.55), (1.25, 0.35, D + 1.3)), (n, (-0.1, -0.4, 1.6), (1.25, 0.35, D + 1.3))])
     return cam
@@ -82,8 +103,9 @@ def you_scream_low(n):
                                helmet_kind="brodie", frames=(1, n), offset=20)
     # hands-up spots in the world (he stands still, facing the camera): above and beside the head
     bx, by = 0.1, -4.3
-    up_r = empty_at("upR", (bx - 0.55, by + 0.3, 1.95))
-    up_l = empty_at("upL", (bx + 0.55, by + 0.3, 1.9))
+    # he faces +Y (toward the camera): his RIGHT side is +X, his LEFT is -X (they were swapped -> arms crossed the neck)
+    up_r = empty_at("upR", (bx + 0.6, by + 0.45, 1.75))
+    up_l = empty_at("upL", (bx - 0.6, by + 0.45, 1.7))
     C.reach(arm, "Right", up_r, [(1, 0.2), (5, 1.0)])
     C.reach(arm, "Left", up_l, [(1, 0.2), (5, 1.0)])
     fire_light((0.0, 1.5, 1.2), 500)

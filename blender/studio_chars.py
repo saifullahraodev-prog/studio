@@ -213,7 +213,7 @@ def weapon_mesh(kind="rifle"):
 
 def soldier(move, loc, rot_z=0.0, who="tommy", uniform="khaki", expr="neutral", helmet_kind="brodie",
             offset=0, travel=(0.0, 0.0, 0.0), frames=(1, 120), weapon=None, tanks=False, size=1.0, head_r=0.3, path=None,
-            run_dir=None, stride_k=1.0, speed=1.0, head_sink=0.0, aim_at=None):
+            run_dir=None, stride_k=1.0, speed=1.0, head_sink=0.0, aim_at=None, fists=False):
     """One soldier: Mixamo FBX (body + move) from MOVES, looping from `offset`; moves by `travel` (m/s)
     or along `path` [(frame, (x, y, z)), ...]. With `run_dir` (x, y) the speed is measured from the feet
     (planted foot speed) so the soldier doesn't slide; `stride_k` scales it."""
@@ -346,7 +346,7 @@ def soldier(move, loc, rot_z=0.0, who="tommy", uniform="khaki", expr="neutral", 
         setattr(ol, attr, False)
     helmet("brodie" if helmet_kind == "brodie" else "stahl", head, r)
     for hb in ("mixamorig:LeftHand", "mixamorig:RightHand"):
-        gl = cartoon_glove(fist=bool(weapon))
+        gl = cartoon_glove(fist=bool(weapon) or fists)
         gl.parent = arm
         gl.parent_type = "BONE"
         gl.parent_bone = hb
