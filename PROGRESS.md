@@ -353,3 +353,10 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   every shot drifts (scale 1->1.045 over the beat) so freezedetect finds no still >2 s.
 - DONE 2026-11-12: `videos/2026-11-12-seawise-giant/out/seawise-giant-final.mp4` (1080p30, 6:15, -14.9 LUFS,
   0 black, 0 frozen; ~15 min render). Render: bundle, then `node tools/run.mjs render .cache/bundle ShipGuyVideo <out> --props=<{"slug":"seawise"}>`.
+
+## 2026-11-12: The Ship Guy long-form #2 "Every Level of Ship Engine" (script draft v1)
+- `videos/2026-11-12-ship-engines/script.md` (8 levels: outboard -> tug -> Wartsila 31 -> LM2500 -> Icon of the Seas
+  -> Nimitz A4W -> RT-flex96C; sources + 11 fact notes) and `narration.txt` (spoken words ONLY, for CapCut TTS).
+  1,017 words ~5:45 at the CapCut voice pace (~177 wpm measured on Seawise Giant).
+- GATE: waiting for owner approval of the script, then owner records voice; I build new templates (engine cut-aways,
+  piston/crankshaft, tug top-down, carrier plant) on the existing 2D pipeline.
