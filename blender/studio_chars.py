@@ -155,7 +155,7 @@ def outline_material():
 
 def helmet(kind, parent, r):
     """Realistic steel helmet (lathe profile, worn paint) round a head of radius r."""
-    tint = (0.17, 0.19, 0.12) if kind == "brodie" else (0.13, 0.14, 0.13)
+    tint = (0.17, 0.19, 0.12) if kind == "brodie" else (0.07, 0.08, 0.075)
     metal = pbr(f"helmet_{kind}", "PaintedMetal004", scale=1.5, tint=tint, rough=1.4, bump=0.8, gray=True)
     prof = ([(0.0, 1.08), (0.6, 0.98), (0.95, 0.62), (1.1, 0.36), (1.12, 0.33), (1.55, 0.27), (1.57, 0.24)] if kind == "brodie"
             else [(0.0, 1.12), (0.65, 1.0), (1.0, 0.62), (1.1, 0.3), (1.13, 0.1), (1.2, -0.12), (1.3, -0.3)])
@@ -213,7 +213,7 @@ def weapon_mesh(kind="rifle"):
 
 def soldier(move, loc, rot_z=0.0, who="tommy", uniform="khaki", expr="neutral", helmet_kind="brodie",
             offset=0, travel=(0.0, 0.0, 0.0), frames=(1, 120), weapon=None, tanks=False, size=1.0, head_r=0.3, path=None,
-            run_dir=None, stride_k=1.0):
+            run_dir=None, stride_k=1.0, speed=1.0):
     """One soldier: Mixamo FBX (body + move) from MOVES, looping from `offset`; moves by `travel` (m/s)
     or along `path` [(frame, (x, y, z)), ...]. With `run_dir` (x, y) the speed is measured from the feet
     (planted foot speed) so the soldier doesn't slide; `stride_k` scales it."""
@@ -270,7 +270,8 @@ def soldier(move, loc, rot_z=0.0, who="tommy", uniform="khaki", expr="neutral", 
     st.action_frame_start = a0
     st.action_frame_end = a1 - 1 if (DROP_LAST and (a1 - a0) > 4) else a1
     L = st.action_frame_end - st.action_frame_start
-    st.repeat = max(1.0, (frames[1] - frames[0] + offset) / L + 1)
+    st.scale = 1.0 / max(0.05, speed)  # speed < 1 = slow motion (e.g. a near-still pose taken from a move)
+    st.repeat = max(1.0, (frames[1] - frames[0] + offset) / (L * st.scale) + 1)
     keys = path or [(f, (loc[0] + travel[0] * (f - frames[0]) / fps, loc[1] + travel[1] * (f - frames[0]) / fps, loc[2] + travel[2] * (f - frames[0]) / fps)) for f in (frames[0], frames[1])]
     for f, p in keys:
         arm.location = p
@@ -379,3 +380,85 @@ def soldier(move, loc, rot_z=0.0, who="tommy", uniform="khaki", expr="neutral", 
             c.inverse_matrix.identity()
             t.location = (sx * 0.09 * size * 1.4, 0.18 * size, 0.0)
     return arm, head, piv
+
+
+# ── hand placement (IK), one-hand props ─────────────────────────────────────
+def reach(arm, side, target, keys):
+    """Bend `side` ("Right"/"Left") arm so the hand reaches `target` (an object).
+    keys = [(frame, influence 0..1), ...] blends from the mocap pose into the reach and back."""
+    pb = arm.pose.bones[f"mixamorig:{side}ForeArm"]
+    c = pb.constraints.new("IK")
+    c.name = f"reach{side}"
+    c.target = target
+    c.chain_count = 2
+    c.use_tail = True
+    for f, k in keys:
+        c.influence = k
+        arm.keyframe_insert(f'pose.bones["mixamorig:{side}ForeArm"].constraints["reach{side}"].influence', frame=f)
+    return c
+
+
+def head_target(piv, name, local):
+    """An empty that moves with the head pivot (e.g. the chin or the lips), local = (x, y, z) metres; face looks -Y."""
+    bpy.ops.object.empty_add(location=(0, 0, 0))
+    e = bpy.context.object
+    e.name = name
+    e.parent = piv
+    e.location = local
+    return e
+
+
+def body_target(arm, name, local):
+    """An empty in the soldier's own space (moves and turns with him), e.g. a raised-hand spot."""
+    bpy.ops.object.empty_add(location=(0, 0, 0))
+    e = bpy.context.object
+    e.name = name
+    e.parent = arm  # plain object parenting (a Child Of constraint made a loop with the arm IK)
+    sx = arm.scale[0]
+    e.location = (local[0] / sx, local[1] / sx, local[2] / sx)
+    return e
+
+
+def hold_one_hand(arm, side="Right", kind="rifle", size=1.0, until=None):
+    """A prop gripped in one fist (along the forearm direction); `until` = frame it is let go (it then hides)."""
+    g = weapon_mesh(kind)
+    g.scale = (size * 1.4,) * 3
+    c = g.constraints.new("CHILD_OF")
+    c.target = arm
+    c.subtarget = f"mixamorig:{side}Hand"
+    c.inverse_matrix.identity()
+    c.set_inverse_pending = False
+    sx = arm.scale[0]
+    g.scale = (size * 1.4 / sx,) * 3
+    g.location = (0, 0.05 / sx, 0)
+    g.rotation_euler = (math.pi / 2, 0, 0)
+    if until:
+        g.hide_render = False
+        g.keyframe_insert("hide_render", frame=until - 1)
+        g.hide_render = True
+        g.keyframe_insert("hide_render", frame=until)
+    return g
+
+
+def drop_prop(kind, start, floor, f0, f1=None, spin=1.2):
+    """A prop that falls from `start` to `floor` between frames f0 and f1 with a little bounce."""
+    g = weapon_mesh(kind)
+    g.scale = (1.4,) * 3
+    f1 = f1 or f0 + 9
+    g.hide_render = True
+    g.keyframe_insert("hide_render", frame=f0 - 1)
+    g.hide_render = False
+    g.keyframe_insert("hide_render", frame=f0)
+    g.location = start
+    g.rotation_euler = (math.pi / 2, 0, 0.3)
+    g.keyframe_insert("location", frame=f0)
+    g.keyframe_insert("rotation_euler", frame=f0)
+    g.location = (floor[0], floor[1], floor[2] + 0.06)
+    g.rotation_euler = (math.pi / 2 - 1.5, 0, 0.3 + spin)
+    g.keyframe_insert("location", frame=f1)
+    g.keyframe_insert("rotation_euler", frame=f1)
+    g.location = (floor[0], floor[1], floor[2] + 0.14)
+    g.keyframe_insert("location", frame=f1 + 3)
+    g.location = (floor[0], floor[1], floor[2] + 0.04)
+    g.keyframe_insert("location", frame=f1 + 6)
+    return g

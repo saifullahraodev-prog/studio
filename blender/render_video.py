@@ -9,6 +9,8 @@ import bpy, sys, os, json, time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import studio_bl as S
 import shots_trench as T
+import shots_trench_b as TB
+T.SHOTS.update(TB.SHOTS_B)
 import studio_chars as CH
 
 args = sys.argv[sys.argv.index("--") + 1:]
@@ -32,7 +34,7 @@ for i, c in enumerate(cuts):
     CH._mats.clear()  # material cache points into the old scene's data
     sc = bpy.context.scene
     if mode == "final":
-        S.render_setup("CYCLES", 540, 960, 48)
+        S.render_setup("CYCLES", 540, 960, 32)
     else:
         S.render_setup("CYCLES", 540, 960, 6 if mode == "preview" else 24)
         if mode == "preview":
@@ -49,5 +51,7 @@ for i, c in enumerate(cuts):
     else:
         sc.render.filepath = os.path.join(out, f"cut{i:02d}_")
         sc.render.image_settings.file_format = "PNG"
+        sc.render.use_overwrite = False  # resumable: frames already on disk are skipped
+        sc.render.use_placeholder = True
         bpy.ops.render.render(animation=True)
     print(f"RENDER cut {i} {c['shot']} ({n} frames, {mode}) {time.time() - t0:.0f}s")

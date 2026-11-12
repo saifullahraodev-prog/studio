@@ -10,7 +10,7 @@ PH = os.path.join(ROOT, "public", "models", "polyhaven")
 SKY = os.path.join(ROOT, "blender", "assets", "sky")
 BTEX = os.path.join(ROOT, "blender", "assets", "tex")
 
-T = dict(W=0.8, D=1.95, Y0=-6.0, Y1=40.0)  # trench half-width, depth, from/to
+T = dict(W=0.8, D=1.95, Y0=-6.0, Y1=40.0, SN=-3.6, SX=-16.0)  # half-width, depth, from/to; side trench (left, at the far end): near wall y=SN, runs to x=SX
 
 
 def reset():
@@ -275,6 +275,8 @@ def build_trench():
             cy = Y0 - 20 + S * (j + 0.5) / N
             if abs(cx) < W + S / N * 0.5 and Y0 < cy < Y1:
                 continue
+            if T["SX"] - 0.2 < cx < -W + 0.2 and Y0 < cy < T["SN"]:  # side trench
+                continue
             bm.faces.new((verts[i, j], verts[i + 1, j], verts[i + 1, j + 1], verts[i, j + 1]))
     ground = obj_from_bm("ground", bm, mud)
     # far ground out to the horizon (meets the field in the sky photo)
@@ -291,23 +293,37 @@ def build_trench():
     fl = bpy.context.object
     fl.scale = (2 * W + 0.4, Y1 - Y0, 1)
     fl.data.materials.append(wetmud)
+    SN, SX = T["SN"], T["SX"]
     for sx in (-1, 1):
-        bpy.ops.mesh.primitive_plane_add(size=1, location=(sx * W, (Y0 + Y1) / 2, D / 2), rotation=(0, math.pi / 2, 0))
+        ya = SN if sx < 0 else Y0  # the left wall stops where the side trench opens
+        bpy.ops.mesh.primitive_plane_add(size=1, location=(sx * W, (ya + Y1) / 2, D / 2), rotation=(0, math.pi / 2, 0))
         wall = bpy.context.object
-        wall.scale = (D + 0.3, Y1 - Y0, 1)
+        wall.scale = (D + 0.3, Y1 - ya, 1)
         wall.data.materials.append(planks)
         bpy.ops.object.transform_apply(scale=True)
         _uv_world(wall, 1.2)
-    bpy.ops.mesh.primitive_plane_add(size=1, location=(0, Y0, D / 2), rotation=(math.pi / 2, 0, 0))
+    # back wall: closes the main trench and runs on as the side trench's far wall
+    bpy.ops.mesh.primitive_plane_add(size=1, location=((W + SX) / 2, Y0, D / 2), rotation=(math.pi / 2, 0, 0))
     back = bpy.context.object
-    back.scale = (2 * W, D + 0.3, 1)
+    back.scale = (W - SX, D + 0.3, 1)
     back.data.materials.append(planks)
     bpy.ops.object.transform_apply(scale=True)
     _uv_world(back, 1.2)
+    # side trench: near wall + floor
+    bpy.ops.mesh.primitive_plane_add(size=1, location=((SX - W) / 2, SN, D / 2), rotation=(math.pi / 2, 0, 0))
+    sw = bpy.context.object
+    sw.scale = (-W - SX, D + 0.3, 1)
+    sw.data.materials.append(planks)
+    bpy.ops.object.transform_apply(scale=True)
+    _uv_world(sw, 1.2)
+    bpy.ops.mesh.primitive_plane_add(size=1, location=((SX - W) / 2, (Y0 + SN) / 2, 0.002))
+    sf = bpy.context.object
+    sf.scale = (-W - SX, SN - Y0, 1)
+    sf.data.materials.append(wetmud)
     # wall posts
     post = flat("post", (0.18, 0.12, 0.08), 0.9)
     for sx in (-1, 1):
-        y = Y0 + 0.6
+        y = Y0 + 0.6 if sx > 0 else SN + 0.3
         while y < Y1:
             bpy.ops.mesh.primitive_cube_add(size=1, location=(sx * (W - 0.05), y, D / 2 - 0.05))
             p = bpy.context.object
@@ -316,6 +332,14 @@ def build_trench():
             y += 1.4
     # duckboards
     duck = pbr("duck", "Planks037A", scale=1.0, tint=(0.55, 0.45, 0.35), rough=1.0, bump=1.0)
+    x = -W - 0.1
+    while x > SX:
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(x, (Y0 + SN) / 2, 0.06))
+        s = bpy.context.object
+        s.scale = (0.13, 1.0, 0.04)
+        s.rotation_euler = (0, 0, random.uniform(-0.04, 0.04))
+        s.data.materials.append(duck)
+        x -= 0.2
     y = Y0 + 0.3
     while y < Y1:
         bpy.ops.mesh.primitive_cube_add(size=1, location=(0, y, 0.06))
@@ -334,13 +358,23 @@ def build_trench():
     bag.location = (0, 0, -50)
     for sx in (-1, 1):
         for row in range(2):
-            y = Y0 + 0.2 + row * 0.15
+            y = (Y0 if sx > 0 else SN) + 0.2 + row * 0.15
             while y < Y1 - 10:
                 o = bag.copy()
                 bpy.context.scene.collection.objects.link(o)
                 o.location = (sx * (W + 0.25 + row * 0.05), y, D + 0.08 + row * 0.18)
                 o.rotation_euler = (random.uniform(-0.1, 0.1), random.uniform(-0.1, 0.1), math.pi / 2 + random.uniform(-0.15, 0.15))
                 y += 0.58
+    # lips of the side trench and of the back wall
+    for row in range(2):
+        for (ly, x0, x1) in ((SN + 0.25 + row * 0.05, SX, -W), (Y0 - 0.25 - row * 0.05, SX, W)):
+            x = x0 + 0.2 + row * 0.15
+            while x < x1 - 0.1:
+                o = bag.copy()
+                bpy.context.scene.collection.objects.link(o)
+                o.location = (x, ly, D + 0.08 + row * 0.18)
+                o.rotation_euler = (random.uniform(-0.1, 0.1), random.uniform(-0.1, 0.1), random.uniform(-0.15, 0.15))
+                x += 0.58
     return ground
 
 
