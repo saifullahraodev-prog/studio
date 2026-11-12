@@ -358,5 +358,5 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
 - `videos/2026-11-12-ship-engines/script.md` (8 levels: outboard -> tug -> Wartsila 31 -> LM2500 -> Icon of the Seas
   -> Nimitz A4W -> RT-flex96C; sources + 11 fact notes) and `narration.txt` (spoken words ONLY, for CapCut TTS).
   1,017 words ~5:45 at the CapCut voice pace (~177 wpm measured on Seawise Giant).
-- GATE: waiting for owner approval of the script, then owner records voice; I build new templates (engine cut-aways,
+- GATE passed 2026-11-12: owner approved script v1. Next: owner records voice (CapCut, narration.txt); I build new templates (engine cut-aways,
   piston/crankshaft, tug top-down, carrier plant) on the existing 2D pipeline.
