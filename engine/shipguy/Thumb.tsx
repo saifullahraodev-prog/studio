@@ -5,6 +5,7 @@ import React from "react";
 import { AbsoluteFill } from "remotion";
 import { Boom, Flames, INK, Jet, Sea, Sky, Smoke, Stickman, Tanker, Towers, Waterline } from "./art";
 import { fontFamily, Svg } from "./scenes";
+import { BigEngine, Boat, Building, PistonArt } from "./templates2";
 
 const Big: React.FC<{ lines: { text: string; color: string; size: number }[]; x: number; y: number; rot?: number; align?: "left" | "right" | "center" }> = ({ lines, x, y, rot = -4, align = "left" }) => (
   <div style={{ position: "absolute", left: x, top: y, transform: `rotate(${rot}deg)`, textAlign: align, lineHeight: 0.92 }}>
@@ -84,4 +85,58 @@ const ThumbC: React.FC = () => {
   );
 };
 
-export const ShipGuyThumb: React.FC<{ v: string }> = ({ v }) => (v === "B" ? <ThumbB /> : v === "C" ? <ThumbC /> : <ThumbA />);
+// ---- engines video (#2) ----
+const Rays: React.FC<{ c: string }> = ({ c }) => (
+  <g transform="translate(960 540)" opacity={0.16}>
+    {Array.from({ length: 16 }).map((_, i) => <path key={i} d="M0 0 L1400 -140 L1400 140 Z" fill={c} transform={`rotate(${i * 22.5})`} />)}
+  </g>
+);
+
+// D: the giant piston + tiny shocked figure. "5.5 TONNE PISTON"
+const ThumbD: React.FC = () => (
+  <AbsoluteFill style={{ background: "#2b3440" }}>
+    <Svg>
+      <Rays c="#ffd23f" />
+      <rect x={0} y={1000} width={1920} height={80} fill="#5b636b" />
+      <g transform="translate(1340 40)"><PistonArt h={960} /></g>
+    </Svg>
+    <Stickman pose="shocked-2" x={880} y={1010} height={330} />
+    <Big x={60} y={110} rot={-3} lines={[{ text: "5.5 TONNE", color: "#ffd23f", size: 200 }, { text: "PISTON", color: "#ffffff", size: 250 }]} />
+  </AbsoluteFill>
+);
+
+// E: the engine next to a 4-storey building. "ONE ENGINE"
+const ThumbE: React.FC = () => {
+  const ew = 1380, pxm = ew / 26.6;
+  return (
+    <AbsoluteFill style={{ background: "#2b3440" }}>
+      <Svg>
+        <Rays c="#ffffff" />
+        <rect x={0} y={1010} width={1920} height={70} fill="#5b636b" />
+        <g transform="translate(60 1010)"><BigEngine w={ew} t={10} glow /></g>
+        <g transform={`translate(${60 + ew + 90} 1010)`}><Building w={6 * pxm} h={12 * pxm} /></g>
+      </Svg>
+      <Stickman pose="shocked" x={600} y={1012} height={1.75 * pxm * 1.4} />
+      <Big x={70} y={20} rot={-2} lines={[{ text: "ONE ENGINE", color: "#ffd23f", size: 200 }]} />
+    </AbsoluteFill>
+  );
+};
+
+// F: tiny outboard vs the monster. "600 hp → 107,000 hp"
+const ThumbF: React.FC = () => (
+  <AbsoluteFill style={{ background: "#1f3a5f" }}>
+    <Svg>
+      <Rays c="#ffffff" />
+      <g transform="translate(250 760) scale(0.75)"><Boat motor={1.2} /></g>
+      <path d="M600 640 Q 760 560 860 600" fill="none" stroke="#1d1d22" strokeWidth={34} strokeLinecap="round" />
+      <path d="M600 640 Q 760 560 860 600" fill="none" stroke="#ffd23f" strokeWidth={18} strokeLinecap="round" />
+      <path d="M840 570 L900 610 L840 640 Z" fill="#ffd23f" stroke="#1d1d22" strokeWidth={8} strokeLinejoin="round" />
+      <g transform="translate(930 960)"><BigEngine w={940} t={10} /></g>
+    </Svg>
+    <Big x={60} y={60} rot={-3} lines={[{ text: "600 hp", color: "#ffffff", size: 170 }]} />
+    <Big x={980} y={70} rot={3} lines={[{ text: "107,000 hp", color: "#ffd23f", size: 170 }]} />
+  </AbsoluteFill>
+);
+
+export const ShipGuyThumb: React.FC<{ v: string }> = ({ v }) =>
+  v === "B" ? <ThumbB /> : v === "C" ? <ThumbC /> : v === "D" ? <ThumbD /> : v === "E" ? <ThumbE /> : v === "F" ? <ThumbF /> : <ThumbA />;

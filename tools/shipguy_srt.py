@@ -27,12 +27,17 @@ def ts(t: float) -> str:
 def two_lines(text: str) -> str:
     if len(text) <= MAX_LINE:
         return text
-    words = text.split()
+    # break points: every space, or (if needed) right after a hyphen ("six-hundred-|horsepower")
     best, best_d = text, 1e9
-    for i in range(1, len(words)):
-        a, b = " ".join(words[:i]), " ".join(words[i:])
-        if len(a) <= MAX_LINE and len(b) <= MAX_LINE and abs(len(a) - len(b)) < best_d:
-            best, best_d = f"{a}\n{b}", abs(len(a) - len(b))
+    points = [i for i, ch in enumerate(text) if ch == " "]
+    hyph = [i + 1 for i, ch in enumerate(text) if ch == "-"]
+    for cands, is_h in ((points, False), (hyph, True)):
+        for i in cands:
+            a, b = (text[:i], text[i:]) if is_h else (text[:i], text[i + 1:])
+            if len(a) <= MAX_LINE and len(b) <= MAX_LINE and abs(len(a) - len(b)) < best_d:
+                best, best_d = f"{a}\n{b}", abs(len(a) - len(b))
+        if best_d < 1e9:
+            break
     return best
 
 
@@ -85,6 +90,16 @@ def main(vdir: str, out: str):
         for b in cuts + [len(sent) - 1]:
             chunk = sent[a:b + 1]
             cues.append([chunk[0][1], chunk[-1][2], " ".join(x[0] for x in chunk)]); a = b + 1
+    # a cue that can't fit in 2 x 42 chars is split in two near its middle (time shared by length)
+    fixed = []
+    for s, e, txt in cues:
+        if len(txt) <= MAX_CHARS:
+            fixed.append([s, e, txt]); continue
+        mid = len(txt) // 2
+        cut = min((i for i, ch in enumerate(txt) if ch == " "), key=lambda i: abs(i - mid))
+        k = cut / len(txt)
+        fixed += [[s, s + (e - s) * k, txt[:cut]], [s + (e - s) * k, e, txt[cut + 1:]]]
+    cues = fixed
     # tidy timing: min duration, hold until just before the next cue
     for i, c in enumerate(cues):
         nxt = cues[i + 1][0] if i + 1 < len(cues) else c[1] + 2

@@ -28,7 +28,7 @@ const Stamp: React.FC<{ text: string; p: number }> = ({ text, p }) => (
 
 // ================================================================== drawn parts
 /** Piston + rod, top-centre at (0,0), `h` px tall overall. */
-const PistonArt: React.FC<{ h: number }> = ({ h }) => {
+export const PistonArt: React.FC<{ h: number }> = ({ h }) => {
   const w = h * 0.3, crown = h * 0.32;
   return (
     <g>
@@ -70,7 +70,7 @@ const CrankArt: React.FC<{ len: number; a: number; n?: number }> = ({ len, a, n 
 };
 
 /** The RT-flex96C, side view, bottom-left at (0,0), `w` px long (height = w * 0.508). */
-const BigEngine: React.FC<{ w: number; t: number; glow?: boolean }> = ({ w, t, glow }) => {
+export const BigEngine: React.FC<{ w: number; t: number; glow?: boolean }> = ({ w, t, glow }) => {
   const h = w * 0.508;
   const cyl = 14, cw = (w * 0.92) / cyl, x0 = w * 0.04;
   return (
@@ -105,7 +105,7 @@ const BigEngine: React.FC<{ w: number; t: number; glow?: boolean }> = ({ w, t, g
 };
 
 /** Plain 4-storey building, bottom-left at (0,0). */
-const Building: React.FC<{ w: number; h: number }> = ({ w, h }) => (
+export const Building: React.FC<{ w: number; h: number }> = ({ w, h }) => (
   <g>
     {Array.from({ length: 4 }).map((_, i) => (
       <g key={i}>
@@ -117,7 +117,7 @@ const Building: React.FC<{ w: number; h: number }> = ({ w, h }) => (
 );
 
 /** Small boat side view, waterline at (0,0), bow right, `s` scale; outboard(s) at the stern (left). */
-const Boat: React.FC<{ s?: number; motor?: number }> = ({ s = 1, motor = 1 }) => (
+export const Boat: React.FC<{ s?: number; motor?: number }> = ({ s = 1, motor = 1 }) => (
   <g transform={`scale(${s})`}>
     <path d="M0 -70 L420 -70 Q470 -70 500 -110 L470 -20 Q450 20 380 20 L30 20 Q0 20 0 -10 Z" fill="#f4f1e8" {...ink} />
     <path d="M0 -10 L470 -10" stroke="#3b8fd9" strokeWidth={14} />
@@ -812,7 +812,7 @@ const ICONS: Record<string, React.FC<{ t: number }>> = {
 export const StatX: Tpl = ({ t, p }) => {
   const Icon = ICONS[p.icon ?? ""];
   const target = Number(p.num ?? 0);
-  const v = target * ramp(t, 4, 34);
+  const v = p.raw === "1" ? target : target * ramp(t, 4, 34); // years etc. appear whole, no count-up
   const shown = p.raw === "1" ? String(Math.round(v)) : (p.num ?? "").includes(".") ? v.toFixed(1) : Math.round(v).toLocaleString("en-US");
   return (
     <AbsoluteFill style={{ background: BG.navy }}>

@@ -1,0 +1,58 @@
+TITLE (use this one)
+Every Level of Ship Engine, From Tiny to Insane
+
+Other title options (for later A/B tests):
+- This Ship Engine Weighs 2,300 Tonnes
+- From 600 hp to 107,000 hp: Every Ship Engine Explained
+- The Biggest Engine Ever Put in a Ship
+
+=====================================================================
+
+DESCRIPTION (paste everything between the lines)
+---------------------------------------------------------------------
+A piston that weighs 5.5 tonnes. A crankshaft that weighs 300 tonnes. An engine taller than a four-storey building that turns slower than your car at a red light.
+
+We climb every level of ship engine: the outboard on a small boat, the tugboat that pushes giants, the record-breaking four-stroke, the jet engine inside a warship, the cruise ship that is really a floating power station, the nuclear carrier that runs for decades without new fuel, and finally the Wärtsilä-Sulzer RT-flex96C, the biggest single engine ever put inside a ship.
+
+⏱ CHAPTERS
+0:00 A 5.5-tonne piston
+0:29 Level 1: Outboard motors
+1:04 Level 2: Tugboats
+1:41 Level 3: Four-stroke diesels
+2:10 Level 4: Jet engines at sea
+2:55 Level 5: The floating power station
+3:26 Level 6: The engine that burns no fuel
+3:56 Final level: the 2,300-tonne monster
+5:16 Every level compared
+
+📊 THE RT-FLEX96C IN NUMBERS (14 cylinders)
+• Power: 80,080 kW (107,390 hp)
+• Height: 13.5 m · Length: 26.6 m
+• Weight: over 2,300 tonnes · Crankshaft: 300 tonnes
+• Cylinder bore: 96 cm · Stroke: 2.5 m
+• Speed: about 100 rpm at full power
+• Built for: Emma Mærsk (397 m container ship)
+
+🚢 Watch next: What happens if a ship loses its engine?
+🚢 Also: The Biggest Ship Ever Built Was Bombed — Then Came Back
+
+📚 SOURCES
+• Wärtsilä-Sulzer RTA96-C / RT-flex96C: https://en.wikipedia.org/wiki/Wärtsilä-Sulzer_RTA96-C
+• Emma Mærsk: https://en.wikipedia.org/wiki/Emma_Mærsk
+• Mercury Verado V12 600 hp: https://boatindustry.com/news/36076/verado-v12-600-hp-mercury-launches-its-largest-outboard-ever-built
+• PSA Thor and PSA Hulk tugs: https://www.bairdmaritime.com/work-boat-world/tug-and-salvage-world/harbour-tugs-and-operation/vessel-review-psa-thor-and-psa-hulk-psa-marine-s-two-new-superhero-tugs
+• Wärtsilä 31 world record: https://www.wartsila.com/media/news/02-06-2015-new-wartsila-31-engine-achieves-guinness-world-records-title
+• GE LM2500: https://en.wikipedia.org/wiki/General_Electric_LM2500
+• Icon of the Seas engines: https://www.offshore-energy.biz/lng-powered-icon-of-the-seas-kicks-off-sea-trials
+• A4W reactor (Nimitz class): https://en.wikipedia.org/wiki/A4W_reactor
+
+Subscribe to The Ship Guy for more stories about the biggest, strangest and most expensive ships on Earth.
+
+#ShipEngine #Ships #Engineering
+---------------------------------------------------------------------
+
+TAGS (YouTube Studio → Show more → Tags; paste as one line)
+ship engine, biggest engine in the world, largest diesel engine, rt-flex96c, wartsila, emma maersk, marine engine, how ship engines work, two stroke diesel, ship propulsion, nuclear aircraft carrier, tugboat, outboard motor, the ship guy
+
+CATEGORY: Education
+SUBTITLES: upload ship-engines.en.srt under Subtitles (English, "With timing")

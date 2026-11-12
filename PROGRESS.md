@@ -380,3 +380,9 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   test lab `engine/shipguy/guyLab.tsx` (composition `GuyLab`, demos hello/shock/point/think/push/dig, `sheet=true` = contact
   sheet, `demo=model` = owner's images vs puppet). Stills in `videos/2026-11-12-ever-given/guy-test/`.
 - GATE: waiting for owner OK on the puppet look + which animation ideas to use; no video rendered yet.
+- DONE 2026-11-13: `videos/2026-11-12-ship-engines/out/ship-engines-final.mp4` (1080p30, 5:47, -14.5 LUFS, 0 black,
+  0 frozen) + 3 thumbnails (`thumbnails/`), `ship-engines.en.srt` (124 cues), `youtube-upload.txt` (title, description,
+  chapters, tags). Year cards (raw=1) no longer count up.
+- NOTE: another session (Ever Given video) shares this repo and rebuilt `.cache/bundle` mid-render, which killed the
+  first full render. Ship Guy renders now use their own bundle: `.cache/bundle-shipguy`
+  (`node tools/run.mjs bundle src/index.ts --out-dir=.cache/bundle-shipguy`).
