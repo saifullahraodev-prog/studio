@@ -213,7 +213,7 @@ def weapon_mesh(kind="rifle"):
 
 def soldier(move, loc, rot_z=0.0, who="tommy", uniform="khaki", expr="neutral", helmet_kind="brodie",
             offset=0, travel=(0.0, 0.0, 0.0), frames=(1, 120), weapon=None, tanks=False, size=1.0, head_r=0.3, path=None,
-            run_dir=None, stride_k=1.0, speed=1.0):
+            run_dir=None, stride_k=1.0, speed=1.0, head_sink=0.0, aim_at=None):
     """One soldier: Mixamo FBX (body + move) from MOVES, looping from `offset`; moves by `travel` (m/s)
     or along `path` [(frame, (x, y, z)), ...]. With `run_dir` (x, y) the speed is measured from the feet
     (planted foot speed) so the soldier doesn't slide; `stride_k` scales it."""
@@ -330,7 +330,7 @@ def soldier(move, loc, rot_z=0.0, who="tommy", uniform="khaki", expr="neutral", 
     head = bpy.context.object
     head.name = f"head_{who}"
     head.parent = piv
-    head.location = (0, 0, r * 0.66)
+    head.location = (0, 0, r * (0.66 - head_sink))  # head_sink: seat the head lower for poses that stretch the neck
     head.scale = (1.0, 1.0, 1.08)
     for p in head.data.polygons:
         p.use_smooth = True
@@ -363,22 +363,41 @@ def soldier(move, loc, rot_z=0.0, who="tommy", uniform="khaki", expr="neutral", 
         cl.subtarget = "mixamorig:RightHand"
         cl.head_tail = GRIP
         dt_ = g.constraints.new("DAMPED_TRACK")
-        dt_.target = arm
-        dt_.subtarget = "mixamorig:LeftHand"
-        dt_.head_tail = GRIP
+        if aim_at is not None:  # point the weapon at a spot (e.g. at the camera) instead of through the other hand
+            dt_.target = aim_at
+        else:
+            dt_.target = arm
+            dt_.subtarget = "mixamorig:LeftHand"
+            dt_.head_tail = GRIP
         dt_.track_axis = "TRACK_Y"
     if tanks:
         steel = pbr("tank", "PaintedMetal004", scale=1.0, tint=(0.25, 0.27, 0.23), rough=0.6, bump=0.6, gray=True)
-        for sx in (-1, 1):
-            bpy.ops.mesh.primitive_cylinder_add(radius=0.075 * size * 1.4, depth=0.45 * size * 1.4)
+        # a "back" pivot like the head's: rides on the upper spine, turns with the soldier, stays upright
+        bpy.ops.object.empty_add(location=(0, 0, 0))
+        back = bpy.context.object
+        back.name = f"backpivot_{who}"
+        cb = back.constraints.new("COPY_LOCATION")
+        cb.target = arm
+        cb.subtarget = "mixamorig:Spine2"
+        cb.head_tail = 0.2
+        cr = back.constraints.new("COPY_ROTATION")
+        cr.target = arm
+        cr.use_x = False
+        cr.use_y = False
+        for sx in (-1, 1):  # two upright fuel tanks on his back (back = +Y; the face looks -Y)
+            bpy.ops.mesh.primitive_cylinder_add(radius=0.07 * size, depth=0.42 * size, vertices=24)
             t = bpy.context.object
             t.data.materials.append(steel)
-            c = t.constraints.new("CHILD_OF")
-            c.target = arm
-            c.subtarget = "mixamorig:Spine2"
-            c.set_inverse_pending = False
-            c.inverse_matrix.identity()
-            t.location = (sx * 0.09 * size * 1.4, 0.18 * size, 0.0)
+            for pp in t.data.polygons:
+                pp.use_smooth = True
+            t.parent = back
+            t.location = (sx * 0.09 * size, 0.27 * size, -0.05 * size)
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.018 * size, depth=0.24 * size, vertices=12)
+        cap = bpy.context.object  # cross-pipe joining the tanks at the top
+        cap.data.materials.append(flat("brass", (0.6, 0.42, 0.15), 0.35, 1.0))
+        cap.parent = back
+        cap.location = (0, 0.27 * size, 0.17 * size)
+        cap.rotation_euler = (0, math.pi / 2, 0)
     return arm, head, piv
 
 

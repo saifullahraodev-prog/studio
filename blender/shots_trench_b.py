@@ -47,8 +47,9 @@ def flame_leap(n):
 
 def flame_scowl(n):
     """Looking up at his angry face on the lip, nozzle toward us (reference 6.7 s)."""
+    aim = empty_at("scowl_aim", (-0.4, -0.3, 0.9))  # nozzle points down at the camera, not across his face
     C.soldier("Rifle Aiming Idle", (1.3, 0.4, D), rot_z=-math.pi / 2 + 0.75, who="flamer", uniform="fieldgrey", expr="angry",
-              helmet_kind="stahl", frames=(1, n), offset=10, weapon="lance", tanks=True)
+              helmet_kind="stahl", frames=(1, n), offset=10, weapon="lance", tanks=True, aim_at=aim)
     cam = S.camera((-0.25, -0.5, 1.55), (1.25, 0.35, D + 1.3), lens=38, fstop=2.8, focus=2.3)
     cam_keys(cam, [(1, (-0.25, -0.5, 1.55), (1.25, 0.35, D + 1.3)), (n, (-0.1, -0.4, 1.6), (1.25, 0.35, D + 1.3))])
     return cam
@@ -85,7 +86,6 @@ def you_scream_low(n):
     up_l = empty_at("upL", (bx + 0.55, by + 0.3, 1.9))
     C.reach(arm, "Right", up_r, [(1, 0.2), (5, 1.0)])
     C.reach(arm, "Left", up_l, [(1, 0.2), (5, 1.0)])
-    C.hold_one_hand(arm, "Right", "rifle")
     fire_light((0.0, 1.5, 1.2), 500)
     cam = S.camera((0.4, -1.5, 0.95), (0.1, -4.3, 1.5), lens=26, roll=0.08)
     cam_keys(cam, [(1, (0.4, -1.5, 0.95), (0.1, -4.3, 1.5)), (n, (0.38, -1.9, 0.95), (0.1, -4.3, 1.55))])
@@ -95,7 +95,7 @@ def you_scream_low(n):
 def you_drop_rifle(n):
     """He lets go: the rifle drops and bounces on the duckboards; a sad little face (reference 9.4 s)."""
     C.soldier("Standing Yell", (0.0, -4.4, 0.06), rot_z=math.pi, who="tommy", uniform="khaki", expr="sad",
-              helmet_kind="brodie", frames=(1, n), speed=0.12)
+              helmet_kind="brodie", frames=(1, n), speed=0.12, head_sink=0.45)
     C.drop_prop("rifle", (0.22, -4.1, 0.85), (0.32, -3.7, 0.06), f0=8)
     fire_light((0.0, 1.5, 1.2), 400)
     cam = S.camera((0.35, -1.9, 1.15), (0.0, -4.3, 0.85), lens=32, fstop=4.0, focus=2.6)
