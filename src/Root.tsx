@@ -16,6 +16,8 @@ import { StyleTest, StyleTestProps } from "./compositions/StyleTest";
 import { TalkTest, TalkTestProps } from "./compositions/TalkTest";
 import { ToonCubeTest } from "./compositions/ToonCubeTest";
 import { WorldTest, WorldTestProps } from "./compositions/WorldTest";
+import { SceneId, ShipGuyScene } from "../engine/shipguy/scenes";
+import { calcShipGuy, ShipGuyBoard, ShipGuyProps, ShipGuyVideo } from "../engine/shipguy/Video";
 
 // Vertical compositions take a `res` prop: 720 for previews (default), 1080 for finals.
 // Final render: --props=engine/presets/res-1080.json
@@ -152,6 +154,35 @@ export const RemotionRoot: React.FC = () => {
         calculateMetadata={({ props }: { props: ShotPreviewProps }) => verticalSize(props.res)}
       />
       <Composition id="GLInfo" component={GLInfo} durationInFrames={1} fps={30} width={1600} height={240} />
+      <Composition
+        id="ShipGuyScene"
+        component={ShipGuyScene}
+        durationInFrames={150}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ scene: "attack" as SceneId }}
+      />
+      <Composition
+        id="ShipGuyVideo"
+        component={ShipGuyVideo}
+        durationInFrames={300}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ slug: "seawise" } as ShipGuyProps}
+        calculateMetadata={calcShipGuy}
+      />
+      <Composition
+        id="ShipGuyBoard"
+        component={ShipGuyBoard}
+        durationInFrames={1}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ slug: "seawise", page: 0 } as ShipGuyProps}
+        calculateMetadata={async (a) => ({ ...(await calcShipGuy(a)), durationInFrames: 1 })}
+      />
     </>
   );
 };

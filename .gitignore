@@ -13,3 +13,9 @@ public/models/dressed/
 
 # Blender test renders + local asset copies
 out/blender/
+
+# Ship Guy: intermediate audio (rebuilt from voice-source.mp3 / voice.wav)
+videos/*/voice-raw.wav
+videos/*/voice-cut1.wav
+public/shipguy/*/voice.wav
+__pycache__/

@@ -335,3 +335,21 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   `videos/2026-11-12-seawise-giant/script.md` (draft v1, sources + fact notes) and `shots.md` (16 images for the owner).
 - GATE passed 2026-11-12: owner approved script v1. Next: owner makes images + records voice.wav; I build the 2D
   composition + graphics, storyboard stills, 60 s test render (only after owner OK).
+- 2026-11-12: owner asked me to draw the images myself (they supply audio). Owner's 11 stick-figure poses
+  (`D:/YouTube_Production/TSG_001_Container_Ships/03_Assets/Stickmen`) cut out to transparent PNGs with
+  `tools/cutout.py` -> `public/shipguy/stickmen/`. Code-drawn 2D art kit `engine/shipguy/art.tsx` (sky, sea,
+  tanker, jets, missile, boom, flames, smoke, Petronas Towers, tiny workers) + 4 test scenes
+  `engine/shipguy/scenes.tsx` (composition `ShipGuyScene`, 1920x1080). Review sheet:
+  `videos/2026-11-12-seawise-giant/style-test-4-frames.png`. Plain narration for recording: `narration.txt`.
+- GATE: waiting for owner OK on the drawn style + owner's voice recording.
+- 2026-11-12: owner sent a CapCut TTS voice (`voice-source.mp3`). It also read the instructions + [section headings]
+  from narration.txt aloud -> cut out (20.7 s + 3 leftovers, checked by re-transcribing each cut); clean
+  `voice.wav` = 6:14 (raw kept as `voice-raw.wav`). 72 beats in `beats.txt` (template + caption + words), timed by
+  `tools/shipguy_timeline.py`, mixed (voice + procedural music moods + SFX) by `tools/shipguy_mix.py` ->
+  `public/shipguy/seawise/{timeline.json,mix.wav}`. 30 templates in `engine/shipguy/templates.tsx`; compositions
+  `ShipGuyVideo` (full) and `ShipGuyBoard` (storyboard pages). Storyboard: `videos/2026-11-12-seawise-giant/storyboard/`.
+- Lesson: narration files meant for TTS must contain ONLY the spoken words (no headings/instructions).
+- Owner OK'd storyboard -> 60 s test (2.5 min render) -> owner OK'd full render. Fixes after QC: explosion fades,
+  every shot drifts (scale 1->1.045 over the beat) so freezedetect finds no still >2 s.
+- DONE 2026-11-12: `videos/2026-11-12-seawise-giant/out/seawise-giant-final.mp4` (1080p30, 6:15, -14.9 LUFS,
+  0 black, 0 frozen; ~15 min render). Render: bundle, then `node tools/run.mjs render .cache/bundle ShipGuyVideo <out> --props=<{"slug":"seawise"}>`.

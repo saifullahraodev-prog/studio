@@ -1,0 +1,83 @@
+# One beat per line:  template key=value ... || caption ([brackets] = yellow) || exact narration words
+# Templates live in engine/shipguy/templates.tsx. Captions are optional (leave the middle empty).
+# --- 0. Hook
+attack music=tense || [MAY 1988] || In May 1988, fighter jets fired missiles at the biggest ship humans have ever built.
+sea mood=dusk state=fire cam=close || TOTAL LOSS || The ship burst into flames, and its owners wrote it off as a total loss.
+upright || || This ship was four hundred and fifty-eight metres long. Stand it on its end, and it's taller than the Petronas Towers.
+gates || || It was so big it couldn't fit through the Suez Canal, the Panama Canal, or even the English Channel when it was fully loaded.
+stopping || || If the captain went full astern at top speed, it needed about nine kilometres to stop.
+names || || And that fire wasn't the end. This ship was rebuilt, and sailed again under four new names.
+talk pose=thinking bg=navy || HOW? || So how do you build something this big... and why did the world decide never to build one again?
+# --- 1. The ship nobody wanted
+shipyard music=investigate || [1974] · JAPAN || It's 1974, in Japan. At the Oppama shipyard near Tokyo, Sumitomo Heavy Industries is building a monster.
+shipyard close=1 || HULL [1016] || It doesn't even have a name yet. Just a number: hull 1016.
+sea mood=day cam=wide pose=explain || CRUDE OIL || It's a supertanker made for one job: carrying as much crude oil as possible in one trip.
+cheaper || || Bigger ship, more oil, cheaper oil per barrel. That was the idea.
+sea mood=day cam=wide wake=1 || SEA TRIALS || But during sea trials, something goes wrong.
+bridge shake=1 pose=scared || ASTERN || When the ship goes astern, in reverse, it shakes violently.
+talk pose=stop bg=red || REFUSED || The Greek shipowner who ordered it refuses to take it. Lawyers get involved.
+dock || || And for years, one of the largest objects ever built just... sits there.
+dock name=OPPAMA || OPPAMA || Eventually, the shipyard sells it under a new name: Oppama.
+talk pose=saying bg=teal || A WILD IDEA || And that's when a shipping tycoon from Hong Kong walks in with a wild idea.
+# --- 2. Make it even bigger
+card music=light title=C._Y._TUNG sub=Founder_of_OOCL pose=confident || || His name is C. Y. Tung, the founder of the OOCL shipping line.
+sea mood=day cam=wide pose=shocked || MAKE IT [BIGGER] || He looks at one of the biggest ships in the world, and he says: make it bigger.
+lengthen || || So the shipyard does something that sounds impossible. They lengthen the ship.
+lengthen phase=2 || || They cut into the hull and build in a brand new section of steel.
+lengthen phase=3 || || That one change adds about a hundred and forty-six thousand tonnes of cargo capacity.
+morethan || || That's more than many normal tankers can carry in total.
+sea mood=day cam=wide name=SEAWISE_GIANT flags=1 || [1979] || In 1979, it returns to the water with a new name: Seawise Giant.
+# --- 3. Just how big?
+talk pose=explain bg=teal || HOW BIG? || Let's put this in numbers you can actually picture.
+fields n=4.5 || [458 m] LONG || Length: four hundred and fifty-eight metres. That's longer than four and a half football fields laid end to end.
+highway || [69 m] WIDE || Width: about sixty-nine metres. You could park a twenty-lane highway across its deck.
+cross || [25 m] DEEP || Under the water, when fully loaded, the hull went down almost twenty-five metres. That's like sinking an eight-storey building below the waves.
+stat icon=barrel num=4.1 unit=MILLION label=barrels_of_oil || || It could carry about four point one million barrels of oil.
+fields n=4 deck=1 || [31,541 m²] OF DECK || Its deck covered more than thirty-one thousand square metres, around four football pitches of steel.
+propeller || || Its rudder alone weighed two hundred and thirty tonnes. The propeller weighed fifty tonnes.
+stat icon=weight num=650000 unit=TONNES label=fully_loaded plus=1 || || And when it was fully loaded, the whole ship weighed more than six hundred and fifty thousand tonnes.
+sea mood=day cam=wide wake=1 || [50,000] HORSEPOWER || A steam turbine of fifty thousand horsepower pushed all of that through the sea
+stat icon=speed num=16.5 unit=KNOTS label=about_30_km/h || || at about sixteen and a half knots, around thirty kilometres an hour.
+talk pose=confident bg=navy || || That sounds slow. Until you try to stop.
+# --- 4. The problem with being too big
+bridge music=investigate pose=scared || FULL ASTERN! || One of its captains said that from full speed,
+stopping || || it needed about nine kilometres to come to a stop.
+turning || || To turn around, it needed a circle about three kilometres wide.
+gates || || And it couldn't go where most ships go. Too wide for the Panama Canal. Too deep for the Suez Canal. Fully loaded, even the English Channel was too shallow.
+sea mood=day cam=wide pose=confused || LOCKED OUT || So the biggest ship in the world was locked out of some of the most important shipping routes in the world.
+talk pose=thinking bg=navy || [1980s] || But in the 1980s, there was one place where a giant floating oil tank was exactly what someone needed.
+war music=tense || WAR ZONE || And that place was a war zone.
+# --- 5. The war
+war fleet=1 || IRAN vs IRAQ || Iran and Iraq are at war. Both sides start attacking oil tankers in the Persian Gulf, trying to choke off each other's money.
+war fleet=1 || THE TANKER WAR || It becomes known as the Tanker War.
+sea mood=dusk cam=wide || FLOATING STORAGE || Seawise Giant is used to store and move Iranian crude oil.
+sea mood=dusk cam=wide island=1 || LARAK ISLAND · [14 MAY 1988] || On the fourteenth of May, 1988, it's anchored off Larak Island, near the Strait of Hormuz.
+attack || EXOCET || Iraqi aircraft arrive. They fire French-made Exocet missiles.
+sea mood=dusk state=fire cam=close || || The missiles hit. Fire spreads across the oil on the water. The biggest ship in the world becomes a burning wreck.
+sea mood=night state=burnt cam=wide stamp=TOTAL_LOSS || || The insurers declare it a total loss. For almost any other ship, that would be the end of the story.
+# --- 6. The comeback
+sea music=hopeful mood=day state=burnt cam=wide pose=confident || SOLD || After the war ends, a Norwegian company looks at the burned giant and buys it anyway.
+sea mood=day state=burnt cam=wide tugs=1 || SINGAPORE || It's towed to Singapore, where the Keppel shipyard repairs it.
+sea mood=day cam=wide name=HAPPY_GIANT flags=1 || [1991] · HAPPY GIANT || In October 1991, it goes back to work with a new name: Happy Giant.
+stat icon=money num=39 unit=MILLION label=Jahre_Viking pre=$ || || The same year, Norwegian shipowner Jørgen Jahre buys it for thirty-nine million dollars and renames it Jahre Viking.
+sea mood=day cam=wide name=JAHRE_VIKING wake=1 || 10+ YEARS || For more than ten years, it carries oil around the world again.
+sea mood=day cam=wide name=KNOCK_NEVIS || [2004] · KNOCK NEVIS || In 2004, it's sold once more and renamed Knock Nevis.
+sea mood=dusk cam=wide name=KNOCK_NEVIS anchor=1 || FLOATING STORAGE || This time it doesn't sail. It's anchored off Qatar and used as a floating oil storage tank.
+# --- 7. Why we stopped building giants
+board music=somber || || So if one giant ship can carry so much oil, why don't we build them like this anymore?
+sea mood=day cam=far fleet=1 || DOZENS ORDERED || In the late sixties and early seventies, shipping companies ordered dozens of these ultra-large tankers.
+crisis || || Then the 1973 oil crisis hit, and the oil trade they were built for changed.
+ports || || Big ships only make money when they're full and moving. A ship this size could only use a few ports, couldn't take shortcuts, and took a long time to fill.
+batillus || || France built four giants of the Batillus class, each over five hundred and fifty thousand tonnes deadweight.
+batillus scrapped=1 || || Three of them were scrapped after less than ten years carrying oil.
+modern || || Today's big oil tankers are smaller. They give up some size to get more flexibility.
+talk pose=satisfied bg=teal || FLEXIBILITY WINS || It turned out that being able to go almost anywhere is worth more than being the biggest.
+# --- 8. The end
+sea mood=dusk cam=wide name=MONT || [2009] · MONT || In 2009, the old giant makes one last trip, under its final name: Mont.
+beach || ALANG, INDIA || On the twenty-second of December, it's driven onto the beach at Alang, in India.
+beach cut=1 || || A year later, it's gone, cut apart piece by piece.
+anchor || [36-TONNE] ANCHOR || But one piece survived. Its thirty-six-tonne anchor is on display in Hong Kong today.
+prelude || || In 2017, a floating gas plant called Prelude finally beat its length. But Prelude is fixed to the seabed. It was built to sit in one place, not to sail the world.
+sea mood=dusk cam=far || TOO BIG || So it was too big for the canals, too big for most ports, and the world decided it was too big to build again.
+sea music=hopeful mood=dusk cam=wide name=SEAWISE_GIANT || THE LONGEST SHIP || And it was still the longest ship that ever crossed the world's oceans.
+endcard || || If you want to see what happens when a ship this size loses its engine in the middle of the ocean, that video is right here.

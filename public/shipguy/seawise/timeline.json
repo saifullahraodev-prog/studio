@@ -1,0 +1,756 @@
+{
+ "fps": 30,
+ "frames": 11257,
+ "beats": [
+  {
+   "tpl": "attack",
+   "p": {
+    "music": "tense"
+   },
+   "cap": "[MAY 1988]",
+   "from": 0,
+   "dur": 195,
+   "say": "In May 1988, fighter jets fired missiles at the biggest ship humans have ever built."
+  },
+  {
+   "tpl": "sea",
+   "p": {
+    "mood": "dusk",
+    "state": "fire",
+    "cam": "close"
+   },
+   "cap": "TOTAL LOSS",
+   "from": 195,
+   "dur": 163,
+   "say": "The ship burst into flames, and its owners wrote it off as a total loss."
+  },
+  {
+   "tpl": "upright",
+   "p": {},
+   "cap": "",
+   "from": 358,
+   "dur": 214,
+   "say": "This ship was four hundred and fifty-eight metres long. Stand it on its end, and it's taller than the Petronas Towers."
+  },
+  {
+   "tpl": "gates",
+   "p": {},
+   "cap": "",
+   "from": 572,
+   "dur": 227,
+   "say": "It was so big it couldn't fit through the Suez Canal, the Panama Canal, or even the English Channel when it was fully loaded."
+  },
+  {
+   "tpl": "stopping",
+   "p": {},
+   "cap": "",
+   "from": 799,
+   "dur": 162,
+   "say": "If the captain went full astern at top speed, it needed about nine kilometres to stop."
+  },
+  {
+   "tpl": "names",
+   "p": {},
+   "cap": "",
+   "from": 961,
+   "dur": 185,
+   "say": "And that fire wasn't the end. This ship was rebuilt, and sailed again under four new names."
+  },
+  {
+   "tpl": "talk",
+   "p": {
+    "pose": "thinking",
+    "bg": "navy"
+   },
+   "cap": "HOW?",
+   "from": 1146,
+   "dur": 136,
+   "say": "So how do you build something this big... and why did the world decide never to build one again?"
+  },
+  {
+   "tpl": "shipyard",
+   "p": {
+    "music": "investigate"
+   },
+   "cap": "[1974] \u00b7 JAPAN",
+   "from": 1282,
+   "dur": 206,
+   "say": "It's 1974, in Japan. At the Oppama shipyard near Tokyo, Sumitomo Heavy Industries is building a monster."
+  },
+  {
+   "tpl": "shipyard",
+   "p": {
+    "close": "1"
+   },
+   "cap": "HULL [1016]",
+   "from": 1488,
+   "dur": 113,
+   "say": "It doesn't even have a name yet. Just a number: hull 1016."
+  },
+  {
+   "tpl": "sea",
+   "p": {
+    "mood": "day",
+    "cam": "wide",
+    "pose": "explain"
+   },
+   "cap": "CRUDE OIL",
+   "from": 1601,
+   "dur": 165,
+   "say": "It's a supertanker made for one job: carrying as much crude oil as possible in one trip."
+  },
+  {
+   "tpl": "cheaper",
+   "p": {},
+   "cap": "",
+   "from": 1766,
+   "dur": 115,
+   "say": "Bigger ship, more oil, cheaper oil per barrel. That was the idea."
+  },
+  {
+   "tpl": "sea",
+   "p": {
+    "mood": "day",
+    "cam": "wide",
+    "wake": "1"
+   },
+   "cap": "SEA TRIALS",
+   "from": 1881,
+   "dur": 82,
+   "say": "But during sea trials, something goes wrong."
+  },
+  {
+   "tpl": "bridge",
+   "p": {
+    "shake": "1",
+    "pose": "scared"
+   },
+   "cap": "ASTERN",
+   "from": 1963,
+   "dur": 127,
+   "say": "When the ship goes astern, in reverse, it shakes violently."
+  },
+  {
+   "tpl": "talk",
+   "p": {
+    "pose": "stop",
+    "bg": "red"
+   },
+   "cap": "REFUSED",
+   "from": 2090,
+   "dur": 137,
+   "say": "The Greek shipowner who ordered it refuses to take it. Lawyers get involved."
+  },
+  {
+   "tpl": "dock",
+   "p": {},
+   "cap": "",
+   "from": 2227,
+   "dur": 141,
+   "say": "And for years, one of the largest objects ever built just... sits there."
+  },
+  {
+   "tpl": "dock",
+   "p": {
+    "name": "OPPAMA"
+   },
+   "cap": "OPPAMA",
+   "from": 2368,
+   "dur": 107,
+   "say": "Eventually, the shipyard sells it under a new name: Oppama."
+  },
+  {
+   "tpl": "talk",
+   "p": {
+    "pose": "saying",
+    "bg": "teal"
+   },
+   "cap": "A WILD IDEA",
+   "from": 2475,
+   "dur": 132,
+   "say": "And that's when a shipping tycoon from Hong Kong walks in with a wild idea."
+  },
+  {
+   "tpl": "card",
+   "p": {
+    "music": "light",
+    "title": "C._Y._TUNG",
+    "sub": "Founder_of_OOCL",
+    "pose": "confident"
+   },
+   "cap": "",
+   "from": 2607,
+   "dur": 124,
+   "say": "His name is C. Y. Tung, the founder of the OOCL shipping line."
+  },
+  {
+   "tpl": "sea",
+   "p": {
+    "mood": "day",
+    "cam": "wide",
+    "pose": "shocked"
+   },
+   "cap": "MAKE IT [BIGGER]",
+   "from": 2731,
+   "dur": 124,
+   "say": "He looks at one of the biggest ships in the world, and he says: make it bigger."
+  },
+  {
+   "tpl": "lengthen",
+   "p": {},
+   "cap": "",
+   "from": 2855,
+   "dur": 131,
+   "say": "So the shipyard does something that sounds impossible. They lengthen the ship."
+  },
+  {
+   "tpl": "lengthen",
+   "p": {
+    "phase": "2"
+   },
+   "cap": "",
+   "from": 2986,
+   "dur": 108,
+   "say": "They cut into the hull and build in a brand new section of steel."
+  },
+  {
+   "tpl": "lengthen",
+   "p": {
+    "phase": "3"
+   },
+   "cap": "",
+   "from": 3094,
+   "dur": 147,
+   "say": "That one change adds about a hundred and forty-six thousand tonnes of cargo capacity."
+  },
+  {
+   "tpl": "morethan",
+   "p": {},
+   "cap": "",
+   "from": 3241,
+   "dur": 71,
+   "say": "That's more than many normal tankers can carry in total."
+  },
+  {
+   "tpl": "sea",
+   "p": {
+    "mood": "day",
+    "cam": "wide",
+    "name": "SEAWISE_GIANT",
+    "flags": "1"
+   },
+   "cap": "[1979]",
+   "from": 3312,
+   "dur": 168,
+   "say": "In 1979, it returns to the water with a new name: Seawise Giant."
+  },
+  {
+   "tpl": "talk",
+   "p": {
+    "pose": "explain",
+    "bg": "teal"
+   },
+   "cap": "HOW BIG?",
+   "from": 3480,
+   "dur": 130,
+   "say": "Let's put this in numbers you can actually picture."
+  },
+  {
+   "tpl": "fields",
+   "p": {
+    "n": "4.5"
+   },
+   "cap": "[458 m] LONG",
+   "from": 3610,
+   "dur": 183,
+   "say": "Length: four hundred and fifty-eight metres. That's longer than four and a half football fields laid end to end."
+  },
+  {
+   "tpl": "highway",
+   "p": {},
+   "cap": "[69 m] WIDE",
+   "from": 3793,
+   "dur": 162,
+   "say": "Width: about sixty-nine metres. You could park a twenty-lane highway across its deck."
+  },
+  {
+   "tpl": "cross",
+   "p": {},
+   "cap": "[25 m] DEEP",
+   "from": 3955,
+   "dur": 237,
+   "say": "Under the water, when fully loaded, the hull went down almost twenty-five metres. That's like sinking an eight-storey building below the waves."
+  },
+  {
+   "tpl": "stat",
+   "p": {
+    "icon": "barrel",
+    "num": "4.1",
+    "unit": "MILLION",
+    "label": "barrels_of_oil"
+   },
+   "cap": "",
+   "from": 4192,
+   "dur": 120,
+   "say": "It could carry about four point one million barrels of oil."
+  },
+  {
+   "tpl": "fields",
+   "p": {
+    "n": "4",
+    "deck": "1"
+   },
+   "cap": "[31,541 m\u00b2] OF DECK",
+   "from": 4312,
+   "dur": 168,
+   "say": "Its deck covered more than thirty-one thousand square metres, around four football pitches of steel."
+  },
+  {
+   "tpl": "propeller",
+   "p": {},
+   "cap": "",
+   "from": 4480,
+   "dur": 154,
+   "say": "Its rudder alone weighed two hundred and thirty tonnes. The propeller weighed fifty tonnes."
+  },
+  {
+   "tpl": "stat",
+   "p": {
+    "icon": "weight",
+    "num": "650000",
+    "unit": "TONNES",
+    "label": "fully_loaded",
+    "plus": "1"
+   },
+   "cap": "",
+   "from": 4634,
+   "dur": 176,
+   "say": "And when it was fully loaded, the whole ship weighed more than six hundred and fifty thousand tonnes."
+  },
+  {
+   "tpl": "sea",
+   "p": {
+    "mood": "day",
+    "cam": "wide",
+    "wake": "1"
+   },
+   "cap": "[50,000] HORSEPOWER",
+   "from": 4810,
+   "dur": 110,
+   "say": "A steam turbine of fifty thousand horsepower pushed all of that through the sea"
+  },
+  {
+   "tpl": "stat",
+   "p": {
+    "icon": "speed",
+    "num": "16.5",
+    "unit": "KNOTS",
+    "label": "about_30_km/h"
+   },
+   "cap": "",
+   "from": 4920,
+   "dur": 112,
+   "say": "at about sixteen and a half knots, around thirty kilometres an hour."
+  },
+  {
+   "tpl": "talk",
+   "p": {
+    "pose": "confident",
+    "bg": "navy"
+   },
+   "cap": "",
+   "from": 5032,
+   "dur": 104,
+   "say": "That sounds slow. Until you try to stop."
+  },
+  {
+   "tpl": "bridge",
+   "p": {
+    "music": "investigate",
+    "pose": "scared"
+   },
+   "cap": "FULL ASTERN!",
+   "from": 5136,
+   "dur": 86,
+   "say": "One of its captains said that from full speed,"
+  },
+  {
+   "tpl": "stopping",
+   "p": {},
+   "cap": "",
+   "from": 5222,
+   "dur": 84,
+   "say": "it needed about nine kilometres to come to a stop."
+  },
+  {
+   "tpl": "turning",
+   "p": {},
+   "cap": "",
+   "from": 5306,
+   "dur": 125,
+   "say": "To turn around, it needed a circle about three kilometres wide."
+  },
+  {
+   "tpl": "gates",
+   "p": {},
+   "cap": "",
+   "from": 5431,
+   "dur": 284,
+   "say": "And it couldn't go where most ships go. Too wide for the Panama Canal. Too deep for the Suez Canal. Fully loaded, even the English Channel was too shallow."
+  },
+  {
+   "tpl": "sea",
+   "p": {
+    "mood": "day",
+    "cam": "wide",
+    "pose": "confused"
+   },
+   "cap": "LOCKED OUT",
+   "from": 5715,
+   "dur": 144,
+   "say": "So the biggest ship in the world was locked out of some of the most important shipping routes in the world."
+  },
+  {
+   "tpl": "talk",
+   "p": {
+    "pose": "thinking",
+    "bg": "navy"
+   },
+   "cap": "[1980s]",
+   "from": 5859,
+   "dur": 182,
+   "say": "But in the 1980s, there was one place where a giant floating oil tank was exactly what someone needed."
+  },
+  {
+   "tpl": "war",
+   "p": {
+    "music": "tense"
+   },
+   "cap": "WAR ZONE",
+   "from": 6041,
+   "dur": 56,
+   "say": "And that place was a war zone."
+  },
+  {
+   "tpl": "war",
+   "p": {
+    "fleet": "1"
+   },
+   "cap": "IRAN vs IRAQ",
+   "from": 6097,
+   "dur": 237,
+   "say": "Iran and Iraq are at war. Both sides start attacking oil tankers in the Persian Gulf, trying to choke off each other's money."
+  },
+  {
+   "tpl": "war",
+   "p": {
+    "fleet": "1"
+   },
+   "cap": "THE TANKER WAR",
+   "from": 6334,
+   "dur": 62,
+   "say": "It becomes known as the Tanker War."
+  },
+  {
+   "tpl": "sea",
+   "p": {
+    "mood": "dusk",
+    "cam": "wide"
+   },
+   "cap": "FLOATING STORAGE",
+   "from": 6396,
+   "dur": 124,
+   "say": "Seawise Giant is used to store and move Iranian crude oil."
+  },
+  {
+   "tpl": "sea",
+   "p": {
+    "mood": "dusk",
+    "cam": "wide",
+    "island": "1"
+   },
+   "cap": "LARAK ISLAND \u00b7 [14 MAY 1988]",
+   "from": 6520,
+   "dur": 152,
+   "say": "On the fourteenth of May, 1988, it's anchored off Larak Island, near the Strait of Hormuz."
+  },
+  {
+   "tpl": "attack",
+   "p": {},
+   "cap": "EXOCET",
+   "from": 6672,
+   "dur": 104,
+   "say": "Iraqi aircraft arrive. They fire French-made Exocet missiles."
+  },
+  {
+   "tpl": "sea",
+   "p": {
+    "mood": "dusk",
+    "state": "fire",
+    "cam": "close"
+   },
+   "cap": "",
+   "from": 6776,
+   "dur": 204,
+   "say": "The missiles hit. Fire spreads across the oil on the water. The biggest ship in the world becomes a burning wreck."
+  },
+  {
+   "tpl": "sea",
+   "p": {
+    "mood": "night",
+    "state": "burnt",
+    "cam": "wide",
+    "stamp": "TOTAL_LOSS"
+   },
+   "cap": "",
+   "from": 6980,
+   "dur": 185,
+   "say": "The insurers declare it a total loss. For almost any other ship, that would be the end of the story."
+  },
+  {
+   "tpl": "sea",
+   "p": {
+    "music": "hopeful",
+    "mood": "day",
+    "state": "burnt",
+    "cam": "wide",
+    "pose": "confident"
+   },
+   "cap": "SOLD",
+   "from": 7165,
+   "dur": 178,
+   "say": "After the war ends, a Norwegian company looks at the burned giant and buys it anyway."
+  },
+  {
+   "tpl": "sea",
+   "p": {
+    "mood": "day",
+    "state": "burnt",
+    "cam": "wide",
+    "tugs": "1"
+   },
+   "cap": "SINGAPORE",
+   "from": 7343,
+   "dur": 117,
+   "say": "It's towed to Singapore, where the Keppel shipyard repairs it."
+  },
+  {
+   "tpl": "sea",
+   "p": {
+    "mood": "day",
+    "cam": "wide",
+    "name": "HAPPY_GIANT",
+    "flags": "1"
+   },
+   "cap": "[1991] \u00b7 HAPPY GIANT",
+   "from": 7460,
+   "dur": 144,
+   "say": "In October 1991, it goes back to work with a new name: Happy Giant."
+  },
+  {
+   "tpl": "stat",
+   "p": {
+    "icon": "money",
+    "num": "39",
+    "unit": "MILLION",
+    "label": "Jahre_Viking",
+    "pre": "$"
+   },
+   "cap": "",
+   "from": 7604,
+   "dur": 221,
+   "say": "The same year, Norwegian shipowner J\u00f8rgen Jahre buys it for thirty-nine million dollars and renames it Jahre Viking."
+  },
+  {
+   "tpl": "sea",
+   "p": {
+    "mood": "day",
+    "cam": "wide",
+    "name": "JAHRE_VIKING",
+    "wake": "1"
+   },
+   "cap": "10+ YEARS",
+   "from": 7825,
+   "dur": 110,
+   "say": "For more than ten years, it carries oil around the world again."
+  },
+  {
+   "tpl": "sea",
+   "p": {
+    "mood": "day",
+    "cam": "wide",
+    "name": "KNOCK_NEVIS"
+   },
+   "cap": "[2004] \u00b7 KNOCK NEVIS",
+   "from": 7935,
+   "dur": 129,
+   "say": "In 2004, it's sold once more and renamed Knock Nevis."
+  },
+  {
+   "tpl": "sea",
+   "p": {
+    "mood": "dusk",
+    "cam": "wide",
+    "name": "KNOCK_NEVIS",
+    "anchor": "1"
+   },
+   "cap": "FLOATING STORAGE",
+   "from": 8064,
+   "dur": 173,
+   "say": "This time it doesn't sail. It's anchored off Qatar and used as a floating oil storage tank."
+  },
+  {
+   "tpl": "board",
+   "p": {
+    "music": "somber"
+   },
+   "cap": "",
+   "from": 8237,
+   "dur": 166,
+   "say": "So if one giant ship can carry so much oil, why don't we build them like this anymore?"
+  },
+  {
+   "tpl": "sea",
+   "p": {
+    "mood": "day",
+    "cam": "far",
+    "fleet": "1"
+   },
+   "cap": "DOZENS ORDERED",
+   "from": 8403,
+   "dur": 177,
+   "say": "In the late sixties and early seventies, shipping companies ordered dozens of these ultra-large tankers."
+  },
+  {
+   "tpl": "crisis",
+   "p": {},
+   "cap": "",
+   "from": 8580,
+   "dur": 163,
+   "say": "Then the 1973 oil crisis hit, and the oil trade they were built for changed."
+  },
+  {
+   "tpl": "ports",
+   "p": {},
+   "cap": "",
+   "from": 8743,
+   "dur": 297,
+   "say": "Big ships only make money when they're full and moving. A ship this size could only use a few ports, couldn't take shortcuts, and took a long time to fill."
+  },
+  {
+   "tpl": "batillus",
+   "p": {},
+   "cap": "",
+   "from": 9040,
+   "dur": 191,
+   "say": "France built four giants of the Batillus class, each over five hundred and fifty thousand tonnes deadweight."
+  },
+  {
+   "tpl": "batillus",
+   "p": {
+    "scrapped": "1"
+   },
+   "cap": "",
+   "from": 9231,
+   "dur": 91,
+   "say": "Three of them were scrapped after less than ten years carrying oil."
+  },
+  {
+   "tpl": "modern",
+   "p": {},
+   "cap": "",
+   "from": 9322,
+   "dur": 177,
+   "say": "Today's big oil tankers are smaller. They give up some size to get more flexibility."
+  },
+  {
+   "tpl": "talk",
+   "p": {
+    "pose": "satisfied",
+    "bg": "teal"
+   },
+   "cap": "FLEXIBILITY WINS",
+   "from": 9499,
+   "dur": 158,
+   "say": "It turned out that being able to go almost anywhere is worth more than being the biggest."
+  },
+  {
+   "tpl": "sea",
+   "p": {
+    "mood": "dusk",
+    "cam": "wide",
+    "name": "MONT"
+   },
+   "cap": "[2009] \u00b7 MONT",
+   "from": 9657,
+   "dur": 209,
+   "say": "In 2009, the old giant makes one last trip, under its final name: Mont."
+  },
+  {
+   "tpl": "beach",
+   "p": {},
+   "cap": "ALANG, INDIA",
+   "from": 9866,
+   "dur": 150,
+   "say": "On the twenty-second of December, it's driven onto the beach at Alang, in India."
+  },
+  {
+   "tpl": "beach",
+   "p": {
+    "cut": "1"
+   },
+   "cap": "",
+   "from": 10016,
+   "dur": 106,
+   "say": "A year later, it's gone, cut apart piece by piece."
+  },
+  {
+   "tpl": "anchor",
+   "p": {},
+   "cap": "[36-TONNE] ANCHOR",
+   "from": 10122,
+   "dur": 160,
+   "say": "But one piece survived. Its thirty-six-tonne anchor is on display in Hong Kong today."
+  },
+  {
+   "tpl": "prelude",
+   "p": {},
+   "cap": "",
+   "from": 10282,
+   "dur": 316,
+   "say": "In 2017, a floating gas plant called Prelude finally beat its length. But Prelude is fixed to the seabed. It was built to sit in one place, not to sail the world."
+  },
+  {
+   "tpl": "sea",
+   "p": {
+    "mood": "dusk",
+    "cam": "far"
+   },
+   "cap": "TOO BIG",
+   "from": 10598,
+   "dur": 201,
+   "say": "So it was too big for the canals, too big for most ports, and the world decided it was too big to build again."
+  },
+  {
+   "tpl": "sea",
+   "p": {
+    "music": "hopeful",
+    "mood": "dusk",
+    "cam": "wide",
+    "name": "SEAWISE_GIANT"
+   },
+   "cap": "THE LONGEST SHIP",
+   "from": 10799,
+   "dur": 161,
+   "say": "And it was still the longest ship that ever crossed the world's oceans."
+  },
+  {
+   "tpl": "endcard",
+   "p": {},
+   "cap": "",
+   "from": 10960,
+   "dur": 297,
+   "say": "If you want to see what happens when a ship this size loses its engine in the middle of the ocean, that video is right here."
+  }
+ ]
+}
