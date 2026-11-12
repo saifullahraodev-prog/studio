@@ -21,3 +21,5 @@ public/shipguy/*/voice.wav
 __pycache__/
 
 # Ship Guy engines: intermediate audio copy
+videos/*/short/*.mp4
+public/shipguy/*/short.wav
