@@ -14,7 +14,7 @@ export const calcShipGuy: CalculateMetadataFunction<ShipGuyProps> = async ({ pro
   return { durationInFrames: tl.frames, props: { ...props, beats: tl.beats } };
 };
 
-const BeatView: React.FC<{ b: Beat; t: number }> = ({ b, t }) => {
+export const BeatView: React.FC<{ b: Beat; t: number }> = ({ b, t }) => {
   const T = TEMPLATES[b.tpl];
   if (!T) return <AbsoluteFill style={{ background: "#c33", color: "#fff", fontSize: 60 }}>missing template {b.tpl}</AbsoluteFill>;
   // every shot drifts slowly for its whole length, so no scene ever reads as a frozen frame
