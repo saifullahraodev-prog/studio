@@ -372,3 +372,11 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   in `engine/shipguy/templates2.tsx` (piston, crank, engine, rpm, ladder, outboard, tug, ropecars, ferry, destroyer,
   jet2ship, cruise, carrier, emma, direct, versus) + StatX icons. Timeline/mix: `public/shipguy/engines/`.
   Storyboard: `videos/2026-11-12-ship-engines/storyboard/`. GATE: waiting for owner OK -> 60 s test render.
+- 2026-11-12: owner sent CapCut voice in 2 parts (part 1 = exactly 10:00 CapCut limit, cut cleanly between sections 8 and 9).
+  CapCut mp3s have one broken 26 ms frame at many sentence pauses (harmless); decoded with gaps filled
+  (`aresample=async=1`), joined with a 0.55 s pause -> `voice.wav` 10:57. `words.json` = 1,927 words (faster-whisper small).
+- Owner asked for the Ship Guy to be animated (not the same still images). New code puppet `engine/shipguy/guy.tsx`
+  (posable joints, face parts, blinks, talk mouth, hat pop-off, props, emotes, walk cycle, hand-drawn line wobble) +
+  test lab `engine/shipguy/guyLab.tsx` (composition `GuyLab`, demos hello/shock/point/think/push/dig, `sheet=true` = contact
+  sheet, `demo=model` = owner's images vs puppet). Stills in `videos/2026-11-12-ever-given/guy-test/`.
+- GATE: waiting for owner OK on the puppet look + which animation ideas to use; no video rendered yet.
