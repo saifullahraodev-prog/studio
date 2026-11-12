@@ -1,0 +1,5077 @@
+[
+ {
+  "word": "This",
+  "start": 0.0,
+  "end": 0.22
+ },
+ {
+  "word": "piston",
+  "start": 0.22,
+  "end": 0.5
+ },
+ {
+  "word": "weighs",
+  "start": 0.5,
+  "end": 0.72
+ },
+ {
+  "word": "five",
+  "start": 0.72,
+  "end": 1.04
+ },
+ {
+  "word": "and",
+  "start": 1.04,
+  "end": 1.22
+ },
+ {
+  "word": "a",
+  "start": 1.22,
+  "end": 1.28
+ },
+ {
+  "word": "half",
+  "start": 1.28,
+  "end": 1.5
+ },
+ {
+  "word": "tons.",
+  "start": 1.5,
+  "end": 1.74
+ },
+ {
+  "word": "The",
+  "start": 2.38,
+  "end": 2.46
+ },
+ {
+  "word": "crankshaft",
+  "start": 2.46,
+  "end": 2.96
+ },
+ {
+  "word": "it",
+  "start": 2.96,
+  "end": 3.12
+ },
+ {
+  "word": "turns",
+  "start": 3.12,
+  "end": 3.32
+ },
+ {
+  "word": "weighs",
+  "start": 3.32,
+  "end": 3.62
+ },
+ {
+  "word": "300",
+  "start": 3.62,
+  "end": 4.26
+ },
+ {
+  "word": "tons.",
+  "start": 4.26,
+  "end": 4.66
+ },
+ {
+  "word": "And",
+  "start": 5.52,
+  "end": 5.78
+ },
+ {
+  "word": "the",
+  "start": 5.78,
+  "end": 5.96
+ },
+ {
+  "word": "engine",
+  "start": 5.96,
+  "end": 6.24
+ },
+ {
+  "word": "it",
+  "start": 6.24,
+  "end": 6.42
+ },
+ {
+  "word": "belongs",
+  "start": 6.42,
+  "end": 6.72
+ },
+ {
+  "word": "to",
+  "start": 6.72,
+  "end": 7.02
+ },
+ {
+  "word": "is",
+  "start": 7.02,
+  "end": 7.54
+ },
+ {
+  "word": "taller",
+  "start": 7.54,
+  "end": 7.86
+ },
+ {
+  "word": "than",
+  "start": 7.86,
+  "end": 8.08
+ },
+ {
+  "word": "a",
+  "start": 8.08,
+  "end": 8.18
+ },
+ {
+  "word": "four",
+  "start": 8.18,
+  "end": 8.44
+ },
+ {
+  "word": "-story",
+  "start": 8.44,
+  "end": 8.68
+ },
+ {
+  "word": "building.",
+  "start": 8.68,
+  "end": 9.14
+ },
+ {
+  "word": "But",
+  "start": 9.6,
+  "end": 9.88
+ },
+ {
+  "word": "here's",
+  "start": 9.88,
+  "end": 10.24
+ },
+ {
+  "word": "the",
+  "start": 10.24,
+  "end": 10.38
+ },
+ {
+  "word": "strange",
+  "start": 10.38,
+  "end": 10.68
+ },
+ {
+  "word": "part.",
+  "start": 10.68,
+  "end": 11.0
+ },
+ {
+  "word": "At",
+  "start": 11.5,
+  "end": 11.58
+ },
+ {
+  "word": "full",
+  "start": 11.58,
+  "end": 11.8
+ },
+ {
+  "word": "power,",
+  "start": 11.8,
+  "end": 12.12
+ },
+ {
+  "word": "it",
+  "start": 12.48,
+  "end": 12.62
+ },
+ {
+  "word": "turns",
+  "start": 12.62,
+  "end": 12.84
+ },
+ {
+  "word": "only",
+  "start": 12.84,
+  "end": 13.16
+ },
+ {
+  "word": "about",
+  "start": 13.16,
+  "end": 13.38
+ },
+ {
+  "word": "a",
+  "start": 13.38,
+  "end": 13.54
+ },
+ {
+  "word": "hundred",
+  "start": 13.54,
+  "end": 13.78
+ },
+ {
+  "word": "times",
+  "start": 13.78,
+  "end": 14.08
+ },
+ {
+  "word": "a",
+  "start": 14.08,
+  "end": 14.26
+ },
+ {
+  "word": "minute.",
+  "start": 14.26,
+  "end": 14.44
+ },
+ {
+  "word": "Slower",
+  "start": 14.86,
+  "end": 15.28
+ },
+ {
+  "word": "than",
+  "start": 15.28,
+  "end": 15.5
+ },
+ {
+  "word": "your",
+  "start": 15.5,
+  "end": 15.64
+ },
+ {
+  "word": "car",
+  "start": 15.64,
+  "end": 15.92
+ },
+ {
+  "word": "engine",
+  "start": 15.92,
+  "end": 16.32
+ },
+ {
+  "word": "when",
+  "start": 16.32,
+  "end": 16.6
+ },
+ {
+  "word": "it's",
+  "start": 16.6,
+  "end": 16.82
+ },
+ {
+  "word": "just",
+  "start": 16.82,
+  "end": 17.04
+ },
+ {
+  "word": "sitting",
+  "start": 17.04,
+  "end": 17.42
+ },
+ {
+  "word": "at",
+  "start": 17.42,
+  "end": 17.6
+ },
+ {
+  "word": "a",
+  "start": 17.6,
+  "end": 17.68
+ },
+ {
+  "word": "red",
+  "start": 17.68,
+  "end": 17.82
+ },
+ {
+  "word": "light.",
+  "start": 17.82,
+  "end": 18.06
+ },
+ {
+  "word": "Today,",
+  "start": 18.58,
+  "end": 18.84
+ },
+ {
+  "word": "we're",
+  "start": 18.96,
+  "end": 19.1
+ },
+ {
+  "word": "climbing",
+  "start": 19.1,
+  "end": 19.42
+ },
+ {
+  "word": "every",
+  "start": 19.42,
+  "end": 19.96
+ },
+ {
+  "word": "level",
+  "start": 19.96,
+  "end": 20.28
+ },
+ {
+  "word": "of",
+  "start": 20.28,
+  "end": 20.48
+ },
+ {
+  "word": "ship",
+  "start": 20.48,
+  "end": 20.66
+ },
+ {
+  "word": "engine,",
+  "start": 20.66,
+  "end": 21.0
+ },
+ {
+  "word": "from",
+  "start": 21.28,
+  "end": 21.52
+ },
+ {
+  "word": "the",
+  "start": 21.52,
+  "end": 21.68
+ },
+ {
+  "word": "little",
+  "start": 21.68,
+  "end": 21.92
+ },
+ {
+  "word": "motor",
+  "start": 21.92,
+  "end": 22.2
+ },
+ {
+  "word": "on",
+  "start": 22.2,
+  "end": 22.4
+ },
+ {
+  "word": "a",
+  "start": 22.4,
+  "end": 22.52
+ },
+ {
+  "word": "fishing",
+  "start": 22.52,
+  "end": 22.7
+ },
+ {
+  "word": "boat",
+  "start": 22.7,
+  "end": 23.02
+ },
+ {
+  "word": "all",
+  "start": 23.02,
+  "end": 23.56
+ },
+ {
+  "word": "the",
+  "start": 23.56,
+  "end": 23.72
+ },
+ {
+  "word": "way",
+  "start": 23.72,
+  "end": 23.9
+ },
+ {
+  "word": "up",
+  "start": 23.9,
+  "end": 24.06
+ },
+ {
+  "word": "to",
+  "start": 24.06,
+  "end": 24.18
+ },
+ {
+  "word": "this",
+  "start": 24.18,
+  "end": 24.36
+ },
+ {
+  "word": "monster.",
+  "start": 24.36,
+  "end": 24.72
+ },
+ {
+  "word": "And",
+  "start": 25.2,
+  "end": 25.46
+ },
+ {
+  "word": "one",
+  "start": 25.46,
+  "end": 25.66
+ },
+ {
+  "word": "of",
+  "start": 25.66,
+  "end": 25.76
+ },
+ {
+  "word": "these",
+  "start": 25.76,
+  "end": 25.92
+ },
+ {
+  "word": "levels",
+  "start": 25.92,
+  "end": 26.2
+ },
+ {
+  "word": "is",
+  "start": 26.2,
+  "end": 26.48
+ },
+ {
+  "word": "so",
+  "start": 26.48,
+  "end": 26.68
+ },
+ {
+  "word": "powerful,",
+  "start": 26.68,
+  "end": 27.08
+ },
+ {
+  "word": "it",
+  "start": 27.52,
+  "end": 27.66
+ },
+ {
+  "word": "doesn't",
+  "start": 27.66,
+  "end": 27.96
+ },
+ {
+  "word": "burn",
+  "start": 27.96,
+  "end": 28.16
+ },
+ {
+  "word": "any",
+  "start": 28.16,
+  "end": 28.36
+ },
+ {
+  "word": "fuel",
+  "start": 28.36,
+  "end": 28.66
+ },
+ {
+  "word": "at",
+  "start": 28.66,
+  "end": 28.86
+ },
+ {
+  "word": "all.",
+  "start": 28.86,
+  "end": 29.12
+ },
+ {
+  "word": "Let's",
+  "start": 29.62,
+  "end": 30.1
+ },
+ {
+  "word": "start",
+  "start": 30.1,
+  "end": 30.28
+ },
+ {
+  "word": "small.",
+  "start": 30.28,
+  "end": 30.62
+ },
+ {
+  "word": "This",
+  "start": 31.16,
+  "end": 31.3
+ },
+ {
+  "word": "is",
+  "start": 31.3,
+  "end": 31.48
+ },
+ {
+  "word": "an",
+  "start": 31.48,
+  "end": 31.62
+ },
+ {
+  "word": "outboard",
+  "start": 31.62,
+  "end": 32.0
+ },
+ {
+  "word": "motor.",
+  "start": 32.0,
+  "end": 32.38
+ },
+ {
+  "word": "An",
+  "start": 32.88,
+  "end": 32.98
+ },
+ {
+  "word": "engine,",
+  "start": 32.98,
+  "end": 33.26
+ },
+ {
+  "word": "a",
+  "start": 33.64,
+  "end": 33.78
+ },
+ {
+  "word": "gearbox",
+  "start": 33.78,
+  "end": 34.06
+ },
+ {
+  "word": "and",
+  "start": 34.06,
+  "end": 34.54
+ },
+ {
+  "word": "a",
+  "start": 34.54,
+  "end": 34.66
+ },
+ {
+  "word": "propeller",
+  "start": 34.66,
+  "end": 34.98
+ },
+ {
+  "word": "in",
+  "start": 34.98,
+  "end": 35.16
+ },
+ {
+  "word": "one",
+  "start": 35.16,
+  "end": 35.4
+ },
+ {
+  "word": "box",
+  "start": 35.4,
+  "end": 35.74
+ },
+ {
+  "word": "clamped",
+  "start": 35.74,
+  "end": 36.32
+ },
+ {
+  "word": "to",
+  "start": 36.32,
+  "end": 36.5
+ },
+ {
+  "word": "the",
+  "start": 36.5,
+  "end": 36.6
+ },
+ {
+  "word": "back",
+  "start": 36.6,
+  "end": 36.8
+ },
+ {
+  "word": "of",
+  "start": 36.8,
+  "end": 36.9
+ },
+ {
+  "word": "a",
+  "start": 36.9,
+  "end": 37.0
+ },
+ {
+  "word": "boat.",
+  "start": 37.0,
+  "end": 37.18
+ },
+ {
+  "word": "The",
+  "start": 37.64,
+  "end": 37.78
+ },
+ {
+  "word": "smallest",
+  "start": 37.78,
+  "end": 38.14
+ },
+ {
+  "word": "ones",
+  "start": 38.14,
+  "end": 38.44
+ },
+ {
+  "word": "make",
+  "start": 38.44,
+  "end": 38.68
+ },
+ {
+  "word": "just",
+  "start": 38.68,
+  "end": 38.92
+ },
+ {
+  "word": "a",
+  "start": 38.92,
+  "end": 39.1
+ },
+ {
+  "word": "few",
+  "start": 39.1,
+  "end": 39.42
+ },
+ {
+  "word": "horsepower.",
+  "start": 39.42,
+  "end": 39.9
+ },
+ {
+  "word": "You",
+  "start": 40.44,
+  "end": 40.54
+ },
+ {
+  "word": "can",
+  "start": 40.54,
+  "end": 40.7
+ },
+ {
+  "word": "carry",
+  "start": 40.7,
+  "end": 40.94
+ },
+ {
+  "word": "them",
+  "start": 40.94,
+  "end": 41.14
+ },
+ {
+  "word": "with",
+  "start": 41.14,
+  "end": 41.32
+ },
+ {
+  "word": "one",
+  "start": 41.32,
+  "end": 41.52
+ },
+ {
+  "word": "hand.",
+  "start": 41.52,
+  "end": 41.84
+ },
+ {
+  "word": "But",
+  "start": 42.42,
+  "end": 42.5
+ },
+ {
+  "word": "outboards",
+  "start": 42.5,
+  "end": 42.96
+ },
+ {
+  "word": "have",
+  "start": 42.96,
+  "end": 43.1
+ },
+ {
+  "word": "grown",
+  "start": 43.1,
+  "end": 43.34
+ },
+ {
+  "word": "up.",
+  "start": 43.34,
+  "end": 43.6
+ },
+ {
+  "word": "Mercury's",
+  "start": 44.02,
+  "end": 44.48
+ },
+ {
+  "word": "V12",
+  "start": 44.48,
+  "end": 44.84
+ },
+ {
+  "word": "Virato",
+  "start": 44.84,
+  "end": 45.24
+ },
+ {
+  "word": "makes",
+  "start": 45.24,
+  "end": 45.56
+ },
+ {
+  "word": "600",
+  "start": 45.56,
+  "end": 46.0
+ },
+ {
+  "word": "horsepower",
+  "start": 46.0,
+  "end": 46.58
+ },
+ {
+  "word": "from",
+  "start": 46.58,
+  "end": 46.8
+ },
+ {
+  "word": "a",
+  "start": 46.8,
+  "end": 46.94
+ },
+ {
+  "word": "single",
+  "start": 46.94,
+  "end": 47.12
+ },
+ {
+  "word": "motor.",
+  "start": 47.12,
+  "end": 47.46
+ },
+ {
+  "word": "It",
+  "start": 47.98,
+  "end": 48.1
+ },
+ {
+  "word": "weighs",
+  "start": 48.1,
+  "end": 48.32
+ },
+ {
+  "word": "about",
+  "start": 48.32,
+  "end": 48.6
+ },
+ {
+  "word": "as",
+  "start": 48.6,
+  "end": 48.8
+ },
+ {
+  "word": "much",
+  "start": 48.8,
+  "end": 49.0
+ },
+ {
+  "word": "as",
+  "start": 49.0,
+  "end": 49.18
+ },
+ {
+  "word": "a",
+  "start": 49.18,
+  "end": 49.3
+ },
+ {
+  "word": "small",
+  "start": 49.3,
+  "end": 49.54
+ },
+ {
+  "word": "car",
+  "start": 49.54,
+  "end": 49.96
+ },
+ {
+  "word": "and",
+  "start": 49.96,
+  "end": 50.5
+ },
+ {
+  "word": "costs",
+  "start": 50.5,
+  "end": 50.82
+ },
+ {
+  "word": "more",
+  "start": 50.82,
+  "end": 51.2
+ },
+ {
+  "word": "than",
+  "start": 51.2,
+  "end": 51.36
+ },
+ {
+  "word": "many",
+  "start": 51.36,
+  "end": 51.64
+ },
+ {
+  "word": "of",
+  "start": 51.64,
+  "end": 51.76
+ },
+ {
+  "word": "them.",
+  "start": 51.76,
+  "end": 51.94
+ },
+ {
+  "word": "Fast",
+  "start": 52.38,
+  "end": 52.66
+ },
+ {
+  "word": "boats",
+  "start": 52.66,
+  "end": 52.86
+ },
+ {
+  "word": "hang",
+  "start": 52.86,
+  "end": 53.12
+ },
+ {
+  "word": "two,",
+  "start": 53.12,
+  "end": 53.42
+ },
+ {
+  "word": "three,",
+  "start": 53.56,
+  "end": 53.8
+ },
+ {
+  "word": "even",
+  "start": 54.08,
+  "end": 54.3
+ },
+ {
+  "word": "four",
+  "start": 54.3,
+  "end": 54.56
+ },
+ {
+  "word": "of",
+  "start": 54.56,
+  "end": 54.64
+ },
+ {
+  "word": "these",
+  "start": 54.64,
+  "end": 54.76
+ },
+ {
+  "word": "on",
+  "start": 54.76,
+  "end": 54.92
+ },
+ {
+  "word": "the",
+  "start": 54.92,
+  "end": 54.98
+ },
+ {
+  "word": "back.",
+  "start": 54.98,
+  "end": 55.22
+ },
+ {
+  "word": "Four",
+  "start": 55.22,
+  "end": 55.8
+ },
+ {
+  "word": "of",
+  "start": 55.8,
+  "end": 55.94
+ },
+ {
+  "word": "them",
+  "start": 55.94,
+  "end": 56.14
+ },
+ {
+  "word": "is",
+  "start": 56.14,
+  "end": 56.5
+ },
+ {
+  "word": "2",
+  "start": 56.5,
+  "end": 56.76
+ },
+ {
+  "word": ",400",
+  "start": 56.76,
+  "end": 57.58
+ },
+ {
+  "word": "horsepower",
+  "start": 57.58,
+  "end": 57.94
+ },
+ {
+  "word": "on",
+  "start": 57.94,
+  "end": 58.4
+ },
+ {
+  "word": "one",
+  "start": 58.4,
+  "end": 58.64
+ },
+ {
+  "word": "small",
+  "start": 58.64,
+  "end": 58.9
+ },
+ {
+  "word": "boat.",
+  "start": 58.9,
+  "end": 59.22
+ },
+ {
+  "word": "But",
+  "start": 59.66,
+  "end": 59.78
+ },
+ {
+  "word": "even",
+  "start": 59.78,
+  "end": 60.08
+ },
+ {
+  "word": "600",
+  "start": 60.08,
+  "end": 60.52
+ },
+ {
+  "word": "horsepower",
+  "start": 60.52,
+  "end": 61.3
+ },
+ {
+  "word": "is",
+  "start": 61.3,
+  "end": 61.6
+ },
+ {
+  "word": "tiny",
+  "start": 61.6,
+  "end": 61.92
+ },
+ {
+  "word": "compared",
+  "start": 61.92,
+  "end": 62.26
+ },
+ {
+  "word": "to",
+  "start": 62.26,
+  "end": 62.52
+ },
+ {
+  "word": "what",
+  "start": 62.52,
+  "end": 62.68
+ },
+ {
+  "word": "you",
+  "start": 62.68,
+  "end": 62.86
+ },
+ {
+  "word": "need",
+  "start": 62.86,
+  "end": 63.02
+ },
+ {
+  "word": "to",
+  "start": 63.02,
+  "end": 63.2
+ },
+ {
+  "word": "push",
+  "start": 63.2,
+  "end": 63.44
+ },
+ {
+  "word": "something",
+  "start": 63.44,
+  "end": 63.74
+ },
+ {
+  "word": "heavy.",
+  "start": 63.74,
+  "end": 64.02
+ },
+ {
+  "word": "Remember",
+  "start": 64.68,
+  "end": 64.9
+ },
+ {
+  "word": "the",
+  "start": 64.9,
+  "end": 65.22
+ },
+ {
+  "word": "tugboats",
+  "start": 65.22,
+  "end": 65.7
+ },
+ {
+  "word": "from",
+  "start": 65.7,
+  "end": 65.84
+ },
+ {
+  "word": "the",
+  "start": 65.84,
+  "end": 65.96
+ },
+ {
+  "word": "harbor?",
+  "start": 65.96,
+  "end": 66.18
+ },
+ {
+  "word": "They're",
+  "start": 66.8,
+  "end": 67.0
+ },
+ {
+  "word": "small,",
+  "start": 67.0,
+  "end": 67.28
+ },
+ {
+  "word": "but",
+  "start": 67.58,
+  "end": 67.8
+ },
+ {
+  "word": "they",
+  "start": 67.8,
+  "end": 67.94
+ },
+ {
+  "word": "have",
+  "start": 67.94,
+  "end": 68.22
+ },
+ {
+  "word": "one",
+  "start": 68.22,
+  "end": 68.48
+ },
+ {
+  "word": "job.",
+  "start": 68.48,
+  "end": 68.88
+ },
+ {
+  "word": "Push",
+  "start": 69.4,
+  "end": 69.6
+ },
+ {
+  "word": "and",
+  "start": 69.6,
+  "end": 69.8
+ },
+ {
+  "word": "pull",
+  "start": 69.8,
+  "end": 69.98
+ },
+ {
+  "word": "ships",
+  "start": 69.98,
+  "end": 70.28
+ },
+ {
+  "word": "that",
+  "start": 70.28,
+  "end": 70.48
+ },
+ {
+  "word": "weigh",
+  "start": 70.48,
+  "end": 70.64
+ },
+ {
+  "word": "a",
+  "start": 70.64,
+  "end": 70.8
+ },
+ {
+  "word": "hundred",
+  "start": 70.8,
+  "end": 71.1
+ },
+ {
+  "word": "times",
+  "start": 71.1,
+  "end": 71.44
+ },
+ {
+  "word": "more",
+  "start": 71.44,
+  "end": 71.72
+ },
+ {
+  "word": "than",
+  "start": 71.72,
+  "end": 71.88
+ },
+ {
+  "word": "they",
+  "start": 71.88,
+  "end": 72.04
+ },
+ {
+  "word": "do.",
+  "start": 72.04,
+  "end": 72.24
+ },
+ {
+  "word": "A",
+  "start": 72.78,
+  "end": 72.9
+ },
+ {
+  "word": "modern",
+  "start": 72.9,
+  "end": 73.12
+ },
+ {
+  "word": "harbor",
+  "start": 73.12,
+  "end": 73.44
+ },
+ {
+  "word": "tug",
+  "start": 73.44,
+  "end": 73.66
+ },
+ {
+  "word": "like",
+  "start": 73.66,
+  "end": 73.86
+ },
+ {
+  "word": "PSA",
+  "start": 73.86,
+  "end": 74.32
+ },
+ {
+  "word": "Thor",
+  "start": 74.32,
+  "end": 74.5
+ },
+ {
+  "word": "in",
+  "start": 74.5,
+  "end": 74.66
+ },
+ {
+  "word": "Singapore",
+  "start": 74.66,
+  "end": 75.02
+ },
+ {
+  "word": "has",
+  "start": 75.02,
+  "end": 75.56
+ },
+ {
+  "word": "two",
+  "start": 75.56,
+  "end": 75.84
+ },
+ {
+  "word": "diesel",
+  "start": 75.84,
+  "end": 76.18
+ },
+ {
+  "word": "engines,",
+  "start": 76.18,
+  "end": 76.62
+ },
+ {
+  "word": "each",
+  "start": 76.9,
+  "end": 77.2
+ },
+ {
+  "word": "making",
+  "start": 77.2,
+  "end": 77.44
+ },
+ {
+  "word": "about",
+  "start": 77.44,
+  "end": 77.74
+ },
+ {
+  "word": "2",
+  "start": 77.74,
+  "end": 78.04
+ },
+ {
+  "word": ",500",
+  "start": 78.04,
+  "end": 78.48
+ },
+ {
+  "word": "kilowatts.",
+  "start": 78.48,
+  "end": 79.48
+ },
+ {
+  "word": "Together,",
+  "start": 79.78,
+  "end": 80.1
+ },
+ {
+  "word": "that's",
+  "start": 80.5,
+  "end": 80.74
+ },
+ {
+  "word": "nearly",
+  "start": 80.74,
+  "end": 80.96
+ },
+ {
+  "word": "7",
+  "start": 80.96,
+  "end": 81.3
+ },
+ {
+  "word": ",000",
+  "start": 81.3,
+  "end": 81.76
+ },
+ {
+  "word": "horsepower",
+  "start": 81.76,
+  "end": 82.02
+ },
+ {
+  "word": "in",
+  "start": 82.02,
+  "end": 82.38
+ },
+ {
+  "word": "a",
+  "start": 82.38,
+  "end": 82.46
+ },
+ {
+  "word": "boat",
+  "start": 82.46,
+  "end": 82.64
+ },
+ {
+  "word": "you",
+  "start": 82.64,
+  "end": 83.02
+ },
+ {
+  "word": "could",
+  "start": 83.02,
+  "end": 83.18
+ },
+ {
+  "word": "park",
+  "start": 83.18,
+  "end": 83.44
+ },
+ {
+  "word": "in",
+  "start": 83.44,
+  "end": 83.64
+ },
+ {
+  "word": "a",
+  "start": 83.64,
+  "end": 83.74
+ },
+ {
+  "word": "car",
+  "start": 83.74,
+  "end": 83.92
+ },
+ {
+  "word": "park.",
+  "start": 83.92,
+  "end": 84.16
+ },
+ {
+  "word": "The",
+  "start": 84.68,
+  "end": 84.94
+ },
+ {
+  "word": "clever",
+  "start": 84.94,
+  "end": 85.16
+ },
+ {
+  "word": "part",
+  "start": 85.16,
+  "end": 85.42
+ },
+ {
+  "word": "is",
+  "start": 85.42,
+  "end": 85.6
+ },
+ {
+  "word": "underneath.",
+  "start": 85.6,
+  "end": 85.96
+ },
+ {
+  "word": "It's",
+  "start": 86.54,
+  "end": 86.7
+ },
+ {
+  "word": "propellers",
+  "start": 86.7,
+  "end": 87.2
+ },
+ {
+  "word": "sit",
+  "start": 87.2,
+  "end": 87.58
+ },
+ {
+  "word": "in",
+  "start": 87.58,
+  "end": 87.72
+ },
+ {
+  "word": "drives",
+  "start": 87.72,
+  "end": 88.04
+ },
+ {
+  "word": "that",
+  "start": 88.04,
+  "end": 88.3
+ },
+ {
+  "word": "can",
+  "start": 88.3,
+  "end": 88.46
+ },
+ {
+  "word": "spin",
+  "start": 88.46,
+  "end": 88.64
+ },
+ {
+  "word": "all",
+  "start": 88.64,
+  "end": 89.0
+ },
+ {
+  "word": "the",
+  "start": 89.0,
+  "end": 89.12
+ },
+ {
+  "word": "way",
+  "start": 89.12,
+  "end": 89.3
+ },
+ {
+  "word": "around",
+  "start": 89.3,
+  "end": 89.68
+ },
+ {
+  "word": "so",
+  "start": 89.68,
+  "end": 90.16
+ },
+ {
+  "word": "the",
+  "start": 90.16,
+  "end": 90.3
+ },
+ {
+  "word": "tug",
+  "start": 90.3,
+  "end": 90.5
+ },
+ {
+  "word": "can",
+  "start": 90.5,
+  "end": 90.66
+ },
+ {
+  "word": "push",
+  "start": 90.66,
+  "end": 90.9
+ },
+ {
+  "word": "in",
+  "start": 90.9,
+  "end": 91.02
+ },
+ {
+  "word": "any",
+  "start": 91.02,
+  "end": 91.28
+ },
+ {
+  "word": "direction,",
+  "start": 91.28,
+  "end": 91.68
+ },
+ {
+  "word": "even",
+  "start": 92.04,
+  "end": 92.3
+ },
+ {
+  "word": "sideways.",
+  "start": 92.3,
+  "end": 92.76
+ },
+ {
+  "word": "It's",
+  "start": 93.4,
+  "end": 93.56
+ },
+ {
+  "word": "pulling",
+  "start": 93.56,
+  "end": 93.8
+ },
+ {
+  "word": "force,",
+  "start": 93.8,
+  "end": 94.16
+ },
+ {
+  "word": "called",
+  "start": 94.4,
+  "end": 94.68
+ },
+ {
+  "word": "bollard",
+  "start": 94.68,
+  "end": 95.12
+ },
+ {
+  "word": "pull,",
+  "start": 95.12,
+  "end": 95.38
+ },
+ {
+  "word": "is",
+  "start": 95.74,
+  "end": 95.88
+ },
+ {
+  "word": "about",
+  "start": 95.88,
+  "end": 96.1
+ },
+ {
+  "word": "80",
+  "start": 96.1,
+  "end": 96.48
+ },
+ {
+  "word": "tons.",
+  "start": 96.48,
+  "end": 96.8
+ },
+ {
+  "word": "That's",
+  "start": 97.5,
+  "end": 97.76
+ },
+ {
+  "word": "like",
+  "start": 97.76,
+  "end": 97.9
+ },
+ {
+  "word": "a",
+  "start": 97.9,
+  "end": 98.02
+ },
+ {
+  "word": "rope",
+  "start": 98.02,
+  "end": 98.2
+ },
+ {
+  "word": "tied",
+  "start": 98.2,
+  "end": 98.52
+ },
+ {
+  "word": "to",
+  "start": 98.52,
+  "end": 98.72
+ },
+ {
+  "word": "40",
+  "start": 98.72,
+  "end": 99.04
+ },
+ {
+  "word": "cars",
+  "start": 99.04,
+  "end": 99.46
+ },
+ {
+  "word": "being",
+  "start": 99.46,
+  "end": 99.8
+ },
+ {
+  "word": "dragged",
+  "start": 99.8,
+  "end": 100.1
+ },
+ {
+  "word": "at",
+  "start": 100.1,
+  "end": 100.32
+ },
+ {
+  "word": "once.",
+  "start": 100.32,
+  "end": 100.58
+ },
+ {
+  "word": "Next,",
+  "start": 101.42,
+  "end": 101.7
+ },
+ {
+  "word": "the",
+  "start": 102.04,
+  "end": 102.1
+ },
+ {
+  "word": "engines",
+  "start": 102.1,
+  "end": 102.36
+ },
+ {
+  "word": "that",
+  "start": 102.36,
+  "end": 102.64
+ },
+ {
+  "word": "run",
+  "start": 102.64,
+  "end": 102.82
+ },
+ {
+  "word": "ferries,",
+  "start": 102.82,
+  "end": 103.32
+ },
+ {
+  "word": "offshore",
+  "start": 103.64,
+  "end": 103.94
+ },
+ {
+  "word": "ships",
+  "start": 103.94,
+  "end": 104.36
+ },
+ {
+  "word": "and",
+  "start": 104.36,
+  "end": 104.72
+ },
+ {
+  "word": "the",
+  "start": 104.72,
+  "end": 104.84
+ },
+ {
+  "word": "power",
+  "start": 104.84,
+  "end": 105.06
+ },
+ {
+  "word": "systems",
+  "start": 105.06,
+  "end": 105.38
+ },
+ {
+  "word": "of",
+  "start": 105.38,
+  "end": 105.64
+ },
+ {
+  "word": "big",
+  "start": 105.64,
+  "end": 105.82
+ },
+ {
+  "word": "vessels.",
+  "start": 105.82,
+  "end": 106.18
+ },
+ {
+  "word": "Medium",
+  "start": 106.86,
+  "end": 107.18
+ },
+ {
+  "word": "speed",
+  "start": 107.18,
+  "end": 107.56
+ },
+ {
+  "word": "four",
+  "start": 107.56,
+  "end": 107.9
+ },
+ {
+  "word": "-stroke",
+  "start": 107.9,
+  "end": 108.2
+ },
+ {
+  "word": "diesels.",
+  "start": 108.2,
+  "end": 108.7
+ },
+ {
+  "word": "They",
+  "start": 109.22,
+  "end": 109.44
+ },
+ {
+  "word": "work",
+  "start": 109.44,
+  "end": 109.64
+ },
+ {
+  "word": "like",
+  "start": 109.64,
+  "end": 109.84
+ },
+ {
+  "word": "the",
+  "start": 109.84,
+  "end": 110.0
+ },
+ {
+  "word": "engine",
+  "start": 110.0,
+  "end": 110.26
+ },
+ {
+  "word": "in",
+  "start": 110.26,
+  "end": 110.42
+ },
+ {
+  "word": "a",
+  "start": 110.42,
+  "end": 110.54
+ },
+ {
+  "word": "truck,",
+  "start": 110.54,
+  "end": 110.8
+ },
+ {
+  "word": "just",
+  "start": 111.04,
+  "end": 111.26
+ },
+ {
+  "word": "much",
+  "start": 111.26,
+  "end": 111.46
+ },
+ {
+  "word": "bigger,",
+  "start": 111.46,
+  "end": 111.74
+ },
+ {
+  "word": "with",
+  "start": 111.74,
+  "end": 112.26
+ },
+ {
+  "word": "each",
+  "start": 112.26,
+  "end": 112.6
+ },
+ {
+  "word": "cylinder",
+  "start": 112.6,
+  "end": 113.0
+ },
+ {
+  "word": "as",
+  "start": 113.0,
+  "end": 113.36
+ },
+ {
+  "word": "big",
+  "start": 113.36,
+  "end": 113.58
+ },
+ {
+  "word": "as",
+  "start": 113.58,
+  "end": 113.74
+ },
+ {
+  "word": "a",
+  "start": 113.74,
+  "end": 113.82
+ },
+ {
+  "word": "washing",
+  "start": 113.82,
+  "end": 114.06
+ },
+ {
+  "word": "machine.",
+  "start": 114.06,
+  "end": 114.44
+ },
+ {
+  "word": "In",
+  "start": 114.9,
+  "end": 115.02
+ },
+ {
+  "word": "2015,",
+  "start": 115.02,
+  "end": 115.54
+ },
+ {
+  "word": "one",
+  "start": 116.16,
+  "end": 116.34
+ },
+ {
+  "word": "of",
+  "start": 116.34,
+  "end": 116.44
+ },
+ {
+  "word": "them,",
+  "start": 116.44,
+  "end": 116.62
+ },
+ {
+  "word": "the",
+  "start": 116.92,
+  "end": 116.98
+ },
+ {
+  "word": "Vercilla",
+  "start": 116.98,
+  "end": 117.36
+ },
+ {
+  "word": "31,",
+  "start": 117.36,
+  "end": 117.92
+ },
+ {
+  "word": "set",
+  "start": 118.32,
+  "end": 118.48
+ },
+ {
+  "word": "a",
+  "start": 118.48,
+  "end": 118.64
+ },
+ {
+  "word": "Guinness",
+  "start": 118.64,
+  "end": 118.86
+ },
+ {
+  "word": "world",
+  "start": 118.86,
+  "end": 119.04
+ },
+ {
+  "word": "record",
+  "start": 119.04,
+  "end": 119.4
+ },
+ {
+  "word": "as",
+  "start": 119.4,
+  "end": 119.72
+ },
+ {
+  "word": "the",
+  "start": 119.72,
+  "end": 119.88
+ },
+ {
+  "word": "most",
+  "start": 119.88,
+  "end": 120.06
+ },
+ {
+  "word": "fuel",
+  "start": 120.06,
+  "end": 120.44
+ },
+ {
+  "word": "-efficient",
+  "start": 120.44,
+  "end": 120.88
+ },
+ {
+  "word": "four",
+  "start": 120.88,
+  "end": 121.2
+ },
+ {
+  "word": "-stroke",
+  "start": 121.2,
+  "end": 121.52
+ },
+ {
+  "word": "diesel",
+  "start": 121.52,
+  "end": 121.86
+ },
+ {
+  "word": "engine",
+  "start": 121.86,
+  "end": 122.22
+ },
+ {
+  "word": "in",
+  "start": 122.22,
+  "end": 122.44
+ },
+ {
+  "word": "the",
+  "start": 122.44,
+  "end": 122.54
+ },
+ {
+  "word": "world.",
+  "start": 122.54,
+  "end": 122.86
+ },
+ {
+  "word": "Depending",
+  "start": 123.36,
+  "end": 123.6
+ },
+ {
+  "word": "on",
+  "start": 123.6,
+  "end": 123.94
+ },
+ {
+  "word": "the",
+  "start": 123.94,
+  "end": 124.04
+ },
+ {
+  "word": "model,",
+  "start": 124.04,
+  "end": 124.3
+ },
+ {
+  "word": "one",
+  "start": 124.64,
+  "end": 124.78
+ },
+ {
+  "word": "engine",
+  "start": 124.78,
+  "end": 125.02
+ },
+ {
+  "word": "makes",
+  "start": 125.02,
+  "end": 125.26
+ },
+ {
+  "word": "between",
+  "start": 125.26,
+  "end": 125.6
+ },
+ {
+  "word": "about",
+  "start": 125.6,
+  "end": 125.92
+ },
+ {
+  "word": "4",
+  "start": 125.92,
+  "end": 126.36
+ },
+ {
+  "word": "and",
+  "start": 126.36,
+  "end": 126.58
+ },
+ {
+  "word": "10",
+  "start": 126.58,
+  "end": 126.92
+ },
+ {
+  "word": "megawatts.",
+  "start": 126.92,
+  "end": 127.62
+ },
+ {
+  "word": "That's",
+  "start": 127.94,
+  "end": 128.24
+ },
+ {
+  "word": "enough",
+  "start": 128.24,
+  "end": 128.4
+ },
+ {
+  "word": "to",
+  "start": 128.4,
+  "end": 128.54
+ },
+ {
+  "word": "power",
+  "start": 128.54,
+  "end": 128.78
+ },
+ {
+  "word": "thousands",
+  "start": 128.78,
+  "end": 129.22
+ },
+ {
+  "word": "of",
+  "start": 129.22,
+  "end": 129.48
+ },
+ {
+  "word": "homes.",
+  "start": 129.48,
+  "end": 129.8
+ },
+ {
+  "word": "Now",
+  "start": 130.34,
+  "end": 130.48
+ },
+ {
+  "word": "things",
+  "start": 130.48,
+  "end": 130.7
+ },
+ {
+  "word": "get",
+  "start": 130.7,
+  "end": 130.92
+ },
+ {
+  "word": "fast.",
+  "start": 130.92,
+  "end": 131.32
+ },
+ {
+  "word": "Many",
+  "start": 131.76,
+  "end": 132.02
+ },
+ {
+  "word": "warships",
+  "start": 132.02,
+  "end": 132.56
+ },
+ {
+  "word": "don't",
+  "start": 132.56,
+  "end": 132.88
+ },
+ {
+  "word": "use",
+  "start": 132.88,
+  "end": 133.1
+ },
+ {
+  "word": "a",
+  "start": 133.1,
+  "end": 133.2
+ },
+ {
+  "word": "normal",
+  "start": 133.2,
+  "end": 133.42
+ },
+ {
+  "word": "ship",
+  "start": 133.42,
+  "end": 133.68
+ },
+ {
+  "word": "engine",
+  "start": 133.68,
+  "end": 133.98
+ },
+ {
+  "word": "at",
+  "start": 133.98,
+  "end": 134.14
+ },
+ {
+  "word": "all.",
+  "start": 134.14,
+  "end": 134.44
+ },
+ {
+  "word": "They",
+  "start": 134.72,
+  "end": 134.88
+ },
+ {
+  "word": "use",
+  "start": 134.88,
+  "end": 135.04
+ },
+ {
+  "word": "a",
+  "start": 135.04,
+  "end": 135.16
+ },
+ {
+  "word": "jet",
+  "start": 135.16,
+  "end": 135.28
+ },
+ {
+  "word": "engine.",
+  "start": 135.28,
+  "end": 135.58
+ },
+ {
+  "word": "The",
+  "start": 136.04,
+  "end": 136.16
+ },
+ {
+  "word": "General",
+  "start": 136.16,
+  "end": 136.46
+ },
+ {
+  "word": "Electric",
+  "start": 136.46,
+  "end": 137.0
+ },
+ {
+  "word": "LM",
+  "start": 137.0,
+  "end": 137.46
+ },
+ {
+  "word": "-2500",
+  "start": 137.46,
+  "end": 138.6
+ },
+ {
+  "word": "was",
+  "start": 138.6,
+  "end": 139.08
+ },
+ {
+  "word": "developed",
+  "start": 139.08,
+  "end": 139.4
+ },
+ {
+  "word": "from",
+  "start": 139.4,
+  "end": 139.68
+ },
+ {
+  "word": "the",
+  "start": 139.68,
+  "end": 139.82
+ },
+ {
+  "word": "CF",
+  "start": 139.82,
+  "end": 140.08
+ },
+ {
+  "word": "-6,",
+  "start": 140.08,
+  "end": 140.4
+ },
+ {
+  "word": "an",
+  "start": 140.4,
+  "end": 140.9
+ },
+ {
+  "word": "engine",
+  "start": 140.9,
+  "end": 141.16
+ },
+ {
+  "word": "that",
+  "start": 141.16,
+  "end": 141.4
+ },
+ {
+  "word": "powers",
+  "start": 141.4,
+  "end": 141.72
+ },
+ {
+  "word": "big",
+  "start": 141.72,
+  "end": 142.0
+ },
+ {
+  "word": "airliners.",
+  "start": 142.0,
+  "end": 142.64
+ },
+ {
+  "word": "Instead",
+  "start": 142.98,
+  "end": 143.26
+ },
+ {
+  "word": "of",
+  "start": 143.26,
+  "end": 143.48
+ },
+ {
+  "word": "pushing",
+  "start": 143.48,
+  "end": 143.68
+ },
+ {
+  "word": "a",
+  "start": 143.68,
+  "end": 143.86
+ },
+ {
+  "word": "plane,",
+  "start": 143.86,
+  "end": 144.06
+ },
+ {
+  "word": "it",
+  "start": 144.38,
+  "end": 144.48
+ },
+ {
+  "word": "spins",
+  "start": 144.48,
+  "end": 144.74
+ },
+ {
+  "word": "a",
+  "start": 144.74,
+  "end": 144.98
+ },
+ {
+  "word": "propeller",
+  "start": 144.98,
+  "end": 145.32
+ },
+ {
+  "word": "shaft.",
+  "start": 145.32,
+  "end": 145.72
+ },
+ {
+  "word": "One",
+  "start": 146.48,
+  "end": 146.7
+ },
+ {
+  "word": "LM",
+  "start": 146.7,
+  "end": 146.96
+ },
+ {
+  "word": "-2500",
+  "start": 146.96,
+  "end": 147.68
+ },
+ {
+  "word": "makes",
+  "start": 147.68,
+  "end": 148.02
+ },
+ {
+  "word": "about",
+  "start": 148.02,
+  "end": 148.32
+ },
+ {
+  "word": "33",
+  "start": 148.32,
+  "end": 148.9
+ },
+ {
+  "word": ",000",
+  "start": 148.9,
+  "end": 149.4
+ },
+ {
+  "word": "horsepower,",
+  "start": 149.4,
+  "end": 149.82
+ },
+ {
+  "word": "and",
+  "start": 150.32,
+  "end": 150.48
+ },
+ {
+  "word": "it",
+  "start": 150.48,
+  "end": 150.58
+ },
+ {
+  "word": "weighs",
+  "start": 150.58,
+  "end": 150.78
+ },
+ {
+  "word": "less",
+  "start": 150.78,
+  "end": 151.06
+ },
+ {
+  "word": "than",
+  "start": 151.06,
+  "end": 151.3
+ },
+ {
+  "word": "five",
+  "start": 151.3,
+  "end": 151.62
+ },
+ {
+  "word": "tons.",
+  "start": 151.62,
+  "end": 151.9
+ },
+ {
+  "word": "That's",
+  "start": 152.52,
+  "end": 152.84
+ },
+ {
+  "word": "a",
+  "start": 152.84,
+  "end": 152.94
+ },
+ {
+  "word": "huge",
+  "start": 152.94,
+  "end": 153.22
+ },
+ {
+  "word": "amount",
+  "start": 153.22,
+  "end": 153.48
+ },
+ {
+  "word": "of",
+  "start": 153.48,
+  "end": 153.62
+ },
+ {
+  "word": "power",
+  "start": 153.62,
+  "end": 153.84
+ },
+ {
+  "word": "for",
+  "start": 153.84,
+  "end": 154.04
+ },
+ {
+  "word": "its",
+  "start": 154.04,
+  "end": 154.16
+ },
+ {
+  "word": "size.",
+  "start": 154.16,
+  "end": 154.46
+ },
+ {
+  "word": "An",
+  "start": 154.8,
+  "end": 154.94
+ },
+ {
+  "word": "American",
+  "start": 154.94,
+  "end": 155.28
+ },
+ {
+  "word": "Arleigh",
+  "start": 155.28,
+  "end": 155.82
+ },
+ {
+  "word": "Burke",
+  "start": 155.82,
+  "end": 156.04
+ },
+ {
+  "word": "-class",
+  "start": 156.04,
+  "end": 156.42
+ },
+ {
+  "word": "destroyer",
+  "start": 156.42,
+  "end": 157.08
+ },
+ {
+  "word": "carries",
+  "start": 157.08,
+  "end": 157.36
+ },
+ {
+  "word": "four",
+  "start": 157.36,
+  "end": 157.66
+ },
+ {
+  "word": "of",
+  "start": 157.66,
+  "end": 157.78
+ },
+ {
+  "word": "them.",
+  "start": 157.78,
+  "end": 157.96
+ },
+ {
+  "word": "And",
+  "start": 158.38,
+  "end": 158.58
+ },
+ {
+  "word": "by",
+  "start": 158.58,
+  "end": 158.78
+ },
+ {
+  "word": "2004,",
+  "start": 158.78,
+  "end": 159.46
+ },
+ {
+  "word": "more",
+  "start": 159.84,
+  "end": 160.04
+ },
+ {
+  "word": "than",
+  "start": 160.04,
+  "end": 160.2
+ },
+ {
+  "word": "30",
+  "start": 160.2,
+  "end": 160.54
+ },
+ {
+  "word": "navies",
+  "start": 160.54,
+  "end": 161.0
+ },
+ {
+  "word": "had",
+  "start": 161.0,
+  "end": 161.12
+ },
+ {
+  "word": "used",
+  "start": 161.12,
+  "end": 161.34
+ },
+ {
+  "word": "over",
+  "start": 161.34,
+  "end": 161.64
+ },
+ {
+  "word": "a",
+  "start": 161.64,
+  "end": 161.86
+ },
+ {
+  "word": "thousand",
+  "start": 161.86,
+  "end": 162.18
+ },
+ {
+  "word": "of",
+  "start": 162.18,
+  "end": 162.38
+ },
+ {
+  "word": "these",
+  "start": 162.38,
+  "end": 162.54
+ },
+ {
+  "word": "turbines.",
+  "start": 162.54,
+  "end": 162.86
+ },
+ {
+  "word": "The",
+  "start": 163.54,
+  "end": 163.66
+ },
+ {
+  "word": "downside?",
+  "start": 163.66,
+  "end": 163.96
+ },
+ {
+  "word": "Jet",
+  "start": 164.42,
+  "end": 164.6
+ },
+ {
+  "word": "engines",
+  "start": 164.6,
+  "end": 164.94
+ },
+ {
+  "word": "drink",
+  "start": 164.94,
+  "end": 165.22
+ },
+ {
+  "word": "fuel.",
+  "start": 165.22,
+  "end": 165.54
+ },
+ {
+  "word": "They're",
+  "start": 166.0,
+  "end": 166.2
+ },
+ {
+  "word": "perfect",
+  "start": 166.2,
+  "end": 166.42
+ },
+ {
+  "word": "for",
+  "start": 166.42,
+  "end": 166.62
+ },
+ {
+  "word": "speed,",
+  "start": 166.62,
+  "end": 166.9
+ },
+ {
+  "word": "terrible",
+  "start": 167.18,
+  "end": 167.52
+ },
+ {
+  "word": "for",
+  "start": 167.52,
+  "end": 167.76
+ },
+ {
+  "word": "long,",
+  "start": 167.76,
+  "end": 167.98
+ },
+ {
+  "word": "cheap",
+  "start": 168.06,
+  "end": 168.28
+ },
+ {
+  "word": "trips.",
+  "start": 168.28,
+  "end": 168.6
+ },
+ {
+  "word": "That's",
+  "start": 169.16,
+  "end": 169.44
+ },
+ {
+  "word": "why",
+  "start": 169.44,
+  "end": 169.66
+ },
+ {
+  "word": "you'll",
+  "start": 169.66,
+  "end": 169.98
+ },
+ {
+  "word": "almost",
+  "start": 169.98,
+  "end": 170.46
+ },
+ {
+  "word": "never",
+  "start": 170.46,
+  "end": 170.86
+ },
+ {
+  "word": "find",
+  "start": 170.86,
+  "end": 171.3
+ },
+ {
+  "word": "one",
+  "start": 171.3,
+  "end": 171.5
+ },
+ {
+  "word": "in",
+  "start": 171.5,
+  "end": 171.66
+ },
+ {
+  "word": "a",
+  "start": 171.66,
+  "end": 171.8
+ },
+ {
+  "word": "cargo",
+  "start": 171.8,
+  "end": 171.98
+ },
+ {
+  "word": "ship,",
+  "start": 171.98,
+  "end": 172.36
+ },
+ {
+  "word": "where",
+  "start": 172.64,
+  "end": 172.9
+ },
+ {
+  "word": "every",
+  "start": 172.9,
+  "end": 173.3
+ },
+ {
+  "word": "liter",
+  "start": 173.3,
+  "end": 173.56
+ },
+ {
+  "word": "of",
+  "start": 173.56,
+  "end": 173.8
+ },
+ {
+  "word": "fuel",
+  "start": 173.8,
+  "end": 174.08
+ },
+ {
+  "word": "is",
+  "start": 174.08,
+  "end": 174.42
+ },
+ {
+  "word": "money.",
+  "start": 174.42,
+  "end": 174.7
+ },
+ {
+  "word": "The",
+  "start": 175.34,
+  "end": 175.44
+ },
+ {
+  "word": "world's",
+  "start": 175.44,
+  "end": 175.84
+ },
+ {
+  "word": "biggest",
+  "start": 175.84,
+  "end": 176.1
+ },
+ {
+  "word": "cruise",
+  "start": 176.1,
+  "end": 176.54
+ },
+ {
+  "word": "ship,",
+  "start": 176.54,
+  "end": 176.86
+ },
+ {
+  "word": "Icon",
+  "start": 177.12,
+  "end": 177.44
+ },
+ {
+  "word": "of",
+  "start": 177.44,
+  "end": 177.58
+ },
+ {
+  "word": "the",
+  "start": 177.58,
+  "end": 177.68
+ },
+ {
+  "word": "Seas,",
+  "start": 177.68,
+  "end": 178.02
+ },
+ {
+  "word": "doesn't",
+  "start": 178.3,
+  "end": 178.6
+ },
+ {
+  "word": "have",
+  "start": 178.6,
+  "end": 178.8
+ },
+ {
+  "word": "one",
+  "start": 178.8,
+  "end": 179.06
+ },
+ {
+  "word": "big",
+  "start": 179.06,
+  "end": 179.24
+ },
+ {
+  "word": "engine.",
+  "start": 179.24,
+  "end": 179.6
+ },
+ {
+  "word": "It",
+  "start": 180.32,
+  "end": 180.46
+ },
+ {
+  "word": "has",
+  "start": 180.46,
+  "end": 180.6
+ },
+ {
+  "word": "six.",
+  "start": 180.6,
+  "end": 180.84
+ },
+ {
+  "word": "They",
+  "start": 181.34,
+  "end": 181.5
+ },
+ {
+  "word": "burn",
+  "start": 181.5,
+  "end": 181.76
+ },
+ {
+  "word": "liquefied",
+  "start": 181.76,
+  "end": 182.34
+ },
+ {
+  "word": "natural",
+  "start": 182.34,
+  "end": 182.62
+ },
+ {
+  "word": "gas",
+  "start": 182.62,
+  "end": 183.02
+ },
+ {
+  "word": "or",
+  "start": 183.02,
+  "end": 183.32
+ },
+ {
+  "word": "diesel,",
+  "start": 183.32,
+  "end": 183.64
+ },
+ {
+  "word": "and",
+  "start": 184.1,
+  "end": 184.24
+ },
+ {
+  "word": "together",
+  "start": 184.24,
+  "end": 184.48
+ },
+ {
+  "word": "they",
+  "start": 184.48,
+  "end": 184.72
+ },
+ {
+  "word": "make",
+  "start": 184.72,
+  "end": 184.94
+ },
+ {
+  "word": "about",
+  "start": 184.94,
+  "end": 185.16
+ },
+ {
+  "word": "67",
+  "start": 185.16,
+  "end": 185.78
+ },
+ {
+  "word": "megawatts,",
+  "start": 185.78,
+  "end": 186.46
+ },
+ {
+  "word": "roughly",
+  "start": 186.72,
+  "end": 187.02
+ },
+ {
+  "word": "90",
+  "start": 187.02,
+  "end": 187.46
+ },
+ {
+  "word": ",000",
+  "start": 187.46,
+  "end": 187.98
+ },
+ {
+  "word": "horsepower.",
+  "start": 187.98,
+  "end": 188.46
+ },
+ {
+  "word": "But",
+  "start": 189.0,
+  "end": 189.18
+ },
+ {
+  "word": "none",
+  "start": 189.18,
+  "end": 189.34
+ },
+ {
+  "word": "of",
+  "start": 189.34,
+  "end": 189.5
+ },
+ {
+  "word": "them",
+  "start": 189.5,
+  "end": 189.6
+ },
+ {
+  "word": "is",
+  "start": 189.6,
+  "end": 189.74
+ },
+ {
+  "word": "connected",
+  "start": 189.74,
+  "end": 190.06
+ },
+ {
+  "word": "to",
+  "start": 190.06,
+  "end": 190.28
+ },
+ {
+  "word": "a",
+  "start": 190.28,
+  "end": 190.4
+ },
+ {
+  "word": "propeller.",
+  "start": 190.4,
+  "end": 190.76
+ },
+ {
+  "word": "They",
+  "start": 191.3,
+  "end": 191.48
+ },
+ {
+  "word": "make",
+  "start": 191.48,
+  "end": 191.66
+ },
+ {
+  "word": "electricity,",
+  "start": 191.66,
+  "end": 192.16
+ },
+ {
+  "word": "like",
+  "start": 192.5,
+  "end": 192.68
+ },
+ {
+  "word": "a",
+  "start": 192.68,
+  "end": 192.82
+ },
+ {
+  "word": "power",
+  "start": 192.82,
+  "end": 193.02
+ },
+ {
+  "word": "station.",
+  "start": 193.02,
+  "end": 193.36
+ },
+ {
+  "word": "That",
+  "start": 193.78,
+  "end": 193.92
+ },
+ {
+  "word": "electricity",
+  "start": 193.92,
+  "end": 194.38
+ },
+ {
+  "word": "runs",
+  "start": 194.38,
+  "end": 194.76
+ },
+ {
+  "word": "the",
+  "start": 194.76,
+  "end": 194.96
+ },
+ {
+  "word": "lights,",
+  "start": 194.96,
+  "end": 195.2
+ },
+ {
+  "word": "the",
+  "start": 195.54,
+  "end": 195.64
+ },
+ {
+  "word": "pools,",
+  "start": 195.64,
+  "end": 195.96
+ },
+ {
+  "word": "the",
+  "start": 196.28,
+  "end": 196.38
+ },
+ {
+  "word": "restaurants,",
+  "start": 196.38,
+  "end": 196.84
+ },
+ {
+  "word": "and",
+  "start": 196.84,
+  "end": 197.34
+ },
+ {
+  "word": "giant",
+  "start": 197.34,
+  "end": 197.7
+ },
+ {
+  "word": "electric",
+  "start": 197.7,
+  "end": 198.12
+ },
+ {
+  "word": "motors",
+  "start": 198.12,
+  "end": 198.6
+ },
+ {
+  "word": "in",
+  "start": 198.6,
+  "end": 198.8
+ },
+ {
+  "word": "pods",
+  "start": 198.8,
+  "end": 199.04
+ },
+ {
+  "word": "under",
+  "start": 199.04,
+  "end": 199.32
+ },
+ {
+  "word": "the",
+  "start": 199.32,
+  "end": 199.48
+ },
+ {
+  "word": "ship",
+  "start": 199.48,
+  "end": 199.72
+ },
+ {
+  "word": "that",
+  "start": 199.72,
+  "end": 199.94
+ },
+ {
+  "word": "turn",
+  "start": 199.94,
+  "end": 200.22
+ },
+ {
+  "word": "the",
+  "start": 200.22,
+  "end": 200.36
+ },
+ {
+  "word": "propellers.",
+  "start": 200.36,
+  "end": 200.8
+ },
+ {
+  "word": "So",
+  "start": 201.4,
+  "end": 201.56
+ },
+ {
+  "word": "the",
+  "start": 201.56,
+  "end": 201.72
+ },
+ {
+  "word": "biggest",
+  "start": 201.72,
+  "end": 202.0
+ },
+ {
+  "word": "cruise",
+  "start": 202.0,
+  "end": 202.36
+ },
+ {
+  "word": "ship",
+  "start": 202.36,
+  "end": 202.62
+ },
+ {
+  "word": "in",
+  "start": 202.62,
+  "end": 202.76
+ },
+ {
+  "word": "the",
+  "start": 202.76,
+  "end": 202.86
+ },
+ {
+  "word": "world",
+  "start": 202.86,
+  "end": 203.14
+ },
+ {
+  "word": "is",
+  "start": 203.14,
+  "end": 203.44
+ },
+ {
+  "word": "really",
+  "start": 203.44,
+  "end": 203.68
+ },
+ {
+  "word": "a",
+  "start": 203.68,
+  "end": 203.84
+ },
+ {
+  "word": "floating",
+  "start": 203.84,
+  "end": 204.14
+ },
+ {
+  "word": "power",
+  "start": 204.14,
+  "end": 204.5
+ },
+ {
+  "word": "station",
+  "start": 204.5,
+  "end": 204.8
+ },
+ {
+  "word": "with",
+  "start": 204.8,
+  "end": 205.1
+ },
+ {
+  "word": "a",
+  "start": 205.1,
+  "end": 205.22
+ },
+ {
+  "word": "hotel",
+  "start": 205.22,
+  "end": 205.58
+ },
+ {
+  "word": "on",
+  "start": 205.58,
+  "end": 205.82
+ },
+ {
+  "word": "top.",
+  "start": 205.82,
+  "end": 206.14
+ },
+ {
+  "word": "Remember",
+  "start": 206.68,
+  "end": 206.98
+ },
+ {
+  "word": "the",
+  "start": 206.98,
+  "end": 207.3
+ },
+ {
+  "word": "level",
+  "start": 207.3,
+  "end": 207.58
+ },
+ {
+  "word": "that",
+  "start": 207.58,
+  "end": 207.78
+ },
+ {
+  "word": "doesn't",
+  "start": 207.78,
+  "end": 208.22
+ },
+ {
+  "word": "burn",
+  "start": 208.22,
+  "end": 208.48
+ },
+ {
+  "word": "fuel.",
+  "start": 208.48,
+  "end": 208.82
+ },
+ {
+  "word": "This",
+  "start": 209.4,
+  "end": 209.62
+ },
+ {
+  "word": "is",
+  "start": 209.62,
+  "end": 209.74
+ },
+ {
+  "word": "it.",
+  "start": 209.74,
+  "end": 209.94
+ },
+ {
+  "word": "A",
+  "start": 210.3,
+  "end": 210.42
+ },
+ {
+  "word": "Nimitz",
+  "start": 210.42,
+  "end": 210.7
+ },
+ {
+  "word": "-class",
+  "start": 210.7,
+  "end": 210.92
+ },
+ {
+  "word": "aircraft",
+  "start": 210.92,
+  "end": 211.36
+ },
+ {
+  "word": "carrier",
+  "start": 211.36,
+  "end": 211.84
+ },
+ {
+  "word": "is",
+  "start": 211.84,
+  "end": 212.12
+ },
+ {
+  "word": "powered",
+  "start": 212.12,
+  "end": 212.4
+ },
+ {
+  "word": "by",
+  "start": 212.4,
+  "end": 212.64
+ },
+ {
+  "word": "two",
+  "start": 212.64,
+  "end": 212.88
+ },
+ {
+  "word": "nuclear",
+  "start": 212.88,
+  "end": 213.32
+ },
+ {
+  "word": "reactors.",
+  "start": 213.32,
+  "end": 213.82
+ },
+ {
+  "word": "Each",
+  "start": 214.42,
+  "end": 214.66
+ },
+ {
+  "word": "one",
+  "start": 214.66,
+  "end": 214.88
+ },
+ {
+  "word": "makes",
+  "start": 214.88,
+  "end": 215.14
+ },
+ {
+  "word": "steam",
+  "start": 215.14,
+  "end": 215.42
+ },
+ {
+  "word": "that",
+  "start": 215.42,
+  "end": 215.62
+ },
+ {
+  "word": "drives",
+  "start": 215.62,
+  "end": 215.9
+ },
+ {
+  "word": "turbines,",
+  "start": 215.9,
+  "end": 216.3
+ },
+ {
+  "word": "and",
+  "start": 216.7,
+  "end": 216.86
+ },
+ {
+  "word": "together",
+  "start": 216.86,
+  "end": 217.12
+ },
+ {
+  "word": "they",
+  "start": 217.12,
+  "end": 217.38
+ },
+ {
+  "word": "send",
+  "start": 217.38,
+  "end": 217.64
+ },
+ {
+  "word": "around",
+  "start": 217.64,
+  "end": 217.9
+ },
+ {
+  "word": "280",
+  "start": 217.9,
+  "end": 218.5
+ },
+ {
+  "word": ",000",
+  "start": 218.5,
+  "end": 219.24
+ },
+ {
+  "word": "horsepower",
+  "start": 219.24,
+  "end": 219.56
+ },
+ {
+  "word": "to",
+  "start": 219.56,
+  "end": 220.2
+ },
+ {
+  "word": "four",
+  "start": 220.2,
+  "end": 220.52
+ },
+ {
+  "word": "giant",
+  "start": 220.52,
+  "end": 220.94
+ },
+ {
+  "word": "propellers.",
+  "start": 220.94,
+  "end": 221.42
+ },
+ {
+  "word": "And",
+  "start": 221.94,
+  "end": 222.2
+ },
+ {
+  "word": "they",
+  "start": 222.2,
+  "end": 222.34
+ },
+ {
+  "word": "don't",
+  "start": 222.34,
+  "end": 222.6
+ },
+ {
+  "word": "need",
+  "start": 222.6,
+  "end": 222.84
+ },
+ {
+  "word": "to",
+  "start": 222.84,
+  "end": 223.02
+ },
+ {
+  "word": "refuel",
+  "start": 223.02,
+  "end": 223.48
+ },
+ {
+  "word": "every",
+  "start": 223.48,
+  "end": 223.8
+ },
+ {
+  "word": "few",
+  "start": 223.8,
+  "end": 224.04
+ },
+ {
+  "word": "weeks.",
+  "start": 224.04,
+  "end": 224.38
+ },
+ {
+  "word": "The",
+  "start": 224.38,
+  "end": 225.0
+ },
+ {
+  "word": "reactors",
+  "start": 225.0,
+  "end": 225.36
+ },
+ {
+  "word": "are",
+  "start": 225.36,
+  "end": 225.58
+ },
+ {
+  "word": "built",
+  "start": 225.58,
+  "end": 225.74
+ },
+ {
+  "word": "to",
+  "start": 225.74,
+  "end": 225.96
+ },
+ {
+  "word": "run",
+  "start": 225.96,
+  "end": 226.08
+ },
+ {
+  "word": "for",
+  "start": 226.08,
+  "end": 226.24
+ },
+ {
+  "word": "about",
+  "start": 226.24,
+  "end": 226.44
+ },
+ {
+  "word": "20",
+  "start": 226.44,
+  "end": 226.86
+ },
+ {
+  "word": "to",
+  "start": 226.86,
+  "end": 227.0
+ },
+ {
+  "word": "25",
+  "start": 227.0,
+  "end": 227.34
+ },
+ {
+  "word": "years",
+  "start": 227.34,
+  "end": 227.8
+ },
+ {
+  "word": "before",
+  "start": 227.8,
+  "end": 228.36
+ },
+ {
+  "word": "they",
+  "start": 228.36,
+  "end": 228.64
+ },
+ {
+  "word": "get",
+  "start": 228.64,
+  "end": 228.84
+ },
+ {
+  "word": "new",
+  "start": 228.84,
+  "end": 229.08
+ },
+ {
+  "word": "fuel.",
+  "start": 229.08,
+  "end": 229.44
+ },
+ {
+  "word": "That's",
+  "start": 229.96,
+  "end": 230.28
+ },
+ {
+  "word": "the",
+  "start": 230.28,
+  "end": 230.38
+ },
+ {
+  "word": "most",
+  "start": 230.38,
+  "end": 230.54
+ },
+ {
+  "word": "powerful",
+  "start": 230.54,
+  "end": 230.96
+ },
+ {
+  "word": "ship",
+  "start": 230.96,
+  "end": 231.26
+ },
+ {
+  "word": "propulsion",
+  "start": 231.26,
+  "end": 231.62
+ },
+ {
+  "word": "on",
+  "start": 231.62,
+  "end": 231.9
+ },
+ {
+  "word": "this",
+  "start": 231.9,
+  "end": 232.06
+ },
+ {
+  "word": "list,",
+  "start": 232.06,
+  "end": 232.38
+ },
+ {
+  "word": "but",
+  "start": 232.58,
+  "end": 233.02
+ },
+ {
+  "word": "it's",
+  "start": 233.02,
+  "end": 233.16
+ },
+ {
+  "word": "not",
+  "start": 233.16,
+  "end": 233.32
+ },
+ {
+  "word": "one",
+  "start": 233.32,
+  "end": 233.54
+ },
+ {
+  "word": "engine.",
+  "start": 233.54,
+  "end": 233.82
+ },
+ {
+  "word": "It's",
+  "start": 234.18,
+  "end": 234.36
+ },
+ {
+  "word": "two",
+  "start": 234.36,
+  "end": 234.54
+ },
+ {
+  "word": "reactors",
+  "start": 234.54,
+  "end": 234.92
+ },
+ {
+  "word": "and",
+  "start": 234.92,
+  "end": 235.14
+ },
+ {
+  "word": "a",
+  "start": 235.14,
+  "end": 235.24
+ },
+ {
+  "word": "whole",
+  "start": 235.24,
+  "end": 235.46
+ },
+ {
+  "word": "plant",
+  "start": 235.46,
+  "end": 235.72
+ },
+ {
+  "word": "of",
+  "start": 235.72,
+  "end": 235.86
+ },
+ {
+  "word": "turbines,",
+  "start": 235.86,
+  "end": 236.16
+ },
+ {
+  "word": "which",
+  "start": 236.52,
+  "end": 236.9
+ },
+ {
+  "word": "brings",
+  "start": 236.9,
+  "end": 237.18
+ },
+ {
+  "word": "us",
+  "start": 237.18,
+  "end": 237.38
+ },
+ {
+  "word": "to",
+  "start": 237.38,
+  "end": 237.52
+ },
+ {
+  "word": "the",
+  "start": 237.52,
+  "end": 237.64
+ },
+ {
+  "word": "final",
+  "start": 237.64,
+  "end": 237.9
+ },
+ {
+  "word": "level,",
+  "start": 237.9,
+  "end": 238.24
+ },
+ {
+  "word": "the",
+  "start": 238.7,
+  "end": 238.8
+ },
+ {
+  "word": "biggest",
+  "start": 238.8,
+  "end": 239.12
+ },
+ {
+  "word": "single",
+  "start": 239.12,
+  "end": 239.58
+ },
+ {
+  "word": "engine",
+  "start": 239.58,
+  "end": 239.94
+ },
+ {
+  "word": "ever",
+  "start": 239.94,
+  "end": 240.38
+ },
+ {
+  "word": "put",
+  "start": 240.38,
+  "end": 240.6
+ },
+ {
+  "word": "inside",
+  "start": 240.6,
+  "end": 240.92
+ },
+ {
+  "word": "a",
+  "start": 240.92,
+  "end": 241.1
+ },
+ {
+  "word": "ship.",
+  "start": 241.1,
+  "end": 241.3
+ },
+ {
+  "word": "This",
+  "start": 241.82,
+  "end": 242.12
+ },
+ {
+  "word": "is",
+  "start": 242.12,
+  "end": 242.28
+ },
+ {
+  "word": "the",
+  "start": 242.28,
+  "end": 242.4
+ },
+ {
+  "word": "Verzilla",
+  "start": 242.4,
+  "end": 242.82
+ },
+ {
+  "word": "-Sulzer",
+  "start": 242.82,
+  "end": 243.24
+ },
+ {
+  "word": "RT",
+  "start": 243.24,
+  "end": 243.74
+ },
+ {
+  "word": "-Flex",
+  "start": 243.74,
+  "end": 244.24
+ },
+ {
+  "word": "96C.",
+  "start": 244.24,
+  "end": 245.34
+ },
+ {
+  "word": "In",
+  "start": 245.9,
+  "end": 246.14
+ },
+ {
+  "word": "its",
+  "start": 246.14,
+  "end": 246.26
+ },
+ {
+  "word": "14",
+  "start": 246.26,
+  "end": 246.64
+ },
+ {
+  "word": "-cylinder",
+  "start": 246.64,
+  "end": 247.06
+ },
+ {
+  "word": "version,",
+  "start": 247.06,
+  "end": 247.38
+ },
+ {
+  "word": "it's",
+  "start": 247.7,
+  "end": 247.9
+ },
+ {
+  "word": "the",
+  "start": 247.9,
+  "end": 248.04
+ },
+ {
+  "word": "largest",
+  "start": 248.04,
+  "end": 248.44
+ },
+ {
+  "word": "diesel",
+  "start": 248.44,
+  "end": 248.76
+ },
+ {
+  "word": "engine",
+  "start": 248.76,
+  "end": 249.08
+ },
+ {
+  "word": "of",
+  "start": 249.08,
+  "end": 249.24
+ },
+ {
+  "word": "its",
+  "start": 249.24,
+  "end": 249.36
+ },
+ {
+  "word": "kind",
+  "start": 249.36,
+  "end": 249.66
+ },
+ {
+  "word": "ever",
+  "start": 249.66,
+  "end": 250.04
+ },
+ {
+  "word": "built.",
+  "start": 250.04,
+  "end": 250.44
+ },
+ {
+  "word": "It's",
+  "start": 250.82,
+  "end": 251.14
+ },
+ {
+  "word": "13",
+  "start": 251.14,
+  "end": 251.7
+ },
+ {
+  "word": ".5",
+  "start": 251.7,
+  "end": 252.1
+ },
+ {
+  "word": "meters",
+  "start": 252.1,
+  "end": 252.44
+ },
+ {
+  "word": "tall,",
+  "start": 252.44,
+  "end": 252.82
+ },
+ {
+  "word": "almost",
+  "start": 252.82,
+  "end": 253.52
+ },
+ {
+  "word": "27",
+  "start": 253.52,
+  "end": 254.28
+ },
+ {
+  "word": "meters",
+  "start": 254.28,
+  "end": 254.52
+ },
+ {
+  "word": "long,",
+  "start": 254.52,
+  "end": 254.9
+ },
+ {
+  "word": "and",
+  "start": 255.12,
+  "end": 255.4
+ },
+ {
+  "word": "it",
+  "start": 255.4,
+  "end": 255.5
+ },
+ {
+  "word": "weighs",
+  "start": 255.5,
+  "end": 255.74
+ },
+ {
+  "word": "more",
+  "start": 255.74,
+  "end": 256.0
+ },
+ {
+  "word": "than",
+  "start": 256.0,
+  "end": 256.16
+ },
+ {
+  "word": "2",
+  "start": 256.16,
+  "end": 256.44
+ },
+ {
+  "word": ",300",
+  "start": 256.44,
+  "end": 257.26
+ },
+ {
+  "word": "tons.",
+  "start": 257.26,
+  "end": 257.84
+ },
+ {
+  "word": "Each",
+  "start": 258.58,
+  "end": 258.74
+ },
+ {
+  "word": "cylinder",
+  "start": 258.74,
+  "end": 259.04
+ },
+ {
+  "word": "is",
+  "start": 259.04,
+  "end": 259.38
+ },
+ {
+  "word": "96",
+  "start": 259.38,
+  "end": 259.92
+ },
+ {
+  "word": "centimeters",
+  "start": 259.92,
+  "end": 260.32
+ },
+ {
+  "word": "wide.",
+  "start": 260.32,
+  "end": 260.82
+ },
+ {
+  "word": "Each",
+  "start": 261.3,
+  "end": 261.5
+ },
+ {
+  "word": "piston",
+  "start": 261.5,
+  "end": 261.8
+ },
+ {
+  "word": "moves",
+  "start": 261.8,
+  "end": 262.14
+ },
+ {
+  "word": "two",
+  "start": 262.14,
+  "end": 262.38
+ },
+ {
+  "word": "and",
+  "start": 262.38,
+  "end": 262.54
+ },
+ {
+  "word": "a",
+  "start": 262.54,
+  "end": 262.6
+ },
+ {
+  "word": "half",
+  "start": 262.6,
+  "end": 262.78
+ },
+ {
+  "word": "meters",
+  "start": 262.78,
+  "end": 263.0
+ },
+ {
+  "word": "up",
+  "start": 263.0,
+  "end": 263.28
+ },
+ {
+  "word": "and",
+  "start": 263.28,
+  "end": 263.36
+ },
+ {
+  "word": "down.",
+  "start": 263.36,
+  "end": 263.6
+ },
+ {
+  "word": "You",
+  "start": 264.12,
+  "end": 264.24
+ },
+ {
+  "word": "could",
+  "start": 264.24,
+  "end": 264.4
+ },
+ {
+  "word": "stand",
+  "start": 264.4,
+  "end": 264.62
+ },
+ {
+  "word": "inside",
+  "start": 264.62,
+  "end": 264.92
+ },
+ {
+  "word": "one",
+  "start": 264.92,
+  "end": 265.14
+ },
+ {
+  "word": "of",
+  "start": 265.14,
+  "end": 265.24
+ },
+ {
+  "word": "the",
+  "start": 265.24,
+  "end": 265.34
+ },
+ {
+  "word": "cylinders.",
+  "start": 265.34,
+  "end": 265.62
+ },
+ {
+  "word": "The",
+  "start": 266.36,
+  "end": 266.48
+ },
+ {
+  "word": "piston",
+  "start": 266.48,
+  "end": 266.76
+ },
+ {
+  "word": "from",
+  "start": 266.76,
+  "end": 267.0
+ },
+ {
+  "word": "the",
+  "start": 267.0,
+  "end": 267.14
+ },
+ {
+  "word": "start",
+  "start": 267.14,
+  "end": 267.44
+ },
+ {
+  "word": "of",
+  "start": 267.44,
+  "end": 267.58
+ },
+ {
+  "word": "this",
+  "start": 267.58,
+  "end": 267.74
+ },
+ {
+  "word": "video,",
+  "start": 267.74,
+  "end": 268.1
+ },
+ {
+  "word": "together",
+  "start": 268.64,
+  "end": 268.88
+ },
+ {
+  "word": "with",
+  "start": 268.88,
+  "end": 269.12
+ },
+ {
+  "word": "its",
+  "start": 269.12,
+  "end": 269.26
+ },
+ {
+  "word": "rod,",
+  "start": 269.26,
+  "end": 269.48
+ },
+ {
+  "word": "it's",
+  "start": 269.78,
+  "end": 269.94
+ },
+ {
+  "word": "six",
+  "start": 269.94,
+  "end": 270.06
+ },
+ {
+  "word": "meters",
+  "start": 270.06,
+  "end": 270.34
+ },
+ {
+  "word": "tall.",
+  "start": 270.34,
+  "end": 270.68
+ },
+ {
+  "word": "And",
+  "start": 271.12,
+  "end": 271.34
+ },
+ {
+  "word": "the",
+  "start": 271.34,
+  "end": 271.56
+ },
+ {
+  "word": "crankshaft,",
+  "start": 271.56,
+  "end": 272.2
+ },
+ {
+  "word": "the",
+  "start": 272.5,
+  "end": 272.68
+ },
+ {
+  "word": "part",
+  "start": 272.68,
+  "end": 272.94
+ },
+ {
+  "word": "that",
+  "start": 272.94,
+  "end": 273.18
+ },
+ {
+  "word": "turns",
+  "start": 273.18,
+  "end": 273.46
+ },
+ {
+  "word": "all",
+  "start": 273.46,
+  "end": 273.78
+ },
+ {
+  "word": "that",
+  "start": 273.78,
+  "end": 274.0
+ },
+ {
+  "word": "up",
+  "start": 274.0,
+  "end": 274.28
+ },
+ {
+  "word": "-and",
+  "start": 274.28,
+  "end": 274.4
+ },
+ {
+  "word": "-down",
+  "start": 274.4,
+  "end": 274.52
+ },
+ {
+  "word": "motion",
+  "start": 274.52,
+  "end": 274.86
+ },
+ {
+  "word": "into",
+  "start": 274.86,
+  "end": 275.14
+ },
+ {
+  "word": "spinning,",
+  "start": 275.14,
+  "end": 275.42
+ },
+ {
+  "word": "weighs",
+  "start": 275.84,
+  "end": 276.16
+ },
+ {
+  "word": "300",
+  "start": 276.16,
+  "end": 276.9
+ },
+ {
+  "word": "tons.",
+  "start": 276.9,
+  "end": 277.36
+ },
+ {
+  "word": "That's",
+  "start": 277.94,
+  "end": 278.32
+ },
+ {
+  "word": "as",
+  "start": 278.32,
+  "end": 278.42
+ },
+ {
+  "word": "heavy",
+  "start": 278.42,
+  "end": 278.62
+ },
+ {
+  "word": "as",
+  "start": 278.62,
+  "end": 278.84
+ },
+ {
+  "word": "about",
+  "start": 278.84,
+  "end": 279.06
+ },
+ {
+  "word": "200",
+  "start": 279.06,
+  "end": 279.42
+ },
+ {
+  "word": "cars.",
+  "start": 279.42,
+  "end": 279.94
+ },
+ {
+  "word": "Together,",
+  "start": 279.94,
+  "end": 280.68
+ },
+ {
+  "word": "the",
+  "start": 281.12,
+  "end": 281.3
+ },
+ {
+  "word": "14",
+  "start": 281.3,
+  "end": 281.68
+ },
+ {
+  "word": "cylinders",
+  "start": 281.68,
+  "end": 282.06
+ },
+ {
+  "word": "make",
+  "start": 282.06,
+  "end": 282.34
+ },
+ {
+  "word": "about",
+  "start": 282.34,
+  "end": 282.58
+ },
+ {
+  "word": "107",
+  "start": 282.58,
+  "end": 283.66
+ },
+ {
+  "word": ",000",
+  "start": 283.66,
+  "end": 284.14
+ },
+ {
+  "word": "horsepower.",
+  "start": 284.14,
+  "end": 284.5
+ },
+ {
+  "word": "From",
+  "start": 285.16,
+  "end": 285.26
+ },
+ {
+  "word": "one",
+  "start": 285.26,
+  "end": 285.54
+ },
+ {
+  "word": "engine,",
+  "start": 285.54,
+  "end": 285.9
+ },
+ {
+  "word": "this",
+  "start": 286.22,
+  "end": 286.4
+ },
+ {
+  "word": "engine",
+  "start": 286.4,
+  "end": 286.7
+ },
+ {
+  "word": "was",
+  "start": 286.7,
+  "end": 286.9
+ },
+ {
+  "word": "built",
+  "start": 286.9,
+  "end": 287.12
+ },
+ {
+  "word": "for",
+  "start": 287.12,
+  "end": 287.32
+ },
+ {
+  "word": "the",
+  "start": 287.32,
+  "end": 287.42
+ },
+ {
+  "word": "Emma",
+  "start": 287.42,
+  "end": 287.62
+ },
+ {
+  "word": "Mayersk,",
+  "start": 287.62,
+  "end": 288.18
+ },
+ {
+  "word": "a",
+  "start": 288.36,
+  "end": 288.46
+ },
+ {
+  "word": "container",
+  "start": 288.46,
+  "end": 288.72
+ },
+ {
+  "word": "ship",
+  "start": 288.72,
+  "end": 289.04
+ },
+ {
+  "word": "almost",
+  "start": 289.04,
+  "end": 289.38
+ },
+ {
+  "word": "400",
+  "start": 289.38,
+  "end": 289.9
+ },
+ {
+  "word": "meters",
+  "start": 289.9,
+  "end": 290.28
+ },
+ {
+  "word": "long.",
+  "start": 290.28,
+  "end": 290.76
+ },
+ {
+  "word": "At",
+  "start": 291.24,
+  "end": 291.36
+ },
+ {
+  "word": "full",
+  "start": 291.36,
+  "end": 291.56
+ },
+ {
+  "word": "power,",
+  "start": 291.56,
+  "end": 291.86
+ },
+ {
+  "word": "it",
+  "start": 292.26,
+  "end": 292.38
+ },
+ {
+  "word": "burns",
+  "start": 292.38,
+  "end": 292.6
+ },
+ {
+  "word": "about",
+  "start": 292.6,
+  "end": 292.84
+ },
+ {
+  "word": "14",
+  "start": 292.84,
+  "end": 293.22
+ },
+ {
+  "word": ",000",
+  "start": 293.22,
+  "end": 293.72
+ },
+ {
+  "word": "liters",
+  "start": 293.72,
+  "end": 293.96
+ },
+ {
+  "word": "of",
+  "start": 293.96,
+  "end": 294.2
+ },
+ {
+  "word": "heavy",
+  "start": 294.2,
+  "end": 294.42
+ },
+ {
+  "word": "fuel",
+  "start": 294.42,
+  "end": 294.66
+ },
+ {
+  "word": "oil",
+  "start": 294.66,
+  "end": 294.98
+ },
+ {
+  "word": "every",
+  "start": 294.98,
+  "end": 295.28
+ },
+ {
+  "word": "hour.",
+  "start": 295.28,
+  "end": 295.58
+ },
+ {
+  "word": "And",
+  "start": 295.78,
+  "end": 295.98
+ },
+ {
+  "word": "remember",
+  "start": 295.98,
+  "end": 296.26
+ },
+ {
+  "word": "how",
+  "start": 296.26,
+  "end": 296.56
+ },
+ {
+  "word": "slowly",
+  "start": 296.56,
+  "end": 296.98
+ },
+ {
+  "word": "it",
+  "start": 296.98,
+  "end": 297.18
+ },
+ {
+  "word": "turns?",
+  "start": 297.18,
+  "end": 297.46
+ },
+ {
+  "word": "About",
+  "start": 298.2,
+  "end": 298.4
+ },
+ {
+  "word": "100",
+  "start": 298.4,
+  "end": 298.94
+ },
+ {
+  "word": "revolutions",
+  "start": 298.94,
+  "end": 299.62
+ },
+ {
+  "word": "a",
+  "start": 299.62,
+  "end": 299.84
+ },
+ {
+  "word": "minute.",
+  "start": 299.84,
+  "end": 300.0
+ },
+ {
+  "word": "That's",
+  "start": 300.42,
+  "end": 300.8
+ },
+ {
+  "word": "not",
+  "start": 300.8,
+  "end": 300.96
+ },
+ {
+  "word": "a",
+  "start": 300.96,
+  "end": 301.08
+ },
+ {
+  "word": "weakness.",
+  "start": 301.08,
+  "end": 301.32
+ },
+ {
+  "word": "It's",
+  "start": 301.96,
+  "end": 302.16
+ },
+ {
+  "word": "the",
+  "start": 302.16,
+  "end": 302.24
+ },
+ {
+  "word": "whole",
+  "start": 302.24,
+  "end": 302.42
+ },
+ {
+  "word": "point.",
+  "start": 302.42,
+  "end": 302.76
+ },
+ {
+  "word": "A",
+  "start": 303.16,
+  "end": 303.28
+ },
+ {
+  "word": "giant",
+  "start": 303.28,
+  "end": 303.62
+ },
+ {
+  "word": "propeller",
+  "start": 303.62,
+  "end": 304.06
+ },
+ {
+  "word": "works",
+  "start": 304.06,
+  "end": 304.36
+ },
+ {
+  "word": "best",
+  "start": 304.36,
+  "end": 304.68
+ },
+ {
+  "word": "when",
+  "start": 304.68,
+  "end": 304.92
+ },
+ {
+  "word": "it",
+  "start": 304.92,
+  "end": 305.06
+ },
+ {
+  "word": "turns",
+  "start": 305.06,
+  "end": 305.32
+ },
+ {
+  "word": "slowly,",
+  "start": 305.32,
+  "end": 305.74
+ },
+ {
+  "word": "so",
+  "start": 306.16,
+  "end": 306.32
+ },
+ {
+  "word": "this",
+  "start": 306.32,
+  "end": 306.5
+ },
+ {
+  "word": "engine",
+  "start": 306.5,
+  "end": 306.78
+ },
+ {
+  "word": "is",
+  "start": 306.78,
+  "end": 306.94
+ },
+ {
+  "word": "connected",
+  "start": 306.94,
+  "end": 307.28
+ },
+ {
+  "word": "straight",
+  "start": 307.28,
+  "end": 307.7
+ },
+ {
+  "word": "to",
+  "start": 307.7,
+  "end": 307.92
+ },
+ {
+  "word": "the",
+  "start": 307.92,
+  "end": 308.02
+ },
+ {
+  "word": "propeller",
+  "start": 308.02,
+  "end": 308.34
+ },
+ {
+  "word": "shaft",
+  "start": 308.34,
+  "end": 308.72
+ },
+ {
+  "word": "with",
+  "start": 308.72,
+  "end": 309.3
+ },
+ {
+  "word": "no",
+  "start": 309.3,
+  "end": 309.6
+ },
+ {
+  "word": "gearbox",
+  "start": 309.6,
+  "end": 310.06
+ },
+ {
+  "word": "at",
+  "start": 310.06,
+  "end": 310.34
+ },
+ {
+  "word": "all.",
+  "start": 310.34,
+  "end": 310.62
+ },
+ {
+  "word": "Slow,",
+  "start": 310.98,
+  "end": 311.34
+ },
+ {
+  "word": "huge,",
+  "start": 311.74,
+  "end": 312.2
+ },
+ {
+  "word": "and",
+  "start": 312.46,
+  "end": 312.54
+ },
+ {
+  "word": "simple.",
+  "start": 312.54,
+  "end": 312.94
+ },
+ {
+  "word": "That's",
+  "start": 313.66,
+  "end": 313.86
+ },
+ {
+  "word": "why",
+  "start": 313.86,
+  "end": 314.0
+ },
+ {
+  "word": "engines",
+  "start": 314.0,
+  "end": 314.28
+ },
+ {
+  "word": "like",
+  "start": 314.28,
+  "end": 314.56
+ },
+ {
+  "word": "this",
+  "start": 314.56,
+  "end": 314.8
+ },
+ {
+  "word": "push",
+  "start": 314.8,
+  "end": 315.06
+ },
+ {
+  "word": "most",
+  "start": 315.06,
+  "end": 315.42
+ },
+ {
+  "word": "of",
+  "start": 315.42,
+  "end": 315.6
+ },
+ {
+  "word": "the",
+  "start": 315.6,
+  "end": 315.7
+ },
+ {
+  "word": "world's",
+  "start": 315.7,
+  "end": 316.04
+ },
+ {
+  "word": "cargo.",
+  "start": 316.04,
+  "end": 316.28
+ },
+ {
+  "word": "So",
+  "start": 317.02,
+  "end": 317.14
+ },
+ {
+  "word": "from",
+  "start": 317.14,
+  "end": 317.32
+ },
+ {
+  "word": "a",
+  "start": 317.32,
+  "end": 317.44
+ },
+ {
+  "word": "600",
+  "start": 317.44,
+  "end": 317.72
+ },
+ {
+  "word": "horsepower",
+  "start": 317.72,
+  "end": 318.44
+ },
+ {
+  "word": "outboard",
+  "start": 318.44,
+  "end": 319.0
+ },
+ {
+  "word": "to",
+  "start": 319.0,
+  "end": 319.4
+ },
+ {
+  "word": "a",
+  "start": 319.4,
+  "end": 319.54
+ },
+ {
+  "word": "2",
+  "start": 319.54,
+  "end": 319.74
+ },
+ {
+  "word": ",300",
+  "start": 319.74,
+  "end": 320.38
+ },
+ {
+  "word": "ton",
+  "start": 320.38,
+  "end": 320.82
+ },
+ {
+  "word": "engine,",
+  "start": 320.82,
+  "end": 321.26
+ },
+ {
+  "word": "every",
+  "start": 321.74,
+  "end": 322.02
+ },
+ {
+  "word": "level",
+  "start": 322.02,
+  "end": 322.34
+ },
+ {
+  "word": "of",
+  "start": 322.34,
+  "end": 322.52
+ },
+ {
+  "word": "ship",
+  "start": 322.52,
+  "end": 322.74
+ },
+ {
+  "word": "has",
+  "start": 322.74,
+  "end": 323.0
+ },
+ {
+  "word": "the",
+  "start": 323.0,
+  "end": 323.14
+ },
+ {
+  "word": "engine",
+  "start": 323.14,
+  "end": 323.44
+ },
+ {
+  "word": "that",
+  "start": 323.44,
+  "end": 323.66
+ },
+ {
+  "word": "fits",
+  "start": 323.66,
+  "end": 323.9
+ },
+ {
+  "word": "its",
+  "start": 323.9,
+  "end": 324.14
+ },
+ {
+  "word": "job.",
+  "start": 324.14,
+  "end": 324.46
+ },
+ {
+  "word": "Speed,",
+  "start": 324.96,
+  "end": 325.24
+ },
+ {
+  "word": "pulling",
+  "start": 325.72,
+  "end": 326.08
+ },
+ {
+  "word": "power,",
+  "start": 326.08,
+  "end": 326.42
+ },
+ {
+  "word": "electricity,",
+  "start": 326.76,
+  "end": 327.18
+ },
+ {
+  "word": "endurance,",
+  "start": 327.68,
+  "end": 328.06
+ },
+ {
+  "word": "or",
+  "start": 328.32,
+  "end": 328.36
+ },
+ {
+  "word": "pure",
+  "start": 328.36,
+  "end": 328.58
+ },
+ {
+  "word": "size.",
+  "start": 328.58,
+  "end": 328.94
+ },
+ {
+  "word": "Here's",
+  "start": 329.22,
+  "end": 329.46
+ },
+ {
+  "word": "one",
+  "start": 329.46,
+  "end": 329.62
+ },
+ {
+  "word": "last",
+  "start": 329.62,
+  "end": 329.84
+ },
+ {
+  "word": "comparison.",
+  "start": 329.84,
+  "end": 330.24
+ },
+ {
+  "word": "Sea",
+  "start": 330.82,
+  "end": 331.08
+ },
+ {
+  "word": "-wise",
+  "start": 331.08,
+  "end": 331.34
+ },
+ {
+  "word": "giant,",
+  "start": 331.34,
+  "end": 331.72
+ },
+ {
+  "word": "the",
+  "start": 332.16,
+  "end": 332.28
+ },
+ {
+  "word": "longest",
+  "start": 332.28,
+  "end": 332.6
+ },
+ {
+  "word": "ship",
+  "start": 332.6,
+  "end": 332.94
+ },
+ {
+  "word": "ever",
+  "start": 332.94,
+  "end": 333.18
+ },
+ {
+  "word": "built,",
+  "start": 333.18,
+  "end": 333.5
+ },
+ {
+  "word": "had",
+  "start": 333.84,
+  "end": 333.98
+ },
+ {
+  "word": "a",
+  "start": 333.98,
+  "end": 334.08
+ },
+ {
+  "word": "steam",
+  "start": 334.08,
+  "end": 334.36
+ },
+ {
+  "word": "turbine",
+  "start": 334.36,
+  "end": 334.74
+ },
+ {
+  "word": "of",
+  "start": 334.74,
+  "end": 335.04
+ },
+ {
+  "word": "about",
+  "start": 335.04,
+  "end": 335.3
+ },
+ {
+  "word": "50",
+  "start": 335.3,
+  "end": 335.72
+ },
+ {
+  "word": ",000",
+  "start": 335.72,
+  "end": 336.24
+ },
+ {
+  "word": "horsepower.",
+  "start": 336.24,
+  "end": 336.72
+ },
+ {
+  "word": "This",
+  "start": 336.72,
+  "end": 337.4
+ },
+ {
+  "word": "one",
+  "start": 337.4,
+  "end": 337.58
+ },
+ {
+  "word": "engine",
+  "start": 337.58,
+  "end": 337.76
+ },
+ {
+  "word": "makes",
+  "start": 337.76,
+  "end": 337.98
+ },
+ {
+  "word": "more",
+  "start": 337.98,
+  "end": 338.14
+ },
+ {
+  "word": "than",
+  "start": 338.14,
+  "end": 338.28
+ },
+ {
+  "word": "twice",
+  "start": 338.28,
+  "end": 338.46
+ },
+ {
+  "word": "that.",
+  "start": 338.46,
+  "end": 338.76
+ },
+ {
+  "word": "If",
+  "start": 339.14,
+  "end": 339.3
+ },
+ {
+  "word": "you",
+  "start": 339.3,
+  "end": 339.48
+ },
+ {
+  "word": "want",
+  "start": 339.48,
+  "end": 339.64
+ },
+ {
+  "word": "to",
+  "start": 339.64,
+  "end": 339.76
+ },
+ {
+  "word": "see",
+  "start": 339.76,
+  "end": 339.9
+ },
+ {
+  "word": "what",
+  "start": 339.9,
+  "end": 340.06
+ },
+ {
+  "word": "happens",
+  "start": 340.06,
+  "end": 340.42
+ },
+ {
+  "word": "when",
+  "start": 340.42,
+  "end": 340.64
+ },
+ {
+  "word": "an",
+  "start": 340.64,
+  "end": 340.76
+ },
+ {
+  "word": "engine",
+  "start": 340.76,
+  "end": 341.06
+ },
+ {
+  "word": "like",
+  "start": 341.06,
+  "end": 341.3
+ },
+ {
+  "word": "this",
+  "start": 341.3,
+  "end": 341.52
+ },
+ {
+  "word": "suddenly",
+  "start": 341.52,
+  "end": 341.86
+ },
+ {
+  "word": "stops",
+  "start": 341.86,
+  "end": 342.24
+ },
+ {
+  "word": "in",
+  "start": 342.24,
+  "end": 342.48
+ },
+ {
+  "word": "the",
+  "start": 342.48,
+  "end": 342.58
+ },
+ {
+  "word": "middle",
+  "start": 342.58,
+  "end": 342.82
+ },
+ {
+  "word": "of",
+  "start": 342.82,
+  "end": 342.96
+ },
+ {
+  "word": "the",
+  "start": 342.96,
+  "end": 343.08
+ },
+ {
+  "word": "ocean,",
+  "start": 343.08,
+  "end": 343.38
+ },
+ {
+  "word": "watch",
+  "start": 343.74,
+  "end": 344.06
+ },
+ {
+  "word": "this",
+  "start": 344.06,
+  "end": 344.3
+ },
+ {
+  "word": "video",
+  "start": 344.3,
+  "end": 344.58
+ },
+ {
+  "word": "next.",
+  "start": 344.58,
+  "end": 344.92
+ }
+]

@@ -19,3 +19,5 @@ videos/*/voice-raw.wav
 videos/*/voice-cut1.wav
 public/shipguy/*/voice.wav
 __pycache__/
+
+# Ship Guy engines: intermediate audio copy

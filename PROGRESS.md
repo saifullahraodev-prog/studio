@@ -368,3 +368,7 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   8 fact notes) and `narration.txt` (spoken words ONLY, for CapCut TTS). 1,967 words ~11:00 at ~177 wpm.
 - GATE passed 2026-11-12: owner approved script v1. Next: owner records voice (CapCut, narration.txt); I build new
   templates (top-down canal + wedged ship, queue map, dredger cutaway, tug pull, bank-effect diagram) on the 2D pipeline.
+- 2026-11-12: owner's CapCut voice for engines (5:45, clean: no headings read). 57 beats (`beats.txt`), 16 new templates
+  in `engine/shipguy/templates2.tsx` (piston, crank, engine, rpm, ladder, outboard, tug, ropecars, ferry, destroyer,
+  jet2ship, cruise, carrier, emma, direct, versus) + StatX icons. Timeline/mix: `public/shipguy/engines/`.
+  Storyboard: `videos/2026-11-12-ship-engines/storyboard/`. GATE: waiting for owner OK -> 60 s test render.

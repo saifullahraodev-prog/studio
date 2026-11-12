@@ -1,0 +1,614 @@
+{
+ "fps": 30,
+ "frames": 10404,
+ "beats": [
+  {
+   "tpl": "piston",
+   "p": {
+    "music": "tense"
+   },
+   "cap": "[5.5 TONNES]",
+   "from": 0,
+   "dur": 67,
+   "say": "This piston weighs five and a half tonnes."
+  },
+  {
+   "tpl": "crank",
+   "p": {},
+   "cap": "[300 t] CRANKSHAFT",
+   "from": 67,
+   "dur": 94,
+   "say": "The crankshaft it turns weighs three hundred tonnes."
+  },
+  {
+   "tpl": "engine",
+   "p": {
+    "vs": "building"
+   },
+   "cap": "[4 STOREYS] TALL",
+   "from": 161,
+   "dur": 123,
+   "say": "And the engine it belongs to is taller than a four-storey building."
+  },
+  {
+   "tpl": "talk",
+   "p": {
+    "pose": "thinking",
+    "bg": "navy"
+   },
+   "cap": "BUT...",
+   "from": 284,
+   "dur": 56,
+   "say": "But here's the strange part."
+  },
+  {
+   "tpl": "rpm",
+   "p": {},
+   "cap": "",
+   "from": 340,
+   "dur": 213,
+   "say": "At full power, it turns only about a hundred times a minute. Slower than your car engine when it's just sitting at a red light."
+  },
+  {
+   "tpl": "ladder",
+   "p": {
+    "hi": "0"
+   },
+   "cap": "EVERY LEVEL",
+   "from": 553,
+   "dur": 199,
+   "say": "Today we're climbing every level of ship engine, from the little motor on a fishing boat, all the way up to this monster."
+  },
+  {
+   "tpl": "ladder",
+   "p": {
+    "hi": "6",
+    "mystery": "1"
+   },
+   "cap": "NO FUEL?",
+   "from": 752,
+   "dur": 132,
+   "say": "And one of these levels is so powerful, it doesn't burn any fuel at all."
+  },
+  {
+   "tpl": "outboard",
+   "p": {
+    "n": "1",
+    "music": "light"
+   },
+   "cap": "LEVEL 1 \u00b7 OUTBOARD",
+   "from": 884,
+   "dur": 241,
+   "say": "Let's start small. This is an outboard motor: an engine, a gearbox and a propeller in one box, clamped to the back of a boat."
+  },
+  {
+   "tpl": "outboard",
+   "p": {
+    "n": "1",
+    "small": "1",
+    "pose": "confident"
+   },
+   "cap": "A FEW HP",
+   "from": 1125,
+   "dur": 143,
+   "say": "The smallest ones make just a few horsepower. You can carry them with one hand."
+  },
+  {
+   "tpl": "stat",
+   "p": {
+    "icon": "outboard",
+    "num": "600",
+    "unit": "HORSEPOWER",
+    "label": "Mercury_V12_Verado"
+   },
+   "cap": "",
+   "from": 1268,
+   "dur": 167,
+   "say": "But outboards have grown up. Mercury's V12 Verado makes six hundred horsepower from a single motor."
+  },
+  {
+   "tpl": "stat",
+   "p": {
+    "icon": "car",
+    "num": "77000",
+    "unit": "DOLLARS",
+    "label": "weighs_like_a_small_car",
+    "pre": "$"
+   },
+   "cap": "",
+   "from": 1435,
+   "dur": 132,
+   "say": "It weighs about as much as a small car, and costs more than many of them."
+  },
+  {
+   "tpl": "outboard",
+   "p": {
+    "n": "4"
+   },
+   "cap": "[2,400] HP",
+   "from": 1567,
+   "dur": 218,
+   "say": "Fast boats hang two, three, even four of these on the back. Four of them is two thousand four hundred horsepower on one small boat."
+  },
+  {
+   "tpl": "talk",
+   "p": {
+    "pose": "confused",
+    "bg": "teal"
+   },
+   "cap": "TINY",
+   "from": 1785,
+   "dur": 151,
+   "say": "But even six hundred horsepower is tiny compared to what you need to push something heavy."
+  },
+  {
+   "tpl": "tug",
+   "p": {},
+   "cap": "LEVEL 2 \u00b7 TUGBOAT",
+   "from": 1936,
+   "dur": 243,
+   "say": "Remember the tugboats from the harbour? They're small, but they have one job: push and pull ships that weigh a hundred times more than they do."
+  },
+  {
+   "tpl": "tug",
+   "p": {
+    "alone": "1"
+   },
+   "cap": "PSA THOR \u00b7 SINGAPORE",
+   "from": 2179,
+   "dur": 210,
+   "say": "A modern harbour tug like PSA Thor in Singapore has two diesel engines, each making about two and a half thousand kilowatts."
+  },
+  {
+   "tpl": "stat",
+   "p": {
+    "icon": "engine2",
+    "num": "6800",
+    "unit": "HORSEPOWER",
+    "label": "2_\u00d7_2,525_kW",
+    "pre": "\u2248"
+   },
+   "cap": "",
+   "from": 2389,
+   "dur": 147,
+   "say": "Together, that's nearly seven thousand horsepower in a boat you could park in a car park."
+  },
+  {
+   "tpl": "tug",
+   "p": {
+    "view": "top"
+   },
+   "cap": "[360\u00b0] DRIVES",
+   "from": 2536,
+   "dur": 262,
+   "say": "The clever part is underneath. Its propellers sit in drives that can spin all the way around, so the tug can push in any direction, even sideways."
+  },
+  {
+   "tpl": "ropecars",
+   "p": {},
+   "cap": "[80 t] BOLLARD PULL",
+   "from": 2798,
+   "dur": 240,
+   "say": "Its pulling force, called bollard pull, is about eighty tonnes. That's like a rope tied to forty cars being dragged at once."
+  },
+  {
+   "tpl": "ferry",
+   "p": {},
+   "cap": "LEVEL 3 \u00b7 FOUR-STROKE",
+   "from": 3038,
+   "dur": 234,
+   "say": "Next, the engines that run ferries, offshore ships and the power systems of big vessels: medium-speed four-stroke diesels."
+  },
+  {
+   "tpl": "ferry",
+   "p": {
+    "cut": "1"
+   },
+   "cap": "",
+   "from": 3272,
+   "dur": 170,
+   "say": "They work like the engine in a truck, just much bigger, with each cylinder as big as a washing machine."
+  },
+  {
+   "tpl": "stat",
+   "p": {
+    "icon": "record",
+    "num": "2015",
+    "unit": "WORLD_RECORD",
+    "label": "W\u00e4rtsil\u00e4_31_\u00b7_most_fuel-efficient",
+    "raw": "1"
+   },
+   "cap": "",
+   "from": 3442,
+   "dur": 254,
+   "say": "In 2015, one of them, the W\u00e4rtsil\u00e4 31, set a Guinness World Record as the most fuel-efficient four-stroke diesel engine in the world."
+  },
+  {
+   "tpl": "stat",
+   "p": {
+    "icon": "home",
+    "num": "10",
+    "unit": "MEGAWATTS",
+    "label": "about_4_to_10_MW_per_engine",
+    "pre": "4\u2013"
+   },
+   "cap": "",
+   "from": 3696,
+   "dur": 210,
+   "say": "Depending on the model, one engine makes between about four and ten megawatts. That's enough to power thousands of homes."
+  },
+  {
+   "tpl": "destroyer",
+   "p": {
+    "music": "tense"
+   },
+   "cap": "LEVEL 4 \u00b7 JET ENGINE",
+   "from": 3906,
+   "dur": 171,
+   "say": "Now things get fast. Many warships don't use a normal ship engine at all. They use a jet engine."
+  },
+  {
+   "tpl": "jet2ship",
+   "p": {
+    "stage": "1"
+   },
+   "cap": "LM2500",
+   "from": 4077,
+   "dur": 208,
+   "say": "The General Electric LM2500 was developed from the CF6, an engine that powers big airliners."
+  },
+  {
+   "tpl": "jet2ship",
+   "p": {
+    "stage": "2"
+   },
+   "cap": "PLANE \u2192 PROPELLER",
+   "from": 4285,
+   "dur": 105,
+   "say": "Instead of pushing a plane, it spins a propeller shaft."
+  },
+  {
+   "tpl": "stat",
+   "p": {
+    "icon": "turbine",
+    "num": "33600",
+    "unit": "HORSEPOWER",
+    "label": "weighs_under_5_tonnes"
+   },
+   "cap": "",
+   "from": 4390,
+   "dur": 250,
+   "say": "One LM2500 makes about thirty-three thousand horsepower, and it weighs less than five tonnes. That's a huge amount of power for its size."
+  },
+  {
+   "tpl": "destroyer",
+   "p": {
+    "cut": "1"
+   },
+   "cap": "[4] TURBINES",
+   "from": 4640,
+   "dur": 107,
+   "say": "An American Arleigh Burke-class destroyer carries four of them."
+  },
+  {
+   "tpl": "stat",
+   "p": {
+    "icon": "navy",
+    "num": "1000",
+    "unit": "TURBINES",
+    "label": "in_30+_navies_(by_2004)",
+    "plus": "1"
+   },
+   "cap": "",
+   "from": 4747,
+   "dur": 155,
+   "say": "And by 2004, more than thirty navies had used over a thousand of these turbines."
+  },
+  {
+   "tpl": "stat",
+   "p": {
+    "icon": "fuel",
+    "num": "0",
+    "unit": "FUEL_HUNGRY",
+    "label": "the_downside"
+   },
+   "cap": "",
+   "from": 4902,
+   "dur": 74,
+   "say": "The downside? Jet engines drink fuel."
+  },
+  {
+   "tpl": "destroyer",
+   "p": {},
+   "cap": "SPEED [\u2713] \u00b7 CHEAP [\u2717]",
+   "from": 4976,
+   "dur": 94,
+   "say": "They're perfect for speed, terrible for long, cheap trips."
+  },
+  {
+   "tpl": "emma",
+   "p": {},
+   "cap": "EVERY LITRE = [$]",
+   "from": 5070,
+   "dur": 186,
+   "say": "That's why you'll almost never find one in a cargo ship, where every litre of fuel is money."
+  },
+  {
+   "tpl": "cruise",
+   "p": {
+    "music": "light"
+   },
+   "cap": "LEVEL 5 \u00b7 [6] ENGINES",
+   "from": 5256,
+   "dur": 180,
+   "say": "The world's biggest cruise ship, Icon of the Seas, doesn't have one big engine. It has six."
+  },
+  {
+   "tpl": "stat",
+   "p": {
+    "icon": "lng",
+    "num": "67",
+    "unit": "MEGAWATTS",
+    "label": "\u2248_90,000_horsepower",
+    "pre": "\u2248"
+   },
+   "cap": "",
+   "from": 5436,
+   "dur": 230,
+   "say": "They burn liquefied natural gas or diesel, and together they make about sixty-seven megawatts, roughly ninety thousand horsepower."
+  },
+  {
+   "tpl": "cruise",
+   "p": {
+    "cut": "1"
+   },
+   "cap": "ELECTRICITY",
+   "from": 5666,
+   "dur": 143,
+   "say": "But none of them is connected to a propeller. They make electricity, like a power station."
+  },
+  {
+   "tpl": "cruise",
+   "p": {
+    "cut": "1"
+   },
+   "cap": "LIGHTS \u00b7 POOLS \u00b7 [PODS]",
+   "from": 5809,
+   "dur": 229,
+   "say": "That electricity runs the lights, the pools, the restaurants, and giant electric motors in pods under the ship that turn the propellers."
+  },
+  {
+   "tpl": "cruise",
+   "p": {
+    "cut": "1",
+    "hotel": "1"
+   },
+   "cap": "POWER STATION + HOTEL",
+   "from": 6038,
+   "dur": 158,
+   "say": "So the biggest cruise ship in the world is really a floating power station with a hotel on top."
+  },
+  {
+   "tpl": "carrier",
+   "p": {
+    "music": "tense"
+   },
+   "cap": "LEVEL 6 \u00b7 NO FUEL",
+   "from": 6196,
+   "dur": 108,
+   "say": "Remember the level that doesn't burn fuel? This is it."
+  },
+  {
+   "tpl": "carrier",
+   "p": {
+    "cut": "1"
+   },
+   "cap": "[2] NUCLEAR REACTORS",
+   "from": 6304,
+   "dur": 124,
+   "say": "A Nimitz-class aircraft carrier is powered by two nuclear reactors."
+  },
+  {
+   "tpl": "stat",
+   "p": {
+    "icon": "turbine",
+    "num": "280000",
+    "unit": "HORSEPOWER",
+    "label": "steam_turbines_\u2192_4_propellers",
+    "pre": "\u2248"
+   },
+   "cap": "",
+   "from": 6428,
+   "dur": 226,
+   "say": "Each one makes steam that drives turbines, and together they send around two hundred and eighty thousand horsepower to four giant propellers."
+  },
+  {
+   "tpl": "stat",
+   "p": {
+    "icon": "calendar",
+    "num": "25",
+    "unit": "YEARS",
+    "label": "before_new_fuel_(about_20\u201325)",
+    "pre": "20\u2013",
+    "raw2": "1"
+   },
+   "cap": "",
+   "from": 6654,
+   "dur": 240,
+   "say": "And they don't need to refuel every few weeks. The reactors are built to run for about twenty to twenty-five years before they get new fuel."
+  },
+  {
+   "tpl": "carrier",
+   "p": {
+    "cut": "1",
+    "stamp": "NOT_ONE_ENGINE"
+   },
+   "cap": "",
+   "from": 6894,
+   "dur": 197,
+   "say": "That's the most powerful ship propulsion on this list. But it's not one engine. It's two reactors and a whole plant of turbines."
+  },
+  {
+   "tpl": "ladder",
+   "p": {
+    "hi": "7"
+   },
+   "cap": "FINAL LEVEL",
+   "from": 7091,
+   "dur": 159,
+   "say": "Which brings us to the final level: the biggest single engine ever put inside a ship."
+  },
+  {
+   "tpl": "engine",
+   "p": {
+    "music": "investigate"
+   },
+   "cap": "RT-FLEX96C",
+   "from": 7250,
+   "dur": 270,
+   "say": "This is the W\u00e4rtsil\u00e4-Sulzer RT-flex96C. In its fourteen-cylinder version, it's the largest diesel engine of its kind ever built."
+  },
+  {
+   "tpl": "engine",
+   "p": {
+    "vs": "building",
+    "dims": "1"
+   },
+   "cap": "[2,300] TONNES",
+   "from": 7520,
+   "dur": 233,
+   "say": "It's thirteen and a half metres tall, almost twenty-seven metres long, and it weighs more than two thousand three hundred tonnes."
+  },
+  {
+   "tpl": "engine",
+   "p": {
+    "cut": "1"
+   },
+   "cap": "[96 cm] WIDE \u00b7 [2.5 m] STROKE",
+   "from": 7753,
+   "dur": 233,
+   "say": "Each cylinder is ninety-six centimetres wide. Each piston moves two and a half metres up and down. You could stand inside one of the cylinders."
+  },
+  {
+   "tpl": "piston",
+   "p": {
+    "tall": "1"
+   },
+   "cap": "[6 m] TALL",
+   "from": 7986,
+   "dur": 143,
+   "say": "The piston from the start of this video? Together with its rod, it's six metres tall."
+  },
+  {
+   "tpl": "crank",
+   "p": {
+    "cars": "1"
+   },
+   "cap": "[300 t] = 200 CARS",
+   "from": 8129,
+   "dur": 265,
+   "say": "And the crankshaft, the part that turns all that up-and-down motion into spinning, weighs three hundred tonnes. That's as heavy as about two hundred cars."
+  },
+  {
+   "tpl": "stat",
+   "p": {
+    "icon": "engine",
+    "num": "107390",
+    "unit": "HORSEPOWER",
+    "label": "from_ONE_engine"
+   },
+   "cap": "",
+   "from": 8394,
+   "dur": 188,
+   "say": "Together, the fourteen cylinders make about one hundred and seven thousand horsepower, from one engine."
+  },
+  {
+   "tpl": "emma",
+   "p": {},
+   "cap": "EMMA MAERSK \u00b7 [397 m]",
+   "from": 8582,
+   "dur": 151,
+   "say": "This engine was built for the Emma Maersk, a container ship almost four hundred metres long."
+  },
+  {
+   "tpl": "stat",
+   "p": {
+    "icon": "fuel",
+    "num": "14000",
+    "unit": "LITRES_PER_HOUR",
+    "label": "heavy_fuel_oil_at_full_power",
+    "drain": "1"
+   },
+   "cap": "",
+   "from": 8733,
+   "dur": 136,
+   "say": "At full power, it burns about fourteen thousand litres of heavy fuel oil every hour."
+  },
+  {
+   "tpl": "rpm",
+   "p": {
+    "big": "1"
+   },
+   "cap": "[~100] RPM",
+   "from": 8869,
+   "dur": 221,
+   "say": "And remember how slowly it turns? About a hundred revolutions a minute. That's not a weakness. It's the whole point."
+  },
+  {
+   "tpl": "direct",
+   "p": {},
+   "cap": "NO GEARBOX",
+   "from": 9090,
+   "dur": 235,
+   "say": "A giant propeller works best when it turns slowly, so this engine is connected straight to the propeller shaft, with no gearbox at all."
+  },
+  {
+   "tpl": "emma",
+   "p": {
+    "wake": "1"
+   },
+   "cap": "SLOW \u00b7 HUGE \u00b7 SIMPLE",
+   "from": 9325,
+   "dur": 181,
+   "say": "Slow, huge, and simple: that's why engines like this push most of the world's cargo."
+  },
+  {
+   "tpl": "ladder",
+   "p": {
+    "hi": "8",
+    "music": "hopeful"
+   },
+   "cap": "[600 hp] \u2192 [2,300 t]",
+   "from": 9506,
+   "dur": 142,
+   "say": "So from a six-hundred-horsepower outboard to a two-thousand-three-hundred-tonne engine,"
+  },
+  {
+   "tpl": "talk",
+   "p": {
+    "pose": "satisfied",
+    "bg": "teal"
+   },
+   "cap": "THE RIGHT ENGINE FOR THE JOB",
+   "from": 9648,
+   "dur": 224,
+   "say": "every level of ship has the engine that fits its job: speed, pulling power, electricity, endurance, or pure size."
+  },
+  {
+   "tpl": "versus",
+   "p": {},
+   "cap": "",
+   "from": 9872,
+   "dur": 298,
+   "say": "Here's one last comparison. Seawise Giant, the longest ship ever built, had a steam turbine of about fifty thousand horsepower. This one engine makes more than twice that."
+  },
+  {
+   "tpl": "endcard",
+   "p": {},
+   "cap": "",
+   "from": 10170,
+   "dur": 234,
+   "say": "If you want to see what happens when an engine like this suddenly stops in the middle of the ocean, watch this video next."
+  }
+ ]
+}

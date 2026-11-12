@@ -1,0 +1,67 @@
+# One beat per line:  template key=value ... || caption ([brackets] = yellow) || exact narration words
+# --- 0. Hook
+piston music=tense || [5.5 TONNES] || This piston weighs five and a half tonnes.
+crank || [300 t] CRANKSHAFT || The crankshaft it turns weighs three hundred tonnes.
+engine vs=building || [4 STOREYS] TALL || And the engine it belongs to is taller than a four-storey building.
+talk pose=thinking bg=navy || BUT... || But here's the strange part.
+rpm || || At full power, it turns only about a hundred times a minute. Slower than your car engine when it's just sitting at a red light.
+ladder hi=0 || EVERY LEVEL || Today we're climbing every level of ship engine, from the little motor on a fishing boat, all the way up to this monster.
+ladder hi=6 mystery=1 || NO FUEL? || And one of these levels is so powerful, it doesn't burn any fuel at all.
+# --- 1. Outboard
+outboard n=1 music=light || LEVEL 1 · OUTBOARD || Let's start small. This is an outboard motor: an engine, a gearbox and a propeller in one box, clamped to the back of a boat.
+outboard n=1 small=1 pose=confident || A FEW HP || The smallest ones make just a few horsepower. You can carry them with one hand.
+stat icon=outboard num=600 unit=HORSEPOWER label=Mercury_V12_Verado || || But outboards have grown up. Mercury's V12 Verado makes six hundred horsepower from a single motor.
+stat icon=car num=77000 unit=DOLLARS label=weighs_like_a_small_car pre=$ || || It weighs about as much as a small car, and costs more than many of them.
+outboard n=4 || [2,400] HP || Fast boats hang two, three, even four of these on the back. Four of them is two thousand four hundred horsepower on one small boat.
+talk pose=confused bg=teal || TINY || But even six hundred horsepower is tiny compared to what you need to push something heavy.
+# --- 2. Tug
+tug || LEVEL 2 · TUGBOAT || Remember the tugboats from the harbour? They're small, but they have one job: push and pull ships that weigh a hundred times more than they do.
+tug alone=1 || PSA THOR · SINGAPORE || A modern harbour tug like PSA Thor in Singapore has two diesel engines, each making about two and a half thousand kilowatts.
+stat icon=engine2 num=6800 unit=HORSEPOWER label=2_×_2,525_kW pre=≈ || || Together, that's nearly seven thousand horsepower in a boat you could park in a car park.
+tug view=top || [360°] DRIVES || The clever part is underneath. Its propellers sit in drives that can spin all the way around, so the tug can push in any direction, even sideways.
+ropecars || [80 t] BOLLARD PULL || Its pulling force, called bollard pull, is about eighty tonnes. That's like a rope tied to forty cars being dragged at once.
+# --- 3. Four-stroke
+ferry || LEVEL 3 · FOUR-STROKE || Next, the engines that run ferries, offshore ships and the power systems of big vessels: medium-speed four-stroke diesels.
+ferry cut=1 || || They work like the engine in a truck, just much bigger, with each cylinder as big as a washing machine.
+stat icon=record num=2015 unit=WORLD_RECORD label=Wärtsilä_31_·_most_fuel-efficient raw=1 || || In 2015, one of them, the Wärtsilä 31, set a Guinness World Record as the most fuel-efficient four-stroke diesel engine in the world.
+stat icon=home num=10 unit=MEGAWATTS label=about_4_to_10_MW_per_engine pre=4– || || Depending on the model, one engine makes between about four and ten megawatts. That's enough to power thousands of homes.
+# --- 4. Gas turbine
+destroyer music=tense || LEVEL 4 · JET ENGINE || Now things get fast. Many warships don't use a normal ship engine at all. They use a jet engine.
+jet2ship stage=1 || LM2500 || The General Electric LM2500 was developed from the CF6, an engine that powers big airliners.
+jet2ship stage=2 || PLANE → PROPELLER || Instead of pushing a plane, it spins a propeller shaft.
+stat icon=turbine num=33600 unit=HORSEPOWER label=weighs_under_5_tonnes || || One LM2500 makes about thirty-three thousand horsepower, and it weighs less than five tonnes. That's a huge amount of power for its size.
+destroyer cut=1 || [4] TURBINES || An American Arleigh Burke-class destroyer carries four of them.
+stat icon=navy num=1000 unit=TURBINES label=in_30+_navies_(by_2004) plus=1 || || And by 2004, more than thirty navies had used over a thousand of these turbines.
+stat icon=fuel num=0 unit=FUEL_HUNGRY label=the_downside || || The downside? Jet engines drink fuel.
+destroyer || SPEED [✓] · CHEAP [✗] || They're perfect for speed, terrible for long, cheap trips.
+emma || EVERY LITRE = [$] || That's why you'll almost never find one in a cargo ship, where every litre of fuel is money.
+# --- 5. Cruise ship
+cruise music=light || LEVEL 5 · [6] ENGINES || The world's biggest cruise ship, Icon of the Seas, doesn't have one big engine. It has six.
+stat icon=lng num=67 unit=MEGAWATTS label=≈_90,000_horsepower pre=≈ || || They burn liquefied natural gas or diesel, and together they make about sixty-seven megawatts, roughly ninety thousand horsepower.
+cruise cut=1 || ELECTRICITY || But none of them is connected to a propeller. They make electricity, like a power station.
+cruise cut=1 || LIGHTS · POOLS · [PODS] || That electricity runs the lights, the pools, the restaurants, and giant electric motors in pods under the ship that turn the propellers.
+cruise cut=1 hotel=1 || POWER STATION + HOTEL || So the biggest cruise ship in the world is really a floating power station with a hotel on top.
+# --- 6. Nuclear
+carrier music=tense || LEVEL 6 · NO FUEL || Remember the level that doesn't burn fuel? This is it.
+carrier cut=1 || [2] NUCLEAR REACTORS || A Nimitz-class aircraft carrier is powered by two nuclear reactors.
+stat icon=turbine num=280000 unit=HORSEPOWER label=steam_turbines_→_4_propellers pre=≈ || || Each one makes steam that drives turbines, and together they send around two hundred and eighty thousand horsepower to four giant propellers.
+stat icon=calendar num=25 unit=YEARS label=before_new_fuel_(about_20–25) pre=20– raw2=1 || || And they don't need to refuel every few weeks. The reactors are built to run for about twenty to twenty-five years before they get new fuel.
+carrier cut=1 stamp=NOT_ONE_ENGINE || || That's the most powerful ship propulsion on this list. But it's not one engine. It's two reactors and a whole plant of turbines.
+ladder hi=7 || FINAL LEVEL || Which brings us to the final level: the biggest single engine ever put inside a ship.
+# --- 7. RT-flex96C
+engine music=investigate || RT-FLEX96C || This is the Wärtsilä-Sulzer RT-flex96C. In its fourteen-cylinder version, it's the largest diesel engine of its kind ever built.
+engine vs=building dims=1 || [2,300] TONNES || It's thirteen and a half metres tall, almost twenty-seven metres long, and it weighs more than two thousand three hundred tonnes.
+engine cut=1 || [96 cm] WIDE · [2.5 m] STROKE || Each cylinder is ninety-six centimetres wide. Each piston moves two and a half metres up and down. You could stand inside one of the cylinders.
+piston tall=1 || [6 m] TALL || The piston from the start of this video? Together with its rod, it's six metres tall.
+crank cars=1 || [300 t] = 200 CARS || And the crankshaft, the part that turns all that up-and-down motion into spinning, weighs three hundred tonnes. That's as heavy as about two hundred cars.
+stat icon=engine num=107390 unit=HORSEPOWER label=from_ONE_engine || || Together, the fourteen cylinders make about one hundred and seven thousand horsepower, from one engine.
+emma || EMMA MAERSK · [397 m] || This engine was built for the Emma Maersk, a container ship almost four hundred metres long.
+stat icon=fuel num=14000 unit=LITRES_PER_HOUR label=heavy_fuel_oil_at_full_power drain=1 || || At full power, it burns about fourteen thousand litres of heavy fuel oil every hour.
+rpm big=1 || [~100] RPM || And remember how slowly it turns? About a hundred revolutions a minute. That's not a weakness. It's the whole point.
+direct || NO GEARBOX || A giant propeller works best when it turns slowly, so this engine is connected straight to the propeller shaft, with no gearbox at all.
+emma wake=1 || SLOW · HUGE · SIMPLE || Slow, huge, and simple: that's why engines like this push most of the world's cargo.
+# --- 8. End
+ladder hi=8 music=hopeful || [600 hp] → [2,300 t] || So from a six-hundred-horsepower outboard to a two-thousand-three-hundred-tonne engine,
+talk pose=satisfied bg=teal || THE RIGHT ENGINE FOR THE JOB || every level of ship has the engine that fits its job: speed, pulling power, electricity, endurance, or pure size.
+versus || || Here's one last comparison. Seawise Giant, the longest ship ever built, had a steam turbine of about fifty thousand horsepower. This one engine makes more than twice that.
+endcard || || If you want to see what happens when an engine like this suddenly stops in the middle of the ocean, watch this video next.
