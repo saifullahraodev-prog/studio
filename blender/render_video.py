@@ -19,7 +19,7 @@ only = [int(x) for x in args[2].split(",")] if len(args) > 2 else None
 data = json.load(open(os.path.join(S.ROOT, "public", "videos", slug, "scenes.json"), encoding="utf-8"))
 fps = data["fps"]
 cuts = [c for b in data["beats"] for c in b["cuts"]]
-out = os.path.join(S.ROOT, "out", "blender", slug)
+out = os.path.join(S.ROOT, "out", "blender", slug + ("-preview" if mode == "preview" else ""))
 os.makedirs(out, exist_ok=True)
 
 for i, c in enumerate(cuts):

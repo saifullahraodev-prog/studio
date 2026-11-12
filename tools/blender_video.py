@@ -1,6 +1,6 @@
 """Join Blender cut renders into public/videos/<slug>/blender.mp4 (picture for the BlenderShort composition).
 
-usage: python -I tools/blender_video.py <slug>
+usage: python -I tools/blender_video.py <slug> [preview]
 Cuts are taken in scenes.json order from out/blender/<slug>/cut<NN>_####.png. A cut that isn't
 rendered yet becomes black frames of the right length, so captions and sound stay in sync.
 """
@@ -9,10 +9,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 slug = sys.argv[1]
+preview = len(sys.argv) > 2 and sys.argv[2] == "preview"
 data = json.loads((ROOT / "public" / "videos" / slug / "scenes.json").read_text(encoding="utf-8"))
 fps = data["fps"]
 cuts = [c for b in data["beats"] for c in b["cuts"]]
-src = ROOT / "out" / "blender" / slug
+src = ROOT / "out" / "blender" / (slug + ("-preview" if preview else ""))
 tmp = src / "_join"
 tmp.mkdir(parents=True, exist_ok=True)
 for old in tmp.glob("*.png"):
