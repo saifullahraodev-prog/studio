@@ -366,5 +366,5 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
 - `videos/2026-11-12-ever-given/script.md` (10 sections: hook, the ship, the canal, the grounding, the digger, the
   traffic jam, the salvage, why it happened (bank effect + Panama 2023 report), impounded, canal widening; sources +
   8 fact notes) and `narration.txt` (spoken words ONLY, for CapCut TTS). 1,967 words ~11:00 at ~177 wpm.
-- GATE: waiting for owner approval of script v1. Next: owner records voice (CapCut, narration.txt); I build new
+- GATE passed 2026-11-12: owner approved script v1. Next: owner records voice (CapCut, narration.txt); I build new
   templates (top-down canal + wedged ship, queue map, dredger cutaway, tug pull, bank-effect diagram) on the 2D pipeline.

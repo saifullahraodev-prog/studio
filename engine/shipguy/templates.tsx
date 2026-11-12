@@ -4,6 +4,7 @@ import React from "react";
 import { AbsoluteFill, interpolate } from "remotion";
 import { Flames, H, INK, Pose, Sea, Sky, SkyMood, Smoke, Stickman, Tanker, TinyWorker, W, Waterline } from "./art";
 import { Attack, Caption, fontFamily, Push, ramp, Shipyard, Stopping, Svg, Upright } from "./scenes";
+import { STAT_ICONS, StatX, TEMPLATES2 } from "./templates2";
 
 export type P = Record<string, string>;
 export type Tpl = React.FC<{ t: number; d: number; p: P }>;
@@ -858,7 +859,9 @@ export const TEMPLATES: Record<string, Tpl> = {
   stopping: ({ t }) => <Stopping t={t} />,
   sea: SeaT, talk: Talk, card: Card, gates: Gates, names: Names, bridge: Bridge, dock: Dock,
   cheaper: Cheaper, lengthen: Lengthen, morethan: MoreThan, fields: Fields, highway: Highway,
-  cross: Cross, stat: Stat, propeller: Propeller, turning: Turning, war: War, board: Board,
+  cross: Cross, propeller: Propeller, turning: Turning, war: War, board: Board,
   crisis: Crisis, ports: Ports, batillus: Batillus, modern: Modern, beach: Beach, anchor: Anchor,
   prelude: Prelude, endcard: EndCard,
+  ...TEMPLATES2,
+  stat: (props) => (STAT_ICONS.includes(props.p.icon ?? "") ? <StatX {...props} /> : <Stat {...props} />),
 };
