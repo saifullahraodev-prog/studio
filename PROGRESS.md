@@ -327,3 +327,11 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   framing/character size/run stutter to fix. Owner: "Yes, switch to Blender".
 - Plan: fix run stutter + foot sliding, body smoothing + cloth folds, bridge Blender frames into Remotion for
   captions/sound, then rebuild Trench Trap lines 1-6 (already approved in three.js) shot by shot, stills first.
+
+## 2026-11-12: new project for the owner's live channel "The Ship Guy" (Option A, 2D)
+- Owner picked Option A: their 2D stick-figure images + code-animated graphics (counters, maps, size bars),
+  captions, SFX, music; 16:9 long-form. Separate from the 3D/Blender "Rules written in disaster" work.
+- First video: "The Biggest Ship Ever Built Was Bombed — Then Came Back" (Seawise Giant), ~7:00.
+  `videos/2026-11-12-seawise-giant/script.md` (draft v1, sources + fact notes) and `shots.md` (16 images for the owner).
+- GATE passed 2026-11-12: owner approved script v1. Next: owner makes images + records voice.wav; I build the 2D
+  composition + graphics, storyboard stills, 60 s test render (only after owner OK).
