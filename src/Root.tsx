@@ -18,6 +18,7 @@ import { ToonCubeTest } from "./compositions/ToonCubeTest";
 import { WorldTest, WorldTestProps } from "./compositions/WorldTest";
 import { SceneId, ShipGuyScene } from "../engine/shipguy/scenes";
 import { calcShipGuy, ShipGuyBoard, ShipGuyProps, ShipGuyVideo } from "../engine/shipguy/Video";
+import { ShipGuyThumb } from "../engine/shipguy/Thumb";
 
 // Vertical compositions take a `res` prop: 720 for previews (default), 1080 for finals.
 // Final render: --props=engine/presets/res-1080.json
@@ -173,6 +174,7 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{ slug: "seawise" } as ShipGuyProps}
         calculateMetadata={calcShipGuy}
       />
+      <Composition id="ShipGuyThumb" component={ShipGuyThumb} durationInFrames={1} fps={30} width={1920} height={1080} defaultProps={{ v: "A" }} />
       <Composition
         id="ShipGuyBoard"
         component={ShipGuyBoard}
