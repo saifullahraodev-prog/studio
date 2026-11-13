@@ -629,6 +629,44 @@ export const Side: Tpl = ({ t, d, p, w }) => {
 };
 
 // ================================================================== GUY (host shots)
+// Owner 2026-11-13: "too static". While he talks, his gesture changes at every phrase of the voice (a pause or ~6 words),
+// his head nods with the words, he shifts his weight, and the camera cuts in closer on every other phrase.
+// Free hands never rest on the vest front.
+const GEST: { pose: Pose; hl?: Hand; hr?: Hand }[] = [
+  { pose: { ...IDLE, armL: [38, 40], armR: [38, 40] }, hl: "open", hr: "open" },
+  { pose: { ...IDLE, armL: [16, 10], armR: [62, 50], hipX: 14, tilt: 4 }, hr: "open" },
+  { pose: { ...POSES.fingerUp, hipX: -10 }, hr: "point" },
+  { pose: { ...IDLE, armL: [60, -90], armR: [52, 64], tilt: -4 }, hr: "open" },
+  { pose: { ...IDLE, armL: [52, -62], armR: [52, -62], tilt: 6 }, hl: "open", hr: "open" },
+  { pose: { ...IDLE, armL: [88, 0], armR: [16, 10], hipX: -14, tilt: -5 }, hl: "point" },
+];
+const TALKY = new Set(["talk", "worried", "shrug", "fingerup", "hold", "wag", "count", "think", "watch"]);
+/** start frames of spoken phrases: a new phrase after a pause (> 6 frames) or every 6 words */
+export const phraseStarts = (w?: number[][]) => {
+  const s: number[] = [];
+  let since = 0;
+  (w ?? []).forEach(([a], i) => {
+    if (i === 0 || a - w![i - 1][1] > 6 || since >= 6) { s.push(a); since = 0; }
+    since++;
+  });
+  return s;
+};
+const talkingOver = (a: string, t: number, w: number[][] | undefined, seed: number): { over?: ActOut; phrase: number } => {
+  const starts = phraseStarts(w);
+  let phrase = -1;
+  starts.forEach((s, i) => { if (t >= s) phrase = i; });
+  if (!TALKY.has(a) || starts.length < 2) return { phrase };
+  const base = act(a, 30, w).pose ?? IDLE; // the act's settled signature pose (not its start)
+  const keys: [number, Pose, number?][] = [[0, base]];
+  starts.forEach((s, i) => { if (i > 0) keys.push([s - 4, GEST[(i + seed) % GEST.length].pose, 6]); });
+  const g = phrase > 0 ? GEST[(phrase + seed) % GEST.length] : undefined;
+  const talk = talkFrom(t, w);
+  let pose = breathe(track(t, keys), t, seed * 7);
+  pose = { ...pose, tilt: pose.tilt + talk * 3 * Math.sin(t * 0.4), hipY: pose.hipY + talk * 2 };
+  const own = act(a, t, w);
+  return { phrase, over: { pose, handL: g?.hl ?? own.handL ?? "mitt", handR: g?.hr ?? own.handR ?? "mitt" } };
+};
+
 export const GuyT: Tpl = ({ t, d, p, w }) => {
   const a = p.act ?? "talk";
   const bgk = p.bg ?? "paper";
@@ -681,12 +719,20 @@ export const GuyT: Tpl = ({ t, d, p, w }) => {
     gx = 1450; gy = 930; gs = 0.6;
   }
   const label = p.label ? txt(p.label) : "";
+  const seed = (a.length + (p.label ?? "").length) % GEST.length;
+  const { over, phrase } = talkingOver(a, t, w, seed);
+  // camera: cut in to a closer (upper-body) framing on every other phrase; not where a board/phone/team must stay in view
+  const canCut = bgk === "paper" || bgk === "canalbank" || bgk === "factory";
+  const z = canCut && phrase % 2 === 1 ? 1.38 : 1;
+  const cx = gx, cy = gy - 430 * gs;
   return (
     <AbsoluteFill>
       <Svg>
-        {bg}
-        {extra}
-        <Actor a={a} t={t} x={gx} y={gy} s={gs} flip={flip} w={w} id="host" />
+        <g transform={z !== 1 ? `translate(${cx} ${cy}) scale(${z}) translate(${-cx} ${-cy})` : undefined}>
+          {bg}
+          {extra}
+          <Actor a={a} t={t} x={gx} y={gy} s={gs} flip={flip} w={w} id="host" over={over} />
+        </g>
         {label && <T3 x={bgk === "phone" ? 1300 : 1450} y={460} size={110} color="#ffd23f" s={pop(t, 6)}>{label}</T3>}
       </Svg>
     </AbsoluteFill>

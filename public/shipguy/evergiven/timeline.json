@@ -129,8 +129,7 @@
   {
    "tpl": "map",
    "p": {
-    "mode": "queue",
-    "corner": "worried"
+    "mode": "queue"
    },
    "cap": "",
    "from": 270,
@@ -226,8 +225,7 @@
   {
    "tpl": "money",
    "p": {
-    "mode": "day",
-    "corner": "shock"
+    "mode": "day"
    },
    "cap": "[$9.6 BILLION] A DAY",
    "from": 524,
@@ -316,8 +314,8 @@
    },
    "cap": "ONE DIGGER",
    "from": 702,
-   "dur": 230,
-   "say": "And the first machine that showed up to dig it out was one small excavator. Next to a ship four hundred metres long.",
+   "dur": 144,
+   "say": "And the first machine that showed up to dig it out was one small excavator.",
    "words": [
     [
      4,
@@ -378,38 +376,51 @@
     [
      109,
      133
+    ]
+   ]
+  },
+  {
+   "tpl": "canal",
+   "p": {
+    "state": "wedged",
+    "cam": "close"
+   },
+   "cap": "VS [400 M] OF SHIP",
+   "from": 846,
+   "dur": 86,
+   "say": "Next to a ship four hundred metres long.",
+   "words": [
+    [
+     5,
+     19
     ],
     [
-     149,
-     163
+     19,
+     29
     ],
     [
-     163,
-     173
+     29,
+     34
     ],
     [
-     173,
-     178
+     34,
+     40
     ],
     [
-     178,
-     184
+     40,
+     48
     ],
     [
-     184,
-     192
+     48,
+     57
     ],
     [
-     192,
-     201
+     57,
+     66
     ],
     [
-     201,
-     210
-    ],
-    [
-     210,
-     224
+     66,
+     80
     ]
    ]
   },
@@ -446,13 +457,12 @@
    "tpl": "guy",
    "p": {
     "act": "worried",
-    "bg": "paper",
-    "emote": "sweat"
+    "bg": "paper"
    },
    "cap": "REAL PROBLEM",
    "from": 993,
-   "dur": 245,
-   "say": "But behind the jokes was a real problem. Nobody knew how to move a ship that heavy out of a sandbank that tight. And some experts said it could take weeks.",
+   "dur": 66,
+   "say": "But behind the jokes was a real problem.",
    "words": [
     [
      4,
@@ -485,112 +495,140 @@
     [
      44,
      56
+    ]
+   ]
+  },
+  {
+   "tpl": "side",
+   "p": {
+    "scene": "push",
+    "guy": "push"
+   },
+   "cap": "TOO HEAVY \u00b7 TOO TIGHT",
+   "from": 1059,
+   "dur": 114,
+   "say": "Nobody knew how to move a ship that heavy out of a sandbank that tight.",
+   "words": [
+    [
+     4,
+     12
     ],
     [
-     70,
-     78
+     12,
+     20
     ],
     [
-     78,
-     86
+     20,
+     25
     ],
     [
-     86,
-     91
+     25,
+     29
     ],
     [
-     91,
+     29,
+     35
+    ],
+    [
+     35,
+     38
+    ],
+    [
+     38,
+     44
+    ],
+    [
+     44,
+     52
+    ],
+    [
+     52,
+     62
+    ],
+    [
+     62,
+     68
+    ],
+    [
+     68,
+     73
+    ],
+    [
+     73,
+     76
+    ],
+    [
+     76,
+     89
+    ],
+    [
+     89,
      95
     ],
     [
      95,
-     101
-    ],
-    [
-     101,
      104
-    ],
-    [
-     104,
-     110
-    ],
-    [
-     110,
-     118
-    ],
-    [
-     118,
-     128
-    ],
-    [
-     128,
-     134
-    ],
-    [
-     134,
-     139
-    ],
-    [
-     139,
-     142
-    ],
-    [
-     142,
-     155
-    ],
-    [
-     155,
-     161
-    ],
-    [
-     161,
-     170
-    ],
-    [
-     185,
-     189
-    ],
-    [
-     189,
-     194
-    ],
-    [
-     194,
-     202
-    ],
-    [
-     202,
-     211
-    ],
-    [
-     211,
-     215
-    ],
-    [
-     215,
-     218
-    ],
-    [
-     218,
-     224
-    ],
-    [
-     224,
-     233
     ]
    ]
   },
   {
    "tpl": "guy",
    "p": {
-    "act": "think",
+    "act": "watch",
     "bg": "paper",
+    "label": "WEEKS?"
+   },
+   "cap": "",
+   "from": 1173,
+   "dur": 65,
+   "say": "And some experts said it could take weeks.",
+   "words": [
+    [
+     5,
+     9
+    ],
+    [
+     9,
+     14
+    ],
+    [
+     14,
+     22
+    ],
+    [
+     22,
+     31
+    ],
+    [
+     31,
+     35
+    ],
+    [
+     35,
+     38
+    ],
+    [
+     38,
+     44
+    ],
+    [
+     44,
+     53
+    ]
+   ]
+  },
+  {
+   "tpl": "canal",
+   "p": {
+    "state": "swing",
+    "cam": "close",
+    "replay": "1",
     "music": "investigate"
    },
-   "cap": "HOW?",
+   "cap": "HOW DID IT GET STUCK?",
    "from": 1238,
-   "dur": 240,
-   "say": "So how did one ship get stuck so badly? How did they finally get it out? And why was it then held prisoner for more than three months?",
+   "dur": 84,
+   "say": "So how did one ship get stuck so badly?",
    "words": [
     [
      5,
@@ -627,95 +665,122 @@
     [
      57,
      66
-    ],
-    [
-     88,
-     96
-    ],
-    [
-     96,
-     100
-    ],
-    [
-     100,
-     105
-    ],
-    [
-     105,
-     115
-    ],
-    [
-     115,
-     122
-    ],
-    [
-     122,
-     125
-    ],
-    [
-     125,
-     132
-    ],
-    [
-     148,
-     152
-    ],
-    [
-     152,
-     159
-    ],
-    [
-     159,
-     165
-    ],
-    [
-     165,
-     169
-    ],
-    [
-     169,
-     174
-    ],
-    [
-     174,
-     180
-    ],
-    [
-     180,
-     191
-    ],
-    [
-     191,
-     199
-    ],
-    [
-     199,
-     206
-    ],
-    [
-     206,
-     210
-    ],
-    [
-     210,
-     218
-    ],
-    [
-     218,
-     228
     ]
    ]
   },
   {
-   "tpl": "side",
+   "tpl": "canal",
    "p": {
-    "scene": "yard",
-    "guy": "look"
+    "state": "free",
+    "cam": "wide",
+    "tugs": "13"
    },
-   "cap": "[2018] \u00b7 JAPAN",
+   "cap": "HOW DID THEY FREE IT?",
+   "from": 1322,
+   "dur": 60,
+   "say": "How did they finally get it out?",
+   "words": [
+    [
+     4,
+     12
+    ],
+    [
+     12,
+     16
+    ],
+    [
+     16,
+     21
+    ],
+    [
+     21,
+     31
+    ],
+    [
+     31,
+     38
+    ],
+    [
+     38,
+     41
+    ],
+    [
+     41,
+     48
+    ]
+   ]
+  },
+  {
+   "tpl": "lake",
+   "p": {
+    "stamp": "1"
+   },
+   "cap": "WHY HELD FOR [3 MONTHS]?",
+   "from": 1382,
+   "dur": 96,
+   "say": "And why was it then held prisoner for more than three months?",
+   "words": [
+    [
+     4,
+     8
+    ],
+    [
+     8,
+     15
+    ],
+    [
+     15,
+     21
+    ],
+    [
+     21,
+     25
+    ],
+    [
+     25,
+     30
+    ],
+    [
+     30,
+     36
+    ],
+    [
+     36,
+     47
+    ],
+    [
+     47,
+     55
+    ],
+    [
+     55,
+     62
+    ],
+    [
+     62,
+     66
+    ],
+    [
+     66,
+     74
+    ],
+    [
+     74,
+     84
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "talk",
+    "bg": "paper",
+    "label": "EVER_GIVEN"
+   },
+   "cap": "",
    "from": 1478,
-   "dur": 236,
-   "say": "The ship is called Ever Given. It was built in Japan by Imabari Shipbuilding and finished in twenty eighteen.",
+   "dur": 79,
+   "say": "The ship is called Ever Given.",
    "words": [
     [
      5,
@@ -740,58 +805,71 @@
     [
      48,
      60
+    ]
+   ]
+  },
+  {
+   "tpl": "side",
+   "p": {
+    "scene": "yard",
+    "guy": "look"
+   },
+   "cap": "[2018] \u00b7 JAPAN",
+   "from": 1557,
+   "dur": 157,
+   "say": "It was built in Japan by Imabari Shipbuilding and finished in twenty eighteen.",
+   "words": [
+    [
+     5,
+     12
     ],
     [
-     84,
+     12,
+     17
+    ],
+    [
+     17,
+     23
+    ],
+    [
+     23,
+     28
+    ],
+    [
+     28,
+     38
+    ],
+    [
+     38,
+     55
+    ],
+    [
+     55,
+     73
+    ],
+    [
+     73,
      91
     ],
     [
      91,
-     96
+     108
     ],
     [
-     96,
-     102
-    ],
-    [
-     102,
-     107
-    ],
-    [
-     107,
+     108,
      117
     ],
     [
      117,
-     134
+     124
     ],
     [
-     134,
-     152
+     124,
+     133
     ],
     [
-     152,
-     170
-    ],
-    [
-     170,
-     187
-    ],
-    [
-     187,
-     196
-    ],
-    [
-     196,
-     203
-    ],
-    [
-     203,
-     212
-    ],
-    [
-     212,
-     221
+     133,
+     142
     ]
    ]
   },
@@ -1073,9 +1151,7 @@
   },
   {
    "tpl": "tower",
-   "p": {
-    "corner": "amazed"
-   },
+   "p": {},
    "cap": "TALLER THAN THE EMPIRE STATE",
    "from": 2283,
    "dur": 136,
@@ -1235,8 +1311,7 @@
   {
    "tpl": "boxline",
    "p": {
-    "step": "1",
-    "corner": "point"
+    "step": "1"
    },
    "cap": "[120 KM] OF BOXES",
    "from": 2618,
@@ -1360,8 +1435,7 @@
   {
    "tpl": "boxline",
    "p": {
-    "step": "2",
-    "corner": "amazed"
+    "step": "2"
    },
    "cap": "MORE THAN HALF THE CANAL",
    "from": 2882,
@@ -1580,8 +1654,7 @@
   {
    "tpl": "map",
    "p": {
-    "mode": "voyage",
-    "corner": "wave"
+    "mode": "voyage"
    },
    "cap": "MALAYSIA \u2192 ROTTERDAM",
    "from": 3292,
@@ -1733,8 +1806,7 @@
   {
    "tpl": "map",
    "p": {
-    "mode": "suez",
-    "corner": "point"
+    "mode": "suez"
    },
    "cap": "[1869]",
    "from": 3610,
@@ -1822,8 +1894,7 @@
   {
    "tpl": "map",
    "p": {
-    "mode": "cape",
-    "corner": "think"
+    "mode": "cape"
    },
    "cap": "+ UP TO [2 WEEKS]",
    "from": 3807,
@@ -1963,8 +2034,7 @@
   {
    "tpl": "money",
    "p": {
-    "mode": "pct",
-    "corner": "point"
+    "mode": "pct"
    },
    "cap": "[~12%] OF SEA TRADE",
    "from": 4065,
@@ -2368,8 +2438,7 @@
   {
    "tpl": "dial",
    "p": {
-    "mode": "limit",
-    "corner": "point"
+    "mode": "limit"
    },
    "cap": "SPEED LIMIT",
    "from": 4941,
@@ -2519,8 +2588,8 @@
    },
    "cap": "TUESDAY \u00b7 23 MARCH",
    "from": 5258,
-   "dur": 307,
-   "say": "It's early on Tuesday, the twenty-third of March. Ever Given enters the canal from the south, near the city of Suez. It's part of the northbound convoy.",
+   "dur": 122,
+   "say": "It's early on Tuesday, the twenty-third of March.",
    "words": [
     [
      4,
@@ -2553,82 +2622,95 @@
     [
      93,
      104
+    ]
+   ]
+  },
+  {
+   "tpl": "canal",
+   "p": {
+    "state": "convoy",
+    "cam": "mid"
+   },
+   "cap": "NORTHBOUND CONVOY",
+   "from": 5380,
+   "dur": 185,
+   "say": "Ever Given enters the canal from the south, near the city of Suez. It's part of the northbound convoy.",
+   "words": [
+    [
+     5,
+     12
     ],
     [
-     127,
-     134
+     12,
+     22
     ],
     [
-     134,
-     144
+     22,
+     33
     ],
     [
-     144,
-     155
+     33,
+     40
     ],
     [
-     155,
-     162
+     40,
+     50
     ],
     [
-     162,
-     172
+     50,
+     56
     ],
     [
-     172,
-     178
+     56,
+     61
     ],
     [
-     178,
-     183
+     61,
+     70
     ],
     [
-     183,
-     192
+     86,
+     91
     ],
     [
-     208,
-     213
+     91,
+     95
     ],
     [
-     213,
-     217
+     95,
+     102
     ],
     [
-     217,
-     224
+     102,
+     106
     ],
     [
-     224,
-     228
+     106,
+     121
     ],
     [
-     228,
-     243
+     131,
+     136
     ],
     [
-     253,
-     258
+     136,
+     141
     ],
     [
-     258,
-     263
+     141,
+     145
     ],
     [
-     263,
-     267
+     145,
+     148
     ],
     [
-     267,
-     270
+     148,
+     161
     ],
     [
-     270,
-     283
-    ],
-    [
-     283,
-     299
+     161,
+     177
     ]
    ]
   },
@@ -2692,8 +2774,7 @@
   {
    "tpl": "dial",
    "p": {
-    "mode": "wind",
-    "corner": "hat"
+    "mode": "wind"
    },
    "cap": "[40+ KNOTS]",
    "from": 5671,
@@ -3018,8 +3099,7 @@
   {
    "tpl": "dial",
    "p": {
-    "mode": "rudder",
-    "corner": "worried"
+    "mode": "rudder"
    },
    "cap": "HARD TO PORT",
    "from": 6346,
@@ -3148,8 +3228,7 @@
   {
    "tpl": "dial",
    "p": {
-    "mode": "speed",
-    "corner": "shock"
+    "mode": "speed"
    },
    "cap": "[13 KNOTS] \u00b7 LIMIT UNDER 9",
    "from": 6568,
@@ -3656,8 +3735,7 @@
    "p": {
     "state": "wedged",
     "cam": "far",
-    "km": "151",
-    "corner": "shock"
+    "km": "151"
    },
    "cap": "KM [151] \u00b7 CLOSED",
    "from": 7617,
@@ -4388,8 +4466,7 @@
    "p": {
     "mode": "queue",
     "grow": "1",
-    "music": "tense",
-    "corner": "worried"
+    "music": "tense"
    },
    "cap": "",
    "from": 9105,
@@ -4555,8 +4632,7 @@
   {
    "tpl": "money",
    "p": {
-    "mode": "split",
-    "corner": "clipboard"
+    "mode": "split"
    },
    "cap": "LLOYD'S LIST",
    "from": 9465,
@@ -4688,8 +4764,7 @@
   {
    "tpl": "money",
    "p": {
-    "mode": "day",
-    "corner": "shock"
+    "mode": "day"
    },
    "cap": "[$9.6 BILLION] A DAY",
    "from": 9762,
@@ -4741,8 +4816,7 @@
   {
    "tpl": "map",
    "p": {
-    "mode": "turnback",
-    "corner": "wave"
+    "mode": "turnback"
    },
    "cap": "THE LONG WAY",
    "from": 9869,
@@ -5072,8 +5146,8 @@
    },
    "cap": "SMIT SALVAGE",
    "from": 10563,
-   "dur": 282,
-   "say": "The ship's owners hired the experts: Smit Salvage, part of the Dutch company Boskalis. Salvage teams like this are the people you call when a ship is in serious trouble.",
+   "dur": 159,
+   "say": "The ship's owners hired the experts: Smit Salvage, part of the Dutch company Boskalis.",
    "words": [
     [
      5,
@@ -5130,70 +5204,84 @@
     [
      133,
      149
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "talk",
+    "bg": "paper",
+    "label": "SHIP_IN_TROUBLE?"
+   },
+   "cap": "",
+   "from": 10722,
+   "dur": 123,
+   "say": "Salvage teams like this are the people you call when a ship is in serious trouble.",
+   "words": [
+    [
+     4,
+     17
     ],
     [
-     163,
-     176
+     17,
+     25
     ],
     [
-     176,
-     184
+     25,
+     34
     ],
     [
-     184,
-     193
+     34,
+     41
     ],
     [
-     193,
-     200
+     41,
+     44
     ],
     [
-     200,
-     203
+     44,
+     47
     ],
     [
-     203,
-     206
+     47,
+     54
     ],
     [
-     206,
-     213
+     54,
+     60
     ],
     [
-     213,
-     219
+     60,
+     68
     ],
     [
-     219,
-     227
+     68,
+     74
     ],
     [
-     227,
-     233
+     74,
+     77
     ],
     [
-     233,
-     236
+     77,
+     84
     ],
     [
-     236,
-     243
+     84,
+     89
     ],
     [
-     243,
-     248
+     89,
+     93
     ],
     [
-     248,
-     252
+     93,
+     101
     ],
     [
-     252,
-     260
-    ],
-    [
-     260,
-     272
+     101,
+     113
     ]
    ]
   },
@@ -5333,8 +5421,7 @@
   {
    "tpl": "dredger",
    "p": {
-    "step": "2",
-    "corner": "amazed"
+    "step": "2"
    },
    "cap": "[2,000 M\u00b3] AN HOUR",
    "from": 11187,
@@ -5478,9 +5565,7 @@
   },
   {
    "tpl": "pools",
-   "p": {
-    "corner": "amazed"
-   },
+   "p": {},
    "cap": "[30,000 M\u00b3] OF SAND",
    "from": 11473,
    "dur": 218,
@@ -5771,15 +5856,16 @@
    ]
   },
   {
-   "tpl": "side",
+   "tpl": "guy",
    "p": {
-    "scene": "crane",
-    "guy": "worried"
+    "act": "worried",
+    "bg": "paper",
+    "label": "PLAN_B"
    },
-   "cap": "PLAN B: UNLOAD",
+   "cap": "",
    "from": 12188,
-   "dur": 337,
-   "say": "And there was a backup plan nobody wanted. If nothing worked, they'd have to lift off containers to make the ship lighter. But that meant bringing giant cranes to a sandy canal bank, and it could have taken weeks.",
+   "dur": 66,
+   "say": "And there was a backup plan nobody wanted.",
    "words": [
     [
      4,
@@ -5812,138 +5898,149 @@
     [
      48,
      62
+    ]
+   ]
+  },
+  {
+   "tpl": "side",
+   "p": {
+    "scene": "crane",
+    "guy": "worried"
+   },
+   "cap": "UNLOAD THE BOXES?",
+   "from": 12254,
+   "dur": 271,
+   "say": "If nothing worked, they'd have to lift off containers to make the ship lighter. But that meant bringing giant cranes to a sandy canal bank, and it could have taken weeks.",
+   "words": [
+    [
+     5,
+     9
     ],
     [
-     71,
-     75
+     9,
+     16
     ],
     [
-     75,
-     82
+     16,
+     27
     ],
     [
-     82,
-     93
+     38,
+     44
     ],
     [
-     104,
-     110
+     44,
+     47
     ],
     [
-     110,
-     113
+     47,
+     51
     ],
     [
-     113,
-     117
+     51,
+     57
     ],
     [
-     117,
-     123
+     57,
+     65
     ],
     [
-     123,
-     131
+     65,
+     78
     ],
     [
-     131,
-     144
+     78,
+     84
     ],
     [
-     144,
-     150
+     84,
+     90
     ],
     [
-     150,
-     156
+     90,
+     95
     ],
     [
-     156,
-     161
+     95,
+     102
     ],
     [
-     161,
-     168
+     102,
+     111
     ],
     [
-     168,
+     126,
+     133
+    ],
+    [
+     133,
+     140
+    ],
+    [
+     140,
+     145
+    ],
+    [
+     145,
+     155
+    ],
+    [
+     155,
+     167
+    ],
+    [
+     167,
      177
     ],
     [
-     192,
-     199
+     177,
+     183
     ],
     [
-     199,
-     206
+     183,
+     188
     ],
     [
-     206,
-     211
+     188,
+     195
     ],
     [
-     211,
-     221
+     195,
+     205
     ],
     [
-     221,
+     205,
+     213
+    ],
+    [
+     222,
+     227
+    ],
+    [
+     227,
+     230
+    ],
+    [
+     230,
      233
     ],
     [
      233,
+     237
+    ],
+    [
+     237,
      243
     ],
     [
      243,
-     249
-    ],
-    [
-     249,
-     254
-    ],
-    [
-     254,
-     261
-    ],
-    [
-     261,
-     271
-    ],
-    [
-     271,
-     279
-    ],
-    [
-     288,
-     293
-    ],
-    [
-     293,
-     296
-    ],
-    [
-     296,
-     299
-    ],
-    [
-     299,
-     303
-    ],
-    [
-     303,
-     309
-    ],
-    [
-     309,
-     318
+     252
     ]
    ]
   },
   {
    "tpl": "moon",
-   "p": {
-    "corner": "point"
-   },
+   "p": {},
    "cap": "3. TIDE \u00b7 SUPERMOON",
    "from": 12525,
    "dur": 220,
@@ -6397,8 +6494,7 @@
     "state": "free",
     "cam": "wide",
     "tugs": "13",
-    "music": "hopeful",
-    "corner": "cheer"
+    "music": "hopeful"
    },
    "cap": "[15:05] \u00b7 FREE!",
    "from": 13470,
@@ -6722,8 +6818,7 @@
   {
    "tpl": "bankfx",
    "p": {
-    "step": "1",
-    "corner": "point"
+    "step": "1"
    },
    "cap": "2. BANK EFFECT",
    "from": 14174,
@@ -6855,8 +6950,7 @@
   {
    "tpl": "bankfx",
    "p": {
-    "step": "2",
-    "corner": "think"
+    "step": "2"
    },
    "cap": "FAST WATER = LOW PRESSURE",
    "from": 14442,
@@ -7090,8 +7184,7 @@
   {
    "tpl": "report",
    "p": {
-    "step": "1",
-    "corner": "clipboard"
+    "step": "1"
    },
    "cap": "3. PEOPLE \u00b7 [2023] REPORT",
    "from": 14923,
@@ -7163,8 +7256,7 @@
   {
    "tpl": "report",
    "p": {
-    "step": "2",
-    "corner": "clipboard"
+    "step": "2"
    },
    "cap": "RISK IGNORED",
    "from": 15130,
@@ -7228,8 +7320,7 @@
   {
    "tpl": "report",
    "p": {
-    "step": "3",
-    "corner": "clipboard"
+    "step": "3"
    },
    "cap": "TOO FAST",
    "from": 15265,
@@ -7281,8 +7372,7 @@
   {
    "tpl": "report",
    "p": {
-    "step": "4",
-    "corner": "clipboard"
+    "step": "4"
    },
    "cap": "NO TUG ESCORT",
    "from": 15357,
@@ -7563,8 +7653,8 @@
    },
    "cap": "WHO'S TO BLAME?",
    "from": 15948,
-   "dur": 252,
-   "say": "The canal authority and the ship's insurers argued for months about who was to blame. And that argument turned into the next part of the story.",
+   "dur": 153,
+   "say": "The canal authority and the ship's insurers argued for months about who was to blame.",
    "words": [
     [
      5,
@@ -7625,50 +7715,63 @@
     [
      136,
      145
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "hold",
+    "bg": "paper"
+   },
+   "cap": "",
+   "from": 16101,
+   "dur": 99,
+   "say": "And that argument turned into the next part of the story.",
+   "words": [
+    [
+     5,
+     12
     ],
     [
-     158,
-     165
+     12,
+     17
     ],
     [
-     165,
-     170
+     17,
+     27
     ],
     [
-     170,
-     180
+     27,
+     35
     ],
     [
-     180,
-     188
+     35,
+     43
     ],
     [
-     188,
-     196
+     43,
+     47
     ],
     [
-     196,
-     200
+     47,
+     53
     ],
     [
-     200,
-     206
+     53,
+     61
     ],
     [
-     206,
-     214
+     61,
+     64
     ],
     [
-     214,
-     217
+     64,
+     67
     ],
     [
-     217,
-     220
-    ],
-    [
-     220,
-     229
+     67,
+     76
     ]
    ]
   },
@@ -7971,8 +8074,7 @@
    "tpl": "money",
    "p": {
     "mode": "invoice",
-    "step": "2",
-    "corner": "shrug"
+    "step": "2"
    },
    "cap": "[$550 MILLION]",
    "from": 16817,
@@ -8386,8 +8488,7 @@
   {
    "tpl": "map",
    "p": {
-    "mode": "rotterdam",
-    "corner": "wave"
+    "mode": "rotterdam"
    },
    "cap": "[29 JULY] \u00b7 ROTTERDAM",
    "from": 17735,
@@ -8604,8 +8705,7 @@
    "p": {
     "state": "empty",
     "cam": "mid",
-    "widen": "1",
-    "corner": "measure"
+    "widen": "1"
    },
    "cap": "+[40 M] WIDER",
    "from": 18207,
@@ -8695,8 +8795,7 @@
    "p": {
     "state": "empty",
     "cam": "mid",
-    "newlane": "1",
-    "corner": "drive"
+    "newlane": "1"
    },
    "cap": "NEW [10 KM] LANE",
    "from": 18408,
@@ -9101,15 +9200,16 @@
    ]
   },
   {
-   "tpl": "guy",
+   "tpl": "canal",
    "p": {
-    "act": "relax",
-    "bg": "canalbank"
+    "state": "moving",
+    "cam": "far",
+    "dusk": "1"
    },
-   "cap": "",
+   "cap": "6 DAYS",
    "from": 19263,
-   "dur": 222,
-   "say": "And for six days, it showed the whole world just how much depends on a shortcut most people had never thought about.",
+   "dur": 101,
+   "say": "And for six days, it showed the whole world",
    "words": [
     [
      5,
@@ -9146,58 +9246,71 @@
     [
      95,
      106
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "relax",
+    "bg": "canalbank"
+   },
+   "cap": "",
+   "from": 19364,
+   "dur": 121,
+   "say": "just how much depends on a shortcut most people had never thought about.",
+   "words": [
+    [
+     5,
+     15
     ],
     [
-     106,
-     116
+     15,
+     21
     ],
     [
-     116,
-     122
+     21,
+     27
     ],
     [
-     122,
-     128
+     27,
+     35
     ],
     [
-     128,
-     136
+     35,
+     44
     ],
     [
-     136,
-     145
+     44,
+     47
     ],
     [
-     145,
-     148
+     47,
+     58
     ],
     [
-     148,
-     159
+     58,
+     68
     ],
     [
-     159,
-     169
+     68,
+     79
     ],
     [
-     169,
-     180
+     79,
+     85
     ],
     [
-     180,
-     186
+     85,
+     92
     ],
     [
-     186,
-     193
+     92,
+     100
     ],
     [
-     193,
-     201
-    ],
-    [
-     201,
-     211
+     100,
+     110
     ]
    ]
   },

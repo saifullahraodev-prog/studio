@@ -405,4 +405,8 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   (timeline.json beats now carry `words`). `Tpl` gets optional `w`. Mixer: SFX for the new templates; mix.wav 658.7 s, -15.0 LUFS.
   Storyboard (7 pages, 1 still per shot at 60%): `videos/2026-11-12-ever-given/storyboard/`.
 - 2026-11-13 owner OK'd storyboard -> 60 s test (`out/test-60s.mp4`, frames 0-1799, 104 s render, -15.2 LUFS, no black/frozen).
-  GATE: owner feedback on the test before the full render (~11 min of video, est. ~20 min render).
+- 2026-11-13 owner on the test: "long still shots", Ship Guy "too static", "corner guy distracting". Fixes: 11 long shots
+  split (121 beats, avg 5.4 s; hook question becomes a 3-shot montage); corner guy kept only for 3 gags (369 ships, $916M
+  faint, deal cheer); host shots now change gesture at every spoken phrase (`phraseStarts`, `GEST` in templates3.tsx), nod
+  with the words, shift weight, and cut in closer (1.38x) on every other phrase. Re-mixed; `out/test-60s-v2.mp4` (-15.2 LUFS,
+  no black/frozen). GATE: owner feedback on test v2 before the full render.

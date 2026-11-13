@@ -4,54 +4,61 @@
 # --- 0. Hook
 canal state=swing cam=wide music=tense || [23 MARCH 2021] || On the twenty-third of March, twenty twenty-one, one ship turned sideways in the Suez Canal.
 canal state=wedged cam=wide days=1 || 6 DAYS || And for six days, nothing could get past it.
-map mode=queue corner=worried || || Behind it, hundreds of ships piled up. Oil tankers, car carriers, other giant container ships, and ships full of live animals.
-money mode=day corner=shock || [$9.6 BILLION] A DAY || Every single day, about nine point six billion dollars' worth of goods were stuck in that traffic jam.
-side scene=digger guy=dig || ONE DIGGER || And the first machine that showed up to dig it out was one small excavator. Next to a ship four hundred metres long.
+map mode=queue || || Behind it, hundreds of ships piled up. Oil tankers, car carriers, other giant container ships, and ships full of live animals.
+money mode=day || [$9.6 BILLION] A DAY || Every single day, about nine point six billion dollars' worth of goods were stuck in that traffic jam.
+side scene=digger guy=dig || ONE DIGGER || And the first machine that showed up to dig it out was one small excavator.
+canal state=wedged cam=close || VS [400 M] OF SHIP || Next to a ship four hundred metres long.
 guy act=laugh bg=phone || || The whole internet laughed.
-guy act=worried bg=paper emote=sweat || REAL PROBLEM || But behind the jokes was a real problem. Nobody knew how to move a ship that heavy out of a sandbank that tight. And some experts said it could take weeks.
-guy act=think bg=paper music=investigate || HOW? || So how did one ship get stuck so badly? How did they finally get it out? And why was it then held prisoner for more than three months?
+guy act=worried bg=paper || REAL PROBLEM || But behind the jokes was a real problem.
+side scene=push guy=push || TOO HEAVY · TOO TIGHT || Nobody knew how to move a ship that heavy out of a sandbank that tight.
+guy act=watch bg=paper label=WEEKS? || || And some experts said it could take weeks.
+canal state=swing cam=close replay=1 music=investigate || HOW DID IT GET STUCK? || So how did one ship get stuck so badly?
+canal state=free cam=wide tugs=13 || HOW DID THEY FREE IT? || How did they finally get it out?
+lake stamp=1 || WHY HELD FOR [3 MONTHS]? || And why was it then held prisoner for more than three months?
 # --- 1. Meet the Ever Given
-side scene=yard guy=look || [2018] · JAPAN || The ship is called Ever Given. It was built in Japan by Imabari Shipbuilding and finished in twenty eighteen.
+guy act=talk bg=paper label=EVER_GIVEN || || The ship is called Ever Given.
+side scene=yard guy=look || [2018] · JAPAN || It was built in Japan by Imabari Shipbuilding and finished in twenty eighteen.
 side scene=flags guy=point || 4 COUNTRIES || It's owned by a Japanese company, run by a Taiwanese shipping line called Evergreen, managed by a German company, and it flies the flag of Panama.
 guy act=shrug bg=paper || || That's normal in shipping. One ship can belong to half the world.
 guy act=clipboard bg=paper label=THE_NUMBERS || || Now the numbers.
 side scene=pitches || [400 M] || It's almost exactly four hundred metres long. That's nearly four football pitches in a row.
-tower corner=amazed || TALLER THAN THE EMPIRE STATE || Stand it on its end, and it's taller than the roof of the Empire State Building.
+tower || TALLER THAN THE EMPIRE STATE || Stand it on its end, and it's taller than the roof of the Empire State Building.
 side scene=width guy=measure || [59 M] WIDE || It's almost fifty-nine metres wide.
 side scene=stack || [20,124] CONTAINERS || And it can carry more than twenty thousand standard containers.
-boxline step=1 corner=point || [120 KM] OF BOXES || If you took twenty thousand of those containers and put them in one line, end to end, that line would be about a hundred and twenty kilometres long.
-boxline step=2 corner=amazed || MORE THAN HALF THE CANAL || That's more than half the length of the Suez Canal.
+boxline step=1 || [120 KM] OF BOXES || If you took twenty thousand of those containers and put them in one line, end to end, that line would be about a hundred and twenty kilometres long.
+boxline step=2 || MORE THAN HALF THE CANAL || That's more than half the length of the Suez Canal.
 side scene=engine guy=amazed || [79,000] HORSEPOWER || Its engine is as powerful as about seventy-nine thousand horses.
 side scene=thrusters guy=point || BOW THRUSTERS || And at the bow there are two side thrusters, small propellers that push the front sideways.
 guy act=wag bg=paper || NOT ENOUGH || Remember those. They won't be enough.
-map mode=voyage corner=wave || MALAYSIA → ROTTERDAM || In March twenty twenty-one, Ever Given is on its way from Malaysia to Rotterdam, in the Netherlands.
+map mode=voyage || MALAYSIA → ROTTERDAM || In March twenty twenty-one, Ever Given is on its way from Malaysia to Rotterdam, in the Netherlands.
 map mode=suezzoom || || The fastest way from Asia to Europe goes through one narrow ditch in the desert.
 # --- 2. The world's most important ditch
-map mode=suez corner=point || [1869] || The Suez Canal cuts through Egypt and joins the Red Sea to the Mediterranean. It opened in eighteen sixty-nine.
-map mode=cape corner=think || + UP TO [2 WEEKS] || Without it, a ship from Asia to Europe has to sail all the way around Africa, past the Cape of Good Hope. That can add up to two weeks to the trip.
-money mode=pct corner=point || [~12%] OF SEA TRADE || So a huge share of world trade goes through here. Estimates are around twelve percent of everything traded by sea.
+map mode=suez || [1869] || The Suez Canal cuts through Egypt and joins the Red Sea to the Mediterranean. It opened in eighteen sixty-nine.
+map mode=cape || + UP TO [2 WEEKS] || Without it, a ship from Asia to Europe has to sail all the way around Africa, past the Cape of Good Hope. That can add up to two weeks to the trip.
+money mode=pct || [~12%] OF SEA TRADE || So a huge share of world trade goes through here. Estimates are around twelve percent of everything traded by sea.
 guy act=fingerup bg=paper || || But here's the thing.
 canal state=convoy cam=far lanes=1 || [193 KM] · ONE LANE || The canal is about a hundred and ninety-three kilometres long, and for big parts of it, it's only one lane. Ships can't pass each other there.
 canal state=convoy cam=mid || CONVOYS || So they travel in convoys, one behind the other, like cars through roadworks. One convoy goes north, then one goes south.
 bridge act=pilots || CANAL PILOTS || Every ship takes Egyptian canal pilots on board, local experts who know the waterway.
-dial mode=limit corner=point || SPEED LIMIT || And there are speed limits, because a big ship moving too fast in shallow, narrow water starts doing strange things.
+dial mode=limit || SPEED LIMIT || And there are speed limits, because a big ship moving too fast in shallow, narrow water starts doing strange things.
 guy act=hold bg=paper || || Hold on to that idea. Because that's exactly what happened.
 # --- 3. The morning it all went wrong
-bridge act=dawn music=tense || TUESDAY · 23 MARCH || It's early on Tuesday, the twenty-third of March. Ever Given enters the canal from the south, near the city of Suez. It's part of the northbound convoy.
+bridge act=dawn music=tense || TUESDAY · 23 MARCH || It's early on Tuesday, the twenty-third of March.
+canal state=convoy cam=mid || NORTHBOUND CONVOY || Ever Given enters the canal from the south, near the city of Suez. It's part of the northbound convoy.
 side scene=sandstorm guy=hat || SANDSTORM || The weather is bad. A sandstorm is blowing across the desert.
-dial mode=wind corner=hat || [40+ KNOTS] || Visibility is poor, and wind gusts are reaching more than forty knots. That's over seventy kilometres an hour.
+dial mode=wind || [40+ KNOTS] || Visibility is poor, and wind gusts are reaching more than forty knots. That's over seventy kilometres an hour.
 side scene=wall || || Now think about what that wind is hitting. Ever Given is stacked high with containers, from bow to stern. That's a steel wall four hundred metres long.
 side scene=sail || GIANT SAIL || In strong wind, a ship like that is basically a giant sail.
 canal state=drift cam=close || [07:40] || Just before seven forty in the morning, the ship starts to drift.
-dial mode=rudder corner=worried || HARD TO PORT || The pilot orders the rudder to port, to the left. Then hard to port.
+dial mode=rudder || HARD TO PORT || The pilot orders the rudder to port, to the left. Then hard to port.
 canal state=nearbank cam=close || || The ship doesn't come back. It's now close to the left bank,
-dial mode=speed corner=shock || [13 KNOTS] · LIMIT UNDER 9 || and its speed has climbed to around thirteen knots. The canal's speed limit works out to under nine.
+dial mode=speed || [13 KNOTS] · LIMIT UNDER 9 || and its speed has climbed to around thirteen knots. The canal's speed limit works out to under nine.
 bridge act=argue || || There's discussion on the bridge. The engine is slowed down, then pushed back up to full ahead to get more water flowing over the rudder. Hard to port again.
 canal state=swing cam=close || || But the bow keeps swinging to the right. Across the canal. Towards the other bank.
 bridge act=impact || [07:41] || At seven forty-one, Ever Given drives its bow into the east bank at about twelve knots.
 canal state=wedged cam=close impact=1 || || The stern swings round and digs into the west bank.
 canal state=wedged cam=wide measure=1 || STUCK || Four hundred metres of ship, in a canal that's narrower than the ship is long. It's wedged completely across.
-canal state=wedged cam=far km=151 corner=shock || KM [151] · CLOSED || Kilometre one hundred and fifty-one of the Suez Canal is closed.
+canal state=wedged cam=far km=151 || KM [151] · CLOSED || Kilometre one hundred and fifty-one of the Suez Canal is closed.
 # --- 4. One small digger
 side scene=bow guy=shock music=investigate || BURIED || The first pictures shocked everyone. The bow wasn't just touching the bank. It was buried deep in it.
 side scene=digger guy=dig || || And at the foot of that giant bow, there was one small yellow excavator, scooping away at the sand.
@@ -62,62 +69,66 @@ side scene=stress || CRACK THE HULL? || The front end was sitting on sand and cl
 side scene=push guy=push || DIDN'T MOVE || The first tugs arrived the same day and started pulling. The ship didn't move.
 canal state=wedged cam=wide closed=1 || [25 MARCH] · CANAL CLOSED || On the twenty-fifth of March, the canal authority officially stopped all traffic.
 # --- 5. The world's biggest traffic jam
-map mode=queue grow=1 music=tense corner=worried || || Now the line behind Ever Given starts to grow. And grow.
+map mode=queue grow=1 music=tense || || Now the line behind Ever Given starts to grow. And grow.
 map mode=queue count=1 corner=shock || [369] → [400+] SHIPS || After a few days, at least three hundred and sixty-nine ships are waiting. By the time the canal reopens, it's more than four hundred.
-money mode=split corner=clipboard || LLOYD'S LIST || The shipping newspaper Lloyd's List did a rough calculation. Around five point one billion dollars of goods a day were stuck going west, and four point five billion going east.
-money mode=day corner=shock || [$9.6 BILLION] A DAY || Together, about nine point six billion dollars every single day.
-map mode=turnback corner=wave || THE LONG WAY || Some ships couldn't wait. They gave up and turned around, taking the long way round Africa, adding days of sailing and tonnes of extra fuel.
+money mode=split || LLOYD'S LIST || The shipping newspaper Lloyd's List did a rough calculation. Around five point one billion dollars of goods a day were stuck going west, and four point five billion going east.
+money mode=day || [$9.6 BILLION] A DAY || Together, about nine point six billion dollars every single day.
+map mode=turnback || THE LONG WAY || Some ships couldn't wait. They gave up and turned around, taking the long way round Africa, adding days of sailing and tonnes of extra fuel.
 side scene=livestock guy=worried || LIVE ANIMALS || And some of those waiting ships were carrying live animals. Sheep and cattle stuck at sea, with feed and water running down every day.
 guy act=count bg=factory || || Factories in Europe waited for parts. Shops waited for stock.
 guy act=watch bg=paper label=HOW_LONG? || || And everyone was asking the same question. How long?
 # --- 6. How do you free a giant?
-guy act=clipboard bg=salvage music=investigate || SMIT SALVAGE || The ship's owners hired the experts: Smit Salvage, part of the Dutch company Boskalis. Salvage teams like this are the people you call when a ship is in serious trouble.
+guy act=clipboard bg=salvage music=investigate || SMIT SALVAGE || The ship's owners hired the experts: Smit Salvage, part of the Dutch company Boskalis.
+guy act=talk bg=paper label=SHIP_IN_TROUBLE? || || Salvage teams like this are the people you call when a ship is in serious trouble.
 guy act=plan bg=board || DIG · PULL · TIDE || Their plan had three parts. Dig. Pull. And wait for the right tide.
 dredger step=1 || 1. DIG · MASHHOUR || First, dig. The canal authority brought in its big cutter suction dredger, the Mashhour.
-dredger step=2 corner=amazed || [2,000 M³] AN HOUR || It cuts into the sand under water and sucks it away through a pipe, about two thousand cubic metres an hour.
+dredger step=2 || [2,000 M³] AN HOUR || It cuts into the sand under water and sucks it away through a pipe, about two thousand cubic metres an hour.
 side scene=digging guy=dig || || Smaller dredgers and excavators worked closer to the ship.
-pools corner=amazed || [30,000 M³] OF SAND || In total, about thirty thousand cubic metres of sand were removed. That's enough to fill twelve Olympic swimming pools.
+pools || [30,000 M³] OF SAND || In total, about thirty thousand cubic metres of sand were removed. That's enough to fill twelve Olympic swimming pools.
 canal state=wedged cam=close tugs=11 || 2. PULL · [11] TUGS || Second, pull. Eleven harbour tugs worked around the ship.
 canal state=wedged cam=mid tugs=13 big=1 || ALP GUARD · CARLO MAGNO || Then two powerful sea-going tugs arrived to help: the Dutch Alp Guard and the Italian Carlo Magno.
 side scene=tugforce guy=rope || [285 T] OF PULL || Alp Guard alone can pull with a force of about two hundred and eighty-five tonnes.
-side scene=crane guy=worried || PLAN B: UNLOAD || And there was a backup plan nobody wanted. If nothing worked, they'd have to lift off containers to make the ship lighter. But that meant bringing giant cranes to a sandy canal bank, and it could have taken weeks.
-moon corner=point || 3. TIDE · SUPERMOON || Third, the tide. And here the Moon helped. At the end of March there was a full moon close to Earth, a supermoon.
+guy act=worried bg=paper label=PLAN_B || || And there was a backup plan nobody wanted.
+side scene=crane guy=worried || UNLOAD THE BOXES? || If nothing worked, they'd have to lift off containers to make the ship lighter. But that meant bringing giant cranes to a sandy canal bank, and it could have taken weeks.
+moon || 3. TIDE · SUPERMOON || Third, the tide. And here the Moon helped. At the end of March there was a full moon close to Earth, a supermoon.
 side scene=tide || SPRING TIDE || That gives extra-high tides, called spring tides. A little more water under the hull can make a huge difference.
 canal state=wedged cam=mid tugs=13 work=1 || DAY AFTER DAY || Day after day, they dug, pulled and pushed. The bow thrusters ran. The tugs pulled from different angles.
 canal state=sternfree cam=mid tugs=13 night=1 || [04:30] · STERN FREE || Then, very early on Monday the twenty-ninth of March, at about four thirty in the morning, the stern came free.
 canal state=sternfree cam=close tugs=13 || BOW STILL STUCK || The bow was still stuck. But the team kept going as the tide came up again.
-canal state=free cam=wide tugs=13 music=hopeful corner=cheer || [15:05] · FREE! || And at five past three in the afternoon, Ever Given finally floated free.
+canal state=free cam=wide tugs=13 music=hopeful || [15:05] · FREE! || And at five past three in the afternoon, Ever Given finally floated free.
 side scene=cheer guy=cheer || || Tugboats blew their horns. People on the banks cheered.
 canal state=moving cam=far || CANAL OPEN || After six days, the Suez Canal was open again. Ships started moving that same evening.
 # --- 7. So why did it happen?
 guy act=think bg=board music=investigate || JUST THE WIND? || So was it just the wind? Not quite. There were a few things working together.
 side scene=sail || 1. WIND || First, the wind. A ship with that much side area gets pushed hard.
-bankfx step=1 corner=point || 2. BANK EFFECT || Second, something called the bank effect. When a big ship gets close to one side of a narrow channel, water squeezes between the hull and the bank and speeds up.
-bankfx step=2 corner=think || FAST WATER = LOW PRESSURE || Fast water means low pressure. So the stern gets sucked towards the bank, and the bow gets pushed away. The faster the ship goes, the stronger it gets.
+bankfx step=1 || 2. BANK EFFECT || Second, something called the bank effect. When a big ship gets close to one side of a narrow channel, water squeezes between the hull and the bank and speeds up.
+bankfx step=2 || FAST WATER = LOW PRESSURE || Fast water means low pressure. So the stern gets sucked towards the bank, and the bow gets pushed away. The faster the ship goes, the stronger it gets.
 canal state=swing cam=close replay=1 || || That matches what happened. The ship was close to the left bank, it was going fast, and the bow swung right across the canal.
-report step=1 corner=clipboard || 3. PEOPLE · [2023] REPORT || Third, the people. In twenty twenty-three, Panama, where the ship is registered, published its investigation.
-report step=2 corner=clipboard || RISK IGNORED || It said the wind and poor visibility weren't properly treated as a risk.
-report step=3 corner=clipboard || TOO FAST || The ship went faster than the canal's average speed limit.
-report step=4 corner=clipboard || NO TUG ESCORT || No tug escort was used, even though the canal rules call for one in conditions like that.
+report step=1 || 3. PEOPLE · [2023] REPORT || Third, the people. In twenty twenty-three, Panama, where the ship is registered, published its investigation.
+report step=2 || RISK IGNORED || It said the wind and poor visibility weren't properly treated as a risk.
+report step=3 || TOO FAST || The ship went faster than the canal's average speed limit.
+report step=4 || NO TUG ESCORT || No tug escort was used, even though the canal rules call for one in conditions like that.
 bridge act=arabic || || It also said the two pilots talked to each other in Arabic, and the ship's officers couldn't follow what was being decided.
 bridge act=captain || CAPTAIN IN COMMAND || And it reminded everyone of one rule: in the Suez Canal, the captain is always in command. The pilot only advises.
-guy act=shrug bg=paper || WHO'S TO BLAME? || The canal authority and the ship's insurers argued for months about who was to blame. And that argument turned into the next part of the story.
+guy act=shrug bg=paper || WHO'S TO BLAME? || The canal authority and the ship's insurers argued for months about who was to blame.
+guy act=hold bg=paper || || And that argument turned into the next part of the story.
 # --- 8. Held prisoner
 lake stamp=0 music=tense || || The ship was free. But it wasn't going anywhere.
 lake stamp=1 || [13 APRIL] · SEIZED || It was taken to the Great Bitter Lake, a wide part of the canal. And on the thirteenth of April, an Egyptian court ordered it seized.
 money mode=invoice step=1 corner=faint || [$916 MILLION] || The canal authority asked for more than nine hundred and sixteen million dollars. That was for the salvage work, the lost canal fees, and damage to the canal's reputation.
-money mode=invoice step=2 corner=shrug || [$550 MILLION] || The owners said that was far too much. Later, the demand came down to five hundred and fifty million. The negotiations went on for weeks.
+money mode=invoice step=2 || [$550 MILLION] || The owners said that was far too much. Later, the demand came down to five hundred and fifty million. The negotiations went on for weeks.
 lake crew=1 || [25] CREW STILL ON BOARD || And while the lawyers talked, the twenty-five crew stayed on board, stuck in the middle of the desert with the ship.
 lake cargo=1 || CARGO STUCK TOO || And so did all the cargo. Thousands of containers of other people's goods that just couldn't leave.
 money mode=invoice step=3 corner=cheer || [7 JULY] · DEAL || Finally, on the seventh of July, a deal was signed. The exact amount was never made public. Part of the deal was a new tugboat for the canal.
-map mode=rotterdam corner=wave || [29 JULY] · ROTTERDAM || Ever Given left Egypt, and on the twenty-ninth of July it finally reached Rotterdam. More than four months after it was meant to get there.
+map mode=rotterdam || [29 JULY] · ROTTERDAM || Ever Given left Egypt, and on the twenty-ninth of July it finally reached Rotterdam. More than four months after it was meant to get there.
 # --- 9. What changed
 canal state=empty cam=far highlight=south music=light || || After the blockage, Egypt sped up work to fix that narrow southern part of the canal, right where Ever Given got stuck.
-canal state=empty cam=mid widen=1 corner=measure || +[40 M] WIDER || The canal was widened by about forty metres along the east bank, and made deeper, over about thirty kilometres.
-canal state=empty cam=mid newlane=1 corner=drive || NEW [10 KM] LANE || And a new ten-kilometre second lane was dug, so more ships can pass each other.
+canal state=empty cam=mid widen=1 || +[40 M] WIDER || The canal was widened by about forty metres along the east bank, and made deeper, over about thirty kilometres.
+canal state=empty cam=mid newlane=1 || NEW [10 KM] LANE || And a new ten-kilometre second lane was dug, so more ships can pass each other.
 canal state=convoy cam=far newlane=1 twoway=1 || [72] → [82 KM] TWO-WAY || The two-way part of the canal grew from seventy-two to eighty-two kilometres. The new lane was tested in late twenty twenty-four.
 side scene=repaired guy=fix || BACK AT WORK || And Ever Given? It was repaired, and by the end of twenty twenty-one, it was back at work.
 side scene=sailing guy=wave || STILL SAILING || It's still sailing today, still carrying twenty thousand containers between Asia and Europe. Through the Suez Canal.
 canal state=convoy cam=far dusk=1 || || One ship, one gust of wind, one bend in a ditch in the desert.
-guy act=relax bg=canalbank || || And for six days, it showed the whole world just how much depends on a shortcut most people had never thought about.
+canal state=moving cam=far dusk=1 || 6 DAYS || And for six days, it showed the whole world
+guy act=relax bg=canalbank || || just how much depends on a shortcut most people had never thought about.
 endcard2 || || If you want to see the biggest ship ever built, a ship so big it couldn't even fit through the Suez Canal, that video is right here.
