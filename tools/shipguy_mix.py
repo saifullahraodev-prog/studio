@@ -99,6 +99,44 @@ def main(slug: str):
             ev.append((t0 + 0.35, "boing", 0.35))
         if p.get("act") == "laugh":
             ev.append((t0 + 0.2, "pop", 0.4))
+        # --- Ship cost templates (video #4): a sound on every reveal (owner: retention first)
+        if tpl == "tag":
+            ev.append((t0 + 0.42, "pop", 0.8)); ev.append((t0 + 0.5, "ding", 0.55))
+        if tpl == "pladder":
+            ev.append((t0, "riser", 0.3)); ev.append((t0 + 0.3, "boing", 0.25)); ev.append((t0 + 0.55, "pop", 0.5))
+        if tpl == "vsyacht":
+            ev.append((t0 + 0.5, "hit", 0.45) if p.get("mode") == "scale" else (t0 + 0.3, "riser", 0.3))
+        if tpl == "permetre":
+            ev.append((t0 + 0.1, "riser", 0.35)); ev.append((t0 + 0.9, "pop", 0.5))
+            if p.get("mode") == "both":
+                ev.append((t0 + 1.7, "ding", 0.5))
+        if tpl == "stack":
+            for k in range(3):
+                ev.append((t0 + k * 0.33, "pop", 0.6))
+            ev.append((t0 + 1.15, "ding", 0.5))
+        if tpl == "listing":
+            ev.append((t0 + 0.1, "pop", 0.5)); ev.append((t0 + 0.75, "ding", 0.55))
+        if tpl == "cold":
+            m = p.get("mode")
+            if m == "temp": ev.append((t0 + 0.1, "riser", 0.4))
+            if m == "crack": ev.append((t0 + 0.4, "crunch", 0.6))
+            if m == "fuel": ev.append((t0 + 0.3, "fire", 0.35))
+            if m == "cut": ev.append((t0 + 0.8, "pop", 0.4))
+        if tpl == "slot":
+            ev.append((t0 + 0.5, "pop", 0.6)); ev.append((t0 + 0.75, "ding", 0.5))
+        if tpl == "kilo":
+            ev.append((t0 + 0.1, "pop", 0.5)); ev.append((t0 + 0.55, "stamp", 0.8))
+        if tpl == "fleet":
+            ev.append((t0 + 0.1, "riser", 0.4))
+            for k in range(6):
+                ev.append((t0 + 0.2 + k * 0.22, "tick", 0.6))
+            ev.append((t0 + 1.5, "ding", 0.5))
+        if tpl == "sub" and p.get("cut") != "1":
+            ev.append((t0 + 0.1, "boom", 0.3))
+        if p.get("act") == "amazed":
+            ev.append((t0 + 0.15, "pop", 0.45))
+        if tpl == "endhire":
+            ev.append((t0 + 0.2, "ding", 0.5))
     fx = sfx.render_events(ev, dur)[:n]
     fx = np.pad(fx, (0, max(0, n - len(fx))))
 

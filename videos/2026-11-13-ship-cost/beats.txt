@@ -1,0 +1,98 @@
+# Every Level of Ship by Cost (The Ship Guy #4). Retention-first: ~3-4 s shots, a price-tag "ka-ching" on every price,
+# the animated Ship Guy (templates3 `guy`) hosts talking lines, light/hopeful music only.
+# New templates: engine/shipguy/templates4.tsx (tag, pladder, vsyacht, permetre, stack, factory, listing, cold, slot,
+# sub, kilo, fleet, endhire). Reused: guy, outboard, tug, cruise, carrier, stat.
+# --- 0. Hook
+tag subj=jon price=$2,000 music=light || || This boat costs about two thousand dollars.
+tag subj=carrier price=$13,000,000,000 big=1 || || This one costs thirteen billion.
+pladder hi=0 || THE PRICE LADDER || Between them is a whole ladder of ships.
+guy act=shock bg=paper label=WAIT... || || And some of the prices don't make sense at all.
+vsyacht mode=mystery || [?] || One ship on this list is less than half the length of a big container ship,
+guy act=shock bg=paper label=2×_PRICE?! || || but it costs more than two of them together.
+guy act=wave bg=paper label=CLIMB! || || Let's climb every level of ship, from cheapest to most expensive.
+# --- 1. Jon boat
+pladder hi=1 || LEVEL 1 || Let's start at the bottom. A fourteen-foot aluminium fishing boat.
+tag subj=jon price=$2,095 sub=hull_only || || A basic new one costs about two thousand dollars, for the hull alone.
+guy act=amazed bg=paper label=PHONE_PRICE? || || That's less than many phones and laptops.
+stack || + MOTOR + TRAILER || Add a small motor and a trailer,
+tag subj=jon price=$5K–16K sub=ready_to_fish || || and most people pay somewhere between five and sixteen thousand dollars.
+guy act=think bg=paper label=SO_CHEAP? || || Why so cheap?
+tag subj=jon price=THIN_ALUMINIUM sub=simple_shape tagcol=white || || It's a simple shape, made of thin aluminium,
+factory || MASS-PRODUCED || and factories build thousands of them exactly the same way.
+tag subj=jon price=−30–50% sub=used tagcol=green || || Buy one used, and it's often thirty to fifty percent cheaper again.
+# --- 2. Fast boat
+pladder hi=2 || LEVEL 2 || Now, remember the six-hundred-horsepower outboard from our engine video?
+tag subj=v12 price=$77,000 sub=Mercury_V12_Verado || || Mercury's V12 Verado cost about seventy-seven thousand dollars at launch.
+outboard n=4 || [×4] || And fast boats hang up to four of them on the back.
+stat icon=outboard num=308000 unit=DOLLARS label=of_engines_alone pre=$ plus=1 || || That's more than three hundred thousand dollars of engines, before you've even bought the boat.
+guy act=shrug bg=paper label=ESCALATED! || || So on the water, expensive starts very quickly.
+# --- 3. Tug
+pladder hi=3 || LEVEL 3 || Next, a working boat: the harbour tug.
+guy act=fingerup bg=paper label=REAL_PRICE || || Shipyards rarely publish new prices, but here's a real one.
+tug alone=1 || DAMEN · TUG BUILDER || Damen, one of the biggest tug builders in the world,
+listing || || listed a used harbour tug, built in 2015, for between four and six million euros.
+tug alone=1 || [28 m] · SECOND-HAND || That's for a boat about twenty-eight metres long. Second-hand.
+guy act=think bg=paper label=WHY_SO_MUCH? || || Where does the money go?
+tug view=top || [2] BIG DIESELS || A tug is mostly engine. Two big diesels, propellers that can spin all the way around,
+tug || PUSHES GIANTS || and a hull strong enough to push ships thousands of times its weight.
+guy act=push bg=paper label=BULLDOZER || || It's a tiny boat built like a bulldozer.
+# --- 4. Container ship
+pladder hi=4 || LEVEL 4 || Now we jump to the biggest cargo ships on Earth.
+tag subj=box price=? sub=~400_m_·_20,000+_boxes hold=1 || || Ultra-large container ships, almost four hundred metres long, carrying more than twenty thousand containers.
+tag subj=box price=$242,000,000 sub=Clarksons_2026 || || According to the shipping analysts at Clarksons, a new one costs around two hundred and forty million dollars.
+guy act=amazed bg=paper label=HUGE! || || That sounds huge.
+permetre mode=box || CHEAP PER METRE || But for its size, it's actually one of the cheapest ships per metre on this whole list.
+tag subj=box price=STEEL_BOX sub=+_an_engine tagcol=white || || That's because a container ship is basically a giant steel box with an engine.
+factory kind=box || BUILT IN SERIES || Shipyards build them in series, often a whole batch of the same design, one after another.
+tag subj=box price=÷_24,000 sub=container_slots tagcol=white || || Split the price across twenty-four thousand container slots,
+slot || [$10,000] PER SLOT || and each slot costs about ten thousand dollars.
+# --- 5. LNG
+pladder hi=5 || LEVEL 5 || Here's the strange one.
+vsyacht mode=lng || SHORTER... || An LNG carrier is a lot shorter than the biggest container ships.
+tag subj=lng price=$245,000,000 sub=same_price! || || But it costs about the same: around two hundred and forty-five million dollars.
+guy act=think bg=paper label=WHY? || || Why?
+cold mode=temp || [−162 °C] || Because it carries natural gas as a liquid, at minus one hundred and sixty-two degrees Celsius.
+cold mode=cut || GIANT THERMOS || The tanks are built like giant thermos flasks, with layers of special insulation.
+cold mode=crack || CRACKS STEEL || One small leak of that cold liquid can crack normal steel.
+cold mode=boil || BOIL-OFF || And even with all that insulation, a little of the gas still warms up and boils off during the trip.
+cold mode=fuel || FREE FUEL || Many LNG carriers simply burn it as fuel for their own engines.
+guy act=fingerup bg=paper label=COLD_=_$$$ || || So you're not paying for size. You're paying for extreme cold.
+# --- 6. Superyacht
+pladder hi=6 music=hopeful || LEVEL 6 || Remember the ship that costs more than two container ships? This is it.
+tag subj=yacht price=AZZAM sub=180_m_·_longest_private_yacht tagcol=white || || Azzam is the longest private motor yacht in the world, at one hundred and eighty metres.
+tag subj=yacht price=LÜRSSEN_·_2013 sub=built_in_Germany tagcol=white || || It was built in Germany by Lürssen, delivered in 2013,
+tag subj=yacht price=32_KNOTS sub=very_fast_for_its_size tagcol=white speed=1 || || and it can reach thirty-two knots, very fast for a ship that size.
+tag subj=yacht price=$600,000,000 sub=reported || || Its price was never officially published, but it's widely reported at around six hundred million dollars.
+vsyacht mode=scale || [2.5×] || That's more than two of the biggest container ships, for a boat less than half as long.
+permetre mode=box || PER METRE || Per metre, a giant container ship costs about six hundred thousand dollars.
+permetre mode=both || AZZAM: [$3.3M] / m || Azzam costs more than three million.
+guy act=shock bg=paper label=5×! || || Five times as much, for every metre.
+# --- 7. Cruise ship
+pladder hi=7 || LEVEL 7 || Now the biggest cruise ship in the world, Icon of the Seas.
+guy act=clipboard bg=paper label=JUNE_2021 || || Steel cutting started in June 2021,
+cruise || [900+] DAYS || and it was delivered at the end of 2023, after just over nine hundred days of work.
+tag subj=cruise price=$2,000,000,000 sub=reported || || Royal Caribbean never published an official price, but it's reported at around two billion dollars.
+cruise hotel=1 cut=1 || A FLOATING CITY || For that price, you get a floating city:
+guy act=cheer bg=paper label=SPLASH! || || pools, water slides, restaurants, and room for thousands of guests.
+# --- 8. Submarine
+pladder hi=8 || LEVEL 8 || Then there are ships most people never see.
+sub || VIRGINIA CLASS || An American Virginia-class attack submarine.
+guy act=clipboard bg=paper label=U.S._REPORT || || According to the U.S. Congressional Research Service,
+tag subj=sub price=$4,500,000,000+ sub=each || || each new one now costs around four and a half to five billion dollars.
+guy act=shock bg=paper label=2×_ICON! || || That's more than two Icon of the Seas, for a ship that spends its life hidden underwater.
+sub cut=1 || NUCLEAR REACTOR || Part of that price is its nuclear reactor.
+stat icon=calendar num=30 unit=YEARS label=no_refuelling,_ever plus=1 || || It's designed to run for the whole life of the submarine, more than thirty years, without ever being refuelled.
+# --- 9. Carrier
+pladder hi=9 || THE TOP || And at the top: USS Gerald R. Ford, the most expensive warship ever built.
+tag subj=carrier price=$13,000,000,000 big=1 || || Its construction cost is about thirteen billion dollars.
+guy act=worried bg=paper label=+_BILLIONS || || On top of that, billions more were spent designing the new class.
+carrier || 337 m · 100,000 t || It's three hundred and thirty-seven metres long, weighs about one hundred thousand tonnes,
+stat icon=navy num=4500 unit=PEOPLE label=+_75_aircraft pre=≈ || || and carries more than seventy-five aircraft and around four and a half thousand people.
+guy act=think bg=paper label=÷_100,000_t || || Divide the price by its weight,
+kilo || [$130] PER KILO || and every single kilogram of this ship cost about one hundred and thirty dollars.
+fleet || [54] CONTAINER SHIPS || For the price of this one ship, you could buy more than fifty of the biggest container ships in the world.
+# --- 10. End
+pladder hi=10 || [$2,000] → [$13 BILLION] || So from a two-thousand-dollar fishing boat to a thirteen-billion-dollar carrier,
+guy act=count bg=paper || COLD · LUXURY · WAR = [$$$] || ships cost what their job demands: size is cheap, but cold, luxury, and war are expensive.
+guy act=point bg=paper label=TO_HIRE? || || And buying a ship is only the start.
+endhire || || If you want to know what it costs just to hire one, watch this video next.

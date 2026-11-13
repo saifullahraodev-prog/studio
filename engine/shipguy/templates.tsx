@@ -5,6 +5,7 @@ import { AbsoluteFill, interpolate } from "remotion";
 import { Flames, H, INK, Pose, Sea, Sky, SkyMood, Smoke, Stickman, Tanker, TinyWorker, W, Waterline } from "./art";
 import { Attack, Caption, fontFamily, Push, ramp, Shipyard, Stopping, Svg, Upright } from "./scenes";
 import { STAT_ICONS, StatX, TEMPLATES2 } from "./templates2";
+import { TEMPLATES4 } from "./templates4";
 import { TEMPLATES3 } from "./templates3";
 
 export type P = Record<string, string>;
@@ -865,5 +866,6 @@ export const TEMPLATES: Record<string, Tpl> = {
   prelude: Prelude, endcard: EndCard,
   ...TEMPLATES2,
   ...TEMPLATES3,
+  ...TEMPLATES4,
   stat: (props) => (STAT_ICONS.includes(props.p.icon ?? "") ? <StatX {...props} /> : <Stat {...props} />),
 };

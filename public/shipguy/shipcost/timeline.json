@@ -1,0 +1,4783 @@
+{
+ "fps": 30,
+ "frames": 9460,
+ "beats": [
+  {
+   "tpl": "tag",
+   "p": {
+    "subj": "jon",
+    "price": "$2,000",
+    "music": "light"
+   },
+   "cap": "",
+   "from": 0,
+   "dur": 56,
+   "say": "This boat costs about two thousand dollars.",
+   "words": [
+    [
+     0,
+     5
+    ],
+    [
+     5,
+     11
+    ],
+    [
+     11,
+     20
+    ],
+    [
+     20,
+     25
+    ],
+    [
+     25,
+     30
+    ],
+    [
+     30,
+     36
+    ],
+    [
+     36,
+     41
+    ]
+   ]
+  },
+  {
+   "tpl": "tag",
+   "p": {
+    "subj": "carrier",
+    "price": "$13,000,000,000",
+    "big": "1"
+   },
+   "cap": "",
+   "from": 56,
+   "dur": 60,
+   "say": "This one costs thirteen billion.",
+   "words": [
+    [
+     5,
+     13
+    ],
+    [
+     13,
+     17
+    ],
+    [
+     17,
+     26
+    ],
+    [
+     26,
+     36
+    ],
+    [
+     36,
+     45
+    ]
+   ]
+  },
+  {
+   "tpl": "pladder",
+   "p": {
+    "hi": "0"
+   },
+   "cap": "THE PRICE LADDER",
+   "from": 116,
+   "dur": 49,
+   "say": "Between them is a whole ladder of ships.",
+   "words": [
+    [
+     5,
+     11
+    ],
+    [
+     11,
+     19
+    ],
+    [
+     19,
+     23
+    ],
+    [
+     23,
+     26
+    ],
+    [
+     26,
+     33
+    ],
+    [
+     33,
+     41
+    ],
+    [
+     41,
+     47
+    ],
+    [
+     47,
+     54
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "shock",
+    "bg": "paper",
+    "label": "WAIT..."
+   },
+   "cap": "",
+   "from": 165,
+   "dur": 95,
+   "say": "And some of the prices don't make sense at all.",
+   "words": [
+    [
+     5,
+     23
+    ],
+    [
+     23,
+     30
+    ],
+    [
+     30,
+     33
+    ],
+    [
+     33,
+     36
+    ],
+    [
+     36,
+     46
+    ],
+    [
+     46,
+     56
+    ],
+    [
+     56,
+     62
+    ],
+    [
+     62,
+     71
+    ],
+    [
+     71,
+     77
+    ],
+    [
+     77,
+     85
+    ]
+   ]
+  },
+  {
+   "tpl": "vsyacht",
+   "p": {
+    "mode": "mystery"
+   },
+   "cap": "[?]",
+   "from": 260,
+   "dur": 110,
+   "say": "One ship on this list is less than half the length of a big container ship,",
+   "words": [
+    [
+     5,
+     11
+    ],
+    [
+     11,
+     17
+    ],
+    [
+     17,
+     22
+    ],
+    [
+     22,
+     26
+    ],
+    [
+     26,
+     35
+    ],
+    [
+     35,
+     45
+    ],
+    [
+     45,
+     50
+    ],
+    [
+     50,
+     57
+    ],
+    [
+     57,
+     66
+    ],
+    [
+     66,
+     71
+    ],
+    [
+     71,
+     77
+    ],
+    [
+     77,
+     82
+    ],
+    [
+     82,
+     86
+    ],
+    [
+     86,
+     89
+    ],
+    [
+     89,
+     98
+    ],
+    [
+     98,
+     110
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "shock",
+    "bg": "paper",
+    "label": "2\u00d7_PRICE?!"
+   },
+   "cap": "",
+   "from": 370,
+   "dur": 72,
+   "say": "but it costs more than two of them together.",
+   "words": [
+    [
+     5,
+     12
+    ],
+    [
+     12,
+     15
+    ],
+    [
+     15,
+     21
+    ],
+    [
+     21,
+     30
+    ],
+    [
+     30,
+     34
+    ],
+    [
+     34,
+     42
+    ],
+    [
+     42,
+     45
+    ],
+    [
+     45,
+     50
+    ],
+    [
+     50,
+     59
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "wave",
+    "bg": "paper",
+    "label": "CLIMB!"
+   },
+   "cap": "",
+   "from": 442,
+   "dur": 107,
+   "say": "Let's climb every level of ship, from cheapest to most expensive.",
+   "words": [
+    [
+     4,
+     12
+    ],
+    [
+     12,
+     18
+    ],
+    [
+     18,
+     26
+    ],
+    [
+     26,
+     33
+    ],
+    [
+     33,
+     38
+    ],
+    [
+     38,
+     45
+    ],
+    [
+     45,
+     57
+    ],
+    [
+     57,
+     67
+    ],
+    [
+     67,
+     75
+    ],
+    [
+     75,
+     79
+    ],
+    [
+     79,
+     91
+    ]
+   ]
+  },
+  {
+   "tpl": "pladder",
+   "p": {
+    "hi": "1"
+   },
+   "cap": "LEVEL 1",
+   "from": 549,
+   "dur": 110,
+   "say": "Let's start at the bottom. A fourteen-foot aluminium fishing boat.",
+   "words": [
+    [
+     4,
+     13
+    ],
+    [
+     13,
+     20
+    ],
+    [
+     20,
+     25
+    ],
+    [
+     25,
+     28
+    ],
+    [
+     28,
+     35
+    ],
+    [
+     53,
+     56
+    ],
+    [
+     56,
+     73
+    ],
+    [
+     73,
+     83
+    ],
+    [
+     83,
+     97
+    ],
+    [
+     97,
+     105
+    ]
+   ]
+  },
+  {
+   "tpl": "tag",
+   "p": {
+    "subj": "jon",
+    "price": "$2,095",
+    "sub": "hull_only"
+   },
+   "cap": "",
+   "from": 659,
+   "dur": 123,
+   "say": "A basic new one costs about two thousand dollars, for the hull alone.",
+   "words": [
+    [
+     5,
+     9
+    ],
+    [
+     9,
+     17
+    ],
+    [
+     17,
+     26
+    ],
+    [
+     26,
+     30
+    ],
+    [
+     30,
+     39
+    ],
+    [
+     39,
+     48
+    ],
+    [
+     48,
+     56
+    ],
+    [
+     56,
+     65
+    ],
+    [
+     65,
+     73
+    ],
+    [
+     73,
+     92
+    ],
+    [
+     92,
+     97
+    ],
+    [
+     97,
+     102
+    ],
+    [
+     102,
+     111
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "amazed",
+    "bg": "paper",
+    "label": "PHONE_PRICE?"
+   },
+   "cap": "",
+   "from": 782,
+   "dur": 60,
+   "say": "That's less than many phones and laptops.",
+   "words": [
+    [
+     5,
+     15
+    ],
+    [
+     15,
+     19
+    ],
+    [
+     19,
+     26
+    ],
+    [
+     26,
+     31
+    ],
+    [
+     31,
+     39
+    ],
+    [
+     39,
+     44
+    ],
+    [
+     44,
+     51
+    ]
+   ]
+  },
+  {
+   "tpl": "stack",
+   "p": {},
+   "cap": "+ MOTOR + TRAILER",
+   "from": 842,
+   "dur": 64,
+   "say": "Add a small motor and a trailer,",
+   "words": [
+    [
+     4,
+     14
+    ],
+    [
+     14,
+     21
+    ],
+    [
+     21,
+     29
+    ],
+    [
+     29,
+     40
+    ],
+    [
+     40,
+     48
+    ],
+    [
+     48,
+     51
+    ],
+    [
+     51,
+     60
+    ]
+   ]
+  },
+  {
+   "tpl": "tag",
+   "p": {
+    "subj": "jon",
+    "price": "$5K\u201316K",
+    "sub": "ready_to_fish"
+   },
+   "cap": "",
+   "from": 906,
+   "dur": 118,
+   "say": "and most people pay somewhere between five and sixteen thousand dollars.",
+   "words": [
+    [
+     5,
+     12
+    ],
+    [
+     12,
+     19
+    ],
+    [
+     19,
+     27
+    ],
+    [
+     27,
+     34
+    ],
+    [
+     34,
+     44
+    ],
+    [
+     44,
+     55
+    ],
+    [
+     55,
+     76
+    ],
+    [
+     76,
+     76
+    ],
+    [
+     76,
+     85
+    ],
+    [
+     85,
+     93
+    ],
+    [
+     93,
+     101
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "think",
+    "bg": "paper",
+    "label": "SO_CHEAP?"
+   },
+   "cap": "",
+   "from": 1024,
+   "dur": 36,
+   "say": "Why so cheap?",
+   "words": [
+    [
+     5,
+     13
+    ],
+    [
+     13,
+     18
+    ],
+    [
+     18,
+     27
+    ]
+   ]
+  },
+  {
+   "tpl": "tag",
+   "p": {
+    "subj": "jon",
+    "price": "THIN_ALUMINIUM",
+    "sub": "simple_shape",
+    "tagcol": "white"
+   },
+   "cap": "",
+   "from": 1060,
+   "dur": 94,
+   "say": "It's a simple shape, made of thin aluminium,",
+   "words": [
+    [
+     4,
+     12
+    ],
+    [
+     12,
+     15
+    ],
+    [
+     15,
+     27
+    ],
+    [
+     27,
+     42
+    ],
+    [
+     42,
+     57
+    ],
+    [
+     57,
+     64
+    ],
+    [
+     64,
+     75
+    ],
+    [
+     75,
+     87
+    ]
+   ]
+  },
+  {
+   "tpl": "factory",
+   "p": {},
+   "cap": "MASS-PRODUCED",
+   "from": 1154,
+   "dur": 108,
+   "say": "and factories build thousands of them exactly the same way.",
+   "words": [
+    [
+     4,
+     14
+    ],
+    [
+     14,
+     24
+    ],
+    [
+     24,
+     35
+    ],
+    [
+     35,
+     51
+    ],
+    [
+     51,
+     59
+    ],
+    [
+     59,
+     63
+    ],
+    [
+     63,
+     78
+    ],
+    [
+     78,
+     89
+    ],
+    [
+     89,
+     98
+    ],
+    [
+     98,
+     105
+    ]
+   ]
+  },
+  {
+   "tpl": "tag",
+   "p": {
+    "subj": "jon",
+    "price": "\u221230\u201350%",
+    "sub": "used",
+    "tagcol": "green"
+   },
+   "cap": "",
+   "from": 1262,
+   "dur": 147,
+   "say": "Buy one used, and it's often thirty to fifty percent cheaper again.",
+   "words": [
+    [
+     5,
+     10
+    ],
+    [
+     10,
+     18
+    ],
+    [
+     18,
+     30
+    ],
+    [
+     30,
+     45
+    ],
+    [
+     45,
+     51
+    ],
+    [
+     51,
+     57
+    ],
+    [
+     57,
+     69
+    ],
+    [
+     69,
+     76
+    ],
+    [
+     76,
+     86
+    ],
+    [
+     86,
+     96
+    ],
+    [
+     96,
+     105
+    ],
+    [
+     105,
+     116
+    ]
+   ]
+  },
+  {
+   "tpl": "pladder",
+   "p": {
+    "hi": "2"
+   },
+   "cap": "LEVEL 2",
+   "from": 1409,
+   "dur": 131,
+   "say": "Now, remember the six-hundred-horsepower outboard from our engine video?",
+   "words": [
+    [
+     5,
+     14
+    ],
+    [
+     21,
+     33
+    ],
+    [
+     33,
+     41
+    ],
+    [
+     41,
+     69
+    ],
+    [
+     69,
+     89
+    ],
+    [
+     89,
+     96
+    ],
+    [
+     96,
+     101
+    ],
+    [
+     101,
+     108
+    ],
+    [
+     108,
+     120
+    ]
+   ]
+  },
+  {
+   "tpl": "tag",
+   "p": {
+    "subj": "v12",
+    "price": "$77,000",
+    "sub": "Mercury_V12_Verado"
+   },
+   "cap": "",
+   "from": 1540,
+   "dur": 120,
+   "say": "Mercury's V12 Verado cost about seventy-seven thousand dollars at launch.",
+   "words": [
+    [
+     5,
+     21
+    ],
+    [
+     21,
+     35
+    ],
+    [
+     35,
+     50
+    ],
+    [
+     50,
+     64
+    ],
+    [
+     64,
+     71
+    ],
+    [
+     71,
+     83
+    ],
+    [
+     83,
+     95
+    ],
+    [
+     95,
+     106
+    ],
+    [
+     106,
+     117
+    ],
+    [
+     117,
+     125
+    ]
+   ]
+  },
+  {
+   "tpl": "outboard",
+   "p": {
+    "n": "4"
+   },
+   "cap": "[\u00d74]",
+   "from": 1660,
+   "dur": 98,
+   "say": "And fast boats hang up to four of them on the back.",
+   "words": [
+    [
+     5,
+     22
+    ],
+    [
+     22,
+     33
+    ],
+    [
+     33,
+     41
+    ],
+    [
+     41,
+     48
+    ],
+    [
+     48,
+     52
+    ],
+    [
+     52,
+     57
+    ],
+    [
+     57,
+     63
+    ],
+    [
+     63,
+     66
+    ],
+    [
+     66,
+     70
+    ],
+    [
+     70,
+     74
+    ],
+    [
+     74,
+     76
+    ],
+    [
+     76,
+     86
+    ]
+   ]
+  },
+  {
+   "tpl": "stat",
+   "p": {
+    "icon": "outboard",
+    "num": "308000",
+    "unit": "DOLLARS",
+    "label": "of_engines_alone",
+    "pre": "$",
+    "plus": "1"
+   },
+   "cap": "",
+   "from": 1758,
+   "dur": 144,
+   "say": "That's more than three hundred thousand dollars of engines, before you've even bought the boat.",
+   "words": [
+    [
+     4,
+     10
+    ],
+    [
+     10,
+     16
+    ],
+    [
+     16,
+     21
+    ],
+    [
+     21,
+     29
+    ],
+    [
+     29,
+     38
+    ],
+    [
+     38,
+     46
+    ],
+    [
+     46,
+     54
+    ],
+    [
+     54,
+     66
+    ],
+    [
+     66,
+     76
+    ],
+    [
+     76,
+     92
+    ],
+    [
+     92,
+     104
+    ],
+    [
+     104,
+     112
+    ],
+    [
+     112,
+     121
+    ],
+    [
+     121,
+     127
+    ],
+    [
+     127,
+     134
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "shrug",
+    "bg": "paper",
+    "label": "ESCALATED!"
+   },
+   "cap": "",
+   "from": 1902,
+   "dur": 110,
+   "say": "So on the water, expensive starts very quickly.",
+   "words": [
+    [
+     4,
+     10
+    ],
+    [
+     10,
+     16
+    ],
+    [
+     16,
+     19
+    ],
+    [
+     19,
+     27
+    ],
+    [
+     40,
+     52
+    ],
+    [
+     52,
+     65
+    ],
+    [
+     65,
+     78
+    ],
+    [
+     78,
+     91
+    ]
+   ]
+  },
+  {
+   "tpl": "pladder",
+   "p": {
+    "hi": "3"
+   },
+   "cap": "LEVEL 3",
+   "from": 2012,
+   "dur": 77,
+   "say": "Next, a working boat: the harbour tug.",
+   "words": [
+    [
+     4,
+     11
+    ],
+    [
+     21,
+     24
+    ],
+    [
+     24,
+     32
+    ],
+    [
+     32,
+     41
+    ],
+    [
+     53,
+     56
+    ],
+    [
+     56,
+     63
+    ],
+    [
+     63,
+     73
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "fingerup",
+    "bg": "paper",
+    "label": "REAL_PRICE"
+   },
+   "cap": "",
+   "from": 2089,
+   "dur": 107,
+   "say": "Shipyards rarely publish new prices, but here's a real one.",
+   "words": [
+    [
+     5,
+     18
+    ],
+    [
+     18,
+     28
+    ],
+    [
+     28,
+     39
+    ],
+    [
+     39,
+     47
+    ],
+    [
+     47,
+     58
+    ],
+    [
+     70,
+     74
+    ],
+    [
+     74,
+     83
+    ],
+    [
+     83,
+     85
+    ],
+    [
+     85,
+     91
+    ],
+    [
+     91,
+     98
+    ]
+   ]
+  },
+  {
+   "tpl": "tug",
+   "p": {
+    "alone": "1"
+   },
+   "cap": "DAMEN \u00b7 TUG BUILDER",
+   "from": 2196,
+   "dur": 74,
+   "say": "Damen, one of the biggest tug builders in the world,",
+   "words": [
+    [
+     4,
+     10
+    ],
+    [
+     22,
+     25
+    ],
+    [
+     25,
+     29
+    ],
+    [
+     29,
+     32
+    ],
+    [
+     32,
+     38
+    ],
+    [
+     38,
+     46
+    ],
+    [
+     46,
+     53
+    ],
+    [
+     53,
+     59
+    ],
+    [
+     59,
+     62
+    ],
+    [
+     62,
+     71
+    ]
+   ]
+  },
+  {
+   "tpl": "listing",
+   "p": {},
+   "cap": "",
+   "from": 2270,
+   "dur": 177,
+   "say": "listed a used harbour tug, built in 2015, for between four and six million euros.",
+   "words": [
+    [
+     5,
+     15
+    ],
+    [
+     15,
+     20
+    ],
+    [
+     20,
+     27
+    ],
+    [
+     27,
+     35
+    ],
+    [
+     35,
+     47
+    ],
+    [
+     47,
+     57
+    ],
+    [
+     57,
+     62
+    ],
+    [
+     62,
+     88
+    ],
+    [
+     99,
+     107
+    ],
+    [
+     107,
+     116
+    ],
+    [
+     116,
+     127
+    ],
+    [
+     127,
+     134
+    ],
+    [
+     134,
+     143
+    ],
+    [
+     143,
+     152
+    ],
+    [
+     152,
+     165
+    ]
+   ]
+  },
+  {
+   "tpl": "tug",
+   "p": {
+    "alone": "1"
+   },
+   "cap": "[28 m] \u00b7 SECOND-HAND",
+   "from": 2447,
+   "dur": 104,
+   "say": "That's for a boat about twenty-eight metres long. Second-hand.",
+   "words": [
+    [
+     5,
+     14
+    ],
+    [
+     14,
+     18
+    ],
+    [
+     18,
+     21
+    ],
+    [
+     21,
+     26
+    ],
+    [
+     26,
+     32
+    ],
+    [
+     32,
+     44
+    ],
+    [
+     44,
+     56
+    ],
+    [
+     56,
+     68
+    ],
+    [
+     68,
+     98
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "think",
+    "bg": "paper",
+    "label": "WHY_SO_MUCH?"
+   },
+   "cap": "",
+   "from": 2551,
+   "dur": 45,
+   "say": "Where does the money go?",
+   "words": [
+    [
+     4,
+     10
+    ],
+    [
+     10,
+     15
+    ],
+    [
+     15,
+     19
+    ],
+    [
+     19,
+     23
+    ],
+    [
+     23,
+     31
+    ]
+   ]
+  },
+  {
+   "tpl": "tug",
+   "p": {
+    "view": "top"
+   },
+   "cap": "[2] BIG DIESELS",
+   "from": 2596,
+   "dur": 150,
+   "say": "A tug is mostly engine. Two big diesels, propellers that can spin all the way around,",
+   "words": [
+    [
+     4,
+     7
+    ],
+    [
+     7,
+     12
+    ],
+    [
+     12,
+     16
+    ],
+    [
+     16,
+     24
+    ],
+    [
+     24,
+     34
+    ],
+    [
+     49,
+     55
+    ],
+    [
+     55,
+     66
+    ],
+    [
+     66,
+     81
+    ],
+    [
+     92,
+     104
+    ],
+    [
+     104,
+     110
+    ],
+    [
+     110,
+     115
+    ],
+    [
+     115,
+     121
+    ],
+    [
+     121,
+     133
+    ],
+    [
+     133,
+     138
+    ],
+    [
+     138,
+     143
+    ],
+    [
+     143,
+     154
+    ]
+   ]
+  },
+  {
+   "tpl": "tug",
+   "p": {},
+   "cap": "PUSHES GIANTS",
+   "from": 2746,
+   "dur": 116,
+   "say": "and a hull strong enough to push ships thousands of times its weight.",
+   "words": [
+    [
+     4,
+     18
+    ],
+    [
+     18,
+     22
+    ],
+    [
+     22,
+     27
+    ],
+    [
+     27,
+     34
+    ],
+    [
+     34,
+     42
+    ],
+    [
+     42,
+     46
+    ],
+    [
+     46,
+     53
+    ],
+    [
+     53,
+     62
+    ],
+    [
+     62,
+     78
+    ],
+    [
+     78,
+     85
+    ],
+    [
+     85,
+     93
+    ],
+    [
+     93,
+     99
+    ],
+    [
+     99,
+     107
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "push",
+    "bg": "paper",
+    "label": "BULLDOZER"
+   },
+   "cap": "",
+   "from": 2862,
+   "dur": 74,
+   "say": "It's a tiny boat built like a bulldozer.",
+   "words": [
+    [
+     4,
+     10
+    ],
+    [
+     10,
+     14
+    ],
+    [
+     14,
+     22
+    ],
+    [
+     22,
+     31
+    ],
+    [
+     31,
+     39
+    ],
+    [
+     39,
+     47
+    ],
+    [
+     47,
+     50
+    ],
+    [
+     50,
+     64
+    ]
+   ]
+  },
+  {
+   "tpl": "pladder",
+   "p": {
+    "hi": "4"
+   },
+   "cap": "LEVEL 4",
+   "from": 2936,
+   "dur": 88,
+   "say": "Now we jump to the biggest cargo ships on Earth.",
+   "words": [
+    [
+     5,
+     12
+    ],
+    [
+     12,
+     17
+    ],
+    [
+     17,
+     23
+    ],
+    [
+     23,
+     27
+    ],
+    [
+     27,
+     31
+    ],
+    [
+     31,
+     38
+    ],
+    [
+     38,
+     49
+    ],
+    [
+     49,
+     58
+    ],
+    [
+     58,
+     65
+    ],
+    [
+     65,
+     75
+    ]
+   ]
+  },
+  {
+   "tpl": "tag",
+   "p": {
+    "subj": "box",
+    "price": "?",
+    "sub": "~400_m_\u00b7_20,000+_boxes",
+    "hold": "1"
+   },
+   "cap": "",
+   "from": 3024,
+   "dur": 190,
+   "say": "Ultra-large container ships, almost four hundred metres long, carrying more than twenty thousand containers.",
+   "words": [
+    [
+     4,
+     25
+    ],
+    [
+     25,
+     34
+    ],
+    [
+     34,
+     47
+    ],
+    [
+     58,
+     67
+    ],
+    [
+     67,
+     76
+    ],
+    [
+     76,
+     85
+    ],
+    [
+     85,
+     94
+    ],
+    [
+     94,
+     107
+    ],
+    [
+     115,
+     124
+    ],
+    [
+     124,
+     131
+    ],
+    [
+     131,
+     137
+    ],
+    [
+     137,
+     149
+    ],
+    [
+     149,
+     162
+    ],
+    [
+     162,
+     178
+    ]
+   ]
+  },
+  {
+   "tpl": "tag",
+   "p": {
+    "subj": "box",
+    "price": "$242,000,000",
+    "sub": "Clarksons_2026"
+   },
+   "cap": "",
+   "from": 3214,
+   "dur": 173,
+   "say": "According to the shipping analysts at Clarksons, a new one costs around two hundred and forty million dollars.",
+   "words": [
+    [
+     4,
+     13
+    ],
+    [
+     13,
+     21
+    ],
+    [
+     21,
+     24
+    ],
+    [
+     24,
+     31
+    ],
+    [
+     31,
+     45
+    ],
+    [
+     45,
+     51
+    ],
+    [
+     51,
+     69
+    ],
+    [
+     80,
+     84
+    ],
+    [
+     84,
+     88
+    ],
+    [
+     88,
+     93
+    ],
+    [
+     93,
+     102
+    ],
+    [
+     102,
+     112
+    ],
+    [
+     112,
+     119
+    ],
+    [
+     119,
+     126
+    ],
+    [
+     126,
+     133
+    ],
+    [
+     133,
+     141
+    ],
+    [
+     141,
+     156
+    ],
+    [
+     156,
+     167
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "amazed",
+    "bg": "paper",
+    "label": "HUGE!"
+   },
+   "cap": "",
+   "from": 3387,
+   "dur": 53,
+   "say": "That sounds huge.",
+   "words": [
+    [
+     5,
+     14
+    ],
+    [
+     14,
+     29
+    ],
+    [
+     29,
+     41
+    ]
+   ]
+  },
+  {
+   "tpl": "permetre",
+   "p": {
+    "mode": "box"
+   },
+   "cap": "CHEAP PER METRE",
+   "from": 3440,
+   "dur": 140,
+   "say": "But for its size, it's actually one of the cheapest ships per metre on this whole list.",
+   "words": [
+    [
+     5,
+     10
+    ],
+    [
+     10,
+     16
+    ],
+    [
+     16,
+     21
+    ],
+    [
+     21,
+     30
+    ],
+    [
+     42,
+     47
+    ],
+    [
+     47,
+     56
+    ],
+    [
+     56,
+     62
+    ],
+    [
+     62,
+     65
+    ],
+    [
+     65,
+     69
+    ],
+    [
+     69,
+     79
+    ],
+    [
+     79,
+     89
+    ],
+    [
+     89,
+     96
+    ],
+    [
+     96,
+     102
+    ],
+    [
+     102,
+     110
+    ],
+    [
+     110,
+     114
+    ],
+    [
+     114,
+     120
+    ],
+    [
+     120,
+     131
+    ]
+   ]
+  },
+  {
+   "tpl": "tag",
+   "p": {
+    "subj": "box",
+    "price": "STEEL_BOX",
+    "sub": "+_an_engine",
+    "tagcol": "white"
+   },
+   "cap": "",
+   "from": 3580,
+   "dur": 125,
+   "say": "That's because a container ship is basically a giant steel box with an engine.",
+   "words": [
+    [
+     4,
+     11
+    ],
+    [
+     11,
+     18
+    ],
+    [
+     18,
+     25
+    ],
+    [
+     25,
+     32
+    ],
+    [
+     32,
+     42
+    ],
+    [
+     42,
+     46
+    ],
+    [
+     46,
+     59
+    ],
+    [
+     59,
+     66
+    ],
+    [
+     66,
+     77
+    ],
+    [
+     77,
+     85
+    ],
+    [
+     85,
+     96
+    ],
+    [
+     96,
+     102
+    ],
+    [
+     102,
+     106
+    ],
+    [
+     106,
+     114
+    ]
+   ]
+  },
+  {
+   "tpl": "factory",
+   "p": {
+    "kind": "box"
+   },
+   "cap": "BUILT IN SERIES",
+   "from": 3705,
+   "dur": 156,
+   "say": "Shipyards build them in series, often a whole batch of the same design, one after another.",
+   "words": [
+    [
+     4,
+     17
+    ],
+    [
+     17,
+     26
+    ],
+    [
+     26,
+     32
+    ],
+    [
+     32,
+     35
+    ],
+    [
+     35,
+     44
+    ],
+    [
+     55,
+     65
+    ],
+    [
+     65,
+     70
+    ],
+    [
+     70,
+     76
+    ],
+    [
+     76,
+     85
+    ],
+    [
+     85,
+     89
+    ],
+    [
+     89,
+     93
+    ],
+    [
+     93,
+     99
+    ],
+    [
+     99,
+     111
+    ],
+    [
+     119,
+     127
+    ],
+    [
+     127,
+     134
+    ],
+    [
+     134,
+     144
+    ]
+   ]
+  },
+  {
+   "tpl": "tag",
+   "p": {
+    "subj": "box",
+    "price": "\u00f7_24,000",
+    "sub": "container_slots",
+    "tagcol": "white"
+   },
+   "cap": "",
+   "from": 3861,
+   "dur": 91,
+   "say": "Split the price across twenty-four thousand container slots,",
+   "words": [
+    [
+     4,
+     11
+    ],
+    [
+     11,
+     18
+    ],
+    [
+     18,
+     25
+    ],
+    [
+     25,
+     35
+    ],
+    [
+     35,
+     54
+    ],
+    [
+     54,
+     73
+    ],
+    [
+     73,
+     83
+    ],
+    [
+     83,
+     95
+    ]
+   ]
+  },
+  {
+   "tpl": "slot",
+   "p": {},
+   "cap": "[$10,000] PER SLOT",
+   "from": 3952,
+   "dur": 130,
+   "say": "and each slot costs about ten thousand dollars.",
+   "words": [
+    [
+     4,
+     20
+    ],
+    [
+     20,
+     26
+    ],
+    [
+     26,
+     36
+    ],
+    [
+     36,
+     48
+    ],
+    [
+     48,
+     56
+    ],
+    [
+     56,
+     65
+    ],
+    [
+     65,
+     73
+    ],
+    [
+     73,
+     82
+    ]
+   ]
+  },
+  {
+   "tpl": "pladder",
+   "p": {
+    "hi": "5"
+   },
+   "cap": "LEVEL 5",
+   "from": 4082,
+   "dur": 57,
+   "say": "Here's the strange one.",
+   "words": [
+    [
+     5,
+     23
+    ],
+    [
+     23,
+     26
+    ],
+    [
+     26,
+     38
+    ],
+    [
+     38,
+     46
+    ]
+   ]
+  },
+  {
+   "tpl": "vsyacht",
+   "p": {
+    "mode": "lng"
+   },
+   "cap": "SHORTER...",
+   "from": 4139,
+   "dur": 104,
+   "say": "An LNG carrier is a lot shorter than the biggest container ships.",
+   "words": [
+    [
+     5,
+     10
+    ],
+    [
+     10,
+     22
+    ],
+    [
+     22,
+     33
+    ],
+    [
+     33,
+     44
+    ],
+    [
+     44,
+     48
+    ],
+    [
+     48,
+     52
+    ],
+    [
+     52,
+     63
+    ],
+    [
+     63,
+     71
+    ],
+    [
+     71,
+     75
+    ],
+    [
+     75,
+     83
+    ],
+    [
+     83,
+     95
+    ],
+    [
+     95,
+     108
+    ]
+   ]
+  },
+  {
+   "tpl": "tag",
+   "p": {
+    "subj": "lng",
+    "price": "$245,000,000",
+    "sub": "same_price!"
+   },
+   "cap": "",
+   "from": 4243,
+   "dur": 145,
+   "say": "But it costs about the same: around two hundred and forty-five million dollars.",
+   "words": [
+    [
+     4,
+     21
+    ],
+    [
+     21,
+     25
+    ],
+    [
+     25,
+     34
+    ],
+    [
+     34,
+     43
+    ],
+    [
+     43,
+     49
+    ],
+    [
+     49,
+     58
+    ],
+    [
+     70,
+     77
+    ],
+    [
+     77,
+     87
+    ],
+    [
+     87,
+     97
+    ],
+    [
+     97,
+     107
+    ],
+    [
+     107,
+     117
+    ],
+    [
+     117,
+     125
+    ],
+    [
+     125,
+     137
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "think",
+    "bg": "paper",
+    "label": "WHY?"
+   },
+   "cap": "",
+   "from": 4388,
+   "dur": 32,
+   "say": "Why?",
+   "words": [
+    [
+     5,
+     20
+    ]
+   ]
+  },
+  {
+   "tpl": "cold",
+   "p": {
+    "mode": "temp"
+   },
+   "cap": "[\u2212162 \u00b0C]",
+   "from": 4420,
+   "dur": 171,
+   "say": "Because it carries natural gas as a liquid, at minus one hundred and sixty-two degrees Celsius.",
+   "words": [
+    [
+     4,
+     11
+    ],
+    [
+     11,
+     16
+    ],
+    [
+     16,
+     25
+    ],
+    [
+     25,
+     36
+    ],
+    [
+     36,
+     46
+    ],
+    [
+     46,
+     51
+    ],
+    [
+     51,
+     54
+    ],
+    [
+     54,
+     60
+    ],
+    [
+     60,
+     79
+    ],
+    [
+     79,
+     89
+    ],
+    [
+     89,
+     100
+    ],
+    [
+     100,
+     111
+    ],
+    [
+     111,
+     122
+    ],
+    [
+     122,
+     133
+    ],
+    [
+     133,
+     140
+    ],
+    [
+     140,
+     153
+    ]
+   ]
+  },
+  {
+   "tpl": "cold",
+   "p": {
+    "mode": "cut"
+   },
+   "cap": "GIANT THERMOS",
+   "from": 4591,
+   "dur": 129,
+   "say": "The tanks are built like giant thermos flasks, with layers of special insulation.",
+   "words": [
+    [
+     4,
+     7
+    ],
+    [
+     7,
+     16
+    ],
+    [
+     16,
+     21
+    ],
+    [
+     21,
+     26
+    ],
+    [
+     26,
+     33
+    ],
+    [
+     33,
+     43
+    ],
+    [
+     43,
+     54
+    ],
+    [
+     54,
+     67
+    ],
+    [
+     67,
+     76
+    ],
+    [
+     76,
+     85
+    ],
+    [
+     85,
+     91
+    ],
+    [
+     91,
+     100
+    ],
+    [
+     100,
+     117
+    ]
+   ]
+  },
+  {
+   "tpl": "cold",
+   "p": {
+    "mode": "crack"
+   },
+   "cap": "CRACKS STEEL",
+   "from": 4720,
+   "dur": 100,
+   "say": "One small leak of that cold liquid can crack normal steel.",
+   "words": [
+    [
+     4,
+     11
+    ],
+    [
+     11,
+     18
+    ],
+    [
+     18,
+     25
+    ],
+    [
+     25,
+     30
+    ],
+    [
+     30,
+     34
+    ],
+    [
+     34,
+     40
+    ],
+    [
+     40,
+     51
+    ],
+    [
+     51,
+     57
+    ],
+    [
+     57,
+     64
+    ],
+    [
+     64,
+     76
+    ],
+    [
+     76,
+     87
+    ]
+   ]
+  },
+  {
+   "tpl": "cold",
+   "p": {
+    "mode": "boil"
+   },
+   "cap": "BOIL-OFF",
+   "from": 4820,
+   "dur": 169,
+   "say": "And even with all that insulation, a little of the gas still warms up and boils off during the trip.",
+   "words": [
+    [
+     4,
+     11
+    ],
+    [
+     11,
+     23
+    ],
+    [
+     23,
+     29
+    ],
+    [
+     29,
+     35
+    ],
+    [
+     35,
+     39
+    ],
+    [
+     39,
+     57
+    ],
+    [
+     72,
+     77
+    ],
+    [
+     77,
+     83
+    ],
+    [
+     83,
+     89
+    ],
+    [
+     89,
+     92
+    ],
+    [
+     92,
+     99
+    ],
+    [
+     99,
+     105
+    ],
+    [
+     105,
+     115
+    ],
+    [
+     115,
+     122
+    ],
+    [
+     122,
+     126
+    ],
+    [
+     126,
+     133
+    ],
+    [
+     133,
+     140
+    ],
+    [
+     140,
+     148
+    ],
+    [
+     148,
+     153
+    ],
+    [
+     153,
+     159
+    ]
+   ]
+  },
+  {
+   "tpl": "cold",
+   "p": {
+    "mode": "fuel"
+   },
+   "cap": "FREE FUEL",
+   "from": 4989,
+   "dur": 110,
+   "say": "Many LNG carriers simply burn it as fuel for their own engines.",
+   "words": [
+    [
+     4,
+     11
+    ],
+    [
+     11,
+     26
+    ],
+    [
+     26,
+     40
+    ],
+    [
+     40,
+     58
+    ],
+    [
+     58,
+     67
+    ],
+    [
+     67,
+     71
+    ],
+    [
+     71,
+     75
+    ],
+    [
+     75,
+     82
+    ],
+    [
+     82,
+     88
+    ],
+    [
+     88,
+     93
+    ],
+    [
+     93,
+     101
+    ],
+    [
+     101,
+     115
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "fingerup",
+    "bg": "paper",
+    "label": "COLD_=_$$$"
+   },
+   "cap": "",
+   "from": 5099,
+   "dur": 130,
+   "say": "So you're not paying for size. You're paying for extreme cold.",
+   "words": [
+    [
+     5,
+     24
+    ],
+    [
+     24,
+     29
+    ],
+    [
+     29,
+     33
+    ],
+    [
+     33,
+     42
+    ],
+    [
+     42,
+     48
+    ],
+    [
+     48,
+     56
+    ],
+    [
+     74,
+     81
+    ],
+    [
+     81,
+     89
+    ],
+    [
+     89,
+     96
+    ],
+    [
+     96,
+     106
+    ],
+    [
+     106,
+     117
+    ]
+   ]
+  },
+  {
+   "tpl": "pladder",
+   "p": {
+    "hi": "6",
+    "music": "hopeful"
+   },
+   "cap": "LEVEL 6",
+   "from": 5229,
+   "dur": 115,
+   "say": "Remember the ship that costs more than two container ships? This is it.",
+   "words": [
+    [
+     4,
+     11
+    ],
+    [
+     11,
+     19
+    ],
+    [
+     19,
+     25
+    ],
+    [
+     25,
+     30
+    ],
+    [
+     30,
+     37
+    ],
+    [
+     37,
+     43
+    ],
+    [
+     43,
+     47
+    ],
+    [
+     47,
+     54
+    ],
+    [
+     54,
+     62
+    ],
+    [
+     62,
+     74
+    ],
+    [
+     94,
+     100
+    ],
+    [
+     100,
+     104
+    ],
+    [
+     104,
+     110
+    ]
+   ]
+  },
+  {
+   "tpl": "tag",
+   "p": {
+    "subj": "yacht",
+    "price": "AZZAM",
+    "sub": "180_m_\u00b7_longest_private_yacht",
+    "tagcol": "white"
+   },
+   "cap": "",
+   "from": 5344,
+   "dur": 134,
+   "say": "Azzam is the longest private motor yacht in the world, at one hundred and eighty metres.",
+   "words": [
+    [
+     4,
+     13
+    ],
+    [
+     13,
+     17
+    ],
+    [
+     17,
+     21
+    ],
+    [
+     21,
+     28
+    ],
+    [
+     28,
+     40
+    ],
+    [
+     40,
+     48
+    ],
+    [
+     48,
+     54
+    ],
+    [
+     54,
+     58
+    ],
+    [
+     58,
+     61
+    ],
+    [
+     61,
+     70
+    ],
+    [
+     77,
+     80
+    ],
+    [
+     80,
+     88
+    ],
+    [
+     88,
+     95
+    ],
+    [
+     95,
+     103
+    ],
+    [
+     103,
+     111
+    ],
+    [
+     111,
+     118
+    ]
+   ]
+  },
+  {
+   "tpl": "tag",
+   "p": {
+    "subj": "yacht",
+    "price": "L\u00dcRSSEN_\u00b7_2013",
+    "sub": "built_in_Germany",
+    "tagcol": "white"
+   },
+   "cap": "",
+   "from": 5478,
+   "dur": 110,
+   "say": "It was built in Germany by L\u00fcrssen, delivered in 2013,",
+   "words": [
+    [
+     4,
+     8
+    ],
+    [
+     8,
+     11
+    ],
+    [
+     11,
+     17
+    ],
+    [
+     17,
+     22
+    ],
+    [
+     22,
+     31
+    ],
+    [
+     31,
+     39
+    ],
+    [
+     39,
+     46
+    ],
+    [
+     46,
+     53
+    ],
+    [
+     61,
+     69
+    ],
+    [
+     69,
+     76
+    ],
+    [
+     76,
+     95
+    ]
+   ]
+  },
+  {
+   "tpl": "tag",
+   "p": {
+    "subj": "yacht",
+    "price": "32_KNOTS",
+    "sub": "very_fast_for_its_size",
+    "tagcol": "white",
+    "speed": "1"
+   },
+   "cap": "",
+   "from": 5588,
+   "dur": 121,
+   "say": "and it can reach thirty-two knots, very fast for a ship that size.",
+   "words": [
+    [
+     5,
+     11
+    ],
+    [
+     11,
+     14
+    ],
+    [
+     14,
+     17
+    ],
+    [
+     17,
+     25
+    ],
+    [
+     25,
+     40
+    ],
+    [
+     40,
+     51
+    ],
+    [
+     63,
+     69
+    ],
+    [
+     69,
+     78
+    ],
+    [
+     78,
+     85
+    ],
+    [
+     85,
+     89
+    ],
+    [
+     89,
+     93
+    ],
+    [
+     93,
+     98
+    ],
+    [
+     98,
+     108
+    ]
+   ]
+  },
+  {
+   "tpl": "tag",
+   "p": {
+    "subj": "yacht",
+    "price": "$600,000,000",
+    "sub": "reported"
+   },
+   "cap": "",
+   "from": 5709,
+   "dur": 183,
+   "say": "Its price was never officially published, but it's widely reported at around six hundred million dollars.",
+   "words": [
+    [
+     5,
+     10
+    ],
+    [
+     10,
+     19
+    ],
+    [
+     19,
+     25
+    ],
+    [
+     25,
+     34
+    ],
+    [
+     34,
+     47
+    ],
+    [
+     47,
+     59
+    ],
+    [
+     70,
+     76
+    ],
+    [
+     76,
+     82
+    ],
+    [
+     82,
+     90
+    ],
+    [
+     90,
+     104
+    ],
+    [
+     104,
+     113
+    ],
+    [
+     113,
+     123
+    ],
+    [
+     123,
+     131
+    ],
+    [
+     131,
+     138
+    ],
+    [
+     138,
+     158
+    ],
+    [
+     158,
+     173
+    ]
+   ]
+  },
+  {
+   "tpl": "vsyacht",
+   "p": {
+    "mode": "scale"
+   },
+   "cap": "[2.5\u00d7]",
+   "from": 5892,
+   "dur": 158,
+   "say": "That's more than two of the biggest container ships, for a boat less than half as long.",
+   "words": [
+    [
+     4,
+     20
+    ],
+    [
+     20,
+     26
+    ],
+    [
+     26,
+     32
+    ],
+    [
+     32,
+     40
+    ],
+    [
+     40,
+     46
+    ],
+    [
+     46,
+     49
+    ],
+    [
+     49,
+     55
+    ],
+    [
+     55,
+     66
+    ],
+    [
+     66,
+     79
+    ],
+    [
+     79,
+     93
+    ],
+    [
+     93,
+     98
+    ],
+    [
+     98,
+     103
+    ],
+    [
+     103,
+     113
+    ],
+    [
+     113,
+     121
+    ],
+    [
+     121,
+     132
+    ],
+    [
+     132,
+     137
+    ],
+    [
+     137,
+     145
+    ]
+   ]
+  },
+  {
+   "tpl": "permetre",
+   "p": {
+    "mode": "box"
+   },
+   "cap": "PER METRE",
+   "from": 6050,
+   "dur": 134,
+   "say": "Per metre, a giant container ship costs about six hundred thousand dollars.",
+   "words": [
+    [
+     4,
+     8
+    ],
+    [
+     8,
+     14
+    ],
+    [
+     27,
+     31
+    ],
+    [
+     31,
+     41
+    ],
+    [
+     41,
+     50
+    ],
+    [
+     50,
+     59
+    ],
+    [
+     59,
+     71
+    ],
+    [
+     71,
+     80
+    ],
+    [
+     80,
+     94
+    ],
+    [
+     94,
+     109
+    ],
+    [
+     109,
+     124
+    ],
+    [
+     124,
+     138
+    ]
+   ]
+  },
+  {
+   "tpl": "permetre",
+   "p": {
+    "mode": "both"
+   },
+   "cap": "AZZAM: [$3.3M] / m",
+   "from": 6184,
+   "dur": 68,
+   "say": "Azzam costs more than three million.",
+   "words": [
+    [
+     4,
+     19
+    ],
+    [
+     19,
+     30
+    ],
+    [
+     30,
+     39
+    ],
+    [
+     39,
+     43
+    ],
+    [
+     43,
+     53
+    ],
+    [
+     53,
+     63
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "shock",
+    "bg": "paper",
+    "label": "5\u00d7!"
+   },
+   "cap": "",
+   "from": 6252,
+   "dur": 88,
+   "say": "Five times as much, for every metre.",
+   "words": [
+    [
+     4,
+     13
+    ],
+    [
+     13,
+     24
+    ],
+    [
+     24,
+     30
+    ],
+    [
+     30,
+     39
+    ],
+    [
+     39,
+     48
+    ],
+    [
+     48,
+     61
+    ],
+    [
+     61,
+     72
+    ]
+   ]
+  },
+  {
+   "tpl": "pladder",
+   "p": {
+    "hi": "7"
+   },
+   "cap": "LEVEL 7",
+   "from": 6340,
+   "dur": 99,
+   "say": "Now the biggest cruise ship in the world, Icon of the Seas.",
+   "words": [
+    [
+     5,
+     8
+    ],
+    [
+     8,
+     13
+    ],
+    [
+     13,
+     21
+    ],
+    [
+     21,
+     32
+    ],
+    [
+     32,
+     39
+    ],
+    [
+     39,
+     43
+    ],
+    [
+     43,
+     46
+    ],
+    [
+     46,
+     55
+    ],
+    [
+     66,
+     76
+    ],
+    [
+     76,
+     82
+    ],
+    [
+     82,
+     85
+    ],
+    [
+     85,
+     96
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "clipboard",
+    "bg": "paper",
+    "label": "JUNE_2021"
+   },
+   "cap": "",
+   "from": 6439,
+   "dur": 77,
+   "say": "Steel cutting started in June 2021,",
+   "words": [
+    [
+     4,
+     13
+    ],
+    [
+     13,
+     19
+    ],
+    [
+     19,
+     29
+    ],
+    [
+     29,
+     37
+    ],
+    [
+     37,
+     44
+    ],
+    [
+     44,
+     61
+    ]
+   ]
+  },
+  {
+   "tpl": "cruise",
+   "p": {},
+   "cap": "[900+] DAYS",
+   "from": 6516,
+   "dur": 157,
+   "say": "and it was delivered at the end of 2023, after just over nine hundred days of work.",
+   "words": [
+    [
+     5,
+     10
+    ],
+    [
+     10,
+     14
+    ],
+    [
+     14,
+     17
+    ],
+    [
+     17,
+     26
+    ],
+    [
+     26,
+     34
+    ],
+    [
+     34,
+     37
+    ],
+    [
+     37,
+     43
+    ],
+    [
+     43,
+     47
+    ],
+    [
+     47,
+     67
+    ],
+    [
+     86,
+     95
+    ],
+    [
+     95,
+     101
+    ],
+    [
+     101,
+     109
+    ],
+    [
+     109,
+     115
+    ],
+    [
+     115,
+     121
+    ],
+    [
+     121,
+     136
+    ],
+    [
+     136,
+     141
+    ],
+    [
+     141,
+     149
+    ]
+   ]
+  },
+  {
+   "tpl": "tag",
+   "p": {
+    "subj": "cruise",
+    "price": "$2,000,000,000",
+    "sub": "reported"
+   },
+   "cap": "",
+   "from": 6673,
+   "dur": 158,
+   "say": "Royal Caribbean never published an official price, but it's reported at around two billion dollars.",
+   "words": [
+    [
+     4,
+     13
+    ],
+    [
+     13,
+     25
+    ],
+    [
+     25,
+     34
+    ],
+    [
+     34,
+     46
+    ],
+    [
+     46,
+     51
+    ],
+    [
+     51,
+     59
+    ],
+    [
+     59,
+     72
+    ],
+    [
+     82,
+     86
+    ],
+    [
+     86,
+     91
+    ],
+    [
+     91,
+     100
+    ],
+    [
+     100,
+     109
+    ],
+    [
+     109,
+     119
+    ],
+    [
+     119,
+     131
+    ],
+    [
+     131,
+     141
+    ],
+    [
+     141,
+     152
+    ]
+   ]
+  },
+  {
+   "tpl": "cruise",
+   "p": {
+    "hotel": "1",
+    "cut": "1"
+   },
+   "cap": "A FLOATING CITY",
+   "from": 6831,
+   "dur": 88,
+   "say": "For that price, you get a floating city:",
+   "words": [
+    [
+     4,
+     14
+    ],
+    [
+     14,
+     20
+    ],
+    [
+     20,
+     31
+    ],
+    [
+     43,
+     46
+    ],
+    [
+     46,
+     50
+    ],
+    [
+     50,
+     54
+    ],
+    [
+     54,
+     62
+    ],
+    [
+     62,
+     75
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "cheer",
+    "bg": "paper",
+    "label": "SPLASH!"
+   },
+   "cap": "",
+   "from": 6919,
+   "dur": 161,
+   "say": "pools, water slides, restaurants, and room for thousands of guests.",
+   "words": [
+    [
+     4,
+     16
+    ],
+    [
+     27,
+     34
+    ],
+    [
+     34,
+     48
+    ],
+    [
+     58,
+     69
+    ],
+    [
+     82,
+     85
+    ],
+    [
+     85,
+     93
+    ],
+    [
+     93,
+     100
+    ],
+    [
+     100,
+     113
+    ],
+    [
+     113,
+     122
+    ],
+    [
+     122,
+     133
+    ]
+   ]
+  },
+  {
+   "tpl": "pladder",
+   "p": {
+    "hi": "8"
+   },
+   "cap": "LEVEL 8",
+   "from": 7080,
+   "dur": 85,
+   "say": "Then there are ships most people never see.",
+   "words": [
+    [
+     5,
+     10
+    ],
+    [
+     10,
+     16
+    ],
+    [
+     16,
+     19
+    ],
+    [
+     19,
+     28
+    ],
+    [
+     28,
+     40
+    ],
+    [
+     40,
+     51
+    ],
+    [
+     51,
+     61
+    ],
+    [
+     61,
+     73
+    ]
+   ]
+  },
+  {
+   "tpl": "sub",
+   "p": {},
+   "cap": "VIRGINIA CLASS",
+   "from": 7165,
+   "dur": 75,
+   "say": "An American Virginia-class attack submarine.",
+   "words": [
+    [
+     4,
+     9
+    ],
+    [
+     9,
+     19
+    ],
+    [
+     19,
+     40
+    ],
+    [
+     40,
+     52
+    ],
+    [
+     52,
+     62
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "clipboard",
+    "bg": "paper",
+    "label": "U.S._REPORT"
+   },
+   "cap": "",
+   "from": 7240,
+   "dur": 83,
+   "say": "According to the U.S. Congressional Research Service,",
+   "words": [
+    [
+     5,
+     15
+    ],
+    [
+     15,
+     22
+    ],
+    [
+     22,
+     25
+    ],
+    [
+     25,
+     30
+    ],
+    [
+     30,
+     34
+    ],
+    [
+     34,
+     51
+    ],
+    [
+     51,
+     60
+    ],
+    [
+     60,
+     74
+    ]
+   ]
+  },
+  {
+   "tpl": "tag",
+   "p": {
+    "subj": "sub",
+    "price": "$4,500,000,000+",
+    "sub": "each"
+   },
+   "cap": "",
+   "from": 7323,
+   "dur": 123,
+   "say": "each new one now costs around four and a half to five billion dollars.",
+   "words": [
+    [
+     5,
+     10
+    ],
+    [
+     10,
+     17
+    ],
+    [
+     17,
+     22
+    ],
+    [
+     22,
+     28
+    ],
+    [
+     28,
+     38
+    ],
+    [
+     38,
+     49
+    ],
+    [
+     49,
+     54
+    ],
+    [
+     54,
+     59
+    ],
+    [
+     59,
+     65
+    ],
+    [
+     65,
+     70
+    ],
+    [
+     70,
+     76
+    ],
+    [
+     76,
+     88
+    ],
+    [
+     88,
+     103
+    ],
+    [
+     103,
+     115
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "shock",
+    "bg": "paper",
+    "label": "2\u00d7_ICON!"
+   },
+   "cap": "",
+   "from": 7446,
+   "dur": 153,
+   "say": "That's more than two Icon of the Seas, for a ship that spends its life hidden underwater.",
+   "words": [
+    [
+     5,
+     20
+    ],
+    [
+     20,
+     25
+    ],
+    [
+     25,
+     31
+    ],
+    [
+     31,
+     38
+    ],
+    [
+     38,
+     50
+    ],
+    [
+     50,
+     55
+    ],
+    [
+     55,
+     58
+    ],
+    [
+     58,
+     70
+    ],
+    [
+     73,
+     82
+    ],
+    [
+     82,
+     85
+    ],
+    [
+     85,
+     89
+    ],
+    [
+     89,
+     94
+    ],
+    [
+     94,
+     103
+    ],
+    [
+     103,
+     108
+    ],
+    [
+     108,
+     115
+    ],
+    [
+     115,
+     125
+    ],
+    [
+     125,
+     141
+    ]
+   ]
+  },
+  {
+   "tpl": "sub",
+   "p": {
+    "cut": "1"
+   },
+   "cap": "NUCLEAR REACTOR",
+   "from": 7599,
+   "dur": 56,
+   "say": "Part of that price is its nuclear reactor.",
+   "words": [
+    [
+     5,
+     11
+    ],
+    [
+     11,
+     14
+    ],
+    [
+     14,
+     19
+    ],
+    [
+     19,
+     26
+    ],
+    [
+     26,
+     31
+    ],
+    [
+     31,
+     35
+    ],
+    [
+     35,
+     46
+    ],
+    [
+     46,
+     61
+    ]
+   ]
+  },
+  {
+   "tpl": "stat",
+   "p": {
+    "icon": "calendar",
+    "num": "30",
+    "unit": "YEARS",
+    "label": "no_refuelling,_ever",
+    "plus": "1"
+   },
+   "cap": "",
+   "from": 7655,
+   "dur": 211,
+   "say": "It's designed to run for the whole life of the submarine, more than thirty years, without ever being refuelled.",
+   "words": [
+    [
+     5,
+     27
+    ],
+    [
+     27,
+     38
+    ],
+    [
+     38,
+     46
+    ],
+    [
+     46,
+     53
+    ],
+    [
+     53,
+     57
+    ],
+    [
+     57,
+     61
+    ],
+    [
+     61,
+     70
+    ],
+    [
+     70,
+     80
+    ],
+    [
+     80,
+     84
+    ],
+    [
+     84,
+     88
+    ],
+    [
+     88,
+     101
+    ],
+    [
+     114,
+     119
+    ],
+    [
+     119,
+     125
+    ],
+    [
+     125,
+     133
+    ],
+    [
+     133,
+     144
+    ],
+    [
+     155,
+     161
+    ],
+    [
+     161,
+     173
+    ],
+    [
+     173,
+     182
+    ],
+    [
+     182,
+     204
+    ]
+   ]
+  },
+  {
+   "tpl": "pladder",
+   "p": {
+    "hi": "9"
+   },
+   "cap": "THE TOP",
+   "from": 7866,
+   "dur": 160,
+   "say": "And at the top: USS Gerald R. Ford, the most expensive warship ever built.",
+   "words": [
+    [
+     5,
+     10
+    ],
+    [
+     10,
+     14
+    ],
+    [
+     14,
+     17
+    ],
+    [
+     17,
+     26
+    ],
+    [
+     37,
+     49
+    ],
+    [
+     49,
+     60
+    ],
+    [
+     60,
+     69
+    ],
+    [
+     75,
+     79
+    ],
+    [
+     92,
+     95
+    ],
+    [
+     95,
+     100
+    ],
+    [
+     100,
+     114
+    ],
+    [
+     114,
+     133
+    ],
+    [
+     133,
+     140
+    ],
+    [
+     140,
+     150
+    ]
+   ]
+  },
+  {
+   "tpl": "tag",
+   "p": {
+    "subj": "carrier",
+    "price": "$13,000,000,000",
+    "big": "1"
+   },
+   "cap": "",
+   "from": 8026,
+   "dur": 93,
+   "say": "Its construction cost is about thirteen billion dollars.",
+   "words": [
+    [
+     4,
+     9
+    ],
+    [
+     9,
+     26
+    ],
+    [
+     26,
+     37
+    ],
+    [
+     37,
+     44
+    ],
+    [
+     44,
+     51
+    ],
+    [
+     51,
+     65
+    ],
+    [
+     65,
+     76
+    ],
+    [
+     76,
+     87
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "worried",
+    "bg": "paper",
+    "label": "+_BILLIONS"
+   },
+   "cap": "",
+   "from": 8119,
+   "dur": 115,
+   "say": "On top of that, billions more were spent designing the new class.",
+   "words": [
+    [
+     4,
+     9
+    ],
+    [
+     9,
+     15
+    ],
+    [
+     15,
+     19
+    ],
+    [
+     19,
+     25
+    ],
+    [
+     37,
+     43
+    ],
+    [
+     43,
+     55
+    ],
+    [
+     55,
+     60
+    ],
+    [
+     60,
+     65
+    ],
+    [
+     65,
+     82
+    ],
+    [
+     82,
+     88
+    ],
+    [
+     88,
+     93
+    ],
+    [
+     93,
+     103
+    ]
+   ]
+  },
+  {
+   "tpl": "carrier",
+   "p": {},
+   "cap": "337 m \u00b7 100,000 t",
+   "from": 8234,
+   "dur": 160,
+   "say": "It's three hundred and thirty-seven metres long, weighs about one hundred thousand tonnes,",
+   "words": [
+    [
+     4,
+     12
+    ],
+    [
+     12,
+     24
+    ],
+    [
+     24,
+     35
+    ],
+    [
+     35,
+     47
+    ],
+    [
+     47,
+     58
+    ],
+    [
+     58,
+     69
+    ],
+    [
+     69,
+     83
+    ],
+    [
+     97,
+     102
+    ],
+    [
+     102,
+     112
+    ],
+    [
+     112,
+     121
+    ],
+    [
+     121,
+     131
+    ],
+    [
+     131,
+     140
+    ],
+    [
+     140,
+     150
+    ]
+   ]
+  },
+  {
+   "tpl": "stat",
+   "p": {
+    "icon": "navy",
+    "num": "4500",
+    "unit": "PEOPLE",
+    "label": "+_75_aircraft",
+    "pre": "\u2248"
+   },
+   "cap": "",
+   "from": 8394,
+   "dur": 158,
+   "say": "and carries more than seventy-five aircraft and around four and a half thousand people.",
+   "words": [
+    [
+     5,
+     10
+    ],
+    [
+     10,
+     19
+    ],
+    [
+     19,
+     28
+    ],
+    [
+     28,
+     34
+    ],
+    [
+     34,
+     52
+    ],
+    [
+     52,
+     71
+    ],
+    [
+     88,
+     94
+    ],
+    [
+     94,
+     101
+    ],
+    [
+     101,
+     106
+    ],
+    [
+     106,
+     110
+    ],
+    [
+     110,
+     114
+    ],
+    [
+     114,
+     118
+    ],
+    [
+     118,
+     122
+    ],
+    [
+     122,
+     145
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "think",
+    "bg": "paper",
+    "label": "\u00f7_100,000_t"
+   },
+   "cap": "",
+   "from": 8552,
+   "dur": 54,
+   "say": "Divide the price by its weight,",
+   "words": [
+    [
+     4,
+     18
+    ],
+    [
+     18,
+     24
+    ],
+    [
+     24,
+     33
+    ],
+    [
+     33,
+     40
+    ],
+    [
+     40,
+     45
+    ],
+    [
+     45,
+     52
+    ]
+   ]
+  },
+  {
+   "tpl": "kilo",
+   "p": {},
+   "cap": "[$130] PER KILO",
+   "from": 8606,
+   "dur": 137,
+   "say": "and every single kilogram of this ship cost about one hundred and thirty dollars.",
+   "words": [
+    [
+     4,
+     17
+    ],
+    [
+     17,
+     24
+    ],
+    [
+     24,
+     31
+    ],
+    [
+     31,
+     39
+    ],
+    [
+     39,
+     51
+    ],
+    [
+     51,
+     56
+    ],
+    [
+     56,
+     63
+    ],
+    [
+     63,
+     74
+    ],
+    [
+     74,
+     81
+    ],
+    [
+     81,
+     86
+    ],
+    [
+     86,
+     90
+    ],
+    [
+     90,
+     94
+    ],
+    [
+     94,
+     99
+    ],
+    [
+     99,
+     103
+    ]
+   ]
+  },
+  {
+   "tpl": "fleet",
+   "p": {},
+   "cap": "[54] CONTAINER SHIPS",
+   "from": 8743,
+   "dur": 167,
+   "say": "For the price of this one ship, you could buy more than fifty of the biggest container ships in the world.",
+   "words": [
+    [
+     4,
+     17
+    ],
+    [
+     17,
+     21
+    ],
+    [
+     21,
+     28
+    ],
+    [
+     28,
+     33
+    ],
+    [
+     33,
+     37
+    ],
+    [
+     37,
+     43
+    ],
+    [
+     43,
+     51
+    ],
+    [
+     60,
+     63
+    ],
+    [
+     63,
+     67
+    ],
+    [
+     67,
+     73
+    ],
+    [
+     73,
+     79
+    ],
+    [
+     79,
+     84
+    ],
+    [
+     84,
+     95
+    ],
+    [
+     95,
+     101
+    ],
+    [
+     101,
+     104
+    ],
+    [
+     104,
+     111
+    ],
+    [
+     111,
+     122
+    ],
+    [
+     122,
+     130
+    ],
+    [
+     130,
+     136
+    ],
+    [
+     136,
+     139
+    ],
+    [
+     139,
+     148
+    ]
+   ]
+  },
+  {
+   "tpl": "pladder",
+   "p": {
+    "hi": "10"
+   },
+   "cap": "[$2,000] \u2192 [$13 BILLION]",
+   "from": 8910,
+   "dur": 126,
+   "say": "So from a two-thousand-dollar fishing boat to a thirteen-billion-dollar carrier,",
+   "words": [
+    [
+     4,
+     10
+    ],
+    [
+     10,
+     16
+    ],
+    [
+     16,
+     19
+    ],
+    [
+     19,
+     35
+    ],
+    [
+     35,
+     47
+    ],
+    [
+     47,
+     55
+    ],
+    [
+     55,
+     67
+    ],
+    [
+     67,
+     71
+    ],
+    [
+     71,
+     95
+    ],
+    [
+     95,
+     115
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "count",
+    "bg": "paper"
+   },
+   "cap": "COLD \u00b7 LUXURY \u00b7 WAR = [$$$]",
+   "from": 9036,
+   "dur": 184,
+   "say": "ships cost what their job demands: size is cheap, but cold, luxury, and war are expensive.",
+   "words": [
+    [
+     5,
+     12
+    ],
+    [
+     12,
+     23
+    ],
+    [
+     23,
+     30
+    ],
+    [
+     30,
+     34
+    ],
+    [
+     34,
+     42
+    ],
+    [
+     42,
+     55
+    ],
+    [
+     69,
+     80
+    ],
+    [
+     80,
+     90
+    ],
+    [
+     90,
+     100
+    ],
+    [
+     111,
+     119
+    ],
+    [
+     119,
+     128
+    ],
+    [
+     137,
+     143
+    ],
+    [
+     151,
+     151
+    ],
+    [
+     151,
+     157
+    ],
+    [
+     157,
+     163
+    ],
+    [
+     163,
+     173
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "point",
+    "bg": "paper",
+    "label": "TO_HIRE?"
+   },
+   "cap": "",
+   "from": 9220,
+   "dur": 65,
+   "say": "And buying a ship is only the start.",
+   "words": [
+    [
+     5,
+     10
+    ],
+    [
+     10,
+     20
+    ],
+    [
+     20,
+     25
+    ],
+    [
+     25,
+     30
+    ],
+    [
+     30,
+     36
+    ],
+    [
+     36,
+     41
+    ],
+    [
+     41,
+     46
+    ],
+    [
+     46,
+     54
+    ]
+   ]
+  },
+  {
+   "tpl": "endhire",
+   "p": {},
+   "cap": "",
+   "from": 9285,
+   "dur": 175,
+   "say": "If you want to know what it costs just to hire one, watch this video next.",
+   "words": [
+    [
+     5,
+     9
+    ],
+    [
+     9,
+     14
+    ],
+    [
+     14,
+     19
+    ],
+    [
+     19,
+     22
+    ],
+    [
+     22,
+     25
+    ],
+    [
+     25,
+     29
+    ],
+    [
+     29,
+     32
+    ],
+    [
+     32,
+     42
+    ],
+    [
+     42,
+     55
+    ],
+    [
+     55,
+     61
+    ],
+    [
+     61,
+     67
+    ],
+    [
+     67,
+     75
+    ],
+    [
+     86,
+     91
+    ],
+    [
+     91,
+     98
+    ],
+    [
+     98,
+     106
+    ],
+    [
+     106,
+     116
+    ]
+   ]
+  }
+ ]
+}

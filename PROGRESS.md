@@ -423,3 +423,12 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
 - GATE passed 2026-11-13: owner approved script v1. Next: owner records voice (CapCut, narration.txt).
 - ERRATUM found for #2 (engines): narration says the 600 hp V12 outboard "weighs about as much as a small car"; it is
   ~570 kg (about half a small car). Not yet fixed in `ship-engines-final.mp4` (needs one re-voiced line + re-render).
+- 2026-11-13: owner sent the CapCut voice for #4 (5:14, clean) and asked: "make it engaging, keep the music light, use
+  sfx, retention to maximum" (saved as a standing rule in memory). Built for retention: 83 beats (avg 3.8 s, max 7 s),
+  animated Ship Guy host (`guy` from templates3) on talking lines + climbing the price ladder, a swinging price tag with
+  ka-ching on every price, light/hopeful music only, 199 sound events (was 83 on #2). New `engine/shipguy/templates4.tsx`
+  (tag, pladder, vsyacht, permetre, stack, factory, listing, cold, slot, sub, kilo, fleet, endhire); `tools/shipguy_words.py`
+  (permanent word-timing tool; the old one lived in .cache/tmp and got cleaned). Storyboard:
+  `videos/2026-11-13-ship-cost/storyboard/`. GATE: waiting for owner OK -> 60 s test.
+- NOTE for the Ever Given session: TEMPLATES3 registers `bridge`, which replaces Seawise Giant's `bridge` scene; re-rendering
+  Seawise Giant would now show the Ever Given bridge for beats 13 and 36.

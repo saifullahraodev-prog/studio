@@ -131,7 +131,7 @@ export const Boat: React.FC<{ s?: number; motor?: number }> = ({ s = 1, motor = 
 );
 
 /** Harbour tug, side view, waterline at (0,0), bow right. */
-const TugArt: React.FC<{ s?: number }> = ({ s = 1 }) => (
+export const TugArt: React.FC<{ s?: number }> = ({ s = 1 }) => (
   <g transform={`scale(${s})`}>
     <path d="M0 -60 L330 -60 Q380 -60 400 -20 L380 40 L30 40 Q0 40 0 0 Z" fill="#d94a3a" {...ink} />
     <rect x={0} y={-60} width={400} height={20} fill="#2b2b30" />
@@ -144,7 +144,7 @@ const TugArt: React.FC<{ s?: number }> = ({ s = 1 }) => (
 );
 
 /** Car (side), bottom-left at (0,0), `s` scale (~90 px long). */
-const Car: React.FC<{ s?: number; c?: string }> = ({ s = 1, c = "#3b8fd9" }) => (
+export const Car: React.FC<{ s?: number; c?: string }> = ({ s = 1, c = "#3b8fd9" }) => (
   <g transform={`scale(${s})`}>
     <path d="M0 -14 L10 -30 L28 -40 L62 -40 L78 -28 L92 -24 L92 -6 L0 -6 Z" fill={c} stroke={INK} strokeWidth={3} />
     <circle cx={22} cy={-6} r={8} fill={INK} /><circle cx={72} cy={-6} r={8} fill={INK} />
@@ -178,7 +178,7 @@ const DestroyerArt: React.FC<{ w: number }> = ({ w }) => (
 );
 
 /** Cruise ship, waterline at (0,0), `w` long. */
-const CruiseArt: React.FC<{ w: number }> = ({ w }) => (
+export const CruiseArt: React.FC<{ w: number }> = ({ w }) => (
   <g>
     <path d={`M0 -${w * 0.07} L${w * 0.95} -${w * 0.07} Q${w * 1.01} -${w * 0.08} ${w * 1.02} -${w * 0.12} L${w * 0.96} ${w * 0.06} L${w * 0.03} ${w * 0.06} Q0 ${w * 0.06} 0 0 Z`} fill="#1f3a5f" {...ink} />
     {Array.from({ length: 6 }).map((_, k) => (
@@ -194,7 +194,7 @@ const CruiseArt: React.FC<{ w: number }> = ({ w }) => (
 );
 
 /** Aircraft carrier, waterline at (0,0), `w` long, bow right. */
-const CarrierArt: React.FC<{ w: number }> = ({ w }) => (
+export const CarrierArt: React.FC<{ w: number }> = ({ w }) => (
   <g>
     <path d={`M0 -${w * 0.045} L${w} -${w * 0.06} L${w * 0.95} ${w * 0.035} L${w * 0.03} ${w * 0.035} Z`} fill="#7f8a95" {...ink} />
     <rect x={-w * 0.02} y={-w * 0.075} width={w * 1.04} height={w * 0.022} fill="#5f6a74" {...ink} strokeWidth={5} />
@@ -209,7 +209,7 @@ const CarrierArt: React.FC<{ w: number }> = ({ w }) => (
 );
 
 /** Container ship (Emma Maersk-like), waterline at (0,0), `w` long, bow right. */
-const BoxShip: React.FC<{ w: number }> = ({ w }) => {
+export const BoxShip: React.FC<{ w: number; name?: string }> = ({ w, name = "EMMA MÆRSK" }) => {
   const cols = ["#e8352b", "#3b8fd9", "#4fb06a", "#e0a12a", "#8e44ad", "#f4f1e8"];
   return (
     <g>
@@ -223,12 +223,12 @@ const BoxShip: React.FC<{ w: number }> = ({ w }) => {
       })}
       <rect x={w * 0.66} y={-w * 0.2} width={w * 0.04} height={w * 0.14} fill="#f4f1e8" {...ink} strokeWidth={4} />
       <rect x={w * 0.62} y={-w * 0.215} width={w * 0.12} height={w * 0.02} fill="#f4f1e8" {...ink} strokeWidth={4} />
-      <text x={w * 0.5} y={-w * 0.015} fontFamily={fontFamily} fontWeight={700} fontSize={w * 0.025} fill="#fff" textAnchor="middle">EMMA MÆRSK</text>
+      <text x={w * 0.5} y={-w * 0.015} fontFamily={fontFamily} fontWeight={700} fontSize={w * 0.025} fill="#fff" textAnchor="middle">{name}</text>
     </g>
   );
 };
 
-const Prop: React.FC<{ r: number; a: number }> = ({ r, a }) => (
+export const Prop: React.FC<{ r: number; a: number }> = ({ r, a }) => (
   <g transform={`rotate(${a})`}>
     {[0, 1, 2, 3, 4].map((i) => <ellipse key={i} cx={0} cy={-r * 0.55} rx={r * 0.3} ry={r * 0.55} fill="#d9a441" {...ink} strokeWidth={5} transform={`rotate(${i * 72})`} />)}
     <circle r={r * 0.2} fill="#c8902e" {...ink} strokeWidth={5} />
