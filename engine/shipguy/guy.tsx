@@ -18,7 +18,8 @@ export type Brows = "none" | "up" | "worried" | "angry" | "one";
 export type Mouth = "smile" | "grin" | "smirk" | "flat" | "o" | "scream" | "frown" | "wavy" | "teeth";
 export type Face = { eyes: Eyes; brows: Brows; mouth: Mouth; lookX?: number; lookY?: number };
 export type Hand = "mitt" | "open" | "point" | "thumb";
-export type PropName = "clipboard" | "mug" | "spade" | "none";
+export type PropName = "clipboard" | "mug" | "spade" | "phone" | "hammer" | "rod" | "none";
+export type Outfit = "ship" | "pilot" | "captain";
 export type Emote = "sweat" | "!" | "?" | "steam" | "stars" | "idea";
 
 export const IDLE: Pose = { lean: 0, tilt: 0, hipX: 0, hipY: 0, squash: 0, armL: [14, 8], armR: [14, 8], legL: [-5, 0], legR: [5, 0] };
@@ -113,6 +114,13 @@ export const blinking = (t: number, seed = 0) => {
   return c < 4 || (seed % 3 === 0 && c > 9 && c < 12);
 };
 
+/** Mouth openness from real spoken-word spans [[f0,f1],...] (frames in the shot): moves only while the voice speaks. */
+export const talkFrom = (t: number, words?: number[][]) => {
+  if (!words) return 0;
+  for (const [a, b] of words) if (t >= a && t <= b + 1) { const k = (t - a) / Math.max(2, b - a + 1); return 0.35 + 0.65 * Math.sin(Math.min(1, k) * Math.PI) * (0.6 + 0.4 * Math.sin(t * 1.1)); }
+  return 0;
+};
+
 /** Mouth openness 0..1 while speaking (procedural; the video drives it from the voice word timings). */
 export const chatter = (t: number) => Math.max(0, Math.sin(t * 0.6) * 0.55 + Math.sin(t * 1.3 + 1) * 0.3);
 
@@ -167,6 +175,26 @@ const Held: React.FC<{ prop: PropName; x: number; y: number }> = ({ prop, x, y }
       <path d="M44 14 q 22 4 16 22 q -4 12 -18 10" fill="none" stroke={INK} strokeWidth={7} />
       <rect x={0} y={0} width={48} height={56} rx={8} fill="#3d78c4" stroke={INK} strokeWidth={6} />
       <path d="M14 -10 q 6 -10 0 -20 M30 -10 q 6 -10 0 -20" stroke="#a9b6c2" strokeWidth={4} fill="none" strokeLinecap="round" />
+    </g>
+  );
+  if (prop === "phone") return (
+    <g transform={`translate(${x - 30} ${y - 96}) rotate(-8)`}>
+      <rect x={0} y={0} width={64} height={112} rx={10} fill="#2a2d33" stroke={INK} strokeWidth={6} />
+      <rect x={7} y={10} width={50} height={86} rx={4} fill="#8fd0f0" />
+      <rect x={12} y={52} width={40} height={30} fill="#2f7d4a" />
+      <rect x={14} y={70} width={10} height={8} fill="#ffd23f" />
+    </g>
+  );
+  if (prop === "hammer") return (
+    <g transform={`translate(${x} ${y}) rotate(-30)`}>
+      <line x1={0} y1={30} x2={0} y2={-90} stroke="#8a5a2b" strokeWidth={12} strokeLinecap="round" />
+      <rect x={-34} y={-118} width={68} height={32} rx={6} fill="#7d8790" stroke={INK} strokeWidth={6} />
+    </g>
+  );
+  if (prop === "rod") return (
+    <g transform={`translate(${x} ${y})`}>
+      <line x1={0} y1={10} x2={260} y2={-200} stroke="#8a5a2b" strokeWidth={8} strokeLinecap="round" />
+      <path d="M260 -200 Q 300 -40 290 260" stroke="#5c6670" strokeWidth={3} fill="none" />
     </g>
   );
   if (prop === "spade") return (
@@ -289,12 +317,12 @@ export type GuyProps = {
   handL?: Hand; handR?: Hand; prop?: PropName;
   hat?: { dx: number; dy: number; rot: number }; // hat offset (pop-off gag); undefined = on the head
   emote?: Emote; emoteT?: number; boil?: boolean; shadow?: boolean; feet?: "out" | "fwd";
-  id?: string;
+  outfit?: Outfit; id?: string;
 };
 
 export const Guy: React.FC<GuyProps> = ({
   x, y, s = 1, flip, t, pose = IDLE, face = FACES.happy, talk = 0, blink, handL = "mitt", handR = "mitt",
-  prop = "none", hat, emote, emoteT = 0, boil = true, shadow = true, feet = "out", id = "guy",
+  prop = "none", hat, emote, emoteT = 0, boil = true, shadow = true, feet = "out", outfit = "ship", id = "guy",
 }) => {
   const p = pose;
   const sq = p.squash; // + = squashed (wider, shorter), - = stretched
@@ -356,19 +384,55 @@ export const Guy: React.FC<GuyProps> = ({
         {/* vest */}
         <g transform={`translate(${nx} ${ny}) rotate(${torsoRot})`}>
           <line x1={0} y1={0} x2={0} y2={TORSO} stroke={INK} strokeWidth={LIMB} />
-          <path d="M-52 6 Q -60 80 -64 150 Q -30 166 0 160 Q 30 166 64 150 Q 60 80 52 6 Q 0 -6 -52 6 Z" fill={ORANGE} stroke={INK} strokeWidth={7} strokeLinejoin="round" />
-          <path d="M28 10 Q 50 80 54 148 Q 60 150 64 150 Q 60 80 52 6 Z" fill={ORANGE_D} />
-          <path d="M-60 92 Q 0 102 60 92 L 61 112 Q 0 122 -61 112 Z" fill={STRIPE} stroke={INK} strokeWidth={3} />
-          <path d="M-63 126 Q 0 136 63 126 L 64 140 Q 0 150 -64 140 Z" fill={STRIPE} stroke={INK} strokeWidth={3} />
-          <path d="M-30 4 L -8 60 L -20 158 M30 4 L 8 60 L 20 158" stroke={STRIPE} strokeWidth={9} fill="none" />
-          <path d="M-30 4 L -8 60 L -20 158 M30 4 L 8 60 L 20 158" stroke={INK} strokeWidth={3} fill="none" />
-          <path d="M-22 4 L 0 46 L 22 4" fill={SKIN} stroke={INK} strokeWidth={5} strokeLinejoin="round" />
+          {outfit === "ship" ? (
+            <g>
+              <path d="M-52 6 Q -60 80 -64 150 Q -30 166 0 160 Q 30 166 64 150 Q 60 80 52 6 Q 0 -6 -52 6 Z" fill={ORANGE} stroke={INK} strokeWidth={7} strokeLinejoin="round" />
+              <path d="M28 10 Q 50 80 54 148 Q 60 150 64 150 Q 60 80 52 6 Z" fill={ORANGE_D} />
+              <path d="M-60 92 Q 0 102 60 92 L 61 112 Q 0 122 -61 112 Z" fill={STRIPE} stroke={INK} strokeWidth={3} />
+              <path d="M-63 126 Q 0 136 63 126 L 64 140 Q 0 150 -64 140 Z" fill={STRIPE} stroke={INK} strokeWidth={3} />
+              <path d="M-30 4 L -8 60 L -20 158 M30 4 L 8 60 L 20 158" stroke={STRIPE} strokeWidth={9} fill="none" />
+              <path d="M-30 4 L -8 60 L -20 158 M30 4 L 8 60 L 20 158" stroke={INK} strokeWidth={3} fill="none" />
+              <path d="M-22 4 L 0 46 L 22 4" fill={SKIN} stroke={INK} strokeWidth={5} strokeLinejoin="round" />
+            </g>
+          ) : outfit === "pilot" ? (
+            <g>
+              <path d="M-52 6 Q -60 80 -62 150 Q 0 166 62 150 Q 60 80 52 6 Q 0 -6 -52 6 Z" fill="#f2f4f6" stroke={INK} strokeWidth={7} strokeLinejoin="round" />
+              <path d="M30 10 Q 50 80 52 148 L 62 150 Q 60 80 52 6 Z" fill="#c9d3dc" />
+              <path d="M-20 4 L 0 30 L 20 4" fill="none" stroke={INK} strokeWidth={5} strokeLinejoin="round" />
+              <path d="M0 30 L -9 44 L 0 110 L 9 44 Z" fill="#2c4a7a" stroke={INK} strokeWidth={4} strokeLinejoin="round" />
+              <rect x={-58} y={20} width={22} height={9} fill="#e0b13a" stroke={INK} strokeWidth={3} />
+              <rect x={36} y={20} width={22} height={9} fill="#e0b13a" stroke={INK} strokeWidth={3} />
+            </g>
+          ) : (
+            <g>
+              <path d="M-52 6 Q -60 80 -64 152 Q 0 168 64 152 Q 60 80 52 6 Q 0 -6 -52 6 Z" fill="#22324f" stroke={INK} strokeWidth={7} strokeLinejoin="round" />
+              <path d="M-22 4 L 0 52 L 22 4" fill="#f2f4f6" stroke={INK} strokeWidth={5} strokeLinejoin="round" />
+              {[70, 102, 134].map((yy) => <circle key={yy} cx={0} cy={yy} r={6} fill="#e0b13a" stroke={INK} strokeWidth={3} />)}
+              {[-1, 1].map((sd) => <path key={sd} d={`M${sd * 40} 150 h ${sd * 18} M${sd * 40} 140 h ${sd * 18}`} stroke="#e0b13a" strokeWidth={5} />)}
+            </g>
+          )}
         </g>
         {R.line}
         {/* head + face + hat */}
         <g transform={`translate(${hx} ${hy}) rotate(${headRot})`}>
           <circle r={HEAD_R} fill={boil ? `url(#${id}-head)` : SKIN} stroke={INK} strokeWidth={8} />
           <FaceArt face={face} blink={blink ?? blinking(t)} talk={talk} />
+          {outfit === "pilot" && (
+            <g transform={`translate(${hatT.dx} ${hatT.dy}) rotate(${hatT.rot - 6} 0 -70)`}>
+              <path d="M-98 -60 C -100 -130, 96 -136, 100 -60 Z" fill="#2c4a7a" stroke={INK} strokeWidth={7} strokeLinejoin="round" />
+              <path d="M-20 -128 C -40 -110, -40 -80, -30 -64" stroke="#4d6fa6" strokeWidth={10} fill="none" strokeLinecap="round" />
+              <path d="M10 -60 Q 90 -66 150 -44 Q 90 -34 10 -46 Z" fill="#1d2f4f" stroke={INK} strokeWidth={6} strokeLinejoin="round" />
+            </g>
+          )}
+          {outfit === "captain" && (
+            <g transform={`translate(${hatT.dx} ${hatT.dy}) rotate(${hatT.rot - 4} 0 -70)`}>
+              <path d="M-112 -96 Q -110 -150 0 -154 Q 110 -150 112 -96 Q 0 -80 -112 -96 Z" fill="#f4f6f8" stroke={INK} strokeWidth={7} strokeLinejoin="round" />
+              <path d="M-90 -92 L -86 -66 Q 0 -56 86 -66 L 90 -92 Q 0 -80 -90 -92 Z" fill="#1d2f4f" stroke={INK} strokeWidth={6} strokeLinejoin="round" />
+              <path d="M-80 -64 Q 0 -30 80 -64 Q 0 -54 -80 -64 Z" fill={INK} />
+              <circle cx={0} cy={-102} r={14} fill="#e0b13a" stroke={INK} strokeWidth={4} />
+            </g>
+          )}
+          {outfit === "ship" && (
           <g transform={`translate(${hatT.dx} ${hatT.dy}) rotate(${hatT.rot - 8} 0 -70)`}>
             <path d="M-104 -56 C -110 -140, -60 -180, 4 -182 C 70 -180, 114 -140, 106 -56 Z" fill={HAT} stroke={INK} strokeWidth={7} strokeLinejoin="round" />
             <path d="M52 -166 C 88 -146, 104 -110, 104 -62 L 66 -62 C 72 -100, 68 -136, 52 -166 Z" fill={HAT_D} opacity={0.75} />
@@ -377,6 +441,7 @@ export const Guy: React.FC<GuyProps> = ({
             <path d="M-122 -52 Q -124 -72 -100 -68 L 108 -68 Q 130 -72 128 -52 Q 4 -40 -122 -52 Z" fill={HAT} stroke={INK} strokeWidth={7} strokeLinejoin="round" />
             <path d="M-98 -54 Q 4 -46 106 -54" stroke={HAT_D} strokeWidth={5} fill="none" />
           </g>
+          )}
         </g>
         {L.hand}
         {R.hand}

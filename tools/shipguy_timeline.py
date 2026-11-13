@@ -49,13 +49,16 @@ def main(vdir: str, slug: str):
         seg = al[k:k + n]
         k += n
         b["voiceStart"], b["voiceEnd"] = seg[0][1], seg[-1][2]
+        b["wordTimes"] = [(w[1], w[2]) for w in seg]
     lead = 0.15  # cut a little before the first word of the beat
     out = []
     for i, b in enumerate(beats):
         start = 0.0 if i == 0 else b["voiceStart"] - lead
         end = beats[i + 1]["voiceStart"] - lead if i + 1 < len(beats) else total + 1.5
         f0, f1 = round(start * FPS), round(end * FPS)
-        out.append({"tpl": b["tpl"], "p": b["p"], "cap": b["cap"], "from": f0, "dur": max(1, f1 - f0), "say": b["say"]})
+        # spoken word spans in frames relative to the beat start (drives the Ship Guy's mouth)
+        words = [[round(s * FPS) - f0, round(e * FPS) - f0] for s, e in b["wordTimes"]]
+        out.append({"tpl": b["tpl"], "p": b["p"], "cap": b["cap"], "from": f0, "dur": max(1, f1 - f0), "say": b["say"], "words": words})
     pub = ROOT / "public" / "shipguy" / slug
     pub.mkdir(parents=True, exist_ok=True)
     shutil.copy(vd / "voice.wav", pub / "voice.wav")

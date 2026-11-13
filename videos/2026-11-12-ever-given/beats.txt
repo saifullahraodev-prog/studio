@@ -29,7 +29,7 @@ map mode=suezzoom || || The fastest way from Asia to Europe goes through one nar
 # --- 2. The world's most important ditch
 map mode=suez corner=point || [1869] || The Suez Canal cuts through Egypt and joins the Red Sea to the Mediterranean. It opened in eighteen sixty-nine.
 map mode=cape corner=think || + UP TO [2 WEEKS] || Without it, a ship from Asia to Europe has to sail all the way around Africa, past the Cape of Good Hope. That can add up to two weeks to the trip.
-stat icon=globe value=12% label=OF_SEA_TRADE corner=point || [~12%] OF SEA TRADE || So a huge share of world trade goes through here. Estimates are around twelve percent of everything traded by sea.
+money mode=pct corner=point || [~12%] OF SEA TRADE || So a huge share of world trade goes through here. Estimates are around twelve percent of everything traded by sea.
 guy act=fingerup bg=paper || || But here's the thing.
 canal state=convoy cam=far lanes=1 || [193 KM] · ONE LANE || The canal is about a hundred and ninety-three kilometres long, and for big parts of it, it's only one lane. Ships can't pass each other there.
 canal state=convoy cam=mid || CONVOYS || So they travel in convoys, one behind the other, like cars through roadworks. One convoy goes north, then one goes south.
@@ -86,7 +86,7 @@ side scene=tide || SPRING TIDE || That gives extra-high tides, called spring tid
 canal state=wedged cam=mid tugs=13 work=1 || DAY AFTER DAY || Day after day, they dug, pulled and pushed. The bow thrusters ran. The tugs pulled from different angles.
 canal state=sternfree cam=mid tugs=13 night=1 || [04:30] · STERN FREE || Then, very early on Monday the twenty-ninth of March, at about four thirty in the morning, the stern came free.
 canal state=sternfree cam=close tugs=13 || BOW STILL STUCK || The bow was still stuck. But the team kept going as the tide came up again.
-canal state=free cam=wide tugs=13 music=win corner=cheer || [15:05] · FREE! || And at five past three in the afternoon, Ever Given finally floated free.
+canal state=free cam=wide tugs=13 music=hopeful corner=cheer || [15:05] · FREE! || And at five past three in the afternoon, Ever Given finally floated free.
 side scene=cheer guy=cheer || || Tugboats blew their horns. People on the banks cheered.
 canal state=moving cam=far || CANAL OPEN || After six days, the Suez Canal was open again. Ships started moving that same evening.
 # --- 7. So why did it happen?
@@ -120,4 +120,4 @@ side scene=repaired guy=fix || BACK AT WORK || And Ever Given? It was repaired, 
 side scene=sailing guy=wave || STILL SAILING || It's still sailing today, still carrying twenty thousand containers between Asia and Europe. Through the Suez Canal.
 canal state=convoy cam=far dusk=1 || || One ship, one gust of wind, one bend in a ditch in the desert.
 guy act=relax bg=canalbank || || And for six days, it showed the whole world just how much depends on a shortcut most people had never thought about.
-endcard video=seawise || || If you want to see the biggest ship ever built, a ship so big it couldn't even fit through the Suez Canal, that video is right here.
+endcard2 || || If you want to see the biggest ship ever built, a ship so big it couldn't even fit through the Suez Canal, that video is right here.

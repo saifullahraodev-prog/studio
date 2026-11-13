@@ -61,7 +61,7 @@ def main(slug: str):
             ev.append((t0 + 1.2, "impact", 0.9))
         if tpl == "sea" and p.get("state") == "fire":
             ev.append((t0, "fire_bed", 0.5, b["dur"] / fps))
-        if p.get("stamp"):
+        if p.get("stamp") and p.get("stamp") != "0":
             ev.append((t0 + b["dur"] / fps * 0.15, "stamp", 0.9))
         if tpl == "stat":
             ev.append((t0 + 0.15, "riser", 0.4)); ev.append((t0 + 1.15, "pop", 0.8))
@@ -71,6 +71,34 @@ def main(slug: str):
             ev.append((t0, "crunch", 0.5))
         if tpl == "lengthen" and p.get("phase") == "3":
             ev.append((t0 + 0.2, "ding", 0.5))
+        # --- Ever Given templates (video #3)
+        sec = b["dur"] / fps
+        if tpl == "canal" and p.get("impact") == "1":
+            ev.append((t0 + 0.1, "impact", 0.8))
+        if tpl == "canal" and p.get("state") == "free":
+            ev.append((t0 + sec * 0.5, "ding", 0.5))
+        if tpl == "bridge" and p.get("act") == "impact":
+            ev.append((t0 + 0.4, "impact", 0.9)); ev.append((t0 + 0.9, "crunch", 0.5))
+        if tpl == "dial":
+            ev.append((t0 + 0.2, "riser", 0.3))
+        if tpl == "money" and p.get("mode") in ("day", "pct"):
+            ev.append((t0 + 0.15, "riser", 0.4)); ev.append((t0 + 1.4, "pop", 0.7))
+        if tpl == "money" and p.get("mode") == "invoice":
+            ev.append((t0 + 0.3, "pop", 0.6))
+            if p.get("step") == "3":
+                ev.append((t0 + 0.25, "stamp", 0.9)); ev.append((t0 + 0.9, "ding", 0.45))
+        if tpl in ("map", "boxline", "pools", "tower", "moon") or (tpl == "side" and p.get("scene") in ("flags", "stack", "pitches")):
+            ev.append((t0 + 0.5, "ding", 0.3))
+        if tpl == "report" and p.get("step") in ("2", "3", "4"):
+            ev.append((t0 + 0.25, "stamp", 0.6))
+        if tpl == "side" and p.get("scene") == "cheer":
+            ev.append((t0, "crowd_bed", 0.55, sec))
+        if tpl == "side" and p.get("scene") in ("digger", "digging", "push", "bow"):
+            ev.append((t0 + 0.3, "boing", 0.25))
+        if p.get("guy") == "shock" or p.get("act") == "shock" or p.get("corner") in ("shock", "faint"):
+            ev.append((t0 + 0.35, "boing", 0.35))
+        if p.get("act") == "laugh":
+            ev.append((t0 + 0.2, "pop", 0.4))
     fx = sfx.render_events(ev, dur)[:n]
     fx = np.pad(fx, (0, max(0, n - len(fx))))
 

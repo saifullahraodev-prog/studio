@@ -5,9 +5,10 @@ import { AbsoluteFill, interpolate } from "remotion";
 import { Flames, H, INK, Pose, Sea, Sky, SkyMood, Smoke, Stickman, Tanker, TinyWorker, W, Waterline } from "./art";
 import { Attack, Caption, fontFamily, Push, ramp, Shipyard, Stopping, Svg, Upright } from "./scenes";
 import { STAT_ICONS, StatX, TEMPLATES2 } from "./templates2";
+import { TEMPLATES3 } from "./templates3";
 
 export type P = Record<string, string>;
-export type Tpl = React.FC<{ t: number; d: number; p: P }>;
+export type Tpl = React.FC<{ t: number; d: number; p: P; w?: number[][] }>; // w = spoken word spans (frames in the beat)
 const txt = (s?: string) => (s ?? "").replace(/_/g, " ");
 const num = (s: string | undefined, dflt = 0) => (s === undefined ? dflt : Number(s));
 const ink = { stroke: INK, strokeWidth: 6, strokeLinejoin: "round" as const, strokeLinecap: "round" as const };
@@ -863,5 +864,6 @@ export const TEMPLATES: Record<string, Tpl> = {
   crisis: Crisis, ports: Ports, batillus: Batillus, modern: Modern, beach: Beach, anchor: Anchor,
   prelude: Prelude, endcard: EndCard,
   ...TEMPLATES2,
+  ...TEMPLATES3,
   stat: (props) => (STAT_ICONS.includes(props.p.icon ?? "") ? <StatX {...props} /> : <Stat {...props} />),
 };

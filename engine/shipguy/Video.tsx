@@ -4,8 +4,9 @@ import { AbsoluteFill, Audio, CalculateMetadataFunction, interpolate, Sequence, 
 import { INK } from "./art";
 import { Caption, ramp } from "./scenes";
 import { P, TEMPLATES } from "./templates";
+import { CornerGuy } from "./templates3";
 
-export type Beat = { tpl: string; p: P; cap: string; from: number; dur: number; say?: string };
+export type Beat = { tpl: string; p: P; cap: string; from: number; dur: number; say?: string; words?: number[][] };
 export type ShipGuyProps = { slug: string; beats?: Beat[]; music?: string; page?: number };
 
 export const calcShipGuy: CalculateMetadataFunction<ShipGuyProps> = async ({ props }) => {
@@ -22,7 +23,8 @@ export const BeatView: React.FC<{ b: Beat; t: number }> = ({ b, t }) => {
   const drift = { transform: `scale(${1 + 0.045 * k}) translateX(${(k - 0.5) * -14}px)`, transformOrigin: "50% 45%" };
   return (
     <AbsoluteFill style={{ overflow: "hidden", background: "#000" }}>
-      <AbsoluteFill style={drift}><T t={t} d={b.dur} p={b.p} /></AbsoluteFill>
+      <AbsoluteFill style={drift}><T t={t} d={b.dur} p={b.p} w={b.words} /></AbsoluteFill>
+      {b.p.corner && <CornerGuy t={t} d={b.dur} act={b.p.corner} />}
       {b.cap && <Caption text={b.cap} y={46} size={96} pop={ramp(t, 3, 11)} />}
     </AbsoluteFill>
   );

@@ -399,3 +399,8 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   15 new templates: canal, side, guy, bridge, map, money, dial, tower, boxline, dredger, pools, moon, bankfx, report, lake;
   reused stat + endcard) and `plan-shots.md` (row per shot; Ship Guy in 74/110, 35 of them `corner=` reactions).
   GATE: waiting for owner approval of the plan. Templates not built yet.
+- 2026-11-13 owner approved plan v1 -> BUILD: `engine/shipguy/templates3.tsx` (canal, side, guy, bridge + Ship Guy acting
+  library `act()`, `CornerGuy`) and `templates3b.tsx` (map, money, dial, tower, boxline, dredger, pools, moon, bankfx, report,
+  lake, endcard2). Puppet: outfits pilot/captain, props phone/hammer/rod, `talkFrom()` mouth driven by real word spans
+  (timeline.json beats now carry `words`). `Tpl` gets optional `w`. Mixer: SFX for the new templates; mix.wav 658.7 s, -15.0 LUFS.
+  Storyboard (7 pages, 1 still per shot at 60%): `videos/2026-11-12-ever-given/storyboard/`. GATE: owner checks storyboard.
