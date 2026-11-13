@@ -403,4 +403,6 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   library `act()`, `CornerGuy`) and `templates3b.tsx` (map, money, dial, tower, boxline, dredger, pools, moon, bankfx, report,
   lake, endcard2). Puppet: outfits pilot/captain, props phone/hammer/rod, `talkFrom()` mouth driven by real word spans
   (timeline.json beats now carry `words`). `Tpl` gets optional `w`. Mixer: SFX for the new templates; mix.wav 658.7 s, -15.0 LUFS.
-  Storyboard (7 pages, 1 still per shot at 60%): `videos/2026-11-12-ever-given/storyboard/`. GATE: owner checks storyboard.
+  Storyboard (7 pages, 1 still per shot at 60%): `videos/2026-11-12-ever-given/storyboard/`.
+- 2026-11-13 owner OK'd storyboard -> 60 s test (`out/test-60s.mp4`, frames 0-1799, 104 s render, -15.2 LUFS, no black/frozen).
+  GATE: owner feedback on the test before the full render (~11 min of video, est. ~20 min render).
