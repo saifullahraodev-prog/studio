@@ -24,12 +24,12 @@ export type Emote = "sweat" | "!" | "?" | "steam" | "stars" | "idea";
 export const IDLE: Pose = { lean: 0, tilt: 0, hipX: 0, hipY: 0, squash: 0, armL: [14, 8], armR: [14, 8], legL: [-5, 0], legR: [5, 0] };
 export const POSES = {
   idle: IDLE,
-  point: { ...IDLE, tilt: -4, armR: [92, -4], armL: [14, -96] } as Pose, // explain.jpg
+  point: { ...IDLE, tilt: -4, armR: [92, -4], armL: [16, 10] } as Pose, // explain.jpg
   present: { ...IDLE, tilt: 3, armR: [62, 34], armL: [62, 34] } as Pose,
-  hipWave: { ...IDLE, tilt: -5, armL: [42, -112], armR: [55, 60] } as Pose, // confident.jpg
+  hipWave: { ...IDLE, tilt: -5, armL: [60, -90], armR: [55, 60] } as Pose, // confident.jpg
   handsHead: { ...IDLE, squash: -0.04, armL: [95, 100], armR: [95, 100], legL: [-10, 0], legR: [26, 8] } as Pose, // shocked.jpg
   shrug: { ...IDLE, tilt: 6, armL: [58, -95], armR: [58, -95] } as Pose,
-  chin: { ...IDLE, tilt: 7, armR: [-62, 200], armL: [10, -100] } as Pose, // thinking.jpg
+  chin: { ...IDLE, tilt: 7, armR: [129, 159], armL: [16, 10] } as Pose, // thinking.jpg
   stop: { ...IDLE, lean: -3, armR: [70, 82], armL: [14, 6] } as Pose, // stop.jpg
   fingerUp: { ...IDLE, tilt: -3, armR: [38, 130], armL: [12, 6] } as Pose,
   cheer: { ...IDLE, hipY: 6, armL: [158, -10], armR: [158, -10] } as Pose,
