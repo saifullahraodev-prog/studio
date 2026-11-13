@@ -440,3 +440,7 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   names in templates2 (BoxShip, TugArt, CruiseArt, CarrierArt, stat icon outboard, rear-view V12s) and templates4 now
   draw the HD ships, so every video that uses them gets the new look. Gallery composition `ShipLook`
   (`storyboard/ships-hd-gallery.png`). Storyboard re-rendered. GATE: owner OK -> new 60 s test.
+- DONE 2026-11-13: `videos/2026-11-13-ship-cost/out/ship-cost-final.mp4` (1080p30, 5:15, -14.7 LUFS, 0 black, 0 frozen;
+  detailed HD ships). Upload kit: 3 thumbnails (`thumbnails/`, compositions ShipGuyThumb v=cost1..3 in
+  `engine/shipguy/ThumbCost.tsx`), `ship-cost.en.srt` (113 cues), `youtube-upload.txt` (title, description, 11 chapters,
+  price list, sources, tags).
