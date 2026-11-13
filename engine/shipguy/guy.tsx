@@ -58,17 +58,21 @@ export const mixPose = (a: Pose, b: Pose, k: number): Pose => ({
   squash: lerp(a.squash, b.squash, k), armL: pair(a.armL, b.armL, k), armR: pair(a.armR, b.armR, k),
   legL: pair(a.legL, b.legL, k), legR: pair(a.legR, b.legR, k),
 });
-const backOut = Easing.out(Easing.back(1.7));
+// owner 2026-11-13: "move smoother" -> gentle ease-in/out for poses (no snap), only a soft settle on pop-ins
+const poseEase = Easing.bezier(0.42, 0, 0.22, 1);
+const popEase = Easing.out(Easing.back(0.8));
+const SLOW = 1.6; // every pose change takes 60% longer than its listed length
 export const smooth = Easing.bezier(0.33, 0, 0.2, 1);
 
 /** Key-pose track: [frame, pose, transition frames?]. Each move overshoots a little and settles (cartoon snap). */
 export const track = (t: number, keys: [number, Pose, number?][]): Pose => {
   let cur = keys[0][1];
   for (let i = 1; i < keys.length; i++) {
-    const [f, p, len = 8] = keys[i];
+    const [f, p, len0 = 8] = keys[i];
+    const len = len0 * SLOW;
     if (t < f) break;
     const k = Math.min(1, (t - f) / len);
-    cur = mixPose(cur, p, backOut(k));
+    cur = mixPose(cur, p, poseEase(k));
   }
   return cur;
 };
@@ -86,7 +90,7 @@ export const walk = (base: Pose, t: number, speed = 1, run = false): Pose => {
   return {
     ...base,
     lean: base.lean - (run ? 10 : 3), // negative lean = leaning towards screen right (walking direction)
-    hipY: base.hipY + Math.abs(Math.cos(ph)) * (run ? 16 : 7) - (run ? 10 : 2),
+    hipY: base.hipY + Math.abs(Math.cos(ph)) * (run ? 10 : 4) - (run ? 6 : 1),
     legL: [amp * s, Math.max(0, -s) * (run ? -70 : -40)],
     legR: [-amp * s, Math.max(0, s) * (run ? -70 : -40)],
     armL: [base.armL[0] + 18 * s, base.armL[1] + (run ? 70 : 10)],
@@ -110,7 +114,7 @@ export const blinking = (t: number, seed = 0) => {
 };
 
 /** Mouth openness 0..1 while speaking (procedural; the video drives it from the voice word timings). */
-export const chatter = (t: number) => Math.max(0, Math.sin(t * 0.95) * 0.6 + Math.sin(t * 2.3 + 1) * 0.4);
+export const chatter = (t: number) => Math.max(0, Math.sin(t * 0.6) * 0.55 + Math.sin(t * 1.3 + 1) * 0.3);
 
 // ------------------------------------------------------------------ geometry
 const D = Math.PI / 180;
@@ -244,8 +248,8 @@ const FaceArt: React.FC<{ face: Face; blink: boolean; talk: number }> = ({ face,
 };
 
 const EmoteArt: React.FC<{ e: Emote; t: number }> = ({ e, t }) => {
-  const pop = Math.min(1, t / 6);
-  const s = backOut(pop);
+  const pop = Math.min(1, t / 10);
+  const s = popEase(pop);
   if (e === "sweat") {
     const y = (t * 2.2) % 70;
     return <g transform={`translate(128 ${-150 + y}) scale(${s})`} opacity={1 - y / 80}>
@@ -329,14 +333,14 @@ export const Guy: React.FC<GuyProps> = ({
   };
   const L = arm(-1, p.armL, handL), R = arm(1, p.armR, handR);
   const hatT = hat ?? { dx: 0, dy: 0, rot: 0 };
-  const boilSeed = Math.floor(t / 4) % 3;
+  const boilSeed = Math.floor(t / 8) % 3; // owner 2026-11-13: "less outline wobble" (was every 4 frames)
   return (
     <g transform={`translate(${x} ${y}) scale(${(flip ? -1 : 1) * s * (1 + sq * 0.6)} ${s * (1 - sq)})`}>
       {boil && (
         <defs>
           <filter id={`${id}-boil`} x="-20%" y="-20%" width="140%" height="140%">
             <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves={1} seed={boilSeed} result="n" />
-            <feDisplacementMap in="SourceGraphic" in2="n" scale={2.6} xChannelSelector="R" yChannelSelector="G" />
+            <feDisplacementMap in="SourceGraphic" in2="n" scale={1.2} xChannelSelector="R" yChannelSelector="G" />
           </filter>
           <radialGradient id={`${id}-head`} cx="62%" cy="32%" r="78%">
             <stop offset="0.55" stopColor={SKIN} />

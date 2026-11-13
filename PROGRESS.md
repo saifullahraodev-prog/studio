@@ -380,7 +380,11 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   test lab `engine/shipguy/guyLab.tsx` (composition `GuyLab`, demos hello/shock/point/think/push/dig, `sheet=true` = contact
   sheet, `demo=model` = owner's images vs puppet). Stills in `videos/2026-11-12-ever-given/guy-test/`.
 - Owner OK'd a test render: 6 GuyLab demos (~75 s render total) joined -> `videos/2026-11-12-ever-given/out/guy-test-all.mp4`
-  (1080p30, 25.3 s, silent, no black/frozen stretches). GATE: waiting for owner feedback on the motion + which ideas to use.
+  (1080p30, 25.3 s, silent, no black/frozen stretches).
+- 2026-11-13 owner: "move smoother" + "less outline wobble" -> pose easing = gentle bezier ease-in/out, no overshoot,
+  every pose change 1.6x longer (`SLOW`), softer pop-ins, smaller walk bounce, calmer talk mouth; line wobble 1.2 px
+  (was 2.6) changing every 8 frames (was 4). Mug now leaves the hand before the jump. -> `out/guy-test-v2.mp4`.
+  GATE: waiting for owner feedback on v2.
 - DONE 2026-11-13: `videos/2026-11-12-ship-engines/out/ship-engines-final.mp4` (1080p30, 5:47, -14.5 LUFS, 0 black,
   0 frozen) + 3 thumbnails (`thumbnails/`), `ship-engines.en.srt` (124 cues), `youtube-upload.txt` (title, description,
   chapters, tags). Year cards (raw=1) no longer count up.

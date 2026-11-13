@@ -71,15 +71,15 @@ const DEMOS: Record<string, Demo> = {
       const hk = clamp01((t - 30) / 34);
       const hat = t < 30 || hk >= 1 ? undefined : { dx: hk * 30, dy: -Math.sin(hk * Math.PI) * 300, rot: Math.sin(hk * Math.PI) * 40 };
       // mug: flies out of the hand and splashes
-      const mk = clamp01((t - 30) / 26);
-      const mug = t >= 30 && (
-        <g transform={`translate(${1090 + mk * 300} ${GROUND - 360 - Math.sin(mk * Math.PI) * 260 + mk * 330}) rotate(${mk * 420})`}>
+      const mk = clamp01((t - 25) / 30);
+      const mug = t >= 25 && (
+        <g transform={`translate(${1160 + mk * 260} ${GROUND - 200 - Math.sin(mk * Math.PI) * 300 + mk * 170}) rotate(${mk * 420})`}>
           <rect x={-24} y={-28} width={48} height={56} rx={8} fill="#3d78c4" stroke={INK} strokeWidth={6} />
           {mk > 0.1 && mk < 1 && <path d="M-10 -28 q -20 -40 6 -70" stroke="#7b4a26" strokeWidth={10} fill="none" strokeLinecap="round" />}
         </g>
       );
       return {
-        guy: { x: 960, y: GROUND, t, pose: air ? pose : breathe(pose, t), face, prop: t < 30 ? "mug" as PropName : "none",
+        guy: { x: 960, y: GROUND, t, pose: air ? pose : breathe(pose, t), face, prop: t < 25 ? "mug" as PropName : "none",
           handL: t >= 30 ? "open" : "mitt", handR: t >= 30 ? "open" : "mitt", hat, emote, emoteT: t >= 50 ? t - 50 : t - 16, feet: "out" },
         front: <>{mug}{t >= 44 && <Dust x={960} y={GROUND} k={(t - 44) / 20} />}</>,
       };
