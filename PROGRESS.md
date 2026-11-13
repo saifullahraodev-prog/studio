@@ -415,6 +415,8 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   (`engine/shipguy/ThumbEG.tsx`, composition ShipGuyThumb v=EGA/EGB/EGC), `youtube-upload.txt` (title, chapters, sources, tags).
   Owner: thumbnails "not convincing" -> v2: hand-made 3D perspective aerial (`Aerial` in ThumbEG.tsx: ship with hull height,
   container stacks, bridge tower, queue to the horizon) = thumb-D (recommended) / thumb-F; redone bow+digger = thumb-E.
+  Owner: "simple yet impactful, no 3D, keep the video format, high CTR" -> v3 flat: thumb-G "STUCK!" (ship jammed across
+  the canal + big shocked Ship Guy, recommended) and thumb-H "MOVE!" (Ship Guy pushing the stuck hull).
 
 ## 2026-11-13: The Ship Guy long-form #4 "Every Level of Ship by Cost" (script draft v1)
 - Owner picked the topic. `videos/2026-11-13-ship-cost/script.md` (9 levels: $2k jon boat -> V12 outboards -> used Damen

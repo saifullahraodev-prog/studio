@@ -7,10 +7,9 @@ Other title options (for later A/B tests):
 - Ever Given: 6 Days That Jammed the Suez Canal
 
 THUMBNAIL (in the thumbnails folder)
-- thumb-D.jpg  "STUCK · 6 DAYS": aerial view, the ship jammed bank to bank, ships queued to the horizon (recommended)
-- thumb-F.jpg  "MOVE THIS?": same aerial view with a question hook (good second for an A/B test)
-- thumb-E.jpg  "ONE DIGGER?": the bow buried in the bank next to the little digger
-- thumb-A/B/C.jpg: first versions, replaced by D/E/F
+- thumb-G.jpg  "STUCK!": the ship jammed across the canal (video style) + the Ship Guy big and shocked (recommended)
+- thumb-H.jpg  "MOVE!": the Ship Guy pushing the giant stuck ship (good second for a YouTube A/B test)
+- older tries, not recommended: A/B/C (first set), D/E/F (3D style)
 
 =====================================================================
 

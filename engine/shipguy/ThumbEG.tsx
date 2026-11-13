@@ -217,4 +217,49 @@ const EG_E: React.FC = () => (
   </AbsoluteFill>
 );
 
-export const EG_THUMBS: Record<string, React.FC> = { EGA: EG_A, EGB: EG_B, EGC: EG_C, EGD: EG_D, EGE: EG_E, EGF: EG_F };
+// ---------------------------------------------------------------- v3 (owner: "simple yet impactful, no 3D, keep the video's style")
+// One big subject (the ship jammed across the canal, flat like the video), one big emotional face, 1-2 words.
+const FlatCanal: React.FC<{ y0: number; y1: number }> = ({ y0, y1 }) => (
+  <g>
+    <rect width={1920} height={1080} fill={SAND} />
+    {Array.from({ length: 50 }).map((_, i) => <circle key={i} cx={rnd(i) * 1920} cy={rnd(i + 50) * 1080} r={6 + rnd(i + 9) * 12} fill={SAND_D} opacity={0.4} />)}
+    <path d={`M0 ${y0} Q 960 ${y0 - 24} 1920 ${y0 + 6} L 1920 ${y1} Q 960 ${y1 + 24} 0 ${y1 - 6} Z`} fill={WATER} stroke={INK} strokeWidth={10} />
+    {Array.from({ length: 16 }).map((_, i) => <path key={i} d={`M${rnd(i + 3) * 1900} ${y0 + 40 + rnd(i + 7) * (y1 - y0 - 80)} q 20 -8 40 0`} stroke="#bfe6f5" strokeWidth={6} fill="none" />)}
+  </g>
+);
+
+// G: "STUCK!" the ship wedged bank to bank, the Ship Guy big and shocked in front
+const EG_G: React.FC = () => (
+  <AbsoluteFill>
+    <Svg>
+      <FlatCanal y0={330} y1={930} />
+      {/* sand pushed up at both ends */}
+      <ellipse cx={1530} cy={330} rx={150} ry={60} fill="#f3e7c8" stroke={INK} strokeWidth={6} />
+      <ellipse cx={330} cy={935} rx={150} ry={60} fill="#f3e7c8" stroke={INK} strokeWidth={6} />
+      <g transform="translate(930 632) rotate(-22) scale(3.9)"><EGTop /></g>
+      <g transform="translate(1660 300) rotate(-200) scale(1.3)"><DiggerTopBig /></g>
+      <Guy x={1560} y={1150} s={1.05} t={10} id="tg" blink={false} pose={POSES.handsHead} face={FACES.shocked} handL="open" handR="open" />
+    </Svg>
+    <Stamp text="STUCK!" x={60} y={50} rot={-6} size={190} />
+  </AbsoluteFill>
+);
+
+// H: the gag from the video: Ship Guy pushing the giant stuck ship with everything he has. "MOVE!"
+const EG_H: React.FC = () => (
+  <AbsoluteFill style={{ background: "linear-gradient(#7fc4ea, #d8eef6 75%)" }}>
+    <Svg>
+      <g transform="translate(-860 500) scale(1.75)"><EGSide /></g>
+      <path d="M0 880 Q 600 860 1100 875 L 1920 900 V 1080 H 0 Z" fill={SAND} stroke={INK} strokeWidth={8} />
+      <path d="M1050 885 Q 1300 760 1480 840 Q 1530 865 1570 890 Z" fill={SAND} stroke={INK} strokeWidth={8} />
+      {/* steam + sweat + dust */}
+      {[0, 1, 2].map((i) => <circle key={i} cx={1680 + i * 60} cy={380 - i * 50} r={34 + i * 14} fill="#f4f4f4" stroke={INK} strokeWidth={5} opacity={0.95} />)}
+      {[0, 1, 2].map((i) => <circle key={`d${i}`} cx={1780 + i * 50} cy={1000 - i * 18} r={30 + i * 10} fill="#efe2c2" stroke={INK} strokeWidth={5} />)}
+      <Guy x={1730} y={1050} s={1.15} t={10} id="th" flip={true} blink={true}
+        pose={{ lean: -34, tilt: -4, hipX: 0, hipY: 0, squash: 0, armL: [-126, 6], armR: [124, -6], legL: [-44, 10], legR: [-14, 20] }}
+        face={{ eyes: "closed", brows: "angry", mouth: "teeth" }} handL="open" handR="open" feet="fwd" />
+    </Svg>
+    <Big x={1200} y={30} rot={5} lines={[{ text: "MOVE!", color: "#ffd23f", size: 210 }]} />
+  </AbsoluteFill>
+);
+
+export const EG_THUMBS: Record<string, React.FC> = { EGA: EG_A, EGB: EG_B, EGC: EG_C, EGD: EG_D, EGE: EG_E, EGF: EG_F, EGG: EG_G, EGH: EG_H };
