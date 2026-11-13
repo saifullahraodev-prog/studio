@@ -394,3 +394,8 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
 - NOTE: another session (Ever Given video) shares this repo and rebuilt `.cache/bundle` mid-render, which killed the
   first full render. Ship Guy renders now use their own bundle: `.cache/bundle-shipguy`
   (`node tools/run.mjs bundle src/index.ts --out-dir=.cache/bundle-shipguy`).
+- 2026-11-13 owner: "Yes, plan full video" (puppet v3 approved). Plan draft v1: `beats.txt` (110 beats, every narration word
+  in order, timed by `tools/shipguy_timeline.py` -> `public/shipguy/evergiven/timeline.json`, 10:59), `plan.md` (overview: gags,
+  15 new templates: canal, side, guy, bridge, map, money, dial, tower, boxline, dredger, pools, moon, bankfx, report, lake;
+  reused stat + endcard) and `plan-shots.md` (row per shot; Ship Guy in 74/110, 35 of them `corner=` reactions).
+  GATE: waiting for owner approval of the plan. Templates not built yet.
