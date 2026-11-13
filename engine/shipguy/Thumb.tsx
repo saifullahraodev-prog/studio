@@ -6,6 +6,7 @@ import { AbsoluteFill } from "remotion";
 import { Boom, Flames, INK, Jet, Sea, Sky, Smoke, Stickman, Tanker, Towers, Waterline } from "./art";
 import { fontFamily, Svg } from "./scenes";
 import { BigEngine, Boat, Building, PistonArt } from "./templates2";
+import { EG_THUMBS } from "./ThumbEG";
 
 const Big: React.FC<{ lines: { text: string; color: string; size: number }[]; x: number; y: number; rot?: number; align?: "left" | "right" | "center" }> = ({ lines, x, y, rot = -4, align = "left" }) => (
   <div style={{ position: "absolute", left: x, top: y, transform: `rotate(${rot}deg)`, textAlign: align, lineHeight: 0.92 }}>
@@ -139,4 +140,5 @@ const ThumbF: React.FC = () => (
 );
 
 export const ShipGuyThumb: React.FC<{ v: string }> = ({ v }) =>
+  EG_THUMBS[v] ? React.createElement(EG_THUMBS[v]) :
   v === "B" ? <ThumbB /> : v === "C" ? <ThumbC /> : v === "D" ? <ThumbD /> : v === "E" ? <ThumbE /> : v === "F" ? <ThumbF /> : <ThumbA />;

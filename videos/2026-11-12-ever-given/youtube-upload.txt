@@ -1,0 +1,68 @@
+TITLE (use this one)
+One Ship Blocked $9.6 Billion a Day. Here's How They Freed It
+
+Other title options (for later A/B tests):
+- The Ship That Broke the World's Busiest Shortcut
+- How Do You Unstick a 400-Metre Ship?
+- Ever Given: 6 Days That Jammed the Suez Canal
+
+THUMBNAIL (in the thumbnails folder)
+- thumb-A.jpg  "6 DAYS STUCK": the ship wedged across the canal from above, tiny digger circled (recommended)
+- thumb-B.jpg  "ONE DIGGER?": the giant bow buried in the bank next to the little digger
+- thumb-C.jpg  "$9.6B A DAY": the ship jammed across the canal, ships piled up at both ends
+
+=====================================================================
+
+DESCRIPTION (paste everything between the lines)
+---------------------------------------------------------------------
+In March 2021, one ship turned sideways in the Suez Canal, and for six days nothing could get past it. Hundreds of ships piled up, and about $9.6 billion of goods a day were stuck in the jam. The first machine sent to dig it out? One small excavator.
+
+This is the story of the Ever Given: how a 400-metre container ship got wedged bank to bank, how salvage crews, dredgers, tugs and a supermoon finally pulled it free, why it happened, and why the ship was then held in Egypt for more than three months.
+
+⏱ CHAPTERS
+0:00 One ship, six days
+0:49 Meet the Ever Given
+2:00 The world's most important ditch
+2:55 The morning it all went wrong
+4:17 One small digger
+5:03 The world's biggest traffic jam
+5:52 How do you free a giant?
+7:42 So why did it happen?
+9:00 Held prisoner
+9:59 What changed
+
+📊 THE EVER GIVEN IN NUMBERS
+• Length: about 400 m · Width: about 59 m
+• Capacity: 20,124 containers (TEU)
+• Built: 2018, Imabari Shipbuilding, Japan
+• Grounded: 23 March 2021, 07:41, km 151 of the Suez Canal
+• Freed: 29 March 2021, 15:05, after about 30,000 m³ of sand was dredged
+• Ships waiting: at least 369, more than 400 by the time the canal reopened
+• Held in Egypt: 13 April to 7 July 2021 (settlement amount never made public)
+
+🚢 Watch next: The Biggest Ship Ever Built Was Bombed — Then Came Back
+🚢 Also: Every Level of Ship Engine, From Tiny to Insane
+
+📚 SOURCES
+• 2021 Suez Canal obstruction: https://en.wikipedia.org/wiki/2021_Suez_Canal_obstruction
+• Ever Given: https://en.wikipedia.org/wiki/Ever_Given
+• Lloyd's List estimate ($9.6B a day), via Al Jazeera: https://www.aljazeera.com/economy/2021/3/25/suez-blockage-seen-halting-9-6-billion-a-day-of-ship-traffic
+• Refloating timeline (Smit Salvage / Boskalis): https://www.bairdmaritime.com/shipping/boxships/ever-given-fully-refloated-six-days-after-grounding-in-suez-canal
+• Dredged sand and tugs: https://dredgingtoday.com/2021/03/30/refloating-of-the-ever-given-video
+• Panama Maritime Authority report (2023): https://www.marinelink.com/news/ever-given-captain-command-ship-times-506596
+• Release and settlement: https://www.cnbc.com/2021/07/07/suez-canal-releases-the-ever-given-hulking-vessel-after-settlement-deal-.html
+• Canal widening and new lane: https://www.thestar.com.my/business/business-news/2024/12/30/egypt-completes-trial-of-new-suez-canal-extension
+
+Some sound effects: BigSoundBank.com (CC0)
+
+Subscribe to The Ship Guy for more stories about the biggest, strangest and most expensive ships on Earth.
+
+#EverGiven #SuezCanal #Ships
+---------------------------------------------------------------------
+
+TAGS (YouTube Studio → Show more → Tags; paste as one line)
+ever given, suez canal, suez canal blocked, ever given stuck, container ship stuck, suez canal blockage 2021, ship stuck in suez canal, evergreen ship, bank effect, ship salvage, mashhour dredger, supply chain, shipping, the ship guy
+
+CATEGORY: Education
+SUBTITLES: upload ever-given.en.srt under Subtitles (English, "With timing")
+END SCREEN: the last 9 seconds point to the Seawise Giant video. In YouTube Studio → End screen, place the video element over the "TOO BIG!" card (right side) and a Subscribe element over the red button.
