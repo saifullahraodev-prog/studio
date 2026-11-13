@@ -410,3 +410,11 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   faint, deal cheer); host shots now change gesture at every spoken phrase (`phraseStarts`, `GEST` in templates3.tsx), nod
   with the words, shift weight, and cut in closer (1.38x) on every other phrase. Re-mixed; `out/test-60s-v2.mp4` (-15.2 LUFS,
   no black/frozen). GATE: owner feedback on test v2 before the full render.
+
+## 2026-11-13: The Ship Guy long-form #4 "Every Level of Ship by Cost" (script draft v1)
+- Owner picked the topic. `videos/2026-11-13-ship-cost/script.md` (9 levels: $2k jon boat -> V12 outboards -> used Damen
+  tug EUR4-6M -> ULCS ~$242M -> LNG carrier ~$245M -> Azzam ~$600M (reported) -> Icon of the Seas ~$2B -> Virginia SSN
+  ~$4.5-5B -> USS Gerald R. Ford ~$13B; 19 fact notes, 2026 prices) + `narration.txt` (spoken words only, ~5:13).
+- GATE: waiting for owner approval of the script.
+- ERRATUM found for #2 (engines): narration says the 600 hp V12 outboard "weighs about as much as a small car"; it is
+  ~570 kg (about half a small car). Not yet fixed in `ship-engines-final.mp4` (needs one re-voiced line + re-render).
