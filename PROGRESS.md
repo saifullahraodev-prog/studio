@@ -409,7 +409,9 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   split (121 beats, avg 5.4 s; hook question becomes a 3-shot montage); corner guy kept only for 3 gags (369 ships, $916M
   faint, deal cheer); host shots now change gesture at every spoken phrase (`phraseStarts`, `GEST` in templates3.tsx), nod
   with the words, shift weight, and cut in closer (1.38x) on every other phrase. Re-mixed; `out/test-60s-v2.mp4` (-15.2 LUFS,
-  no black/frozen). GATE: owner feedback on test v2 before the full render.
+  no black/frozen).
+- DONE 2026-11-13: owner OK'd full render -> `videos/2026-11-12-ever-given/out/ever-given-final.mp4` (1080p30, 10:59,
+  -15.0 LUFS, peak -4.4 dBFS, 0 black, 0 frozen; render 21 min; 240 MB). Not done yet: thumbnail, subtitles (.srt), upload text.
 
 ## 2026-11-13: The Ship Guy long-form #4 "Every Level of Ship by Cost" (script draft v1)
 - Owner picked the topic. `videos/2026-11-13-ship-cost/script.md` (9 levels: $2k jon boat -> V12 outboards -> used Damen
