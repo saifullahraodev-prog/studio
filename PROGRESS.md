@@ -413,6 +413,8 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
 - DONE 2026-11-13: owner OK'd full render -> `videos/2026-11-12-ever-given/out/ever-given-final.mp4` (1080p30, 10:59,
   -15.0 LUFS, peak -4.4 dBFS, 0 black, 0 frozen; render 21 min; 240 MB). Extras 2026-11-13: `ever-given.en.srt` (255 cues, words match narration), `thumbnails/thumb-A/B/C.jpg`
   (`engine/shipguy/ThumbEG.tsx`, composition ShipGuyThumb v=EGA/EGB/EGC), `youtube-upload.txt` (title, chapters, sources, tags).
+  Owner: thumbnails "not convincing" -> v2: hand-made 3D perspective aerial (`Aerial` in ThumbEG.tsx: ship with hull height,
+  container stacks, bridge tower, queue to the horizon) = thumb-D (recommended) / thumb-F; redone bow+digger = thumb-E.
 
 ## 2026-11-13: The Ship Guy long-form #4 "Every Level of Ship by Cost" (script draft v1)
 - Owner picked the topic. `videos/2026-11-13-ship-cost/script.md` (9 levels: $2k jon boat -> V12 outboards -> used Damen

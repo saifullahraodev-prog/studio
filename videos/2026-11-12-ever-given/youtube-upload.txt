@@ -7,9 +7,10 @@ Other title options (for later A/B tests):
 - Ever Given: 6 Days That Jammed the Suez Canal
 
 THUMBNAIL (in the thumbnails folder)
-- thumb-A.jpg  "6 DAYS STUCK": the ship wedged across the canal from above, tiny digger circled (recommended)
-- thumb-B.jpg  "ONE DIGGER?": the giant bow buried in the bank next to the little digger
-- thumb-C.jpg  "$9.6B A DAY": the ship jammed across the canal, ships piled up at both ends
+- thumb-D.jpg  "STUCK · 6 DAYS": aerial view, the ship jammed bank to bank, ships queued to the horizon (recommended)
+- thumb-F.jpg  "MOVE THIS?": same aerial view with a question hook (good second for an A/B test)
+- thumb-E.jpg  "ONE DIGGER?": the bow buried in the bank next to the little digger
+- thumb-A/B/C.jpg: first versions, replaced by D/E/F
 
 =====================================================================
 
