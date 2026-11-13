@@ -434,3 +434,9 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   `videos/2026-11-13-ship-cost/storyboard/`. GATE: waiting for owner OK -> 60 s test.
 - NOTE for the Ever Given session: TEMPLATES3 registers `bridge`, which replaces Seawise Giant's `bridge` scene; re-rendering
   Seawise Giant would now show the Ever Given bridge for beats 13 and 36.
+- 2026-11-13 owner on the 60 s test: boats look "very low effort and unrealistic". Owner chose direction A: all ships
+  redrawn detailed in `engine/shipguy/ships_hd.tsx` (BoxShipHD, LngHD, YachtHD, CruiseHD, CarrierHD, SubHD, TugHD, JonHD,
+  V12HD: gradients, plating, boot-top, antifouling, rust streaks, windows, lifeboats, railings, real ship parts). The old
+  names in templates2 (BoxShip, TugArt, CruiseArt, CarrierArt, stat icon outboard, rear-view V12s) and templates4 now
+  draw the HD ships, so every video that uses them gets the new look. Gallery composition `ShipLook`
+  (`storyboard/ships-hd-gallery.png`). Storyboard re-rendered. GATE: owner OK -> new 60 s test.

@@ -5,6 +5,7 @@ import { AbsoluteFill, interpolate } from "remotion";
 import { H, INK, Sea, Sky, W, Waterline } from "./art";
 import { fontFamily, ramp, Svg } from "./scenes";
 import { BoxShip, CarrierArt, CruiseArt, TugArt } from "./templates2";
+import { JonHD, LngHD, SubHD, V12HD, YachtHD } from "./ships_hd";
 import { Actor, pop, T3, txt } from "./templates3";
 
 type P = Record<string, string>;
@@ -14,58 +15,14 @@ const PAPER = "#f3f1ea";
 const rnd = (i: number) => { const x = Math.sin(i * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); };
 
 // ================================================================== drawn ships (local: waterline y=0, bow right)
-const JonBoat: React.FC<{ s?: number }> = ({ s = 1 }) => (
-  <g transform={`scale(${s})`}>
-    <path d="M0 -60 L380 -60 L420 -30 L400 20 L20 20 Z" fill="#b9c3cc" {...ink} />
-    {[60, 140, 220, 300].map((x) => <line key={x} x1={x} y1={-58} x2={x - 6} y2={18} stroke="#8d969e" strokeWidth={4} />)}
-    <rect x={150} y={-74} width={90} height={14} fill="#8d969e" stroke={INK} strokeWidth={4} />
-  </g>
-);
-const V12: React.FC<{ s?: number }> = ({ s = 1 }) => (
-  <g transform={`scale(${s})`}>
-    <rect x={-90} y={-260} width={180} height={220} rx={50} fill="#1f1f24" {...ink} />
-    <text x={0} y={-130} textAnchor="middle" fontFamily={fontFamily} fontWeight={700} fontSize={56} fill="#d8d8d8">V12</text>
-    <rect x={-30} y={-40} width={60} height={220} fill="#2b2b30" stroke={INK} strokeWidth={5} />
-    <ellipse cx={0} cy={190} rx={70} ry={26} fill="#9aa3ab" stroke={INK} strokeWidth={5} />
-  </g>
-);
+const JonBoat: React.FC<{ s?: number }> = ({ s = 1 }) => <JonHD w={420 * s} />;
+const V12: React.FC<{ s?: number }> = ({ s = 1 }) => <g transform="translate(0 -60)"><V12HD h={430 * s} /></g>;
 /** LNG carrier with four spherical (Moss) tanks, `w` long. */
-export const LngShip: React.FC<{ w: number; frost?: number }> = ({ w, frost = 0 }) => (
-  <g>
-    <path d={`M0 -${w * 0.07} L${w * 0.95} -${w * 0.07} Q${w * 1.01} -${w * 0.07} ${w * 1.02} -${w * 0.11} L${w * 0.97} ${w * 0.05} L${w * 0.04} ${w * 0.05} Q0 ${w * 0.05} 0 0 Z`} fill="#2b3d63" {...ink} />
-    <rect x={0} y={w * 0.015} width={w * 0.98} height={w * 0.035} fill="#b8322a" />
-    {[0.28, 0.46, 0.64, 0.82].map((k) => (
-      <g key={k}>
-        <path d={`M${w * (k - 0.08)} -${w * 0.07} A ${w * 0.08} ${w * 0.08} 0 0 1 ${w * (k + 0.08)} -${w * 0.07} Z`} fill={frost > 0.5 ? "#e6f3fb" : "#f4f1e8"} {...ink} />
-        {frost > 0 && <path d={`M${w * (k - 0.06)} -${w * 0.09} q ${w * 0.02} -${w * 0.02} ${w * 0.04} 0 M${w * (k + 0.01)} -${w * 0.12} q ${w * 0.02} -${w * 0.02} ${w * 0.04} 0`} stroke="#9fd3ff" strokeWidth={6} fill="none" opacity={frost} />}
-      </g>
-    ))}
-    <rect x={w * 0.04} y={-w * 0.16} width={w * 0.09} height={w * 0.09} fill="#f4f1e8" {...ink} strokeWidth={5} />
-    <rect x={w * 0.06} y={-w * 0.2} width={w * 0.03} height={w * 0.04} fill="#2f86c9" {...ink} strokeWidth={4} />
-  </g>
-);
+export const LngShip: React.FC<{ w: number; frost?: number }> = ({ w, frost = 0 }) => <LngHD w={w} frost={frost} />;
 /** Superyacht (Azzam-like): sleek white, dark window bands, `w` long. */
-export const Yacht: React.FC<{ w: number }> = ({ w }) => (
-  <g>
-    <path d={`M0 -${w * 0.03} L${w * 0.86} -${w * 0.03} Q${w * 1.0} -${w * 0.035} ${w * 1.04} -${w * 0.09} L${w * 0.92} ${w * 0.035} L${w * 0.05} ${w * 0.035} Q0 ${w * 0.035} 0 0 Z`} fill="#f7f7f2" {...ink} />
-    <path d={`M${w * 0.08} -${w * 0.03} L${w * 0.12} -${w * 0.075} L${w * 0.8} -${w * 0.075} L${w * 0.86} -${w * 0.03} Z`} fill="#f7f7f2" {...ink} />
-    <path d={`M${w * 0.18} -${w * 0.075} L${w * 0.22} -${w * 0.115} L${w * 0.66} -${w * 0.115} L${w * 0.72} -${w * 0.075} Z`} fill="#f7f7f2" {...ink} />
-    <path d={`M${w * 0.3} -${w * 0.115} L${w * 0.33} -${w * 0.145} L${w * 0.54} -${w * 0.145} L${w * 0.58} -${w * 0.115} Z`} fill="#f7f7f2" {...ink} />
-    {[[-0.012, 0.1, 0.8], [-0.058, 0.15, 0.73], [-0.1, 0.24, 0.62], [-0.132, 0.35, 0.53]].map(([y, a, b], i) => (
-      <rect key={i} x={w * a} y={w * y - w * 0.01} width={w * (b - a)} height={w * 0.016} rx={6} fill="#1d2a3a" />
-    ))}
-    <line x1={w * 0.44} y1={-w * 0.145} x2={w * 0.44} y2={-w * 0.2} stroke={INK} strokeWidth={6} />
-  </g>
-);
+export const Yacht: React.FC<{ w: number }> = ({ w }) => <YachtHD w={w}  />;
 /** Attack submarine, waterline at y=0 (mostly under water), `w` long. */
-export const Sub: React.FC<{ w: number }> = ({ w }) => (
-  <g>
-    <path d={`M0 0 Q${w * 0.02} -${w * 0.05} ${w * 0.12} -${w * 0.055} L${w * 0.85} -${w * 0.055} Q${w} -${w * 0.05} ${w} 0 Q${w} ${w * 0.05} ${w * 0.85} ${w * 0.055} L${w * 0.12} ${w * 0.055} Q${w * 0.02} ${w * 0.05} 0 0 Z`} fill="#2b2f36" {...ink} />
-    <path d={`M${w * 0.55} -${w * 0.055} L${w * 0.57} -${w * 0.14} L${w * 0.66} -${w * 0.14} L${w * 0.68} -${w * 0.055} Z`} fill="#2b2f36" {...ink} />
-    <path d={`M${w * 0.58} -${w * 0.11} l -${w * 0.04} 0 M${w * 0.65} -${w * 0.11} l ${w * 0.04} 0`} stroke={INK} strokeWidth={8} />
-    <path d={`M0 0 L-${w * 0.04} -${w * 0.04} L-${w * 0.04} ${w * 0.04} Z`} fill="#2b2f36" stroke={INK} strokeWidth={5} />
-  </g>
-);
+export const Sub: React.FC<{ w: number }> = ({ w }) => <SubHD w={w}  />;
 
 // ================================================================== the swinging price tag
 const Tag: React.FC<{ t: number; x: number; y: number; price: string; sub?: string; col?: string; big?: boolean; a0?: number }> = ({ t, x, y, price, sub, col = "#ffd23f", big, a0 = 6 }) => {

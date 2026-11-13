@@ -4,6 +4,7 @@ import React from "react";
 import { AbsoluteFill, interpolate } from "remotion";
 import { H, INK, Pose, Sea, Sky, Stickman, Tanker, TinyWorker, W, Waterline } from "./art";
 import { fontFamily, Push, ramp, Svg } from "./scenes";
+import { BoxShipHD, CarrierHD, CruiseHD, TugHD, V12HD } from "./ships_hd";
 
 type P = Record<string, string>;
 type Tpl = React.FC<{ t: number; d: number; p: P }>;
@@ -131,17 +132,8 @@ export const Boat: React.FC<{ s?: number; motor?: number }> = ({ s = 1, motor = 
 );
 
 /** Harbour tug, side view, waterline at (0,0), bow right. */
-export const TugArt: React.FC<{ s?: number }> = ({ s = 1 }) => (
-  <g transform={`scale(${s})`}>
-    <path d="M0 -60 L330 -60 Q380 -60 400 -20 L380 40 L30 40 Q0 40 0 0 Z" fill="#d94a3a" {...ink} />
-    <rect x={0} y={-60} width={400} height={20} fill="#2b2b30" />
-    <path d="M395 -55 q 20 40 0 80" fill="none" stroke="#2b2b30" strokeWidth={22} />
-    <rect x={150} y={-150} width={150} height={90} fill="#f4f1e8" {...ink} />
-    <rect x={170} y={-190} width={110} height={40} fill="#f4f1e8" {...ink} />
-    {[180, 220, 255].map((x) => <rect key={x} x={x} y={-182} width={22} height={22} fill="#3b6ea5" />)}
-    <rect x={95} y={-150} width={34} height={90} fill="#e0a12a" {...ink} strokeWidth={5} />
-  </g>
-);
+/** Harbour tug, side view (HD drawing), waterline at (0,0), bow right. */
+export const TugArt: React.FC<{ s?: number }> = ({ s = 1 }) => <TugHD w={400 * s} />;
 
 /** Car (side), bottom-left at (0,0), `s` scale (~90 px long). */
 export const Car: React.FC<{ s?: number; c?: string }> = ({ s = 1, c = "#3b8fd9" }) => (
@@ -178,55 +170,16 @@ const DestroyerArt: React.FC<{ w: number }> = ({ w }) => (
 );
 
 /** Cruise ship, waterline at (0,0), `w` long. */
-export const CruiseArt: React.FC<{ w: number }> = ({ w }) => (
-  <g>
-    <path d={`M0 -${w * 0.07} L${w * 0.95} -${w * 0.07} Q${w * 1.01} -${w * 0.08} ${w * 1.02} -${w * 0.12} L${w * 0.96} ${w * 0.06} L${w * 0.03} ${w * 0.06} Q0 ${w * 0.06} 0 0 Z`} fill="#1f3a5f" {...ink} />
-    {Array.from({ length: 6 }).map((_, k) => (
-      <g key={k}>
-        <rect x={w * (0.03 + k * 0.012)} y={-w * (0.07 + (k + 1) * 0.035)} width={w * (0.92 - k * 0.03)} height={w * 0.035} fill="#f4f1e8" stroke={INK} strokeWidth={4} />
-        {Array.from({ length: 30 - k * 2 }).map((_, i) => <rect key={i} x={w * (0.05 + k * 0.012 + i * 0.029)} y={-w * (0.07 + (k + 1) * 0.035) + w * 0.01} width={w * 0.016} height={w * 0.014} fill="#3b6ea5" />)}
-      </g>
-    ))}
-    <rect x={w * 0.22} y={-w * 0.36} width={w * 0.07} height={w * 0.08} fill="#e8352b" {...ink} strokeWidth={5} />
-    <path d={`M${w * 0.6} -${w * 0.28} q ${w * 0.05} -${w * 0.08} ${w * 0.1} 0 q ${w * 0.04} ${w * 0.06} ${w * 0.08} 0`} fill="none" stroke="#ffd23f" strokeWidth={14} />
-    <path d={`M${w * 0.62} -${w * 0.28} q ${w * 0.06} -${w * 0.1} ${w * 0.12} -${w * 0.02}`} fill="none" stroke="#4fb06a" strokeWidth={12} />
-  </g>
-);
+/** Cruise ship (HD drawing), waterline at (0,0), `w` long. */
+export const CruiseArt: React.FC<{ w: number }> = ({ w }) => <CruiseHD w={w} />;
 
 /** Aircraft carrier, waterline at (0,0), `w` long, bow right. */
-export const CarrierArt: React.FC<{ w: number }> = ({ w }) => (
-  <g>
-    <path d={`M0 -${w * 0.045} L${w} -${w * 0.06} L${w * 0.95} ${w * 0.035} L${w * 0.03} ${w * 0.035} Z`} fill="#7f8a95" {...ink} />
-    <rect x={-w * 0.02} y={-w * 0.075} width={w * 1.04} height={w * 0.022} fill="#5f6a74" {...ink} strokeWidth={5} />
-    <line x1={w * 0.05} y1={-w * 0.064} x2={w * 0.95} y2={-w * 0.064} stroke="#fff" strokeWidth={3} strokeDasharray="30 20" />
-    <rect x={w * 0.62} y={-w * 0.16} width={w * 0.07} height={w * 0.085} fill="#8e99a4" {...ink} />
-    <line x1={w * 0.655} y1={-w * 0.16} x2={w * 0.655} y2={-w * 0.22} stroke={INK} strokeWidth={6} />
-    {[0.15, 0.3, 0.42, 0.8].map((k) => (
-      <path key={k} d={`M${w * k} -${w * 0.08} l ${w * 0.04} 0 l -${w * 0.012} -${w * 0.012} l -${w * 0.016} 0 Z`} fill="#b9c3cc" stroke={INK} strokeWidth={3} />
-    ))}
-    <text x={w * 0.1} y={-w * 0.01} fontFamily={fontFamily} fontWeight={700} fontSize={w * 0.03} fill="#fff">68</text>
-  </g>
-);
+/** Aircraft carrier (HD drawing), waterline at (0,0), `w` long, bow right. */
+export const CarrierArt: React.FC<{ w: number }> = ({ w }) => <CarrierHD w={w} />;
 
 /** Container ship (Emma Maersk-like), waterline at (0,0), `w` long, bow right. */
-export const BoxShip: React.FC<{ w: number; name?: string }> = ({ w, name = "EMMA MÆRSK" }) => {
-  const cols = ["#e8352b", "#3b8fd9", "#4fb06a", "#e0a12a", "#8e44ad", "#f4f1e8"];
-  return (
-    <g>
-      <path d={`M0 -${w * 0.06} L${w * 0.95} -${w * 0.06} Q${w * 1.01} -${w * 0.06} ${w * 1.02} -${w * 0.1} L${w * 0.97} ${w * 0.04} L${w * 0.04} ${w * 0.04} Q0 ${w * 0.04} 0 0 Z`} fill="#2f6fb0" {...ink} />
-      <rect x={0} y={w * 0.012} width={w * 0.98} height={w * 0.028} fill="#b8322a" />
-      {Array.from({ length: 22 }).map((_, i) => {
-        if (i === 15) return null;
-        return Array.from({ length: 5 }).map((_, k) => (
-          <rect key={`${i}-${k}`} x={w * (0.05 + i * 0.041)} y={-w * (0.06 + (k + 1) * 0.022)} width={w * 0.039} height={w * 0.021} fill={cols[(i * 7 + k * 3) % 6]} stroke={INK} strokeWidth={2} />
-        ));
-      })}
-      <rect x={w * 0.66} y={-w * 0.2} width={w * 0.04} height={w * 0.14} fill="#f4f1e8" {...ink} strokeWidth={4} />
-      <rect x={w * 0.62} y={-w * 0.215} width={w * 0.12} height={w * 0.02} fill="#f4f1e8" {...ink} strokeWidth={4} />
-      <text x={w * 0.5} y={-w * 0.015} fontFamily={fontFamily} fontWeight={700} fontSize={w * 0.025} fill="#fff" textAnchor="middle">{name}</text>
-    </g>
-  );
-};
+/** Container ship (HD drawing), waterline at (0,0), `w` long, bow right. */
+export const BoxShip: React.FC<{ w: number; name?: string }> = ({ w, name = "EMMA MÆRSK" }) => <BoxShipHD w={w} name={name} />;
 
 export const Prop: React.FC<{ r: number; a: number }> = ({ r, a }) => (
   <g transform={`rotate(${a})`}>
@@ -410,9 +363,7 @@ const Outboard: Tpl = ({ t, p }) => {
             const x = 600 + i * 240;
             return (
               <g key={i} opacity={ramp(t, i * 6, i * 6 + 8)}>
-                <rect x={x - 80} y={420} width={160} height={210} rx={30} fill="#1f1f24" {...ink} />
-                <text x={x} y={520} textAnchor="middle" fontFamily={fontFamily} fontWeight={700} fontSize={34} fill="#ccc">V12</text>
-                <rect x={x - 25} y={630} width={50} height={230} fill="#2b2b30" stroke={INK} strokeWidth={5} />
+                <g transform={`translate(${x} 600)`}><V12HD h={445} /></g>
               </g>
             );
           })}
@@ -742,13 +693,7 @@ const Versus: Tpl = ({ t, d }) => {
 
 // ------------------------------------------------------------------ stat with this video's icons
 const ICONS: Record<string, React.FC<{ t: number }>> = {
-  outboard: () => (
-    <g transform="scale(1.7)">
-      <rect x={-60} y={-120} width={120} height={140} rx={30} fill="#1f1f24" {...ink} />
-      <text x={0} y={-35} textAnchor="middle" fontFamily={fontFamily} fontWeight={700} fontSize={34} fill="#ccc">V12</text>
-      <rect x={-18} y={20} width={36} height={130} fill="#2b2b30" stroke={INK} strokeWidth={5} />
-    </g>
-  ),
+  outboard: () => <g transform="translate(0 -40)"><V12HD h={520} /></g>,
   car: () => <g transform="translate(-180 120) scale(4)"><Car c="#e8352b" /></g>,
   engine2: () => (
     <g>{[-170, 170].map((x) => <g key={x} transform={`translate(${x - 150} 130)`}><BigEngine w={300} t={0} /></g>)}</g>

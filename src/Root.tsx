@@ -19,6 +19,7 @@ import { WorldTest, WorldTestProps } from "./compositions/WorldTest";
 import { SceneId, ShipGuyScene } from "../engine/shipguy/scenes";
 import { calcShipGuy, ShipGuyBoard, ShipGuyProps, ShipGuyVideo } from "../engine/shipguy/Video";
 import { ShipGuyThumb } from "../engine/shipguy/Thumb";
+import { ShipLook } from "../engine/shipguy/ships_hd";
 import { GuyLab, GuyLabProps, guyLabLength } from "../engine/shipguy/guyLab";
 import { calcShipGuyShort, ShipGuyShort, ShortProps as ShipGuyShortProps } from "../engine/shipguy/Short";
 
@@ -189,6 +190,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="GuyLab" component={GuyLab} durationInFrames={150} fps={30} width={1920} height={1080}
         defaultProps={{ demo: "hello" } as GuyLabProps}
         calculateMetadata={async ({ props }) => ({ durationInFrames: props.sheet || props.demo === "model" ? 1 : guyLabLength(props.demo) })} />
+      <Composition id="ShipLook" component={ShipLook} durationInFrames={1} fps={30} width={1920} height={1080} />
       <Composition id="ShipGuyThumb" component={ShipGuyThumb} durationInFrames={1} fps={30} width={1920} height={1080} defaultProps={{ v: "A" }} />
       <Composition
         id="ShipGuyBoard"
