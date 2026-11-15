@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "approved": "2026-11-15",
+  "note": "How We Ended Up · The Gallery. Owner-approved style frames docs/howwe/frames/. Never edit; a change = style-v1.x.json + owner approval + new golden frames.",
+  "colors": {
+    "wall": "#EEE7DA", "wallLight": "#FFFBF2", "floorTop": "#D9CEB9", "floorBot": "#C9BCA2", "baseboard": "#BFB197",
+    "pillar": "#F7F2E8", "plinth": "#FBF8F2", "plinthSide": "#E4DBCA", "ink": "#1E1E24", "line": "#26262C", "label": "#6B6252", "card": "#FFFFFF",
+    "clay": "#B8735C", "slate": "#557F8E", "moss": "#7C8F5A",
+    "eat": "#E3A72F", "wear": "#4B57A3", "home": "#7C9A57", "money": "#2E7D5E", "manners": "#C25F7E", "around": "#1F9AA8",
+    "thenPaper": "#E7D8B4", "thenInk": "#4A3F33", "dark": "#141A19", "spot": "#FFF4D6",
+    "plaster": "#E9E2D5", "plasterShade": "#D3C8B4"
+  },
+  "skin": ["#F3D9C4", "#EBC6A6", "#D9A982", "#C68E62", "#A8714A", "#8A5636", "#6B3F27", "#4E2C1C"],
+  "fonts": { "display": "Playfair Display 900", "mono": "IBM Plex Mono 400/600", "read": "Inter 600" },
+  "line": { "outline": 3.5, "thenSaturate": 0.55, "thenPaperOpacity": 0.38 },
+  "reveal": { "darkOpacity": 0.86 }
+}

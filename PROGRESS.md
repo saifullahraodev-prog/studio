@@ -1,5 +1,21 @@
 # PROGRESS
 
+## New: "How We Ended Up" channel (2026-11-15): look APPROVED, "The Gallery"
+- Plan: `../How-We-Ended-Up-Channel-Plan.md`. Style bible draft: `docs/howwe-style-bible.md`.
+- Stills: `docs/howwe/board.png` (all three side by side + feed-size check), `docs/howwe/look-{A,B,C}-{frame,thumb}.png`.
+- Code: `engine/howwe/lab.tsx`, composition `HowLab` (looks A-D; view=museum shows C vs D).
+- Owner Q&A done: code-built by Claude; simple faceless people; same style + era tint; medium detail; premium ->
+  **daylight gallery + dark spotlight reveal**. Recommendation written: `docs/howwe-visual-direction.md` (D1 The Gallery).
+- Style frames v0.1 BUILT (2026-11-15): `docs/howwe/frames/{board,gallery,period,map,reveal,people,thumb}.png`.
+  Kit: `engine/howwe/kit.tsx` (tokens, Gallery/Pillar/Plinth/LabelCard/Headline/Subtitle/ThenTint/RoomSign, PlasterHand,
+  faceless Figure with 7 outfits x 7 poses, placeholder WorldMap); frames: `engine/howwe/frames.tsx`, composition `HowFrames`.
+  Each still renders in ~10-15 s. Costumes, dates, map geography and map data are PLACEHOLDERS.
+- GATE PASSED 2026-11-15: owner APPROVED the Gallery style frames. Locked: `engine/howwe/style-v1.0.json` (kit reads it),
+  golden frames `golden/howwe-*.png` (in `golden/manifest.json`, SSIM 1.000 vs approved stills).
+- NEXT: asset kits (Natural Earth map data: ask owner before download; reference-based costumes; object library;
+  scene templates; motion + transitions), then video 1 script "Why Half the World Doesn't Use Forks".
+
+
 ## Current: Review 2 (owner, 2026-11-10): "movement too little, video not engaging"
 - Reference compared frame by frame: `out/review2/analysis.md`, `out/review2/reference-vs-ours.png`.
 - Step 1 DONE (story + animation + props):

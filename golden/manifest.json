@@ -17,6 +17,12 @@
     { "id": "11-turnaround-stoker", "comp": "Turnaround", "props": { "character": "stoker", "variant": "D" }, "frame": 0 },
     { "id": "12-talking", "comp": "TalkTest", "props": { "res": 1080, "variant": "D" }, "frame": 60 },
     { "id": "13-facesheet-inspector", "comp": "FaceSheet", "props": { "character": "inspector", "variant": "D" }, "frame": 0 },
-    { "id": "14-facesheet-stoker", "comp": "FaceSheet", "props": { "character": "stoker", "variant": "D" }, "frame": 0 }
+    { "id": "14-facesheet-stoker", "comp": "FaceSheet", "props": { "character": "stoker", "variant": "D" }, "frame": 0 },
+    { "id": "howwe-gallery", "comp": "HowFrames", "props": { "view": "gallery" }, "frame": 0 },
+    { "id": "howwe-period", "comp": "HowFrames", "props": { "view": "period" }, "frame": 0 },
+    { "id": "howwe-map", "comp": "HowFrames", "props": { "view": "map" }, "frame": 0 },
+    { "id": "howwe-reveal", "comp": "HowFrames", "props": { "view": "reveal" }, "frame": 0 },
+    { "id": "howwe-people", "comp": "HowFrames", "props": { "view": "people" }, "frame": 0 },
+    { "id": "howwe-thumb", "comp": "HowFrames", "props": { "view": "thumb" }, "frame": 0 }
   ]
 }

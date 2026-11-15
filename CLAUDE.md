@@ -139,3 +139,12 @@ Commit and push at every gate. Private repo: https://github.com/saifullahraodev-
 - **Subtitles:** big centre keyword (yellow for numbers/emphasis) + small sentence subtitle at the top
   (white on a dark box, synced, inside the Shorts safe area) for muted viewers.
 
+
+## Channel 3: "How We Ended Up" (approved look 2026-11-15)
+- Concept + plan: `../How-We-Ended-Up-Channel-Plan.md`. Visual spec: `docs/howwe-visual-direction.md`.
+- Look **"The Gallery"**: daylight museum, split by a centre pillar (Here vs There / Then vs Now), equal plinths + label
+  cards, period rooms in the Then tint, framed wall maps, one lights-down spotlight reveal per video. 16:9 long-form.
+- 2D SVG in Remotion (no Blender/3D). Code: `engine/howwe/{kit,frames}.tsx`; values ONLY from `engine/howwe/style-v1.0.json`
+  (never edit; changes = new version + owner approval + `node tools/golden.mjs approve howwe`).
+- People: faceless "diorama figures", posture tells the story; costumes/objects drawn from documented references;
+  split colours are tied to screen POSITION, never to a culture. AI images only for optional empty backdrop plates.
