@@ -1,0 +1,24 @@
+{
+  "note": "KIT DEMO ONLY: placeholder text/data, not the fact-checked video 1 script. Durations in frames @30fps; 'in' = transition into this scene.",
+  "scenes": [
+    { "t": "today", "dur": 150, "in": "cut", "p": { "subtitle": "You probably used a fork today." } },
+    { "t": "exhibits", "dur": 210, "in": "dolly", "p": {
+      "tag": "THE QUESTION", "word": "Three ways to eat.", "pillar": "eat", "focus": 1, "focusAt": 0.62,
+      "subtitle": "Fork, chopsticks, or your own hand.",
+      "items": [
+        { "obj": "fork", "meta": "EXHIBIT 01 · FORK", "name": "The Fork", "sub": "placeholder" },
+        { "obj": "chopsticks", "meta": "EXHIBIT 02 · CHOPSTICKS", "name": "Chopsticks", "sub": "placeholder" },
+        { "obj": "hand", "meta": "EXHIBIT 03 · HANDS", "name": "The Hand", "sub": "placeholder" }
+      ] } },
+    { "t": "map", "dur": 240, "in": "dolly", "p": {
+      "tag": "THE MAP", "title": "Three eating cultures", "order": ["a", "b", "c", "mix"],
+      "legend": [{ "cat": "a", "label": "FORK" }, { "cat": "b", "label": "CHOPSTICKS" }, { "cat": "c", "label": "HANDS" }, { "cat": "mix", "label": "MIXED" }],
+      "routes": [{ "from": [12.3, 45.4], "to": [2.35, 48.85], "at": 0.72 }],
+      "cats": "@EATING_PLACEHOLDER" } },
+    { "t": "period", "dur": 150, "in": "door", "p": { "left": "europe1500", "leftSign": "PERIOD ROOM · EUROPE · c. 1500*", "subtitle": "Five hundred years ago, a knife and fingers." } },
+    { "t": "period", "dur": 180, "in": "dolly", "p": { "left": "europe1500", "leftSign": "EUROPE · c. 1500*", "right": "china1500", "rightSign": "CHINA · c. 1500*", "washIn": false, "subtitle": "Same century. Two very different tables." } },
+    { "t": "cardFlip", "dur": 150, "in": "dolly", "p": { "heard": "Placeholder: the popular explanation goes here.", "actual": "Placeholder: what the sources actually say.", "source": "[2] source to be added after fact-check" } },
+    { "t": "reveal", "dur": 180, "in": "dolly", "p": { "line": "Placeholder answer.", "answer": { "meta": "EXHIBIT 02 · CHINA", "name": "Placeholder", "sub": "the real reason" } } },
+    { "t": "titleWall", "dur": 120, "in": "dolly", "p": { "question": "Why half the world doesn't use forks" } }
+  ]
+}

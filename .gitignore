@@ -26,3 +26,4 @@ public/shipguy/*/short.wav
 
 # How We Ended Up: raw Natural Earth downloads (public domain; refetch per CREDITS.md, converted data is committed)
 public/howwe/naturalearth/
+docs/howwe/**/_frames/

@@ -148,3 +148,5 @@ Commit and push at every gate. Private repo: https://github.com/saifullahraodev-
   (never edit; changes = new version + owner approval + `node tools/golden.mjs approve howwe`).
 - People: faceless "diorama figures", posture tells the story; costumes/objects drawn from documented references;
   split colours are tied to screen POSITION, never to a culture. AI images only for optional empty backdrop plates.
+- Production kit: `docs/howwe-kit.md`. A video = scene list JSON -> `HowVideo` composition (templates in `engine/howwe/templates.tsx`,
+  transitions cut/dolly/door only). Storyboard: `node tools/howwe_storyboard.mjs <scenes.json> <outDir>`. Full renders need owner OK.

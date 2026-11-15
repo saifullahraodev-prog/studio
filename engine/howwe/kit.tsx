@@ -150,7 +150,7 @@ export const PlasterHand: React.FC<{ x: number; y: number; s?: number }> = ({ x,
 /* ---------------- people: faceless "diorama figures" (~6 heads tall) ---------------- */
 export type Outfit = "tee" | "cardigan" | "euMan" | "euWoman" | "ming" | "saree" | "cook";
 export type Hair = "short" | "long" | "bun" | "covered";
-export type Pose = "stand" | "eatHand" | "knife" | "bowl" | "chop" | "fork" | "greet";
+export type Pose = "stand" | "eatHand" | "knife" | "bowl" | "chop" | "fork" | "greet" | "forkDown" | "handDown" | "bowlDown" | "chopUp" | "knifeCut" | "point";
 type Pt = [number, number];
 const POSES: Record<Pose, { L: [Pt, Pt]; R: [Pt, Pt]; holdL?: string; holdR?: string }> = {
   stand: { L: [[-46, -236], [-48, -178]], R: [[46, -236], [48, -178]] },
@@ -160,6 +160,13 @@ const POSES: Record<Pose, { L: [Pt, Pt]; R: [Pt, Pt]; holdL?: string; holdR?: st
   bowl: { L: [[-48, -252], [-16, -266]], R: [[48, -254], [18, -302]], holdL: "bowl", holdR: "chop" },
   chop: { L: [[-50, -242], [-34, -204]], R: [[54, -246], [40, -220]], holdR: "cleaver" },
   fork: { L: [[-48, -238], [-30, -200]], R: [[46, -248], [14, -308]], holdR: "fork" },
+  // loop partners (Figure pose -> pose2 with mix 0..1)
+  forkDown: { L: [[-48, -238], [-30, -200]], R: [[52, -238], [34, -204]], holdR: "fork" },
+  handDown: { L: [[-48, -238], [-30, -200]], R: [[52, -238], [30, -206]], holdR: "food" },
+  bowlDown: { L: [[-48, -252], [-16, -266]], R: [[48, -250], [10, -262]], holdL: "bowl", holdR: "chop" },
+  chopUp: { L: [[-50, -242], [-34, -204]], R: [[56, -262], [46, -262]], holdR: "cleaver" },
+  knifeCut: { L: [[-50, -240], [-34, -204]], R: [[50, -236], [26, -204]], holdL: "bread", holdR: "knife" },
+  point: { L: [[-46, -236], [-48, -178]], R: [[80, -280], [128, -300]] },
 };
 const OUT: Record<Outfit, { top: string; bottom: string; extra?: string; shoes: string; sleeve: number }> = {
   tee: { top: "#4F7CAC", bottom: "#2F3E5C", shoes: "#EFEFEF", sleeve: 19 },
@@ -194,10 +201,18 @@ const Arm: React.FC<{ from: Pt; pts: [Pt, Pt]; color: string; w: number; skin: s
     </g>
   );
 };
-export const Figure: React.FC<{ x: number; y: number; s?: number; skin: string; hair: Hair; hairColor?: string; outfit: Outfit; pose?: Pose; flip?: boolean }> = ({
-  x, y, s = 1, skin, hair, hairColor = "#2B211B", outfit, pose = "stand", flip,
+const mixPt = (a: Pt, b: Pt, t: number): Pt => [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t];
+/** Faceless diorama figure. Animate by blending `pose` -> `pose2` with `mix` (0..1); held objects follow the nearer pose. */
+export const Figure: React.FC<{ x: number; y: number; s?: number; skin: string; hair: Hair; hairColor?: string; outfit: Outfit; pose?: Pose; pose2?: Pose; mix?: number; flip?: boolean }> = ({
+  x, y, s = 1, skin, hair, hairColor = "#2B211B", outfit, pose = "stand", pose2, mix = 0, flip,
 }) => {
-  const o = OUT[outfit], p = POSES[pose];
+  const o = OUT[outfit], pa = POSES[pose], pb = pose2 ? POSES[pose2] : pa;
+  const t = pose2 ? mix : 0;
+  const p = {
+    L: [mixPt(pa.L[0], pb.L[0], t), mixPt(pa.L[1], pb.L[1], t)] as [Pt, Pt],
+    R: [mixPt(pa.R[0], pb.R[0], t), mixPt(pa.R[1], pb.R[1], t)] as [Pt, Pt],
+    holdL: (t < 0.5 ? pa : pb).holdL, holdR: (t < 0.5 ? pa : pb).holdR,
+  };
   const ln = { stroke: T.line, strokeWidth: 3.5, strokeLinejoin: "round" as const };
   const long = outfit === "euWoman" || outfit === "ming" || outfit === "saree";
   return (
@@ -271,7 +286,9 @@ const GRATICULE = [
 ];
 export type MapCat = "a" | "b" | "c" | "mix";
 /** Framed-museum world map. `cats` colours countries by ISO A3 code: a=clay, b=slate, c=moss, mix=hatched a/c. */
-export const WorldMap: React.FC<{ id: string; x: number; y: number; w: number; cats?: Record<string, MapCat> }> = ({ id, x, y, w, cats = {} }) => {
+export const WorldMap: React.FC<{ id: string; x: number; y: number; w: number; cats?: Record<string, MapCat>; catOpacity?: Partial<Record<MapCat, number>>; children?: React.ReactNode }> = ({
+  id, x, y, w, cats = {}, catOpacity = {}, children,
+}) => {
   const k = w / MAP_W;
   const fill = (a3: string) => {
     const c = cats[a3];
@@ -290,8 +307,16 @@ export const WorldMap: React.FC<{ id: string; x: number; y: number; w: number; c
       <g clipPath={`url(#${id}globe)`}>
         {GRATICULE.map((d, i) => <path key={i} d={d} fill="none" stroke="#B9C6C2" strokeWidth={0.6 / k * 1.2} />)}
         {Object.entries(countries).map(([a3, c]) => (
-          <path key={a3} d={c.d} fill={fill(a3)} stroke="#8A7E68" strokeWidth={0.9 / k} strokeLinejoin="round" fillRule="evenodd" />
+          <path key={a3} d={c.d} fill="#E9E1D0" stroke="#8A7E68" strokeWidth={0.9 / k} strokeLinejoin="round" fillRule="evenodd" />
         ))}
+        {(["a", "b", "c", "mix"] as MapCat[]).map((cat) => (
+          <g key={cat} opacity={catOpacity[cat] ?? 1}>
+            {Object.entries(countries).filter(([a3]) => cats[a3] === cat).map(([a3, c]) => (
+              <path key={a3} d={c.d} fill={fill(a3)} stroke="#8A7E68" strokeWidth={0.9 / k} strokeLinejoin="round" fillRule="evenodd" />
+            ))}
+          </g>
+        ))}
+        {children}
       </g>
       <path d={OUTLINE} fill="none" stroke="#8A7E68" strokeWidth={1.6 / k} />
     </g>

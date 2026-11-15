@@ -17,7 +17,13 @@
   real countries (`cats` by ISO A3), graticule + Equal Earth outline; `projectEE(lon,lat)` for routes/pins.
   Owner APPROVED the real-geography map room 2026-11-15 (`docs/howwe/frames/map.png`, golden `howwe-map` re-approved).
   Eating-culture colours are PLACEHOLDER data.
-- NEXT: asset kits (map: done; reference-based costumes; object library;
+- 2026-11-15: production kit v0.1 BUILT (owner asked "build the kit first"): guide `docs/howwe-kit.md`.
+  motion.tsx (TIMING, Cam), objects.tsx (10 objects, <Exhibit> stands on plinth top), rooms.tsx (europe1500, china1500,
+  today; people loop), templates.tsx (exhibits, period, map, reveal, cardFlip, today, titleWall), video.tsx (HowVideo:
+  scene list + cut/dolly/door transitions), demo-scenes.json (placeholder), tools/howwe_storyboard.mjs.
+  Storyboard stills: `docs/howwe/kit-v0.1/{scenes,transitions}.png`. Golden howwe check passes. No video render yet
+  (needs owner OK). No sound yet.
+- NEXT (was): asset kits (map: done; reference-based costumes; object library;
   scene templates; motion + transitions), then video 1 script "Why Half the World Doesn't Use Forks".
 
 ## Current: Review 2 (owner, 2026-11-10): "movement too little, video not engaging"

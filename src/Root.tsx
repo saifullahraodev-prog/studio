@@ -23,7 +23,9 @@ import { ShipLook } from "../engine/shipguy/ships_hd";
 import { GuyLab, GuyLabProps, guyLabLength } from "../engine/shipguy/guyLab";
 import { calcShipGuyShort, ShipGuyShort, ShortProps as ShipGuyShortProps } from "../engine/shipguy/Short";
 import { HowLab, HowLabProps } from "../engine/howwe/lab";
-import { HowFrames, HowFramesProps } from "../engine/howwe/frames";
+import { EATING_PLACEHOLDER, HowFrames, HowFramesProps } from "../engine/howwe/frames";
+import { HowVideo, howVideoLength, HowVideoProps, Scene as HowScene } from "../engine/howwe/video";
+import howDemo from "../engine/howwe/demo-scenes.json";
 
 // Vertical compositions take a `res` prop: 720 for previews (default), 1080 for finals.
 // Final render: --props=engine/presets/res-1080.json
@@ -195,6 +197,9 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="ShipLook" component={ShipLook} durationInFrames={1} fps={30} width={1920} height={1080} />
       <Composition id="HowLab" component={HowLab} durationInFrames={1} fps={30} width={1920} height={1080} defaultProps={{ look: "A", view: "board" } as HowLabProps} />
       <Composition id="HowFrames" component={HowFrames} durationInFrames={1} fps={30} width={1920} height={1080} defaultProps={{ view: "board" } as HowFramesProps} />
+      <Composition id="HowVideo" component={HowVideo} durationInFrames={30} fps={30} width={1920} height={1080}
+        defaultProps={{ scenes: howDemo.scenes as HowScene[], cats: { EATING_PLACEHOLDER } } as HowVideoProps}
+        calculateMetadata={async ({ props }) => ({ durationInFrames: howVideoLength(props.scenes) })} />
       <Composition id="ShipGuyThumb" component={ShipGuyThumb} durationInFrames={1} fps={30} width={1920} height={1080} defaultProps={{ v: "A" }} />
       <Composition
         id="ShipGuyBoard"
