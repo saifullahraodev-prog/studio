@@ -1,6 +1,6 @@
 """How We Ended Up · auto sound mix from a scene list.
 
-Usage (from studio/):  python -I tools/howwe_mix.py <scenes.json> <slug> [--voice path.wav] [--music piano|pizz] [--out name.wav]
+Usage (from studio/):  python -I tools/howwe_mix.py <scenes.json> <slug> [--voice path.wav] [--music piano|pizz|path/to/track.mp3] [--out name.wav]
 Writes public/howwe/<slug>/mix.wav (-14 LUFS, true peak -1.5 dB) + public/howwe/<slug>/cues.json (every cue, for review).
 
 Cue rules follow the animation timings in engine/howwe/motion.tsx (TIMING) and templates.tsx. Keep them in sync.
@@ -106,6 +106,28 @@ def render(ev, hums, dur):
     return out[: int(dur * SR)]
 
 
+def track_bed(path, dur, hush):
+    """A downloaded music track as the bed: looped (2 s crossfade) or trimmed to the video length,
+    peak-normalised, and softened to 25% during reveal hush windows."""
+    x = read_wav(path)
+    n = int(dur * SR) + SR
+    xf = 2 * SR
+    y = x[:n].copy()
+    while len(y) < n:
+        ramp = np.linspace(0, 1, xf, dtype=np.float32)
+        y[-xf:] = y[-xf:] * (1 - ramp) + x[:xf] * ramp
+        y = np.concatenate([y, x[xf:]])[:n]
+    y = y / (np.max(np.abs(y)) or 1) * 0.8
+    env = np.ones(len(y))
+    r = int(0.4 * SR)
+    for a, b in hush:
+        ia, ib = int(a * SR), int(b * SR)
+        env[ia:ib] = 0.25
+        env[max(0, ia - r):ia] = np.linspace(1, 0.25, ia - max(0, ia - r))
+        env[ib:ib + r] = np.linspace(0.25, 1, len(env[ib:ib + r]))
+    return (y * env)[: int(dur * SR)]
+
+
 def read_wav(p):
     pcm = subprocess.run(["ffmpeg", "-v", "error", "-i", str(p), "-f", "s16le", "-ac", "1", "-ar", str(SR), "-"], capture_output=True, check=True).stdout
     return np.frombuffer(pcm, np.int16).astype(np.float32) / 32768.0
@@ -130,7 +152,10 @@ def main():
     ev, hush, hums, dur = cues(scenes)
     n = int(dur * SR)
     sfx = render(ev, hums, dur)
-    mus = hx.music(dur, hush=hush, style=style) * hx.GAINS["music"]
+    if Path(style).suffix.lower() in (".mp3", ".wav", ".flac", ".ogg", ".m4a"):
+        mus = track_bed(ROOT / style, dur, hush) * hx.GAINS["music"]  # a real (licensed) music file
+    else:
+        mus = hx.music(dur, hush=hush, style=style) * hx.GAINS["music"]
     tone = hx.roomtone(dur) * hx.GAINS["roomtone"]
     if voice_path:
         voice = read_wav(ROOT / voice_path)

@@ -35,7 +35,13 @@
   all SFX gains roughly halved; new music A "Gallery piano" (72 bpm Dm Bb F C) + B "Quiet curiosity" (pizz, 84 bpm);
   placeholder narration `tools/howwe_voice.py` (Piper Ryan) from each scene's `say`; music ducks under voice (~20 dB below).
   Previews: `out/howwe/kit-demo-720p-voice-music-{piano,pizz}.mp4`, sampler `out/howwe/sound-sampler-v2.wav` (+ .txt).
-  Mixes -15.1 / -15.2 LUFS, -1.2 dBTP. WAITING: owner picks music A or B + any further sound notes.
+  Mixes -15.1 / -15.2 LUFS, -1.2 dBTP. 
+- 2026-11-15 owner: "find the reference channels, see what music or sound they are using". Researched:
+  `docs/howwe-sound-sources.md`. Kurzgesagt = custom score (Epic Mountain); TED-Ed = commissioned studios
+  (Wonder Boy Audio, Camp Studio); Johnny Harris = Epidemic Sound + Musicbed + Soundstripe + composer Tom Fox;
+  Wendover = sound designers. Nobody uses synthesized music. Recommendation: human-made music (YouTube Audio Library
+  free now, Epidemic Sound ~$9.99/mo later). `howwe_mix.py --music <file>` now accepts a downloaded track.
+  WAITING: owner chooses free Audio Library vs a subscription and downloads first tracks (I can't use their accounts).
 - NEXT (was): asset kits (map: done; reference-based costumes; object library;
   scene templates; motion + transitions), then video 1 script "Why Half the World Doesn't Use Forks".
 
