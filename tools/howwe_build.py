@@ -136,6 +136,12 @@ def main():
                 timed = sorted(((at(l["on"], 30) if "on" in l else None), l["cat"]) for l in legend if "on" in l)
                 p["order"] = [c for _, c in timed]
                 p["orderAt"] = [f0 for f0, _ in timed]
+            for pn in p.get("pins", []):
+                if "on" in pn:
+                    pn["f"] = max(0, at(pn.pop("on"), 20) - 2)
+            for r in p.get("routes", []):
+                if "on" in r:
+                    r["at"] = round(at(r.pop("on"), int(dur * 0.5)) / dur, 4)
             if p.get("zoomTo"):
                 p["zoomTo"] = [{"f": at(z["on"], 40), "lonlat": z["lonlat"], "zoom": z.get("zoom", 1.7)} for z in p["zoomTo"]]
         if "splitOn" in p:

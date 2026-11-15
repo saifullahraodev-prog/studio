@@ -16,6 +16,14 @@ const Spoon: React.FC = () => (
     <ellipse cx={-8} cy={-52} rx={20} ry={36} fill="#EEF1F4" stroke="none" />
   </g>
 );
+/** Two-pronged golden table fork (Byzantine style, c. 11th century; drawn from the "two-pronged golden fork" accounts). */
+const Fork2: React.FC = () => (
+  <g {...st}>
+    <path d="M-12 40 L-14 330 Q0 350 14 330 L12 40 Z" fill="#D9B45A" />
+    {[90, 170, 250].map((y) => <rect key={y} x={-16} y={y} width={32} height={10} rx={4} fill="#B8913A" />)}
+    <path d="M-30 -110 L-30 0 Q-30 42 0 46 Q30 42 30 0 L30 -110 L18 -110 L16 -4 L-16 -4 L-18 -110 Z" fill="#E4C26A" />
+  </g>
+);
 const Teacup: React.FC = () => (
   <g {...st}>
     <ellipse cx={0} cy={110} rx={170} ry={34} fill={INK.plate} />
@@ -43,6 +51,7 @@ type Entry = { name: string; top: number; bottom: number; draw: React.FC };
 /** Object registry. Units are the drawing's own; <Exhibit s> scales them. */
 export const OBJECTS: Record<string, Entry> = {
   fork: { name: "Fork", top: -80, bottom: 350, draw: () => <Fork x={0} y={0} ink={INK} /> },
+  fork2: { name: "Golden fork", top: -110, bottom: 350, draw: Fork2 },
   knife: { name: "Knife", top: -100, bottom: 348, draw: () => <Knife x={0} y={0} ink={INK} /> },
   spoon: { name: "Spoon", top: -110, bottom: 348, draw: Spoon },
   chopsticks: { name: "Chopsticks", top: -232, bottom: 232, draw: () => <Chopsticks x={0} y={0} rot={6} ink={INK} /> },

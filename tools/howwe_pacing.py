@@ -42,6 +42,10 @@ def events(scenes):
             ev.append((t0 + 6, "frame push"))
             for k, f0 in enumerate(p.get("orderAt") or [30 + j * 26 for j in range(len(p.get("order", [])))]):
                 ev.append((t0 + f0, f"map fill {k + 1}"))
+            for pn in p.get("pins", []):
+                ev.append((t0 + pn.get("f", 0), "pin"))
+            for r in p.get("routes", []):
+                ev.append((t0 + int(r.get("at", 0.5) * d), "route draws"))
             for z in p.get("zoomTo", []):
                 if "f" in z:
                     ev.append((t0 + z["f"], "map zoom"))

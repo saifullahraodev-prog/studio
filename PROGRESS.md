@@ -56,7 +56,13 @@
 - 2026-11-15: owner OK'd render. `out/howwe/demo2-720p.mp4` (36.3 s, 1089 frames) in 114 s = ~3.1 s per second of video
   (overlays cost ~20% vs 2.6); QC: no black/frozen frames, -14.8 LUFS. Sheet `out/howwe/demo2-sheet.png`.
   Known small issues: map legend touches the caption bar after the final pull-back; exhibit label cards get clipped at the
-  frame edge while the camera visits an exhibit. WAITING: owner feedback on pacing.
+  frame edge while the camera visits an exhibit.
+- 2026-11-15 owner: "still missing something" (music test didn't fix it). Diagnosis: no real content + flat voice.
+  Wrote the REAL fact-checked opening of video 1: `videos/2026-11-15-howwe-forks-opening/{script.json,sources.md}`
+  (chopstick share via Q. E. Wang; Venetian golden fork, 11th c., clergyman's "natural forks" via Nat Geo; Coryat 1608
+  "Furcifer"; Yinxu bronze chopsticks c.1200 BC; fuel = "one popular theory"). Kit: golden two-pronged fork `fork2`,
+  cardFlip custom labels, map pins + routes on words, legend optional. Build: 65.4 s, 12 scenes, 53 visual changes,
+  R1-R4 pass, R5 6.06 s (0.06 over, accepted). Storyboard `docs/howwe/forks-opening/`. WAITING: owner OK to render.
 - NEXT (was): asset kits (map: done; reference-based costumes; object library;
   scene templates; motion + transitions), then video 1 script "Why Half the World Doesn't Use Forks".
 

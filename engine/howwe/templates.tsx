@@ -127,8 +127,9 @@ export const Period: React.FC<Base & PeriodProps> = ({ uid, f, left, leftSign, r
 /* ---------------- 3 · map room: frame push, categories fill in turn, optional routes ---------------- */
 export type MapRoute = { from: [number, number]; to: [number, number]; at: number };
 /** `orderAt`: frame each category in `order` fills (word-synced); `zoomTo`: camera visits to [lon, lat] at frame f. */
-export type MapSceneProps = { tag: string; title: string; cats: Record<string, MapCat>; order: MapCat[]; legend: { cat: MapCat; label: string }[]; routes?: MapRoute[]; subtitle?: string; source?: string; orderAt?: number[]; zoomTo?: { f: number; lonlat: [number, number]; zoom?: number }[] };
-export const MapScene: React.FC<Base & MapSceneProps> = ({ uid, f, dur, tag, title, cats, order, legend, routes = [], subtitle, source, orderAt, zoomTo = [], cam, marks }) => {
+export type MapPin = { lonlat: [number, number]; label: string; f?: number; below?: boolean };
+export type MapSceneProps = { pins?: MapPin[]; tag: string; title: string; cats: Record<string, MapCat>; order?: MapCat[]; legend?: { cat: MapCat; label: string }[]; routes?: MapRoute[]; subtitle?: string; source?: string; orderAt?: number[]; zoomTo?: { f: number; lonlat: [number, number]; zoom?: number }[] };
+export const MapScene: React.FC<Base & MapSceneProps> = ({ uid, f, dur, pins = [], tag, title, cats, order = [], legend = [], routes = [], subtitle, source, orderAt, zoomTo = [], cam, marks }) => {
   const mw = 1160, mh = mapHeight(mw), fx = (W - mw) / 2, fy = 214; // leaves the bottom band free for captions
   const push = easeInOut(prog(f, 6, 26));
   const fillStart = (i: number) => orderAt?.[i] ?? 30 + i * 26;
@@ -163,8 +164,19 @@ export const MapScene: React.FC<Base & MapSceneProps> = ({ uid, f, dur, tag, tit
               </g>
             );
           })}
+          {pins.map((pn, i) => {
+            const [px, py] = projectEE(...pn.lonlat);
+            const s = easeBack(prog(f, pn.f ?? 0, 10), 1.6);
+            if (s <= 0) return null;
+            return (
+              <g key={`pin${i}`} transform={`translate(${px} ${py}) scale(${s})`}>
+                <circle r={4.5} fill={T.eat} stroke={T.ink} strokeWidth={1.4} />
+                <text x={7} y={pn.below ? 13 : -6} fontFamily={MONO} fontWeight={600} fontSize={11} letterSpacing={1} fill={T.ink} stroke="#FBF8F2" strokeWidth={3} paintOrder="stroke">{pn.label.toUpperCase()}</text>
+              </g>
+            );
+          })}
         </WorldMap>
-        <g transform={`translate(${W / 2 - 520} ${fy + mh + 48})`}>
+        {legend.length > 0 && <g transform={`translate(${W / 2 - 520} ${fy + mh + 48})`}>
           <rect x={3} y={5} width={1040} height={86} fill="#000" opacity={0.08} />
           <rect width={1040} height={86} fill={T.card} />
           {legend.map((l, i) => (
@@ -174,7 +186,7 @@ export const MapScene: React.FC<Base & MapSceneProps> = ({ uid, f, dur, tag, tit
               <text x={52} y={28} fontFamily={MONO} fontWeight={600} fontSize={22} letterSpacing={3} fill={T.ink}>{l.label}</text>
             </g>
           ))}
-        </g>
+        </g>}
         <Marks f={f} marks={marks} />
       </Cam>
       <Grain seed={3} />
@@ -232,8 +244,8 @@ export const Reveal: React.FC<Base & RevealProps> = ({ uid, f, dur, tag = "THE A
 };
 
 /* ---------------- 5 · card flip: "The story you heard" -> "Correction" ---------------- */
-export type CardFlipProps = { heard: string; actual: string; source?: string; flipAt?: number };
-export const CardFlip: React.FC<Base & CardFlipProps> = ({ uid, f, dur, heard, actual, source, flipAt }) => {
+export type CardFlipProps = { heard: string; actual: string; source?: string; flipAt?: number; frontLabel?: string; backLabel?: string };
+export const CardFlip: React.FC<Base & CardFlipProps> = ({ uid, f, dur, heard, actual, source, flipAt, frontLabel = "THE STORY YOU HEARD", backLabel = "CORRECTION" }) => {
   const flip = prog(f, flipAt ?? dur * 0.45, 14);
   const sx = flip < 0.5 ? 1 - flip * 2 : (flip - 0.5) * 2;
   const back = flip >= 0.5;
@@ -251,7 +263,7 @@ export const CardFlip: React.FC<Base & CardFlipProps> = ({ uid, f, dur, heard, a
           <rect x={-436} y={-266} width={880} height={540} fill="#000" opacity={0.1} />
           <rect x={-440} y={-270} width={880} height={540} fill={T.card} stroke={T.line} strokeWidth={3} />
           <rect x={-440} y={-270} width={14} height={540} fill={back ? T.money : T.manners} />
-          <text x={-390} y={-200} fontFamily={MONO} fontWeight={600} fontSize={26} letterSpacing={6} fill={back ? T.money : T.manners}>{back ? "CORRECTION" : "THE STORY YOU HEARD"}</text>
+          <text x={-390} y={-200} fontFamily={MONO} fontWeight={600} fontSize={26} letterSpacing={6} fill={back ? T.money : T.manners}>{back ? backLabel : frontLabel}</text>
           {wrap(back ? actual : heard).map((l, i) => (
             <text key={i} x={-390} y={-90 + i * 82} fontFamily={DISPLAY} fontWeight={900} fontSize={68} fill={T.ink}>{l}</text>
           ))}

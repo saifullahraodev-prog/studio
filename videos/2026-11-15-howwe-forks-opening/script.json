@@ -1,0 +1,307 @@
+{
+ "note": "How We Ended Up · video 1 'Why Half the World Doesn't Use Forks' · REAL OPENING (about 75 s), fact-checked 2026-11-15, sources in sources.md. Map country colours are still simplified placeholder data (not spoken as fact). Voice = placeholder TTS.",
+ "scenes": [
+  {
+   "t": "map",
+   "in": "cut",
+   "pillar": "eat",
+   "say": "Right now, more than a billion people are eating with *chopsticks*. Hundreds of millions are eating with their *hands*. And the *fork*? It's the newcomer.",
+   "p": {
+    "tag": "THE MAP",
+    "title": "Three ways to eat",
+    "cats": "@EATING_PLACEHOLDER",
+    "legend": [
+     {
+      "cat": "a",
+      "label": "FORK",
+      "on": "fork"
+     },
+     {
+      "cat": "b",
+      "label": "CHOPSTICKS",
+      "on": "chopsticks"
+     },
+     {
+      "cat": "c",
+      "label": "HANDS",
+      "on": "hands"
+     }
+    ],
+    "zoomTo": [
+     {
+      "on": "chopsticks",
+      "lonlat": [
+       112,
+       30
+      ],
+      "zoom": 1.55
+     },
+     {
+      "on": "hands",
+      "lonlat": [
+       45,
+       12
+      ],
+      "zoom": 1.4
+     },
+     {
+      "on": "fork",
+      "lonlat": [
+       0,
+       22
+      ],
+      "zoom": 1.12
+     }
+    ]
+   }
+  },
+  {
+   "t": "titleWall",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "So how did the world end up eating *three* different ways?",
+   "p": {
+    "question": "Why half the world doesn't use forks"
+   }
+  },
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "Our story starts in *Venice*, in the eleventh century.",
+   "p": {
+    "tag": "VENICE",
+    "title": "The eleventh century",
+    "cats": {},
+    "legend": [],
+    "zoomTo": [
+     {
+      "on": "Venice",
+      "lonlat": [
+       12.34,
+       45.44
+      ],
+      "zoom": 2.1
+     }
+    ],
+    "pins": [
+     {
+      "lonlat": [
+       12.34,
+       45.44
+      ],
+      "label": "Venice",
+      "on": "Venice"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "cut",
+   "pillar": "eat",
+   "say": "A *Byzantine* bride sits down at her *wedding* feast, and picks up her food with a little *golden* fork.",
+   "p": {
+    "tag": "VENICE · 11TH CENTURY",
+    "word": "A wedding feast.",
+    "items": [
+     {
+      "obj": "fork2",
+      "meta": "EXHIBIT 01 · VENICE, 11TH C.",
+      "name": "A golden fork",
+      "sub": "two prongs",
+      "on": "golden"
+     }
+    ]
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "A churchman was *horrified*. God, he said, had already given us forks: our *fingers*. And Europe agreed with him, for *centuries*.",
+   "p": {
+    "frontLabel": "A VENETIAN CLERGYMAN, 11TH C.",
+    "heard": "“God has provided man with natural forks: his fingers.”",
+    "backLabel": "WHAT HAPPENED NEXT",
+    "actual": "Most of Europe ignored the fork for centuries.",
+    "source": "National Geographic, “How the simple fork almost tore apart the fabric of society”",
+    "flipOn": "Europe"
+   }
+  },
+  {
+   "t": "period",
+   "in": "door",
+   "pillar": "eat",
+   "say": "Even five hundred years later, most Europeans still ate with a *knife*, and their *fingers*.",
+   "p": {
+    "left": "europe1500",
+    "leftSign": "PERIOD ROOM · EUROPE · c. 1500",
+    "marks": [
+     {
+      "on": "fingers",
+      "kind": "circle",
+      "x": 973,
+      "y": 548,
+      "w": 130,
+      "h": 110
+     }
+    ]
+   }
+  },
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "Then, in *1608*, an English traveller named Thomas Coryat saw Italians eating with forks, and brought one *home*.",
+   "p": {
+    "tag": "1608",
+    "title": "The fork goes to England",
+    "cats": {},
+    "legend": [],
+    "routes": [
+     {
+      "from": [
+       12.34,
+       45.44
+      ],
+      "to": [
+       -0.13,
+       51.51
+      ],
+      "on": "brought"
+     }
+    ],
+    "zoomTo": [
+     {
+      "on": "Thomas",
+      "lonlat": [
+       6,
+       49
+      ],
+      "zoom": 2.0
+     },
+     {
+      "on": "home",
+      "lonlat": [
+       6,
+       49
+      ],
+      "zoom": 2.0
+     }
+    ],
+    "pins": [
+     {
+      "lonlat": [
+       12.34,
+       45.44
+      ],
+      "label": "Venice",
+      "on": "Italians",
+      "below": true
+     },
+     {
+      "lonlat": [
+       -0.13,
+       51.51
+      ],
+      "label": "London",
+      "on": "home"
+     }
+    ]
+   },
+   "hold": 0.3
+  },
+  {
+   "t": "cardFlip",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "His friends gave him a nickname: *Furcifer*. Latin for fork-bearer. And also, for *rascal*.",
+   "p": {
+    "frontLabel": "HIS FRIENDS CALLED HIM",
+    "heard": "“Furcifer”",
+    "backLabel": "LATIN FOR",
+    "actual": "Fork-bearer. And also: rascal.",
+    "source": "Coryat's Crudities (1611)",
+    "flipOn": "Latin"
+   }
+  },
+  {
+   "t": "period",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "Meanwhile in *China*, people had been eating with chopsticks for a very long time.",
+   "p": {
+    "left": "europe1500",
+    "leftSign": "EUROPE · c. 1500",
+    "right": "china1500",
+    "rightSign": "CHINA · c. 1500",
+    "washIn": false,
+    "splitOn": "China"
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "The oldest ever found are over *three thousand* years old.",
+   "p": {
+    "tag": "ANYANG, CHINA",
+    "word": "c. 1200 BC",
+    "items": [
+     {
+      "obj": "chopsticks",
+      "meta": "EXHIBIT 02 · SHANG PERIOD",
+      "name": "Bronze chopsticks",
+      "sub": "c. 1200 BC · Yinxu",
+      "on": "oldest"
+     }
+    ]
+   }
+  },
+  {
+   "t": "period",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "And the cutting happened in the *kitchen*, not at the table.",
+   "p": {
+    "left": "europe1500",
+    "leftSign": "EUROPE · c. 1500",
+    "right": "china1500",
+    "rightSign": "CHINA · c. 1500",
+    "washIn": false,
+    "marks": [
+     {
+      "on": "kitchen",
+      "kind": "circle",
+      "x": 1760,
+      "y": 690,
+      "w": 260,
+      "h": 220
+     }
+    ]
+   }
+  },
+  {
+   "t": "reveal",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "Why cut it in the kitchen? One popular theory is wonderfully practical. Small pieces cook faster, and save *fuel*.",
+   "rehook": "Next: the shortage that shaped a cuisine",
+   "hold": 1.0,
+   "p": {
+    "tag": "ONE POPULAR THEORY",
+    "line": "Small pieces. Less fuel.",
+    "left": "fork2",
+    "right": "hand",
+    "answer": {
+     "meta": "A POPULAR THEORY",
+     "name": "Fuel",
+     "sub": "small pieces cook faster"
+    },
+    "downOn": "theory",
+    "answerOn": "fuel"
+   }
+  }
+ ]
+}
