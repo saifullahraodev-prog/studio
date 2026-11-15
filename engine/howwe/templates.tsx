@@ -7,8 +7,13 @@ import {
 import { Cam, clamp01, easeBack, easeInOut, easeOut, lerp, prog, TIMING } from "./motion";
 import { Exhibit, ObjectId, OBJECTS } from "./objects";
 import { ChinaRoom, EuropeRoom, TodayRoom } from "./rooms";
+import { camAt, CamKey, Mark, Marks } from "./retention";
 
-type Base = { uid: string; f: number; dur: number };
+/** Common props. `cam`: word-synced camera keys (replace the template's default move); `marks`: hand-drawn marks. */
+type Base = { uid: string; f: number; dur: number; cam?: CamKey[]; marks?: Mark[] };
+/** Camera props for <Cam>: keys if given, else the template's own default move. */
+const camProps = (f: number, cam: CamKey[] | undefined, fallback: { push?: number; zoom?: number; fx?: number; fy?: number }) =>
+  cam && cam.length ? { push: 1, ...camAt(f, cam) } : fallback;
 export type Pillar6 = "eat" | "wear" | "home" | "money" | "manners" | "around";
 const SIDES = [T.clay, T.slate, T.moss];
 const fadeIn = (f: number, start = 0, d = 10) => easeOut(prog(f, start, d));
@@ -19,19 +24,19 @@ const Sub: React.FC<{ f: number; text?: string; source?: string }> = ({ f, text,
 
 /* ---------------- 1 · exhibits: 1-3 equal plinths ---------------- */
 export type ExhibitItem = { obj: ObjectId; meta: string; name: string; sub: string };
-export type ExhibitsProps = { tag: string; word: string; pillar?: Pillar6; items: ExhibitItem[]; subtitle?: string; source?: string; focus?: number; focusAt?: number };
-export const Exhibits: React.FC<Base & ExhibitsProps> = ({ uid, f, dur, tag, word, pillar = "eat", items, subtitle, source, focus, focusAt = 0.55 }) => {
+export type ExhibitsProps = { tag: string; word: string; pillar?: Pillar6; items: ExhibitItem[]; subtitle?: string; source?: string; focus?: number; focusAt?: number; itemsAt?: number[] };
+export const Exhibits: React.FC<Base & ExhibitsProps> = ({ uid, f, dur, tag, word, pillar = "eat", items, subtitle, source, focus, focusAt = 0.55, itemsAt, cam, marks }) => {
   const n = items.length;
   const xs = n === 1 ? [960] : n === 2 ? [480, 1440] : [320, 960, 1600];
   const pw = n === 3 ? 380 : 460, top = 700;
   const push = focus === undefined ? 0 : easeInOut(prog(f, dur * focusAt, 20));
   return (
     <g>
-      <Cam f={f} push={push} zoom={1.32} fx={xs[focus ?? 0]} fy={560}>
+      <Cam f={f} {...camProps(f, cam, { push, zoom: 1.32, fx: xs[focus ?? 0], fy: 560 })}>
         <Gallery id={`${uid}g`} bays={SIDES.slice(0, Math.max(1, n))} />
-        <g opacity={fadeIn(f, 0, 12) * (1 - push)}><Headline tag={tag} word={word} accent={T[pillar]} /></g>
+        <g opacity={fadeIn(f, 0, 12) * (1 - push) * (cam?.length ? 1 - clamp01((camAt(f, cam).zoom - 1) * 6) : 1)}><Headline tag={tag} word={word} accent={T[pillar]} /></g>
         {items.map((it, i) => {
-          const start = 8 + i * TIMING.stagger;
+          const start = itemsAt?.[i] ?? 8 + i * TIMING.stagger;
           const cardT = easeOut(prog(f, start + TIMING.cardDelay, TIMING.card));
           return (
             <g key={i}>
@@ -43,6 +48,7 @@ export const Exhibits: React.FC<Base & ExhibitsProps> = ({ uid, f, dur, tag, wor
             </g>
           );
         })}
+        <Marks f={f} marks={marks} />
       </Cam>
       <Sub f={f} text={subtitle} source={source} />
     </g>
@@ -78,8 +84,8 @@ const RoomHalf: React.FC<{ uid: string; room: RoomId; at: number; f: number; was
     </g>
   );
 };
-export type PeriodProps = { left: RoomId; leftSign: string; right?: RoomId; rightSign?: string; subtitle?: string; source?: string; washIn?: boolean };
-export const Period: React.FC<Base & PeriodProps> = ({ uid, f, left, leftSign, right, rightSign, subtitle, source, washIn = true }) => {
+export type PeriodProps = { left: RoomId; leftSign: string; right?: RoomId; rightSign?: string; subtitle?: string; source?: string; washIn?: boolean; splitAt?: number };
+export const Period: React.FC<Base & PeriodProps> = ({ uid, f, left, leftSign, right, rightSign, subtitle, source, washIn = true, splitAt = 0, cam, marks }) => {
   const wash = washIn ? easeInOut(prog(f, 0, TIMING.tint)) : 1;
   if (!right) {
     // single room = a diorama box set into the gallery wall, camera slowly pushes in
@@ -87,28 +93,30 @@ export const Period: React.FC<Base & PeriodProps> = ({ uid, f, left, leftSign, r
     // zoom kept small so the door sign above the diorama stays in frame
     return (
       <g>
-        <Cam f={f} push={push} zoom={1.12} fx={960} fy={560}>
+        <Cam f={f} {...camProps(f, cam, { push, zoom: 1.12, fx: 960, fy: 560 })}>
           <Gallery id={`${uid}g`} bays={[T.wall]} floorY={1000} />
           <rect x={440} y={110} width={1040} height={800} fill="#3A3A40" />
           <svg x={480} y={140} width={960} height={740} viewBox={`0 160 960 740`}>
             <RoomHalf uid={`${uid}a`} room={left} at={0} f={f} wash={wash} />
           </svg>
           <RoomSign x={960} y={50} text={leftSign} />
+          <Marks f={f} marks={marks} />
         </Cam>
         <Grain seed={7} />
         <Sub f={f} text={subtitle} source={source} />
       </g>
     );
   }
-  const split = easeOut(prog(f, 0, 14));
+  const split = easeOut(prog(f, splitAt, 14));
   return (
     <g>
-      <Cam f={f}>
+      <Cam f={f} {...camProps(f, cam, {})}>
         <RoomHalf uid={`${uid}a`} room={left} at={0} f={f} wash={wash} />
         <g transform={`translate(${(1 - split) * 960} 0)`}><RoomHalf uid={`${uid}b`} room={right} at={960} f={f} wash={wash} /></g>
         <Pillar x={960 + (1 - split) * 960} floorY={1080} />
         <RoomSign x={480} y={40} text={leftSign} />
         <g opacity={split}><RoomSign x={1440} y={40} text={rightSign ?? ""} /></g>
+        <Marks f={f} marks={marks} />
       </Cam>
       <Grain seed={2} />
       <Sub f={f} text={subtitle} source={source} />
@@ -118,20 +126,27 @@ export const Period: React.FC<Base & PeriodProps> = ({ uid, f, left, leftSign, r
 
 /* ---------------- 3 · map room: frame push, categories fill in turn, optional routes ---------------- */
 export type MapRoute = { from: [number, number]; to: [number, number]; at: number };
-export type MapSceneProps = { tag: string; title: string; cats: Record<string, MapCat>; order: MapCat[]; legend: { cat: MapCat; label: string }[]; routes?: MapRoute[]; subtitle?: string; source?: string };
-export const MapScene: React.FC<Base & MapSceneProps> = ({ uid, f, dur, tag, title, cats, order, legend, routes = [], subtitle, source }) => {
-  const mw = 1240, mh = mapHeight(mw), fx = (W - mw) / 2, fy = 240;
+/** `orderAt`: frame each category in `order` fills (word-synced); `zoomTo`: camera visits to [lon, lat] at frame f. */
+export type MapSceneProps = { tag: string; title: string; cats: Record<string, MapCat>; order: MapCat[]; legend: { cat: MapCat; label: string }[]; routes?: MapRoute[]; subtitle?: string; source?: string; orderAt?: number[]; zoomTo?: { f: number; lonlat: [number, number]; zoom?: number }[] };
+export const MapScene: React.FC<Base & MapSceneProps> = ({ uid, f, dur, tag, title, cats, order, legend, routes = [], subtitle, source, orderAt, zoomTo = [], cam, marks }) => {
+  const mw = 1160, mh = mapHeight(mw), fx = (W - mw) / 2, fy = 214; // leaves the bottom band free for captions
   const push = easeInOut(prog(f, 6, 26));
-  const fillStart = (i: number) => 30 + i * 26;
+  const fillStart = (i: number) => orderAt?.[i] ?? 30 + i * 26;
   const op: Partial<Record<MapCat, number>> = {};
   (["a", "b", "c", "mix"] as MapCat[]).forEach((c) => { const i = order.indexOf(c); op[c] = i < 0 ? 0 : easeOut(prog(f, fillStart(i), TIMING.mapFill)); });
   const k = mw / 1000;
+  // camera: frame push, then optional visits to places as they are named
+  const keys: CamKey[] | undefined = cam ?? (zoomTo.length ? [
+    { f: 6, zoom: 1.15, fx: 960, fy: 520, d: 26 },
+    ...zoomTo.map((z) => { const [px, py] = projectEE(...z.lonlat); return { f: z.f, zoom: z.zoom ?? 1.7, fx: fx + px * k, fy: fy + py * k, d: 12 }; }),
+    { f: Math.max(...zoomTo.map((z) => z.f)) + 40, zoom: 1.15, fx: 960, fy: 520, d: 16 },
+  ] : undefined);
   return (
     <g>
-      <Cam f={f} push={push} zoom={1.15} fx={960} fy={520}>
+      <Cam f={f} {...camProps(f, keys, { push, zoom: 1.15, fx: 960, fy: 520 })}>
         <Gallery id={`${uid}g`} bays={[T.wall]} floorY={1000} />
-        <text x={W / 2} y={120} textAnchor="middle" fontFamily={MONO} fontWeight={600} fontSize={24} letterSpacing={8} fill={T.label}>{tag}</text>
-        <text x={W / 2} y={178} textAnchor="middle" fontFamily={DISPLAY} fontWeight={900} fontSize={56} fill={T.ink}>{title}</text>
+        <text x={W / 2} y={92} textAnchor="middle" fontFamily={MONO} fontWeight={600} fontSize={24} letterSpacing={8} fill={T.label}>{tag}</text>
+        <text x={W / 2} y={150} textAnchor="middle" fontFamily={DISPLAY} fontWeight={900} fontSize={56} fill={T.ink}>{title}</text>
         <rect x={fx - 54} y={fy - 34} width={mw + 108} height={mh + 68} fill="#000" opacity={0.1} transform="translate(10 12)" />
         <rect x={fx - 54} y={fy - 34} width={mw + 108} height={mh + 68} fill="#3A3A40" />
         <rect x={fx - 32} y={fy - 14} width={mw + 64} height={mh + 28} fill="#FBF8F2" />
@@ -149,7 +164,7 @@ export const MapScene: React.FC<Base & MapSceneProps> = ({ uid, f, dur, tag, tit
             );
           })}
         </WorldMap>
-        <g transform={`translate(${W / 2 - 520} ${fy + mh + 70})`}>
+        <g transform={`translate(${W / 2 - 520} ${fy + mh + 48})`}>
           <rect x={3} y={5} width={1040} height={86} fill="#000" opacity={0.08} />
           <rect width={1040} height={86} fill={T.card} />
           {legend.map((l, i) => (
@@ -160,6 +175,7 @@ export const MapScene: React.FC<Base & MapSceneProps> = ({ uid, f, dur, tag, tit
             </g>
           ))}
         </g>
+        <Marks f={f} marks={marks} />
       </Cam>
       <Grain seed={3} />
       <Sub f={f} text={subtitle} source={source} />
@@ -169,13 +185,13 @@ export const MapScene: React.FC<Base & MapSceneProps> = ({ uid, f, dur, tag, tit
 
 /* ---------------- 4 · reveal: lights down, one spotlight, answer appears, lights back up ----------------
    Lights are fully up again before the outgoing transition (assumes the next scene enters with a dolly or shorter). */
-export type RevealProps = { tag?: string; line: string; left?: ObjectId; right?: ObjectId; answer: { meta: string; name: string; sub: string } };
-export const Reveal: React.FC<Base & RevealProps> = ({ uid, f, dur, tag = "THE ANSWER", line, left = "fork", right = "hand", answer }) => {
-  const down = easeInOut(prog(f, dur * 0.12, TIMING.lightsDown)) * (1 - easeInOut(prog(f, dur - TIMING.lightsUp - TIMING.dolly, TIMING.lightsUp)));
-  const flip = prog(f, dur * 0.38, 12); // "?" card flips to the answer
+export type RevealProps = { tag?: string; line: string; left?: ObjectId; right?: ObjectId; answer: { meta: string; name: string; sub: string }; downAt?: number; answerAt?: number };
+export const Reveal: React.FC<Base & RevealProps> = ({ uid, f, dur, tag = "THE ANSWER", line, left = "fork", right = "hand", answer, downAt, answerAt }) => {
+  const down = easeInOut(prog(f, downAt ?? dur * 0.12, TIMING.lightsDown)) * (1 - easeInOut(prog(f, dur - TIMING.lightsUp - TIMING.dolly, TIMING.lightsUp)));
+  const flip = prog(f, answerAt ?? dur * 0.38, 12); // "?" card flips to the answer
   const sx = flip < 0.5 ? 1 - flip * 2 : (flip - 0.5) * 2;
   const showAnswer = flip >= 0.5;
-  const lineT = easeOut(prog(f, dur * 0.45, 14));
+  const lineT = easeOut(prog(f, (answerAt ?? dur * 0.38) + 6, 14));
   const cone = `${960 - 90},0 ${960 + 90},0 ${960 + 300},${H} ${960 - 300},${H}`;
   return (
     <g>
@@ -216,9 +232,9 @@ export const Reveal: React.FC<Base & RevealProps> = ({ uid, f, dur, tag = "THE A
 };
 
 /* ---------------- 5 · card flip: "The story you heard" -> "Correction" ---------------- */
-export type CardFlipProps = { heard: string; actual: string; source?: string };
-export const CardFlip: React.FC<Base & CardFlipProps> = ({ uid, f, dur, heard, actual, source }) => {
-  const flip = prog(f, dur * 0.45, 14);
+export type CardFlipProps = { heard: string; actual: string; source?: string; flipAt?: number };
+export const CardFlip: React.FC<Base & CardFlipProps> = ({ uid, f, dur, heard, actual, source, flipAt }) => {
+  const flip = prog(f, flipAt ?? dur * 0.45, 14);
   const sx = flip < 0.5 ? 1 - flip * 2 : (flip - 0.5) * 2;
   const back = flip >= 0.5;
   const enter = easeBack(prog(f, 0, 14));
@@ -249,10 +265,11 @@ export const CardFlip: React.FC<Base & CardFlipProps> = ({ uid, f, dur, heard, a
 
 /* ---------------- 6 · today room ---------------- */
 export type TodayProps = { subtitle?: string; source?: string };
-export const Today: React.FC<Base & TodayProps> = ({ f, dur, subtitle, source }) => (
+export const Today: React.FC<Base & TodayProps> = ({ f, dur, subtitle, source, cam, marks }) => (
   <g>
-    <Cam f={f} push={easeInOut(prog(f, 0, dur))} zoom={1.38} fx={960} fy={600}>
+    <Cam f={f} {...camProps(f, cam, { push: easeInOut(prog(f, 0, dur)), zoom: 1.38, fx: 960, fy: 600 })}>
       <TodayRoom f={f} />
+      <Marks f={f} marks={marks} />
     </Cam>
     <Grain seed={9} />
     <Sub f={f} text={subtitle} source={source} />

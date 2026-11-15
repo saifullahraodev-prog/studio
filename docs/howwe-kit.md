@@ -126,3 +126,43 @@ If only the sound changed, lay the new mix onto an existing render instead of re
 - Subtitles are one line per scene. Word-timed subtitles come with the voice pipeline.
 - Only 3 rooms and 10 objects so far. Video 1 research decides what's added next.
 - Render speed (measured 2026-11-15): about 2.6 s per second of video at 720p, so a 12-minute video takes about 31 min. 1080p hasn't been measured yet.
+
+## Retention-first pacing (added 2026-11-15, owner: "focus on the pacing and the retention")
+Write a **script**; the build tool turns it into word-synced scenes. Example: `engine/howwe/demo2-script.json`.
+
+**The rules** (checked by `tools/howwe_pacing.py`):
+
+| Rule | Target |
+|---|---|
+| R1 · first hook | within 3 s |
+| R2 · longest stretch with no visual change | 4 s or less |
+| R3 · average gap between visual changes | 3 s or less |
+| R4 · dead air (silence over 1.2 s) | none |
+| R5 · average scene | 6 s or less |
+
+**Script features:**
+- **`say`:** the spoken line. Put `*stars*` around words to emphasise them; each gets a keyword pop, a 3.5% camera punch-in and a soft tick.
+- **Word triggers** (`on` words, timed to the narration):
+  - exhibits: each appears as it's named, and the camera visits it;
+  - map: each category fills when named, and `zoomTo` sends the camera to a place;
+  - `splitOn`: the second period room slides in;
+  - `flipOn`: the myth card flips;
+  - `downOn` / `answerOn`: the reveal's lights and answer;
+  - `marks`: hand-drawn circles, underlines or arrows, drawn on when their word is said.
+- **Captions:** word by word. Spoken words are solid, the current word is underlined, upcoming words are faint, in phrases of up to 6 words. They replace the static subtitles.
+- **`rehook`:** a chip ("Next: …") at the end of a scene, to carry viewers into the next section.
+- **Scene length:** the transition, plus 6 frames, plus the spoken line, plus 14 frames (`hold` adds extra). No fixed lengths, no dead air.
+
+**Commands:**
+```
+set HF_HUB_OFFLINE=1
+python -I tools/howwe_build.py engine/howwe/demo2-script.json demo2          # placeholder voice + word timings -> built.json
+python -I tools/howwe_mix.py public/howwe/demo2/built.json demo2 --voice public/howwe/demo2/voice.wav --music none
+python -I tools/howwe_pacing.py public/howwe/demo2/built.json [-v]           # rules R1-R5 (+ list of every visual change)
+node tools/howwe_storyboard.mjs public/howwe/demo2/built.json docs/howwe/retention-v2 --rebundle --slug=demo2
+render: composition HowVideoBuilt, props {"slug": "demo2"} (owner OK first)
+```
+
+**Demo v2 results:** 36.3 s, 34 visual changes. First pop 2.2 s, longest gap 3.7 s, average gap 1.1 s, no dead air. All five rules pass.
+
+The v1 demo failed R2: it had a 5.3-second static stretch.

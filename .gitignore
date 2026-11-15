@@ -33,3 +33,4 @@ public/howwe/*/mix-*.wav
 public/howwe/*/voice.wav
 # How We Ended Up: YouTube Audio Library tracks (licence + track ids in audio/LICENSES.md; re-download from Studio)
 audio/library/howwe/*.mp3
+public/howwe/*/built.json

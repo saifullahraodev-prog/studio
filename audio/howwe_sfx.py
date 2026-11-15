@@ -165,6 +165,13 @@ def chop(seed=0):
     return norm(_room(x, 0.6, 0.18), 0.7)
 
 
+def tock(seed=0):
+    """keyword pop: tiny soft wooden tick (barely there, adds rhythm under emphasised words)"""
+    sec = 0.12
+    x = _bpf(_noise(int(sec * SR)), 1200, 4000) * _decay(sec, 70) + np.sin(2 * np.pi * 880 * _t(sec)) * _decay(sec, 40) * 0.4
+    return norm(x, 0.7)
+
+
 def roomtone(sec):
     """quiet gallery air: low noise with slow movement"""
     n = int(sec * SR)
@@ -333,6 +340,6 @@ def _music_marimba(duration, hush=(), bpm=92):
 
 
 SOUNDS = {"step": step, "footsteps": footsteps, "door": door, "clunk": clunk, "flip": flip, "place": place, "paper": paper,
-          "air": air, "pen": pen, "chime": chime, "clink": clink, "chop": chop}
+          "air": air, "pen": pen, "chime": chime, "clink": clink, "chop": chop, "tock": tock}
 GAINS = {"footsteps": 0.16, "door": 0.26, "clunk": 0.4, "flip": 0.28, "place": 0.24, "paper": 0.12, "air": 0.16,
-         "pen": 0.12, "chime": 0.2, "clink": 0.08, "chop": 0.1, "hum": 0.02, "roomtone": 0.035, "music": 0.2}
+         "pen": 0.12, "chime": 0.2, "tock": 0.12, "clink": 0.08, "chop": 0.1, "hum": 0.02, "roomtone": 0.035, "music": 0.2}

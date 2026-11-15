@@ -46,23 +46,36 @@ def cues(scenes):
             ev.append((sec(t0), "footsteps", 1.0, "dolly"))
         if i > 0 and tin == "door":
             ev.append((sec(t0), "door", 1.0, "door"))
+        for w in s.get("words", []):
+            if w.get("em"):
+                ev.append((sec(t0 + w["f0"]), "tock", 1.0, f"pop {w['w']}"))
+        for m in p.get("marks", []):
+            if "f" in m:
+                ev.append((sec(t0 + m["f"]), "pen", 0.7, "mark"))
+        if s.get("rehook"):
+            ev.append((sec(t0 + s.get("rehookAt", d - 45)), "paper", 1.0, "re-hook chip"))
         if kind == "exhibits":
             for k, _ in enumerate(p.get("items", [])):
-                st = t0 + 8 + k * TIMING["stagger"]
+                st = t0 + (p["itemsAt"][k] if p.get("itemsAt") else 8 + k * TIMING["stagger"])
                 ev.append((sec(st + 9), "place", 1.0 - 0.08 * k, f"exhibit {k + 1} lands"))
                 ev.append((sec(st + TIMING["cardDelay"] + 2), "paper", 1.0, f"card {k + 1}"))
+            for c in p.get("cam", []):
+                ev.append((sec(t0 + c["f"]), "air", 0.45, "camera move"))
             if "focus" in p:
                 ev.append((sec(t0 + d * p.get("focusAt", 0.55)), "air", 0.8, "push-in"))
         elif kind == "map":
             ev.append((sec(t0 + 6), "air", 1.0, "frame push"))
             scale = [74, 78, 81, 86]  # D, F#, A, D (rising chimes per category)
             for k, _ in enumerate(p.get("order", [])):
-                ev.append((sec(t0 + 30 + k * 26), "chime", 1.0, f"fill {k + 1}", scale[k % 4]))
+                fat = p["orderAt"][k] if p.get("orderAt") else 30 + k * 26
+                ev.append((sec(t0 + fat), "chime", 1.0, f"fill {k + 1}", scale[k % 4]))
             for r in p.get("routes", []):
                 ev.append((sec(t0 + d * r["at"]), "pen", 1.0, "route"))
         elif kind == "period":
             if p.get("washIn", True):
                 ev.append((sec(t0 + 2), "paper", 0.8, "tint wash"))
+            if p.get("right"):
+                ev.append((sec(t0 + p.get("splitAt", 0)), "footsteps", 0.6, "split opens"))
             rooms = [p.get("left"), p.get("right")]
             if "china1500" in rooms:  # cook chops every 16 frames (chopUp loop)
                 f = 8
@@ -74,13 +87,14 @@ def cues(scenes):
                 ev.append((sec(t0 + f), "clink", 1.0, "clink", k))
         elif kind == "cardFlip":
             ev.append((sec(t0 + 10), "place", 0.8, "card lands"))
-            ev.append((sec(t0 + d * 0.45 + 6), "flip", 1.0, "flip to correction"))
+            ev.append((sec(t0 + p.get("flipAt", d * 0.45) + 6), "flip", 1.0, "flip to correction"))
         elif kind == "reveal":
-            down = t0 + d * 0.12
+            down = t0 + p.get("downAt", d * 0.12)
             up = t0 + d - TIMING["lightsUp"] - TIMING["dolly"]
             ev.append((sec(down), "clunk", 1.0, "lights down"))
-            ev.append((sec(t0 + d * 0.38 + 6), "flip", 1.0, "answer card"))
-            ev.append((sec(t0 + d * 0.45), "chime", 0.9, "answer line", 69))
+            ans = p.get("answerAt", d * 0.38)
+            ev.append((sec(t0 + ans + 6), "flip", 1.0, "answer card"))
+            ev.append((sec(t0 + ans + 6), "chime", 0.9, "answer line", 69))
             ev.append((sec(up), "clunk", 0.6, "lights up"))
             hush.append((sec(down), sec(up + 6)))
             hums.append((sec(down + 4), sec(up)))
@@ -181,7 +195,9 @@ def main():
     ev, hush, hums, dur = cues(scenes)
     n = int(dur * SR)
     sfx = render(ev, hums, dur)
-    if "=" in style:  # mood set: "curious=a.mp3,soft=b.mp3,sparse=c.mp3" -> crossfade by scene
+    if style == "none":
+        mus = np.zeros(int(dur * SR), dtype=np.float32)
+    elif "=" in style:  # mood set: "curious=a.mp3,soft=b.mp3,sparse=c.mp3" -> crossfade by scene
         mus = mood_beds(scenes, style, dur, hush) * hx.GAINS["music"]
     elif Path(style).suffix.lower() in (".mp3", ".wav", ".flac", ".ogg", ".m4a"):
         mus = track_bed(ROOT / style, dur, hush) * hx.GAINS["music"]  # a real (licensed) music file

@@ -46,7 +46,13 @@
   `audio/library/howwe/` (git-ignored), licences + track ids in `audio/LICENSES.md`. Mixer: mood beds by scene
   (curious/soft/sparse, 1.5 s crossfades, RMS-levelled, ~21 dB under voice); fast O(n) smoothing (was minutes, now 14 s).
   Compare: `out/howwe/kit-demo-720p-music-yt1.mp4` (Behold The Mystery / Snowfall / Laniakea) vs `-yt2.mp4`
-  (Frame-Dragging / Fascination / inner_outer). WAITING: owner listens and picks.
+  (Frame-Dragging / Fascination / inner_outer). Owner then said: "forget the music for now".
+- 2026-11-15 owner: "focus on the pacing and the retention". Built retention-first pacing (guide in docs/howwe-kit.md):
+  script -> `tools/howwe_build.py` (placeholder voice, faster-whisper word times, scenes sized to speech) -> word-synced
+  visuals (exhibits/map fills/camera visits/split/flip/reveal/marks), word-by-word captions, *emphasis* keyword pops +
+  camera punch + tick, re-hook chip; `tools/howwe_pacing.py` checks R1-R5. Demo v2 (`engine/howwe/demo2-script.json`,
+  hook-first): 36.3 s, 34 visual changes, longest gap 3.7 s, first pop 2.2 s -> all PASS (v1 failed R2 at 5.3 s).
+  Composition `HowVideoBuilt` {slug}. Storyboard `docs/howwe/retention-v2/`. WAITING: owner OK to render a 720p preview.
 - NEXT (was): asset kits (map: done; reference-based costumes; object library;
   scene templates; motion + transitions), then video 1 script "Why Half the World Doesn't Use Forks".
 

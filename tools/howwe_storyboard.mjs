@@ -1,5 +1,5 @@
 // How We Ended Up storyboard: stills from the HowVideo composition, tiled into contact sheets (no video render).
-// Usage: node tools/howwe_storyboard.mjs <scenes.json> <outDir> [--rebundle]
+// Usage: node tools/howwe_storyboard.mjs <scenes.json|built.json> <outDir> [--rebundle] [--slug=<slug>]   (--slug renders HowVideoBuilt)
 //   scenes.json = { scenes: [...] } (same format as engine/howwe/demo-scenes.json)
 // Output: <outDir>/scenes.png (each scene at 15% / 50% / 90%), <outDir>/transitions.png (middle of each transition).
 import { spawnSync } from "node:child_process";
@@ -18,15 +18,17 @@ scenes.forEach((s, i) => { if (i > 0) t -= T[s.in ?? "cut"] ?? 0; starts.push(t)
 const tmp = path.join(root, outDir, "_frames");
 rmSync(tmp, { recursive: true, force: true });
 mkdirSync(tmp, { recursive: true });
+const slugArg = rest.find((a) => a.startsWith("--slug="));
 const still = (frame, name, rebundle) => {
-  const args = ["tools/still.mjs", "HowVideo", path.join(outDir, "_frames", name), `--frame=${frame}`];
+  const args = ["tools/still.mjs", slugArg ? "HowVideoBuilt" : "HowVideo", path.join(outDir, "_frames", name), `--frame=${frame}`];
+  if (slugArg) args.push(`slug=${slugArg.slice(7)}`);
   if (rebundle) args.push("--rebundle");
   const r = spawnSync(process.execPath, args, { cwd: root, encoding: "utf8" });
   process.stdout.write(`${name} @${frame}: ${(r.stdout || "").trim().split("\n").pop()}\n`);
 };
 let first = rest.includes("--rebundle");
 let n = 0;
-scenes.forEach((s, i) => [0.15, 0.5, 0.9].forEach((q) => {
+scenes.forEach((s, i) => [0.3, 0.6, 0.9].forEach((q) => {
   // skip the overlapped transition part at the very start of a scene
   const fr = starts[i] + Math.round(s.dur * q);
   still(fr, `s-${String(n++).padStart(3, "0")}.png`, first); first = false;

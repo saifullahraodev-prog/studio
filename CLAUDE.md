@@ -150,3 +150,5 @@ Commit and push at every gate. Private repo: https://github.com/saifullahraodev-
   split colours are tied to screen POSITION, never to a culture. AI images only for optional empty backdrop plates.
 - Production kit: `docs/howwe-kit.md`. A video = scene list JSON -> `HowVideo` composition (templates in `engine/howwe/templates.tsx`,
   transitions cut/dolly/door only). Storyboard: `node tools/howwe_storyboard.mjs <scenes.json> <outDir>`. Full renders need owner OK.
+- Retention-first: write a script (say with *emphasis* + `on` word triggers) -> `tools/howwe_build.py` -> `tools/howwe_mix.py` ->
+  `tools/howwe_pacing.py` must pass R1-R5 (first hook <=3 s, no static gap >4 s) before any render.

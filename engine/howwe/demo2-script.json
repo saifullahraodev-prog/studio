@@ -1,0 +1,182 @@
+{
+ "note": "RETENTION DEMO v2: placeholder narration and facts (NOT fact-checked, not the video 1 script). Structure to test: cold-open hook on the map -> title at ~10 s -> word-synced visuals every 2-3 s -> myth flip -> reveal -> re-hook.",
+ "scenes": [
+  {
+   "t": "map",
+   "in": "cut",
+   "pillar": "eat",
+   "say": "Tonight, billions of people will eat with *chopsticks*. Billions more will use their *hands*. And the *fork*? It's just one answer.",
+   "p": {
+    "tag": "THE MAP",
+    "title": "Three ways to eat",
+    "cats": "@EATING_PLACEHOLDER",
+    "legend": [
+     {
+      "cat": "a",
+      "label": "FORK",
+      "on": "fork"
+     },
+     {
+      "cat": "b",
+      "label": "CHOPSTICKS",
+      "on": "chopsticks"
+     },
+     {
+      "cat": "c",
+      "label": "HANDS",
+      "on": "hands"
+     }
+    ],
+    "zoomTo": [
+     {
+      "on": "chopsticks",
+      "lonlat": [
+       112,
+       30
+      ],
+      "zoom": 1.55
+     },
+     {
+      "on": "hands",
+      "lonlat": [
+       45,
+       12
+      ],
+      "zoom": 1.4
+     },
+     {
+      "on": "fork",
+      "lonlat": [
+       0,
+       22
+      ],
+      "zoom": 1.12
+     }
+    ]
+   }
+  },
+  {
+   "t": "titleWall",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "So how did the world end up split *three* ways?",
+   "p": {
+    "question": "Why half the world doesn't use forks"
+   }
+  },
+  {
+   "t": "today",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "If you grew up with a fork, it feels *natural*. It isn't.",
+   "p": {}
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "Each of these is a *solution*. The fork. Chopsticks. And the oldest tool of all, the hand.",
+   "p": {
+    "tag": "THE QUESTION",
+    "word": "Three solutions.",
+    "items": [
+     {
+      "obj": "fork",
+      "meta": "EXHIBIT 01 · FORK",
+      "name": "The Fork",
+      "sub": "placeholder",
+      "on": "fork"
+     },
+     {
+      "obj": "chopsticks",
+      "meta": "EXHIBIT 02 · CHOPSTICKS",
+      "name": "Chopsticks",
+      "sub": "placeholder",
+      "on": "chopsticks"
+     },
+     {
+      "obj": "hand",
+      "meta": "EXHIBIT 03 · HANDS",
+      "name": "The Hand",
+      "sub": "placeholder",
+      "on": "hand"
+     }
+    ]
+   }
+  },
+  {
+   "t": "period",
+   "in": "door",
+   "pillar": "eat",
+   "say": "Five hundred years ago, a wealthy European still ate with a *knife*, and his *fingers*.",
+   "p": {
+    "left": "europe1500",
+    "leftSign": "PERIOD ROOM · EUROPE · c. 1500*",
+    "marks": [
+     {
+      "on": "fingers",
+      "kind": "circle",
+      "x": 973,
+      "y": 548,
+      "w": 130,
+      "h": 110
+     }
+    ]
+   }
+  },
+  {
+   "t": "period",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "Meanwhile in *China*, the cutting happened in the *kitchen*. Not at the table.",
+   "p": {
+    "left": "europe1500",
+    "leftSign": "EUROPE · c. 1500*",
+    "right": "china1500",
+    "rightSign": "CHINA · c. 1500*",
+    "washIn": false,
+    "splitOn": "China",
+    "marks": [
+     {
+      "on": "kitchen",
+      "kind": "circle",
+      "x": 1760,
+      "y": 690,
+      "w": 260,
+      "h": 220
+     }
+    ]
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "You've probably heard it was all about *manners*. That's only half the story.",
+   "p": {
+    "heard": "It was all about manners.",
+    "actual": "Placeholder: what the sources actually say.",
+    "source": "[2] source to be added after fact-check",
+    "flipOn": "half"
+   }
+  },
+  {
+   "t": "reveal",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "The real reason was far more *practical*.",
+   "rehook": "Next: the cooking fuel that changed the table",
+   "hold": 1.2,
+   "p": {
+    "line": "It was practical.",
+    "answer": {
+     "meta": "EXHIBIT 02 · CHINA",
+     "name": "Placeholder",
+     "sub": "the real reason"
+    },
+    "downOn": "real",
+    "answerOn": "practical"
+   }
+  }
+ ]
+}

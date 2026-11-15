@@ -24,7 +24,7 @@ import { GuyLab, GuyLabProps, guyLabLength } from "../engine/shipguy/guyLab";
 import { calcShipGuyShort, ShipGuyShort, ShortProps as ShipGuyShortProps } from "../engine/shipguy/Short";
 import { HowLab, HowLabProps } from "../engine/howwe/lab";
 import { EATING_PLACEHOLDER, HowFrames, HowFramesProps } from "../engine/howwe/frames";
-import { HowVideo, howVideoLength, HowVideoProps, Scene as HowScene } from "../engine/howwe/video";
+import { calcHowVideo, HowVideo, howVideoLength, HowVideoProps, Scene as HowScene } from "../engine/howwe/video";
 import howDemo from "../engine/howwe/demo-scenes.json";
 
 // Vertical compositions take a `res` prop: 720 for previews (default), 1080 for finals.
@@ -200,6 +200,9 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="HowVideo" component={HowVideo} durationInFrames={30} fps={30} width={1920} height={1080}
         defaultProps={{ scenes: howDemo.scenes as HowScene[], cats: { EATING_PLACEHOLDER }, audio: "howwe/kit-demo/mix.wav" } as HowVideoProps}
         calculateMetadata={async ({ props }) => ({ durationInFrames: howVideoLength(props.scenes) })} />
+      <Composition id="HowVideoBuilt" component={HowVideo} durationInFrames={30} fps={30} width={1920} height={1080}
+        defaultProps={{ slug: "demo2", scenes: [], cats: { EATING_PLACEHOLDER } } as HowVideoProps}
+        calculateMetadata={calcHowVideo} />
       <Composition id="ShipGuyThumb" component={ShipGuyThumb} durationInFrames={1} fps={30} width={1920} height={1080} defaultProps={{ v: "A" }} />
       <Composition
         id="ShipGuyBoard"
