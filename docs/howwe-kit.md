@@ -67,6 +67,7 @@ Every scene also drifts slowly (+1.5% per 5 s).
 node tools/howwe_storyboard.mjs engine/howwe/demo-scenes.json docs/howwe/kit-v0.1 --rebundle
 node tools/still.mjs HowVideo out/x.png --frame=300
 node tools/golden.mjs check howwe
+node tools/run.mjs render src/index.ts HowVideo out/howwe/x-720p.mp4 --width=1280 --height=720 --concurrency=2   # owner OK first
 ```
 A full video render (`HowVideo`) needs the owner's OK first (standing rule: stills first).
 
@@ -80,4 +81,4 @@ A full video render (`HowVideo`) needs the owner's OK first (standing rule: stil
 - No sound yet. Planned: footsteps, door, light clunk, card thunk, room tone, music bed.
 - Subtitles are one line per scene. Word-timed subtitles come with the voice pipeline.
 - Only 3 rooms and 10 objects so far. Video 1 research decides what's added next.
-- A full-motion preview render hasn't been done yet, so render time is unmeasured.
+- Render speed (measured 2026-11-15): about 2.6 s per second of video at 720p, so a 12-minute video takes about 31 min. 1080p hasn't been measured yet.

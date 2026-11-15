@@ -1,5 +1,5 @@
 // How We Ended Up · data-driven video: a list of scenes (template + duration + data) joined by the fixed transitions.
-// Composition "HowVideo" (16:9). Props: { scenes } (see demo-scenes.json). Only these transitions exist:
+// Composition "HowVideo" (16:9; drawn in 1920x1080 design units, scales to any output size, e.g. --width=1280 --height=720). Props: { scenes } (see demo-scenes.json). Only these transitions exist:
 //   cut · dolly (sideways slide past a pillar, next bay) · door (push into a doorway, aged-paper wash, into the next room)
 // The other two signature transitions live inside templates: frame push (map) and lights down (reveal); card flip = cardFlip.
 import React from "react";
@@ -77,7 +77,7 @@ export const HowVideo: React.FC<HowVideoProps> = ({ scenes, cats }) => {
   }
   return (
     <AbsoluteFill style={{ background: T.wall }}>
-      <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{ position: "absolute", inset: 0 }}>{body}</svg>
+      <svg width="100%" height="100%" viewBox={`0 0 ${W} ${H}`} style={{ position: "absolute", inset: 0 }}>{body}</svg>
     </AbsoluteFill>
   );
 };
