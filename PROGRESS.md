@@ -41,7 +41,12 @@
   (Wonder Boy Audio, Camp Studio); Johnny Harris = Epidemic Sound + Musicbed + Soundstripe + composer Tom Fox;
   Wendover = sound designers. Nobody uses synthesized music. Recommendation: human-made music (YouTube Audio Library
   free now, Epidemic Sound ~$9.99/mo later). `howwe_mix.py --music <file>` now accepts a downloaded track.
-  WAITING: owner chooses free Audio Library vs a subscription and downloads first tracks (I can't use their accounts).
+- 2026-11-15: owner chose the free YouTube Audio Library; signed in to the built-in browser. Claude read all 660 tracks
+  (all no-attribution licence), shortlisted 8 instrumentals by labels, owner OK'd download. Files in
+  `audio/library/howwe/` (git-ignored), licences + track ids in `audio/LICENSES.md`. Mixer: mood beds by scene
+  (curious/soft/sparse, 1.5 s crossfades, RMS-levelled, ~21 dB under voice); fast O(n) smoothing (was minutes, now 14 s).
+  Compare: `out/howwe/kit-demo-720p-music-yt1.mp4` (Behold The Mystery / Snowfall / Laniakea) vs `-yt2.mp4`
+  (Frame-Dragging / Fascination / inner_outer). WAITING: owner listens and picks.
 - NEXT (was): asset kits (map: done; reference-based costumes; object library;
   scene templates; motion + transitions), then video 1 script "Why Half the World Doesn't Use Forks".
 

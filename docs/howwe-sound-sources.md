@@ -52,3 +52,25 @@ python -I tools/howwe_mix.py <scenes.json> <slug> --voice <voice.wav> --music au
 - It drops to 25% during the reveal and ducks under the voice.
 - The mix is loudness-normalised.
 - Keep every downloaded file plus its licence and source in `audio/LICENSES.md` (studio rule).
+
+## Chosen: free YouTube Audio Library (owner, 2026-11-15)
+- Claude read the full library in the owner's Studio: 660 tracks, all under the YouTube Audio Library licence (no attribution needed).
+- It shortlisted 8 instrumentals by the library's own genre and mood labels. **Claude can't hear audio; the owner judges by ear.**
+- The owner OK'd the downloads.
+
+Files are in `audio/library/howwe/` (git-ignored). Licences and track IDs are in `audio/LICENSES.md`.
+
+**Comparison mixes** (placeholder voice, same video):
+
+| Preview | Curious | Soft | Sparse |
+|---|---|---|---|
+| `out/howwe/kit-demo-720p-music-yt1.mp4` | Behold The Mystery | Snowfall | Laniakea |
+| `out/howwe/kit-demo-720p-music-yt2.mp4` | Frame-Dragging | Fascination | inner_outer |
+
+**How the music is mixed:**
+- **Moods by scene:** curious for today, exhibits, map and card flip; soft for period rooms; sparse for the reveal and title wall. A scene can override this with a `"music"` field.
+- **Crossfades:** 1.5 s, on one shared clock, so a song never restarts.
+- **Levels:** each track is levelled by its average loudness. Music sits about 21 dB under the voice and comes up in the pauses.
+
+Command:
+`python -I tools/howwe_mix.py <scenes.json> <slug> --voice <voice.wav> --music "curious=<a.mp3>,soft=<b.mp3>,sparse=<c.mp3>"`

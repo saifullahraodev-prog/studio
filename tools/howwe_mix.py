@@ -1,6 +1,6 @@
 """How We Ended Up · auto sound mix from a scene list.
 
-Usage (from studio/):  python -I tools/howwe_mix.py <scenes.json> <slug> [--voice path.wav] [--music piano|pizz|path/to/track.mp3] [--out name.wav]
+Usage (from studio/):  python -I tools/howwe_mix.py <scenes.json> <slug> [--voice path.wav] [--music piano|pizz|path/to/track.mp3|curious=a.mp3,soft=b.mp3,sparse=c.mp3] [--out name.wav]
 Writes public/howwe/<slug>/mix.wav (-14 LUFS, true peak -1.5 dB) + public/howwe/<slug>/cues.json (every cue, for review).
 
 Cue rules follow the animation timings in engine/howwe/motion.tsx (TIMING) and templates.tsx. Keep them in sync.
@@ -17,7 +17,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "audio"))
 import howwe_sfx as hx  # noqa: E402
-from sfx import SR, _add  # noqa: E402
+from sfx import SR, _add, _movavg  # noqa: E402
 
 FPS = 30
 TIMING = {"rise": 12, "cardDelay": 6, "card": 10, "stagger": 14, "mapFill": 20, "lightsDown": 10, "lightsUp": 20, "dolly": 22, "door": 20}
@@ -108,7 +108,7 @@ def render(ev, hums, dur):
 
 def track_bed(path, dur, hush):
     """A downloaded music track as the bed: looped (2 s crossfade) or trimmed to the video length,
-    peak-normalised, and softened to 25% during reveal hush windows."""
+    loudness-levelled (RMS), and softened to 25% during reveal hush windows."""
     x = read_wav(path)
     n = int(dur * SR) + SR
     xf = 2 * SR
@@ -117,7 +117,10 @@ def track_bed(path, dur, hush):
         ramp = np.linspace(0, 1, xf, dtype=np.float32)
         y[-xf:] = y[-xf:] * (1 - ramp) + x[:xf] * ramp
         y = np.concatenate([y, x[xf:]])[:n]
-    y = y / (np.max(np.abs(y)) or 1) * 0.8
+    # level by average loudness (RMS -> about -16 dBFS), not by peak, so every track sits at the same level; cap peaks
+    rms = float(np.sqrt(np.mean(y.astype(np.float64) ** 2))) or 1.0
+    y = y * (0.16 / rms)
+    y = y / max(1.0, float(np.max(np.abs(y))) / 0.95)
     env = np.ones(len(y))
     r = int(0.4 * SR)
     for a, b in hush:
@@ -126,6 +129,32 @@ def track_bed(path, dur, hush):
         env[max(0, ia - r):ia] = np.linspace(1, 0.25, ia - max(0, ia - r))
         env[ib:ib + r] = np.linspace(0.25, 1, len(env[ib:ib + r]))
     return (y * env)[: int(dur * SR)]
+
+
+MOOD_BY_TEMPLATE = {"today": "curious", "exhibits": "curious", "map": "curious", "cardFlip": "curious",
+                    "period": "soft", "reveal": "sparse", "titleWall": "sparse"}
+
+
+def mood_beds(scenes, spec, dur, hush, xfade=1.5):
+    """One track per mood (scene "music" field, else MOOD_BY_TEMPLATE). All tracks run on the same clock from t=0,
+    so a crossfade (xfade s) at each mood change never restarts a song."""
+    import re
+    paths = dict(kv.split("=", 1) for kv in re.split(r",(?=\w+=)", spec))  # file names may contain commas
+    beds = {m: track_bed(ROOT / p, dur, hush) for m, p in paths.items()}
+    starts, _ = timeline(scenes)
+    n = int(dur * SR)
+    moods = [s.get("music") or MOOD_BY_TEMPLATE.get(s["t"], "curious") for s in scenes]
+    weights = {m: np.zeros(n) for m in beds}
+    for i, m in enumerate(moods):
+        a = int(starts[i] / FPS * SR)
+        b = int(starts[i + 1] / FPS * SR) if i + 1 < len(scenes) else n
+        weights.setdefault(m, np.zeros(n))[a:b] = 1.0
+    k = max(1, int(xfade * SR))
+    out = np.zeros(n)
+    for m, w in weights.items():
+        if m in beds:
+            out += beds[m][:n] * _movavg(w, k)  # O(n) smoothing = crossfade
+    return out
 
 
 def read_wav(p):
@@ -152,7 +181,9 @@ def main():
     ev, hush, hums, dur = cues(scenes)
     n = int(dur * SR)
     sfx = render(ev, hums, dur)
-    if Path(style).suffix.lower() in (".mp3", ".wav", ".flac", ".ogg", ".m4a"):
+    if "=" in style:  # mood set: "curious=a.mp3,soft=b.mp3,sparse=c.mp3" -> crossfade by scene
+        mus = mood_beds(scenes, style, dur, hush) * hx.GAINS["music"]
+    elif Path(style).suffix.lower() in (".mp3", ".wav", ".flac", ".ogg", ".m4a"):
         mus = track_bed(ROOT / style, dur, hush) * hx.GAINS["music"]  # a real (licensed) music file
     else:
         mus = hx.music(dur, hush=hush, style=style) * hx.GAINS["music"]
@@ -162,7 +193,7 @@ def main():
         voice = np.pad(voice, (0, max(0, n - len(voice))))[:n]
         # duck music under speech (smoothed envelope)
         env = np.abs(voice)
-        env = np.convolve(env, np.ones(int(0.25 * SR)) / int(0.25 * SR), mode="same")
+        env = _movavg(env, int(0.25 * SR))
         duck = 1 - 0.5 * np.clip(env / (np.max(env) * 0.25 or 1), 0, 1)
         mus = mus * duck
     else:

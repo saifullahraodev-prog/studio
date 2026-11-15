@@ -18,3 +18,18 @@ Source: BigSoundBank (recordings by Joseph Sardin), https://bigsoundbank.com/lic
 | bell-level-crossing_s1064.ogg | https://bigsoundbank.com/level-crossing-warning-s1064.html | 15.8 s |
 
 Optional credit line for descriptions: "Some sound effects: BigSoundBank.com (CC0)".
+
+## How We Ended Up: YouTube Audio Library music (downloaded 2026-11-15)
+Downloaded with the official Download buttons in YouTube Studio > Audio library, signed in to the owner's channel,
+with the owner's OK. Licence for all 8: **YouTube Audio Library licence** (API: CREATOR_MUSIC_LICENSE_TYPE_YOUTUBE),
+**no attribution required**, monetisation allowed in YouTube videos. Use on YouTube only (Audio Library terms).
+| File (`audio/library/howwe/`) | Title | Artist | Library genre / mood | Length | Track id |
+|---|---|---|---|---|---|
+| curious-Behold The Mystery - Asher Fulero.mp3 | Behold The Mystery | Asher Fulero | Classical / Bright | 3:17 | xX76V7QJz-Q |
+| curious-Ripples In Time - Asher Fulero.mp3 | Ripples In Time | Asher Fulero | Classical / Inspirational | 3:57 | Z9IC9nqT3Ko |
+| curious-Frame-Dragging - The Grey Room, Density & Time.mp3 | Frame-Dragging | The Grey Room / Density & Time | Ambient / Bright | 3:22 | f4KbmvTu9Rw |
+| curious-Sample Mind - Freedom Trail Studio.mp3 | Sample Mind | Freedom Trail Studio | Cinematic / Calm | 2:29 | DMW03bATnYk |
+| soft-Snowfall - Asher Fulero.mp3 | Snowfall | Asher Fulero | Classical / Calm | 3:29 | XA_hIqUDRrs |
+| soft-Fascination - Gregory Allison.mp3 | Fascination | Gregory Allison | Classical / Calm | 3:39 | 6zMpj4XX3Ik |
+| sparse-Laniakea - The Grey Room, Density & Time.mp3 | Laniakea | The Grey Room / Density & Time | Ambient / Calm | 4:00 | 6ANELTMqvfI |
+| sparse-inner_outer - Lish Grooves.mp3 | inner_outer | Lish Grooves | Cinematic / Calm | 4:00 | ipKjAnqkBy8 |

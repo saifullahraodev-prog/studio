@@ -104,6 +104,8 @@ The music "hushes" (melody and bass out, pad softened) while the reveal lights a
 - Each line starts 6 frames after the scene's transition. The tool warns when a line is longer than its scene.
 - Output: `public/howwe/<slug>/voice.wav`. It's a placeholder only; the real narration replaces it.
 
+**Real music (preferred):** use YouTube Audio Library tracks, one per mood (`--music "curious=…,soft=…,sparse=…"`). Details and the chosen tracks: `docs/howwe-sound-sources.md`. The synthesized beds are only a fallback.
+
 **Auto mix:** `python -I tools/howwe_mix.py <scenes.json> <slug> [--voice voice.wav] [--music piano|pizz] [--out name.wav]`.
 - It places every cue from the scene list using the same timings as the animation. Keep `TIMING` in both files in sync.
 - It ducks the music under the voice.
