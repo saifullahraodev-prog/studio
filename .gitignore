@@ -23,3 +23,6 @@ __pycache__/
 # Ship Guy engines: intermediate audio copy
 videos/*/short/*.mp4
 public/shipguy/*/short.wav
+
+# How We Ended Up: raw Natural Earth downloads (public domain; refetch per CREDITS.md, converted data is committed)
+public/howwe/naturalearth/

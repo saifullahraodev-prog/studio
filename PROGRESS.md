@@ -12,9 +12,13 @@
   Each still renders in ~10-15 s. Costumes, dates, map geography and map data are PLACEHOLDERS.
 - GATE PASSED 2026-11-15: owner APPROVED the Gallery style frames. Locked: `engine/howwe/style-v1.0.json` (kit reads it),
   golden frames `golden/howwe-*.png` (in `golden/manifest.json`, SSIM 1.000 vs approved stills).
-- NEXT: asset kits (Natural Earth map data: ask owner before download; reference-based costumes; object library;
+- 2026-11-15: owner OK'd Natural Earth download. Raw GeoJSON in `public/howwe/naturalearth/` (credited in CREDITS.md);
+  `tools/howwe_map.py 110m|50m` -> `engine/howwe/data/world-{110m,50m}.json` (Equal Earth). `WorldMap` in kit now uses
+  real countries (`cats` by ISO A3), graticule + Equal Earth outline; `projectEE(lon,lat)` for routes/pins.
+  Owner APPROVED the real-geography map room 2026-11-15 (`docs/howwe/frames/map.png`, golden `howwe-map` re-approved).
+  Eating-culture colours are PLACEHOLDER data.
+- NEXT: asset kits (map: done; reference-based costumes; object library;
   scene templates; motion + transitions), then video 1 script "Why Half the World Doesn't Use Forks".
-
 
 ## Current: Review 2 (owner, 2026-11-10): "movement too little, video not engaging"
 - Reference compared frame by frame: `out/review2/analysis.md`, `out/review2/reference-vs-ours.png`.

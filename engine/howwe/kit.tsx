@@ -5,6 +5,7 @@ import { loadFont as loadPlex } from "@remotion/google-fonts/IBMPlexMono";
 import { loadFont as loadInter } from "@remotion/google-fonts/Inter";
 import React from "react";
 import style from "./style-v1.0.json";
+import world110 from "./data/world-110m.json";
 
 export const { fontFamily: DISPLAY } = loadPlayfair("normal", { weights: ["700", "900"], subsets: ["latin"] });
 export const { fontFamily: MONO } = loadPlex("normal", { weights: ["400", "600"], subsets: ["latin"] });
@@ -245,41 +246,56 @@ export const Figure: React.FC<{ x: number; y: number; s?: number; skin: string; 
   );
 };
 
-/* ---------------- map (placeholder geography until Natural Earth is approved) ---------------- */
-type Region = { pts: number[][]; group: "fork" | "chop" | "hand" | "mixed" | "none" };
-const REGIONS: Region[] = [
-  { group: "fork", pts: [[-168, 66], [-140, 70], [-95, 72], [-80, 63], [-60, 60], [-55, 50], [-67, 45], [-75, 35], [-81, 25], [-97, 26], [-97, 18], [-87, 15], [-80, 8], [-92, 14], [-105, 20], [-117, 32], [-124, 40], [-124, 48], [-135, 58], [-150, 60], [-165, 60]] },
-  { group: "none", pts: [[-55, 60], [-42, 60], [-20, 70], [-20, 80], [-60, 82], [-70, 76], [-55, 68]] },
-  { group: "fork", pts: [[-80, 8], [-60, 10], [-50, 0], [-35, -6], [-40, -22], [-53, -34], [-65, -42], [-68, -55], [-75, -50], [-72, -30], [-70, -18], [-81, -5]] },
-  { group: "fork", pts: [[-10, 36], [-9, 43], [-2, 44], [-5, 48], [0, 50], [5, 53], [8, 57], [5, 62], [15, 69], [28, 71], [40, 67], [45, 55], [40, 45], [28, 41], [26, 36], [22, 37], [16, 38], [12, 44], [8, 44], [3, 42], [-5, 36]] },
-  { group: "fork", pts: [[-6, 50], [2, 51], [0, 55], [-3, 58], [-7, 57], [-5, 54]] },
-  { group: "fork", pts: [[40, 67], [60, 70], [80, 73], [110, 76], [140, 72], [170, 70], [180, 66], [160, 60], [140, 55], [135, 48], [120, 52], [95, 50], [80, 50], [60, 52], [50, 47], [45, 55]] },
-  { group: "hand", pts: [[28, 41], [40, 45], [50, 47], [60, 52], [80, 50], [75, 38], [62, 25], [57, 22], [52, 16], [44, 12], [38, 20], [34, 28], [35, 33], [30, 37]] },
-  { group: "hand", pts: [[62, 25], [75, 38], [80, 35], [88, 28], [92, 22], [88, 21], [80, 15], [77, 8], [73, 16], [68, 23]] },
-  { group: "chop", pts: [[75, 38], [80, 50], [95, 50], [120, 52], [135, 48], [130, 42], [122, 40], [122, 30], [118, 24], [108, 21], [100, 22], [97, 28], [92, 22], [88, 28], [80, 35]] },
-  { group: "chop", pts: [[130, 31], [140, 35], [142, 40], [141, 45], [139, 40], [133, 34]] },
-  { group: "mixed", pts: [[92, 22], [97, 28], [100, 22], [108, 21], [106, 10], [100, 13], [103, 1], [98, 8], [98, 16]] },
-  { group: "mixed", pts: [[95, 5], [105, -6], [115, -8], [125, -9], [140, -8], [150, -6], [140, -2], [130, -2], [120, 0], [110, 2], [100, 2]] },
-  { group: "hand", pts: [[-17, 21], [-10, 30], [-6, 35], [10, 37], [20, 32], [32, 31], [34, 28], [38, 20], [44, 12], [51, 12], [42, -2], [40, -15], [35, -25], [28, -34], [18, -34], [12, -18], [9, -2], [9, 4], [-5, 5], [-16, 12]] },
-  { group: "hand", pts: [[44, -25], [50, -15], [49, -12], [43, -17]] },
-  { group: "fork", pts: [[114, -22], [122, -18], [130, -12], [137, -12], [142, -11], [146, -19], [153, -26], [150, -37], [140, -38], [130, -32], [116, -35]] },
-  { group: "fork", pts: [[172, -35], [178, -38], [174, -41], [167, -46], [172, -42]] },
+/* ---------------- map: Natural Earth (public domain), Equal Earth projection ---------------- */
+// Data: engine/howwe/data/world-110m.json, made by tools/howwe_map.py (same projection as below; 1000 x 486.7 units).
+const EA = [1.340264, -0.081106, 0.000893, 0.003796], EM = Math.sqrt(3) / 2, EXMAX = 2.70663, EYMAX = 1.31731;
+const MAP_W = world110.w, MAP_H = world110.h;
+/** lon/lat -> map units (0..1000, 0..486.7). Use for routes, pins and labels. */
+export const projectEE = (lon: number, lat: number): [number, number] => {
+  const lam = (lon * Math.PI) / 180, th = Math.asin(EM * Math.sin((lat * Math.PI) / 180));
+  const t2 = th * th, t6 = t2 * t2 * t2;
+  const x = (lam * Math.cos(th)) / (EM * (EA[0] + 3 * EA[1] * t2 + t6 * (7 * EA[2] + 9 * EA[3] * t2)));
+  const y = th * (EA[0] + EA[1] * t2 + t6 * (EA[2] + EA[3] * t2));
+  return [((x + EXMAX) / (2 * EXMAX)) * MAP_W, ((EYMAX - y) / (2 * EYMAX)) * MAP_H];
+};
+const line = (pts: [number, number][]) => "M" + pts.map(([x, y]) => `${x.toFixed(1)} ${y.toFixed(1)}`).join("L");
+const OUTLINE = (() => {
+  const e: [number, number][] = [];
+  for (let la = -90; la <= 90; la += 3) e.push(projectEE(180, la));
+  for (let la = 90; la >= -90; la -= 3) e.push(projectEE(-180, la));
+  return line(e) + "Z";
+})();
+const GRATICULE = [
+  ...[-60, -30, 0, 30, 60].map((la) => line(Array.from({ length: 73 }, (_, i) => projectEE(-180 + i * 5, la)))),
+  ...[-150, -120, -90, -60, -30, 0, 30, 60, 90, 120, 150].map((lo) => line(Array.from({ length: 37 }, (_, i) => projectEE(lo, -90 + i * 5)))),
 ];
-export const WorldMap: React.FC<{ id: string; x: number; y: number; w: number; show?: ("fork" | "chop" | "hand" | "mixed")[] }> = ({ id, x, y, w, show = ["fork", "chop", "hand", "mixed"] }) => {
-  const h = w * (138 / 360); // crop lat 80..-58
-  const P = (lon: number, lat: number) => `${((lon + 180) / 360) * w},${((80 - lat) / 138) * h}`;
-  const fill = (g: Region["group"]) =>
-    !show.includes(g as never) || g === "none" ? "#E9E1D0" : g === "fork" ? T.clay : g === "chop" ? T.slate : g === "hand" ? T.moss : `url(#${id}mix)`;
+export type MapCat = "a" | "b" | "c" | "mix";
+/** Framed-museum world map. `cats` colours countries by ISO A3 code: a=clay, b=slate, c=moss, mix=hatched a/c. */
+export const WorldMap: React.FC<{ id: string; x: number; y: number; w: number; cats?: Record<string, MapCat> }> = ({ id, x, y, w, cats = {} }) => {
+  const k = w / MAP_W;
+  const fill = (a3: string) => {
+    const c = cats[a3];
+    return !c ? "#E9E1D0" : c === "a" ? T.clay : c === "b" ? T.slate : c === "c" ? T.moss : `url(#${id}mix)`;
+  };
+  const countries = world110.countries as Record<string, { n: string; d: string }>;
   return (
-    <g transform={`translate(${x} ${y})`}>
+    <g transform={`translate(${x} ${y}) scale(${k})`}>
       <defs>
-        <pattern id={`${id}mix`} width={14} height={14} patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-          <rect width={14} height={14} fill={T.moss} /><rect width={7} height={14} fill={T.clay} />
+        <pattern id={`${id}mix`} width={7} height={7} patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+          <rect width={7} height={7} fill={T.moss} /><rect width={3.5} height={7} fill={T.clay} />
         </pattern>
+        <clipPath id={`${id}globe`}><path d={OUTLINE} /></clipPath>
       </defs>
-      <rect width={w} height={h} fill="#DCE3E0" />
-      {[-30, 0, 30, 60].map((lat) => <line key={lat} x1={0} x2={w} y1={((80 - lat) / 138) * h} y2={((80 - lat) / 138) * h} stroke="#B9C6C2" strokeWidth={1.5} strokeDasharray="6 8" />)}
-      {REGIONS.map((r, i) => <polygon key={i} points={r.pts.map(([lo, la]) => P(lo, la)).join(" ")} fill={fill(r.group)} stroke="#8A7E68" strokeWidth={1.5} strokeLinejoin="round" />)}
+      <path d={OUTLINE} fill="#DCE3E0" />
+      <g clipPath={`url(#${id}globe)`}>
+        {GRATICULE.map((d, i) => <path key={i} d={d} fill="none" stroke="#B9C6C2" strokeWidth={0.6 / k * 1.2} />)}
+        {Object.entries(countries).map(([a3, c]) => (
+          <path key={a3} d={c.d} fill={fill(a3)} stroke="#8A7E68" strokeWidth={0.9 / k} strokeLinejoin="round" fillRule="evenodd" />
+        ))}
+      </g>
+      <path d={OUTLINE} fill="none" stroke="#8A7E68" strokeWidth={1.6 / k} />
     </g>
   );
 };
+/** Height of a WorldMap of width w. */
+export const mapHeight = (w: number) => (w * MAP_H) / MAP_W;

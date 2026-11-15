@@ -36,3 +36,13 @@ tree_stump_02, dead_tree_trunk, rock_07, stone_01, wooden_bucket_01, dry_branche
 (each at https://polyhaven.com/a/<id>).
 
 Blender test textures (2026-11-11), Poly Haven CC0 1K: brown_mud_02, muddy_tracks, sparse_grass, weathered_planks (https://polyhaven.com/a/<id>), in blender/assets/tex/.
+
+## Map data: Natural Earth (https://www.naturalearthdata.com), public domain, downloaded 2026-11-15
+Used by How We Ended Up maps. Natural Earth is public domain (no permission or attribution needed); credited anyway.
+Fetched as GeoJSON from Natural Earth's official GitHub mirror (nvkelso/natural-earth-vector, `geojson/`).
+| File (`public/howwe/naturalearth/`) | Detail | Converted to (by `tools/howwe_map.py`, Equal Earth projection) |
+|---|---|---|
+| ne_110m_admin_0_countries.geojson (819 KB) | 1:110m, world maps | `engine/howwe/data/world-110m.json` (176 countries, 117 KB) |
+| ne_50m_admin_0_countries.geojson (3.0 MB) | 1:50m, regional close-ups | `engine/howwe/data/world-50m.json` (241 countries, 1 MB) |
+Raw GeoJSON is git-ignored; refetch from https://github.com/nvkelso/natural-earth-vector/tree/master/geojson and rerun the script.
+Note: Natural Earth shows de-facto boundaries; disputed areas must be checked per video before publishing.

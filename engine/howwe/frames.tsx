@@ -5,7 +5,7 @@ import React from "react";
 import { AbsoluteFill } from "remotion";
 import { Bowl, Chopsticks, Fork, Ink, Knife, Plate } from "./lab";
 import {
-  DISPLAY, Figure, Gallery, Grain, H, Headline, LabelCard, MONO, Pillar, PlasterHand, Plinth, RoomSign, SKIN, STYLE, Subtitle, T, ThenTint, W, WorldMap,
+  DISPLAY, Figure, Gallery, Grain, H, Headline, LabelCard, MONO, Pillar, PlasterHand, Plinth, RoomSign, SKIN, STYLE, Subtitle, T, ThenTint, W, WorldMap, mapHeight, MapCat,
 } from "./kit";
 
 export type FrameView = "gallery" | "period" | "map" | "reveal" | "people" | "thumb" | "board";
@@ -100,10 +100,22 @@ const PeriodFrame: React.FC = () => (
   </g>
 );
 
+
+/** PLACEHOLDER eating-culture data for the map style frame. NOT researched: will be replaced by sourced data in the video 1 script. */
+const grp = (codes: string, c: MapCat) => Object.fromEntries(codes.split(" ").map((k) => [k, c]));
+const EATING_PLACEHOLDER: Record<string, MapCat> = {
+  ...grp("USA CAN MEX GTM BLZ HND SLV NIC CRI PAN CUB DOM HTI JAM PRI BHS TTO COL VEN GUY SUR ECU PER BOL BRA PRY URY ARG CHL FLK GRL", "a"),
+  ...grp("ISL NOR SWE FIN DNK GBR IRL NLD BEL LUX FRA DEU CHE AUT ITA ESP PRT POL CZE SVK HUN SVN HRV BIH SRB MNE KOS ALB MKD GRC BGR ROU MDA UKR BLR LTU LVA EST RUS CYP CYN TUR ISR GEO ARM AZE AUS NZL", "a"),
+  ...grp("CHN TWN JPN KOR PRK VNM", "b"),
+  ...grp("IND PAK BGD NPL LKA BTN AFG IRN IRQ SYR JOR LBN PSX SAU YEM OMN ARE QAT KWT", "c"),
+  ...grp("MAR DZA TUN LBY EGY SAH MRT MLI NER TCD SDN SDS ERI DJI ETH SOM SOL KEN UGA RWA BDI TZA COD COG GAB GNQ CMR CAF NGA BEN TGO GHA CIV LBR SLE GIN GNB GMB SEN BFA AGO ZMB MWI MOZ ZWE BWA NAM ZAF LSO SWZ MDG", "c"),
+  ...grp("THA LAO KHM MMR MYS IDN PHL BRN TLS MNG KAZ UZB TKM KGZ TJK PNG", "mix"),
+};
+
 /* 3 · Map room: framed wall map */
 const MapFrame: React.FC = () => {
-  const mw = 1400, mh = mw * (138 / 360);
-  const fx = (W - mw) / 2, fy = 262;
+  const mw = 1240, mh = mapHeight(mw);
+  const fx = (W - mw) / 2, fy = 240;
   return (
     <g>
       <Gallery id="g3" bays={[T.wall]} floorY={1000} />
@@ -113,7 +125,7 @@ const MapFrame: React.FC = () => {
       <rect x={fx - 54} y={fy - 34} width={mw + 108} height={mh + 68} fill="#000" opacity={0.1} transform="translate(10 12)" />
       <rect x={fx - 54} y={fy - 34} width={mw + 108} height={mh + 68} fill="#3A3A40" />
       <rect x={fx - 32} y={fy - 14} width={mw + 64} height={mh + 28} fill="#FBF8F2" />
-      <WorldMap id="m3" x={fx} y={fy} w={mw} />
+      <WorldMap id="m3" x={fx} y={fy} w={mw} cats={EATING_PLACEHOLDER} />
       {/* legend card */}
       <g transform={`translate(${W / 2 - 520} ${fy + mh + 70})`}>
         <rect x={3} y={5} width={1040} height={86} fill="#000" opacity={0.08} />
@@ -126,7 +138,7 @@ const MapFrame: React.FC = () => {
         ))}
       </g>
       <Grain seed={3} />
-      <Note text="style frame v0.1 · placeholder hand-drawn geography + simplified data (real map: Natural Earth, needs approval)" />
+      <Note text="map: Natural Earth (public domain), Equal Earth projection · eating-culture colours are PLACEHOLDER data, not yet researched" />
     </g>
   );
 };
