@@ -26,6 +26,11 @@
   105 s = ~2.6 s per second of video (concurrency 2) -> a 12-min video ~31 min at 720p (1080p estimate ~1 h, unmeasured).
   QC: no black / frozen frames; contact sheet `out/howwe/kit-demo-sheet.png`. HowVideo now scales to any output size:
   render 720p with `--width=1280 --height=720` (`--scale=0.6667` fails: 720.036 px height).
+- 2026-11-15: SOUND KIT built (owner: "add sound kit first"): `audio/howwe_sfx.py` (12 sounds + room tone + music bed,
+  all synthesised), `tools/howwe_mix.py` (auto cues from the scene list, music hush on reveal, voice ducking, two-pass
+  loudness). Demo: 44 cues, -15.4 LUFS / -1.4 dBTP (no voice). Listen: `out/howwe/kit-demo-720p-sound.mp4` (sound laid
+  on the existing render) + `out/howwe/sound-sampler.wav` (each sound once; labels in sound-sampler.txt).
+  HowVideo has an `audio` prop. WAITING: owner listens and gives feedback.
 - NEXT (was): asset kits (map: done; reference-based costumes; object library;
   scene templates; motion + transitions), then video 1 script "Why Half the World Doesn't Use Forks".
 

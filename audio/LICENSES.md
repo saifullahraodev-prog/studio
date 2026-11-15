@@ -1,6 +1,6 @@
 # Audio licences
 
-Everything in `audio/sfx.py` is synthesised in code (no licence needed).
+Everything in `audio/sfx.py` and `audio/howwe_sfx.py` (How We Ended Up sound kit + music bed) is synthesised in code (no licence needed).
 
 Downloaded sounds (owner-approved 2026-11-09). All **CC0 1.0 (public domain)**: free for
 commercial use, no attribution required, not registered in YouTube Content ID.

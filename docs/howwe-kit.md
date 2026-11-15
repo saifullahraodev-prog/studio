@@ -71,6 +71,35 @@ node tools/run.mjs render src/index.ts HowVideo out/howwe/x-720p.mp4 --width=128
 ```
 A full video render (`HowVideo`) needs the owner's OK first (standing rule: stills first).
 
+## Sound kit (added 2026-11-15)
+All sounds are made in code (`audio/howwe_sfx.py`, no downloads, no licences). The identity is a calm museum, deliberately different from Ship Guy's plucky comedy.
+
+**Sounds:**
+- footsteps (dolly);
+- door (doorway transition);
+- place (exhibit lands);
+- paper (card prints, tint wash);
+- flip (card flip, answer card);
+- clunk (lights down/up) plus a whisper-quiet spotlight hum;
+- air (camera push);
+- chime (rising D–F#–A–D as map categories fill; title wall);
+- pen (map route);
+- clink (Today room forks);
+- chop (period kitchen);
+- room tone.
+
+**Music bed:** light and curious, 92 bpm, D–Bm–G–A. Marimba arpeggio, pizzicato bass and a soft pad, kept *under* the effects. It "hushes" (melody and bass out, pad halved) while the reveal lights are down.
+
+**Auto mix:** `python -I tools/howwe_mix.py <scenes.json> <slug> [--voice voice.wav]`.
+- It places every cue from the scene list using the same timings as the animation. Keep `TIMING` in both files in sync.
+- It ducks the music under the voice.
+- Two-pass loudness to −14 LUFS, true peak −1.5 dB. With no voice, the peak limit leaves it around −15.
+- Output: `public/howwe/<slug>/mix.wav` (git-ignored, rebuild any time) and `cues.json`, the list of every cue for review.
+- Hook the mix into the video with the `audio: "howwe/<slug>/mix.wav"` prop on `HowVideo`.
+
+If only the sound changed, lay the new mix onto an existing render instead of re-rendering:
+`ffmpeg -i video.mp4 -i mix.wav -map 0:v -map 1:a -c:v copy -c:a aac -shortest out.mp4`
+
 ## Rules
 1. Values only come from `style-v1.0.json`.
 2. Add an object or room by drawing it from a documented reference, and log that reference in the video folder.
@@ -78,7 +107,6 @@ A full video render (`HowVideo`) needs the owner's OK first (standing rule: stil
 4. Run `node tools/golden.mjs check howwe` after any kit change.
 
 ## Known gaps (next)
-- No sound yet. Planned: footsteps, door, light clunk, card thunk, room tone, music bed.
 - Subtitles are one line per scene. Word-timed subtitles come with the voice pipeline.
 - Only 3 rooms and 10 objects so far. Video 1 research decides what's added next.
 - Render speed (measured 2026-11-15): about 2.6 s per second of video at 720p, so a 12-minute video takes about 31 min. 1080p hasn't been measured yet.

@@ -1,0 +1,231 @@
+{
+ "duration": 40.93333333333333,
+ "hush": [
+  [
+   32.38666666666667,
+   36.46666666666667
+  ]
+ ],
+ "cues": [
+  [
+   0.67,
+   "clink",
+   "clink"
+  ],
+  [
+   2.4,
+   "clink",
+   "clink"
+  ],
+  [
+   4.13,
+   "clink",
+   "clink"
+  ],
+  [
+   4.27,
+   "footsteps",
+   "dolly"
+  ],
+  [
+   4.8,
+   "paper",
+   "card 1"
+  ],
+  [
+   4.83,
+   "place",
+   "exhibit 1 lands"
+  ],
+  [
+   5.27,
+   "paper",
+   "card 2"
+  ],
+  [
+   5.3,
+   "place",
+   "exhibit 2 lands"
+  ],
+  [
+   5.73,
+   "paper",
+   "card 3"
+  ],
+  [
+   5.77,
+   "place",
+   "exhibit 3 lands"
+  ],
+  [
+   8.61,
+   "air",
+   "push-in"
+  ],
+  [
+   10.53,
+   "footsteps",
+   "dolly"
+  ],
+  [
+   10.73,
+   "air",
+   "frame push"
+  ],
+  [
+   11.53,
+   "chime",
+   "fill 1"
+  ],
+  [
+   12.4,
+   "chime",
+   "fill 2"
+  ],
+  [
+   13.27,
+   "chime",
+   "fill 3"
+  ],
+  [
+   14.13,
+   "chime",
+   "fill 4"
+  ],
+  [
+   16.29,
+   "pen",
+   "route"
+  ],
+  [
+   17.87,
+   "door",
+   "door"
+  ],
+  [
+   17.93,
+   "paper",
+   "tint wash"
+  ],
+  [
+   22.13,
+   "footsteps",
+   "dolly"
+  ],
+  [
+   22.4,
+   "chop",
+   "chop"
+  ],
+  [
+   22.93,
+   "chop",
+   "chop"
+  ],
+  [
+   23.47,
+   "chop",
+   "chop"
+  ],
+  [
+   24.0,
+   "chop",
+   "chop"
+  ],
+  [
+   24.53,
+   "chop",
+   "chop"
+  ],
+  [
+   25.07,
+   "chop",
+   "chop"
+  ],
+  [
+   25.6,
+   "chop",
+   "chop"
+  ],
+  [
+   26.13,
+   "chop",
+   "chop"
+  ],
+  [
+   26.67,
+   "chop",
+   "chop"
+  ],
+  [
+   27.2,
+   "chop",
+   "chop"
+  ],
+  [
+   27.4,
+   "footsteps",
+   "dolly"
+  ],
+  [
+   27.73,
+   "chop",
+   "chop"
+  ],
+  [
+   27.73,
+   "place",
+   "card lands"
+  ],
+  [
+   29.85,
+   "flip",
+   "flip to correction"
+  ],
+  [
+   31.67,
+   "footsteps",
+   "dolly"
+  ],
+  [
+   32.39,
+   "clunk",
+   "lights down"
+  ],
+  [
+   34.15,
+   "flip",
+   "answer card"
+  ],
+  [
+   34.37,
+   "chime",
+   "answer line"
+  ],
+  [
+   36.27,
+   "clunk",
+   "lights up"
+  ],
+  [
+   36.93,
+   "footsteps",
+   "dolly"
+  ],
+  [
+   37.07,
+   "chime",
+   "title"
+  ],
+  [
+   37.23,
+   "chime",
+   "title"
+  ],
+  [
+   37.4,
+   "chime",
+   "title"
+  ]
+ ]
+}

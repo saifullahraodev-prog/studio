@@ -3,14 +3,15 @@
 //   cut · dolly (sideways slide past a pillar, next bay) · door (push into a doorway, aged-paper wash, into the next room)
 // The other two signature transitions live inside templates: frame push (map) and lights down (reveal); card flip = cardFlip.
 import React from "react";
-import { AbsoluteFill, useCurrentFrame } from "remotion";
+import { AbsoluteFill, Audio, staticFile, useCurrentFrame } from "remotion";
 import { H, MapCat, Pillar, T, W } from "./kit";
 import { easeInOut, TIMING } from "./motion";
 import { TEMPLATES, TemplateId } from "./templates";
 
 export type SceneIn = "cut" | "dolly" | "door";
 export type Scene = { t: TemplateId; dur: number; in?: SceneIn; p: Record<string, unknown> };
-export type HowVideoProps = { scenes: Scene[]; cats?: Record<string, Record<string, MapCat>> };
+/** `audio`: path under public/, e.g. "howwe/<slug>/mix.wav" made by tools/howwe_mix.py from the same scene list. */
+export type HowVideoProps = { scenes: Scene[]; cats?: Record<string, Record<string, MapCat>>; audio?: string };
 
 const tLen = (s: SceneIn | undefined) => (s === "dolly" ? TIMING.dolly : s === "door" ? TIMING.door : 0);
 
@@ -34,7 +35,7 @@ const SceneView: React.FC<{ s: Scene; i: number; f: number; cats?: HowVideoProps
   return <C {...p} uid={`s${i}`} f={f} dur={s.dur} />;
 };
 
-export const HowVideo: React.FC<HowVideoProps> = ({ scenes, cats }) => {
+export const HowVideo: React.FC<HowVideoProps> = ({ scenes, cats, audio }) => {
   const F = useCurrentFrame();
   const { starts } = timeline(scenes);
   // last scene that has started
@@ -77,6 +78,7 @@ export const HowVideo: React.FC<HowVideoProps> = ({ scenes, cats }) => {
   }
   return (
     <AbsoluteFill style={{ background: T.wall }}>
+      {audio && <Audio src={staticFile(audio)} />}
       <svg width="100%" height="100%" viewBox={`0 0 ${W} ${H}`} style={{ position: "absolute", inset: 0 }}>{body}</svg>
     </AbsoluteFill>
   );
