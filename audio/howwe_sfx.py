@@ -192,8 +192,116 @@ def _pad(midis, sec):
     return _lpf(x, 1200) * e
 
 
-def music(duration, hush=(), bpm=92):
-    """returns the bed; `hush` = [(t0, t1)] where the melody drops out and only the pad remains (e.g. reveal)."""
+def _hush_env(n, hush):
+    env = np.ones(n)
+    ramp = int(0.35 * SR)
+    for a, b in hush:
+        ia, ib = int(a * SR), int(b * SR)
+        env[ia:ib] = 0
+        env[max(0, ia - ramp):ia] = np.minimum(env[max(0, ia - ramp):ia], np.linspace(1, 0, ia - max(0, ia - ramp)))
+        env[ib:ib + ramp] = np.minimum(env[ib:ib + ramp], np.linspace(0, 1, len(env[ib:ib + ramp])))
+    return env
+
+
+def _piano(midi, sec=2.6):
+    """soft felt piano: few decaying partials, gentle hammer, darkened"""
+    t = _t(sec)
+    f = NOTE(midi)
+    x = sum(a * np.sin(2 * np.pi * f * k * t) * _decay(sec, r) for k, a, r in ((1, 1.0, 1.6), (2, 0.42, 2.6), (3, 0.18, 4.0), (4, 0.08, 6.0)))
+    ham = _lpf(_noise(int(0.02 * SR)), 1500) * _env(int(0.02 * SR), 0.001, 0.015) * 0.15
+    x[: len(ham)] += ham
+    a = int(0.008 * SR)
+    x[:a] *= np.linspace(0, 1, a)
+    return _lpf(x, 2600)
+
+
+def _strings(midis, sec):
+    """warm string pad: detuned harmonic stacks, slow swell"""
+    t = _t(sec)
+    x = np.zeros(len(t))
+    for m in midis:
+        for det in (0.997, 1.0, 1.004):
+            f = NOTE(m) * det
+            x += sum(np.sin(2 * np.pi * f * k * t + k) / k for k in range(1, 7))
+    a = int(min(1.4, sec / 2.5) * SR)
+    r = int(min(1.0, sec / 3) * SR)
+    e = np.ones(len(t))
+    e[:a] = np.linspace(0, 1, a) ** 1.5
+    e[-r:] = np.linspace(1, 0, r)
+    return _lpf(x, 900) * e
+
+
+def _celesta(midi, sec=1.8):
+    t = _t(sec)
+    f = NOTE(midi)
+    x = np.sin(2 * np.pi * f * t) * _decay(sec, 3.5) + np.sin(2 * np.pi * f * 4 * t) * _decay(sec, 12) * 0.2
+    a = int(0.003 * SR)
+    x[:a] *= np.linspace(0, 1, a)
+    return x
+
+
+def music(duration, hush=(), style="piano"):
+    """Music bed. style:
+      piano   (A, default) "Gallery piano": felt piano + warm strings, 72 bpm, Dm Bb F C. Calm, curious, premium.
+      pizz    (B) "Quiet curiosity": sparse pizzicato + celesta + soft pad, 84 bpm, F Dm Bb C.
+      marimba (old v0, owner: wrong mood) busy marimba arpeggio, 92 bpm.
+    `hush` = [(t0, t1)]: melody/bass drop out and the pad softens (reveal)."""
+    if style == "marimba":
+        return _music_marimba(duration, hush)
+    n = int(duration * SR) + 3 * SR
+    lead, low, pad = np.zeros(n), np.zeros(n), np.zeros(n)
+    cache = {}
+
+    def get(k, make):
+        if k not in cache:
+            cache[k] = make()
+        return cache[k]
+
+    if style == "piano":
+        beat = 60 / 72
+        bar = beat * 4
+        prog = [(50, [62, 65, 69]), (46, [62, 65, 70]), (53, [60, 65, 69]), (48, [60, 64, 67])]  # Dm Bb F C (bass, voicing)
+        melody = [74, None, 72, None, 69, None, 72, 74]  # one note every other bar, gentle question/answer
+        b, t = 0, 0.0
+        while t < duration + bar:
+            root, chord = prog[b % 4]
+            _add(low, get(("pb", root), lambda: _piano(root, 3.2)), t)
+            _add(pad, get(("st", b % 4), lambda: _strings([c - 12 for c in chord], bar + 1.0)), t)
+            # broken chord: beat 2, beat 2.5, beat 3.5 (sparse, never busy)
+            for k, off in enumerate((1.0, 1.5, 2.5)):
+                m = chord[k]
+                _add(lead, get(("p", m), lambda: _piano(m, 2.2)) * (0.55 - 0.1 * k), t + off * beat)
+            mel = melody[b % len(melody)]
+            if mel:
+                _add(lead, get(("p", mel), lambda: _piano(mel, 2.8)) * 0.6, t + 3 * beat)
+            b += 1
+            t += bar
+        env = _hush_env(n, hush)
+        x = (lead * 0.55 + low * 0.45) * env + pad * 0.08 * (0.4 + 0.6 * env)
+    else:  # pizz
+        beat = 60 / 84
+        bar = beat * 4
+        prog = [(53, [65, 69, 72]), (50, [62, 65, 69]), (46, [62, 65, 70]), (48, [64, 67, 72])]  # F Dm Bb C
+        b, t = 0, 0.0
+        while t < duration + bar:
+            root, chord = prog[b % 4]
+            _add(low, get(("pz", root - 12), lambda: _pluck(NOTE(root - 12), 0.9)), t)
+            _add(pad, get(("pd", b % 4), lambda: _strings([c - 12 for c in chord], bar + 0.8)), t)
+            for k, off in enumerate((1.0, 2.0, 2.5, 3.5)):
+                m = chord[k % 3]
+                _add(lead, get(("pzz", m), lambda: _pluck(NOTE(m), 0.6)) * 0.5, t + off * beat)
+            if b % 2 == 0:
+                c = chord[2] + 12
+                _add(lead, get(("ce", c), lambda: _celesta(c)) * 0.35, t)
+            b += 1
+            t += bar
+        env = _hush_env(n, hush)
+        x = (lead * 0.6 + low * 0.5) * env + pad * 0.07 * (0.4 + 0.6 * env)
+    return norm(x[: int(duration * SR)], 0.8)
+
+
+def _music_marimba(duration, hush=(), bpm=92):
+    """v0 marimba bed (kept for reference; owner said wrong mood)."""
     beat = 60 / bpm
     bar = beat * 4
     prog = [(62, [62, 66, 69]), (59, [59, 62, 66]), (55, [55, 59, 62]), (57, [57, 61, 64])]  # D Bm G A
@@ -206,7 +314,7 @@ def music(duration, hush=(), bpm=92):
             cache[k] = make()
         return cache[k]
 
-    patt = [0, 2, 1, 2, 0, 2, 1, 2]  # arpeggio index per eighth
+    patt = [0, 2, 1, 2, 0, 2, 1, 2]
     i, t = 0, 0.0
     while t < duration + bar:
         root, chord = prog[(i // 8) % 4]
@@ -219,19 +327,12 @@ def music(duration, hush=(), bpm=92):
             _add(mel, get(("m", m), lambda: _marimba(m)), t)
         i += 1
         t += beat / 2
-    # hush: melody + bass duck smoothly where requested
-    env = np.ones(n)
-    ramp = int(0.35 * SR)
-    for a, b in hush:
-        ia, ib = int(a * SR), int(b * SR)
-        env[ia:ib] = 0
-        env[max(0, ia - ramp):ia] = np.minimum(env[max(0, ia - ramp):ia], np.linspace(1, 0, ia - max(0, ia - ramp)))
-        env[ib:ib + ramp] = np.minimum(env[ib:ib + ramp], np.linspace(0, 1, len(env[ib:ib + ramp])))
-    x = (mel * 0.55 + bass * 0.5) * env + pad * 0.18 * (0.4 + 0.6 * env)  # hush also softens the pad
+    env = _hush_env(n, hush)
+    x = (mel * 0.55 + bass * 0.5) * env + pad * 0.18 * (0.4 + 0.6 * env)
     return norm(x[: int(duration * SR)], 0.8)
 
 
 SOUNDS = {"step": step, "footsteps": footsteps, "door": door, "clunk": clunk, "flip": flip, "place": place, "paper": paper,
           "air": air, "pen": pen, "chime": chime, "clink": clink, "chop": chop}
-GAINS = {"footsteps": 0.35, "door": 0.55, "clunk": 0.8, "flip": 0.6, "place": 0.55, "paper": 0.3, "air": 0.35,
-         "pen": 0.3, "chime": 0.4, "clink": 0.18, "chop": 0.22, "hum": 0.035, "roomtone": 0.06, "music": 0.11}
+GAINS = {"footsteps": 0.16, "door": 0.26, "clunk": 0.4, "flip": 0.28, "place": 0.24, "paper": 0.12, "air": 0.16,
+         "pen": 0.12, "chime": 0.2, "clink": 0.08, "chop": 0.1, "hum": 0.02, "roomtone": 0.035, "music": 0.2}

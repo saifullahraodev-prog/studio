@@ -88,12 +88,26 @@ All sounds are made in code (`audio/howwe_sfx.py`, no downloads, no licences). T
 - chop (period kitchen);
 - room tone.
 
-**Music bed:** light and curious, 92 bpm, D–Bm–G–A. Marimba arpeggio, pizzicato bass and a soft pad, kept *under* the effects. It "hushes" (melody and bass out, pad halved) while the reveal lights are down.
+**Music bed** (`music(duration, hush, style)`), always *under* the voice:
+- **A · `piano`** (default): "Gallery piano". Felt piano and warm strings, 72 bpm, Dm–B♭–F–C. Calm, curious, premium.
+- **B · `pizz`**: "Quiet curiosity". Sparse pizzicato, celesta and a soft pad, 84 bpm, F–Dm–B♭–C.
+- `marimba`: the v0 bed, kept for reference. The owner said it was the wrong mood.
 
-**Auto mix:** `python -I tools/howwe_mix.py <scenes.json> <slug> [--voice voice.wav]`.
+The music "hushes" (melody and bass out, pad softened) while the reveal lights are down.
+
+**Levels** (v2, after owner feedback that v1 was too loud):
+- Effects peak about 8 dB under the voice.
+- Music sits about 20 dB under the voice while it speaks, and about 15 dB under in the gaps.
+
+**Placeholder narration:**
+- `python -I tools/howwe_voice.py <scenes.json> <slug>` speaks each scene's `say` line with the Piper Ryan voice (already in the studio).
+- Each line starts 6 frames after the scene's transition. The tool warns when a line is longer than its scene.
+- Output: `public/howwe/<slug>/voice.wav`. It's a placeholder only; the real narration replaces it.
+
+**Auto mix:** `python -I tools/howwe_mix.py <scenes.json> <slug> [--voice voice.wav] [--music piano|pizz] [--out name.wav]`.
 - It places every cue from the scene list using the same timings as the animation. Keep `TIMING` in both files in sync.
 - It ducks the music under the voice.
-- Two-pass loudness to −14 LUFS, true peak −1.5 dB. With no voice, the peak limit leaves it around −15.
+- Two-pass loudness to −14 LUFS, true peak −1.5 dB. With voice it lands around −15, because the peak limit holds it back.
 - Output: `public/howwe/<slug>/mix.wav` (git-ignored, rebuild any time) and `cues.json`, the list of every cue for review.
 - Hook the mix into the video with the `audio: "howwe/<slug>/mix.wav"` prop on `HowVideo`.
 

@@ -30,7 +30,12 @@
   all synthesised), `tools/howwe_mix.py` (auto cues from the scene list, music hush on reveal, voice ducking, two-pass
   loudness). Demo: 44 cues, -15.4 LUFS / -1.4 dBTP (no voice). Listen: `out/howwe/kit-demo-720p-sound.mp4` (sound laid
   on the existing render) + `out/howwe/sound-sampler.wav` (each sound once; labels in sound-sampler.txt).
-  HowVideo has an `audio` prop. WAITING: owner listens and gives feedback.
+  HowVideo has an `audio` prop.
+- 2026-11-15 owner feedback on sound: "too loud, wrong mood, can be better, add some dummy audio". Done (v2):
+  all SFX gains roughly halved; new music A "Gallery piano" (72 bpm Dm Bb F C) + B "Quiet curiosity" (pizz, 84 bpm);
+  placeholder narration `tools/howwe_voice.py` (Piper Ryan) from each scene's `say`; music ducks under voice (~20 dB below).
+  Previews: `out/howwe/kit-demo-720p-voice-music-{piano,pizz}.mp4`, sampler `out/howwe/sound-sampler-v2.wav` (+ .txt).
+  Mixes -15.1 / -15.2 LUFS, -1.2 dBTP. WAITING: owner picks music A or B + any further sound notes.
 - NEXT (was): asset kits (map: done; reference-based costumes; object library;
   scene templates; motion + transitions), then video 1 script "Why Half the World Doesn't Use Forks".
 

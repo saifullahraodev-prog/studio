@@ -1,6 +1,6 @@
 """How We Ended Up · auto sound mix from a scene list.
 
-Usage (from studio/):  python -I tools/howwe_mix.py <scenes.json> <slug> [--voice path.wav]
+Usage (from studio/):  python -I tools/howwe_mix.py <scenes.json> <slug> [--voice path.wav] [--music piano|pizz] [--out name.wav]
 Writes public/howwe/<slug>/mix.wav (-14 LUFS, true peak -1.5 dB) + public/howwe/<slug>/cues.json (every cue, for review).
 
 Cue rules follow the animation timings in engine/howwe/motion.tsx (TIMING) and templates.tsx. Keep them in sync.
@@ -124,11 +124,13 @@ def main():
     args = sys.argv[1:]
     scenes_file, slug = args[0], args[1]
     voice_path = args[args.index("--voice") + 1] if "--voice" in args else None
+    style = args[args.index("--music") + 1] if "--music" in args else "piano"
+    out_name = args[args.index("--out") + 1] if "--out" in args else "mix.wav"
     scenes = json.loads((ROOT / scenes_file).read_text(encoding="utf-8"))["scenes"]
     ev, hush, hums, dur = cues(scenes)
     n = int(dur * SR)
     sfx = render(ev, hums, dur)
-    mus = hx.music(dur, hush=hush) * hx.GAINS["music"]
+    mus = hx.music(dur, hush=hush, style=style) * hx.GAINS["music"]
     tone = hx.roomtone(dur) * hx.GAINS["roomtone"]
     if voice_path:
         voice = read_wav(ROOT / voice_path)
@@ -136,7 +138,7 @@ def main():
         # duck music under speech (smoothed envelope)
         env = np.abs(voice)
         env = np.convolve(env, np.ones(int(0.25 * SR)) / int(0.25 * SR), mode="same")
-        duck = 1 - 0.6 * np.clip(env / (np.max(env) * 0.25 or 1), 0, 1)
+        duck = 1 - 0.5 * np.clip(env / (np.max(env) * 0.25 or 1), 0, 1)
         mus = mus * duck
     else:
         voice = np.zeros(n)
@@ -154,10 +156,10 @@ def main():
     j = json.loads(m[m.rindex("{"): m.rindex("}") + 1])
     ln = ("loudnorm=I=-14:TP=-1.5:LRA=11:linear=true:"
           f"measured_I={j['input_i']}:measured_TP={j['input_tp']}:measured_LRA={j['input_lra']}:measured_thresh={j['input_thresh']}:offset={j['target_offset']}")
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(tmp), "-af", ln, "-ar", str(SR), str(pub / "mix.wav")], check=True)
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(tmp), "-af", ln, "-ar", str(SR), str(pub / out_name)], check=True)
     tmp.unlink()
     (pub / "cues.json").write_text(json.dumps({"duration": dur, "hush": hush, "cues": [[round(e[0], 2), e[1], e[3]] for e in sorted(ev)]}, indent=1), encoding="utf-8")
-    print(f"{len(ev)} cues, {dur:.1f} s -> public/howwe/{slug}/mix.wav")
+    print(f"{len(ev)} cues, {dur:.1f} s, music={style} -> public/howwe/{slug}/{out_name}")
 
 
 if __name__ == "__main__":

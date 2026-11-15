@@ -29,3 +29,5 @@ public/howwe/naturalearth/
 docs/howwe/**/_frames/
 public/howwe/*/mix.wav
 public/howwe/*/_premix.wav
+public/howwe/*/mix-*.wav
+public/howwe/*/voice.wav
