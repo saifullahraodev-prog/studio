@@ -52,7 +52,11 @@
   visuals (exhibits/map fills/camera visits/split/flip/reveal/marks), word-by-word captions, *emphasis* keyword pops +
   camera punch + tick, re-hook chip; `tools/howwe_pacing.py` checks R1-R5. Demo v2 (`engine/howwe/demo2-script.json`,
   hook-first): 36.3 s, 34 visual changes, longest gap 3.7 s, first pop 2.2 s -> all PASS (v1 failed R2 at 5.3 s).
-  Composition `HowVideoBuilt` {slug}. Storyboard `docs/howwe/retention-v2/`. WAITING: owner OK to render a 720p preview.
+  Composition `HowVideoBuilt` {slug}. Storyboard `docs/howwe/retention-v2/`.
+- 2026-11-15: owner OK'd render. `out/howwe/demo2-720p.mp4` (36.3 s, 1089 frames) in 114 s = ~3.1 s per second of video
+  (overlays cost ~20% vs 2.6); QC: no black/frozen frames, -14.8 LUFS. Sheet `out/howwe/demo2-sheet.png`.
+  Known small issues: map legend touches the caption bar after the final pull-back; exhibit label cards get clipped at the
+  frame edge while the camera visits an exhibit. WAITING: owner feedback on pacing.
 - NEXT (was): asset kits (map: done; reference-based costumes; object library;
   scene templates; motion + transitions), then video 1 script "Why Half the World Doesn't Use Forks".
 
