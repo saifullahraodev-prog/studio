@@ -513,3 +513,18 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   detailed HD ships). Upload kit: 3 thumbnails (`thumbnails/`, compositions ShipGuyThumb v=cost1..3 in
   `engine/shipguy/ThumbCost.tsx`), `ship-cost.en.srt` (113 cues), `youtube-upload.txt` (title, description, 11 chapters,
   price list, sources, tags).
+
+## 2026-11-13: second channel research, "BACKWARDS" (where things really come from)
+- Owner picked the Backwards idea for a second channel; research only: `docs/channel-backwards-research.md`
+  (competition, format rules, sourced topic bank, risks). Finding: topic proven (TED-Ed t-shirt 3.5M) but flooded by
+  new low-view faceless channels; backwards + "twist stop" format unused. Suggested test: Apple + Fish Shorts.
+- 2026-11-14: style bible draft `docs/backwards-style-bible.md`; owner picked look **A "Cardboard world"**.
+  First stills built in code: `engine/backwards/{art,parcel,lab}.tsx` (kraft paper, tape, worn stamps, labels, cut-paper
+  factory, lights/baubles; host "Parcel" with 7 poses + stamp progression), composition `BackLab` (view=sheet|frame|thumb).
+  Review sheet `docs/backwards/backwards-look-A.png`. GATE: owner to approve look + host + thumbnail, choose channel name.
+
+## 2026-11-16: The Ship Guy long-form #5 "The Tiny Mistake That Brought Down a Bridge" (Dali / Key Bridge, script draft v1)
+- Owner picked The Ship Guy + Dali vs Baltimore Key Bridge. `videos/2026-11-16-dali-bridge/script.md` (8 sections, sources,
+  9 fact notes) + `narration.txt` (spoken words only). Hook built on the Seawise retention lesson: story + twist (a plastic
+  label) with the story starting by ~0:35, no spec-sheet. Serious tone in the collapse sections (6 deaths, no gags).
+- GATE: waiting for owner approval of script v1.
