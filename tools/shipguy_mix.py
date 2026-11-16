@@ -30,7 +30,56 @@ def write_wav(p: Path, x: np.ndarray):
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes(y.tobytes())
 
 
-def main(slug: str):
+TRACKS_DIR = ROOT / "audio" / "library" / "howwe"  # YouTube Audio Library tracks (licence in audio/LICENSES.md)
+TRACK_SETS = {
+    # owner 2026-11-16: "the music is too loud and annoying" -> real, calm tracks instead of the code-made bed
+    "calm": {"tense": "sparse-Laniakea - The Grey Room, Density & Time.mp3", "main": "curious-Behold The Mystery - Asher Fulero.mp3",
+             "quiet": "soft-Snowfall - Asher Fulero.mp3", "hopeful": "soft-Fascination - Gregory Allison.mp3"},
+}
+MOOD_TO_TRACK = {"tense": "tense", "investigate": "main", "light": "main", "ragtime": "main", "somber": "quiet", "quiet": "quiet", "hopeful": "hopeful"}
+
+
+def track_bed(path: Path, n: int) -> np.ndarray:
+    """a music file looped (2 s crossfade) or trimmed to n samples, levelled by RMS."""
+    x = read_wav(path)
+    xf = 2 * SR
+    y = x[:n].copy()
+    while len(y) < n:
+        r = np.linspace(0, 1, xf, dtype=np.float32)
+        y[-xf:] = y[-xf:] * (1 - r) + x[:xf] * r
+        y = np.concatenate([y, x[xf:]])[:n]
+    rms = float(np.sqrt(np.mean(y.astype(np.float64) ** 2))) or 1.0
+    return y * (0.16 / rms)
+
+
+def real_music(segs, dur: float, voice: np.ndarray, set_name: str) -> np.ndarray:
+    n = int(dur * SR)
+    files = TRACK_SETS[set_name]
+    beds = {k: track_bed(TRACKS_DIR / f, n) for k, f in files.items()}
+    w = {k: np.zeros(n, dtype=np.float32) for k in beds}
+    level = np.zeros(n, dtype=np.float32)
+    for s0, s1, m in segs:
+        k = MOOD_TO_TRACK.get(m, "main")
+        a, b = int(s0 * SR), int(s1 * SR)
+        w[k][a:b] = 1.0
+        level[a:b] = 0.45 if m == "quiet" else 1.0  # the serious part: soft track, even lower
+    k = int(1.5 * SR)
+
+    def smooth(x: np.ndarray, kk: int = k) -> np.ndarray:  # centred moving average via cumulative sum (fast)
+        c = np.cumsum(np.concatenate([np.zeros(1), x.astype(np.float64)]))
+        i = np.arange(len(x)); lo = np.clip(i - kk // 2, 0, len(x)); hi = np.clip(i + kk // 2, 0, len(x))
+        return ((c[hi] - c[lo]) / np.maximum(1, hi - lo)).astype(np.float32)
+    out = sum(beds[m] * smooth(w[m]) for m in beds) * smooth(level)
+    # duck under the voice (about -6 dB while speaking)
+    env = smooth(np.abs(voice), int(0.25 * SR))
+    duck = 1 - 0.5 * np.clip(env / ((np.max(env) * 0.2) or 1), 0, 1)
+    out = out * duck
+    f = int(1.0 * SR)
+    out[:f] *= np.linspace(0, 1, f); out[-2 * f:] *= np.linspace(1, 0, 2 * f)
+    return out.astype(np.float32)
+
+
+def main(slug: str, tracks: str = ""):
     pub = ROOT / "public" / "shipguy" / slug
     tl = json.loads((pub / "timeline.json").read_text(encoding="utf-8"))
     fps = tl["fps"]
@@ -49,6 +98,7 @@ def main(slug: str):
         else:
             segs.append((s0, s1, mood))
     # "quiet" (video #5, the serious part): the light theme, played very low
+    segs_raw = list(segs)
     quiet = [(s0, s1) for s0, s1, m in segs if m == "quiet"]
     segs = [(s0, s1, "light" if m == "quiet" else m) for s0, s1, m in segs]
     music = sfx.music_bed(segs, dur)
@@ -168,7 +218,11 @@ def main(slug: str):
     fx = sfx.render_events(ev, dur)[:n]
     fx = np.pad(fx, (0, max(0, n - len(fx))))
 
-    mix = voice * 1.0 + music * 0.16 + fx * 0.35
+    if tracks:
+        music = real_music(segs_raw, dur, voice, tracks)
+        mix = voice * 1.0 + music * 0.075 + fx * 0.3   # real tracks, well under the voice
+    else:
+        mix = voice * 1.0 + music * 0.16 + fx * 0.35
     tmp = pub / "mix-raw.wav"
     write_wav(tmp, mix / max(1.0, np.abs(mix).max()))
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(tmp), "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-ar", str(SR), str(pub / "mix.wav")], check=True)
@@ -177,4 +231,5 @@ def main(slug: str):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    a = sys.argv[1:]
+    main(a[0], a[a.index("--tracks") + 1] if "--tracks" in a else "")

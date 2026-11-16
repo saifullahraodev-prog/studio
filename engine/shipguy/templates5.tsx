@@ -117,6 +117,50 @@ export const KeyBridge: React.FC<BridgeState> = ({ k = 0, gone, crew, police, li
   );
 };
 
+// ------------------------------------------------------------------ a piece of bridge truss (chords + diagonals) along a polyline
+export const TrussPiece: React.FC<{ pts: [number, number][]; h?: number; color?: string; w?: number }> = ({ pts, h = 60, color = "#5a6470", w = 12 }) => {
+  const bot = pts, top = pts.map(([x, y], i) => {
+    const [x2, y2] = pts[Math.min(i + 1, pts.length - 1)], [x1, y1] = pts[Math.max(i - 1, 0)];
+    const dx = x2 - x1, dy = y2 - y1, L = Math.hypot(dx, dy) || 1;
+    return [x + (dy / L) * h, y - (dx / L) * h] as [number, number];
+  });
+  const line = (p: [number, number][]) => p.map((q, i) => `${i ? "L" : "M"}${q[0]} ${q[1]}`).join(" ");
+  return (
+    <g>
+      <path d={line(top)} stroke={INK} strokeWidth={w + 6} fill="none" strokeLinejoin="round" />
+      <path d={line(bot)} stroke={INK} strokeWidth={w + 6} fill="none" strokeLinejoin="round" />
+      {bot.slice(0, -1).map((q, i) => <path key={i} d={`M${q[0]} ${q[1]} L ${top[i + 1][0]} ${top[i + 1][1]} M${top[i][0]} ${top[i][1]} L ${q[0]} ${q[1]}`} stroke={color} strokeWidth={w * 0.7} />)}
+      <path d={line(top)} stroke={color} strokeWidth={w} fill="none" strokeLinejoin="round" />
+      <path d={line(bot)} stroke={color} strokeWidth={w} fill="none" strokeLinejoin="round" />
+    </g>
+  );
+};
+// the bridge deck close-up at night: road surface, lamps, the work truck, cones and the six road workers
+export const DeckCrew: React.FC<{ t: number; fade?: number; warn?: boolean }> = ({ t, fade = 0, warn }) => (
+  <g>
+    <NightSky t={t} />
+    <rect x={0} y={760} width={W} height={320} fill="#2a2f37" />
+    <rect x={0} y={740} width={W} height={24} fill="#5a6470" stroke={INK} strokeWidth={4} />
+    {Array.from({ length: 8 }).map((_, i) => <rect key={i} x={i * 260 + 40} y={900} width={130} height={12} fill="#e8e1c8" />)}
+    {[160, 960, 1760].map((x) => <g key={x}><line x1={x} y1={740} x2={x} y2={420} stroke="#5a6470" strokeWidth={10} /><path d={`M${x} 420 h 60`} stroke="#5a6470" strokeWidth={8} /><circle cx={x + 60} cy={430} r={14} fill={LAMP} /><path d={`M${x + 60} 440 L ${x - 60} 760 L ${x + 180} 760 Z`} fill={LAMP} opacity={0.08} /></g>)}
+    <g transform="translate(1420 880)">
+      <rect x={-150} y={-120} width={240} height={110} rx={10} fill="#e0a23b" stroke={INK} strokeWidth={5} />
+      <rect x={90} y={-150} width={110} height={140} rx={12} fill="#e0a23b" stroke={INK} strokeWidth={5} />
+      <rect x={110} y={-136} width={70} height={50} rx={6} fill="#9fd0e6" stroke={INK} strokeWidth={4} />
+      <circle cx={-90} cy={-6} r={26} fill={INK} /><circle cx={140} cy={-6} r={26} fill={INK} />
+      <rect x={-120} y={-160} width={60} height={40} rx={6} fill={Math.floor(t / 8) % 2 ? "#ffb347" : "#7a5a20"} stroke={INK} strokeWidth={4} />
+    </g>
+    {[240, 1060, 1820].map((x) => <path key={x} d={`M${x} 930 l 24 -70 l 24 70 Z`} fill="#f27c1e" stroke={INK} strokeWidth={4} />)}
+    {[0, 1, 2, 3, 4, 5].map((i) => (
+      <g key={i} opacity={clamp01(1 - fade * 1.6 + i * 0.12)}>
+        <Guy x={360 + i * 150 + (i > 3 ? 120 : 0)} y={930} s={0.42} t={t + i * 13} id={`rw${i}`} outfit="road"
+          pose={breathe({ ...IDLE, lean: i % 3 === 0 ? 14 : 0, armL: [i % 2 ? 40 : 20, 20], armR: [i % 2 ? 20 : 40, 20] }, t, i * 7)}
+          face={warn ? FACES.talk : FACES.happy} prop={i === 1 || i === 4 ? "spade" : "none"} />
+      </g>
+    ))}
+  </g>
+);
+
 // ------------------------------------------------------------------ the Dali (side): BoxShipHD named DALI, with night lights
 export const DaliSide: React.FC<{ x: number; y: number; w: number; lightsOn?: boolean; dark?: boolean }> = ({ x, y, w, lightsOn = true, dark }) => (
   <g transform={`translate(${x} ${y})`}>
@@ -139,13 +183,21 @@ const NightT: Tpl = ({ t, d, p }) => {
   const offAt = st === "dark" ? Math.min(14, d * 0.4) : 9999;
   const lightsOn = st === "flicker" ? Math.floor(t / 5) % 3 !== 0 : t < offAt;
   const sw = close ? 1500 : 760;
-  const sx = close ? -300 + t * 0.6 : 140 + t * 1.0;
+  const sx = close ? -300 + t * 0.6 : st === "port" ? 700 + t * 1.6 : 140 + t * 1.0;
   const wy = 760;
   return (
     <AbsoluteFill>
       <Svg>
         <NightSky t={t} dawn={dawn} />
-        {!close && <KeyBridge t={t} night={!dawn} gone={st === "dawn"} lights={st !== "dawn"} />}
+        {!close && st !== "port" && <KeyBridge t={t} night={!dawn} gone={st === "dawn"} lights={st !== "dawn"} />}
+        {st === "port" && (
+          <g>
+            <rect x={0} y={700} width={760} height={60} fill="#3a3f47" stroke={INK} strokeWidth={4} />
+            {[120, 380, 620].map((x, i) => <g key={x}><path d={`M${x} 700 V 330 M${x + 50} 700 V 330 M${x - 40} 330 H ${x + 320}`} stroke="#c94a3a" strokeWidth={14} /><circle cx={x + 300} cy={330} r={8} fill={LAMP} /></g>)}
+            {Array.from({ length: 16 }).map((_, i) => <rect key={i} x={40 + (i % 8) * 80} y={620 - Math.floor(i / 8) * 40} width={74} height={36} fill={BOX[i % BOX.length]} stroke={INK} strokeWidth={2} opacity={0.75} />)}
+            <T3 x={380} y={290} size={40} color={LAMP}>PORT OF BALTIMORE</T3>
+          </g>
+        )}
         <Shore y={wy} night={!dawn} />
         <River t={t} y={wy} night={!dawn} dawn={dawn} />
         {st !== "dawn" && <DaliSide x={sx} y={wy + 14} w={sw} lightsOn={lightsOn} dark={!lightsOn} />}
@@ -173,7 +225,7 @@ const TrussT: Tpl = ({ t, d, p }) => {
     <AbsoluteFill>
       <Svg>
         {night ? <NightSky t={t} /> : <rect width={W} height={H} fill={diagram ? "#eef3f6" : "#bfe0f2"} />}
-        {m === "new" ? (
+        {m === "crew" || m === "crew2" ? <DeckCrew t={t} warn={m === "crew2"} /> : m === "new" ? (
           <g>
             <rect y={760} width={W} height={320} fill={WATER} />
             {/* new bridge: longer main span, cable-stayed look, big rock islands */}
@@ -315,8 +367,7 @@ const DaliT: Tpl = ({ t, d, p, w }) => {
     }
     case "draped": body = <g>{day}<KeyBridge t={t} night={false} lights={false} gone /><River t={t} y={760} night={false} />
       <DaliSide x={-200} y={790} w={1300} lightsOn={false} />
-      <path d="M840 470 L 900 380 L 1000 330 L 1120 360 L 1200 520 L 1180 640 L 1100 620 L 1060 480 L 940 470 L 880 560 Z" fill="none" stroke="#5a6470" strokeWidth={16} strokeLinejoin="round" />
-      <path d="M860 520 L 1150 400 M900 600 L 1120 470" stroke="#5a6470" strokeWidth={10} /></g>; break;
+      <TrussPiece pts={[[700, 640], [860, 560], [1000, 520], [1120, 560], [1220, 700], [1300, 820]]} h={70} /></g>; break;
     case "drydock": body = <g><rect width={W} height={H} fill="#cfd8de" /><DaliSide x={160} y={760} w={1500} lightsOn={false} /><rect y={790} width={W} height={290} fill="#9aa4ad" stroke={INK} strokeWidth={6} />
       {Array.from({ length: 10 }).map((_, i) => <circle key={i} cx={1600 + Math.sin(t * 0.7 + i) * 24} cy={640 - ((t * 3 + i * 16) % 90)} r={6} fill={YEL} />)}
       <T3 x={1500} y={300} size={60} color={YEL} o={ramp(t, 6, 14)}>NEW BOW</T3></g>; break;
@@ -344,7 +395,7 @@ const WheelT: Tpl = ({ t, d, p, w }) => {
       <Svg>
         {dayDeck ? (
           <g><rect width={W} height={H} fill="#bfe0f2" /><River t={t} y={720} night={false} /><DaliSide x={-400} y={760} w={2600} lightsOn={false} />
-            {[0, 1, 2, 3, 4].map((i) => <Guy key={i} x={300 + i * 160} y={560} s={0.3} t={t + i * 11} id={`cw5${i}`} pose={breathe(IDLE, t, i * 7)} face={i % 2 ? FACES.worried : FACES.thinking} />)}</g>
+            {[0, 1, 2, 3, 4].map((i) => <Guy key={i} x={300 + i * 160} y={560} s={0.3} t={t + i * 11} id={`cw5${i}`} pose={breathe(IDLE, t, i * 7)} face={i % 2 ? FACES.worried : FACES.thinking} outfit={i % 2 ? "coverall" : "officer"} />)}</g>
         ) : (
           <g>
             <rect x={60} y={150} width={1800} height={420} fill={NIGHT1} stroke={INK} strokeWidth={8} />
@@ -360,7 +411,7 @@ const WheelT: Tpl = ({ t, d, p, w }) => {
                 over={a === "pilots" && i < 2 && t < 36 + i * 6 ? { pose: walk(IDLE, t), feet: "fwd" } : a === "orders" || a === "orders2" ? { pose: breathe({ ...POSES.point, armR: [80 + Math.sin(t * 0.3) * 10, 0] }, t), handR: "point", face: { eyes: "dot", brows: "angry", mouth: "o" }, talk: Math.max(0, Math.sin(t * 0.7)) } : dark ? { face: FACES.worried } : undefined} />
             ))}
             <Actor a={guyAct} t={t} x={a === "crew" ? 960 : 330} y={830} s={0.62} id="wh-sg" w={a === "crew" ? undefined : w} over={a === "crew" ? { prop: "mug", pose: breathe(POSES.hold, t), face: FACES.satisfied } : undefined} />
-            {a === "crew" && [0, 1, 2, 3].map((i) => <Guy key={i} x={300 + i * 420 + (i > 1 ? 400 : 0)} y={830} s={0.5} t={t + i * 9} id={`c5${i}`} pose={breathe(IDLE, t, i * 5)} face={FACES.happy} />)}
+            {a === "crew" && [0, 1, 2, 3].map((i) => <Guy key={i} x={260 + i * 240 + (i > 1 ? 620 : 0)} y={830} s={0.5} t={t + i * 9} id={`c5${i}`} pose={breathe(IDLE, t, i * 5)} face={FACES.happy} outfit="officer" />)}
             {a === "brake" && <g transform="translate(330 860)"><rect x={-40} y={-10} width={80} height={24} rx={6} fill="#555" stroke={INK} strokeWidth={4} /><T3 x={0} y={-160} size={44} color={YEL}>BRAKE?</T3></g>}
           </g>
         )}

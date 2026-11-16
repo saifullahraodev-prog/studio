@@ -6,7 +6,7 @@ import { FACES, Guy, IDLE, breathe } from "./guy";
 import { fontFamily, ramp, Svg } from "./scenes";
 import type { Tpl } from "./templates";
 import { Actor, BOX, T3, WATER, clamp01, pop } from "./templates3";
-import { DaliSide, DaliTop, KeyBridge, LAMP, NIGHT1, NightSky, NWATER, RED, River, YEL, rnd } from "./templates5";
+import { DaliSide, DaliTop, DeckCrew, KeyBridge, LAMP, NIGHT1, NightSky, NWATER, RED, River, TrussPiece, YEL, rnd } from "./templates5";
 
 const NAVY = "#1f3a5f", PAPER5 = "#f3f1ea";
 const Num: React.FC<{ x: number; y: number; size: number; children: React.ReactNode; color?: string; anchor?: "start" | "middle" | "end" }> = ({ x, y, size, children, color = INK, anchor = "middle" }) => (
@@ -100,12 +100,17 @@ const WireT: Tpl = ({ t, d, p, w }) => {
         <Svg>
           <Actor a={st === "hero2" ? "sad" : "pinch"} t={t} x={720} y={1060} s={1.1} w={w} id="hero" over={st === "hero2" ? { prop: "label", pose: breathe({ ...IDLE, armR: [70, 95], tilt: 8 }, t) } : undefined} />
           <g transform={`translate(1380 480) scale(${pop(t, 8)})`}>
-            <circle r={260} fill="#fff" stroke={INK} strokeWidth={10} />
-            <circle r={260} fill="none" stroke={YEL} strokeWidth={8} strokeDasharray="20 14" />
-            <rect x={-150} y={-24} width={300} height={48} rx={18} fill={RED} stroke={INK} strokeWidth={6} />
-            <rect x={-60} y={-46} width={110} height={92} rx={14} fill="#fbfaf4" stroke={INK} strokeWidth={6} />
-            <Num x={-5} y={14} size={40}>381</Num>
-            {st === "hero2" && <T3 x={0} y={210} size={44} color={RED}>+ manual switch + wrong pump</T3>}
+            <circle r={270} fill="#fff" stroke={INK} strokeWidth={10} />
+            <circle r={270} fill="none" stroke={YEL} strokeWidth={8} strokeDasharray="20 14" />
+            {/* a wire coming in from the left, its copper tip, and the little white label sleeve */}
+            <rect x={-260} y={-22} width={300} height={44} rx={20} fill={RED} stroke={INK} strokeWidth={6} />
+            <rect x={36} y={-12} width={70} height={24} rx={6} fill="#c99b4a" stroke={INK} strokeWidth={5} />
+            <rect x={-30} y={-36} width={62} height={72} rx={10} fill="#fbfaf4" stroke={INK} strokeWidth={6} />
+            <Num x={1} y={10} size={26}>381</Num>
+            {/* a fingertip for size */}
+            <path d="M-170 270 L -170 120 Q -170 60 -110 60 Q -50 60 -50 120 L -50 270 Z" fill="#f2c9a0" stroke={INK} strokeWidth={6} />
+            <path d="M-150 90 Q -110 70 -70 90 L -72 120 Q -110 104 -148 120 Z" fill="#fbe7d6" stroke={INK} strokeWidth={4} />
+            {st === "hero2" && <T3 x={0} y={340} size={46} color={RED}>+ manual switch + wrong pump</T3>}
           </g>
         </Svg>
       </AbsoluteFill>
@@ -270,13 +275,20 @@ const UnderT: Tpl = ({ t, p }) => {
       {Array.from({ length: 8 }).map((_, i) => <rect key={i} x={-200 + i * 300} y={300 + (i % 3) * 120} width={600} height={28} fill="#2a3442" stroke="#0a0f18" strokeWidth={4} transform={`rotate(${(rnd(i) - 0.5) * 50} ${100 + i * 300} ${400})`} opacity={st === "night" ? 0.5 : 0.9} />)}
       {st === "wall" && Array.from({ length: 14 }).map((_, i) => <path key={i} d={`M${1100 + rnd(i) * 500} ${200 + rnd(i + 3) * 700} l ${120 - rnd(i + 5) * 240} ${120 - rnd(i + 8) * 240}`} stroke="#3a4656" strokeWidth={26} strokeLinecap="round" />)}
       {[0, 1].map((i) => {
-        const x = 500 + i * 400 + Math.sin(t * 0.03 + i) * 60, y = 500 + i * 120;
+        const x = 520 + i * 760 + Math.sin(t * 0.03 + i) * 60, y = 460 + i * 220;
         return (
-          <g key={i} opacity={st === "steel" && i === 1 ? 0 : 1}>
-            <path d={`M${x} ${y} L ${x + 700} ${y - 260} L ${x + 700} ${y + 260} Z`} fill="#fff6c9" opacity={0.08} />
-            <ellipse cx={x - 40} cy={y} rx={60} ry={22} fill="#141c28" stroke="#0a0f18" strokeWidth={3} />
-            <circle cx={x + 18} cy={y - 4} r={16} fill="#1e2a3a" stroke="#0a0f18" strokeWidth={3} />
-            <circle cx={x + 30} cy={y - 6} r={6} fill="#fff6c9" />
+          <g key={i} opacity={st === "steel" && i === 1 ? 0 : 1} transform={`translate(${x} ${y}) scale(2) translate(${-x} ${-y})`}>
+            <path d={`M${x + 60} ${y} L ${x + 760} ${y - 280} L ${x + 760} ${y + 280} Z`} fill="#fff6c9" opacity={0.1} />
+            {/* a diver swimming right: wetsuit body, yellow air tank, mask, fins, torch */}
+            <rect x={x - 70} y={y - 34} width={70} height={24} rx={12} fill="#e0b13a" stroke="#0a0f18" strokeWidth={3} />
+            <ellipse cx={x - 30} cy={y} rx={70} ry={22} fill="#1b2533" stroke="#0a0f18" strokeWidth={4} />
+            <path d={`M${x - 96} ${y - 6} L ${x - 170} ${y - 26 + Math.sin(t * 0.3 + i) * 10} M${x - 96} ${y + 8} L ${x - 172} ${y + 18 + Math.sin(t * 0.3 + i + 1) * 10}`} stroke="#1b2533" strokeWidth={12} strokeLinecap="round" />
+            <path d={`M${x - 170} ${y - 26 + Math.sin(t * 0.3 + i) * 10} l -40 -14 l 6 26 Z M${x - 172} ${y + 18 + Math.sin(t * 0.3 + i + 1) * 10} l -40 -10 l 8 26 Z`} fill="#2f5f9a" />
+            <circle cx={x + 50} cy={y - 6} r={20} fill="#1b2533" stroke="#0a0f18" strokeWidth={4} />
+            <rect x={x + 52} y={y - 16} width={20} height={16} rx={5} fill="#9fd8f3" stroke="#0a0f18" strokeWidth={3} />
+            <line x1={x + 10} y1={y + 12} x2={x + 60} y2={y + 4} stroke="#1b2533" strokeWidth={10} strokeLinecap="round" />
+            <rect x={x + 56} y={y - 2} width={22} height={12} rx={4} fill="#888" />
+            <circle cx={x + 80} cy={y + 4} r={7} fill="#fff6c9" />
           </g>
         );
       })}
@@ -289,18 +301,33 @@ const UnderT: Tpl = ({ t, p }) => {
 const MemorialT: Tpl = ({ t, d, p }) => {
   const k = p.kind ?? "sign";
   if (k === "hats") return (
-    <AbsoluteFill style={{ background: "#141b26" }}><Svg>
-      {Array.from({ length: 6 }).map((_, i) => (
-        <g key={i} transform={`translate(${460 + i * 200} 640)`} opacity={ramp(t, i * 6, i * 6 + 14)}>
-          <path d="M-70 0 C -72 -70, 72 -70, 74 0 Z" fill="#f27c1e" stroke={INK} strokeWidth={6} />
-          <ellipse cx={2} cy={2} rx={92} ry={14} fill="#f27c1e" stroke={INK} strokeWidth={6} />
-        </g>
-      ))}
+    <AbsoluteFill><Svg>
+      <NightSky t={t} />
+      <KeyBridge t={t} gone lights={false} />
+      <River t={t} y={640} />
+      <rect x={0} y={780} width={W} height={300} fill="#2a2f37" />
+      <rect x={0} y={770} width={W} height={20} fill="#5a6470" />
+      {Array.from({ length: 6 }).map((_, i) => {
+        const x = 230 + i * 270, on = ramp(t, i * 5, i * 5 + 10);
+        const fl = 1 + Math.sin(t * 0.6 + i * 1.7) * 0.12;
+        return (
+          <g key={i} opacity={on}>
+            {/* a road worker's yellow hard hat */}
+            <path d={`M${x - 70} 880 C ${x - 72} 800, ${x + 72} 800, ${x + 74} 880 Z`} fill="#ffd23f" stroke={INK} strokeWidth={6} />
+            <ellipse cx={x + 2} cy={882} rx={94} ry={14} fill="#ffd23f" stroke={INK} strokeWidth={6} />
+            {/* a candle in front */}
+            <circle cx={x + 110} cy={840} r={90} fill={LAMP} opacity={0.16} />
+            <rect x={x + 92} y={830} width={36} height={110} rx={6} fill="#fbfaf4" stroke={INK} strokeWidth={5} />
+            <line x1={x + 110} y1={830} x2={x + 110} y2={816} stroke={INK} strokeWidth={4} />
+            <path d={`M${x + 110} ${816 - 46 * fl} Q ${x + 128} ${806} ${x + 110} ${818} Q ${x + 92} ${806} ${x + 110} ${816 - 46 * fl} Z`} fill="#ffb347" stroke="#e8352b" strokeWidth={3} />
+          </g>
+        );
+      })}
     </Svg></AbsoluteFill>
   );
   if (k === "calendar" || k === "crewcal") return (
     <AbsoluteFill style={{ background: k === "crewcal" ? "#bfe0f2" : "#1b2433" }}><Svg>
-      {k === "crewcal" && <g><River t={t} y={720} night={false} /><DaliSide x={-500} y={760} w={2400} lightsOn={false} />{[0, 1, 2].map((i) => <Guy key={i} x={260 + i * 150} y={500} s={0.3} t={t + i * 9} id={`cc${i}`} pose={breathe(IDLE, t, i * 4)} face={FACES.worried} />)}</g>}
+      {k === "crewcal" && <g><River t={t} y={720} night={false} /><DaliSide x={-500} y={760} w={2400} lightsOn={false} />{[0, 1, 2].map((i) => <Guy key={i} x={260 + i * 150} y={500} s={0.3} t={t + i * 9} id={`cc${i}`} pose={breathe(IDLE, t, i * 4)} face={FACES.worried} outfit={i === 1 ? "coverall" : "officer"} />)}</g>}
       <g transform="translate(1400 420)">
         <rect x={-180} y={-150} width={360} height={300} rx={16} fill="#fbfaf4" stroke={INK} strokeWidth={8} />
         <rect x={-180} y={-150} width={360} height={70} rx={16} fill={k === "crewcal" ? RED : "#5a6470"} stroke={INK} strokeWidth={8} />
@@ -335,7 +362,8 @@ const MemorialT: Tpl = ({ t, d, p }) => {
       <circle cx={960} cy={300} r={260} fill={LAMP} opacity={0.08} />
     </Svg></AbsoluteFill>
   );
-  // sign: road-work sign + hard hat (quiet)
+  if (k === "sign") return <AbsoluteFill><Svg><DeckCrew t={t} fade={ramp(t, d * 0.35, d * 0.95)} /></Svg></AbsoluteFill>;
+  // (old) road-work sign + hard hat
   return (
     <AbsoluteFill style={{ background: "#141b26" }}><Svg>
       <rect y={700} width={W} height={380} fill="#2a2f37" />
@@ -601,8 +629,14 @@ const CraneT: Tpl = ({ t, d, p, w }) => {
   if (st === "1") return (
     <AbsoluteFill style={{ background: "#bfe0f2" }}><Svg>
       <River t={t} y={780} night={false} />
-      <g transform="translate(600 620)"><path d="M-300 120 L -200 -40 L 0 -100 L 200 -60 L 300 120" stroke="#5a6470" strokeWidth={22} fill="none" strokeLinejoin="round" /></g>
-      {[0, 1, 2].map((i) => <g key={i} transform={`translate(${420 + i * 180} ${600 + (i % 2) * 40})`}><circle r={18 + (t % 8) * 2} fill={YEL} opacity={0.6} />{Array.from({ length: 5 }).map((_, j) => <circle key={j} cx={Math.cos(j * 1.3 + t) * 30} cy={Math.sin(j * 1.3 + t) * 30} r={4} fill="#ffb347" />)}</g>)}
+      <rect x={140} y={720} width={1000} height={70} fill="#5a6470" stroke={INK} strokeWidth={6} />
+      <TrussPiece pts={[[200, 700], [400, 620], [620, 600], [840, 640], [1060, 700]]} h={80} />
+      {[0, 1].map((i) => (
+        <g key={i}>
+          <Guy x={420 + i * 360} y={720} s={0.42} t={t + i * 17} id={`cut${i}`} outfit="coverall" pose={breathe({ ...IDLE, lean: 10, armL: [70, 30], armR: [80, 20] }, t, i * 5)} face={FACES.confident} />
+          <g transform={`translate(${470 + i * 360} ${606 + (i ? 20 : 0)})`}><circle r={14 + (t % 6) * 3} fill={YEL} opacity={0.6} />{Array.from({ length: 7 }).map((_, j) => <line key={j} x1={0} y1={0} x2={Math.cos(j * 0.9 + t * 0.7) * 50} y2={Math.sin(j * 0.9 + t * 0.7) * 50 + 20} stroke="#ffb347" strokeWidth={4} />)}</g>
+        </g>
+      ))}
       <Actor a="talk" t={t} x={1500} y={1000} s={0.75} id="cut" w={w} />
     </Svg></AbsoluteFill>
   );
@@ -637,10 +671,10 @@ const BlastT: Tpl = ({ t, d, p, w }) => {
       <g transform={`translate(${st === "float" ? -200 - ramp(t, 4, d) * 500 : -200} 0)`}><DaliSide x={0} y={790} w={1300} lightsOn={false} /></g>
       {st !== "float" && (
         <g transform={`translate(0 ${away * 300}) rotate(${away * 12} 1000 500)`} opacity={1 - away * 0.4}>
-          <path d="M840 470 L 900 380 L 1000 330 L 1120 360 L 1200 520 L 1180 640 L 1100 620 L 1060 480 L 940 470 L 880 560 Z" fill="none" stroke="#5a6470" strokeWidth={16} strokeLinejoin="round" />
+          <TrussPiece pts={[[700, 640], [860, 560], [1000, 520], [1120, 560], [1220, 700], [1300, 820]]} h={70} />
         </g>
       )}
-      {st === "1" && [900, 980, 1060].map((x, i) => <g key={i} transform={`translate(${x} ${420 + (i % 2) * 40}) scale(${pop(t, 6 + i * 6)})`}><rect x={-14} y={-24} width={28} height={48} rx={6} fill={RED} stroke={INK} strokeWidth={4} /><line x1={0} y1={-24} x2={10} y2={-50} stroke={INK} strokeWidth={3} /></g>)}
+      {st === "1" && [880, 1000, 1120].map((x, i) => <g key={i} transform={`translate(${x} ${[540, 500, 540][i]}) scale(${pop(t, 6 + i * 6)})`}><rect x={-14} y={-24} width={28} height={48} rx={6} fill={RED} stroke={INK} strokeWidth={4} /><line x1={0} y1={-24} x2={10} y2={-50} stroke={INK} strokeWidth={3} /></g>)}
       {boom > 0 && boom < 1 && Array.from({ length: 3 }).map((_, i) => <circle key={i} cx={940 + i * 70} cy={450} r={60 + boom * 160} fill={i ? YEL : "#fff"} opacity={(1 - boom) * 0.8} />)}
       {st === "float" && [0, 1].map((i) => <g key={i} transform={`translate(${-200 - ramp(t, 4, d) * 500 + 1400 + i * 120} ${790})`}><path d="M-60 0 L 60 0 Q 70 18 60 34 L -56 34 Z" fill="#c94a3a" stroke={INK} strokeWidth={4} /><rect x={-30} y={-36} width={50} height={36} fill="#f4f4ee" stroke={INK} strokeWidth={4} /></g>)}
       {st === "2" && <Actor a="ears" t={t} x={1650} y={1050} s={0.7} id="ears" w={w} />}

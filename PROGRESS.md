@@ -569,3 +569,13 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   ("And nobody went back…"), and the in-scene hint text in the wire scenes (y=900) sits just above the subtitle box.
   Upload kit 2026-11-16: `dali-bridge.en.srt` (233 cues, words match), thumbnails A "THIS?!" (recommended) / B "NO POWER" /
   C "4 MINUTES" (`engine/shipguy/ThumbDali.tsx`, ShipGuyThumb v=DA/DB/DC), `youtube-upload.txt` (title, 10 chapters, facts, sources, tags).
+
+- 2026-11-16 owner on the final: "music too loud and annoying throughout", odd crew hats, "6 people died" visual not understandable,
+  "some visuals don't make sense according to the audio". Fixes: `tools/shipguy_mix.py --tracks calm` = real YouTube Audio Library
+  tracks (Laniakea tense / Behold The Mystery main / Snowfall quiet / Fascination hopeful), music at 0.075 + ducked ~6 dB under the
+  voice (old code bed at 0.16, no ducking). New outfits in guy.tsx: pilot = dark PILOT jacket, no hat; officer = white shirt +
+  shoulder boards; coverall = deck crew; road = lime vest + yellow hard hat (road workers no longer look like the Ship Guy).
+  Full shot-vs-narration audit -> fixed shots 4 (deck crew fading), 6/126 (wire + label next to a fingertip), 11 (leaving the lit
+  port), 25/68 (deck close-up `DeckCrew`), 73 (yellow hard hats + candles, broken bridge behind), 74-77 (real divers, 2x),
+  127/140/141 (`TrussPiece` on the bow), 132 (crew cutting with torches). Stills in `videos/2026-11-16-dali-bridge/fixes/`,
+  music sample `fixes/music-check.mp3`. GATE: owner OK -> full re-render (~31 min).

@@ -13,7 +13,7 @@ night state=sail cam=wide music=investigate || BALTIMORE · 2024 || To understan
 # --- 1. The ship and the night
 dali scene=sail guy=wave || MEET THE DALI || The ship is called Dali. It's a container ship, three hundred metres long,
 dali scene=yard || [2015] · SOUTH KOREA || built in South Korea in twenty fifteen.
-night state=sail cam=wide || 26 MARCH 2024 || On the night of the twenty-sixth of March, twenty twenty-four, it's leaving the Port of Baltimore, in the United States.
+night state=port cam=wide || 26 MARCH 2024 || On the night of the twenty-sixth of March, twenty twenty-four, it's leaving the Port of Baltimore, in the United States.
 dali scene=stack || [4,700] CONTAINERS || It's carrying about four thousand seven hundred containers,
 route mode=srilanka || → SRI LANKA || and it's heading for Sri Lanka.
 wheel act=crew || [21] CREW || On board are twenty-one crew,
