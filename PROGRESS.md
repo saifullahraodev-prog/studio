@@ -74,7 +74,13 @@
   Owner asked for a demo: rendered `out/howwe/forks-full-720p.mp4` (3:39, 506 s render = 2.3 s per second of video),
   QC ok (no black/frozen, -14.8 LUFS); sheet `out/howwe/forks-full-sheet.png`. Seen: many frames are empty plinths or
   white cards (exhibits appear on late words; lots of cardFlips) -> visual variety is the weak spot for a longer cut.
-  WAITING: owner decides keep tight (~4 min) or expand (~8-10 min, more research + more rooms).
+  Owner asked for the expanded version: `videos/2026-11-16-howwe-forks-8min/` (58 scenes, 1010 words, +11 sourced
+  claims: Rome/Byzantium, bring-your-own-knife, Catherine de' Medici myth, American cut-and-switch, Coryat's walk,
+  Han/Ming chopsticks, Korean silver legend, Japan funeral rules, gursha). New rooms japan/ethiopia/india + outfits
+  kimono/habesha/kurta + gursha "feed" pose (PLACEHOLDERS), ghost exhibits (faint silhouette before reveal),
+  script-level voiceScale (1.15 = natural ~150 wpm). Built: 6:06 (not 8:00), R2 gaps up to 5.3 s, R5 7.0 s.
+  1-minute clip rendered (owner asked for 1 min, not the whole): `out/howwe/forks-8min-1min-clip.mp4` (4:03-5:03,
+  160 s render, -14.6 LUFS, QC ok). WAITING: owner reaction; then fix gaps + decide 6 min vs adding ~2 min more.
 - NEXT (was): asset kits (map: done; reference-based costumes; object library;
   scene templates; motion + transitions), then video 1 script "Why Half the World Doesn't Use Forks".
 
