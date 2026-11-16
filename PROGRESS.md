@@ -563,4 +563,8 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   (CapCut pauses > 0.6 s cut to 0.4 s, 63 pauses / 28.4 s removed, originals kept as voice-raw.wav + words-raw.json;
   video now 10:28), new `tools/shipguy_subs.py` -> `public/shipguy/<slug>/subs.json`, drawn by `Subtitles` in Video.tsx
   (sentence cues, 1-2 lines, one yellow word at a time; loaded only if subs.json exists). Cut fade-in softened (no dark dip).
-  30 s demo `out/demo-30s.mp4` (-15.4 LUFS, no black/frozen). GATE: owner OK on the demo -> full render.
+  30 s demo `out/demo-30s.mp4` (-15.4 LUFS, no black/frozen).
+- DONE 2026-11-16: `videos/2026-11-16-dali-bridge/out/dali-bridge-final.mp4` (1080p30, 10:29, -15.0 LUFS, peak -4.3 dBFS,
+  0 black, 0 frozen; render 31 min; 222 MB). Known cosmetic nits: one long subtitle cue falls back to a wide 2-line box
+  ("And nobody went back…"), and the in-scene hint text in the wire scenes (y=900) sits just above the subtitle box.
+  Not done yet: thumbnails, .srt, upload text.
