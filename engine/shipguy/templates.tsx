@@ -7,6 +7,7 @@ import { Attack, Caption, fontFamily, Push, ramp, Shipyard, Stopping, Svg, Uprig
 import { STAT_ICONS, StatX, TEMPLATES2 } from "./templates2";
 import { TEMPLATES4 } from "./templates4";
 import { TEMPLATES3 } from "./templates3";
+import { TEMPLATES5 } from "./templates5";
 
 export type P = Record<string, string>;
 export type Tpl = React.FC<{ t: number; d: number; p: P; w?: number[][] }>; // w = spoken word spans (frames in the beat)
@@ -866,6 +867,7 @@ export const TEMPLATES: Record<string, Tpl> = {
   prelude: Prelude, endcard: EndCard,
   ...TEMPLATES2,
   ...TEMPLATES3,
+  ...TEMPLATES5,
   ...TEMPLATES4,
   stat: (props) => (STAT_ICONS.includes(props.p.icon ?? "") ? <StatX {...props} /> : <Stat {...props} />),
 };

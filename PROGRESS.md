@@ -545,4 +545,10 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
 - 2026-11-16: owner sent the CapCut voice in 2 parts (10:03 + 0:52), joined cleanly at "…responsible." -> `voice.wav` 10:56,
   `words.json` (1,931 words, matches the script apart from number spellings). Shot plan v1: `beats.txt` (161 beats, avg 4.1 s,
   every word in order) -> `public/shipguy/dali/timeline.json`; `plan.md` + `plan-shots.md` (Ship Guy in 74 shots, in-scene only;
-  sections 3-4 quiet, no gags). GATE: owner approval of the shot plan. Templates (templates5.tsx) not built yet.
+  sections 3-4 quiet, no gags).
+- 2026-11-16 owner approved the shot plan -> BUILD: `engine/shipguy/templates5.tsx` (night, truss + KeyBridge collapse, topd,
+  dali [BoxShipHD named DALI, darkened with a CSS brightness filter], wheel) + `templates5b.tsx` (power, wire, anchor, radio,
+  under, memorial, risk, skyway, ntsb, clocks, pump, port, crane, blast, price, usmap [real US outline], fort, route, endcard5).
+  Puppet: shades + magnifier/label props; acts pinch/fold/salute/brake/ears/magnify/pushslide/cool/notes/sad; host bg=river.
+  Mixer: music=quiet (light theme at 22%) + SFX for the new scenes (no comic sounds in the serious beats). mix.wav 657.1 s,
+  -15.0 LUFS, 224 events. Storyboard 11 pages: `videos/2026-11-16-dali-bridge/storyboard/`. GATE: owner checks storyboard.

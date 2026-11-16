@@ -48,7 +48,16 @@ def main(slug: str):
             segs[-1] = (segs[-1][0], s1, mood)
         else:
             segs.append((s0, s1, mood))
+    # "quiet" (video #5, the serious part): the light theme, played very low
+    quiet = [(s0, s1) for s0, s1, m in segs if m == "quiet"]
+    segs = [(s0, s1, "light" if m == "quiet" else m) for s0, s1, m in segs]
     music = sfx.music_bed(segs, dur)
+    for s0, s1 in quiet:
+        a, b = int(s0 * SR), int(s1 * SR)
+        ramp_n = int(1.5 * SR)
+        env = np.ones(b - a, dtype=np.float32) * 0.22
+        env[:ramp_n] = np.linspace(1.0, 0.22, min(ramp_n, b - a))[: len(env[:ramp_n])]
+        music[a:b] *= env[: len(music[a:b])]
 
     # sound effects
     ev = []
@@ -71,6 +80,25 @@ def main(slug: str):
             ev.append((t0, "crunch", 0.5))
         if tpl == "lengthen" and p.get("phase") == "3":
             ev.append((t0 + 0.2, "ding", 0.5))
+        # --- Dali templates (video #5). Serious beats (radio/under/memorial) get no comic sounds.
+        if tpl == "truss" and p.get("mode") == "hit":
+            ev.append((t0 + 0.1, "impact", 0.55))
+        if tpl == "truss" and p.get("mode") == "collapse":
+            ev.append((t0 + 0.4, "crunch", 0.35))
+        if tpl == "night" and p.get("state") in ("dark", "flicker") or tpl == "wheel" and p.get("act") in ("dark", "dark2"):
+            ev.append((t0 + 0.4, "hit", 0.35))
+        if tpl == "wire" and p.get("step") == "loose":
+            ev.append((t0 + 0.7, "pop", 0.6))
+        if tpl in ("price", "clocks") or (tpl == "dali" and p.get("scene") in ("stack", "weight")) or (tpl == "port" and p.get("step") in ("cars", "pile")):
+            ev.append((t0 + 0.15, "riser", 0.35)); ev.append((t0 + 1.2, "pop", 0.6))
+        if tpl == "blast" and p.get("step") == "2":
+            ev.append((t0 + 0.35, "boom", 0.7))
+        if tpl in ("power", "route", "usmap", "fort", "ntsb", "pump") or (tpl == "wire" and p.get("step") in ("labels", "wrong", "half", "wall")):
+            ev.append((t0 + 0.4, "ding", 0.28))
+        if p.get("act") in ("brake", "pushslide", "cool", "ears") or p.get("guy") in ("push", "pushslide") or (tpl == "crane" and p.get("step") == "secret"):
+            ev.append((t0 + 0.3, "boing", 0.35))
+        if tpl == "anchor" and p.get("step") == "drop":
+            ev.append((t0 + 0.5, "crunch", 0.3))
         # --- Ever Given templates (video #3)
         sec = b["dur"] / fps
         if tpl == "canal" and p.get("impact") == "1":

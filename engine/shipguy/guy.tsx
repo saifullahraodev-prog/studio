@@ -18,7 +18,7 @@ export type Brows = "none" | "up" | "worried" | "angry" | "one";
 export type Mouth = "smile" | "grin" | "smirk" | "flat" | "o" | "scream" | "frown" | "wavy" | "teeth";
 export type Face = { eyes: Eyes; brows: Brows; mouth: Mouth; lookX?: number; lookY?: number };
 export type Hand = "mitt" | "open" | "point" | "thumb";
-export type PropName = "clipboard" | "mug" | "spade" | "phone" | "hammer" | "rod" | "none";
+export type PropName = "clipboard" | "mug" | "spade" | "phone" | "hammer" | "rod" | "magnifier" | "label" | "none";
 export type Outfit = "ship" | "pilot" | "captain";
 export type Emote = "sweat" | "!" | "?" | "steam" | "stars" | "idea";
 
@@ -197,6 +197,19 @@ const Held: React.FC<{ prop: PropName; x: number; y: number }> = ({ prop, x, y }
       <path d="M260 -200 Q 300 -40 290 260" stroke="#5c6670" strokeWidth={3} fill="none" />
     </g>
   );
+  if (prop === "magnifier") return (
+    <g transform={`translate(${x} ${y}) rotate(-30)`}>
+      <line x1={0} y1={10} x2={0} y2={-60} stroke="#3d3d40" strokeWidth={14} strokeLinecap="round" />
+      <circle cx={0} cy={-110} r={50} fill="#cfe9f7" fillOpacity={0.45} stroke={INK} strokeWidth={10} />
+      <path d="M-24 -130 q 10 -18 30 -20" stroke="#fff" strokeWidth={8} fill="none" strokeLinecap="round" />
+    </g>
+  );
+  if (prop === "label") return (
+    <g transform={`translate(${x - 4} ${y - 34}) rotate(-12)`}>
+      <rect x={-10} y={-8} width={26} height={14} rx={3} fill="#fbfaf4" stroke={INK} strokeWidth={3} />
+      <circle cx={6} cy={-1} r={30} fill="none" stroke="#ffd23f" strokeWidth={4} strokeDasharray="6 6" />
+    </g>
+  );
   if (prop === "spade") return (
     <g transform={`translate(${x} ${y}) rotate(-28)`}>
       <line x1={0} y1={-60} x2={0} y2={150} stroke="#8a5a2b" strokeWidth={12} strokeLinecap="round" />
@@ -317,12 +330,12 @@ export type GuyProps = {
   handL?: Hand; handR?: Hand; prop?: PropName;
   hat?: { dx: number; dy: number; rot: number }; // hat offset (pop-off gag); undefined = on the head
   emote?: Emote; emoteT?: number; boil?: boolean; shadow?: boolean; feet?: "out" | "fwd";
-  outfit?: Outfit; id?: string;
+  outfit?: Outfit; id?: string; shades?: boolean;
 };
 
 export const Guy: React.FC<GuyProps> = ({
   x, y, s = 1, flip, t, pose = IDLE, face = FACES.happy, talk = 0, blink, handL = "mitt", handR = "mitt",
-  prop = "none", hat, emote, emoteT = 0, boil = true, shadow = true, feet = "out", outfit = "ship", id = "guy",
+  prop = "none", hat, emote, emoteT = 0, boil = true, shadow = true, feet = "out", outfit = "ship", id = "guy", shades = false,
 }) => {
   const p = pose;
   const sq = p.squash; // + = squashed (wider, shorter), - = stretched
@@ -417,6 +430,7 @@ export const Guy: React.FC<GuyProps> = ({
         <g transform={`translate(${hx} ${hy}) rotate(${headRot})`}>
           <circle r={HEAD_R} fill={boil ? `url(#${id}-head)` : SKIN} stroke={INK} strokeWidth={8} />
           <FaceArt face={face} blink={blink ?? blinking(t)} talk={talk} />
+          {shades && <g><path d="M-62 -24 h52 q4 0 4 4 q-2 26 -26 26 q-26 -2 -30 -26 Z M10 -24 h52 q4 0 4 4 q-2 26 -26 26 q-26 -2 -30 -26 Z" fill="#111" stroke={INK} strokeWidth={4} /><line x1={-6} y1={-18} x2={10} y2={-18} stroke={INK} strokeWidth={6} /><path d="M-50 -16 l 14 0" stroke="#fff" strokeWidth={4} opacity={0.6} /></g>}
           {outfit === "pilot" && (
             <g transform={`translate(${hatT.dx} ${hatT.dy}) rotate(${hatT.rot - 6} 0 -70)`}>
               <path d="M-98 -60 C -100 -130, 96 -136, 100 -60 Z" fill="#2c4a7a" stroke={INK} strokeWidth={7} strokeLinejoin="round" />

@@ -167,6 +167,23 @@ export const act = (a: string, t: number, w?: number[][]): ActOut => {
     case "fish": return { pose: { ...IDLE, hipY: -96, legL: [-80, -6], legR: [-74, -10], armR: [40, 40], armL: [30, 30] }, prop: "rod", face: { eyes: "half", brows: "none", mouth: "flat" }, shadow: false, feet: "fwd" };
     case "drive": return { pose: { ...IDLE, hipY: -96, legL: [-80, -6], legR: [-74, -10], armL: [-70, 10], armR: [70, -10] }, face: FACES.happy, shadow: false, feet: "fwd" };
     case "talk": return { pose: b(IDLE), face: FACES.talk, talk: talk || chatter(t) * 0 };
+    // --- video #5 (Dali) acts
+    case "pinch": return { pose: b({ ...POSES.fingerUp, armR: [70, 95] }), prop: "label", handR: "mitt", face: { eyes: "half", brows: "one", mouth: "flat", lookX: 0.6, lookY: -0.3 }, talk };
+    case "fold": return { pose: b({ ...IDLE, armL: [30, -120], armR: [30, -120] }), face: { eyes: "half", brows: "none", mouth: "smile" } };
+    case "salute": return { pose: b({ ...IDLE, armR: [118, 112], tilt: -3 }), handR: "open", face: FACES.confident };
+    case "brake": {
+      const stamp = Math.abs(Math.sin(t * 0.45));
+      return { pose: { ...IDLE, legR: [24 + stamp * 22, -40 * stamp], armL: [30, 20], armR: [30, 20], hipY: stamp * 6 }, face: { eyes: "wide", brows: "worried", mouth: "teeth" }, emote: "sweat", emoteT: t };
+    }
+    case "ears": return { pose: { ...POSES.handsHead, hipY: Math.max(0, Math.sin(t * 0.6)) * 6 }, handL: "open", handR: "open", face: { eyes: "closed", brows: "worried", mouth: "teeth" }, blink: true };
+    case "magnify": return { pose: b({ ...IDLE, lean: -10 + Math.sin(t * 0.08) * 6, armR: [60 + Math.sin(t * 0.08) * 20, 50] }), prop: "magnifier", face: { eyes: "dot", brows: "one", mouth: "flat", lookX: 0.6, lookY: 0.4 } };
+    case "pushslide": {
+      const slide = (t * 1.6) % 60;
+      return { pose: { ...IDLE, lean: -34, hipX: -slide, armL: [-78, 8], armR: [84, -10], legL: [-40, 10], legR: [-12, 20], tilt: -4 }, face: { eyes: "wide", brows: "worried", mouth: "teeth" }, handL: "open", handR: "open", emote: "sweat", emoteT: t, feet: "fwd" };
+    }
+    case "cool": return { pose: b({ ...IDLE, armL: [30, -120], armR: [30, -120] }), face: { eyes: "dot", brows: "up", mouth: "smirk" }, shades: true };
+    case "notes": return { pose: b(POSES.hold), prop: "clipboard", face: { eyes: "dot", brows: "one", mouth: "flat", lookX: -0.4, lookY: 0.4 } };
+    case "sad": return { pose: b({ ...IDLE, tilt: 8, armL: [8, 4], armR: [8, 4], hipY: -6 }), face: { eyes: "half", brows: "worried", mouth: "frown", lookY: 0.6 } };
     default: return { pose: b(IDLE), face: FACES.happy, talk };
   }
 };
@@ -711,6 +728,10 @@ export const GuyT: Tpl = ({ t, d, p, w }) => {
         })}
       </g>
     );
+  } else if (bgk === "river") {
+    bg = <g><DesertSky dusk /><rect y={640} width={W} height={440} fill="#5b86a8" />{Array.from({ length: 10 }).map((_, i) => <path key={i} d={`M${((i * 230 + t) % 2100) - 100} ${700 + (i % 3) * 90} q 25 -8 50 0`} stroke="#cde3ef" strokeWidth={5} fill="none" />)}
+      <rect y={900} width={W} height={180} fill="#7d9a6a" stroke={INK} strokeWidth={6} /><path d="M0 560 L 300 560 M1620 560 L 1920 560" stroke="#5a6470" strokeWidth={18} /></g>;
+    gx = 960; gy = 1000; gs = 0.8;
   } else if (bgk === "canalbank") {
     bg = <g><DesertSky dusk /><circle cx={1500} cy={420} r={110} fill="#ffd27a" opacity={0.9} /><Water y={700} t={t} color="#3b7ea5" />
       <g transform={`translate(${380 - t * 0.5} 690) scale(0.45)`}><EGSide t={t} /></g>
@@ -733,7 +754,7 @@ export const GuyT: Tpl = ({ t, d, p, w }) => {
           {extra}
           <Actor a={a} t={t} x={gx} y={gy} s={gs} flip={flip} w={w} id="host" over={over} />
         </g>
-        {label && <T3 x={bgk === "phone" ? 1300 : 1450} y={460} size={110} color="#ffd23f" s={pop(t, 6)}>{label}</T3>}
+        {label && <T3 x={bgk === "phone" ? 1300 : label.length > 10 ? 1400 : 1450} y={460} size={label.length > 12 ? 78 : label.length > 9 ? 92 : 110} color="#ffd23f" s={pop(t, 6)}>{label}</T3>}
       </Svg>
     </AbsoluteFill>
   );
