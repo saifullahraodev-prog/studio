@@ -62,6 +62,80 @@ export const ChinaRoom: React.FC<{ f?: number }> = ({ f }) => (
 );
 
 /** Today room: modern dining table, bright and clean (no tint). Figure `who` eats with a fork. */
+/* Floor-seated rooms: figures stand lower (feet below frame) so only the torso shows above a low table.
+   PLACEHOLDER costumes and rooms: redraw from documented references before publishing. */
+const SEAT = 990;
+
+/** Japan: shoji screens, tokonoma alcove, tatami, low table. Side altar shows rice with chopsticks upright (offering). */
+export const JapanRoom: React.FC<{ f?: number }> = ({ f }) => (
+  <g>
+    <rect width={960} height={H} fill="#E8DFC9" />
+    {[0, 1, 2].map((k) => (
+      <g key={k}>
+        <rect x={40 + k * 200} y={120} width={180} height={520} fill="#F4EFE2" stroke="#6B4F35" strokeWidth={8} />
+        {Array.from({ length: 4 }).map((_, i) => <line key={`v${i}`} x1={40 + k * 200 + 36 * (i + 1)} y1={120} x2={40 + k * 200 + 36 * (i + 1)} y2={640} stroke="#8A6D4E" strokeWidth={3} />)}
+        {Array.from({ length: 6 }).map((_, i) => <line key={`h${i}`} x1={40 + k * 200} y1={120 + 74 * (i + 1)} x2={220 + k * 200} y2={120 + 74 * (i + 1)} stroke="#8A6D4E" strokeWidth={3} />)}
+      </g>
+    ))}
+    <rect x={660} y={120} width={260} height={520} fill="#D9CBA8" stroke="#6B4F35" strokeWidth={8} />
+    <rect x={740} y={170} width={100} height={300} fill="#F4EFE2" stroke={T.line} strokeWidth={3} />
+    <path d="M760 220 Q790 300 770 400" fill="none" stroke="#3A3A40" strokeWidth={6} />
+    {/* tatami */}
+    <rect y={760} width={960} height={320} fill="#C9C38E" />
+    {[0, 320, 640].map((x) => <rect key={x} x={x} y={760} width={320} height={320} fill="none" stroke="#5E5A3A" strokeWidth={6} />)}
+    {/* offering altar: rice with chopsticks standing upright */}
+    <rect x={720} y={690} width={180} height={70} fill="#6B4F35" stroke={T.line} strokeWidth={3.5} />
+    <path d="M770 690 Q810 650 850 690 Z" fill="#FFFDF7" stroke={T.line} strokeWidth={3} />
+    <line x1={800} y1={600} x2={804} y2={680} stroke="#9C6233" strokeWidth={6} />
+    <line x1={816} y1={600} x2={812} y2={680} stroke="#9C6233" strokeWidth={6} />
+    <Figure x={200} y={SEAT} s={1.08} skin={SKIN[1]} hair="bun" outfit="kimono" pose="bowl" {...anim(f, "bowlDown", 48, 0)} />
+    <Figure x={460} y={SEAT} s={1.08} skin={SKIN[2]} hair="short" outfit="kimono" pose="bowl" flip {...anim(f, "bowlDown", 54, 20)} />
+    <rect y={836} width={960} height={244} fill="#C9C38E" />
+    {[0, 320, 640].map((x) => <rect key={x} x={x} y={836} width={320} height={244} fill="none" stroke="#5E5A3A" strokeWidth={6} />)}
+    <rect x={90} y={800} width={500} height={40} fill="#7A4A2E" stroke={T.line} strokeWidth={3.5} />
+    {[180, 330, 480].map((x) => <path key={x} d={`M${x - 30} 800 Q${x} 772 ${x + 30} 800 Z`} fill="#B8432F" stroke={T.line} strokeWidth={3} />)}
+  </g>
+);
+
+/** Ethiopia: warm plaster wall, woven mesob basket-table with injera; gursha (feeding) between diners. */
+export const EthiopiaRoom: React.FC<{ f?: number }> = ({ f }) => (
+  <g>
+    <rect width={960} height={H} fill="#E3C9A0" />
+    <rect y={300} width={960} height={40} fill="#B8432F" opacity={0.6} />
+    {Array.from({ length: 16 }).map((_, i) => <path key={i} d={`M${i * 60} 300 L${i * 60 + 30} 340 L${i * 60 + 60} 300`} fill="none" stroke="#3F7A5A" strokeWidth={5} />)}
+    <rect x={620} y={110} width={200} height={170} fill="#B7C9CC" stroke={T.line} strokeWidth={3.5} />
+    <rect y={800} width={960} height={280} fill="#A9805A" />
+    <Figure x={250} y={SEAT} s={1.1} skin={SKIN[5]} hair="covered" outfit="habesha" pose="feed" {...anim(f, "feedBack", 70, 0)} />
+    <Figure x={680} y={SEAT} s={1.1} skin={SKIN[6]} hair="short" outfit="habesha" pose="eatHand" flip {...anim(f, "handDown", 60, 25)} />
+    <rect y={830} width={960} height={250} fill="#A9805A" />
+    {/* mesob: woven hourglass basket table */}
+    <path d="M330 790 L590 790 L540 880 L590 990 L330 990 L380 880 Z" fill="#C9862F" stroke={T.line} strokeWidth={3.5} />
+    {[810, 840, 920, 960].map((y) => <line key={y} x1={350} y1={y} x2={570} y2={y} stroke="#7A4A2E" strokeWidth={4} />)}
+    <ellipse cx={460} cy={782} rx={170} ry={30} fill="#D9B48A" stroke={T.line} strokeWidth={3.5} />
+    {[[400, 776], [470, 772], [520, 786]].map(([x, y], i) => <ellipse key={i} cx={x} cy={y} rx={26} ry={9} fill={["#8B4A2B", "#B8432F", "#7E9A57"][i]} />)}
+  </g>
+);
+
+/** India: arched niche, floor seating, round steel thali plates; right-hand eating. */
+export const IndiaRoom: React.FC<{ f?: number }> = ({ f }) => (
+  <g>
+    <rect width={960} height={H} fill="#E9D6B8" />
+    <path d="M120 640 L120 300 Q260 140 400 300 L400 640 Z" fill="#D9BE95" stroke={T.line} strokeWidth={3.5} />
+    <path d="M560 640 L560 300 Q700 140 840 300 L840 640 Z" fill="#D9BE95" stroke={T.line} strokeWidth={3.5} />
+    <circle cx={260} cy={360} r={30} fill="#C9862F" />
+    <rect y={780} width={960} height={300} fill="#B9936A" />
+    <Figure x={260} y={SEAT} s={1.1} skin={SKIN[4]} hair="short" outfit="kurta" pose="eatHand" {...anim(f, "handDown", 58, 0)} />
+    <Figure x={700} y={SEAT} s={1.1} skin={SKIN[5]} hair="bun" outfit="saree" pose="eatHand" flip {...anim(f, "handDown", 64, 30)} />
+    <rect y={830} width={960} height={250} fill="#B9936A" />
+    {[260, 700].map((x) => (
+      <g key={x} stroke={T.line} strokeWidth={3}>
+        <ellipse cx={x} cy={850} rx={140} ry={30} fill="#C9CFD6" />
+        {[-60, -20, 20, 60].map((d, i) => <ellipse key={i} cx={x + d} cy={846} rx={16} ry={7} fill={["#E3A72F", "#7E9A57", "#B8432F", "#FFFDF7"][i]} />)}
+      </g>
+    ))}
+  </g>
+);
+
 export const TodayRoom: React.FC<{ f?: number; x0?: number; w?: number }> = ({ f, x0 = 0, w = 1920 }) => {
   const cx = x0 + w / 2;
   return (

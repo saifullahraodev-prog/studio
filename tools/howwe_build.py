@@ -93,7 +93,8 @@ def main():
     from piper import PiperVoice, SynthesisConfig
 
     voice = PiperVoice.load(str(ROOT / "models" / "piper" / "en_US-ryan-high.onnx"))
-    cfg = SynthesisConfig(length_scale=0.95, noise_scale=0.6, noise_w_scale=0.7)
+    # script-level "voiceScale": 1.0 = Piper default; ~1.15 = natural documentary pace (~150 wpm)
+    cfg = SynthesisConfig(length_scale=script.get("voiceScale", 0.95), noise_scale=0.6, noise_w_scale=0.7)
     asr = WhisperModel("small", device="cpu", compute_type="int8")
 
     clips, built = [], []

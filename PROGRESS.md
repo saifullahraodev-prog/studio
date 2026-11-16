@@ -551,4 +551,6 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   under, memorial, risk, skyway, ntsb, clocks, pump, port, crane, blast, price, usmap [real US outline], fort, route, endcard5).
   Puppet: shades + magnifier/label props; acts pinch/fold/salute/brake/ears/magnify/pushslide/cool/notes/sad; host bg=river.
   Mixer: music=quiet (light theme at 22%) + SFX for the new scenes (no comic sounds in the serious beats). mix.wav 657.1 s,
-  -15.0 LUFS, 224 events. Storyboard 11 pages: `videos/2026-11-16-dali-bridge/storyboard/`. GATE: owner checks storyboard.
+  -15.0 LUFS, 224 events. Storyboard 11 pages: `videos/2026-11-16-dali-bridge/storyboard/`.
+- 2026-11-16 owner OK'd storyboard -> 60 s test `out/test-60s.mp4` (frames 0-1799, 132 s render, -15.3 LUFS, no black/frozen).
+  GATE: owner feedback on the test before the full render (~25 min).

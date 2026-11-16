@@ -6,7 +6,7 @@ import {
 } from "./kit";
 import { Cam, clamp01, easeBack, easeInOut, easeOut, lerp, prog, TIMING } from "./motion";
 import { Exhibit, ObjectId, OBJECTS } from "./objects";
-import { ChinaRoom, EuropeRoom, TodayRoom } from "./rooms";
+import { ChinaRoom, EthiopiaRoom, EuropeRoom, IndiaRoom, JapanRoom, TodayRoom } from "./rooms";
 import { camAt, CamKey, Mark, Marks } from "./retention";
 
 /** Common props. `cam`: word-synced camera keys (replace the template's default move); `marks`: hand-drawn marks. */
@@ -56,11 +56,14 @@ export const Exhibits: React.FC<Base & ExhibitsProps> = ({ uid, f, dur, tag, wor
 };
 
 /* ---------------- 2 · period rooms (Then tint), single diorama or split ---------------- */
-export type RoomId = "europe1500" | "china1500" | "today";
+export type RoomId = "europe1500" | "china1500" | "today" | "japan" | "ethiopia" | "india";
 const ROOMS: Record<RoomId, { C: React.FC<{ f?: number }>; x0: number; then: boolean }> = {
   europe1500: { C: EuropeRoom, x0: 0, then: true },
   china1500: { C: ChinaRoom, x0: 960, then: true },
   today: { C: ({ f }) => <TodayRoom f={f} x0={0} w={960} />, x0: 0, then: false },
+  japan: { C: JapanRoom, x0: 0, then: false },
+  ethiopia: { C: EthiopiaRoom, x0: 0, then: false },
+  india: { C: IndiaRoom, x0: 0, then: false },
 };
 /** One half-room drawn at screen x `at` (0 or 960), tinted if it is a "Then" room; tint washes in from the left. */
 const RoomHalf: React.FC<{ uid: string; room: RoomId; at: number; f: number; wash: number }> = ({ uid, room, at, f, wash }) => {

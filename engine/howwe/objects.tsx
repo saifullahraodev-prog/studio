@@ -108,8 +108,11 @@ export const Exhibit: React.FC<{ id: ObjectId; x: number; plinthTop: number; h: 
   const o = OBJECTS[id];
   const s = h / (o.bottom - o.top);
   const r = f === undefined ? 1 : easeBack(prog(f, start, TIMING.rise));
-  if (r <= 0) return null;
   const D = o.draw;
+  if (r <= 0) {
+    const yg = plinthTop - gap - o.bottom * s;
+    return <g opacity={0.13} transform={`translate(${x} ${yg}) scale(${s})`}><D /></g>;
+  }
   const y = plinthTop - gap - o.bottom * s + (1 - r) * 60;
   return (
     <g opacity={Math.min(1, r * 1.6)} transform={`translate(${x} ${y}) scale(${s})`}>

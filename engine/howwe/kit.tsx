@@ -148,9 +148,9 @@ export const PlasterHand: React.FC<{ x: number; y: number; s?: number }> = ({ x,
 };
 
 /* ---------------- people: faceless "diorama figures" (~6 heads tall) ---------------- */
-export type Outfit = "tee" | "cardigan" | "euMan" | "euWoman" | "ming" | "saree" | "cook";
+export type Outfit = "tee" | "cardigan" | "euMan" | "euWoman" | "ming" | "saree" | "cook" | "kimono" | "habesha" | "kurta";
 export type Hair = "short" | "long" | "bun" | "covered";
-export type Pose = "stand" | "eatHand" | "knife" | "bowl" | "chop" | "fork" | "greet" | "forkDown" | "handDown" | "bowlDown" | "chopUp" | "knifeCut" | "point";
+export type Pose = "stand" | "eatHand" | "knife" | "bowl" | "chop" | "fork" | "greet" | "forkDown" | "handDown" | "bowlDown" | "chopUp" | "knifeCut" | "point" | "feed" | "feedBack";
 type Pt = [number, number];
 const POSES: Record<Pose, { L: [Pt, Pt]; R: [Pt, Pt]; holdL?: string; holdR?: string }> = {
   stand: { L: [[-46, -236], [-48, -178]], R: [[46, -236], [48, -178]] },
@@ -167,12 +167,18 @@ const POSES: Record<Pose, { L: [Pt, Pt]; R: [Pt, Pt]; holdL?: string; holdR?: st
   chopUp: { L: [[-50, -242], [-34, -204]], R: [[56, -262], [46, -262]], holdR: "cleaver" },
   knifeCut: { L: [[-50, -240], [-34, -204]], R: [[50, -236], [26, -204]], holdL: "bread", holdR: "knife" },
   point: { L: [[-46, -236], [-48, -178]], R: [[80, -280], [128, -300]] },
+  // gursha: right hand reaches across to feed the person on the right
+  feed: { L: [[-48, -238], [-30, -200]], R: [[74, -262], [128, -300]], holdR: "food" },
+  feedBack: { L: [[-48, -238], [-30, -200]], R: [[52, -238], [30, -206]], holdR: "food" },
 };
 const OUT: Record<Outfit, { top: string; bottom: string; extra?: string; shoes: string; sleeve: number }> = {
   tee: { top: "#4F7CAC", bottom: "#2F3E5C", shoes: "#EFEFEF", sleeve: 19 },
   cardigan: { top: "#8A6D9E", bottom: "#3B3B44", extra: "#EDE6DA", shoes: "#3B2A20", sleeve: 19 },
   euMan: { top: "#6B3B2E", bottom: "#4A3B30", extra: "#2F4A3A", shoes: "#2A211A", sleeve: 21 },
   euWoman: { top: "#7A2E2E", bottom: "#7A2E2E", extra: "#F2EEE4", shoes: "#2A211A", sleeve: 20 },
+  kimono: { top: "#4F5D7A", bottom: "#4F5D7A", extra: "#C9A24A", shoes: "#EDE6DA", sleeve: 30 },
+  habesha: { top: "#F2EEE4", bottom: "#F2EEE4", extra: "#3F7A5A", shoes: "#5A3A22", sleeve: 18 },
+  kurta: { top: "#C98A3A", bottom: "#EDE6DA", extra: "#C98A3A", shoes: "#5A3A22", sleeve: 18 },
   ming: { top: "#3F5E7A", bottom: "#3F5E7A", extra: "#F2EEE4", shoes: "#1E1E24", sleeve: 32 },
   saree: { top: "#7A2E4A", bottom: "#C9862F", extra: "#C9862F", shoes: "#5A3A22", sleeve: 16 },
   cook: { top: "#8A7B5C", bottom: "#5C5240", extra: "#E8E0CC", shoes: "#2A211A", sleeve: 20 },
@@ -214,7 +220,7 @@ export const Figure: React.FC<{ x: number; y: number; s?: number; skin: string; 
     holdL: (t < 0.5 ? pa : pb).holdL, holdR: (t < 0.5 ? pa : pb).holdR,
   };
   const ln = { stroke: T.line, strokeWidth: 3.5, strokeLinejoin: "round" as const };
-  const long = outfit === "euWoman" || outfit === "ming" || outfit === "saree";
+  const long = outfit === "euWoman" || outfit === "ming" || outfit === "saree" || outfit === "kimono" || outfit === "habesha";
   return (
     <g transform={`translate(${x} ${y}) scale(${flip ? -s : s} ${s})`}>
       {/* back hair */}
@@ -243,6 +249,9 @@ export const Figure: React.FC<{ x: number; y: number; s?: number; skin: string; 
       {outfit === "euWoman" && <path d="M-26 -300 Q0 -270 26 -300" fill={o.extra} {...ln} />}
       {outfit === "saree" && <g {...ln}><path d="M-37 -300 L-12 -300 L34 -196 L36 -150 L14 -150 Z" fill={o.extra} /><path d="M-12 -300 L34 -196" fill="none" stroke="#7A2E4A" strokeWidth={6} /></g>}
       {outfit === "cook" && <path d="M-24 -250 L24 -250 L28 -120 L-28 -120 Z" fill={o.extra} {...ln} />}
+      {outfit === "kimono" && <g {...ln}><path d="M-16 -300 L14 -232 M16 -300 L4 -262" fill="none" stroke="#EDE6DA" strokeWidth={7} /><rect x={-34} y={-214} width={68} height={26} fill={o.extra} /></g>}
+      {outfit === "habesha" && <g><path d="M-6 -300 L6 -300 L6 -176 L-6 -176 Z" fill={o.extra} /><path d="M-50 -30 L50 -30" stroke={o.extra} strokeWidth={9} /></g>}
+      {outfit === "kurta" && <path d="M-37 -300 L37 -300 L40 -120 L-40 -120 Z" fill={o.top} {...ln} />}
       {/* neck + head (faceless) */}
       <rect x={-9} y={-314} width={18} height={18} fill={skin} {...ln} />
       <ellipse cx={0} cy={-337} rx={23} ry={29} fill={skin} {...ln} />
