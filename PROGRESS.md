@@ -581,4 +581,5 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   music sample `fixes/music-check.mp3`.
 - 2026-11-16 owner: "remove the music and just focus on the video and sfx, nothing else is needed" -> `--tracks none`
   (voice + SFX only, -14.9 LUFS); standing rule for future Ship Guy videos. Sample `fixes/no-music-check.mp3`.
-  GATE: owner OK -> full re-render (~31 min).
+- DONE v2 2026-11-16: `videos/2026-11-16-dali-bridge/out/dali-bridge-final-v2.mp4` (no music, voice + SFX, fixed visuals;
+  1080p30, 10:29, -15.0 LUFS, peak -4.3 dBFS, 0 black, 0 frozen; render 27 min; 225 MB). Use v2 for upload (v1 kept until owner says delete).
