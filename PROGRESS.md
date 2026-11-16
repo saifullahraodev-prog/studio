@@ -578,4 +578,7 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   Full shot-vs-narration audit -> fixed shots 4 (deck crew fading), 6/126 (wire + label next to a fingertip), 11 (leaving the lit
   port), 25/68 (deck close-up `DeckCrew`), 73 (yellow hard hats + candles, broken bridge behind), 74-77 (real divers, 2x),
   127/140/141 (`TrussPiece` on the bow), 132 (crew cutting with torches). Stills in `videos/2026-11-16-dali-bridge/fixes/`,
-  music sample `fixes/music-check.mp3`. GATE: owner OK -> full re-render (~31 min).
+  music sample `fixes/music-check.mp3`.
+- 2026-11-16 owner: "remove the music and just focus on the video and sfx, nothing else is needed" -> `--tracks none`
+  (voice + SFX only, -14.9 LUFS); standing rule for future Ship Guy videos. Sample `fixes/no-music-check.mp3`.
+  GATE: owner OK -> full re-render (~31 min).

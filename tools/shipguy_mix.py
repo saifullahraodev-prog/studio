@@ -101,8 +101,8 @@ def main(slug: str, tracks: str = ""):
     segs_raw = list(segs)
     quiet = [(s0, s1) for s0, s1, m in segs if m == "quiet"]
     segs = [(s0, s1, "light" if m == "quiet" else m) for s0, s1, m in segs]
-    music = sfx.music_bed(segs, dur)
-    for s0, s1 in quiet:
+    music = sfx.music_bed(segs, dur) if not tracks else np.zeros(1, dtype=np.float32)
+    for s0, s1 in (quiet if not tracks else []):
         a, b = int(s0 * SR), int(s1 * SR)
         ramp_n = int(1.5 * SR)
         env = np.ones(b - a, dtype=np.float32) * 0.22
@@ -218,7 +218,10 @@ def main(slug: str, tracks: str = ""):
     fx = sfx.render_events(ev, dur)[:n]
     fx = np.pad(fx, (0, max(0, n - len(fx))))
 
-    if tracks:
+    if tracks == "none":
+        # owner 2026-11-16: "remove the music, just the video and sfx" -> voice + sound effects only
+        mix = voice * 1.0 + fx * 0.3
+    elif tracks:
         music = real_music(segs_raw, dur, voice, tracks)
         mix = voice * 1.0 + music * 0.075 + fx * 0.3   # real tracks, well under the voice
     else:
