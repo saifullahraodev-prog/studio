@@ -22,6 +22,7 @@ import { ShipGuyThumb } from "../engine/shipguy/Thumb";
 import { ShipLook } from "../engine/shipguy/ships_hd";
 import { GuyLab, GuyLabProps, guyLabLength } from "../engine/shipguy/guyLab";
 import { calcShipGuyShort, ShipGuyShort, ShortProps as ShipGuyShortProps } from "../engine/shipguy/Short";
+import { BackLab, BackLabProps } from "../engine/backwards/lab";
 import { HowLab, HowLabProps } from "../engine/howwe/lab";
 import { EATING_PLACEHOLDER, HowFrames, HowFramesProps } from "../engine/howwe/frames";
 import { calcHowVideo, HowVideo, howVideoLength, HowVideoProps, Scene as HowScene } from "../engine/howwe/video";
@@ -195,6 +196,7 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{ demo: "hello" } as GuyLabProps}
         calculateMetadata={async ({ props }) => ({ durationInFrames: props.sheet || props.demo === "model" ? 1 : guyLabLength(props.demo) })} />
       <Composition id="ShipLook" component={ShipLook} durationInFrames={1} fps={30} width={1920} height={1080} />
+      <Composition id="BackLab" component={BackLab} durationInFrames={90} fps={30} width={1920} height={1080} defaultProps={{ view: "sheet" } as BackLabProps} />
       <Composition id="HowLab" component={HowLab} durationInFrames={1} fps={30} width={1920} height={1080} defaultProps={{ look: "A", view: "board" } as HowLabProps} />
       <Composition id="HowFrames" component={HowFrames} durationInFrames={1} fps={30} width={1920} height={1080} defaultProps={{ view: "board" } as HowFramesProps} />
       <Composition id="HowVideo" component={HowVideo} durationInFrames={30} fps={30} width={1920} height={1080}

@@ -1,7 +1,7 @@
 # The Ship Guy, long-form #5: "The Tiny Mistake That Brought Down a Bridge". SCRIPT DRAFT v1 (for approval)
 
 16:9, same 2D pipeline as Ever Given (animated Ship Guy, code-drawn scenes, captions, SFX, light music).
-About 1,450 spoken words; at the CapCut voice pace (~177 words/min) that is about 8:10.
+About 1,090 spoken words; at the CapCut voice pace (~177 words/min) that is about 6:10.
 *(Italics = what we see.)* The spoken words only go in `narration.txt` (paste that into CapCut, not this file).
 
 **Built on the retention lessons so far:**
@@ -16,7 +16,7 @@ About 1,450 spoken words; at the CapCut voice pace (~177 words/min) that is abou
 
 ---
 
-## 0. Hook (0:00–0:35)
+## 0. Hook (0:00–0:26)
 
 At twenty-five past one in the morning, a ship as long as three football pitches went completely dark.
 *[the Dali at night under the lit bridge; every light on the ship blinks out]*
@@ -32,7 +32,7 @@ And when investigators finally found what started it all, it was a piece of plas
 
 So how does a tiny label take down a giant bridge? To understand that, we need to go back to that night, and on board that ship.
 
-## 1. The ship and the night (0:35–1:35)
+## 1. The ship and the night (0:26–1:12)
 
 The ship is called Dali. It's a container ship, three hundred metres long, built in South Korea in twenty fifteen.
 *[side view of the Dali sailing, the Ship Guy on the dock waving it off]*
@@ -51,7 +51,7 @@ And on the bridge that night, a small road crew is doing a normal night-shift jo
 
 Everything is normal. Until it isn't.
 
-## 2. Lights out (1:35–3:05)
+## 2. Lights out (1:12–2:20)
 
 At twenty-five past one, every light on the Dali goes out.
 *[bridge interior: screens die, lights off, everyone frozen]*
@@ -74,7 +74,7 @@ But the ship doesn't stop. A ship this size carries a huge amount of momentum. I
 The crew get some power back within about a minute. And then, it goes out again.
 *[lights flicker on… and off. The Ship Guy's hat flies off]*
 
-## 3. Ninety seconds (3:05–4:20)
+## 3. Ninety seconds (2:20–3:16)
 
 The pilot orders the rudder hard over and the anchor dropped. And at twenty-seven minutes past one, a mayday goes out on the radio. The ship has lost power, and it's heading for the bridge.
 *[radio waves from the ship; the anchor drops; calm, serious music]*
@@ -97,7 +97,7 @@ The bridge comes down in about thirty seconds.
 Two people were rescued from the water and the wreckage. Six road workers died.
 *[six small hard hats in a row; no music for a moment]*
 
-## 4. Why a whole bridge fell (4:20–5:10)
+## 4. Why a whole bridge fell (3:16–3:54)
 
 So how can one hit bring down a bridge that's more than two kilometres long?
 *[the Ship Guy, serious, by the bridge diagram]*
@@ -114,7 +114,7 @@ But the Key Bridge was built in the nineteen-seventies. Ships have become much b
 Later, the investigators calculated that the risk of this bridge collapsing after a ship strike was almost thirty times higher than what's acceptable for a bridge this important. And nobody had ever checked.
 *[a risk meter swings far into red: "30×"]*
 
-## 5. The piece of plastic (5:10–6:20)
+## 5. The piece of plastic (3:54–4:47)
 
 The United States safety board, the NTSB, investigated for twenty months. Their final report came out in November twenty twenty-five.
 *[a thick report lands on a desk; the Ship Guy flips through it]*
@@ -137,7 +137,7 @@ The second blackout had another cause. The crew had been using a pump meant for 
 So a misplaced label, and the wrong pump, on the wrong night.
 *[the Ship Guy holds up the tiny label again, and sighs]*
 
-## 6. Cutting a bridge off a ship (6:20–7:15)
+## 6. Cutting a bridge off a ship (4:47–5:29)
 
 Meanwhile, the Dali was stuck under the wreckage, with thousands of tonnes of bridge steel lying across its bow.
 *[side view: the Dali with the bent truss draped over its front]*
@@ -154,7 +154,7 @@ On the twentieth of May, the Dali finally floated free and was towed back into p
 Most of the crew had stayed on the ship for weeks. Some were told to stay in Baltimore during the investigation, and a few were still there almost two years later.
 *[the crew on deck, then a calendar flipping]*
 
-## 7. What it costs, and what changes (7:15–8:10)
+## 7. What it costs, and what changes (5:29–6:10)
 
 The ship's owners agreed to pay about one hundred and two million dollars for clearing the channel, without admitting they were responsible.
 *[a cheque slides in: $102,000,000]*
@@ -204,4 +204,4 @@ If you want to see another giant ship that got stuck in a very narrow place, and
 7. **"Dolphins too small for a ship like the Dali"** is a simplified version of NTSB's finding that the bridge lacked adequate
    protection and its risk was never evaluated; I don't give specific dolphin sizes.
 8. **Legal:** criminal cases against some people are still open (2026). The script does not name or blame any person.
-9. Length: ~1,450 words → about 8:10 at the CapCut pace.
+9. Length: ~1,090 words → about 6:10 at the CapCut pace (section times above are estimates).

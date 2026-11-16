@@ -524,7 +524,7 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   Review sheet `docs/backwards/backwards-look-A.png`. GATE: owner to approve look + host + thumbnail, choose channel name.
 
 ## 2026-11-16: The Ship Guy long-form #5 "The Tiny Mistake That Brought Down a Bridge" (Dali / Key Bridge, script draft v1)
-- Owner picked The Ship Guy + Dali vs Baltimore Key Bridge. `videos/2026-11-16-dali-bridge/script.md` (8 sections, sources,
+- Owner picked The Ship Guy + Dali vs Baltimore Key Bridge. `videos/2026-11-16-dali-bridge/script.md` (8 sections, ~1,090 words ~6:10, sources,
   9 fact notes) + `narration.txt` (spoken words only). Hook built on the Seawise retention lesson: story + twist (a plastic
   label) with the story starting by ~0:35, no spec-sheet. Serious tone in the collapse sections (6 deaths, no gags).
 - GATE: waiting for owner approval of script v1.
