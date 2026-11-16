@@ -71,7 +71,10 @@
   6 chapters, 40 scenes, 655 words; thesis "Who does the cutting?". New objects: fork3, knifeRound, pasta, flatbread
   (stand-in for injera). Placeholder build: 3:39, 203 visual changes, longest gap 3.9 s; R4 1.3 s = placeholder-voice
   pause on "1669"; R5 6.17 s. Checker now lists every gap > 4 s. Not rendered. Length is SHORT vs plan (10-16 min):
-  WAITING: owner decides keep tight (~4 min) or expand (~8-10 min, more research).
+  Owner asked for a demo: rendered `out/howwe/forks-full-720p.mp4` (3:39, 506 s render = 2.3 s per second of video),
+  QC ok (no black/frozen, -14.8 LUFS); sheet `out/howwe/forks-full-sheet.png`. Seen: many frames are empty plinths or
+  white cards (exhibits appear on late words; lots of cardFlips) -> visual variety is the weak spot for a longer cut.
+  WAITING: owner decides keep tight (~4 min) or expand (~8-10 min, more research + more rooms).
 - NEXT (was): asset kits (map: done; reference-based costumes; object library;
   scene templates; motion + transitions), then video 1 script "Why Half the World Doesn't Use Forks".
 
