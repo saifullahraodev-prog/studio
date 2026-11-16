@@ -530,4 +530,6 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
 - 2026-11-16 owner asked for 10-12 min -> script v2 expanded to ~1,950 words (~11:00) with researched beats: stopping/anchor +
   three ship lengths, the search, the 1980 Sunshine Skyway precedent (35 dead, origin of the 1991 rules), breakers in manual
   (58 s vs 10 s), finding the wire took a month, the port cut off + Chesapeake 1000 (CIA submarine past), temporary channels,
-  the anthem-name buoy, Dali repaired in China and back in service Jan 2025. 14 fact notes. GATE: owner approval of script v2.
+  the anthem-name buoy, Dali repaired in China and back in service Jan 2025. 14 fact notes.
+- GATE passed 2026-11-16: owner approved script v2. Next: owner records voice (CapCut, narration.txt; CapCut cuts at 10:00, so
+  expect 2 parts); I build the shot plan + new templates (night bridge, blackout cut-away, truss collapse, terminal block, crane).

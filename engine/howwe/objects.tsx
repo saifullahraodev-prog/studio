@@ -24,6 +24,36 @@ const Fork2: React.FC = () => (
     <path d="M-30 -110 L-30 0 Q-30 42 0 46 Q30 42 30 0 L30 -110 L18 -110 L16 -4 L-16 -4 L-18 -110 Z" fill="#E4C26A" />
   </g>
 );
+/** Three-tined table fork (early 18th century step between two and four tines). */
+const Fork3: React.FC = () => (
+  <g {...st}>
+    <path d="M-10 60 L-12 330 Q0 350 12 330 L10 60 Z" fill={INK.metal} />
+    <path d="M-32 -90 L-32 20 Q-32 62 0 66 Q32 62 32 20 L32 -90 L21 -90 L19 16 L6 16 L5 -90 L-5 -90 L-6 16 L-19 16 L-21 -90 Z" fill={INK.metal} />
+  </g>
+);
+/** Round-tipped table knife (the blunt dinner knife). */
+const KnifeRound: React.FC = () => (
+  <g {...st}>
+    <path d="M-12 70 L-13 330 Q0 348 13 330 L12 70 Z" fill={INK.metal} />
+    <path d="M-14 70 L-16 -60 Q-16 -100 2 -100 Q20 -100 18 -60 L14 70 Z" fill={INK.metal} />
+  </g>
+);
+/** Bowl of long pasta with a fork twirl (the "pasta" explanation for Italy keeping the fork). */
+const Pasta: React.FC = () => (
+  <g {...st}>
+    <path d="M-220 -40 L220 -40 Q210 110 0 130 Q-210 110 -220 -40 Z" fill="#F4EFE4" />
+    <path d="M-190 -40 Q-170 -120 0 -125 Q170 -120 190 -40 Z" fill="#E9C77B" />
+    {[-120, -60, 0, 60, 120].map((x, i) => <path key={i} d={`M${x - 50} -50 Q${x} ${-110 + (i % 2) * 20} ${x + 50} -60`} fill="none" stroke="#C9A24A" strokeWidth={6} />)}
+    <path d="M-30 -80 Q0 -100 30 -80" fill="none" stroke="#B8432F" strokeWidth={10} />
+  </g>
+);
+/** Round flatbread (generic stand-in for injera / naan until drawn from a reference). */
+const Flatbread: React.FC = () => (
+  <g {...st}>
+    <ellipse cx={0} cy={0} rx={230} ry={120} fill="#D9B48A" />
+    {Array.from({ length: 26 }).map((_, i) => <circle key={i} cx={-170 + (i * 67) % 340} cy={-70 + ((i * 37) % 140)} r={7} fill="#B98E62" stroke="none" />)}
+  </g>
+);
 const Teacup: React.FC = () => (
   <g {...st}>
     <ellipse cx={0} cy={110} rx={170} ry={34} fill={INK.plate} />
@@ -52,6 +82,10 @@ type Entry = { name: string; top: number; bottom: number; draw: React.FC };
 export const OBJECTS: Record<string, Entry> = {
   fork: { name: "Fork", top: -80, bottom: 350, draw: () => <Fork x={0} y={0} ink={INK} /> },
   fork2: { name: "Golden fork", top: -110, bottom: 350, draw: Fork2 },
+  fork3: { name: "Three-tined fork", top: -90, bottom: 350, draw: Fork3 },
+  knifeRound: { name: "Round-tipped knife", top: -100, bottom: 348, draw: KnifeRound },
+  pasta: { name: "Pasta", top: -125, bottom: 130, draw: Pasta },
+  flatbread: { name: "Flatbread", top: -120, bottom: 120, draw: Flatbread },
   knife: { name: "Knife", top: -100, bottom: 348, draw: () => <Knife x={0} y={0} ink={INK} /> },
   spoon: { name: "Spoon", top: -110, bottom: 348, draw: Spoon },
   chopsticks: { name: "Chopsticks", top: -232, bottom: 232, draw: () => <Chopsticks x={0} y={0} rot={6} ink={INK} /> },
