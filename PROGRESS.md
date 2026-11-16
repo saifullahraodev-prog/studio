@@ -65,7 +65,13 @@
   R1-R4 pass, R5 6.06 s (0.06 over, accepted). Storyboard `docs/howwe/forks-opening/`.
 - 2026-11-16: rendered `out/howwe/forks-opening-720p.mp4` (65.4 s, 326 s render = ~5 s per second of video: the map
   scenes are the slow part). QC: no black/frozen frames, -14.8 LUFS. Sheet `out/howwe/forks-opening-sheet.png`.
-  Seen: keyword pops cover the exhibit label cards ("GOLDEN", "THREE"). WAITING: owner watches and gives notes.
+  Seen: keyword pops cover the exhibit label cards ("GOLDEN", "THREE"). Owner: "Yes, much better" (real content was the gap).
+- 2026-11-16: FULL SCRIPT v1 for video 1: `videos/2026-11-16-howwe-forks-full/` (make_script.py -> script.json,
+  narration.txt [spoken words only, for CapCut TTS], script.md [readable], sources.md [27 claims, TODOs marked]).
+  6 chapters, 40 scenes, 655 words; thesis "Who does the cutting?". New objects: fork3, knifeRound, pasta, flatbread
+  (stand-in for injera). Placeholder build: 3:39, 203 visual changes, longest gap 3.9 s; R4 1.3 s = placeholder-voice
+  pause on "1669"; R5 6.17 s. Checker now lists every gap > 4 s. Not rendered. Length is SHORT vs plan (10-16 min):
+  WAITING: owner decides keep tight (~4 min) or expand (~8-10 min, more research).
 - NEXT (was): asset kits (map: done; reference-based costumes; object library;
   scene templates; motion + transitions), then video 1 script "Why Half the World Doesn't Use Forks".
 

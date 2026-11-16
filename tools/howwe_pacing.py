@@ -89,6 +89,9 @@ def main():
     print(f"{ok(avg <= 3 * FPS)} R3 average gap {avg / FPS:.2f} s (<= 3 s)")
     print(f"{ok(not dead)} R4 dead air (silence > 1.2 s): {len(dead)}" + (f"  e.g. {dead[0][0] / FPS:.1f} s at {dead[0][1] / FPS:.1f} s" if dead else ""))
     print(f"{ok(sum(durs) / len(durs) <= 6 * FPS)} R5 average scene {sum(durs) / len(durs) / FPS:.2f} s (<= 6 s)")
+    over = [(g, a) for g, a in gaps if g > 4 * FPS]
+    if len(over) > 1:
+        print("     all gaps over 4 s: " + ", ".join(f"{g / FPS:.1f} s at {a / FPS:.1f} s" for g, a in sorted(over, key=lambda x: x[1])))
     if "-v" in sys.argv:
         for t, n in ev:
             print(f"   {t / FPS:6.2f}s  {n}")
