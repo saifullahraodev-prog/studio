@@ -62,7 +62,10 @@
   (chopstick share via Q. E. Wang; Venetian golden fork, 11th c., clergyman's "natural forks" via Nat Geo; Coryat 1608
   "Furcifer"; Yinxu bronze chopsticks c.1200 BC; fuel = "one popular theory"). Kit: golden two-pronged fork `fork2`,
   cardFlip custom labels, map pins + routes on words, legend optional. Build: 65.4 s, 12 scenes, 53 visual changes,
-  R1-R4 pass, R5 6.06 s (0.06 over, accepted). Storyboard `docs/howwe/forks-opening/`. WAITING: owner OK to render.
+  R1-R4 pass, R5 6.06 s (0.06 over, accepted). Storyboard `docs/howwe/forks-opening/`.
+- 2026-11-16: rendered `out/howwe/forks-opening-720p.mp4` (65.4 s, 326 s render = ~5 s per second of video: the map
+  scenes are the slow part). QC: no black/frozen frames, -14.8 LUFS. Sheet `out/howwe/forks-opening-sheet.png`.
+  Seen: keyword pops cover the exhibit label cards ("GOLDEN", "THREE"). WAITING: owner watches and gives notes.
 - NEXT (was): asset kits (map: done; reference-based costumes; object library;
   scene templates; motion + transitions), then video 1 script "Why Half the World Doesn't Use Forks".
 
