@@ -1,0 +1,72 @@
+TITLE (use this one)
+The Tiny Mistake That Brought Down a Bridge
+
+Other title options (for later A/B tests):
+- A Piece of Plastic Brought Down This Bridge
+- Why a Ship Lost Power and Destroyed Baltimore's Key Bridge
+- The Dali Disaster: 4 Minutes, One Loose Wire
+
+THUMBNAIL (in the thumbnails folder)
+- thumb-A.jpg  "THIS?!": the fallen bridge at night, the tiny plastic label huge in a circle, the Ship Guy shocked (recommended)
+- thumb-B.jpg  "NO POWER": the ship gliding at the lit bridge, the Ship Guy scared (good second for YouTube's thumbnail test)
+- thumb-C.jpg  "4 MINUTES": the bridge falling, the Ship Guy shocked
+
+=====================================================================
+
+DESCRIPTION (paste everything between the lines)
+---------------------------------------------------------------------
+At 1:25 in the morning on 26 March 2024, the container ship Dali lost all power, only about three ship lengths from Baltimore's Francis Scott Key Bridge. Four minutes later, the bridge was in the river. Six road workers lost their lives.
+
+Twenty months later, the investigation found where it started: a tiny plastic wire label, put in the wrong place when the ship was built. This is the story of that night, why one hit brought down the whole bridge, the disaster in 1980 that should have prevented it, and what is changing now.
+
+⏱ CHAPTERS
+0:00 Lights out, bridge down
+0:28 The ship and the night
+1:41 Lights out
+3:02 Ninety seconds
+3:55 The search
+4:22 Why a whole bridge fell
+5:20 It happened before (1980)
+6:18 The piece of plastic
+7:44 A port cut off
+9:28 What it costs, and what changes
+
+📊 KEY FACTS
+• Ship: Dali, 300 m container ship, built 2015 · 4,700 containers aboard
+• Blackout: about 1:25 a.m., roughly three ship lengths from the bridge
+• Impact: about 1:29 a.m., at around 7 knots · the bridge fell in about 30 seconds
+• Police stopped traffic at both ends in about 90 seconds
+• NTSB final report (Nov 2025): a loose signal wire, caused by a misplaced wire label
+• Channel fully reopened: 10 June 2024 · new bridge estimate: $4.3–5.2 billion, late 2030
+
+We remember the six road workers who died that night.
+
+🚢 Watch next: One Ship Blocked $9.6 Billion a Day (the Ever Given)
+🚢 Also: The Biggest Ship Ever Built Was Bombed — Then Came Back
+
+📚 SOURCES
+• Key Bridge collapse: https://en.wikipedia.org/wiki/Francis_Scott_Key_Bridge_collapse
+• NTSB final report coverage: https://www.marineinsight.com/shipping-news/ntsb-releases-final-report-into-container-ship-collision-that-brought-down-baltimores-key-bridge/
+• NTSB: 68 bridges to assess, "almost 30 times" the acceptable risk: https://www.ntsb.gov/news/press-releases/Pages/NR20250320.aspx
+• Breakers in manual, three ship lengths: https://www.workboat.com/coastal-inland-waterways/ntsb-loose-wire-was-root-cause-of-baltimore-bridge-collapse
+• Finding the loose wire took a month: https://maritime-executive.com/article/finding-loose-wire-in-dali-s-switchboard-took-a-month
+• Police stopped traffic: https://www.pbs.org/newshour/nation/police-had-less-than-2-minutes-to-stop-traffic-before-key-bridge-collapse
+• Sunshine Skyway 1980 (NTSB): https://www.ntsb.gov/investigations/Pages/DCA80AM050.aspx
+• Port reopening and salvage: https://fortune.com/2024/06/11/baltimore-shipping-channel-closed-francis-scott-key-bridge-collapse-reopens/
+• Rebuild cost and date: https://wtop.com/maryland/2025/11/cost-projection-for-new-key-bridge-doubles-with-expected-opening-far-later-than-first-hoped/
+
+Some sound effects: BigSoundBank.com (CC0)
+
+Subscribe to The Ship Guy for more stories about the biggest, strangest and most expensive ships on Earth.
+
+#KeyBridge #Baltimore #Ships
+---------------------------------------------------------------------
+
+TAGS (YouTube Studio → Show more → Tags; paste as one line)
+key bridge collapse, baltimore bridge collapse, dali ship, francis scott key bridge, ntsb report, ship lost power, container ship accident, bridge collapse explained, sunshine skyway, port of baltimore, ship blackout, the ship guy
+
+CATEGORY: Education
+SUBTITLES: the video already has subtitles burned in. Also upload dali-bridge.en.srt under Subtitles (English, "With timing")
+so YouTube's own captions, search and auto-translate work.
+END SCREEN: the last ~9 seconds point to the Ever Given video. In YouTube Studio → End screen, place the video element over the
+"STUCK!" card (right side) and a Subscribe element over the red button.

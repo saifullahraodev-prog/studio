@@ -7,6 +7,7 @@ import { Boom, Flames, INK, Jet, Sea, Sky, Smoke, Stickman, Tanker, Towers, Wate
 import { fontFamily, Svg } from "./scenes";
 import { BigEngine, Boat, Building, PistonArt } from "./templates2";
 import { EG_THUMBS } from "./ThumbEG";
+import { DALI_THUMBS } from "./ThumbDali";
 import { COST_THUMBS } from "./ThumbCost";
 
 const Big: React.FC<{ lines: { text: string; color: string; size: number }[]; x: number; y: number; rot?: number; align?: "left" | "right" | "center" }> = ({ lines, x, y, rot = -4, align = "left" }) => (
@@ -142,5 +143,6 @@ const ThumbF: React.FC = () => (
 
 export const ShipGuyThumb: React.FC<{ v: string }> = ({ v }) =>
   EG_THUMBS[v] ? React.createElement(EG_THUMBS[v]) :
+  DALI_THUMBS[v] ? React.createElement(DALI_THUMBS[v]) :
   COST_THUMBS[v] ? React.createElement(COST_THUMBS[v]) :
   v === "B" ? <ThumbB /> : v === "C" ? <ThumbC /> : v === "D" ? <ThumbD /> : v === "E" ? <ThumbE /> : v === "F" ? <ThumbF /> : <ThumbA />;

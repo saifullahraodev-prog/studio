@@ -1,0 +1,1071 @@
+1
+00:00:00,000 --> 00:00:01,930
+At twenty-five past one in the morning,
+
+2
+00:00:02,080 --> 00:00:05,650
+a ship as long as three football
+pitches went completely dark.
+
+3
+00:00:05,800 --> 00:00:08,370
+Four minutes later, a
+bridge that had stood
+
+4
+00:00:08,420 --> 00:00:11,490
+for forty-seven years
+was lying in the river.
+
+5
+00:00:11,640 --> 00:00:14,590
+Six men working on that
+bridge never went home.
+
+6
+00:00:14,740 --> 00:00:18,030
+And when investigators finally
+found what started it all,
+
+7
+00:00:18,200 --> 00:00:21,010
+it was a piece of plastic
+smaller than your finger.
+
+8
+00:00:21,200 --> 00:00:23,790
+So how does a tiny label
+take down a giant bridge?
+
+9
+00:00:23,840 --> 00:00:26,330
+To understand that, we need to go back
+
+10
+00:00:26,380 --> 00:00:28,810
+to that night, and on board that ship.
+
+11
+00:00:28,960 --> 00:00:30,570
+The ship is called Dali.
+
+12
+00:00:30,740 --> 00:00:33,350
+It's a container ship,
+three hundred metres long,
+
+13
+00:00:33,400 --> 00:00:35,770
+built in South Korea in twenty fifteen.
+
+14
+00:00:35,920 --> 00:00:38,730
+On the night of the twenty-sixth
+of March, twenty twenty-four,
+
+15
+00:00:38,880 --> 00:00:42,070
+it's leaving the Port of
+Baltimore, in the United States.
+
+16
+00:00:42,320 --> 00:00:44,990
+It's carrying about four thousand
+seven hundred containers,
+
+17
+00:00:45,040 --> 00:00:47,870
+and it's heading for Sri Lanka.
+
+18
+00:00:48,020 --> 00:00:51,610
+On board are twenty-one crew,
+and two local harbour pilots,
+
+19
+00:00:51,680 --> 00:00:54,110
+experts who guide big
+ships through the harbour.
+
+20
+00:00:54,260 --> 00:00:57,890
+In a big port, ships don't
+find their own way in and out.
+
+21
+00:00:58,100 --> 00:01:01,870
+Every harbour has its own bends,
+shallow spots and bridges,
+
+22
+00:01:02,140 --> 00:01:04,630
+so local pilots come on board and give the
+
+23
+00:01:04,680 --> 00:01:07,810
+steering orders until the
+ship reaches open water.
+
+24
+00:01:07,960 --> 00:01:10,990
+Ahead of it is the
+Francis Scott Key Bridge.
+
+25
+00:01:11,260 --> 00:01:13,330
+It's about two point six kilometres long,
+
+26
+00:01:13,380 --> 00:01:15,750
+and it carries a busy
+highway across the river.
+
+27
+00:01:15,800 --> 00:01:17,630
+And it has a famous name.
+
+28
+00:01:17,920 --> 00:01:20,890
+In eighteen fourteen,
+Francis Scott Key watched a
+
+29
+00:01:20,940 --> 00:01:23,370
+battle at Fort McHenry,
+just up this same river,
+
+30
+00:01:23,420 --> 00:01:26,850
+and wrote the poem that became
+America's national anthem.
+
+31
+00:01:27,200 --> 00:01:30,390
+Every summer, a red,
+white and blue buoy is
+
+32
+00:01:30,440 --> 00:01:33,070
+placed in the water near
+the spot where he watched.
+
+33
+00:01:33,420 --> 00:01:36,470
+And on the bridge that
+night, a small road crew is
+
+34
+00:01:36,520 --> 00:01:39,330
+doing a normal night-shift
+job: filling potholes.
+
+35
+00:01:39,480 --> 00:01:40,710
+Everything is normal.
+
+36
+00:01:40,900 --> 00:01:41,770
+Until it isn't.
+
+37
+00:01:41,820 --> 00:01:45,530
+At twenty-five past one, when
+the ship is only about three ship
+
+38
+00:01:45,580 --> 00:01:49,230
+lengths away from the bridge,
+every light on the Dali goes out.
+
+39
+00:01:49,380 --> 00:01:51,890
+To understand why that's so dangerous,
+
+40
+00:01:52,040 --> 00:01:54,050
+you need to know one
+thing about big ships.
+
+41
+00:01:54,160 --> 00:01:56,490
+A modern ship is basically
+a floating power station.
+
+42
+00:01:56,640 --> 00:01:57,990
+Generators make the electricity,
+
+43
+00:01:58,040 --> 00:02:01,270
+and that electricity
+runs almost everything.
+
+44
+00:02:01,420 --> 00:02:02,190
+The steering.
+
+45
+00:02:02,240 --> 00:02:03,110
+The lights.
+
+46
+00:02:03,160 --> 00:02:03,690
+The radios.
+
+47
+00:02:03,740 --> 00:02:06,530
+And the pumps that keep
+the main engine alive.
+
+48
+00:02:06,680 --> 00:02:08,730
+The main engine is cooled by water,
+
+49
+00:02:08,780 --> 00:02:11,850
+and that water is pushed
+around by electric pumps.
+
+50
+00:02:11,900 --> 00:02:14,030
+So when the power dies, the cooling stops,
+
+51
+00:02:14,080 --> 00:02:16,550
+and the main engine shuts itself down.
+
+52
+00:02:16,700 --> 00:02:20,030
+No engine means no propeller
+pushing water past the rudder.
+
+53
+00:02:20,160 --> 00:02:23,170
+And without that flow, the
+rudder can barely steer.
+
+54
+00:02:23,400 --> 00:02:24,710
+So why not just stop?
+
+55
+00:02:24,960 --> 00:02:27,430
+Because a ship this size
+can't stop like a car.
+
+56
+00:02:27,600 --> 00:02:28,610
+There are no brakes.
+
+57
+00:02:28,880 --> 00:02:32,130
+When it's fully loaded, the Dali
+and its cargo weigh well over
+
+58
+00:02:32,180 --> 00:02:35,650
+a hundred thousand tonnes, and
+all of that keeps gliding forward.
+
+59
+00:02:35,800 --> 00:02:39,730
+Even at a walking pace, that
+much weight doesn't want to stop.
+
+60
+00:02:39,840 --> 00:02:42,810
+Imagine trying to stop a sliding
+block of flats with your hands.
+
+61
+00:02:42,960 --> 00:02:45,010
+The pilots try everything they can.
+
+62
+00:02:45,160 --> 00:02:47,170
+They order the rudder
+hard over to turn away,
+
+63
+00:02:47,220 --> 00:02:50,630
+and they drop an anchor to
+drag the ship and slow it down.
+
+64
+00:02:50,780 --> 00:02:52,870
+But an anchor isn't a parking brake.
+
+65
+00:02:53,080 --> 00:02:55,470
+It digs in and drags, and that takes time.
+
+66
+00:02:55,560 --> 00:02:57,450
+Three ship lengths is not much time.
+
+67
+00:02:57,720 --> 00:02:59,790
+The crew get some power
+back within about a minute.
+
+68
+00:02:59,840 --> 00:03:02,290
+And then, it goes out again.
+
+69
+00:03:02,600 --> 00:03:06,130
+At twenty-seven minutes past one,
+a mayday goes out on the radio.
+
+70
+00:03:06,280 --> 00:03:08,870
+The ship has lost power, and
+it's heading for the bridge.
+
+71
+00:03:09,160 --> 00:03:11,810
+What happened next probably
+saved a lot of lives.
+
+72
+00:03:11,960 --> 00:03:13,030
+The message reached the police,
+
+73
+00:03:13,080 --> 00:03:16,530
+and officers at both ends of
+the bridge stopped the traffic.
+
+74
+00:03:16,700 --> 00:03:18,450
+They had about ninety seconds.
+
+75
+00:03:18,780 --> 00:03:22,930
+And in that time, no more
+cars drove onto the bridge.
+
+76
+00:03:23,080 --> 00:03:25,010
+One officer even radioed that he would
+
+77
+00:03:25,060 --> 00:03:27,430
+drive onto the bridge
+to warn the road crew.
+
+78
+00:03:27,480 --> 00:03:29,350
+There wasn't enough time.
+
+79
+00:03:29,500 --> 00:03:32,650
+Later, the NTSB said the
+quick actions of the pilots,
+
+80
+00:03:32,800 --> 00:03:36,410
+the dispatchers and the police
+prevented a much bigger loss of life.
+
+81
+00:03:36,700 --> 00:03:39,970
+But the road crew in the middle
+didn't get the warning in time.
+
+82
+00:03:40,120 --> 00:03:44,250
+At about one twenty-nine, the
+Dali, moving at around seven knots,
+
+83
+00:03:44,380 --> 00:03:47,750
+a fast walking pace, hits one
+of the bridge's main supports.
+
+84
+00:03:47,900 --> 00:03:50,470
+The bridge comes down
+in about thirty seconds.
+
+85
+00:03:50,620 --> 00:03:53,650
+Two people were rescued from
+the water and the wreckage.
+
+86
+00:03:53,700 --> 00:03:55,770
+Six road workers died.
+
+87
+00:03:55,920 --> 00:03:58,090
+Divers went into the
+river that same night.
+
+88
+00:03:58,240 --> 00:03:59,570
+The water was dark and cold,
+
+89
+00:03:59,620 --> 00:04:02,450
+and full of twisted steel
+and broken concrete.
+
+90
+00:04:02,600 --> 00:04:04,290
+The search was slow and dangerous.
+
+91
+00:04:04,600 --> 00:04:06,830
+Some of the wreckage was
+so tangled that divers
+
+92
+00:04:06,880 --> 00:04:10,110
+couldn't reach it until
+salvage crews had cut it apart.
+
+93
+00:04:10,260 --> 00:04:12,930
+Two of the workers were
+found the next day,
+
+94
+00:04:13,020 --> 00:04:15,230
+inside their truck at
+the bottom of the river.
+
+95
+00:04:15,520 --> 00:04:17,890
+The others were found
+over the following weeks.
+
+96
+00:04:17,940 --> 00:04:21,050
+The last of the six was
+recovered on the seventh of May.
+
+97
+00:04:21,100 --> 00:04:22,750
+Six weeks after the bridge fell.
+
+98
+00:04:22,800 --> 00:04:24,910
+So how can one hit bring down a bridge
+
+99
+00:04:24,960 --> 00:04:27,190
+that's more than two kilometres long?
+
+100
+00:04:27,240 --> 00:04:30,530
+The middle part of the Key Bridge
+was a continuous steel truss,
+
+101
+00:04:30,740 --> 00:04:32,910
+one long piece resting on a few supports.
+
+102
+00:04:33,060 --> 00:04:34,410
+Take away one of those supports,
+
+103
+00:04:34,460 --> 00:04:36,930
+and the long piece can't hold itself up.
+
+104
+00:04:37,140 --> 00:04:38,190
+It all goes together.
+
+105
+00:04:38,340 --> 00:04:40,530
+Big bridges over shipping
+lanes are protected by
+
+106
+00:04:40,580 --> 00:04:43,290
+barriers around their
+supports, called dolphins.
+
+107
+00:04:43,440 --> 00:04:44,870
+They're there to catch or push away
+
+108
+00:04:44,920 --> 00:04:46,770
+a ship before it reaches the bridge.
+
+109
+00:04:46,920 --> 00:04:51,310
+On the newest bridges, the supports
+even sit on artificial islands of rock,
+
+110
+00:04:51,620 --> 00:04:55,130
+so a ship runs aground long
+before it can touch the bridge.
+
+111
+00:04:55,340 --> 00:04:57,950
+But the Key Bridge was built
+in the nineteen-seventies.
+
+112
+00:04:58,020 --> 00:04:59,950
+Ships have become much bigger since then,
+
+113
+00:05:00,000 --> 00:05:03,410
+and its protection was far too
+small for a ship like the Dali.
+
+114
+00:05:03,560 --> 00:05:07,130
+Later, the investigators
+calculated that the risk of this
+
+115
+00:05:07,180 --> 00:05:10,430
+bridge collapsing after a ship
+strike was almost thirty times
+
+116
+00:05:10,480 --> 00:05:13,270
+higher than what's acceptable
+for a bridge this important.
+
+117
+00:05:13,320 --> 00:05:15,270
+And nobody had ever checked.
+
+118
+00:05:15,320 --> 00:05:17,150
+And here's the frustrating part.
+
+119
+00:05:17,360 --> 00:05:20,850
+America had already learned
+this lesson once, the hard way.
+
+120
+00:05:21,060 --> 00:05:24,170
+It's the ninth of May, nineteen
+eighty, in Tampa Bay, Florida.
+
+121
+00:05:24,320 --> 00:05:26,870
+Early in the morning, a
+sudden storm hits the bay.
+
+122
+00:05:27,020 --> 00:05:28,810
+A cargo ship called the Summit Venture
+
+123
+00:05:28,860 --> 00:05:31,310
+is heading for the Sunshine Skyway Bridge.
+
+124
+00:05:31,600 --> 00:05:35,630
+In the storm, the crew can barely
+see, and the ship's radar fails.
+
+125
+00:05:35,840 --> 00:05:37,730
+The ship hits one of
+the bridge's supports.
+
+126
+00:05:37,880 --> 00:05:40,170
+A long section of the
+bridge falls into the bay.
+
+127
+00:05:40,220 --> 00:05:43,730
+Cars and a bus drove off the
+broken edge in the storm.
+
+128
+00:05:44,020 --> 00:05:45,450
+Thirty-five people died.
+
+129
+00:05:45,520 --> 00:05:46,520
+One man survived.
+
+130
+00:05:46,760 --> 00:05:48,450
+His pickup truck fell with the road,
+
+131
+00:05:48,540 --> 00:05:50,390
+hit the side of the ship, and sank.
+
+132
+00:05:50,560 --> 00:05:51,650
+He swam back to the surface,
+
+133
+00:05:51,700 --> 00:05:54,590
+and the ship's own crew
+pulled him out of the water.
+
+134
+00:05:54,820 --> 00:05:56,830
+That disaster changed the rules.
+
+135
+00:05:57,060 --> 00:05:59,830
+After it, engineers in the
+United States created a
+
+136
+00:05:59,880 --> 00:06:02,730
+way to calculate how likely a
+bridge is to be hit by a ship,
+
+137
+00:06:02,780 --> 00:06:05,250
+and how strong its protection needs to be.
+
+138
+00:06:05,460 --> 00:06:07,690
+The new Sunshine Skyway
+was built with huge
+
+139
+00:06:07,740 --> 00:06:09,510
+protective barriers around its supports.
+
+140
+00:06:09,560 --> 00:06:12,130
+But those rules were made for new bridges.
+
+141
+00:06:12,280 --> 00:06:14,070
+The Key Bridge had been built before them.
+
+142
+00:06:14,380 --> 00:06:16,070
+And nobody went back to check it against
+
+143
+00:06:16,120 --> 00:06:18,170
+the bigger and bigger
+ships coming through.
+
+144
+00:06:18,320 --> 00:06:21,370
+The United States safety board, the NTSB,
+
+145
+00:06:21,460 --> 00:06:23,690
+investigated the Dali for twenty months.
+
+146
+00:06:23,920 --> 00:06:26,410
+Their final report came out in
+November twenty twenty-five.
+
+147
+00:06:26,460 --> 00:06:29,570
+And the first blackout
+came down to one wire.
+
+148
+00:06:29,720 --> 00:06:31,430
+Inside an electrical cabinet,
+
+149
+00:06:31,480 --> 00:06:34,170
+there's a strip of terminals
+where wires are clamped in.
+
+150
+00:06:34,440 --> 00:06:36,930
+Each wire has a small plastic
+label wrapped around it,
+
+151
+00:06:36,980 --> 00:06:39,530
+so engineers know which wire is which.
+
+152
+00:06:39,780 --> 00:06:41,990
+On one wire, that label had been put on
+
+153
+00:06:42,040 --> 00:06:44,070
+in the wrong place when
+the ship was built.
+
+154
+00:06:44,280 --> 00:06:46,930
+It stopped the wire from going
+all the way into its slot.
+
+155
+00:06:46,980 --> 00:06:48,850
+So the wire was only half connected.
+
+156
+00:06:48,900 --> 00:06:50,350
+For years it held.
+
+157
+00:06:50,520 --> 00:06:52,670
+Then that night, it lost contact,
+
+158
+00:06:52,800 --> 00:06:55,150
+a breaker tripped, and the ship went dark.
+
+159
+00:06:55,400 --> 00:06:56,910
+Finding it wasn't easy.
+
+160
+00:06:57,060 --> 00:06:59,410
+That cabinet held hundreds
+of terminal blocks.
+
+161
+00:06:59,560 --> 00:07:02,610
+Investigators tested the
+system for about a month before
+
+162
+00:07:02,660 --> 00:07:06,110
+they took the panel apart
+and found the one loose wire.
+
+163
+00:07:06,400 --> 00:07:09,010
+In the lab, it showed
+scrape marks and burn marks
+
+164
+00:07:09,060 --> 00:07:11,150
+where electricity had been
+jumping across the gap.
+
+165
+00:07:11,200 --> 00:07:12,530
+And there was more.
+
+166
+00:07:12,760 --> 00:07:14,250
+Some of the ship's main power switches
+
+167
+00:07:14,300 --> 00:07:16,570
+were set to manual instead of automatic.
+
+168
+00:07:16,720 --> 00:07:18,950
+The NTSB found that on automatic,
+
+169
+00:07:19,080 --> 00:07:21,770
+the first blackout would have
+lasted about ten seconds.
+
+170
+00:07:22,000 --> 00:07:24,210
+Instead, it lasted almost a minute.
+
+171
+00:07:24,420 --> 00:07:26,270
+The second blackout had another cause.
+
+172
+00:07:26,520 --> 00:07:28,650
+The crew had been using
+a pump meant for flushing
+
+173
+00:07:28,700 --> 00:07:31,150
+and cleaning to feed
+fuel to the generators.
+
+174
+00:07:31,300 --> 00:07:33,330
+When the power dropped, that pump stopped,
+
+175
+00:07:33,380 --> 00:07:35,550
+and it didn't restart by itself.
+
+176
+00:07:35,700 --> 00:07:37,130
+The generators ran out of fuel.
+
+177
+00:07:37,180 --> 00:07:41,330
+So a misplaced label, a switch
+set to manual, and the wrong pump,
+
+178
+00:07:41,380 --> 00:07:44,450
+on the wrong night, three
+ship lengths from a bridge.
+
+179
+00:07:44,600 --> 00:07:46,950
+Meanwhile, the Dali was
+stuck under the wreckage,
+
+180
+00:07:47,080 --> 00:07:49,910
+with thousands of tonnes of
+bridge steel lying across its bow.
+
+181
+00:07:49,960 --> 00:07:51,490
+And the river was blocked.
+
+182
+00:07:51,640 --> 00:07:53,990
+The Port of Baltimore
+handles more cars and farm
+
+183
+00:07:54,040 --> 00:07:56,870
+machines than any other
+port in the United States.
+
+184
+00:07:57,200 --> 00:07:59,110
+Now it was cut off from the sea.
+
+185
+00:07:59,460 --> 00:08:01,870
+Thousands of dock workers,
+truck drivers and small
+
+186
+00:08:01,920 --> 00:08:05,050
+businesses suddenly had
+almost no work coming in.
+
+187
+00:08:05,100 --> 00:08:07,550
+So the salvage teams started cutting.
+
+188
+00:08:07,700 --> 00:08:10,410
+They brought in the largest
+floating crane on the East Coast,
+
+189
+00:08:10,460 --> 00:08:12,270
+called the Chesapeake One Thousand,
+
+190
+00:08:12,420 --> 00:08:15,210
+which can lift about a
+thousand tons at a time.
+
+191
+00:08:15,460 --> 00:08:18,070
+And this crane has a strange past.
+
+192
+00:08:18,400 --> 00:08:20,950
+It once helped the CIA
+secretly lift part of a
+
+193
+00:08:21,000 --> 00:08:23,990
+sunken Soviet submarine from
+the bottom of the ocean.
+
+194
+00:08:24,140 --> 00:08:27,690
+Piece by piece, they opened
+small channels so a few
+
+195
+00:08:27,740 --> 00:08:30,250
+ships could get in and
+out, and then bigger ones.
+
+196
+00:08:30,300 --> 00:08:33,330
+The first small channel opened just six
+
+197
+00:08:33,380 --> 00:08:36,250
+days after the collapse,
+for tugs and barges.
+
+198
+00:08:36,580 --> 00:08:38,930
+By late April, a deeper temporary channel
+
+199
+00:08:38,980 --> 00:08:41,090
+let some of the biggest
+ships through again.
+
+200
+00:08:41,300 --> 00:08:45,410
+Then, in May, they used small,
+carefully placed explosive charges
+
+201
+00:08:45,460 --> 00:08:48,970
+to cut the biggest section of
+the bridge off the Dali's bow.
+
+202
+00:08:49,120 --> 00:08:51,950
+On the twentieth of May, the Dali finally
+
+203
+00:08:52,000 --> 00:08:54,270
+floated free and was towed back into port.
+
+204
+00:08:54,360 --> 00:08:58,030
+And on the tenth of June, the full
+shipping channel was open again.
+
+205
+00:08:58,100 --> 00:09:00,870
+By then, crews had
+pulled an estimated fifty
+
+206
+00:09:00,920 --> 00:09:03,670
+thousand tons of steel and
+concrete out of the river.
+
+207
+00:09:03,820 --> 00:09:06,070
+Most of the crew had stayed
+on the ship for weeks.
+
+208
+00:09:06,320 --> 00:09:09,310
+Some were told to stay in
+Baltimore during the investigation,
+
+209
+00:09:09,360 --> 00:09:11,930
+and a few were still there
+almost two years later.
+
+210
+00:09:11,980 --> 00:09:13,770
+And the Dali itself?
+
+211
+00:09:13,920 --> 00:09:17,090
+After temporary repairs, it
+sailed to a shipyard in China,
+
+212
+00:09:17,140 --> 00:09:19,270
+where its smashed bow was rebuilt.
+
+213
+00:09:19,600 --> 00:09:22,350
+In January twenty
+twenty-five, about ten months
+
+214
+00:09:22,400 --> 00:09:24,390
+after the collapse, it went back to work,
+
+215
+00:09:24,440 --> 00:09:28,170
+carrying containers between
+Asia and Central America.
+
+216
+00:09:28,320 --> 00:09:31,970
+The ship's owners agreed to pay
+about one hundred and two million
+
+217
+00:09:32,020 --> 00:09:35,650
+dollars for clearing the channel,
+without admitting they were responsible.
+
+218
+00:09:35,800 --> 00:09:38,530
+When the Key Bridge was built
+in the nineteen-seventies,
+
+219
+00:09:38,580 --> 00:09:41,090
+it cost about sixty million dollars.
+
+220
+00:09:41,420 --> 00:09:43,050
+The new bridge will cost much more.
+
+221
+00:09:43,300 --> 00:09:47,570
+The latest estimate is between four point
+three and five point two billion dollars,
+
+222
+00:09:47,620 --> 00:09:50,510
+and it's not expected to open
+before late twenty thirty.
+
+223
+00:09:50,560 --> 00:09:52,590
+It will have a longer main span,
+
+224
+00:09:52,640 --> 00:09:55,890
+and much bigger protection
+around its supports.
+
+225
+00:09:56,040 --> 00:09:59,330
+And the investigation
+reached far beyond Baltimore.
+
+226
+00:09:59,480 --> 00:10:02,170
+The NTSB asked the owners
+of sixty-eight other bridges
+
+227
+00:10:02,220 --> 00:10:05,390
+across the United States,
+including the Golden Gate Bridge,
+
+228
+00:10:05,440 --> 00:10:07,870
+to check how they'd survive a ship strike.
+
+229
+00:10:08,020 --> 00:10:11,450
+A giant ship, a bridge that
+stood for almost fifty years,
+
+230
+00:10:11,500 --> 00:10:14,430
+and a little plastic
+label in the wrong place.
+
+231
+00:10:14,520 --> 00:10:18,090
+Sometimes the biggest disasters
+start with the smallest things.
+
+232
+00:10:18,140 --> 00:10:22,510
+If you want to see another giant ship
+that got stuck in a very narrow place,
+
+233
+00:10:22,560 --> 00:10:27,050
+and shut down a whole canal,
+that video is right here.

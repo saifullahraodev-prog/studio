@@ -567,4 +567,5 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
 - DONE 2026-11-16: `videos/2026-11-16-dali-bridge/out/dali-bridge-final.mp4` (1080p30, 10:29, -15.0 LUFS, peak -4.3 dBFS,
   0 black, 0 frozen; render 31 min; 222 MB). Known cosmetic nits: one long subtitle cue falls back to a wide 2-line box
   ("And nobody went back…"), and the in-scene hint text in the wire scenes (y=900) sits just above the subtitle box.
-  Not done yet: thumbnails, .srt, upload text.
+  Upload kit 2026-11-16: `dali-bridge.en.srt` (233 cues, words match), thumbnails A "THIS?!" (recommended) / B "NO POWER" /
+  C "4 MINUTES" (`engine/shipguy/ThumbDali.tsx`, ShipGuyThumb v=DA/DB/DC), `youtube-upload.txt` (title, 10 chapters, facts, sources, tags).
