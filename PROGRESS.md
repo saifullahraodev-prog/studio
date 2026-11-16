@@ -533,3 +533,7 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   the anthem-name buoy, Dali repaired in China and back in service Jan 2025. 14 fact notes.
 - GATE passed 2026-11-16: owner approved script v2. Next: owner records voice (CapCut, narration.txt; CapCut cuts at 10:00, so
   expect 2 parts); I build the shot plan + new templates (night bridge, blackout cut-away, truss collapse, terminal block, crane).
+- 2026-11-16: owner sent the CapCut voice in 2 parts (10:03 + 0:52), joined cleanly at "…responsible." -> `voice.wav` 10:56,
+  `words.json` (1,931 words, matches the script apart from number spellings). Shot plan v1: `beats.txt` (161 beats, avg 4.1 s,
+  every word in order) -> `public/shipguy/dali/timeline.json`; `plan.md` + `plan-shots.md` (Ship Guy in 74 shots, in-scene only;
+  sections 3-4 quiet, no gags). GATE: owner approval of the shot plan. Templates (templates5.tsx) not built yet.

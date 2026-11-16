@@ -1,0 +1,9766 @@
+{
+ "fps": 30,
+ "frames": 19712,
+ "beats": [
+  {
+   "tpl": "night",
+   "p": {
+    "state": "dark",
+    "cam": "wide",
+    "music": "tense"
+   },
+   "cap": "[1:25 AM]",
+   "from": 0,
+   "dur": 58,
+   "say": "At twenty-five past one in the morning,",
+   "words": [
+    [
+     0,
+     5
+    ],
+    [
+     5,
+     22
+    ],
+    [
+     22,
+     29
+    ],
+    [
+     29,
+     37
+    ],
+    [
+     37,
+     40
+    ],
+    [
+     40,
+     43
+    ],
+    [
+     43,
+     50
+    ]
+   ]
+  },
+  {
+   "tpl": "night",
+   "p": {
+    "state": "dark",
+    "cam": "close"
+   },
+   "cap": "300 M OF SHIP",
+   "from": 58,
+   "dur": 154,
+   "say": "a ship as long as three football pitches went completely dark.",
+   "words": [
+    [
+     4,
+     9
+    ],
+    [
+     9,
+     13
+    ],
+    [
+     13,
+     18
+    ],
+    [
+     18,
+     24
+    ],
+    [
+     24,
+     28
+    ],
+    [
+     28,
+     36
+    ],
+    [
+     36,
+     49
+    ],
+    [
+     49,
+     60
+    ],
+    [
+     60,
+     69
+    ],
+    [
+     69,
+     86
+    ],
+    [
+     86,
+     104
+    ]
+   ]
+  },
+  {
+   "tpl": "truss",
+   "p": {
+    "mode": "gone"
+   },
+   "cap": "[4 MINUTES] LATER",
+   "from": 212,
+   "dur": 213,
+   "say": "Four minutes later, a bridge that had stood for forty-seven years was lying in the river.",
+   "words": [
+    [
+     5,
+     20
+    ],
+    [
+     20,
+     26
+    ],
+    [
+     26,
+     36
+    ],
+    [
+     51,
+     56
+    ],
+    [
+     56,
+     62
+    ],
+    [
+     62,
+     71
+    ],
+    [
+     71,
+     75
+    ],
+    [
+     75,
+     83
+    ],
+    [
+     83,
+     90
+    ],
+    [
+     90,
+     113
+    ],
+    [
+     113,
+     126
+    ],
+    [
+     126,
+     140
+    ],
+    [
+     140,
+     152
+    ],
+    [
+     152,
+     158
+    ],
+    [
+     158,
+     161
+    ],
+    [
+     161,
+     168
+    ]
+   ]
+  },
+  {
+   "tpl": "memorial",
+   "p": {
+    "kind": "sign"
+   },
+   "cap": "",
+   "from": 425,
+   "dur": 105,
+   "say": "Six men working on that bridge never went home.",
+   "words": [
+    [
+     5,
+     13
+    ],
+    [
+     13,
+     21
+    ],
+    [
+     21,
+     31
+    ],
+    [
+     31,
+     38
+    ],
+    [
+     38,
+     43
+    ],
+    [
+     43,
+     53
+    ],
+    [
+     53,
+     65
+    ],
+    [
+     65,
+     73
+    ],
+    [
+     73,
+     86
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "pinch",
+    "bg": "paper"
+   },
+   "cap": "",
+   "from": 530,
+   "dur": 104,
+   "say": "And when investigators finally found what started it all,",
+   "words": [
+    [
+     5,
+     10
+    ],
+    [
+     10,
+     14
+    ],
+    [
+     14,
+     29
+    ],
+    [
+     29,
+     49
+    ],
+    [
+     49,
+     62
+    ],
+    [
+     62,
+     68
+    ],
+    [
+     68,
+     81
+    ],
+    [
+     81,
+     87
+    ],
+    [
+     87,
+     96
+    ]
+   ]
+  },
+  {
+   "tpl": "wire",
+   "p": {
+    "step": "hero"
+   },
+   "cap": "[THIS?!]",
+   "from": 634,
+   "dur": 90,
+   "say": "it was a piece of plastic smaller than your finger.",
+   "words": [
+    [
+     4,
+     9
+    ],
+    [
+     9,
+     15
+    ],
+    [
+     15,
+     19
+    ],
+    [
+     19,
+     25
+    ],
+    [
+     25,
+     32
+    ],
+    [
+     32,
+     45
+    ],
+    [
+     45,
+     59
+    ],
+    [
+     59,
+     66
+    ],
+    [
+     66,
+     71
+    ],
+    [
+     71,
+     81
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "think",
+    "bg": "paper",
+    "label": "HOW??"
+   },
+   "cap": "",
+   "from": 724,
+   "dur": 79,
+   "say": "So how does a tiny label take down a giant bridge?",
+   "words": [
+    [
+     4,
+     11
+    ],
+    [
+     11,
+     17
+    ],
+    [
+     17,
+     21
+    ],
+    [
+     21,
+     27
+    ],
+    [
+     27,
+     34
+    ],
+    [
+     34,
+     45
+    ],
+    [
+     45,
+     54
+    ],
+    [
+     54,
+     61
+    ],
+    [
+     61,
+     65
+    ],
+    [
+     65,
+     73
+    ],
+    [
+     73,
+     84
+    ]
+   ]
+  },
+  {
+   "tpl": "night",
+   "p": {
+    "state": "sail",
+    "cam": "wide",
+    "music": "investigate"
+   },
+   "cap": "BALTIMORE \u00b7 2024",
+   "from": 803,
+   "dur": 171,
+   "say": "To understand that, we need to go back to that night, and on board that ship.",
+   "words": [
+    [
+     5,
+     26
+    ],
+    [
+     26,
+     38
+    ],
+    [
+     38,
+     47
+    ],
+    [
+     55,
+     60
+    ],
+    [
+     60,
+     65
+    ],
+    [
+     65,
+     69
+    ],
+    [
+     69,
+     74
+    ],
+    [
+     74,
+     81
+    ],
+    [
+     81,
+     86
+    ],
+    [
+     86,
+     90
+    ],
+    [
+     90,
+     99
+    ],
+    [
+     99,
+     118
+    ],
+    [
+     118,
+     123
+    ],
+    [
+     123,
+     129
+    ],
+    [
+     129,
+     138
+    ],
+    [
+     138,
+     146
+    ]
+   ]
+  },
+  {
+   "tpl": "dali",
+   "p": {
+    "scene": "sail",
+    "guy": "wave"
+   },
+   "cap": "MEET THE DALI",
+   "from": 974,
+   "dur": 133,
+   "say": "The ship is called Dali. It's a container ship, three hundred metres long,",
+   "words": [
+    [
+     4,
+     6
+    ],
+    [
+     6,
+     14
+    ],
+    [
+     14,
+     19
+    ],
+    [
+     19,
+     28
+    ],
+    [
+     28,
+     45
+    ],
+    [
+     57,
+     65
+    ],
+    [
+     65,
+     66
+    ],
+    [
+     66,
+     75
+    ],
+    [
+     75,
+     87
+    ],
+    [
+     87,
+     96
+    ],
+    [
+     96,
+     106
+    ],
+    [
+     106,
+     116
+    ],
+    [
+     116,
+     131
+    ]
+   ]
+  },
+  {
+   "tpl": "dali",
+   "p": {
+    "scene": "yard"
+   },
+   "cap": "[2015] \u00b7 SOUTH KOREA",
+   "from": 1107,
+   "dur": 94,
+   "say": "built in South Korea in twenty fifteen.",
+   "words": [
+    [
+     4,
+     19
+    ],
+    [
+     19,
+     24
+    ],
+    [
+     24,
+     29
+    ],
+    [
+     29,
+     40
+    ],
+    [
+     40,
+     52
+    ],
+    [
+     52,
+     60
+    ],
+    [
+     60,
+     68
+    ]
+   ]
+  },
+  {
+   "tpl": "night",
+   "p": {
+    "state": "sail",
+    "cam": "wide"
+   },
+   "cap": "26 MARCH 2024",
+   "from": 1201,
+   "dur": 203,
+   "say": "On the night of the twenty-sixth of March, twenty twenty-four, it's leaving the Port of Baltimore, in the United States.",
+   "words": [
+    [
+     4,
+     9
+    ],
+    [
+     9,
+     12
+    ],
+    [
+     12,
+     16
+    ],
+    [
+     16,
+     22
+    ],
+    [
+     22,
+     25
+    ],
+    [
+     25,
+     43
+    ],
+    [
+     43,
+     45
+    ],
+    [
+     45,
+     53
+    ],
+    [
+     67,
+     74
+    ],
+    [
+     74,
+     81
+    ],
+    [
+     104,
+     112
+    ],
+    [
+     112,
+     118
+    ],
+    [
+     118,
+     126
+    ],
+    [
+     126,
+     131
+    ],
+    [
+     131,
+     137
+    ],
+    [
+     137,
+     148
+    ],
+    [
+     148,
+     169
+    ],
+    [
+     169,
+     172
+    ],
+    [
+     172,
+     178
+    ],
+    [
+     178,
+     192
+    ]
+   ]
+  },
+  {
+   "tpl": "dali",
+   "p": {
+    "scene": "stack"
+   },
+   "cap": "[4,700] CONTAINERS",
+   "from": 1404,
+   "dur": 81,
+   "say": "It's carrying about four thousand seven hundred containers,",
+   "words": [
+    [
+     4,
+     11
+    ],
+    [
+     11,
+     20
+    ],
+    [
+     20,
+     30
+    ],
+    [
+     30,
+     40
+    ],
+    [
+     40,
+     49
+    ],
+    [
+     49,
+     59
+    ],
+    [
+     59,
+     68
+    ],
+    [
+     68,
+     86
+    ]
+   ]
+  },
+  {
+   "tpl": "route",
+   "p": {
+    "mode": "srilanka"
+   },
+   "cap": "\u2192 SRI LANKA",
+   "from": 1485,
+   "dur": 96,
+   "say": "and it's heading for Sri Lanka.",
+   "words": [
+    [
+     5,
+     32
+    ],
+    [
+     32,
+     42
+    ],
+    [
+     42,
+     50
+    ],
+    [
+     50,
+     63
+    ],
+    [
+     63,
+     71
+    ],
+    [
+     71,
+     82
+    ]
+   ]
+  },
+  {
+   "tpl": "wheel",
+   "p": {
+    "act": "crew"
+   },
+   "cap": "[21] CREW",
+   "from": 1581,
+   "dur": 48,
+   "say": "On board are twenty-one crew,",
+   "words": [
+    [
+     5,
+     14
+    ],
+    [
+     14,
+     22
+    ],
+    [
+     22,
+     31
+    ],
+    [
+     31,
+     40
+    ],
+    [
+     40,
+     52
+    ]
+   ]
+  },
+  {
+   "tpl": "wheel",
+   "p": {
+    "act": "pilots"
+   },
+   "cap": "+ 2 HARBOUR PILOTS",
+   "from": 1629,
+   "dur": 150,
+   "say": "and two local harbour pilots, experts who guide big ships through the harbour.",
+   "words": [
+    [
+     4,
+     19
+    ],
+    [
+     19,
+     26
+    ],
+    [
+     26,
+     37
+    ],
+    [
+     37,
+     44
+    ],
+    [
+     44,
+     57
+    ],
+    [
+     67,
+     78
+    ],
+    [
+     78,
+     89
+    ],
+    [
+     89,
+     98
+    ],
+    [
+     98,
+     106
+    ],
+    [
+     106,
+     113
+    ],
+    [
+     113,
+     121
+    ],
+    [
+     121,
+     125
+    ],
+    [
+     125,
+     132
+    ]
+   ]
+  },
+  {
+   "tpl": "wheel",
+   "p": {
+    "act": "chart"
+   },
+   "cap": "",
+   "from": 1779,
+   "dur": 115,
+   "say": "In a big port, ships don't find their own way in and out.",
+   "words": [
+    [
+     5,
+     10
+    ],
+    [
+     10,
+     13
+    ],
+    [
+     13,
+     19
+    ],
+    [
+     19,
+     31
+    ],
+    [
+     44,
+     51
+    ],
+    [
+     51,
+     60
+    ],
+    [
+     60,
+     67
+    ],
+    [
+     67,
+     74
+    ],
+    [
+     74,
+     82
+    ],
+    [
+     82,
+     88
+    ],
+    [
+     88,
+     96
+    ],
+    [
+     96,
+     99
+    ],
+    [
+     99,
+     106
+    ]
+   ]
+  },
+  {
+   "tpl": "topd",
+   "p": {
+    "mode": "river"
+   },
+   "cap": "BENDS \u00b7 SHALLOWS \u00b7 BRIDGES",
+   "from": 1894,
+   "dur": 122,
+   "say": "Every harbour has its own bends, shallow spots and bridges,",
+   "words": [
+    [
+     5,
+     13
+    ],
+    [
+     13,
+     22
+    ],
+    [
+     22,
+     34
+    ],
+    [
+     34,
+     39
+    ],
+    [
+     39,
+     48
+    ],
+    [
+     48,
+     61
+    ],
+    [
+     73,
+     83
+    ],
+    [
+     83,
+     93
+    ],
+    [
+     93,
+     102
+    ],
+    [
+     102,
+     111
+    ]
+   ]
+  },
+  {
+   "tpl": "wheel",
+   "p": {
+    "act": "orders"
+   },
+   "cap": "PILOTS GIVE THE ORDERS",
+   "from": 2016,
+   "dur": 188,
+   "say": "so local pilots come on board and give the steering orders until the ship reaches open water.",
+   "words": [
+    [
+     4,
+     11
+    ],
+    [
+     11,
+     19
+    ],
+    [
+     19,
+     34
+    ],
+    [
+     34,
+     40
+    ],
+    [
+     40,
+     45
+    ],
+    [
+     45,
+     53
+    ],
+    [
+     53,
+     68
+    ],
+    [
+     68,
+     74
+    ],
+    [
+     74,
+     80
+    ],
+    [
+     80,
+     90
+    ],
+    [
+     90,
+     99
+    ],
+    [
+     99,
+     113
+    ],
+    [
+     113,
+     120
+    ],
+    [
+     120,
+     129
+    ],
+    [
+     129,
+     143
+    ],
+    [
+     143,
+     154
+    ],
+    [
+     154,
+     167
+    ]
+   ]
+  },
+  {
+   "tpl": "truss",
+   "p": {
+    "mode": "lit"
+   },
+   "cap": "FRANCIS SCOTT KEY BRIDGE",
+   "from": 2204,
+   "dur": 99,
+   "say": "Ahead of it is the Francis Scott Key Bridge.",
+   "words": [
+    [
+     5,
+     17
+    ],
+    [
+     17,
+     20
+    ],
+    [
+     20,
+     25
+    ],
+    [
+     25,
+     35
+    ],
+    [
+     35,
+     41
+    ],
+    [
+     41,
+     50
+    ],
+    [
+     50,
+     69
+    ],
+    [
+     69,
+     80
+    ],
+    [
+     80,
+     88
+    ]
+   ]
+  },
+  {
+   "tpl": "truss",
+   "p": {
+    "mode": "lit",
+    "len": "1"
+   },
+   "cap": "[2.6 KM] LONG",
+   "from": 2303,
+   "dur": 136,
+   "say": "It's about two point six kilometres long, and it carries a busy highway across the river.",
+   "words": [
+    [
+     5,
+     14
+    ],
+    [
+     14,
+     19
+    ],
+    [
+     19,
+     28
+    ],
+    [
+     28,
+     37
+    ],
+    [
+     37,
+     46
+    ],
+    [
+     46,
+     55
+    ],
+    [
+     55,
+     68
+    ],
+    [
+     68,
+     83
+    ],
+    [
+     83,
+     86
+    ],
+    [
+     86,
+     93
+    ],
+    [
+     93,
+     99
+    ],
+    [
+     99,
+     106
+    ],
+    [
+     106,
+     117
+    ],
+    [
+     117,
+     127
+    ],
+    [
+     127,
+     134
+    ],
+    [
+     134,
+     141
+    ]
+   ]
+  },
+  {
+   "tpl": "fort",
+   "p": {
+    "step": "1"
+   },
+   "cap": "A FAMOUS NAME",
+   "from": 2439,
+   "dur": 64,
+   "say": "And it has a famous name.",
+   "words": [
+    [
+     5,
+     20
+    ],
+    [
+     20,
+     24
+    ],
+    [
+     24,
+     28
+    ],
+    [
+     28,
+     33
+    ],
+    [
+     33,
+     41
+    ],
+    [
+     41,
+     52
+    ]
+   ]
+  },
+  {
+   "tpl": "fort",
+   "p": {
+    "step": "2"
+   },
+   "cap": "[1814] \u00b7 FORT McHENRY",
+   "from": 2503,
+   "dur": 165,
+   "say": "In eighteen fourteen, Francis Scott Key watched a battle at Fort McHenry, just up this same river,",
+   "words": [
+    [
+     4,
+     8
+    ],
+    [
+     8,
+     19
+    ],
+    [
+     19,
+     31
+    ],
+    [
+     46,
+     57
+    ],
+    [
+     57,
+     67
+    ],
+    [
+     67,
+     75
+    ],
+    [
+     75,
+     90
+    ],
+    [
+     90,
+     95
+    ],
+    [
+     95,
+     102
+    ],
+    [
+     102,
+     108
+    ],
+    [
+     108,
+     114
+    ],
+    [
+     114,
+     131
+    ],
+    [
+     131,
+     145
+    ],
+    [
+     145,
+     152
+    ],
+    [
+     152,
+     156
+    ],
+    [
+     156,
+     163
+    ],
+    [
+     163,
+     169
+    ]
+   ]
+  },
+  {
+   "tpl": "fort",
+   "p": {
+    "step": "3"
+   },
+   "cap": "THE NATIONAL ANTHEM",
+   "from": 2668,
+   "dur": 113,
+   "say": "and wrote the poem that became America's national anthem.",
+   "words": [
+    [
+     4,
+     21
+    ],
+    [
+     21,
+     27
+    ],
+    [
+     27,
+     34
+    ],
+    [
+     34,
+     40
+    ],
+    [
+     40,
+     48
+    ],
+    [
+     48,
+     57
+    ],
+    [
+     57,
+     75
+    ],
+    [
+     75,
+     87
+    ],
+    [
+     87,
+     100
+    ]
+   ]
+  },
+  {
+   "tpl": "fort",
+   "p": {
+    "step": "4"
+   },
+   "cap": "",
+   "from": 2781,
+   "dur": 187,
+   "say": "Every summer, a red, white and blue buoy is placed in the water near the spot where he watched.",
+   "words": [
+    [
+     5,
+     11
+    ],
+    [
+     11,
+     20
+    ],
+    [
+     31,
+     37
+    ],
+    [
+     37,
+     44
+    ],
+    [
+     50,
+     59
+    ],
+    [
+     59,
+     68
+    ],
+    [
+     68,
+     76
+    ],
+    [
+     76,
+     85
+    ],
+    [
+     85,
+     102
+    ],
+    [
+     102,
+     110
+    ],
+    [
+     110,
+     117
+    ],
+    [
+     117,
+     120
+    ],
+    [
+     120,
+     128
+    ],
+    [
+     128,
+     139
+    ],
+    [
+     139,
+     145
+    ],
+    [
+     145,
+     154
+    ],
+    [
+     154,
+     159
+    ],
+    [
+     159,
+     163
+    ],
+    [
+     163,
+     173
+    ]
+   ]
+  },
+  {
+   "tpl": "truss",
+   "p": {
+    "mode": "crew"
+   },
+   "cap": "NIGHT SHIFT",
+   "from": 2968,
+   "dur": 146,
+   "say": "And on the bridge that night, a small road crew is doing a normal night-shift job:",
+   "words": [
+    [
+     4,
+     13
+    ],
+    [
+     13,
+     16
+    ],
+    [
+     16,
+     19
+    ],
+    [
+     19,
+     27
+    ],
+    [
+     27,
+     34
+    ],
+    [
+     34,
+     43
+    ],
+    [
+     55,
+     67
+    ],
+    [
+     67,
+     75
+    ],
+    [
+     75,
+     82
+    ],
+    [
+     82,
+     90
+    ],
+    [
+     90,
+     97
+    ],
+    [
+     97,
+     102
+    ],
+    [
+     102,
+     108
+    ],
+    [
+     108,
+     115
+    ],
+    [
+     115,
+     129
+    ],
+    [
+     129,
+     141
+    ]
+   ]
+  },
+  {
+   "tpl": "memorial",
+   "p": {
+    "kind": "potholes"
+   },
+   "cap": "FILLING POTHOLES",
+   "from": 3114,
+   "dur": 46,
+   "say": "filling potholes.",
+   "words": [
+    [
+     5,
+     13
+    ],
+    [
+     13,
+     28
+    ]
+   ]
+  },
+  {
+   "tpl": "night",
+   "p": {
+    "state": "sail",
+    "cam": "close"
+   },
+   "cap": "",
+   "from": 3160,
+   "dur": 43,
+   "say": "Everything is normal.",
+   "words": [
+    [
+     5,
+     16
+    ],
+    [
+     16,
+     25
+    ],
+    [
+     25,
+     34
+    ]
+   ]
+  },
+  {
+   "tpl": "night",
+   "p": {
+    "state": "flicker",
+    "cam": "close"
+   },
+   "cap": "UNTIL\u2026",
+   "from": 3203,
+   "dur": 28,
+   "say": "Until it isn't.",
+   "words": [
+    [
+     5,
+     15
+    ],
+    [
+     15,
+     21
+    ],
+    [
+     21,
+     32
+    ]
+   ]
+  },
+  {
+   "tpl": "night",
+   "p": {
+    "state": "dark",
+    "cam": "wide"
+   },
+   "cap": "[1:25]",
+   "from": 3231,
+   "dur": 36,
+   "say": "At twenty-five past one,",
+   "words": [
+    [
+     4,
+     9
+    ],
+    [
+     9,
+     21
+    ],
+    [
+     21,
+     30
+    ],
+    [
+     30,
+     40
+    ]
+   ]
+  },
+  {
+   "tpl": "topd",
+   "p": {
+    "mode": "dist"
+   },
+   "cap": "[3] SHIP LENGTHS",
+   "from": 3267,
+   "dur": 125,
+   "say": "when the ship is only about three ship lengths away from the bridge,",
+   "words": [
+    [
+     4,
+     22
+    ],
+    [
+     22,
+     28
+    ],
+    [
+     28,
+     36
+    ],
+    [
+     36,
+     47
+    ],
+    [
+     47,
+     54
+    ],
+    [
+     54,
+     61
+    ],
+    [
+     61,
+     72
+    ],
+    [
+     72,
+     81
+    ],
+    [
+     81,
+     88
+    ],
+    [
+     88,
+     97
+    ],
+    [
+     97,
+     103
+    ],
+    [
+     103,
+     107
+    ],
+    [
+     107,
+     117
+    ]
+   ]
+  },
+  {
+   "tpl": "wheel",
+   "p": {
+    "act": "dark"
+   },
+   "cap": "LIGHTS OUT",
+   "from": 3392,
+   "dur": 75,
+   "say": "every light on the Dali goes out.",
+   "words": [
+    [
+     5,
+     14
+    ],
+    [
+     14,
+     24
+    ],
+    [
+     24,
+     29
+    ],
+    [
+     29,
+     32
+    ],
+    [
+     32,
+     43
+    ],
+    [
+     43,
+     48
+    ],
+    [
+     48,
+     58
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "fingerup",
+    "bg": "paper",
+    "label": "WHY_SO_BAD?"
+   },
+   "cap": "",
+   "from": 3467,
+   "dur": 150,
+   "say": "To understand why that's so dangerous, you need to know one thing about big ships.",
+   "words": [
+    [
+     5,
+     10
+    ],
+    [
+     10,
+     26
+    ],
+    [
+     26,
+     41
+    ],
+    [
+     41,
+     56
+    ],
+    [
+     56,
+     60
+    ],
+    [
+     60,
+     72
+    ],
+    [
+     91,
+     95
+    ],
+    [
+     95,
+     100
+    ],
+    [
+     100,
+     104
+    ],
+    [
+     104,
+     108
+    ],
+    [
+     108,
+     115
+    ],
+    [
+     115,
+     120
+    ],
+    [
+     120,
+     127
+    ],
+    [
+     127,
+     134
+    ],
+    [
+     134,
+     144
+    ]
+   ]
+  },
+  {
+   "tpl": "power",
+   "p": {
+    "step": "station"
+   },
+   "cap": "A FLOATING POWER STATION",
+   "from": 3617,
+   "dur": 91,
+   "say": "A modern ship is basically a floating power station.",
+   "words": [
+    [
+     5,
+     7
+    ],
+    [
+     7,
+     14
+    ],
+    [
+     14,
+     22
+    ],
+    [
+     22,
+     26
+    ],
+    [
+     26,
+     36
+    ],
+    [
+     36,
+     41
+    ],
+    [
+     41,
+     47
+    ],
+    [
+     47,
+     57
+    ],
+    [
+     57,
+     67
+    ]
+   ]
+  },
+  {
+   "tpl": "power",
+   "p": {
+    "step": "gens"
+   },
+   "cap": "GENERATORS",
+   "from": 3708,
+   "dur": 42,
+   "say": "Generators make the electricity,",
+   "words": [
+    [
+     4,
+     21
+    ],
+    [
+     21,
+     28
+    ],
+    [
+     28,
+     32
+    ],
+    [
+     32,
+     46
+    ]
+   ]
+  },
+  {
+   "tpl": "power",
+   "p": {
+    "step": "all"
+   },
+   "cap": "",
+   "from": 3750,
+   "dur": 108,
+   "say": "and that electricity runs almost everything.",
+   "words": [
+    [
+     4,
+     26
+    ],
+    [
+     26,
+     31
+    ],
+    [
+     31,
+     46
+    ],
+    [
+     46,
+     59
+    ],
+    [
+     59,
+     74
+    ],
+    [
+     74,
+     94
+    ]
+   ]
+  },
+  {
+   "tpl": "power",
+   "p": {
+    "step": "steer"
+   },
+   "cap": "STEERING",
+   "from": 3858,
+   "dur": 32,
+   "say": "The steering.",
+   "words": [
+    [
+     5,
+     9
+    ],
+    [
+     9,
+     17
+    ]
+   ]
+  },
+  {
+   "tpl": "power",
+   "p": {
+    "step": "lights"
+   },
+   "cap": "LIGHTS",
+   "from": 3890,
+   "dur": 35,
+   "say": "The lights.",
+   "words": [
+    [
+     4,
+     8
+    ],
+    [
+     8,
+     20
+    ]
+   ]
+  },
+  {
+   "tpl": "power",
+   "p": {
+    "step": "radio"
+   },
+   "cap": "RADIOS",
+   "from": 3925,
+   "dur": 17,
+   "say": "The radios.",
+   "words": [
+    [
+     4,
+     7
+    ],
+    [
+     7,
+     22
+    ]
+   ]
+  },
+  {
+   "tpl": "power",
+   "p": {
+    "step": "pumps"
+   },
+   "cap": "+ ENGINE PUMPS",
+   "from": 3942,
+   "dur": 99,
+   "say": "And the pumps that keep the main engine alive.",
+   "words": [
+    [
+     5,
+     27
+    ],
+    [
+     27,
+     31
+    ],
+    [
+     31,
+     38
+    ],
+    [
+     38,
+     44
+    ],
+    [
+     44,
+     49
+    ],
+    [
+     49,
+     55
+    ],
+    [
+     55,
+     61
+    ],
+    [
+     61,
+     70
+    ],
+    [
+     70,
+     81
+    ]
+   ]
+  },
+  {
+   "tpl": "power",
+   "p": {
+    "step": "cool"
+   },
+   "cap": "COOLING WATER",
+   "from": 4041,
+   "dur": 157,
+   "say": "The main engine is cooled by water, and that water is pushed around by electric pumps.",
+   "words": [
+    [
+     5,
+     20
+    ],
+    [
+     20,
+     27
+    ],
+    [
+     27,
+     35
+    ],
+    [
+     35,
+     41
+    ],
+    [
+     41,
+     50
+    ],
+    [
+     50,
+     58
+    ],
+    [
+     58,
+     68
+    ],
+    [
+     68,
+     84
+    ],
+    [
+     84,
+     88
+    ],
+    [
+     88,
+     96
+    ],
+    [
+     96,
+     103
+    ],
+    [
+     103,
+     110
+    ],
+    [
+     110,
+     121
+    ],
+    [
+     121,
+     130
+    ],
+    [
+     130,
+     140
+    ],
+    [
+     140,
+     154
+    ]
+   ]
+  },
+  {
+   "tpl": "power",
+   "p": {
+    "step": "off"
+   },
+   "cap": "POWER DIES\u2026",
+   "from": 4198,
+   "dur": 65,
+   "say": "So when the power dies, the cooling stops,",
+   "words": [
+    [
+     4,
+     14
+    ],
+    [
+     14,
+     19
+    ],
+    [
+     19,
+     22
+    ],
+    [
+     22,
+     29
+    ],
+    [
+     29,
+     39
+    ],
+    [
+     50,
+     52
+    ],
+    [
+     52,
+     60
+    ],
+    [
+     60,
+     70
+    ]
+   ]
+  },
+  {
+   "tpl": "power",
+   "p": {
+    "step": "engine"
+   },
+   "cap": "ENGINE SHUTS DOWN",
+   "from": 4263,
+   "dur": 87,
+   "say": "and the main engine shuts itself down.",
+   "words": [
+    [
+     5,
+     19
+    ],
+    [
+     19,
+     23
+    ],
+    [
+     23,
+     29
+    ],
+    [
+     29,
+     41
+    ],
+    [
+     41,
+     49
+    ],
+    [
+     49,
+     59
+    ],
+    [
+     59,
+     71
+    ]
+   ]
+  },
+  {
+   "tpl": "power",
+   "p": {
+    "step": "prop"
+   },
+   "cap": "NO PROPELLER",
+   "from": 4350,
+   "dur": 104,
+   "say": "No engine means no propeller pushing water past the rudder.",
+   "words": [
+    [
+     5,
+     16
+    ],
+    [
+     16,
+     24
+    ],
+    [
+     24,
+     32
+    ],
+    [
+     32,
+     40
+    ],
+    [
+     40,
+     52
+    ],
+    [
+     52,
+     59
+    ],
+    [
+     59,
+     71
+    ],
+    [
+     71,
+     81
+    ],
+    [
+     81,
+     88
+    ],
+    [
+     88,
+     97
+    ]
+   ]
+  },
+  {
+   "tpl": "topd",
+   "p": {
+    "mode": "rudder"
+   },
+   "cap": "NO STEERING",
+   "from": 4454,
+   "dur": 97,
+   "say": "And without that flow, the rudder can barely steer.",
+   "words": [
+    [
+     5,
+     12
+    ],
+    [
+     12,
+     20
+    ],
+    [
+     20,
+     27
+    ],
+    [
+     27,
+     36
+    ],
+    [
+     48,
+     52
+    ],
+    [
+     52,
+     61
+    ],
+    [
+     61,
+     66
+    ],
+    [
+     66,
+     75
+    ],
+    [
+     75,
+     87
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "think",
+    "bg": "paper",
+    "label": "JUST_STOP?"
+   },
+   "cap": "",
+   "from": 4551,
+   "dur": 47,
+   "say": "So why not just stop?",
+   "words": [
+    [
+     5,
+     10
+    ],
+    [
+     10,
+     16
+    ],
+    [
+     16,
+     20
+    ],
+    [
+     20,
+     27
+    ],
+    [
+     27,
+     37
+    ]
+   ]
+  },
+  {
+   "tpl": "wheel",
+   "p": {
+    "act": "brake"
+   },
+   "cap": "NO BRAKES!",
+   "from": 4598,
+   "dur": 118,
+   "say": "Because a ship this size can't stop like a car. There are no brakes.",
+   "words": [
+    [
+     5,
+     11
+    ],
+    [
+     11,
+     17
+    ],
+    [
+     17,
+     21
+    ],
+    [
+     21,
+     27
+    ],
+    [
+     27,
+     36
+    ],
+    [
+     36,
+     48
+    ],
+    [
+     48,
+     53
+    ],
+    [
+     53,
+     59
+    ],
+    [
+     59,
+     63
+    ],
+    [
+     63,
+     71
+    ],
+    [
+     84,
+     90
+    ],
+    [
+     90,
+     93
+    ],
+    [
+     93,
+     97
+    ],
+    [
+     97,
+     107
+    ]
+   ]
+  },
+  {
+   "tpl": "dali",
+   "p": {
+    "scene": "weight"
+   },
+   "cap": "[100,000+ T]",
+   "from": 4716,
+   "dur": 132,
+   "say": "When it's fully loaded, the Dali and its cargo weigh well over a hundred thousand tonnes,",
+   "words": [
+    [
+     4,
+     10
+    ],
+    [
+     10,
+     16
+    ],
+    [
+     16,
+     21
+    ],
+    [
+     21,
+     31
+    ],
+    [
+     42,
+     46
+    ],
+    [
+     46,
+     56
+    ],
+    [
+     56,
+     59
+    ],
+    [
+     59,
+     62
+    ],
+    [
+     62,
+     71
+    ],
+    [
+     71,
+     85
+    ],
+    [
+     85,
+     92
+    ],
+    [
+     92,
+     103
+    ],
+    [
+     103,
+     111
+    ],
+    [
+     111,
+     120
+    ],
+    [
+     120,
+     128
+    ],
+    [
+     128,
+     136
+    ]
+   ]
+  },
+  {
+   "tpl": "topd",
+   "p": {
+    "mode": "glide"
+   },
+   "cap": "STILL MOVING",
+   "from": 4848,
+   "dur": 89,
+   "say": "and all of that keeps gliding forward.",
+   "words": [
+    [
+     4,
+     22
+    ],
+    [
+     22,
+     30
+    ],
+    [
+     30,
+     34
+    ],
+    [
+     34,
+     38
+    ],
+    [
+     38,
+     45
+    ],
+    [
+     45,
+     56
+    ],
+    [
+     56,
+     68
+    ]
+   ]
+  },
+  {
+   "tpl": "dali",
+   "p": {
+    "scene": "push",
+    "guy": "push"
+   },
+   "cap": "",
+   "from": 4937,
+   "dur": 121,
+   "say": "Even at a walking pace, that much weight doesn't want to stop.",
+   "words": [
+    [
+     5,
+     20
+    ],
+    [
+     20,
+     26
+    ],
+    [
+     26,
+     29
+    ],
+    [
+     29,
+     36
+    ],
+    [
+     36,
+     45
+    ],
+    [
+     60,
+     67
+    ],
+    [
+     67,
+     75
+    ],
+    [
+     75,
+     83
+    ],
+    [
+     83,
+     96
+    ],
+    [
+     96,
+     101
+    ],
+    [
+     101,
+     106
+    ],
+    [
+     106,
+     115
+    ]
+   ]
+  },
+  {
+   "tpl": "dali",
+   "p": {
+    "scene": "push",
+    "guy": "pushslide"
+   },
+   "cap": "",
+   "from": 5058,
+   "dur": 102,
+   "say": "Imagine trying to stop a sliding block of flats with your hands.",
+   "words": [
+    [
+     5,
+     14
+    ],
+    [
+     14,
+     24
+    ],
+    [
+     24,
+     28
+    ],
+    [
+     28,
+     34
+    ],
+    [
+     34,
+     38
+    ],
+    [
+     38,
+     47
+    ],
+    [
+     47,
+     54
+    ],
+    [
+     54,
+     59
+    ],
+    [
+     59,
+     67
+    ],
+    [
+     67,
+     73
+    ],
+    [
+     73,
+     77
+    ],
+    [
+     77,
+     86
+    ]
+   ]
+  },
+  {
+   "tpl": "wheel",
+   "p": {
+    "act": "orders2"
+   },
+   "cap": "TRY EVERYTHING",
+   "from": 5160,
+   "dur": 75,
+   "say": "The pilots try everything they can.",
+   "words": [
+    [
+     4,
+     7
+    ],
+    [
+     7,
+     15
+    ],
+    [
+     15,
+     26
+    ],
+    [
+     26,
+     42
+    ],
+    [
+     42,
+     50
+    ],
+    [
+     50,
+     58
+    ]
+   ]
+  },
+  {
+   "tpl": "topd",
+   "p": {
+    "mode": "hardover"
+   },
+   "cap": "HARD OVER!",
+   "from": 5235,
+   "dur": 61,
+   "say": "They order the rudder hard over to turn away,",
+   "words": [
+    [
+     4,
+     7
+    ],
+    [
+     7,
+     15
+    ],
+    [
+     15,
+     20
+    ],
+    [
+     20,
+     28
+    ],
+    [
+     28,
+     35
+    ],
+    [
+     35,
+     45
+    ],
+    [
+     45,
+     50
+    ],
+    [
+     50,
+     56
+    ],
+    [
+     56,
+     66
+    ]
+   ]
+  },
+  {
+   "tpl": "anchor",
+   "p": {
+    "step": "drop"
+   },
+   "cap": "DROP ANCHOR!",
+   "from": 5296,
+   "dur": 118,
+   "say": "and they drop an anchor to drag the ship and slow it down.",
+   "words": [
+    [
+     5,
+     20
+    ],
+    [
+     20,
+     23
+    ],
+    [
+     23,
+     30
+    ],
+    [
+     30,
+     34
+    ],
+    [
+     34,
+     40
+    ],
+    [
+     40,
+     48
+    ],
+    [
+     48,
+     55
+    ],
+    [
+     55,
+     61
+    ],
+    [
+     61,
+     69
+    ],
+    [
+     69,
+     79
+    ],
+    [
+     79,
+     87
+    ],
+    [
+     87,
+     91
+    ],
+    [
+     91,
+     100
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "wag",
+    "bg": "paper",
+    "label": "NOT_A_BRAKE"
+   },
+   "cap": "",
+   "from": 5414,
+   "dur": 69,
+   "say": "But an anchor isn't a parking brake.",
+   "words": [
+    [
+     5,
+     13
+    ],
+    [
+     13,
+     17
+    ],
+    [
+     17,
+     26
+    ],
+    [
+     26,
+     39
+    ],
+    [
+     39,
+     43
+    ],
+    [
+     43,
+     50
+    ],
+    [
+     50,
+     60
+    ]
+   ]
+  },
+  {
+   "tpl": "anchor",
+   "p": {
+    "step": "drag"
+   },
+   "cap": "DIG \u00b7 DRAG \u00b7 TIME",
+   "from": 5483,
+   "dur": 75,
+   "say": "It digs in and drags, and that takes time.",
+   "words": [
+    [
+     5,
+     9
+    ],
+    [
+     9,
+     18
+    ],
+    [
+     18,
+     21
+    ],
+    [
+     21,
+     24
+    ],
+    [
+     24,
+     37
+    ],
+    [
+     37,
+     48
+    ],
+    [
+     48,
+     53
+    ],
+    [
+     53,
+     59
+    ],
+    [
+     59,
+     69
+    ]
+   ]
+  },
+  {
+   "tpl": "topd",
+   "p": {
+    "mode": "dist2"
+   },
+   "cap": "",
+   "from": 5558,
+   "dur": 64,
+   "say": "Three ship lengths is not much time.",
+   "words": [
+    [
+     4,
+     9
+    ],
+    [
+     9,
+     19
+    ],
+    [
+     19,
+     24
+    ],
+    [
+     24,
+     30
+    ],
+    [
+     30,
+     36
+    ],
+    [
+     36,
+     44
+    ],
+    [
+     44,
+     53
+    ]
+   ]
+  },
+  {
+   "tpl": "wheel",
+   "p": {
+    "act": "flicker"
+   },
+   "cap": "POWER BACK\u2026",
+   "from": 5622,
+   "dur": 64,
+   "say": "The crew get some power back within about a minute.",
+   "words": [
+    [
+     5,
+     10
+    ],
+    [
+     10,
+     16
+    ],
+    [
+     16,
+     22
+    ],
+    [
+     22,
+     27
+    ],
+    [
+     27,
+     34
+    ],
+    [
+     34,
+     42
+    ],
+    [
+     42,
+     50
+    ],
+    [
+     50,
+     57
+    ],
+    [
+     57,
+     62
+    ],
+    [
+     62,
+     68
+    ]
+   ]
+  },
+  {
+   "tpl": "wheel",
+   "p": {
+    "act": "dark2"
+   },
+   "cap": "\u2026GONE AGAIN",
+   "from": 5686,
+   "dur": 83,
+   "say": "And then, it goes out again.",
+   "words": [
+    [
+     4,
+     26
+    ],
+    [
+     26,
+     34
+    ],
+    [
+     34,
+     51
+    ],
+    [
+     51,
+     57
+    ],
+    [
+     57,
+     63
+    ],
+    [
+     63,
+     70
+    ]
+   ]
+  },
+  {
+   "tpl": "radio",
+   "p": {
+    "step": "mayday",
+    "music": "quiet"
+   },
+   "cap": "[1:27] MAYDAY",
+   "from": 5769,
+   "dur": 117,
+   "say": "At twenty-seven minutes past one, a mayday goes out on the radio.",
+   "words": [
+    [
+     4,
+     7
+    ],
+    [
+     7,
+     20
+    ],
+    [
+     20,
+     30
+    ],
+    [
+     30,
+     38
+    ],
+    [
+     38,
+     48
+    ],
+    [
+     59,
+     62
+    ],
+    [
+     62,
+     72
+    ],
+    [
+     72,
+     79
+    ],
+    [
+     79,
+     85
+    ],
+    [
+     85,
+     89
+    ],
+    [
+     89,
+     92
+    ],
+    [
+     92,
+     103
+    ]
+   ]
+  },
+  {
+   "tpl": "topd",
+   "p": {
+    "mode": "glide2"
+   },
+   "cap": "",
+   "from": 5886,
+   "dur": 86,
+   "say": "The ship has lost power, and it's heading for the bridge.",
+   "words": [
+    [
+     4,
+     7
+    ],
+    [
+     7,
+     13
+    ],
+    [
+     13,
+     18
+    ],
+    [
+     18,
+     23
+    ],
+    [
+     23,
+     34
+    ],
+    [
+     34,
+     44
+    ],
+    [
+     44,
+     50
+    ],
+    [
+     50,
+     56
+    ],
+    [
+     56,
+     62
+    ],
+    [
+     62,
+     66
+    ],
+    [
+     66,
+     74
+    ]
+   ]
+  },
+  {
+   "tpl": "radio",
+   "p": {
+    "step": "police"
+   },
+   "cap": "",
+   "from": 5972,
+   "dur": 91,
+   "say": "What happened next probably saved a lot of lives.",
+   "words": [
+    [
+     5,
+     8
+    ],
+    [
+     8,
+     16
+    ],
+    [
+     16,
+     26
+    ],
+    [
+     26,
+     36
+    ],
+    [
+     36,
+     47
+    ],
+    [
+     47,
+     53
+    ],
+    [
+     53,
+     62
+    ],
+    [
+     62,
+     65
+    ],
+    [
+     65,
+     77
+    ]
+   ]
+  },
+  {
+   "tpl": "radio",
+   "p": {
+    "step": "stop"
+   },
+   "cap": "TRAFFIC STOPPED",
+   "from": 6063,
+   "dur": 143,
+   "say": "The message reached the police, and officers at both ends of the bridge stopped the traffic.",
+   "words": [
+    [
+     5,
+     7
+    ],
+    [
+     7,
+     15
+    ],
+    [
+     15,
+     25
+    ],
+    [
+     25,
+     30
+    ],
+    [
+     30,
+     38
+    ],
+    [
+     38,
+     56
+    ],
+    [
+     56,
+     66
+    ],
+    [
+     66,
+     73
+    ],
+    [
+     73,
+     79
+    ],
+    [
+     79,
+     89
+    ],
+    [
+     89,
+     94
+    ],
+    [
+     94,
+     97
+    ],
+    [
+     97,
+     105
+    ],
+    [
+     105,
+     118
+    ],
+    [
+     118,
+     125
+    ],
+    [
+     125,
+     134
+    ]
+   ]
+  },
+  {
+   "tpl": "radio",
+   "p": {
+    "step": "timer"
+   },
+   "cap": "[90] SECONDS",
+   "from": 6206,
+   "dur": 62,
+   "say": "They had about ninety seconds.",
+   "words": [
+    [
+     4,
+     10
+    ],
+    [
+     10,
+     14
+    ],
+    [
+     14,
+     20
+    ],
+    [
+     20,
+     36
+    ],
+    [
+     36,
+     49
+    ]
+   ]
+  },
+  {
+   "tpl": "truss",
+   "p": {
+    "mode": "empty"
+   },
+   "cap": "NO MORE CARS",
+   "from": 6268,
+   "dur": 136,
+   "say": "And in that time, no more cars drove onto the bridge.",
+   "words": [
+    [
+     4,
+     15
+    ],
+    [
+     15,
+     26
+    ],
+    [
+     26,
+     31
+    ],
+    [
+     31,
+     46
+    ],
+    [
+     56,
+     63
+    ],
+    [
+     63,
+     72
+    ],
+    [
+     72,
+     83
+    ],
+    [
+     83,
+     96
+    ],
+    [
+     96,
+     106
+    ],
+    [
+     106,
+     111
+    ],
+    [
+     111,
+     121
+    ]
+   ]
+  },
+  {
+   "tpl": "radio",
+   "p": {
+    "step": "officer"
+   },
+   "cap": "",
+   "from": 6404,
+   "dur": 132,
+   "say": "One officer even radioed that he would drive onto the bridge to warn the road crew.",
+   "words": [
+    [
+     4,
+     14
+    ],
+    [
+     14,
+     23
+    ],
+    [
+     23,
+     32
+    ],
+    [
+     32,
+     49
+    ],
+    [
+     49,
+     55
+    ],
+    [
+     55,
+     59
+    ],
+    [
+     59,
+     63
+    ],
+    [
+     63,
+     72
+    ],
+    [
+     72,
+     79
+    ],
+    [
+     79,
+     85
+    ],
+    [
+     85,
+     93
+    ],
+    [
+     93,
+     100
+    ],
+    [
+     100,
+     110
+    ],
+    [
+     110,
+     116
+    ],
+    [
+     116,
+     125
+    ],
+    [
+     125,
+     136
+    ]
+   ]
+  },
+  {
+   "tpl": "radio",
+   "p": {
+    "step": "late"
+   },
+   "cap": "",
+   "from": 6536,
+   "dur": 68,
+   "say": "There wasn't enough time.",
+   "words": [
+    [
+     4,
+     27
+    ],
+    [
+     27,
+     36
+    ],
+    [
+     36,
+     42
+    ],
+    [
+     42,
+     53
+    ]
+   ]
+  },
+  {
+   "tpl": "radio",
+   "p": {
+    "step": "ntsb"
+   },
+   "cap": "",
+   "from": 6604,
+   "dur": 227,
+   "say": "Later, the NTSB said the quick actions of the pilots, the dispatchers and the police prevented a much bigger loss of life.",
+   "words": [
+    [
+     4,
+     12
+    ],
+    [
+     22,
+     24
+    ],
+    [
+     24,
+     45
+    ],
+    [
+     45,
+     51
+    ],
+    [
+     51,
+     57
+    ],
+    [
+     57,
+     62
+    ],
+    [
+     62,
+     75
+    ],
+    [
+     75,
+     79
+    ],
+    [
+     79,
+     82
+    ],
+    [
+     82,
+     91
+    ],
+    [
+     114,
+     116
+    ],
+    [
+     116,
+     134
+    ],
+    [
+     134,
+     140
+    ],
+    [
+     140,
+     144
+    ],
+    [
+     144,
+     151
+    ],
+    [
+     151,
+     166
+    ],
+    [
+     166,
+     174
+    ],
+    [
+     174,
+     183
+    ],
+    [
+     183,
+     192
+    ],
+    [
+     192,
+     201
+    ],
+    [
+     201,
+     205
+    ],
+    [
+     205,
+     215
+    ]
+   ]
+  },
+  {
+   "tpl": "truss",
+   "p": {
+    "mode": "crew2"
+   },
+   "cap": "",
+   "from": 6831,
+   "dur": 123,
+   "say": "But the road crew in the middle didn't get the warning in time.",
+   "words": [
+    [
+     4,
+     9
+    ],
+    [
+     9,
+     14
+    ],
+    [
+     14,
+     20
+    ],
+    [
+     20,
+     26
+    ],
+    [
+     26,
+     31
+    ],
+    [
+     31,
+     34
+    ],
+    [
+     34,
+     41
+    ],
+    [
+     41,
+     62
+    ],
+    [
+     62,
+     67
+    ],
+    [
+     67,
+     72
+    ],
+    [
+     72,
+     80
+    ],
+    [
+     80,
+     85
+    ],
+    [
+     85,
+     95
+    ]
+   ]
+  },
+  {
+   "tpl": "topd",
+   "p": {
+    "mode": "hit"
+   },
+   "cap": "[1:29]",
+   "from": 6954,
+   "dur": 173,
+   "say": "At about one twenty-nine, the Dali, moving at around seven knots, a fast walking pace,",
+   "words": [
+    [
+     4,
+     8
+    ],
+    [
+     8,
+     16
+    ],
+    [
+     16,
+     28
+    ],
+    [
+     28,
+     40
+    ],
+    [
+     56,
+     61
+    ],
+    [
+     61,
+     68
+    ],
+    [
+     80,
+     90
+    ],
+    [
+     90,
+     95
+    ],
+    [
+     95,
+     103
+    ],
+    [
+     103,
+     112
+    ],
+    [
+     112,
+     121
+    ],
+    [
+     132,
+     136
+    ],
+    [
+     136,
+     146
+    ],
+    [
+     146,
+     155
+    ],
+    [
+     155,
+     165
+    ]
+   ]
+  },
+  {
+   "tpl": "truss",
+   "p": {
+    "mode": "hit"
+   },
+   "cap": "",
+   "from": 7127,
+   "dur": 77,
+   "say": "hits one of the bridge's main supports.",
+   "words": [
+    [
+     5,
+     12
+    ],
+    [
+     12,
+     18
+    ],
+    [
+     18,
+     21
+    ],
+    [
+     21,
+     26
+    ],
+    [
+     26,
+     37
+    ],
+    [
+     37,
+     42
+    ],
+    [
+     42,
+     53
+    ]
+   ]
+  },
+  {
+   "tpl": "truss",
+   "p": {
+    "mode": "collapse"
+   },
+   "cap": "",
+   "from": 7204,
+   "dur": 102,
+   "say": "The bridge comes down in about thirty seconds.",
+   "words": [
+    [
+     5,
+     12
+    ],
+    [
+     12,
+     19
+    ],
+    [
+     19,
+     27
+    ],
+    [
+     27,
+     35
+    ],
+    [
+     35,
+     42
+    ],
+    [
+     42,
+     49
+    ],
+    [
+     49,
+     60
+    ],
+    [
+     60,
+     75
+    ]
+   ]
+  },
+  {
+   "tpl": "memorial",
+   "p": {
+    "kind": "water"
+   },
+   "cap": "2 RESCUED",
+   "from": 7306,
+   "dur": 92,
+   "say": "Two people were rescued from the water and the wreckage.",
+   "words": [
+    [
+     4,
+     10
+    ],
+    [
+     10,
+     19
+    ],
+    [
+     19,
+     26
+    ],
+    [
+     26,
+     35
+    ],
+    [
+     35,
+     42
+    ],
+    [
+     42,
+     47
+    ],
+    [
+     47,
+     55
+    ],
+    [
+     55,
+     74
+    ],
+    [
+     74,
+     81
+    ],
+    [
+     81,
+     97
+    ]
+   ]
+  },
+  {
+   "tpl": "memorial",
+   "p": {
+    "kind": "hats"
+   },
+   "cap": "",
+   "from": 7398,
+   "dur": 80,
+   "say": "Six road workers died.",
+   "words": [
+    [
+     5,
+     24
+    ],
+    [
+     24,
+     36
+    ],
+    [
+     36,
+     47
+    ],
+    [
+     47,
+     59
+    ]
+   ]
+  },
+  {
+   "tpl": "under",
+   "p": {
+    "step": "night"
+   },
+   "cap": "",
+   "from": 7478,
+   "dur": 76,
+   "say": "Divers went into the river that same night.",
+   "words": [
+    [
+     4,
+     13
+    ],
+    [
+     13,
+     21
+    ],
+    [
+     21,
+     27
+    ],
+    [
+     27,
+     32
+    ],
+    [
+     32,
+     38
+    ],
+    [
+     38,
+     44
+    ],
+    [
+     44,
+     53
+    ],
+    [
+     53,
+     62
+    ]
+   ]
+  },
+  {
+   "tpl": "under",
+   "p": {
+    "step": "steel"
+   },
+   "cap": "",
+   "from": 7554,
+   "dur": 138,
+   "say": "The water was dark and cold, and full of twisted steel and broken concrete.",
+   "words": [
+    [
+     5,
+     6
+    ],
+    [
+     6,
+     14
+    ],
+    [
+     14,
+     21
+    ],
+    [
+     21,
+     29
+    ],
+    [
+     29,
+     35
+    ],
+    [
+     35,
+     46
+    ],
+    [
+     46,
+     59
+    ],
+    [
+     59,
+     65
+    ],
+    [
+     65,
+     68
+    ],
+    [
+     68,
+     78
+    ],
+    [
+     78,
+     91
+    ],
+    [
+     91,
+     98
+    ],
+    [
+     98,
+     109
+    ],
+    [
+     109,
+     124
+    ]
+   ]
+  },
+  {
+   "tpl": "under",
+   "p": {
+    "step": "slow"
+   },
+   "cap": "",
+   "from": 7692,
+   "dur": 60,
+   "say": "The search was slow and dangerous.",
+   "words": [
+    [
+     4,
+     7
+    ],
+    [
+     7,
+     15
+    ],
+    [
+     15,
+     20
+    ],
+    [
+     20,
+     29
+    ],
+    [
+     29,
+     35
+    ],
+    [
+     35,
+     47
+    ]
+   ]
+  },
+  {
+   "tpl": "under",
+   "p": {
+    "step": "wall"
+   },
+   "cap": "",
+   "from": 7752,
+   "dur": 216,
+   "say": "Some of the wreckage was so tangled that divers couldn't reach it until salvage crews had cut it apart.",
+   "words": [
+    [
+     4,
+     10
+    ],
+    [
+     10,
+     13
+    ],
+    [
+     13,
+     17
+    ],
+    [
+     17,
+     28
+    ],
+    [
+     28,
+     32
+    ],
+    [
+     32,
+     38
+    ],
+    [
+     38,
+     49
+    ],
+    [
+     49,
+     64
+    ],
+    [
+     64,
+     73
+    ],
+    [
+     73,
+     87
+    ],
+    [
+     87,
+     94
+    ],
+    [
+     94,
+     99
+    ],
+    [
+     99,
+     111
+    ],
+    [
+     111,
+     127
+    ],
+    [
+     127,
+     136
+    ],
+    [
+     136,
+     141
+    ],
+    [
+     141,
+     147
+    ],
+    [
+     147,
+     151
+    ],
+    [
+     151,
+     162
+    ]
+   ]
+  },
+  {
+   "tpl": "memorial",
+   "p": {
+    "kind": "calendar"
+   },
+   "cap": "",
+   "from": 7968,
+   "dur": 230,
+   "say": "Two of the workers were found the next day, inside their truck at the bottom of the river. The others were found over the following weeks.",
+   "words": [
+    [
+     4,
+     21
+    ],
+    [
+     21,
+     25
+    ],
+    [
+     25,
+     28
+    ],
+    [
+     28,
+     35
+    ],
+    [
+     35,
+     44
+    ],
+    [
+     44,
+     52
+    ],
+    [
+     52,
+     59
+    ],
+    [
+     59,
+     66
+    ],
+    [
+     66,
+     77
+    ],
+    [
+     87,
+     98
+    ],
+    [
+     98,
+     107
+    ],
+    [
+     107,
+     116
+    ],
+    [
+     116,
+     121
+    ],
+    [
+     121,
+     124
+    ],
+    [
+     124,
+     130
+    ],
+    [
+     130,
+     136
+    ],
+    [
+     136,
+     139
+    ],
+    [
+     139,
+     146
+    ],
+    [
+     162,
+     167
+    ],
+    [
+     167,
+     173
+    ],
+    [
+     173,
+     179
+    ],
+    [
+     179,
+     188
+    ],
+    [
+     188,
+     197
+    ],
+    [
+     197,
+     202
+    ],
+    [
+     202,
+     211
+    ],
+    [
+     211,
+     235
+    ]
+   ]
+  },
+  {
+   "tpl": "memorial",
+   "p": {
+    "kind": "flower"
+   },
+   "cap": "7 MAY 2024",
+   "from": 8198,
+   "dur": 146,
+   "say": "The last of the six was recovered on the seventh of May. Six weeks after the bridge fell.",
+   "words": [
+    [
+     5,
+     29
+    ],
+    [
+     29,
+     36
+    ],
+    [
+     36,
+     42
+    ],
+    [
+     42,
+     45
+    ],
+    [
+     45,
+     51
+    ],
+    [
+     51,
+     56
+    ],
+    [
+     56,
+     66
+    ],
+    [
+     66,
+     72
+    ],
+    [
+     72,
+     76
+    ],
+    [
+     76,
+     89
+    ],
+    [
+     89,
+     92
+    ],
+    [
+     92,
+     99
+    ],
+    [
+     99,
+     112
+    ],
+    [
+     112,
+     117
+    ],
+    [
+     117,
+     126
+    ],
+    [
+     126,
+     130
+    ],
+    [
+     130,
+     136
+    ],
+    [
+     136,
+     143
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "talk",
+    "bg": "paper",
+    "music": "investigate"
+   },
+   "cap": "",
+   "from": 8344,
+   "dur": 133,
+   "say": "So how can one hit bring down a bridge that's more than two kilometres long?",
+   "words": [
+    [
+     4,
+     18
+    ],
+    [
+     24,
+     31
+    ],
+    [
+     31,
+     36
+    ],
+    [
+     36,
+     40
+    ],
+    [
+     40,
+     46
+    ],
+    [
+     46,
+     55
+    ],
+    [
+     55,
+     60
+    ],
+    [
+     60,
+     64
+    ],
+    [
+     64,
+     69
+    ],
+    [
+     69,
+     88
+    ],
+    [
+     88,
+     96
+    ],
+    [
+     96,
+     102
+    ],
+    [
+     102,
+     108
+    ],
+    [
+     108,
+     118
+    ],
+    [
+     118,
+     129
+    ]
+   ]
+  },
+  {
+   "tpl": "truss",
+   "p": {
+    "mode": "diag"
+   },
+   "cap": "CONTINUOUS TRUSS",
+   "from": 8477,
+   "dur": 181,
+   "say": "The middle part of the Key Bridge was a continuous steel truss, one long piece resting on a few supports.",
+   "words": [
+    [
+     5,
+     8
+    ],
+    [
+     8,
+     14
+    ],
+    [
+     14,
+     22
+    ],
+    [
+     22,
+     26
+    ],
+    [
+     26,
+     30
+    ],
+    [
+     30,
+     35
+    ],
+    [
+     35,
+     44
+    ],
+    [
+     44,
+     50
+    ],
+    [
+     50,
+     55
+    ],
+    [
+     55,
+     69
+    ],
+    [
+     69,
+     82
+    ],
+    [
+     82,
+     96
+    ],
+    [
+     110,
+     114
+    ],
+    [
+     114,
+     121
+    ],
+    [
+     121,
+     129
+    ],
+    [
+     129,
+     139
+    ],
+    [
+     139,
+     146
+    ],
+    [
+     146,
+     150
+    ],
+    [
+     150,
+     154
+    ],
+    [
+     154,
+     167
+    ]
+   ]
+  },
+  {
+   "tpl": "truss",
+   "p": {
+    "mode": "domino"
+   },
+   "cap": "ONE GOES\u2026",
+   "from": 8658,
+   "dur": 122,
+   "say": "Take away one of those supports, and the long piece can't hold itself up.",
+   "words": [
+    [
+     4,
+     14
+    ],
+    [
+     14,
+     20
+    ],
+    [
+     20,
+     26
+    ],
+    [
+     26,
+     29
+    ],
+    [
+     29,
+     34
+    ],
+    [
+     34,
+     46
+    ],
+    [
+     46,
+     61
+    ],
+    [
+     61,
+     64
+    ],
+    [
+     64,
+     70
+    ],
+    [
+     70,
+     77
+    ],
+    [
+     77,
+     89
+    ],
+    [
+     89,
+     94
+    ],
+    [
+     94,
+     102
+    ],
+    [
+     102,
+     113
+    ]
+   ]
+  },
+  {
+   "tpl": "truss",
+   "p": {
+    "mode": "domino2"
+   },
+   "cap": "\u2026ALL GO",
+   "from": 8780,
+   "dur": 44,
+   "say": "It all goes together.",
+   "words": [
+    [
+     5,
+     8
+    ],
+    [
+     8,
+     12
+    ],
+    [
+     12,
+     18
+    ],
+    [
+     18,
+     29
+    ]
+   ]
+  },
+  {
+   "tpl": "topd",
+   "p": {
+    "mode": "dolphins"
+   },
+   "cap": "DOLPHINS",
+   "from": 8824,
+   "dur": 162,
+   "say": "Big bridges over shipping lanes are protected by barriers around their supports, called dolphins.",
+   "words": [
+    [
+     4,
+     12
+    ],
+    [
+     12,
+     21
+    ],
+    [
+     21,
+     29
+    ],
+    [
+     29,
+     37
+    ],
+    [
+     37,
+     47
+    ],
+    [
+     47,
+     54
+    ],
+    [
+     54,
+     64
+    ],
+    [
+     64,
+     72
+    ],
+    [
+     72,
+     84
+    ],
+    [
+     84,
+     94
+    ],
+    [
+     94,
+     99
+    ],
+    [
+     99,
+     109
+    ],
+    [
+     109,
+     131
+    ],
+    [
+     131,
+     145
+    ]
+   ]
+  },
+  {
+   "tpl": "topd",
+   "p": {
+    "mode": "bounce"
+   },
+   "cap": "",
+   "from": 8986,
+   "dur": 112,
+   "say": "They're there to catch or push away a ship before it reaches the bridge.",
+   "words": [
+    [
+     5,
+     12
+    ],
+    [
+     12,
+     16
+    ],
+    [
+     16,
+     22
+    ],
+    [
+     22,
+     30
+    ],
+    [
+     30,
+     36
+    ],
+    [
+     36,
+     44
+    ],
+    [
+     44,
+     49
+    ],
+    [
+     49,
+     55
+    ],
+    [
+     55,
+     60
+    ],
+    [
+     60,
+     70
+    ],
+    [
+     70,
+     75
+    ],
+    [
+     75,
+     83
+    ],
+    [
+     83,
+     89
+    ],
+    [
+     89,
+     97
+    ]
+   ]
+  },
+  {
+   "tpl": "topd",
+   "p": {
+    "mode": "islands"
+   },
+   "cap": "ROCK ISLANDS",
+   "from": 9098,
+   "dur": 253,
+   "say": "On the newest bridges, the supports even sit on artificial islands of rock, so a ship runs aground long before it can touch the bridge.",
+   "words": [
+    [
+     5,
+     10
+    ],
+    [
+     10,
+     13
+    ],
+    [
+     13,
+     20
+    ],
+    [
+     20,
+     31
+    ],
+    [
+     48,
+     54
+    ],
+    [
+     54,
+     65
+    ],
+    [
+     65,
+     75
+    ],
+    [
+     75,
+     83
+    ],
+    [
+     83,
+     87
+    ],
+    [
+     87,
+     98
+    ],
+    [
+     98,
+     115
+    ],
+    [
+     115,
+     120
+    ],
+    [
+     120,
+     129
+    ],
+    [
+     146,
+     152
+    ],
+    [
+     166,
+     170
+    ],
+    [
+     170,
+     174
+    ],
+    [
+     174,
+     183
+    ],
+    [
+     183,
+     196
+    ],
+    [
+     196,
+     206
+    ],
+    [
+     206,
+     214
+    ],
+    [
+     214,
+     221
+    ],
+    [
+     221,
+     224
+    ],
+    [
+     224,
+     231
+    ],
+    [
+     231,
+     235
+    ],
+    [
+     235,
+     243
+    ]
+   ]
+  },
+  {
+   "tpl": "truss",
+   "p": {
+    "mode": "1977"
+   },
+   "cap": "BUILT [1977]",
+   "from": 9351,
+   "dur": 80,
+   "say": "But the Key Bridge was built in the nineteen-seventies.",
+   "words": [
+    [
+     4,
+     7
+    ],
+    [
+     7,
+     11
+    ],
+    [
+     11,
+     17
+    ],
+    [
+     17,
+     23
+    ],
+    [
+     23,
+     29
+    ],
+    [
+     29,
+     36
+    ],
+    [
+     36,
+     42
+    ],
+    [
+     42,
+     44
+    ],
+    [
+     44,
+     75
+    ]
+   ]
+  },
+  {
+   "tpl": "dali",
+   "p": {
+    "scene": "compare"
+   },
+   "cap": "SHIPS GREW",
+   "from": 9431,
+   "dur": 59,
+   "say": "Ships have become much bigger since then,",
+   "words": [
+    [
+     5,
+     15
+    ],
+    [
+     15,
+     21
+    ],
+    [
+     21,
+     31
+    ],
+    [
+     31,
+     41
+    ],
+    [
+     41,
+     48
+    ],
+    [
+     48,
+     56
+    ],
+    [
+     56,
+     64
+    ]
+   ]
+  },
+  {
+   "tpl": "topd",
+   "p": {
+    "mode": "tiny"
+   },
+   "cap": "TOO SMALL",
+   "from": 9490,
+   "dur": 155,
+   "say": "and its protection was far too small for a ship like the Dali.",
+   "words": [
+    [
+     5,
+     21
+    ],
+    [
+     21,
+     25
+    ],
+    [
+     25,
+     36
+    ],
+    [
+     36,
+     44
+    ],
+    [
+     44,
+     51
+    ],
+    [
+     51,
+     57
+    ],
+    [
+     57,
+     66
+    ],
+    [
+     66,
+     72
+    ],
+    [
+     72,
+     76
+    ],
+    [
+     76,
+     81
+    ],
+    [
+     81,
+     87
+    ],
+    [
+     87,
+     91
+    ],
+    [
+     91,
+     100
+    ]
+   ]
+  },
+  {
+   "tpl": "risk",
+   "p": {
+    "mode": "meter"
+   },
+   "cap": "THE RISK",
+   "from": 9645,
+   "dur": 159,
+   "say": "Later, the investigators calculated that the risk of this bridge collapsing after a ship strike",
+   "words": [
+    [
+     5,
+     21
+    ],
+    [
+     38,
+     42
+    ],
+    [
+     42,
+     58
+    ],
+    [
+     58,
+     75
+    ],
+    [
+     75,
+     92
+    ],
+    [
+     92,
+     95
+    ],
+    [
+     95,
+     104
+    ],
+    [
+     104,
+     109
+    ],
+    [
+     109,
+     113
+    ],
+    [
+     113,
+     121
+    ],
+    [
+     121,
+     136
+    ],
+    [
+     136,
+     144
+    ],
+    [
+     144,
+     149
+    ],
+    [
+     149,
+     154
+    ],
+    [
+     154,
+     163
+    ]
+   ]
+  },
+  {
+   "tpl": "risk",
+   "p": {
+    "mode": "red"
+   },
+   "cap": "[30\u00d7] TOO HIGH",
+   "from": 9804,
+   "dur": 134,
+   "say": "was almost thirty times higher than what's acceptable for a bridge this important.",
+   "words": [
+    [
+     4,
+     17
+    ],
+    [
+     17,
+     26
+    ],
+    [
+     26,
+     39
+    ],
+    [
+     39,
+     53
+    ],
+    [
+     53,
+     65
+    ],
+    [
+     65,
+     70
+    ],
+    [
+     70,
+     78
+    ],
+    [
+     78,
+     91
+    ],
+    [
+     91,
+     100
+    ],
+    [
+     100,
+     105
+    ],
+    [
+     105,
+     112
+    ],
+    [
+     112,
+     122
+    ],
+    [
+     122,
+     139
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "shrug",
+    "bg": "paper",
+    "label": "NEVER_CHECKED"
+   },
+   "cap": "",
+   "from": 9938,
+   "dur": 60,
+   "say": "And nobody had ever checked.",
+   "words": [
+    [
+     5,
+     27
+    ],
+    [
+     27,
+     39
+    ],
+    [
+     39,
+     48
+    ],
+    [
+     48,
+     55
+    ],
+    [
+     55,
+     65
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "watch",
+    "bg": "paper",
+    "label": "AGAIN?!"
+   },
+   "cap": "",
+   "from": 9998,
+   "dur": 172,
+   "say": "And here's the frustrating part. America had already learned this lesson once, the hard way.",
+   "words": [
+    [
+     5,
+     16
+    ],
+    [
+     16,
+     25
+    ],
+    [
+     25,
+     29
+    ],
+    [
+     29,
+     39
+    ],
+    [
+     39,
+     52
+    ],
+    [
+     66,
+     74
+    ],
+    [
+     74,
+     85
+    ],
+    [
+     85,
+     98
+    ],
+    [
+     98,
+     106
+    ],
+    [
+     106,
+     114
+    ],
+    [
+     114,
+     125
+    ],
+    [
+     125,
+     132
+    ],
+    [
+     146,
+     149
+    ],
+    [
+     149,
+     156
+    ],
+    [
+     156,
+     163
+    ]
+   ]
+  },
+  {
+   "tpl": "skyway",
+   "p": {
+    "step": "storm"
+   },
+   "cap": "[9 MAY 1980] \u00b7 TAMPA BAY",
+   "from": 10170,
+   "dur": 106,
+   "say": "It's the ninth of May, nineteen eighty, in Tampa Bay, Florida.",
+   "words": [
+    [
+     5,
+     10
+    ],
+    [
+     10,
+     12
+    ],
+    [
+     12,
+     22
+    ],
+    [
+     22,
+     24
+    ],
+    [
+     24,
+     29
+    ],
+    [
+     35,
+     43
+    ],
+    [
+     43,
+     51
+    ],
+    [
+     51,
+     64
+    ],
+    [
+     64,
+     72
+    ],
+    [
+     72,
+     79
+    ],
+    [
+     82,
+     91
+    ]
+   ]
+  },
+  {
+   "tpl": "skyway",
+   "p": {
+    "step": "squall"
+   },
+   "cap": "SUDDEN STORM",
+   "from": 10276,
+   "dur": 88,
+   "say": "Early in the morning, a sudden storm hits the bay.",
+   "words": [
+    [
+     4,
+     10
+    ],
+    [
+     10,
+     15
+    ],
+    [
+     15,
+     16
+    ],
+    [
+     16,
+     24
+    ],
+    [
+     35,
+     39
+    ],
+    [
+     39,
+     46
+    ],
+    [
+     46,
+     57
+    ],
+    [
+     57,
+     63
+    ],
+    [
+     63,
+     68
+    ],
+    [
+     68,
+     73
+    ]
+   ]
+  },
+  {
+   "tpl": "skyway",
+   "p": {
+    "step": "ship"
+   },
+   "cap": "SUMMIT VENTURE",
+   "from": 10364,
+   "dur": 138,
+   "say": "A cargo ship called the Summit Venture is heading for the Sunshine Skyway Bridge.",
+   "words": [
+    [
+     5,
+     9
+    ],
+    [
+     9,
+     17
+    ],
+    [
+     17,
+     25
+    ],
+    [
+     25,
+     32
+    ],
+    [
+     32,
+     38
+    ],
+    [
+     38,
+     45
+    ],
+    [
+     45,
+     60
+    ],
+    [
+     60,
+     71
+    ],
+    [
+     71,
+     78
+    ],
+    [
+     78,
+     84
+    ],
+    [
+     84,
+     89
+    ],
+    [
+     89,
+     100
+    ],
+    [
+     100,
+     118
+    ],
+    [
+     118,
+     126
+    ]
+   ]
+  },
+  {
+   "tpl": "skyway",
+   "p": {
+    "step": "radar"
+   },
+   "cap": "RADAR FAILS",
+   "from": 10502,
+   "dur": 127,
+   "say": "In the storm, the crew can barely see, and the ship's radar fails.",
+   "words": [
+    [
+     4,
+     8
+    ],
+    [
+     8,
+     12
+    ],
+    [
+     12,
+     22
+    ],
+    [
+     32,
+     34
+    ],
+    [
+     34,
+     42
+    ],
+    [
+     42,
+     48
+    ],
+    [
+     48,
+     56
+    ],
+    [
+     56,
+     68
+    ],
+    [
+     68,
+     84
+    ],
+    [
+     84,
+     88
+    ],
+    [
+     88,
+     98
+    ],
+    [
+     98,
+     106
+    ],
+    [
+     106,
+     117
+    ]
+   ]
+  },
+  {
+   "tpl": "skyway",
+   "p": {
+    "step": "hit"
+   },
+   "cap": "",
+   "from": 10629,
+   "dur": 139,
+   "say": "The ship hits one of the bridge's supports. A long section of the bridge falls into the bay.",
+   "words": [
+    [
+     4,
+     8
+    ],
+    [
+     8,
+     15
+    ],
+    [
+     15,
+     22
+    ],
+    [
+     22,
+     28
+    ],
+    [
+     28,
+     31
+    ],
+    [
+     31,
+     35
+    ],
+    [
+     35,
+     41
+    ],
+    [
+     41,
+     53
+    ],
+    [
+     73,
+     78
+    ],
+    [
+     78,
+     85
+    ],
+    [
+     85,
+     94
+    ],
+    [
+     94,
+     101
+    ],
+    [
+     101,
+     104
+    ],
+    [
+     104,
+     113
+    ],
+    [
+     113,
+     124
+    ],
+    [
+     124,
+     131
+    ],
+    [
+     131,
+     136
+    ],
+    [
+     136,
+     143
+    ]
+   ]
+  },
+  {
+   "tpl": "skyway",
+   "p": {
+    "step": "edge"
+   },
+   "cap": "",
+   "from": 10768,
+   "dur": 159,
+   "say": "Cars and a bus drove off the broken edge in the storm. Thirty-five people died.",
+   "words": [
+    [
+     4,
+     31
+    ],
+    [
+     31,
+     40
+    ],
+    [
+     40,
+     45
+    ],
+    [
+     45,
+     50
+    ],
+    [
+     50,
+     57
+    ],
+    [
+     57,
+     65
+    ],
+    [
+     65,
+     70
+    ],
+    [
+     70,
+     78
+    ],
+    [
+     78,
+     85
+    ],
+    [
+     85,
+     90
+    ],
+    [
+     90,
+     93
+    ],
+    [
+     93,
+     102
+    ],
+    [
+     118,
+     130
+    ],
+    [
+     130,
+     144
+    ],
+    [
+     144,
+     154
+    ]
+   ]
+  },
+  {
+   "tpl": "skyway",
+   "p": {
+    "step": "survivor"
+   },
+   "cap": "ONE SURVIVOR",
+   "from": 10927,
+   "dur": 151,
+   "say": "One man survived. His pickup truck fell with the road, hit the side of the ship, and sank.",
+   "words": [
+    [
+     4,
+     9
+    ],
+    [
+     9,
+     15
+    ],
+    [
+     15,
+     27
+    ],
+    [
+     42,
+     45
+    ],
+    [
+     45,
+     52
+    ],
+    [
+     52,
+     60
+    ],
+    [
+     60,
+     67
+    ],
+    [
+     67,
+     73
+    ],
+    [
+     73,
+     78
+    ],
+    [
+     78,
+     85
+    ],
+    [
+     95,
+     99
+    ],
+    [
+     99,
+     103
+    ],
+    [
+     103,
+     111
+    ],
+    [
+     111,
+     114
+    ],
+    [
+     114,
+     117
+    ],
+    [
+     117,
+     123
+    ],
+    [
+     123,
+     133
+    ],
+    [
+     133,
+     143
+    ]
+   ]
+  },
+  {
+   "tpl": "skyway",
+   "p": {
+    "step": "rescue"
+   },
+   "cap": "",
+   "from": 11078,
+   "dur": 128,
+   "say": "He swam back to the surface, and the ship's own crew pulled him out of the water.",
+   "words": [
+    [
+     5,
+     8
+    ],
+    [
+     8,
+     16
+    ],
+    [
+     16,
+     23
+    ],
+    [
+     23,
+     27
+    ],
+    [
+     27,
+     31
+    ],
+    [
+     31,
+     39
+    ],
+    [
+     39,
+     58
+    ],
+    [
+     58,
+     62
+    ],
+    [
+     62,
+     71
+    ],
+    [
+     71,
+     77
+    ],
+    [
+     77,
+     86
+    ],
+    [
+     86,
+     96
+    ],
+    [
+     96,
+     101
+    ],
+    [
+     101,
+     105
+    ],
+    [
+     105,
+     108
+    ],
+    [
+     108,
+     111
+    ],
+    [
+     111,
+     118
+    ]
+   ]
+  },
+  {
+   "tpl": "skyway",
+   "p": {
+    "step": "rules"
+   },
+   "cap": "NEW RULES",
+   "from": 11206,
+   "dur": 67,
+   "say": "That disaster changed the rules.",
+   "words": [
+    [
+     4,
+     10
+    ],
+    [
+     10,
+     23
+    ],
+    [
+     23,
+     39
+    ],
+    [
+     39,
+     46
+    ],
+    [
+     46,
+     57
+    ]
+   ]
+  },
+  {
+   "tpl": "risk",
+   "p": {
+    "mode": "calc"
+   },
+   "cap": "SHIP-STRIKE MATHS",
+   "from": 11273,
+   "dur": 252,
+   "say": "After it, engineers in the United States created a way to calculate how likely a bridge is to be hit by a ship, and how strong its protection needs to be.",
+   "words": [
+    [
+     5,
+     12
+    ],
+    [
+     12,
+     20
+    ],
+    [
+     29,
+     37
+    ],
+    [
+     37,
+     46
+    ],
+    [
+     46,
+     49
+    ],
+    [
+     49,
+     56
+    ],
+    [
+     56,
+     70
+    ],
+    [
+     70,
+     83
+    ],
+    [
+     83,
+     89
+    ],
+    [
+     89,
+     93
+    ],
+    [
+     93,
+     98
+    ],
+    [
+     98,
+     108
+    ],
+    [
+     108,
+     119
+    ],
+    [
+     119,
+     130
+    ],
+    [
+     130,
+     135
+    ],
+    [
+     135,
+     141
+    ],
+    [
+     141,
+     148
+    ],
+    [
+     148,
+     152
+    ],
+    [
+     152,
+     155
+    ],
+    [
+     155,
+     160
+    ],
+    [
+     160,
+     165
+    ],
+    [
+     165,
+     170
+    ],
+    [
+     170,
+     176
+    ],
+    [
+     176,
+     191
+    ],
+    [
+     191,
+     195
+    ],
+    [
+     195,
+     205
+    ],
+    [
+     205,
+     209
+    ],
+    [
+     209,
+     221
+    ],
+    [
+     221,
+     231
+    ],
+    [
+     231,
+     236
+    ],
+    [
+     236,
+     243
+    ]
+   ]
+  },
+  {
+   "tpl": "skyway",
+   "p": {
+    "step": "new"
+   },
+   "cap": "",
+   "from": 11525,
+   "dur": 123,
+   "say": "The new Sunshine Skyway was built with huge protective barriers around its supports.",
+   "words": [
+    [
+     5,
+     10
+    ],
+    [
+     10,
+     16
+    ],
+    [
+     16,
+     29
+    ],
+    [
+     29,
+     44
+    ],
+    [
+     44,
+     50
+    ],
+    [
+     50,
+     57
+    ],
+    [
+     57,
+     63
+    ],
+    [
+     63,
+     73
+    ],
+    [
+     73,
+     83
+    ],
+    [
+     83,
+     100
+    ],
+    [
+     100,
+     111
+    ],
+    [
+     111,
+     116
+    ],
+    [
+     116,
+     128
+    ]
+   ]
+  },
+  {
+   "tpl": "skyway",
+   "p": {
+    "step": "book"
+   },
+   "cap": "ONLY NEW BRIDGES",
+   "from": 11648,
+   "dur": 91,
+   "say": "But those rules were made for new bridges.",
+   "words": [
+    [
+     5,
+     24
+    ],
+    [
+     24,
+     32
+    ],
+    [
+     32,
+     41
+    ],
+    [
+     41,
+     47
+    ],
+    [
+     47,
+     54
+    ],
+    [
+     54,
+     58
+    ],
+    [
+     58,
+     65
+    ],
+    [
+     65,
+     74
+    ]
+   ]
+  },
+  {
+   "tpl": "skyway",
+   "p": {
+    "step": "note"
+   },
+   "cap": "[1977] VS [1991]",
+   "from": 11739,
+   "dur": 63,
+   "say": "The Key Bridge had been built before them.",
+   "words": [
+    [
+     5,
+     9
+    ],
+    [
+     9,
+     14
+    ],
+    [
+     14,
+     21
+    ],
+    [
+     21,
+     26
+    ],
+    [
+     26,
+     31
+    ],
+    [
+     31,
+     36
+    ],
+    [
+     36,
+     44
+    ],
+    [
+     44,
+     51
+    ]
+   ]
+  },
+  {
+   "tpl": "dali",
+   "p": {
+    "scene": "bigger"
+   },
+   "cap": "",
+   "from": 11802,
+   "dur": 139,
+   "say": "And nobody went back to check it against the bigger and bigger ships coming through.",
+   "words": [
+    [
+     5,
+     8
+    ],
+    [
+     8,
+     19
+    ],
+    [
+     19,
+     27
+    ],
+    [
+     27,
+     34
+    ],
+    [
+     34,
+     39
+    ],
+    [
+     39,
+     46
+    ],
+    [
+     46,
+     50
+    ],
+    [
+     50,
+     57
+    ],
+    [
+     57,
+     63
+    ],
+    [
+     63,
+     70
+    ],
+    [
+     70,
+     78
+    ],
+    [
+     78,
+     85
+    ],
+    [
+     85,
+     94
+    ],
+    [
+     94,
+     102
+    ],
+    [
+     102,
+     111
+    ]
+   ]
+  },
+  {
+   "tpl": "ntsb",
+   "p": {
+    "step": "1"
+   },
+   "cap": "NTSB \u00b7 [20] MONTHS",
+   "from": 11941,
+   "dur": 168,
+   "say": "The United States safety board, the NTSB, investigated the Dali for twenty months.",
+   "words": [
+    [
+     4,
+     7
+    ],
+    [
+     7,
+     15
+    ],
+    [
+     15,
+     27
+    ],
+    [
+     27,
+     37
+    ],
+    [
+     37,
+     50
+    ],
+    [
+     61,
+     64
+    ],
+    [
+     64,
+     88
+    ],
+    [
+     99,
+     113
+    ],
+    [
+     113,
+     124
+    ],
+    [
+     124,
+     132
+    ],
+    [
+     132,
+     137
+    ],
+    [
+     137,
+     148
+    ],
+    [
+     148,
+     158
+    ]
+   ]
+  },
+  {
+   "tpl": "ntsb",
+   "p": {
+    "step": "2"
+   },
+   "cap": "NOV 2025",
+   "from": 12109,
+   "dur": 76,
+   "say": "Their final report came out in November twenty twenty-five.",
+   "words": [
+    [
+     4,
+     8
+    ],
+    [
+     8,
+     18
+    ],
+    [
+     18,
+     30
+    ],
+    [
+     30,
+     39
+    ],
+    [
+     39,
+     45
+    ],
+    [
+     45,
+     49
+    ],
+    [
+     49,
+     58
+    ],
+    [
+     58,
+     69
+    ],
+    [
+     69,
+     81
+    ]
+   ]
+  },
+  {
+   "tpl": "wire",
+   "p": {
+    "step": "zoom"
+   },
+   "cap": "ONE WIRE",
+   "from": 12185,
+   "dur": 113,
+   "say": "And the first blackout came down to one wire.",
+   "words": [
+    [
+     5,
+     33
+    ],
+    [
+     33,
+     37
+    ],
+    [
+     37,
+     44
+    ],
+    [
+     44,
+     57
+    ],
+    [
+     57,
+     63
+    ],
+    [
+     63,
+     70
+    ],
+    [
+     70,
+     75
+    ],
+    [
+     75,
+     82
+    ],
+    [
+     82,
+     90
+    ]
+   ]
+  },
+  {
+   "tpl": "wire",
+   "p": {
+    "step": "block"
+   },
+   "cap": "TERMINAL BLOCK",
+   "from": 12298,
+   "dur": 142,
+   "say": "Inside an electrical cabinet, there's a strip of terminals where wires are clamped in.",
+   "words": [
+    [
+     4,
+     18
+    ],
+    [
+     18,
+     24
+    ],
+    [
+     24,
+     33
+    ],
+    [
+     33,
+     48
+    ],
+    [
+     57,
+     66
+    ],
+    [
+     66,
+     68
+    ],
+    [
+     68,
+     75
+    ],
+    [
+     75,
+     81
+    ],
+    [
+     81,
+     91
+    ],
+    [
+     91,
+     100
+    ],
+    [
+     100,
+     110
+    ],
+    [
+     110,
+     116
+    ],
+    [
+     116,
+     127
+    ],
+    [
+     127,
+     130
+    ]
+   ]
+  },
+  {
+   "tpl": "wire",
+   "p": {
+    "step": "labels"
+   },
+   "cap": "LABELS",
+   "from": 12440,
+   "dur": 160,
+   "say": "Each wire has a small plastic label wrapped around it, so engineers know which wire is which.",
+   "words": [
+    [
+     4,
+     10
+    ],
+    [
+     10,
+     18
+    ],
+    [
+     18,
+     24
+    ],
+    [
+     24,
+     28
+    ],
+    [
+     28,
+     34
+    ],
+    [
+     34,
+     45
+    ],
+    [
+     45,
+     56
+    ],
+    [
+     56,
+     64
+    ],
+    [
+     64,
+     72
+    ],
+    [
+     72,
+     80
+    ],
+    [
+     80,
+     94
+    ],
+    [
+     94,
+     104
+    ],
+    [
+     104,
+     116
+    ],
+    [
+     116,
+     126
+    ],
+    [
+     126,
+     135
+    ],
+    [
+     135,
+     143
+    ],
+    [
+     143,
+     149
+    ]
+   ]
+  },
+  {
+   "tpl": "wire",
+   "p": {
+    "step": "wrong"
+   },
+   "cap": "WRONG PLACE",
+   "from": 12600,
+   "dur": 135,
+   "say": "On one wire, that label had been put on in the wrong place when the ship was built.",
+   "words": [
+    [
+     4,
+     19
+    ],
+    [
+     19,
+     25
+    ],
+    [
+     25,
+     32
+    ],
+    [
+     40,
+     43
+    ],
+    [
+     43,
+     51
+    ],
+    [
+     51,
+     56
+    ],
+    [
+     56,
+     61
+    ],
+    [
+     61,
+     66
+    ],
+    [
+     66,
+     72
+    ],
+    [
+     72,
+     77
+    ],
+    [
+     77,
+     80
+    ],
+    [
+     80,
+     88
+    ],
+    [
+     88,
+     98
+    ],
+    [
+     98,
+     104
+    ],
+    [
+     104,
+     107
+    ],
+    [
+     107,
+     113
+    ],
+    [
+     113,
+     118
+    ],
+    [
+     118,
+     125
+    ]
+   ]
+  },
+  {
+   "tpl": "wire",
+   "p": {
+    "step": "half"
+   },
+   "cap": "HALF IN",
+   "from": 12735,
+   "dur": 138,
+   "say": "It stopped the wire from going all the way into its slot. So the wire was only half connected.",
+   "words": [
+    [
+     4,
+     8
+    ],
+    [
+     8,
+     14
+    ],
+    [
+     14,
+     20
+    ],
+    [
+     20,
+     26
+    ],
+    [
+     26,
+     33
+    ],
+    [
+     33,
+     39
+    ],
+    [
+     39,
+     48
+    ],
+    [
+     48,
+     53
+    ],
+    [
+     53,
+     58
+    ],
+    [
+     58,
+     64
+    ],
+    [
+     64,
+     69
+    ],
+    [
+     69,
+     79
+    ],
+    [
+     85,
+     94
+    ],
+    [
+     94,
+     103
+    ],
+    [
+     103,
+     110
+    ],
+    [
+     110,
+     116
+    ],
+    [
+     116,
+     123
+    ],
+    [
+     123,
+     131
+    ],
+    [
+     131,
+     143
+    ]
+   ]
+  },
+  {
+   "tpl": "wire",
+   "p": {
+    "step": "held"
+   },
+   "cap": "HELD\u2026 FOR YEARS",
+   "from": 12873,
+   "dur": 49,
+   "say": "For years it held.",
+   "words": [
+    [
+     5,
+     19
+    ],
+    [
+     19,
+     27
+    ],
+    [
+     27,
+     32
+    ],
+    [
+     32,
+     41
+    ]
+   ]
+  },
+  {
+   "tpl": "wire",
+   "p": {
+    "step": "loose"
+   },
+   "cap": "",
+   "from": 12922,
+   "dur": 146,
+   "say": "Then that night, it lost contact, a breaker tripped, and the ship went dark.",
+   "words": [
+    [
+     4,
+     10
+    ],
+    [
+     10,
+     16
+    ],
+    [
+     16,
+     24
+    ],
+    [
+     31,
+     36
+    ],
+    [
+     36,
+     46
+    ],
+    [
+     46,
+     61
+    ],
+    [
+     73,
+     77
+    ],
+    [
+     77,
+     82
+    ],
+    [
+     82,
+     97
+    ],
+    [
+     97,
+     107
+    ],
+    [
+     107,
+     111
+    ],
+    [
+     111,
+     118
+    ],
+    [
+     118,
+     126
+    ],
+    [
+     126,
+     136
+    ]
+   ]
+  },
+  {
+   "tpl": "wire",
+   "p": {
+    "step": "wall"
+   },
+   "cap": "1 OF HUNDREDS",
+   "from": 13068,
+   "dur": 142,
+   "say": "Finding it wasn't easy. That cabinet held hundreds of terminal blocks.",
+   "words": [
+    [
+     5,
+     16
+    ],
+    [
+     16,
+     22
+    ],
+    [
+     22,
+     32
+    ],
+    [
+     32,
+     43
+    ],
+    [
+     63,
+     73
+    ],
+    [
+     73,
+     83
+    ],
+    [
+     83,
+     91
+    ],
+    [
+     91,
+     99
+    ],
+    [
+     99,
+     106
+    ],
+    [
+     106,
+     114
+    ],
+    [
+     114,
+     126
+    ]
+   ]
+  },
+  {
+   "tpl": "wire",
+   "p": {
+    "step": "month"
+   },
+   "cap": "~[1] MONTH",
+   "from": 13210,
+   "dur": 206,
+   "say": "Investigators tested the system for about a month before they took the panel apart and found the one loose wire.",
+   "words": [
+    [
+     5,
+     21
+    ],
+    [
+     21,
+     33
+    ],
+    [
+     33,
+     39
+    ],
+    [
+     39,
+     49
+    ],
+    [
+     49,
+     58
+    ],
+    [
+     58,
+     66
+    ],
+    [
+     66,
+     72
+    ],
+    [
+     72,
+     80
+    ],
+    [
+     80,
+     98
+    ],
+    [
+     98,
+     106
+    ],
+    [
+     106,
+     111
+    ],
+    [
+     111,
+     117
+    ],
+    [
+     117,
+     124
+    ],
+    [
+     124,
+     136
+    ],
+    [
+     136,
+     149
+    ],
+    [
+     149,
+     158
+    ],
+    [
+     158,
+     166
+    ],
+    [
+     166,
+     175
+    ],
+    [
+     175,
+     182
+    ],
+    [
+     182,
+     194
+    ]
+   ]
+  },
+  {
+   "tpl": "wire",
+   "p": {
+    "step": "lab"
+   },
+   "cap": "BURN MARKS",
+   "from": 13416,
+   "dur": 144,
+   "say": "In the lab, it showed scrape marks and burn marks where electricity had been jumping across the gap.",
+   "words": [
+    [
+     4,
+     9
+    ],
+    [
+     9,
+     12
+    ],
+    [
+     12,
+     20
+    ],
+    [
+     27,
+     29
+    ],
+    [
+     29,
+     36
+    ],
+    [
+     36,
+     46
+    ],
+    [
+     46,
+     56
+    ],
+    [
+     56,
+     65
+    ],
+    [
+     65,
+     73
+    ],
+    [
+     73,
+     84
+    ],
+    [
+     84,
+     89
+    ],
+    [
+     89,
+     103
+    ],
+    [
+     103,
+     113
+    ],
+    [
+     113,
+     118
+    ],
+    [
+     118,
+     125
+    ],
+    [
+     125,
+     134
+    ],
+    [
+     134,
+     142
+    ],
+    [
+     142,
+     148
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "fingerup",
+    "bg": "paper",
+    "label": "AND_MORE\u2026"
+   },
+   "cap": "",
+   "from": 13560,
+   "dur": 46,
+   "say": "And there was more.",
+   "words": [
+    [
+     4,
+     19
+    ],
+    [
+     19,
+     24
+    ],
+    [
+     24,
+     29
+    ],
+    [
+     29,
+     37
+    ]
+   ]
+  },
+  {
+   "tpl": "clocks",
+   "p": {
+    "step": "1"
+   },
+   "cap": "MANUAL",
+   "from": 13606,
+   "dur": 126,
+   "say": "Some of the ship's main power switches were set to manual instead of automatic.",
+   "words": [
+    [
+     5,
+     12
+    ],
+    [
+     12,
+     15
+    ],
+    [
+     15,
+     19
+    ],
+    [
+     19,
+     27
+    ],
+    [
+     27,
+     34
+    ],
+    [
+     34,
+     42
+    ],
+    [
+     42,
+     51
+    ],
+    [
+     51,
+     60
+    ],
+    [
+     60,
+     64
+    ],
+    [
+     64,
+     69
+    ],
+    [
+     69,
+     78
+    ],
+    [
+     78,
+     93
+    ],
+    [
+     93,
+     99
+    ],
+    [
+     99,
+     112
+    ]
+   ]
+  },
+  {
+   "tpl": "clocks",
+   "p": {
+    "step": "2"
+   },
+   "cap": "[10 S] VS [58 S]",
+   "from": 13732,
+   "dur": 232,
+   "say": "The NTSB found that on automatic, the first blackout would have lasted about ten seconds. Instead, it lasted almost a minute.",
+   "words": [
+    [
+     5,
+     11
+    ],
+    [
+     11,
+     30
+    ],
+    [
+     30,
+     39
+    ],
+    [
+     39,
+     47
+    ],
+    [
+     47,
+     51
+    ],
+    [
+     51,
+     64
+    ],
+    [
+     76,
+     77
+    ],
+    [
+     77,
+     84
+    ],
+    [
+     84,
+     98
+    ],
+    [
+     98,
+     103
+    ],
+    [
+     103,
+     107
+    ],
+    [
+     107,
+     116
+    ],
+    [
+     116,
+     126
+    ],
+    [
+     126,
+     136
+    ],
+    [
+     136,
+     149
+    ],
+    [
+     163,
+     175
+    ],
+    [
+     186,
+     190
+    ],
+    [
+     190,
+     199
+    ],
+    [
+     199,
+     211
+    ],
+    [
+     211,
+     219
+    ],
+    [
+     219,
+     222
+    ]
+   ]
+  },
+  {
+   "tpl": "pump",
+   "p": {
+    "step": "1"
+   },
+   "cap": "THE WRONG PUMP",
+   "from": 13964,
+   "dur": 212,
+   "say": "The second blackout had another cause. The crew had been using a pump meant for flushing and cleaning to feed fuel to the generators.",
+   "words": [
+    [
+     4,
+     7
+    ],
+    [
+     7,
+     14
+    ],
+    [
+     14,
+     27
+    ],
+    [
+     27,
+     33
+    ],
+    [
+     33,
+     41
+    ],
+    [
+     41,
+     52
+    ],
+    [
+     67,
+     70
+    ],
+    [
+     70,
+     77
+    ],
+    [
+     77,
+     83
+    ],
+    [
+     83,
+     88
+    ],
+    [
+     88,
+     94
+    ],
+    [
+     94,
+     101
+    ],
+    [
+     101,
+     107
+    ],
+    [
+     107,
+     114
+    ],
+    [
+     114,
+     121
+    ],
+    [
+     121,
+     132
+    ],
+    [
+     132,
+     137
+    ],
+    [
+     137,
+     146
+    ],
+    [
+     146,
+     161
+    ],
+    [
+     161,
+     167
+    ],
+    [
+     167,
+     177
+    ],
+    [
+     177,
+     182
+    ],
+    [
+     182,
+     186
+    ],
+    [
+     186,
+     198
+    ]
+   ]
+  },
+  {
+   "tpl": "pump",
+   "p": {
+    "step": "2"
+   },
+   "cap": "NO RESTART",
+   "from": 14176,
+   "dur": 140,
+   "say": "When the power dropped, that pump stopped, and it didn't restart by itself.",
+   "words": [
+    [
+     4,
+     12
+    ],
+    [
+     12,
+     15
+    ],
+    [
+     15,
+     22
+    ],
+    [
+     22,
+     33
+    ],
+    [
+     40,
+     47
+    ],
+    [
+     47,
+     55
+    ],
+    [
+     55,
+     67
+    ],
+    [
+     67,
+     81
+    ],
+    [
+     81,
+     85
+    ],
+    [
+     85,
+     95
+    ],
+    [
+     95,
+     105
+    ],
+    [
+     105,
+     114
+    ],
+    [
+     114,
+     124
+    ]
+   ]
+  },
+  {
+   "tpl": "pump",
+   "p": {
+    "step": "3"
+   },
+   "cap": "OUT OF FUEL",
+   "from": 14316,
+   "dur": 44,
+   "say": "The generators ran out of fuel.",
+   "words": [
+    [
+     4,
+     13
+    ],
+    [
+     13,
+     25
+    ],
+    [
+     25,
+     34
+    ],
+    [
+     34,
+     38
+    ],
+    [
+     38,
+     42
+    ],
+    [
+     42,
+     49
+    ]
+   ]
+  },
+  {
+   "tpl": "wire",
+   "p": {
+    "step": "hero2"
+   },
+   "cap": "3 SMALL THINGS",
+   "from": 14360,
+   "dur": 233,
+   "say": "So a misplaced label, a switch set to manual, and the wrong pump, on the wrong night, three ship lengths from a bridge.",
+   "words": [
+    [
+     5,
+     15
+    ],
+    [
+     15,
+     20
+    ],
+    [
+     20,
+     32
+    ],
+    [
+     32,
+     41
+    ],
+    [
+     59,
+     60
+    ],
+    [
+     60,
+     68
+    ],
+    [
+     68,
+     80
+    ],
+    [
+     80,
+     85
+    ],
+    [
+     85,
+     93
+    ],
+    [
+     93,
+     110
+    ],
+    [
+     110,
+     114
+    ],
+    [
+     114,
+     120
+    ],
+    [
+     120,
+     131
+    ],
+    [
+     131,
+     141
+    ],
+    [
+     141,
+     145
+    ],
+    [
+     145,
+     152
+    ],
+    [
+     152,
+     162
+    ],
+    [
+     178,
+     185
+    ],
+    [
+     185,
+     192
+    ],
+    [
+     192,
+     199
+    ],
+    [
+     199,
+     206
+    ],
+    [
+     206,
+     209
+    ],
+    [
+     209,
+     215
+    ]
+   ]
+  },
+  {
+   "tpl": "dali",
+   "p": {
+    "scene": "draped",
+    "music": "light"
+   },
+   "cap": "[1000s OF] TONNES ON THE BOW",
+   "from": 14593,
+   "dur": 161,
+   "say": "Meanwhile, the Dali was stuck under the wreckage, with thousands of tonnes of bridge steel lying across its bow.",
+   "words": [
+    [
+     4,
+     14
+    ],
+    [
+     22,
+     23
+    ],
+    [
+     23,
+     30
+    ],
+    [
+     30,
+     35
+    ],
+    [
+     35,
+     42
+    ],
+    [
+     42,
+     51
+    ],
+    [
+     51,
+     55
+    ],
+    [
+     55,
+     67
+    ],
+    [
+     79,
+     84
+    ],
+    [
+     84,
+     96
+    ],
+    [
+     96,
+     102
+    ],
+    [
+     102,
+     108
+    ],
+    [
+     108,
+     114
+    ],
+    [
+     114,
+     121
+    ],
+    [
+     121,
+     129
+    ],
+    [
+     129,
+     143
+    ],
+    [
+     143,
+     151
+    ],
+    [
+     151,
+     158
+    ],
+    [
+     158,
+     165
+    ]
+   ]
+  },
+  {
+   "tpl": "port",
+   "p": {
+    "step": "blocked"
+   },
+   "cap": "RIVER BLOCKED",
+   "from": 14754,
+   "dur": 58,
+   "say": "And the river was blocked.",
+   "words": [
+    [
+     4,
+     16
+    ],
+    [
+     16,
+     20
+    ],
+    [
+     20,
+     26
+    ],
+    [
+     26,
+     33
+    ],
+    [
+     33,
+     43
+    ]
+   ]
+  },
+  {
+   "tpl": "port",
+   "p": {
+    "step": "cars"
+   },
+   "cap": "[#1] FOR CARS",
+   "from": 14812,
+   "dur": 167,
+   "say": "The Port of Baltimore handles more cars and farm machines than any other port in the United States.",
+   "words": [
+    [
+     4,
+     7
+    ],
+    [
+     7,
+     14
+    ],
+    [
+     14,
+     18
+    ],
+    [
+     18,
+     29
+    ],
+    [
+     29,
+     42
+    ],
+    [
+     42,
+     51
+    ],
+    [
+     51,
+     62
+    ],
+    [
+     62,
+     69
+    ],
+    [
+     69,
+     76
+    ],
+    [
+     76,
+     87
+    ],
+    [
+     87,
+     100
+    ],
+    [
+     100,
+     109
+    ],
+    [
+     109,
+     116
+    ],
+    [
+     116,
+     124
+    ],
+    [
+     124,
+     130
+    ],
+    [
+     130,
+     133
+    ],
+    [
+     133,
+     140
+    ],
+    [
+     140,
+     154
+    ]
+   ]
+  },
+  {
+   "tpl": "port",
+   "p": {
+    "step": "cutoff"
+   },
+   "cap": "CUT OFF",
+   "from": 14979,
+   "dur": 67,
+   "say": "Now it was cut off from the sea.",
+   "words": [
+    [
+     4,
+     13
+    ],
+    [
+     13,
+     21
+    ],
+    [
+     21,
+     26
+    ],
+    [
+     26,
+     32
+    ],
+    [
+     32,
+     37
+    ],
+    [
+     37,
+     43
+    ],
+    [
+     43,
+     47
+    ],
+    [
+     47,
+     54
+    ]
+   ]
+  },
+  {
+   "tpl": "port",
+   "p": {
+    "step": "jobs"
+   },
+   "cap": "",
+   "from": 15046,
+   "dur": 170,
+   "say": "Thousands of dock workers, truck drivers and small businesses suddenly had almost no work coming in.",
+   "words": [
+    [
+     5,
+     15
+    ],
+    [
+     15,
+     22
+    ],
+    [
+     22,
+     28
+    ],
+    [
+     28,
+     39
+    ],
+    [
+     51,
+     54
+    ],
+    [
+     54,
+     64
+    ],
+    [
+     64,
+     70
+    ],
+    [
+     70,
+     79
+    ],
+    [
+     79,
+     91
+    ],
+    [
+     91,
+     111
+    ],
+    [
+     111,
+     121
+    ],
+    [
+     121,
+     134
+    ],
+    [
+     134,
+     144
+    ],
+    [
+     144,
+     152
+    ],
+    [
+     152,
+     160
+    ],
+    [
+     160,
+     168
+    ]
+   ]
+  },
+  {
+   "tpl": "crane",
+   "p": {
+    "step": "1"
+   },
+   "cap": "START CUTTING",
+   "from": 15216,
+   "dur": 84,
+   "say": "So the salvage teams started cutting.",
+   "words": [
+    [
+     4,
+     20
+    ],
+    [
+     20,
+     24
+    ],
+    [
+     24,
+     35
+    ],
+    [
+     35,
+     43
+    ],
+    [
+     43,
+     60
+    ],
+    [
+     60,
+     70
+    ]
+   ]
+  },
+  {
+   "tpl": "crane",
+   "p": {
+    "step": "2"
+   },
+   "cap": "CHESAPEAKE 1000",
+   "from": 15300,
+   "dur": 148,
+   "say": "They brought in the largest floating crane on the East Coast, called the Chesapeake One Thousand,",
+   "words": [
+    [
+     5,
+     9
+    ],
+    [
+     9,
+     14
+    ],
+    [
+     14,
+     20
+    ],
+    [
+     20,
+     25
+    ],
+    [
+     25,
+     35
+    ],
+    [
+     35,
+     46
+    ],
+    [
+     46,
+     56
+    ],
+    [
+     56,
+     65
+    ],
+    [
+     65,
+     70
+    ],
+    [
+     70,
+     76
+    ],
+    [
+     76,
+     88
+    ],
+    [
+     88,
+     103
+    ],
+    [
+     103,
+     112
+    ],
+    [
+     112,
+     128
+    ],
+    [
+     128,
+     131
+    ],
+    [
+     131,
+     134
+    ]
+   ]
+  },
+  {
+   "tpl": "crane",
+   "p": {
+    "step": "3"
+   },
+   "cap": "[1,000 T] PER LIFT",
+   "from": 15448,
+   "dur": 91,
+   "say": "which can lift about a thousand tons at a time.",
+   "words": [
+    [
+     4,
+     13
+    ],
+    [
+     13,
+     20
+    ],
+    [
+     20,
+     26
+    ],
+    [
+     26,
+     34
+    ],
+    [
+     34,
+     40
+    ],
+    [
+     40,
+     51
+    ],
+    [
+     51,
+     61
+    ],
+    [
+     61,
+     67
+    ],
+    [
+     67,
+     69
+    ],
+    [
+     69,
+     81
+    ]
+   ]
+  },
+  {
+   "tpl": "crane",
+   "p": {
+    "step": "secret"
+   },
+   "cap": "TOP SECRET",
+   "from": 15539,
+   "dur": 88,
+   "say": "And this crane has a strange past.",
+   "words": [
+    [
+     5,
+     15
+    ],
+    [
+     15,
+     22
+    ],
+    [
+     22,
+     32
+    ],
+    [
+     32,
+     39
+    ],
+    [
+     39,
+     44
+    ],
+    [
+     44,
+     60
+    ],
+    [
+     60,
+     75
+    ]
+   ]
+  },
+  {
+   "tpl": "crane",
+   "p": {
+    "step": "sub"
+   },
+   "cap": "CIA \u00b7 SOVIET SUB",
+   "from": 15627,
+   "dur": 185,
+   "say": "It once helped the CIA secretly lift part of a sunken Soviet submarine from the bottom of the ocean.",
+   "words": [
+    [
+     5,
+     10
+    ],
+    [
+     10,
+     16
+    ],
+    [
+     16,
+     23
+    ],
+    [
+     23,
+     31
+    ],
+    [
+     31,
+     41
+    ],
+    [
+     41,
+     55
+    ],
+    [
+     55,
+     65
+    ],
+    [
+     65,
+     75
+    ],
+    [
+     75,
+     79
+    ],
+    [
+     79,
+     83
+    ],
+    [
+     83,
+     93
+    ],
+    [
+     93,
+     104
+    ],
+    [
+     104,
+     120
+    ],
+    [
+     120,
+     134
+    ],
+    [
+     134,
+     139
+    ],
+    [
+     139,
+     146
+    ],
+    [
+     146,
+     152
+    ],
+    [
+     152,
+     156
+    ],
+    [
+     156,
+     165
+    ]
+   ]
+  },
+  {
+   "tpl": "port",
+   "p": {
+    "step": "channels"
+   },
+   "cap": "",
+   "from": 15812,
+   "dur": 184,
+   "say": "Piece by piece, they opened small channels so a few ships could get in and out, and then bigger ones.",
+   "words": [
+    [
+     4,
+     15
+    ],
+    [
+     15,
+     24
+    ],
+    [
+     24,
+     35
+    ],
+    [
+     50,
+     56
+    ],
+    [
+     56,
+     63
+    ],
+    [
+     63,
+     76
+    ],
+    [
+     76,
+     89
+    ],
+    [
+     89,
+     103
+    ],
+    [
+     103,
+     108
+    ],
+    [
+     108,
+     112
+    ],
+    [
+     112,
+     120
+    ],
+    [
+     120,
+     126
+    ],
+    [
+     126,
+     131
+    ],
+    [
+     131,
+     139
+    ],
+    [
+     139,
+     142
+    ],
+    [
+     142,
+     150
+    ],
+    [
+     150,
+     167
+    ],
+    [
+     167,
+     171
+    ],
+    [
+     171,
+     179
+    ],
+    [
+     179,
+     189
+    ]
+   ]
+  },
+  {
+   "tpl": "port",
+   "p": {
+    "step": "tug"
+   },
+   "cap": "[6] DAYS LATER",
+   "from": 15996,
+   "dur": 189,
+   "say": "The first small channel opened just six days after the collapse, for tugs and barges.",
+   "words": [
+    [
+     5,
+     36
+    ],
+    [
+     36,
+     45
+    ],
+    [
+     45,
+     56
+    ],
+    [
+     56,
+     66
+    ],
+    [
+     66,
+     76
+    ],
+    [
+     76,
+     87
+    ],
+    [
+     87,
+     97
+    ],
+    [
+     97,
+     104
+    ],
+    [
+     104,
+     115
+    ],
+    [
+     115,
+     120
+    ],
+    [
+     120,
+     131
+    ],
+    [
+     131,
+     146
+    ],
+    [
+     146,
+     157
+    ],
+    [
+     157,
+     164
+    ],
+    [
+     164,
+     176
+    ]
+   ]
+  },
+  {
+   "tpl": "port",
+   "p": {
+    "step": "deep"
+   },
+   "cap": "LATE APRIL",
+   "from": 16185,
+   "dur": 141,
+   "say": "By late April, a deeper temporary channel let some of the biggest ships through again.",
+   "words": [
+    [
+     4,
+     8
+    ],
+    [
+     8,
+     15
+    ],
+    [
+     15,
+     23
+    ],
+    [
+     23,
+     39
+    ],
+    [
+     39,
+     48
+    ],
+    [
+     48,
+     62
+    ],
+    [
+     62,
+     76
+    ],
+    [
+     76,
+     86
+    ],
+    [
+     86,
+     92
+    ],
+    [
+     92,
+     96
+    ],
+    [
+     96,
+     99
+    ],
+    [
+     99,
+     106
+    ],
+    [
+     106,
+     115
+    ],
+    [
+     115,
+     124
+    ],
+    [
+     124,
+     132
+    ]
+   ]
+  },
+  {
+   "tpl": "blast",
+   "p": {
+    "step": "1"
+   },
+   "cap": "MAY",
+   "from": 16326,
+   "dur": 125,
+   "say": "Then, in May, they used small, carefully placed explosive charges",
+   "words": [
+    [
+     5,
+     15
+    ],
+    [
+     15,
+     34
+    ],
+    [
+     34,
+     41
+    ],
+    [
+     41,
+     56
+    ],
+    [
+     56,
+     62
+    ],
+    [
+     62,
+     75
+    ],
+    [
+     75,
+     91
+    ],
+    [
+     91,
+     103
+    ],
+    [
+     103,
+     116
+    ],
+    [
+     116,
+     130
+    ]
+   ]
+  },
+  {
+   "tpl": "blast",
+   "p": {
+    "step": "2"
+   },
+   "cap": "BOOM!",
+   "from": 16451,
+   "dur": 176,
+   "say": "to cut the biggest section of the bridge off the Dali's bow.",
+   "words": [
+    [
+     5,
+     19
+    ],
+    [
+     19,
+     24
+    ],
+    [
+     24,
+     29
+    ],
+    [
+     29,
+     37
+    ],
+    [
+     37,
+     52
+    ],
+    [
+     52,
+     57
+    ],
+    [
+     57,
+     60
+    ],
+    [
+     60,
+     69
+    ],
+    [
+     69,
+     80
+    ],
+    [
+     80,
+     84
+    ],
+    [
+     84,
+     95
+    ],
+    [
+     95,
+     102
+    ]
+   ]
+  },
+  {
+   "tpl": "blast",
+   "p": {
+    "step": "float"
+   },
+   "cap": "[20 MAY] \u00b7 FREE",
+   "from": 16627,
+   "dur": 157,
+   "say": "On the twentieth of May, the Dali finally floated free and was towed back into port.",
+   "words": [
+    [
+     4,
+     22
+    ],
+    [
+     22,
+     25
+    ],
+    [
+     25,
+     40
+    ],
+    [
+     40,
+     43
+    ],
+    [
+     43,
+     51
+    ],
+    [
+     51,
+     72
+    ],
+    [
+     72,
+     79
+    ],
+    [
+     79,
+     91
+    ],
+    [
+     91,
+     101
+    ],
+    [
+     101,
+     109
+    ],
+    [
+     109,
+     116
+    ],
+    [
+     116,
+     121
+    ],
+    [
+     121,
+     130
+    ],
+    [
+     130,
+     136
+    ],
+    [
+     136,
+     142
+    ],
+    [
+     142,
+     151
+    ]
+   ]
+  },
+  {
+   "tpl": "port",
+   "p": {
+    "step": "open"
+   },
+   "cap": "[10 JUNE] \u00b7 OPEN",
+   "from": 16784,
+   "dur": 112,
+   "say": "And on the tenth of June, the full shipping channel was open again.",
+   "words": [
+    [
+     5,
+     13
+    ],
+    [
+     13,
+     18
+    ],
+    [
+     18,
+     21
+    ],
+    [
+     21,
+     30
+    ],
+    [
+     30,
+     32
+    ],
+    [
+     32,
+     41
+    ],
+    [
+     41,
+     55
+    ],
+    [
+     55,
+     64
+    ],
+    [
+     64,
+     72
+    ],
+    [
+     72,
+     84
+    ],
+    [
+     84,
+     90
+    ],
+    [
+     90,
+     98
+    ],
+    [
+     98,
+     107
+    ]
+   ]
+  },
+  {
+   "tpl": "port",
+   "p": {
+    "step": "pile"
+   },
+   "cap": "[~50,000 T]",
+   "from": 16896,
+   "dur": 182,
+   "say": "By then, crews had pulled an estimated fifty thousand tons of steel and concrete out of the river.",
+   "words": [
+    [
+     5,
+     16
+    ],
+    [
+     16,
+     26
+    ],
+    [
+     26,
+     42
+    ],
+    [
+     42,
+     49
+    ],
+    [
+     49,
+     56
+    ],
+    [
+     56,
+     62
+    ],
+    [
+     62,
+     75
+    ],
+    [
+     75,
+     89
+    ],
+    [
+     89,
+     104
+    ],
+    [
+     104,
+     109
+    ],
+    [
+     109,
+     115
+    ],
+    [
+     115,
+     123
+    ],
+    [
+     123,
+     131
+    ],
+    [
+     131,
+     143
+    ],
+    [
+     143,
+     151
+    ],
+    [
+     151,
+     155
+    ],
+    [
+     155,
+     158
+    ],
+    [
+     158,
+     164
+    ]
+   ]
+  },
+  {
+   "tpl": "wheel",
+   "p": {
+    "act": "crewwait"
+   },
+   "cap": "",
+   "from": 17078,
+   "dur": 74,
+   "say": "Most of the crew had stayed on the ship for weeks.",
+   "words": [
+    [
+     4,
+     14
+    ],
+    [
+     14,
+     18
+    ],
+    [
+     18,
+     21
+    ],
+    [
+     21,
+     26
+    ],
+    [
+     26,
+     31
+    ],
+    [
+     31,
+     38
+    ],
+    [
+     38,
+     42
+    ],
+    [
+     42,
+     45
+    ],
+    [
+     45,
+     51
+    ],
+    [
+     51,
+     56
+    ],
+    [
+     56,
+     64
+    ]
+   ]
+  },
+  {
+   "tpl": "memorial",
+   "p": {
+    "kind": "crewcal"
+   },
+   "cap": "",
+   "from": 17152,
+   "dur": 170,
+   "say": "Some were told to stay in Baltimore during the investigation, and a few were still there almost two years later.",
+   "words": [
+    [
+     5,
+     13
+    ],
+    [
+     13,
+     21
+    ],
+    [
+     21,
+     30
+    ],
+    [
+     30,
+     38
+    ],
+    [
+     38,
+     45
+    ],
+    [
+     45,
+     50
+    ],
+    [
+     50,
+     58
+    ],
+    [
+     58,
+     71
+    ],
+    [
+     71,
+     77
+    ],
+    [
+     77,
+     96
+    ],
+    [
+     96,
+     116
+    ],
+    [
+     116,
+     120
+    ],
+    [
+     120,
+     124
+    ],
+    [
+     124,
+     129
+    ],
+    [
+     129,
+     134
+    ],
+    [
+     134,
+     141
+    ],
+    [
+     141,
+     151
+    ],
+    [
+     151,
+     159
+    ],
+    [
+     159,
+     165
+    ],
+    [
+     165,
+     175
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "think",
+    "bg": "paper",
+    "label": "AND_THE_DALI?"
+   },
+   "cap": "",
+   "from": 17322,
+   "dur": 71,
+   "say": "And the Dali itself?",
+   "words": [
+    [
+     5,
+     24
+    ],
+    [
+     24,
+     30
+    ],
+    [
+     30,
+     40
+    ],
+    [
+     40,
+     51
+    ]
+   ]
+  },
+  {
+   "tpl": "dali",
+   "p": {
+    "scene": "drydock"
+   },
+   "cap": "NEW BOW \u00b7 CHINA",
+   "from": 17393,
+   "dur": 171,
+   "say": "After temporary repairs, it sailed to a shipyard in China, where its smashed bow was rebuilt.",
+   "words": [
+    [
+     5,
+     12
+    ],
+    [
+     12,
+     26
+    ],
+    [
+     26,
+     42
+    ],
+    [
+     42,
+     56
+    ],
+    [
+     56,
+     64
+    ],
+    [
+     64,
+     72
+    ],
+    [
+     72,
+     76
+    ],
+    [
+     76,
+     87
+    ],
+    [
+     87,
+     92
+    ],
+    [
+     92,
+     101
+    ],
+    [
+     101,
+     117
+    ],
+    [
+     117,
+     122
+    ],
+    [
+     122,
+     132
+    ],
+    [
+     132,
+     141
+    ],
+    [
+     141,
+     149
+    ],
+    [
+     149,
+     158
+    ]
+   ]
+  },
+  {
+   "tpl": "dali",
+   "p": {
+    "scene": "sailing",
+    "guy": "fold"
+   },
+   "cap": "BACK AT WORK \u00b7 [JAN 2025]",
+   "from": 17564,
+   "dur": 145,
+   "say": "In January twenty twenty-five, about ten months after the collapse, it went back to work,",
+   "words": [
+    [
+     4,
+     9
+    ],
+    [
+     9,
+     21
+    ],
+    [
+     21,
+     32
+    ],
+    [
+     32,
+     43
+    ],
+    [
+     43,
+     71
+    ],
+    [
+     71,
+     82
+    ],
+    [
+     82,
+     88
+    ],
+    [
+     88,
+     100
+    ],
+    [
+     100,
+     104
+    ],
+    [
+     104,
+     114
+    ],
+    [
+     114,
+     123
+    ],
+    [
+     123,
+     128
+    ],
+    [
+     128,
+     135
+    ],
+    [
+     135,
+     140
+    ],
+    [
+     140,
+     149
+    ]
+   ]
+  },
+  {
+   "tpl": "route",
+   "p": {
+    "mode": "asia"
+   },
+   "cap": "ASIA \u21c4 CENTRAL AMERICA",
+   "from": 17709,
+   "dur": 149,
+   "say": "carrying containers between Asia and Central America.",
+   "words": [
+    [
+     4,
+     25
+    ],
+    [
+     25,
+     42
+    ],
+    [
+     42,
+     53
+    ],
+    [
+     53,
+     68
+    ],
+    [
+     68,
+     83
+    ],
+    [
+     83,
+     94
+    ],
+    [
+     94,
+     109
+    ]
+   ]
+  },
+  {
+   "tpl": "price",
+   "p": {
+    "kind": "cheque"
+   },
+   "cap": "[$102 MILLION]",
+   "from": 17858,
+   "dur": 240,
+   "say": "The ship's owners agreed to pay about one hundred and two million dollars for clearing the channel, without admitting they were responsible.",
+   "words": [
+    [
+     4,
+     24
+    ],
+    [
+     24,
+     31
+    ],
+    [
+     31,
+     43
+    ],
+    [
+     43,
+     53
+    ],
+    [
+     53,
+     60
+    ],
+    [
+     60,
+     64
+    ],
+    [
+     64,
+     72
+    ],
+    [
+     72,
+     78
+    ],
+    [
+     78,
+     83
+    ],
+    [
+     83,
+     88
+    ],
+    [
+     88,
+     93
+    ],
+    [
+     93,
+     115
+    ],
+    [
+     115,
+     126
+    ],
+    [
+     126,
+     132
+    ],
+    [
+     132,
+     141
+    ],
+    [
+     141,
+     147
+    ],
+    [
+     147,
+     157
+    ],
+    [
+     157,
+     176
+    ],
+    [
+     176,
+     189
+    ],
+    [
+     189,
+     197
+    ],
+    [
+     197,
+     201
+    ],
+    [
+     201,
+     216
+    ]
+   ]
+  },
+  {
+   "tpl": "price",
+   "p": {
+    "kind": "1977"
+   },
+   "cap": "[$60 MILLION] \u00b7 1977",
+   "from": 18098,
+   "dur": 169,
+   "say": "When the Key Bridge was built in the nineteen-seventies, it cost about sixty million dollars.",
+   "words": [
+    [
+     5,
+     14
+    ],
+    [
+     14,
+     18
+    ],
+    [
+     18,
+     24
+    ],
+    [
+     24,
+     30
+    ],
+    [
+     30,
+     36
+    ],
+    [
+     36,
+     44
+    ],
+    [
+     44,
+     53
+    ],
+    [
+     53,
+     56
+    ],
+    [
+     56,
+     88
+    ],
+    [
+     88,
+     98
+    ],
+    [
+     98,
+     104
+    ],
+    [
+     104,
+     111
+    ],
+    [
+     111,
+     126
+    ],
+    [
+     126,
+     141
+    ],
+    [
+     141,
+     156
+    ]
+   ]
+  },
+  {
+   "tpl": "price",
+   "p": {
+    "kind": "new"
+   },
+   "cap": "[$4.3\u20135.2 BILLION]",
+   "from": 18267,
+   "dur": 186,
+   "say": "The new bridge will cost much more. The latest estimate is between four point three and five point two billion dollars,",
+   "words": [
+    [
+     4,
+     9
+    ],
+    [
+     9,
+     13
+    ],
+    [
+     13,
+     21
+    ],
+    [
+     21,
+     25
+    ],
+    [
+     25,
+     32
+    ],
+    [
+     32,
+     38
+    ],
+    [
+     38,
+     46
+    ],
+    [
+     61,
+     64
+    ],
+    [
+     64,
+     71
+    ],
+    [
+     71,
+     83
+    ],
+    [
+     83,
+     91
+    ],
+    [
+     91,
+     100
+    ],
+    [
+     100,
+     108
+    ],
+    [
+     108,
+     116
+    ],
+    [
+     116,
+     124
+    ],
+    [
+     124,
+     139
+    ],
+    [
+     139,
+     147
+    ],
+    [
+     147,
+     155
+    ],
+    [
+     155,
+     164
+    ],
+    [
+     164,
+     176
+    ],
+    [
+     176,
+     190
+    ]
+   ]
+  },
+  {
+   "tpl": "price",
+   "p": {
+    "kind": "2030"
+   },
+   "cap": "LATE [2030]",
+   "from": 18453,
+   "dur": 88,
+   "say": "and it's not expected to open before late twenty thirty.",
+   "words": [
+    [
+     4,
+     22
+    ],
+    [
+     22,
+     28
+    ],
+    [
+     28,
+     31
+    ],
+    [
+     31,
+     44
+    ],
+    [
+     44,
+     49
+    ],
+    [
+     49,
+     56
+    ],
+    [
+     56,
+     67
+    ],
+    [
+     67,
+     77
+    ],
+    [
+     77,
+     85
+    ],
+    [
+     85,
+     92
+    ]
+   ]
+  },
+  {
+   "tpl": "truss",
+   "p": {
+    "mode": "new"
+   },
+   "cap": "LONGER SPAN \u00b7 BIG ISLANDS",
+   "from": 18541,
+   "dur": 173,
+   "say": "It will have a longer main span, and much bigger protection around its supports.",
+   "words": [
+    [
+     4,
+     26
+    ],
+    [
+     26,
+     31
+    ],
+    [
+     31,
+     36
+    ],
+    [
+     36,
+     40
+    ],
+    [
+     40,
+     49
+    ],
+    [
+     49,
+     58
+    ],
+    [
+     58,
+     67
+    ],
+    [
+     67,
+     91
+    ],
+    [
+     91,
+     101
+    ],
+    [
+     101,
+     109
+    ],
+    [
+     109,
+     124
+    ],
+    [
+     124,
+     135
+    ],
+    [
+     135,
+     143
+    ],
+    [
+     143,
+     157
+    ]
+   ]
+  },
+  {
+   "tpl": "usmap",
+   "p": {
+    "step": "1"
+   },
+   "cap": "BEYOND BALTIMORE",
+   "from": 18714,
+   "dur": 111,
+   "say": "And the investigation reached far beyond Baltimore.",
+   "words": [
+    [
+     5,
+     13
+    ],
+    [
+     13,
+     17
+    ],
+    [
+     17,
+     34
+    ],
+    [
+     34,
+     52
+    ],
+    [
+     52,
+     68
+    ],
+    [
+     68,
+     80
+    ],
+    [
+     80,
+     96
+    ]
+   ]
+  },
+  {
+   "tpl": "usmap",
+   "p": {
+    "step": "2"
+   },
+   "cap": "[68] BRIDGES",
+   "from": 18825,
+   "dur": 131,
+   "say": "The NTSB asked the owners of sixty-eight other bridges across the United States,",
+   "words": [
+    [
+     5,
+     7
+    ],
+    [
+     7,
+     26
+    ],
+    [
+     26,
+     35
+    ],
+    [
+     35,
+     39
+    ],
+    [
+     39,
+     46
+    ],
+    [
+     46,
+     52
+    ],
+    [
+     52,
+     66
+    ],
+    [
+     66,
+     77
+    ],
+    [
+     77,
+     87
+    ],
+    [
+     87,
+     95
+    ],
+    [
+     95,
+     103
+    ],
+    [
+     103,
+     109
+    ],
+    [
+     109,
+     124
+    ]
+   ]
+  },
+  {
+   "tpl": "usmap",
+   "p": {
+    "step": "3"
+   },
+   "cap": "INCL. GOLDEN GATE",
+   "from": 18956,
+   "dur": 132,
+   "say": "including the Golden Gate Bridge, to check how they'd survive a ship strike.",
+   "words": [
+    [
+     5,
+     14
+    ],
+    [
+     14,
+     24
+    ],
+    [
+     24,
+     33
+    ],
+    [
+     33,
+     42
+    ],
+    [
+     42,
+     53
+    ],
+    [
+     53,
+     67
+    ],
+    [
+     67,
+     74
+    ],
+    [
+     74,
+     81
+    ],
+    [
+     81,
+     88
+    ],
+    [
+     88,
+     97
+    ],
+    [
+     97,
+     104
+    ],
+    [
+     104,
+     109
+    ],
+    [
+     109,
+     118
+    ]
+   ]
+  },
+  {
+   "tpl": "night",
+   "p": {
+    "state": "dawn",
+    "cam": "wide",
+    "music": "hopeful"
+   },
+   "cap": "",
+   "from": 19088,
+   "dur": 195,
+   "say": "A giant ship, a bridge that stood for almost fifty years, and a little plastic label in the wrong place.",
+   "words": [
+    [
+     5,
+     9
+    ],
+    [
+     9,
+     21
+    ],
+    [
+     21,
+     34
+    ],
+    [
+     50,
+     54
+    ],
+    [
+     54,
+     62
+    ],
+    [
+     62,
+     69
+    ],
+    [
+     69,
+     74
+    ],
+    [
+     74,
+     79
+    ],
+    [
+     79,
+     88
+    ],
+    [
+     88,
+     97
+    ],
+    [
+     97,
+     109
+    ],
+    [
+     109,
+     132
+    ],
+    [
+     132,
+     136
+    ],
+    [
+     136,
+     140
+    ],
+    [
+     140,
+     152
+    ],
+    [
+     152,
+     163
+    ],
+    [
+     163,
+     168
+    ],
+    [
+     168,
+     171
+    ],
+    [
+     171,
+     177
+    ],
+    [
+     177,
+     189
+    ]
+   ]
+  },
+  {
+   "tpl": "guy",
+   "p": {
+    "act": "pinch",
+    "bg": "river"
+   },
+   "cap": "",
+   "from": 19283,
+   "dur": 109,
+   "say": "Sometimes the biggest disasters start with the smallest things.",
+   "words": [
+    [
+     5,
+     18
+    ],
+    [
+     18,
+     33
+    ],
+    [
+     33,
+     42
+    ],
+    [
+     42,
+     59
+    ],
+    [
+     59,
+     75
+    ],
+    [
+     75,
+     83
+    ],
+    [
+     83,
+     88
+    ],
+    [
+     88,
+     99
+    ],
+    [
+     99,
+     113
+    ]
+   ]
+  },
+  {
+   "tpl": "endcard5",
+   "p": {},
+   "cap": "",
+   "from": 19392,
+   "dur": 320,
+   "say": "If you want to see another giant ship that got stuck in a very narrow place, and shut down a whole canal, that video is right here.",
+   "words": [
+    [
+     4,
+     35
+    ],
+    [
+     35,
+     39
+    ],
+    [
+     39,
+     44
+    ],
+    [
+     44,
+     49
+    ],
+    [
+     49,
+     53
+    ],
+    [
+     53,
+     62
+    ],
+    [
+     62,
+     73
+    ],
+    [
+     73,
+     82
+    ],
+    [
+     82,
+     87
+    ],
+    [
+     87,
+     92
+    ],
+    [
+     92,
+     99
+    ],
+    [
+     99,
+     106
+    ],
+    [
+     106,
+     108
+    ],
+    [
+     108,
+     115
+    ],
+    [
+     115,
+     124
+    ],
+    [
+     124,
+     137
+    ],
+    [
+     137,
+     158
+    ],
+    [
+     158,
+     167
+    ],
+    [
+     167,
+     177
+    ],
+    [
+     177,
+     182
+    ],
+    [
+     182,
+     192
+    ],
+    [
+     192,
+     204
+    ],
+    [
+     221,
+     226
+    ],
+    [
+     226,
+     235
+    ],
+    [
+     235,
+     245
+    ],
+    [
+     245,
+     253
+    ],
+    [
+     253,
+     264
+    ]
+   ]
+  }
+ ]
+}
