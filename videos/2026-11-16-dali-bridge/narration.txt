@@ -14,13 +14,17 @@ On the night of the twenty-sixth of March, twenty twenty-four, it's leaving the 
 
 On board are twenty-one crew, and two local harbour pilots, experts who guide big ships through the harbour.
 
+In a big port, ships don't find their own way in and out. Every harbour has its own bends, shallow spots and bridges, so local pilots come on board and give the steering orders until the ship reaches open water.
+
 Ahead of it is the Francis Scott Key Bridge. It's about two point six kilometres long, and it carries a busy highway across the river.
+
+And it has a famous name. In eighteen fourteen, Francis Scott Key watched a battle at Fort McHenry, just up this same river, and wrote the poem that became America's national anthem. Every summer, a red, white and blue buoy is placed in the water near the spot where he watched.
 
 And on the bridge that night, a small road crew is doing a normal night-shift job: filling potholes.
 
 Everything is normal. Until it isn't.
 
-At twenty-five past one, every light on the Dali goes out.
+At twenty-five past one, when the ship is only about three ship lengths away from the bridge, every light on the Dali goes out.
 
 To understand why that's so dangerous, you need to know one thing about big ships. A modern ship is basically a floating power station.
 
@@ -30,15 +34,25 @@ The main engine is cooled by water, and that water is pushed around by electric 
 
 No engine means no propeller pushing water past the rudder. And without that flow, the rudder can barely steer.
 
-But the ship doesn't stop. A ship this size carries a huge amount of momentum. It keeps gliding forward, straight towards the bridge.
+So why not just stop? Because a ship this size can't stop like a car. There are no brakes. When it's fully loaded, the Dali and its cargo weigh well over a hundred thousand tonnes, and all of that keeps gliding forward.
+
+Even at a walking pace, that much weight doesn't want to stop. Imagine trying to stop a sliding block of flats with your hands.
+
+The pilots try everything they can. They order the rudder hard over to turn away, and they drop an anchor to drag the ship and slow it down.
+
+But an anchor isn't a parking brake. It digs in and drags, and that takes time. Three ship lengths is not much time.
 
 The crew get some power back within about a minute. And then, it goes out again.
 
-The pilot orders the rudder hard over and the anchor dropped. And at twenty-seven minutes past one, a mayday goes out on the radio. The ship has lost power, and it's heading for the bridge.
+At twenty-seven minutes past one, a mayday goes out on the radio. The ship has lost power, and it's heading for the bridge.
 
 What happened next probably saved a lot of lives. The message reached the police, and officers at both ends of the bridge stopped the traffic.
 
 They had about ninety seconds. And in that time, no more cars drove onto the bridge.
+
+One officer even radioed that he would drive onto the bridge to warn the road crew. There wasn't enough time.
+
+Later, the NTSB said the quick actions of the pilots, the dispatchers and the police prevented a much bigger loss of life.
 
 But the road crew in the middle didn't get the warning in time.
 
@@ -48,17 +62,43 @@ The bridge comes down in about thirty seconds.
 
 Two people were rescued from the water and the wreckage. Six road workers died.
 
+Divers went into the river that same night. The water was dark and cold, and full of twisted steel and broken concrete.
+
+The search was slow and dangerous. Some of the wreckage was so tangled that divers couldn't reach it until salvage crews had cut it apart.
+
+Two of the workers were found the next day, inside their truck at the bottom of the river. The others were found over the following weeks.
+
+The last of the six was recovered on the seventh of May. Six weeks after the bridge fell.
+
 So how can one hit bring down a bridge that's more than two kilometres long?
 
 The middle part of the Key Bridge was a continuous steel truss, one long piece resting on a few supports. Take away one of those supports, and the long piece can't hold itself up. It all goes together.
 
 Big bridges over shipping lanes are protected by barriers around their supports, called dolphins. They're there to catch or push away a ship before it reaches the bridge.
 
+On the newest bridges, the supports even sit on artificial islands of rock, so a ship runs aground long before it can touch the bridge.
+
 But the Key Bridge was built in the nineteen-seventies. Ships have become much bigger since then, and its protection was far too small for a ship like the Dali.
 
 Later, the investigators calculated that the risk of this bridge collapsing after a ship strike was almost thirty times higher than what's acceptable for a bridge this important. And nobody had ever checked.
 
-The United States safety board, the NTSB, investigated for twenty months. Their final report came out in November twenty twenty-five.
+And here's the frustrating part. America had already learned this lesson once, the hard way.
+
+It's the ninth of May, nineteen eighty, in Tampa Bay, Florida. Early in the morning, a sudden storm hits the bay.
+
+A cargo ship called the Summit Venture is heading for the Sunshine Skyway Bridge. In the storm, the crew can barely see, and the ship's radar fails.
+
+The ship hits one of the bridge's supports. A long section of the bridge falls into the bay.
+
+Cars and a bus drove off the broken edge in the storm. Thirty-five people died.
+
+One man survived. His pickup truck fell with the road, hit the side of the ship, and sank. He swam back to the surface, and the ship's own crew pulled him out of the water.
+
+That disaster changed the rules. After it, engineers in the United States created a way to calculate how likely a bridge is to be hit by a ship, and how strong its protection needs to be. The new Sunshine Skyway was built with huge protective barriers around its supports.
+
+But those rules were made for new bridges. The Key Bridge had been built before them. And nobody went back to check it against the bigger and bigger ships coming through.
+
+The United States safety board, the NTSB, investigated the Dali for twenty months. Their final report came out in November twenty twenty-five.
 
 And the first blackout came down to one wire.
 
@@ -68,23 +108,39 @@ On one wire, that label had been put on in the wrong place when the ship was bui
 
 For years it held. Then that night, it lost contact, a breaker tripped, and the ship went dark.
 
-The second blackout had another cause. The crew had been using a pump meant for flushing and cleaning to feed fuel to the generators. When the power dropped, that pump stopped, and the generators ran out of fuel.
+Finding it wasn't easy. That cabinet held hundreds of terminal blocks. Investigators tested the system for about a month before they took the panel apart and found the one loose wire. In the lab, it showed scrape marks and burn marks where electricity had been jumping across the gap.
 
-So a misplaced label, and the wrong pump, on the wrong night.
+And there was more. Some of the ship's main power switches were set to manual instead of automatic. The NTSB found that on automatic, the first blackout would have lasted about ten seconds. Instead, it lasted almost a minute.
+
+The second blackout had another cause. The crew had been using a pump meant for flushing and cleaning to feed fuel to the generators. When the power dropped, that pump stopped, and it didn't restart by itself. The generators ran out of fuel.
+
+So a misplaced label, a switch set to manual, and the wrong pump, on the wrong night, three ship lengths from a bridge.
 
 Meanwhile, the Dali was stuck under the wreckage, with thousands of tonnes of bridge steel lying across its bow.
 
-And the river was blocked. The Port of Baltimore, one of the busiest in the United States, was cut off from the sea.
+And the river was blocked. The Port of Baltimore handles more cars and farm machines than any other port in the United States. Now it was cut off from the sea.
 
-Salvage teams cut the steel apart piece by piece, with giant cranes lifting it away. Then, in May, they used small, carefully placed explosive charges to cut the biggest section off the ship's bow.
+Thousands of dock workers, truck drivers and small businesses suddenly had almost no work coming in.
 
-On the twentieth of May, the Dali finally floated free and was towed back into port. On the tenth of June, the shipping channel was fully open again.
+So the salvage teams started cutting. They brought in the largest floating crane on the East Coast, called the Chesapeake One Thousand, which can lift about a thousand tons at a time.
+
+And this crane has a strange past. It once helped the CIA secretly lift part of a sunken Soviet submarine from the bottom of the ocean.
+
+Piece by piece, they opened small channels so a few ships could get in and out, and then bigger ones.
+
+The first small channel opened just six days after the collapse, for tugs and barges. By late April, a deeper temporary channel let some of the biggest ships through again.
+
+Then, in May, they used small, carefully placed explosive charges to cut the biggest section of the bridge off the Dali's bow.
+
+On the twentieth of May, the Dali finally floated free and was towed back into port. And on the tenth of June, the full shipping channel was open again. By then, crews had pulled an estimated fifty thousand tons of steel and concrete out of the river.
 
 Most of the crew had stayed on the ship for weeks. Some were told to stay in Baltimore during the investigation, and a few were still there almost two years later.
 
+And the Dali itself? After temporary repairs, it sailed to a shipyard in China, where its smashed bow was rebuilt. In January twenty twenty-five, about ten months after the collapse, it went back to work, carrying containers between Asia and Central America.
+
 The ship's owners agreed to pay about one hundred and two million dollars for clearing the channel, without admitting they were responsible.
 
-The new bridge will cost much more. The latest estimate is between four point three and five point two billion dollars, and it's not expected to open before late twenty thirty.
+When the Key Bridge was built in the nineteen-seventies, it cost about sixty million dollars. The new bridge will cost much more. The latest estimate is between four point three and five point two billion dollars, and it's not expected to open before late twenty thirty.
 
 It will have a longer main span, and much bigger protection around its supports.
 

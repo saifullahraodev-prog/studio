@@ -527,4 +527,7 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
 - Owner picked The Ship Guy + Dali vs Baltimore Key Bridge. `videos/2026-11-16-dali-bridge/script.md` (8 sections, ~1,090 words ~6:10, sources,
   9 fact notes) + `narration.txt` (spoken words only). Hook built on the Seawise retention lesson: story + twist (a plastic
   label) with the story starting by ~0:35, no spec-sheet. Serious tone in the collapse sections (6 deaths, no gags).
-- GATE: waiting for owner approval of script v1.
+- 2026-11-16 owner asked for 10-12 min -> script v2 expanded to ~1,950 words (~11:00) with researched beats: stopping/anchor +
+  three ship lengths, the search, the 1980 Sunshine Skyway precedent (35 dead, origin of the 1991 rules), breakers in manual
+  (58 s vs 10 s), finding the wire took a month, the port cut off + Chesapeake 1000 (CIA submarine past), temporary channels,
+  the anthem-name buoy, Dali repaired in China and back in service Jan 2025. 14 fact notes. GATE: owner approval of script v2.
