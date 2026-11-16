@@ -559,4 +559,8 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   Mixer: music=quiet (light theme at 22%) + SFX for the new scenes (no comic sounds in the serious beats). mix.wav 657.1 s,
   -15.0 LUFS, 224 events. Storyboard 11 pages: `videos/2026-11-16-dali-bridge/storyboard/`.
 - 2026-11-16 owner OK'd storyboard -> 60 s test `out/test-60s.mp4` (frames 0-1799, 132 s render, -15.3 LUFS, no black/frozen).
-  GATE: owner feedback on the test before the full render (~25 min).
+- 2026-11-16 owner on the test: "the start has some gaps", "add proper subtitles", rest awesome -> new `tools/shipguy_tighten.py`
+  (CapCut pauses > 0.6 s cut to 0.4 s, 63 pauses / 28.4 s removed, originals kept as voice-raw.wav + words-raw.json;
+  video now 10:28), new `tools/shipguy_subs.py` -> `public/shipguy/<slug>/subs.json`, drawn by `Subtitles` in Video.tsx
+  (sentence cues, 1-2 lines, one yellow word at a time; loaded only if subs.json exists). Cut fade-in softened (no dark dip).
+  30 s demo `out/demo-30s.mp4` (-15.4 LUFS, no black/frozen). GATE: owner OK on the demo -> full render.
