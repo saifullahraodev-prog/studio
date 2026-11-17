@@ -80,7 +80,12 @@
   kimono/habesha/kurta + gursha "feed" pose (PLACEHOLDERS), ghost exhibits (faint silhouette before reveal),
   script-level voiceScale (1.15 = natural ~150 wpm). Built: 6:06 (not 8:00), R2 gaps up to 5.3 s, R5 7.0 s.
   1-minute clip rendered (owner asked for 1 min, not the whole): `out/howwe/forks-8min-1min-clip.mp4` (4:03-5:03,
-  160 s render, -14.6 LUFS, QC ok). WAITING: owner reaction; then fix gaps + decide 6 min vs adding ~2 min more.
+  160 s render, -14.6 LUFS, QC ok).
+- 2026-11-17: owner gave a MASTER SCRIPTWRITING SYSTEM (saved: `docs/howwe-scriptwriting-system.md`): 1,400-2,100
+  words, everyday opening + contradiction, But/Therefore, "The Story You Heard", 2+ sources per key claim, QC pass.
+  Rewrote video 1 to it: `videos/2026-11-17-howwe-forks-v3/` (narration.txt 1,592 words ~10.5-11 min; script.md with
+  structure + QC answers; sources.md 28 claims, 6 TODOs). Spine: "where does the cutting happen" (kitchen/table/bread);
+  new surprise: Brace's overbite theory. Not built into scenes yet. WAITING: owner approves the script.
 - NEXT (was): asset kits (map: done; reference-based costumes; object library;
   scene templates; motion + transitions), then video 1 script "Why Half the World Doesn't Use Forks".
 
