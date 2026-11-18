@@ -124,38 +124,48 @@ P("And never pass food from one pair of chopsticks to *another*. At Japanese fun
 P("So in East Asia, the cutting moved into the *kitchen*. In Europe, it stayed right there at the *table*.", "europe1500", "EUROPE · AT THE TABLE", "china1500", "EAST ASIA · IN THE KITCHEN", splitOn="East")
 
 part(3)
-# ── Europe: the table ──
-P("European cooks roasted meat in large joints, and the *carving* happened in front of the diners. So everyone needed a *blade*.", "europe1500", "PART TWO · EUROPE", inn="door", wash=True)
-E("But in the Middle Ages, your host usually didn't give you one. You brought your *own*.", "THE MIDDLE AGES", "Bring your own.", [("knife", "MIDDLE AGES", "Your own knife", "hosts didn't provide one", "own")])
-E("Almost everyone carried a knife on their belt, for cutting dinner, and, if necessary, for *fighting*.", "THE MIDDLE AGES", "One knife, two jobs.",
-  [("knife", "AT THE TABLE", "Eating knife", "for dinner", "cutting"), ("knife", "ON THE ROAD", "The same knife", "for self-defence", "fighting")])
-P("Picture that for a moment. A long table, a roast in the middle, and every single guest *armed*.", "europe1500", "EUROPE · A FEAST", inn="cut", marks=[{**EU_HAND, "on": "armed"}])
-M("Then, in the eleventh century, something strange arrived in *Venice*.", "VENICE", "Something strange", [zm("Venice", VENICE, 2.2)],
-  [pin(CONST, "Constantinople", "Then"), pin(VENICE, "Venice", "Venice")], [{"from": CONST, "to": VENICE, "on": "arrived"}])
-E("A Byzantine bride sat down at her wedding feast and lifted her food with a little *golden* fork, with two prongs.", "VENICE · 11TH CENTURY", "A wedding feast.",
-  [("fork2", "VENICE, 11TH C.", "A golden fork", "two prongs", "golden")], inn="cut")
-M("Wealthy *Byzantines* had been using forks for a while. Venice had *not*.", "BYZANTIUM", "Forks in the East", [zm("Byzantines", CONST, 2.2), zm("Venice", VENICE, 2.2)],
-  [pin(CONST, "Constantinople", "Byzantines"), pin(VENICE, "Venice", "Venice")])
-C("A churchman was *horrified*. God, he said, had already given us forks. Our *fingers*.", "A VENETIAN CHURCHMAN, 11TH C.", "God has already given us forks.", "HE MEANT", "Our fingers.", "Our", "National Geographic")
-M("And for centuries, most of Europe *agreed* with him. Except *Italy*. By the fourteenth century, forks were becoming common at Italian tables.", "ITALY", "The fork stays",
-  [zm("Italy", [12, 43], 2.2)], [pin(VENICE, "Venice", "Italy"), pin(FLORENCE, "Florence", "fourteenth", True)])
-E("One popular explanation is *pasta*. Try eating long noodles with a knife.", "A POPULAR EXPLANATION", "Pasta.", [("pasta", "ITALY", "Long pasta", "a popular explanation", "pasta")])
-M("Then, in *1608*, an English traveller named Thomas Coryat toured Italy, walking almost *half* of his journey.", "1608", "A long walk", [zm("Thomas", [5, 48], 2.0)],
-  [pin(ODCOMBE, "Odcombe", "Thomas"), pin(VENICE, "Venice", "Italy", True)], [{"from": ODCOMBE, "to": VENICE, "on": "toured"}])
-M("He watched Italians eating with forks, and he brought the idea *home*.", "1608", "The idea comes home", [zm("watched", [5, 48], 2.0), zm("home", [5, 48], 2.0)],
-  [pin(VENICE, "Venice", "Italians", True), pin(LONDON, "England", "home")], [{"from": VENICE, "to": LONDON, "on": "brought"}], inn="cut")
-C("His friends gave him a nickname. *Furcifer*. Latin for fork-bearer. And also, for *rascal*.", "HIS FRIENDS CALLED HIM", "“Furcifer”", "LATIN FOR", "Fork-bearer. And also: rascal.", "Latin", "Coryat's Crudities (1611)")
-M("Slowly, the fork crept north. It reached the French royal court in the early *sixteen hundreds*. And there, it ran straight into the other tool on the table.", "FRANCE", "The royal court",
-  [zm("French", PARIS, 2.2)], [pin(PARIS, "Paris", "French")])
-E("The *knife*. Remember, every guest had a sharp, *pointed* blade.", "THE OTHER TOOL", "The knife.", [("knife", "EVERY GUEST", "Pointed knife", "sharp and personal", "knife")])
-C("The story goes that Cardinal *Richelieu* was so disgusted by a guest picking his teeth with the point of his knife that he had the tips of his own table knives ground *round*.",
-  "THE STORY GOES", "A guest picks his teeth with a knife point.", "SO, THE STORY GOES", "Richelieu had his knives ground round.", "ground", "Wikipedia: Table knife (a tradition)")
-E("And in *1669*, King Louis the Fourteenth reportedly went further, and banned pointed table knives.", "FRANCE · 1669", "Banned.", [("knife", "FRANCE · 1669", "Pointed table knife", "reportedly banned", "banned")])
-E("That solved one problem. But it created another. A blunt knife can *cut*, but it can't *spear*. Somebody else had to do the spearing.", "A NEW PROBLEM", "Who spears?",
-  [("knifeRound", "THE KNIFE", "Cuts", "no point", "cut"), ("fork2", "THE FORK", "Spears", "two prongs", "spear")])
-E("Therefore, the fork had to grow up. Two prongs weren't enough to hold food steady, so a *third* was added. And in the eighteenth century, in Germany, a curved fork with *four* prongs appeared.",
-  "THE FORK GROWS UP", "More prongs.", [("fork2", "TWO PRONGS", "Two", "medieval", "Two"), ("fork3", "THREE PRONGS", "Three", "early 1700s", "third"), ("fork", "FOUR PRONGS", "Four", "Germany, 1700s", "four")])
-add("today", "That's the shape of the fork you probably used *today*. It's only about two hundred and fifty years *old*.")
+# ── Europe: the table (rewritten 2026-11-18: one picture per line, holds after end-of-line reveals) ──
+P("European meat was often roasted in large pieces, and at a feast, the *carving* happened in front of the diners.", "europe1500", "PART TWO · EUROPE", inn="door", wash=True)
+E("So diners needed a *blade*. But in the Middle Ages, your host usually didn't give you one. You brought your *own*.", "THE MIDDLE AGES", "Bring your own.",
+  [("knifePointed", "AT A FEAST", "A blade", "everyone needed one", "blade"), ("hand", "THE GUEST", "Your own", "hosts didn't provide one", "brought")])
+E("Many diners carried a knife on their belt, for cutting dinner, and, if necessary, for *fighting*.", "THE MIDDLE AGES", "One knife, two jobs.",
+  [("knifePointed", "AT THE TABLE", "Eating knife", "for dinner", "cutting"), ("knifePointed", "ON THE ROAD", "The same knife", "for self-defence", "fighting")], inn="cut", pauseAfter={"fighting": 0.3})
+P("Picture it. A long table, a roast in the middle, and guests with *blades* on their belts.", "europe1500", "EUROPE · A FEAST", inn="cut",
+  marks=[{**EU_HAND, "on": "blades"}], pauseAfter={"belts": 0.4})
+M("Now picture *Venice*, around a thousand years ago.", "VENICE", "About 1,000 years ago", [zm("picture", VENICE, 2.6, True)], [pin(VENICE, "Venice", "Venice")])
+M("Into the family of its ruler, the doge, comes a *Byzantine* noblewoman.", "BYZANTIUM TO VENICE", "A noblewoman arrives", [zm("Into", [20, 43], 2.6, True)],
+  [pin(VENICE, "Venice", "doge"), pin(CONST, "Constantinople", "Byzantine")], [{"from": CONST, "to": VENICE, "on": "noblewoman"}], inn="cut")
+E("In Constantinople, wealthy people already ate with *forks*.", "CONSTANTINOPLE", "Forks already.", [("fork2", "BYZANTIUM", "Table fork", "in wealthy homes", "wealthy")])
+E("So at dinner, she has her servants cut her food into little *pieces*, and she lifts them to her mouth with a *golden* instrument with two prongs.", "VENICE · AT DINNER", "Two prongs.",
+  [("plate", "HER SERVANTS", "Cut small", "little pieces", "pieces"), ("fork2", "HER TOOL", "A golden fork", "two prongs", "golden")], pauseAfter={"prongs": 0.4})
+C("Decades later, a churchman named Peter *Damian* wrote about her, holding up her habits as a warning against sinful luxury. A fork. As a *warning*.",
+  "PETER DAMIAN, c. 1070", "She ate with a golden fork.", "HIS VERDICT", "Sinful luxury.", "holding", "Peter Damian's letter, via the Met Museum", pauseAfter={"warning": 0.4})
+E("And for centuries, most of Europe kept eating with its *fingers*.", "MEDIEVAL EUROPE", "Fingers.", [("hand", "EUROPE", "Fingers", "for centuries", "centuries")], inn="cut")
+M("Except *Italy*. By the fourteenth century, forks were becoming common at wealthier Italian tables.", "ITALY", "The fork stays", [zm("Except", [12, 44], 3.4, True)],
+  [pin([12.3, 42.6], "Italy", "Italy")])
+E("And one popular explanation will sound familiar. *Pasta*. Try eating long noodles with a knife.", "A POPULAR EXPLANATION", "Pasta.",
+  [("pasta", "ITALY", "Long pasta", "a popular explanation", "Pasta"), ("knifePointed", "TRY IT", "A knife", "doesn't work", "Try")], pauseAfter={"knife": 0.4})
+M("By the fifteen hundreds, France's *elite* were starting to adopt the fork too. But in *England*, the idea was still strange.", "FRANCE AND ENGLAND", "Yes, and not yet",
+  [zm("By", [1, 50], 3.6, True)], [pin(PARIS, "France", "France's", True), pin(LONDON, "England", "England")])
+M("Then, in *1608*, an English traveller named Thomas Coryat toured Italy, walking almost *half* of his journey.", "1608", "A long walk", [zm("Then", [5, 48], 3.2, True)],
+  [pin(ODCOMBE, "Odcombe", "Thomas"), pin(VENICE, "Venice", "Italy", True)], [{"from": ODCOMBE, "to": VENICE, "on": "toured"}], inn="cut")
+M("He watched Italians eating with forks, and he helped make the habit known back *home*.", "1608", "The habit comes home", [zm("He", [5, 48], 3.2, True)],
+  [pin(VENICE, "Venice", "Italians", True), pin(LONDON, "England", "home")], [{"from": VENICE, "to": LONDON, "on": "helped"}], inn="cut")
+C("His friends gave him a nickname. *Furcifer*. Latin for fork-bearer. And also, for *rascal*.", "HIS FRIENDS CALLED HIM", "“Furcifer”", "LATIN FOR", "Fork-bearer. And also: rascal.", "Latin",
+  "Coryat's Crudities (1611)", pauseAfter={"rascal": 0.4})
+E("But the fork's real breakthrough was tied to the other tool on the table. The *knife*.", "THE OTHER TOOL", "The knife.",
+  [("fork", "THE FORK", "Fork", "waiting", "fork's"), ("knifePointed", "THE OTHER TOOL", "Knife", "sharp and pointed", "other")])
+E("Remember those pointed blades? Over time, manners changed. Pointed personal knives became less welcome at dinner, and blunt table knives became more *common*.", "MANNERS CHANGE", "Pointed to blunt.",
+  [("knifePointed", "BEFORE", "Pointed", "personal knife", "Remember"), ("knifeRound", "AFTER", "Blunt", "table knife", "blunt")])
+C("There's a famous story that Cardinal *Richelieu*, disgusted by a guest picking his teeth with his knife, had the tips of his own table knives ground *round*.",
+  "A FAMOUS STORY", "A guest picks his teeth with a knife.", "SO, THE STORY GOES", "Richelieu had his knives ground round.", "had", "A tradition (Wikipedia: Table knife)")
+E("And in *1669*, Louis the Fourteenth banned pointed knives in part of his kingdom.", "FRANCE · 1669", "Banned.",
+  [("knifePointed", "FRANCE · 1669", "Pointed knife", "banned in part of the kingdom", "Louis")], inn="cut")
+E("But a blunt knife can *cut*. It can't *spear*. Something else had to hold the food steady.", "A NEW PROBLEM", "Who holds it?",
+  [("knifeRound", "THE KNIFE", "Cuts", "can't spear", "cut"), ("fork2", "THE FORK", "Holds", "the food steady", "Something")], pauseAfter={"steady": 0.3})
+E("So the fork became more useful, and it changed shape. Two prongs became *three*. And by the eighteenth century, the four-pronged fork was becoming the familiar shape we recognise *today*.",
+  "THE FORK GROWS UP", "More prongs.", [("fork2", "TWO", "Two prongs", "medieval", "Two"), ("fork3", "THREE", "Three prongs", "later", "three"), ("fork", "FOUR", "Four prongs", "by the 1700s", "four-pronged")],
+  pauseAfter={"today": 0.4})
 
 part(4)
 # ── the strangest consequence: teeth ──
@@ -164,7 +174,7 @@ E("And here's where the story gets *strange*. In the nineteen seventies, an Amer
 E("He noticed that most people today have an *overbite*: the top front teeth sit in front of the bottom ones. But in Europe, skulls older than a few centuries mostly *don't*.",
   "WHAT BRACE NOTICED", "Two bites.", [("biteOver", "MOST PEOPLE TODAY", "Overbite", "top in front", "overbite"), ("biteEdge", "OLDER EUROPEAN SKULLS", "Edge to edge", "mostly", "don't")])
 E("His explanation was this. Before knives and forks, people often *clamped* a piece of meat in their front teeth and sliced off a mouthful.", "BRACE'S EXPLANATION", "Clamp and slice.",
-  [("biteEdge", "THE GRIP", "Clamp", "front teeth", "clamped"), ("knife", "THE CUT", "Slice", "at the lips", "sliced")])
+  [("biteEdge", "THE GRIP", "Clamp", "front teeth", "clamped"), ("knifePointed", "THE CUT", "Slice", "at the lips", "sliced")])
 E("That habit kept the teeth meeting *edge* to edge. Once Europeans began cutting food into small pieces on the *plate*, the front teeth no longer had to grip. Over generations of childhoods, the bite *changed*.",
   "BRACE'S EXPLANATION", "The bite changes.", [("biteEdge", "BEFORE", "Edge to edge", "teeth grip", "edge"), ("fork", "THEN", "Cut on the plate", "knife and fork", "plate"), ("biteOver", "AFTER", "Overbite", "no grip needed", "changed")])
 M("And in *China*, Brace said he found the same overbite much earlier, around a thousand years ago, in a culture that had been eating pre-cut food with *chopsticks* for centuries.",

@@ -1,0 +1,681 @@
+{
+ "note": "How We Ended Up · video 1 v3 · scenes for the owner-approved narration. Placeholders: map colours, costumes, stand-in drawings.",
+ "voiceScale": 1.15,
+ "scenes": [
+  {
+   "t": "period",
+   "in": "door",
+   "pillar": "eat",
+   "part": 3,
+   "say": "European meat was often roasted in large pieces, and at a feast, the *carving* happened in front of the diners.",
+   "p": {
+    "left": "europe1500",
+    "leftSign": "PART TWO · EUROPE",
+    "washIn": true,
+    "marks": []
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 3,
+   "say": "So diners needed a *blade*. But in the Middle Ages, your host usually didn't give you one. You brought your *own*.",
+   "p": {
+    "tag": "THE MIDDLE AGES",
+    "word": "Bring your own.",
+    "items": [
+     {
+      "obj": "knifePointed",
+      "meta": "AT A FEAST",
+      "name": "A blade",
+      "sub": "everyone needed one",
+      "on": "blade"
+     },
+     {
+      "obj": "hand",
+      "meta": "THE GUEST",
+      "name": "Your own",
+      "sub": "hosts didn't provide one",
+      "on": "brought"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 3,
+   "say": "Many diners carried a knife on their belt, for cutting dinner, and, if necessary, for *fighting*.",
+   "p": {
+    "tag": "THE MIDDLE AGES",
+    "word": "One knife, two jobs.",
+    "items": [
+     {
+      "obj": "knifePointed",
+      "meta": "AT THE TABLE",
+      "name": "Eating knife",
+      "sub": "for dinner",
+      "on": "cutting"
+     },
+     {
+      "obj": "knifePointed",
+      "meta": "ON THE ROAD",
+      "name": "The same knife",
+      "sub": "for self-defence",
+      "on": "fighting"
+     }
+    ]
+   },
+   "pauseAfter": {
+    "fighting": 0.3
+   }
+  },
+  {
+   "t": "period",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 3,
+   "say": "Picture it. A long table, a roast in the middle, and guests with *blades* on their belts.",
+   "p": {
+    "left": "europe1500",
+    "leftSign": "EUROPE · A FEAST",
+    "washIn": false,
+    "marks": [
+     {
+      "kind": "circle",
+      "x": 751,
+      "y": 657,
+      "w": 120,
+      "h": 110,
+      "on": "blades"
+     }
+    ]
+   },
+   "pauseAfter": {
+    "belts": 0.4
+   }
+  },
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 3,
+   "say": "Now picture *Venice*, around a thousand years ago.",
+   "p": {
+    "tag": "VENICE",
+    "title": "About 1,000 years ago",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       12.34,
+       45.44
+      ],
+      "label": "Venice",
+      "on": "Venice",
+      "below": false
+     }
+    ],
+    "routes": [],
+    "zoomTo": [
+     {
+      "on": "picture",
+      "lonlat": [
+       12.34,
+       45.44
+      ],
+      "zoom": 2.6,
+      "stay": true
+     }
+    ]
+   }
+  },
+  {
+   "t": "map",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 3,
+   "say": "Into the family of its ruler, the doge, comes a *Byzantine* noblewoman.",
+   "p": {
+    "tag": "BYZANTIUM TO VENICE",
+    "title": "A noblewoman arrives",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       12.34,
+       45.44
+      ],
+      "label": "Venice",
+      "on": "doge",
+      "below": false
+     },
+     {
+      "lonlat": [
+       28.98,
+       41.01
+      ],
+      "label": "Constantinople",
+      "on": "Byzantine",
+      "below": false
+     }
+    ],
+    "routes": [
+     {
+      "from": [
+       28.98,
+       41.01
+      ],
+      "to": [
+       12.34,
+       45.44
+      ],
+      "on": "noblewoman"
+     }
+    ],
+    "zoomTo": [
+     {
+      "on": "Into",
+      "lonlat": [
+       20,
+       43
+      ],
+      "zoom": 2.6,
+      "stay": true
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 3,
+   "say": "In Constantinople, wealthy people already ate with *forks*.",
+   "p": {
+    "tag": "CONSTANTINOPLE",
+    "word": "Forks already.",
+    "items": [
+     {
+      "obj": "fork2",
+      "meta": "BYZANTIUM",
+      "name": "Table fork",
+      "sub": "in wealthy homes",
+      "on": "wealthy"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 3,
+   "say": "So at dinner, she has her servants cut her food into little *pieces*, and she lifts them to her mouth with a *golden* instrument with two prongs.",
+   "p": {
+    "tag": "VENICE · AT DINNER",
+    "word": "Two prongs.",
+    "items": [
+     {
+      "obj": "plate",
+      "meta": "HER SERVANTS",
+      "name": "Cut small",
+      "sub": "little pieces",
+      "on": "pieces"
+     },
+     {
+      "obj": "fork2",
+      "meta": "HER TOOL",
+      "name": "A golden fork",
+      "sub": "two prongs",
+      "on": "golden"
+     }
+    ]
+   },
+   "pauseAfter": {
+    "prongs": 0.4
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 3,
+   "say": "Decades later, a churchman named Peter *Damian* wrote about her, holding up her habits as a warning against sinful luxury. A fork. As a *warning*.",
+   "p": {
+    "frontLabel": "PETER DAMIAN, c. 1070",
+    "heard": "She ate with a golden fork.",
+    "backLabel": "HIS VERDICT",
+    "actual": "Sinful luxury.",
+    "source": "Peter Damian's letter, via the Met Museum",
+    "flipOn": "holding"
+   },
+   "pauseAfter": {
+    "warning": 0.4
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 3,
+   "say": "And for centuries, most of Europe kept eating with its *fingers*.",
+   "p": {
+    "tag": "MEDIEVAL EUROPE",
+    "word": "Fingers.",
+    "items": [
+     {
+      "obj": "hand",
+      "meta": "EUROPE",
+      "name": "Fingers",
+      "sub": "for centuries",
+      "on": "centuries"
+     }
+    ]
+   }
+  },
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 3,
+   "say": "Except *Italy*. By the fourteenth century, forks were becoming common at wealthier Italian tables.",
+   "p": {
+    "tag": "ITALY",
+    "title": "The fork stays",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       12.3,
+       42.6
+      ],
+      "label": "Italy",
+      "on": "Italy",
+      "below": false
+     }
+    ],
+    "routes": [],
+    "zoomTo": [
+     {
+      "on": "Except",
+      "lonlat": [
+       12,
+       44
+      ],
+      "zoom": 3.4,
+      "stay": true
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 3,
+   "say": "And one popular explanation will sound familiar. *Pasta*. Try eating long noodles with a knife.",
+   "p": {
+    "tag": "A POPULAR EXPLANATION",
+    "word": "Pasta.",
+    "items": [
+     {
+      "obj": "pasta",
+      "meta": "ITALY",
+      "name": "Long pasta",
+      "sub": "a popular explanation",
+      "on": "Pasta"
+     },
+     {
+      "obj": "knifePointed",
+      "meta": "TRY IT",
+      "name": "A knife",
+      "sub": "doesn't work",
+      "on": "Try"
+     }
+    ]
+   },
+   "pauseAfter": {
+    "knife": 0.4
+   }
+  },
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 3,
+   "say": "By the fifteen hundreds, France's *elite* were starting to adopt the fork too. But in *England*, the idea was still strange.",
+   "p": {
+    "tag": "FRANCE AND ENGLAND",
+    "title": "Yes, and not yet",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       2.35,
+       48.86
+      ],
+      "label": "France",
+      "on": "France's",
+      "below": true
+     },
+     {
+      "lonlat": [
+       -0.13,
+       51.51
+      ],
+      "label": "England",
+      "on": "England",
+      "below": false
+     }
+    ],
+    "routes": [],
+    "zoomTo": [
+     {
+      "on": "By",
+      "lonlat": [
+       1,
+       50
+      ],
+      "zoom": 3.6,
+      "stay": true
+     }
+    ]
+   }
+  },
+  {
+   "t": "map",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 3,
+   "say": "Then, in *1608*, an English traveller named Thomas Coryat toured Italy, walking almost *half* of his journey.",
+   "p": {
+    "tag": "1608",
+    "title": "A long walk",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       -2.7,
+       50.94
+      ],
+      "label": "Odcombe",
+      "on": "Thomas",
+      "below": false
+     },
+     {
+      "lonlat": [
+       12.34,
+       45.44
+      ],
+      "label": "Venice",
+      "on": "Italy",
+      "below": true
+     }
+    ],
+    "routes": [
+     {
+      "from": [
+       -2.7,
+       50.94
+      ],
+      "to": [
+       12.34,
+       45.44
+      ],
+      "on": "toured"
+     }
+    ],
+    "zoomTo": [
+     {
+      "on": "Then",
+      "lonlat": [
+       5,
+       48
+      ],
+      "zoom": 3.2,
+      "stay": true
+     }
+    ]
+   }
+  },
+  {
+   "t": "map",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 3,
+   "say": "He watched Italians eating with forks, and he helped make the habit known back *home*.",
+   "p": {
+    "tag": "1608",
+    "title": "The habit comes home",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       12.34,
+       45.44
+      ],
+      "label": "Venice",
+      "on": "Italians",
+      "below": true
+     },
+     {
+      "lonlat": [
+       -0.13,
+       51.51
+      ],
+      "label": "England",
+      "on": "home",
+      "below": false
+     }
+    ],
+    "routes": [
+     {
+      "from": [
+       12.34,
+       45.44
+      ],
+      "to": [
+       -0.13,
+       51.51
+      ],
+      "on": "helped"
+     }
+    ],
+    "zoomTo": [
+     {
+      "on": "He",
+      "lonlat": [
+       5,
+       48
+      ],
+      "zoom": 3.2,
+      "stay": true
+     }
+    ]
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 3,
+   "say": "His friends gave him a nickname. *Furcifer*. Latin for fork-bearer. And also, for *rascal*.",
+   "p": {
+    "frontLabel": "HIS FRIENDS CALLED HIM",
+    "heard": "“Furcifer”",
+    "backLabel": "LATIN FOR",
+    "actual": "Fork-bearer. And also: rascal.",
+    "source": "Coryat's Crudities (1611)",
+    "flipOn": "Latin"
+   },
+   "pauseAfter": {
+    "rascal": 0.4
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 3,
+   "say": "But the fork's real breakthrough was tied to the other tool on the table. The *knife*.",
+   "p": {
+    "tag": "THE OTHER TOOL",
+    "word": "The knife.",
+    "items": [
+     {
+      "obj": "fork",
+      "meta": "THE FORK",
+      "name": "Fork",
+      "sub": "waiting",
+      "on": "fork's"
+     },
+     {
+      "obj": "knifePointed",
+      "meta": "THE OTHER TOOL",
+      "name": "Knife",
+      "sub": "sharp and pointed",
+      "on": "other"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 3,
+   "say": "Remember those pointed blades? Over time, manners changed. Pointed personal knives became less welcome at dinner, and blunt table knives became more *common*.",
+   "p": {
+    "tag": "MANNERS CHANGE",
+    "word": "Pointed to blunt.",
+    "items": [
+     {
+      "obj": "knifePointed",
+      "meta": "BEFORE",
+      "name": "Pointed",
+      "sub": "personal knife",
+      "on": "Remember"
+     },
+     {
+      "obj": "knifeRound",
+      "meta": "AFTER",
+      "name": "Blunt",
+      "sub": "table knife",
+      "on": "blunt"
+     }
+    ]
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 3,
+   "say": "There's a famous story that Cardinal *Richelieu*, disgusted by a guest picking his teeth with his knife, had the tips of his own table knives ground *round*.",
+   "p": {
+    "frontLabel": "A FAMOUS STORY",
+    "heard": "A guest picks his teeth with a knife.",
+    "backLabel": "SO, THE STORY GOES",
+    "actual": "Richelieu had his knives ground round.",
+    "source": "A tradition (Wikipedia: Table knife)",
+    "flipOn": "had"
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 3,
+   "say": "And in *1669*, Louis the Fourteenth banned pointed knives in part of his kingdom.",
+   "p": {
+    "tag": "FRANCE · 1669",
+    "word": "Banned.",
+    "items": [
+     {
+      "obj": "knifePointed",
+      "meta": "FRANCE · 1669",
+      "name": "Pointed knife",
+      "sub": "banned in part of the kingdom",
+      "on": "Louis"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 3,
+   "say": "But a blunt knife can *cut*. It can't *spear*. Something else had to hold the food steady.",
+   "p": {
+    "tag": "A NEW PROBLEM",
+    "word": "Who holds it?",
+    "items": [
+     {
+      "obj": "knifeRound",
+      "meta": "THE KNIFE",
+      "name": "Cuts",
+      "sub": "can't spear",
+      "on": "cut"
+     },
+     {
+      "obj": "fork2",
+      "meta": "THE FORK",
+      "name": "Holds",
+      "sub": "the food steady",
+      "on": "Something"
+     }
+    ]
+   },
+   "pauseAfter": {
+    "steady": 0.3
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 3,
+   "say": "So the fork became more useful, and it changed shape. Two prongs became *three*. And by the eighteenth century, the four-pronged fork was becoming the familiar shape we recognise *today*.",
+   "p": {
+    "tag": "THE FORK GROWS UP",
+    "word": "More prongs.",
+    "items": [
+     {
+      "obj": "fork2",
+      "meta": "TWO",
+      "name": "Two prongs",
+      "sub": "medieval",
+      "on": "Two"
+     },
+     {
+      "obj": "fork3",
+      "meta": "THREE",
+      "name": "Three prongs",
+      "sub": "later",
+      "on": "three"
+     },
+     {
+      "obj": "fork",
+      "meta": "FOUR",
+      "name": "Four prongs",
+      "sub": "by the 1700s",
+      "on": "four-pronged"
+     }
+    ]
+   },
+   "pauseAfter": {
+    "today": 0.4
+   }
+  }
+ ]
+}

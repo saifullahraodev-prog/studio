@@ -31,6 +31,16 @@ const Fork3: React.FC = () => (
     <path d="M-32 -90 L-32 20 Q-32 62 0 66 Q32 62 32 20 L32 -90 L21 -90 L19 16 L6 16 L5 -90 L-5 -90 L-6 16 L-19 16 L-21 -90 Z" fill={INK.metal} />
   </g>
 );
+/** Pointed personal knife (medieval/early-modern eating knife): wooden handle with rivets, blade tapering to a sharp point. */
+const KnifePointed: React.FC = () => (
+  <g {...st}>
+    <rect x={-17} y={64} width={34} height={266} rx={9} fill={INK.wood} />
+    {[120, 200, 280].map((y) => <circle key={y} cx={0} cy={y} r={5} fill={INK.metal} />)}
+    <rect x={-21} y={50} width={42} height={18} rx={4} fill="#B9BEC5" />
+    <path d="M-15 52 L-17 -40 Q-14 -110 2 -168 Q20 -100 17 -40 L15 52 Z" fill={INK.metal} />
+    <path d="M-6 40 L-7 -40 Q-5 -100 2 -140" fill="none" stroke="#EEF1F4" strokeWidth={5} strokeLinecap="round" />
+  </g>
+);
 /** Round-tipped table knife (the blunt dinner knife). */
 const KnifeRound: React.FC = () => (
   <g {...st}>
@@ -118,6 +128,7 @@ export const OBJECTS: Record<string, Entry> = {
   fork: { name: "Fork", top: -80, bottom: 350, draw: () => <Fork x={0} y={0} ink={INK} /> },
   fork2: { name: "Golden fork", top: -110, bottom: 350, draw: Fork2 },
   fork3: { name: "Three-tined fork", top: -90, bottom: 350, draw: Fork3 },
+  knifePointed: { name: "Pointed knife", top: -168, bottom: 330, draw: KnifePointed },
   knifeRound: { name: "Round-tipped knife", top: -100, bottom: 348, draw: KnifeRound },
   pasta: { name: "Pasta", top: -125, bottom: 130, draw: Pasta },
   flatbread: { name: "Flatbread", top: -120, bottom: 120, draw: Flatbread },

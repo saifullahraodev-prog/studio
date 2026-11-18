@@ -111,26 +111,38 @@ def recorded_plan(scenes, audio_path, words_path):
     for toks in per:
         idx.append((k, k + len(toks)))
         k += len(toks)
-    # scene "pauseAfter": {"word": sec} adds silence after that word (placed in the middle of the natural gap)
-    ins = []
+    # gaps between words: natural pauses longer than GAP_MAX are shortened to GAP_TO (paragraph breaks in TTS run long);
+    # scene "pauseAfter": {"word": sec} then adds silence after that word. Edits sit in the middle of each gap.
+    GAP_MAX, GAP_TO = 1.1, 0.85
+    add = {}
     for sc, (a, b) in zip(scenes, idx):
         for key, sec in sc.get("pauseAfter", {}).items():
             k = next((j for j in range(a, b) if norm(flat[j][0]) == norm(key)), None)
             if k is None:
                 print(f"  ! pauseAfter word '{key}' not found")
-                continue
-            nxt = st[k + 1] if k + 1 < len(st) else en[k] + 0.3
-            ins.append(((en[k] + nxt) / 2, float(sec)))
-    if ins:
-        ins.sort()
-        sh = lambda t: t + sum(sec for p0, sec in ins if p0 <= t)
-        st, en = [sh(x) for x in st], [sh(x) for x in en]
+            else:
+                add[k] = add.get(k, 0) + float(sec)
+    edits = []
+    for k in range(len(st) - 1):
+        g = st[k + 1] - en[k]
+        delta = (GAP_TO - g if g > GAP_MAX else 0) + add.get(k, 0)
+        if abs(delta) > 0.005:
+            edits.append(((en[k] + st[k + 1]) / 2, delta))
+    if add.get(len(st) - 1):
+        edits.append((en[-1] + 0.15, add[len(st) - 1]))
+    if edits:
+        sh = lambda t: t + sum(d for p0, d in edits if p0 <= t)
         parts, last = [], 0
-        for p0, sec in ins:
-            parts += [audio[last:int(p0 * SR)], np.zeros(int(sec * SR), np.float32)]
-            last = int(p0 * SR)
+        for p0, d in edits:
+            if d > 0:
+                parts += [audio[last:int(p0 * SR)], np.zeros(int(d * SR), np.float32)]
+                last = int(p0 * SR)
+            else:
+                parts.append(audio[last:int((p0 + d / 2) * SR)])
+                last = int((p0 - d / 2) * SR)
         audio = np.concatenate(parts + [audio[last:]])
-        print(f"recording: {len(ins)} extra pause(s), +{sum(x for _, x in ins):.2f} s")
+        st, en = [sh(x) for x in st], [sh(x) for x in en]
+        print(f"recording: {sum(d > 0 for _, d in edits)} pause(s) added, {sum(d < 0 for _, d in edits)} long gap(s) shortened, net {sum(d for _, d in edits):+.2f} s")
     t0 = max(0.0, st[0] - 4 / FPS)
     n = len(scenes)
     tin = [0] + [T_IN.get(sc.get("in", "cut"), 0) for sc in scenes[1:]]
@@ -221,7 +233,8 @@ def main():
                 if "on" in r:
                     r["at"] = round(at(r.pop("on"), int(dur * 0.5)) / dur, 4)
             if p.get("zoomTo"):
-                p["zoomTo"] = [{"f": at(z["on"], 40), "lonlat": z["lonlat"], "zoom": z.get("zoom", 1.7), **({"stay": True} if z.get("stay") else {})} for z in p["zoomTo"]]
+                p["zoomTo"] = [{"f": max(8, at(z["on"], 40) or 40),  # >= 8: the map's opening frame push (f 6) must not override it
+                             "lonlat": z["lonlat"], "zoom": z.get("zoom", 1.7), **({"stay": True} if z.get("stay") else {})} for z in p["zoomTo"]]
         if "splitOn" in p:
             p["splitAt"] = max(0, at(p.pop("splitOn"), 0) - 4)
         if "flipOn" in p:

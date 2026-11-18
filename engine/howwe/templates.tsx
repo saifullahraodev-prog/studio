@@ -145,12 +145,17 @@ export const MapScene: React.FC<Base & MapSceneProps> = ({ uid, f, dur, pins = [
     ...zoomTo.map((z) => { const [px, py] = projectEE(...z.lonlat); return { f: z.f, zoom: z.zoom ?? 1.7, fx: fx + px * k, fy: fy + py * k, d: 12 }; }),
     ...(zoomTo.some((z) => z.stay) ? [] : [{ f: Math.max(...zoomTo.map((z) => z.f)) + 40, zoom: 1.15, fx: 960, fy: 520, d: 16 }]),
   ] : undefined);
+  // a close zoom (> 2.2) crops the title at the top edge: fade the title out as that zoom starts
+  const close = zoomTo.filter((z) => (z.zoom ?? 1.7) > 2.2);
+  const titleOp = close.length ? 1 - prog(f, Math.min(...close.map((z) => z.f)), 10) : 1;
   return (
     <g>
       <Cam f={f} {...camProps(f, keys, { push, zoom: 1.15, fx: 960, fy: 520 })}>
         <Gallery id={`${uid}g`} bays={[T.wall]} floorY={1000} />
-        <text x={W / 2} y={92} textAnchor="middle" fontFamily={MONO} fontWeight={600} fontSize={24} letterSpacing={8} fill={T.label}>{tag}</text>
-        <text x={W / 2} y={150} textAnchor="middle" fontFamily={DISPLAY} fontWeight={900} fontSize={56} fill={T.ink}>{title}</text>
+        <g opacity={titleOp}>
+          <text x={W / 2} y={92} textAnchor="middle" fontFamily={MONO} fontWeight={600} fontSize={24} letterSpacing={8} fill={T.label}>{tag}</text>
+          <text x={W / 2} y={150} textAnchor="middle" fontFamily={DISPLAY} fontWeight={900} fontSize={56} fill={T.ink}>{title}</text>
+        </g>
         <rect x={fx - 54} y={fy - 34} width={mw + 108} height={mh + 68} fill="#000" opacity={0.1} transform="translate(10 12)" />
         <rect x={fx - 54} y={fy - 34} width={mw + 108} height={mh + 68} fill="#3A3A40" />
         <rect x={fx - 32} y={fy - 14} width={mw + 64} height={mh + 28} fill="#FBF8F2" />
