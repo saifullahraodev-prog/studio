@@ -1,0 +1,550 @@
+{
+ "note": "How We Ended Up · video 1 v3 · scenes for the owner-approved narration. Placeholders: map colours, costumes, stand-in drawings.",
+ "voiceScale": 1.15,
+ "scenes": [
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 2,
+   "say": "Let's start in *China*, where the answer was: in the *kitchen*.",
+   "p": {
+    "tag": "PART ONE",
+    "title": "China",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       114.35,
+       36.1
+      ],
+      "label": "China",
+      "on": "China",
+      "below": false
+     }
+    ],
+    "routes": [],
+    "zoomTo": [
+     {
+      "on": "China",
+      "lonlat": [
+       112,
+       33
+      ],
+      "zoom": 1.8,
+      "stay": true
+     }
+    ]
+   }
+  },
+  {
+   "t": "period",
+   "in": "door",
+   "pillar": "eat",
+   "part": 2,
+   "say": "Chinese cooks cut almost everything before it ever reached a *diner*.",
+   "p": {
+    "left": "china1500",
+    "leftSign": "CHINA · THE KITCHEN",
+    "washIn": true,
+    "marks": []
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 2,
+   "say": "Thin strips of meat. Diced vegetables. All of it, chopped with a single heavy *cleaver*.",
+   "p": {
+    "tag": "THE KITCHEN",
+    "word": "One cleaver.",
+    "items": [
+     {
+      "obj": "plate",
+      "meta": "STEP 1",
+      "name": "Thin strips",
+      "sub": "of meat",
+      "on": "strips"
+     },
+     {
+      "obj": "bowl",
+      "meta": "STEP 2",
+      "name": "Diced",
+      "sub": "vegetables",
+      "on": "Diced"
+     },
+     {
+      "obj": "cleaver",
+      "meta": "ONE TOOL",
+      "name": "Cleaver",
+      "sub": "for everything",
+      "on": "cleaver"
+     }
+    ]
+   }
+  },
+  {
+   "t": "period",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 2,
+   "say": "Why? One popular explanation is *fuel*. Firewood was precious, and small pieces cook *fast*.",
+   "p": {
+    "left": "china1500",
+    "leftSign": "CHINA · A POPULAR EXPLANATION",
+    "washIn": false,
+    "marks": [
+     {
+      "on": "Firewood",
+      "kind": "circle",
+      "x": 1280,
+      "y": 600,
+      "w": 240,
+      "h": 200
+     }
+    ]
+   }
+  },
+  {
+   "t": "period",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 2,
+   "say": "But that changes the whole meal. If the food arrives already *bite-sized*, you don't need a knife at dinner at all.",
+   "p": {
+    "left": "europe1500",
+    "leftSign": "EUROPE · CUT AT THE TABLE",
+    "washIn": false,
+    "marks": [
+     {
+      "on": "bite-sized",
+      "kind": "circle",
+      "x": 1760,
+      "y": 690,
+      "w": 260,
+      "h": 220
+     }
+    ],
+    "right": "china1500",
+    "rightSign": "CHINA · ALREADY CUT",
+    "splitOn": "changes"
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 2,
+   "say": "Bringing one out could seem a little *rude*, as if the cook hadn't finished the job.",
+   "p": {
+    "frontLabel": "AT A CHINESE TABLE",
+    "heard": "A knife?",
+    "backLabel": "WHY NOT",
+    "actual": "The cook already did the cutting.",
+    "source": "",
+    "flipOn": "as"
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 2,
+   "say": "So what do you eat with instead? Surprisingly, for a long time, the answer was a *spoon*.",
+   "p": {
+    "tag": "EARLY CHINA",
+    "word": "A surprise.",
+    "items": [
+     {
+      "obj": "chopsticks",
+      "meta": "YOUR GUESS",
+      "name": "Chopsticks?",
+      "sub": "not yet",
+      "on": "instead"
+     },
+     {
+      "obj": "spoon",
+      "meta": "ACTUALLY",
+      "name": "Spoon",
+      "sub": "for a long time",
+      "on": "spoon"
+     }
+    ]
+   },
+   "pauseAfter": {
+    "spoon": 0.5
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 2,
+   "say": "Chopsticks are ancient. Archaeologists have found bone sticks in China that are *thousands* of years old, though nobody can be sure what they were used for.",
+   "p": {
+    "tag": "ARCHAEOLOGY",
+    "word": "Bone sticks.",
+    "items": [
+     {
+      "obj": "chopsticksBone",
+      "meta": "CHINA · ANCIENT",
+      "name": "Bone sticks",
+      "sub": "use uncertain",
+      "on": "bone"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 2,
+   "say": "And for a long time, chopsticks were the *helpers*. They fished vegetables out of soup and turned food over the fire.",
+   "p": {
+    "tag": "THE HELPERS",
+    "word": "Helpers.",
+    "items": [
+     {
+      "obj": "bowl",
+      "meta": "JOB 1",
+      "name": "Fishing in soup",
+      "sub": "for vegetables",
+      "on": "soup"
+     },
+     {
+      "obj": "chopsticks",
+      "meta": "JOB 2",
+      "name": "Turning food",
+      "sub": "over the fire",
+      "on": "fire"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 2,
+   "say": "The grain itself, a millet porridge, was eaten with a *spoon*.",
+   "p": {
+    "tag": "THE MAIN MEAL",
+    "word": "Porridge.",
+    "items": [
+     {
+      "obj": "bowl",
+      "meta": "THE GRAIN",
+      "name": "Millet porridge",
+      "sub": "every day",
+      "on": "porridge"
+     },
+     {
+      "obj": "spoon",
+      "meta": "THE TOOL",
+      "name": "Spoon",
+      "sub": "for porridge",
+      "on": "spoon"
+     }
+    ]
+   },
+   "pauseAfter": {
+    "spoon": 0.5
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 2,
+   "say": "Then, slowly, the menu changed. Wheat became more important, and with it came *noodles* and dumplings.",
+   "p": {
+    "tag": "THE MENU CHANGES",
+    "word": "Wheat.",
+    "items": [
+     {
+      "obj": "bread",
+      "meta": "WHEAT",
+      "name": "Wheat",
+      "sub": "more important",
+      "on": "Wheat"
+     },
+     {
+      "obj": "pasta",
+      "meta": "NEW FOOD",
+      "name": "Noodles",
+      "sub": "and dumplings",
+      "on": "noodles"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 2,
+   "say": "Try lifting a noodle with a *spoon*. Gradually, chopsticks moved to the *centre* of the meal.",
+   "p": {
+    "tag": "THE SWITCH",
+    "word": "Chopsticks win.",
+    "items": [
+     {
+      "obj": "spoon",
+      "meta": "THE SPOON",
+      "name": "Noodles slip off",
+      "sub": "try it",
+      "on": "spoon"
+     },
+     {
+      "obj": "chopsticks",
+      "meta": "THE NEW MAIN TOOL",
+      "name": "Chopsticks",
+      "sub": "centre of the meal",
+      "on": "Gradually"
+     }
+    ]
+   }
+  },
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 2,
+   "say": "From China, they travelled to *Korea*, *Japan* and *Vietnam*. And each place made them its own.",
+   "p": {
+    "tag": "SPREAD",
+    "title": "One tool, many tables",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       114.35,
+       36.1
+      ],
+      "label": "China",
+      "on": "From",
+      "below": false
+     },
+     {
+      "lonlat": [
+       126.98,
+       37.57
+      ],
+      "label": "Korea",
+      "on": "Korea",
+      "below": false
+     },
+     {
+      "lonlat": [
+       135.8,
+       34.68
+      ],
+      "label": "Japan",
+      "on": "Japan",
+      "below": false
+     },
+     {
+      "lonlat": [
+       105.85,
+       21.03
+      ],
+      "label": "Vietnam",
+      "on": "Vietnam",
+      "below": true
+     }
+    ],
+    "routes": [
+     {
+      "from": [
+       114.35,
+       36.1
+      ],
+      "to": [
+       126.98,
+       37.57
+      ],
+      "on": "Korea"
+     },
+     {
+      "from": [
+       114.35,
+       36.1
+      ],
+      "to": [
+       135.8,
+       34.68
+      ],
+      "on": "Japan"
+     },
+     {
+      "from": [
+       114.35,
+       36.1
+      ],
+      "to": [
+       105.85,
+       21.03
+      ],
+      "on": "Vietnam"
+     }
+    ],
+    "zoomTo": [
+     {
+      "on": "From",
+      "lonlat": [
+       118,
+       30
+      ],
+      "zoom": 1.45,
+      "stay": true
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 2,
+   "say": "In Korea, they're often *metal*, and they still come with a *spoon*.",
+   "p": {
+    "tag": "KOREA",
+    "word": "Metal and a spoon.",
+    "items": [
+     {
+      "obj": "chopsticksMetal",
+      "meta": "KOREA",
+      "name": "Metal chopsticks",
+      "sub": "often steel",
+      "on": "metal"
+     },
+     {
+      "obj": "spoon",
+      "meta": "KOREA",
+      "name": "Spoon",
+      "sub": "served together",
+      "on": "spoon"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 2,
+   "say": "Legend says royalty ate with *silver* chopsticks, because silver would turn black near *poison*.",
+   "p": {
+    "tag": "A LEGEND",
+    "word": "Silver.",
+    "items": [
+     {
+      "obj": "chopsticksSilver",
+      "meta": "ROYAL TABLE · LEGEND",
+      "name": "Silver chopsticks",
+      "sub": "said to detect poison",
+      "on": "Legend"
+     }
+    ]
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 2,
+   "say": "Silver really can darken when it meets certain *sulphur* compounds. But that doesn't make it a reliable poison detector.",
+   "p": {
+    "frontLabel": "THE LEGEND",
+    "heard": "Silver detects poison.",
+    "backLabel": "THE CHEMISTRY",
+    "actual": "Silver darkens with some sulphur. It's no reliable poison detector.",
+    "source": "Smithsonian Magazine",
+    "flipOn": "But"
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 2,
+   "say": "And at the royal table, silver was also a display of *status*.",
+   "p": {
+    "tag": "THE ROYAL TABLE",
+    "word": "Status.",
+    "items": [
+     {
+      "obj": "chopsticksSilver",
+      "meta": "KOREA · ROYAL",
+      "name": "Silver",
+      "sub": "a display of status",
+      "on": "royal"
+     }
+    ]
+   }
+  },
+  {
+   "t": "period",
+   "in": "door",
+   "pillar": "eat",
+   "part": 2,
+   "say": "In Japan, chopsticks come with *rules*. Never stand them *upright* in a bowl of rice. That's how rice is offered to the *dead*.",
+   "p": {
+    "left": "japan",
+    "leftSign": "JAPAN · A FAMILY MEAL",
+    "washIn": false,
+    "marks": [
+     {
+      "on": "upright",
+      "kind": "circle",
+      "x": 1290,
+      "y": 600,
+      "w": 150,
+      "h": 190
+     }
+    ]
+   }
+  },
+  {
+   "t": "period",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 2,
+   "say": "And never pass food from one pair of chopsticks to *another*. At Japanese funerals, that's how family members pass the *bones* after a cremation.",
+   "p": {
+    "left": "japan",
+    "leftSign": "JAPAN · A FAMILY MEAL",
+    "washIn": false,
+    "marks": [
+     {
+      "on": "another",
+      "kind": "underline",
+      "x": 810,
+      "y": 690,
+      "w": 280
+     }
+    ]
+   }
+  },
+  {
+   "t": "period",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 2,
+   "say": "So in East Asia, the cutting moved into the *kitchen*. In Europe, it stayed right there at the *table*.",
+   "p": {
+    "left": "europe1500",
+    "leftSign": "EUROPE · AT THE TABLE",
+    "washIn": false,
+    "marks": [],
+    "right": "china1500",
+    "rightSign": "EAST ASIA · IN THE KITCHEN",
+    "splitOn": "East"
+   }
+  }
+ ]
+}

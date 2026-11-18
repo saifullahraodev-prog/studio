@@ -83,33 +83,40 @@ P("And that's where the world *splits*. Because the real question isn't what you
   "europe1500", "EUROPE · CUT AT THE TABLE", "china1500", "CHINA · CUT IN THE KITCHEN", splitOn="splits")
 
 part(2)
-# ── China: the kitchen ──
-M("Let's start in *China*, where the answer was: in the *kitchen*.", "PART ONE", "China", [zm("China", ANYANG, 1.9)], [pin(ANYANG, "China", "China")])
-P("Chinese cooking had a problem: *fuel*. Firewood was precious.", "china1500", "CHINA · A KITCHEN", inn="door", wash=True,
+# ── China: the kitchen (rewritten 2026-11-18 for the edited narration: one picture per line) ──
+CHINA = [112, 33]
+M("Let's start in *China*, where the answer was: in the *kitchen*.", "PART ONE", "China", [zm("China", CHINA, 1.8, True)], [pin(ANYANG, "China", "China")])
+P("Chinese cooks cut almost everything before it ever reached a *diner*.", "china1500", "CHINA · THE KITCHEN", inn="door", wash=True)
+E("Thin strips of meat. Diced vegetables. All of it, chopped with a single heavy *cleaver*.", "THE KITCHEN", "One cleaver.",
+  [("plate", "STEP 1", "Thin strips", "of meat", "strips"), ("bowl", "STEP 2", "Diced", "vegetables", "Diced"), ("cleaver", "ONE TOOL", "Cleaver", "for everything", "cleaver")], inn="cut")
+P("Why? One popular explanation is *fuel*. Firewood was precious, and small pieces cook *fast*.", "china1500", "CHINA · A POPULAR EXPLANATION", inn="cut",
   marks=[{"on": "Firewood", "kind": "circle", "x": 1280, "y": 600, "w": 240, "h": 200}])
-E("One popular explanation, repeated by many food historians, is that cooks found a clever way around it. Cut everything *small* first.",
-  "A POPULAR EXPLANATION", "Cut it small.", [("cleaver", "THE KITCHEN", "One cleaver", "cut small first", "small")])
-E("Thin strips of meat, diced vegetables, all of it chopped with a single heavy *cleaver*. Small pieces cook *fast*. Fast cooking saves fuel.",
-  "THE KITCHEN", "Small and fast.", [("cleaver", "STEP 1", "Chop", "one heavy cleaver", "cleaver"), ("bowl", "STEP 2", "Cook fast", "saves fuel", "fast")])
-P("But that changes the meal itself. If everything reaches the table already *bite-sized*, you don't need a knife at dinner at all.",
-  "europe1500", "EUROPE · c. 1500", "china1500", "CHINA · c. 1500", marks=[{"on": "bite-sized", "kind": "circle", "x": 1760, "y": 690, "w": 260, "h": 220}])
-C("In fact, bringing one out could seem a little *rude*, as if the cook hadn't finished the job.", "AT A CHINESE TABLE", "A knife?", "WHY NOT", "The cook already did the cutting.", "as")
-E("What you need instead is something to *pick* up small pieces. And China already had it.", "THE TOOL", "Something to pick up.", [("chopsticks", "CHINA", "Chopsticks", "for small pieces", "pick")])
-E("The oldest chopsticks ever found are bronze, from a royal city near *Anyang*, and they're more than *three thousand* years old.", "ANYANG, CHINA", "c. 1200 BC",
-  [("chopsticks", "SHANG PERIOD", "Bronze chopsticks", "c. 1200 BC · Yinxu", "oldest")])
-C("But here's the twist: they probably weren't for *eating*. They were *cooking* tools, for reaching into a hot pot.", "THE OLDEST CHOPSTICKS", "For eating?", "PROBABLY", "Cooking tools.", "They")
-E("For centuries, people in China ate their grain porridge with *spoons*. Then, during the Han dynasty, as more people ate *rice*, chopsticks moved from the stove to the table.",
-  "EARLY CHINA", "Spoons first.", [("spoon", "EARLY CHINA", "Spoon", "for porridge", "spoons"), ("bowl", "HAN DYNASTY", "Rice", "and chopsticks", "rice")])
-M("And only in the *Ming* dynasty, about six hundred years ago, did they take over completely.", "MING DYNASTY", "Chopsticks take over", [zm("Ming", BEIJING, 2.0)], [pin(BEIJING, "Beijing", "Ming")])
-M("From China, chopsticks travelled to *Korea*, *Japan* and *Vietnam*. And each place made them its own.", "SPREAD", "One tool, many tables", [zm("China", [120, 33], 1.9)],
-  [pin(ANYANG, "China", "China"), pin(SEOUL, "Korea", "Korea"), pin(NARA, "Japan", "Japan"), pin(HANOI, "Vietnam", "Vietnam", True)],
+P("But that changes the whole meal. If the food arrives already *bite-sized*, you don't need a knife at dinner at all.",
+  "europe1500", "EUROPE · CUT AT THE TABLE", "china1500", "CHINA · ALREADY CUT", splitOn="changes", marks=[{"on": "bite-sized", "kind": "circle", "x": 1760, "y": 690, "w": 260, "h": 220}])
+C("Bringing one out could seem a little *rude*, as if the cook hadn't finished the job.", "AT A CHINESE TABLE", "A knife?", "WHY NOT", "The cook already did the cutting.", "as", inn="cut")
+E("So what do you eat with instead? Surprisingly, for a long time, the answer was a *spoon*.", "EARLY CHINA", "A surprise.",
+  [("chopsticks", "YOUR GUESS", "Chopsticks?", "not yet", "instead"), ("spoon", "ACTUALLY", "Spoon", "for a long time", "spoon")], pauseAfter={"spoon": 0.5})
+E("Chopsticks are ancient. Archaeologists have found bone sticks in China that are *thousands* of years old, though nobody can be sure what they were used for.",
+  "ARCHAEOLOGY", "Bone sticks.", [("chopsticksBone", "CHINA · ANCIENT", "Bone sticks", "use uncertain", "bone")])
+E("And for a long time, chopsticks were the *helpers*. They fished vegetables out of soup and turned food over the fire.", "THE HELPERS", "Helpers.",
+  [("bowl", "JOB 1", "Fishing in soup", "for vegetables", "soup"), ("chopsticks", "JOB 2", "Turning food", "over the fire", "fire")])
+E("The grain itself, a millet porridge, was eaten with a *spoon*.", "THE MAIN MEAL", "Porridge.",
+  [("bowl", "THE GRAIN", "Millet porridge", "every day", "porridge"), ("spoon", "THE TOOL", "Spoon", "for porridge", "spoon")], inn="cut", pauseAfter={"spoon": 0.5})
+E("Then, slowly, the menu changed. Wheat became more important, and with it came *noodles* and dumplings.", "THE MENU CHANGES", "Wheat.",
+  [("bread", "WHEAT", "Wheat", "more important", "Wheat"), ("pasta", "NEW FOOD", "Noodles", "and dumplings", "noodles")])
+E("Try lifting a noodle with a *spoon*. Gradually, chopsticks moved to the *centre* of the meal.", "THE SWITCH", "Chopsticks win.",
+  [("spoon", "THE SPOON", "Noodles slip off", "try it", "spoon"), ("chopsticks", "THE NEW MAIN TOOL", "Chopsticks", "centre of the meal", "Gradually")], inn="cut")
+M("From China, they travelled to *Korea*, *Japan* and *Vietnam*. And each place made them its own.", "SPREAD", "One tool, many tables", [zm("From", [118, 30], 1.45, True)],
+  [pin(ANYANG, "China", "From"), pin(SEOUL, "Korea", "Korea"), pin(NARA, "Japan", "Japan"), pin(HANOI, "Vietnam", "Vietnam", True)],
   [{"from": ANYANG, "to": SEOUL, "on": "Korea"}, {"from": ANYANG, "to": NARA, "on": "Japan"}, {"from": ANYANG, "to": HANOI, "on": "Vietnam"}])
-E("In Korea, they're often made of *metal*, and they come with a *spoon*.", "KOREA", "Metal and a spoon.",
-  [("chopsticks", "KOREA", "Metal chopsticks", "STAND-IN drawing", "metal"), ("spoon", "KOREA", "Spoon", "served together", "spoon")])
-E("Legend says Korean kings ate with *silver* chopsticks, because silver would turn black near *poison*.", "A LEGEND", "Silver.",
-  [("chopsticks", "KOREA · LEGEND", "Silver chopsticks", "STAND-IN drawing", "silver")])
-C("The catch? Silver reacts to *sulphur*, in things like eggs and garlic. Not to arsenic itself.", "THE LEGEND", "Silver detects poison.",
-  "THE CATCH", "Silver reacts to sulphur. Not to arsenic itself.", "Silver", "Smithsonian Magazine")
+E("In Korea, they're often *metal*, and they still come with a *spoon*.", "KOREA", "Metal and a spoon.",
+  [("chopsticksMetal", "KOREA", "Metal chopsticks", "often steel", "metal"), ("spoon", "KOREA", "Spoon", "served together", "spoon")])
+E("Legend says royalty ate with *silver* chopsticks, because silver would turn black near *poison*.", "A LEGEND", "Silver.",
+  [("chopsticksSilver", "ROYAL TABLE · LEGEND", "Silver chopsticks", "said to detect poison", "Legend")], inn="cut")
+C("Silver really can darken when it meets certain *sulphur* compounds. But that doesn't make it a reliable poison detector.", "THE LEGEND", "Silver detects poison.",
+  "THE CHEMISTRY", "Silver darkens with some sulphur. It's no reliable poison detector.", "But", "Smithsonian Magazine")
+E("And at the royal table, silver was also a display of *status*.", "THE ROYAL TABLE", "Status.",
+  [("chopsticksSilver", "KOREA · ROYAL", "Silver", "a display of status", "royal")], inn="cut")
 P("In Japan, chopsticks come with *rules*. Never stand them *upright* in a bowl of rice. That's how rice is offered to the *dead*.", "japan", "JAPAN · A FAMILY MEAL", inn="door",
   marks=[{"on": "upright", "kind": "circle", "x": 1290, "y": 600, "w": 150, "h": 190}])
 P("And never pass food from one pair of chopsticks to *another*. At Japanese funerals, that's how family members pass the *bones* after a cremation.", "japan", "JAPAN · A FAMILY MEAL", inn="cut",
@@ -231,7 +238,12 @@ if arg:
     nxt = [x for x in S if x["part"] == n + 1]
     mine = plain(" ".join(x["say"] for x in mine_sc))
     a0 = approved.index(" ".join(mine.split(" ")[:5]))
-    a1 = approved.index(" ".join(plain(nxt[0]["say"]).split(" ")[:5]), a0) if nxt else len(approved)
+    nxt_start = " ".join(plain(nxt[0]["say"]).split(" ")[:5]) if nxt else None
+    if nxt_start and nxt_start in approved[a0:]:
+        a1 = approved.index(nxt_start, a0)
+    else:  # next part not rewritten yet: end at this part's last words, and require the next words to start a new sentence
+        tail = " ".join(mine.split(" ")[-5:])
+        a1 = approved.index(tail, a0) + len(tail) if tail in approved[a0:] else len(approved)
     want = approved[a0:a1].strip()
 else:
     mine_sc, mine, want = S, plain(" ".join(x["say"] for x in S)), approved
