@@ -168,19 +168,25 @@ E("So the fork became more useful, and it changed shape. Two prongs became *thre
   pauseAfter={"today": 0.4})
 
 part(4)
-# ── the strangest consequence: teeth ──
-E("And here's where the story gets *strange*. In the nineteen seventies, an American anthropologist named Charles Loring *Brace* was studying human teeth.",
-  "THE STRANGEST CONSEQUENCE", "Your teeth.", [("biteOver", "C. L. BRACE", "Human teeth", "1970s research", "teeth")])
-E("He noticed that most people today have an *overbite*: the top front teeth sit in front of the bottom ones. But in Europe, skulls older than a few centuries mostly *don't*.",
-  "WHAT BRACE NOTICED", "Two bites.", [("biteOver", "MOST PEOPLE TODAY", "Overbite", "top in front", "overbite"), ("biteEdge", "OLDER EUROPEAN SKULLS", "Edge to edge", "mostly", "don't")])
+# ── the strangest consequence: teeth (rewritten 2026-11-18: one picture per line, hedged as one researcher's explanation) ──
+E("And this is where the story gets *strange*.", "THE STRANGEST PART", "Your mouth.", [("mouth", "YOU", "Your mouth", "remember?", "this")], pauseAfter={"strange": 0.3})
+E("The American anthropologist Charles Loring *Brace* spent years studying human teeth.", "C. L. BRACE", "Human teeth.",
+  [("biteOver", "C. L. BRACE", "Human teeth", "years of study", "studying")], inn="cut", pauseAfter={"teeth": 0.3})
+E("He noticed that most people today have an *overbite*: the top front teeth sit in front of the bottom ones.", "MOST PEOPLE TODAY", "Overbite.",
+  [("biteOver", "TODAY", "Overbite", "top teeth in front", "overbite")])
+E("But in old European skulls, he mostly found the teeth meeting edge to *edge*.", "OLD EUROPEAN SKULLS", "Two bites.",
+  [("biteOver", "MOST PEOPLE TODAY", "Overbite", "top in front", "But"), ("biteEdge", "OLD SKULLS", "Edge to edge", "mostly", "skulls")], inn="cut", pauseAfter={"edge": 0.3})
 E("His explanation was this. Before knives and forks, people often *clamped* a piece of meat in their front teeth and sliced off a mouthful.", "BRACE'S EXPLANATION", "Clamp and slice.",
   [("biteEdge", "THE GRIP", "Clamp", "front teeth", "clamped"), ("knifePointed", "THE CUT", "Slice", "at the lips", "sliced")])
-E("That habit kept the teeth meeting *edge* to edge. Once Europeans began cutting food into small pieces on the *plate*, the front teeth no longer had to grip. Over generations of childhoods, the bite *changed*.",
-  "BRACE'S EXPLANATION", "The bite changes.", [("biteEdge", "BEFORE", "Edge to edge", "teeth grip", "edge"), ("fork", "THEN", "Cut on the plate", "knife and fork", "plate"), ("biteOver", "AFTER", "Overbite", "no grip needed", "changed")])
-M("And in *China*, Brace said he found the same overbite much earlier, around a thousand years ago, in a culture that had been eating pre-cut food with *chopsticks* for centuries.",
-  "CHINA · SONG ERA", "Earlier still", [zm("China", ANYANG, 1.9)], [pin(SHANGHAI, "Song-era jaw", "thousand", True)])
-C("It's one researcher's *theory*, and it's still debated. But if he's right, the way your ancestors cut their dinner is still written in your *face*.",
-  "A THEORY", "Cutlery changed our bite.", "IF HE'S RIGHT", "Your ancestors' dinners are written in your face.", "if", "C. L. Brace (1977), via Bee Wilson")
+E("Once Europeans started cutting food into small pieces on the *plate*, the front teeth no longer had to grip. Over generations of childhoods, the bite *changed*.",
+  "BRACE'S EXPLANATION", "The bite changes.", [("biteEdge", "BEFORE", "Edge to edge", "teeth grip", "Once"), ("fork", "THEN", "Cut on the plate", "knife and fork", "plate"),
+  ("biteOver", "AFTER", "Overbite", "no grip needed", "changed")], inn="cut", pauseAfter={"changed": 0.4})
+M("Brace also pointed to evidence from Song dynasty *China*, suggesting the same change may have appeared there much earlier, among people eating pre-cut food with *chopsticks*.",
+  "CHINA · SONG DYNASTY", "Earlier still?", [zm("Brace", [108, 34], 1.45, True)], [pin([114.3, 34.8], "Song China", "Song")])
+C("But this is one researcher's explanation, not a settled *answer*. Others link it to softer food in general, going back thousands of years.",
+  "ONE EXPLANATION", "Cutlery changed our bite.", "STILL DEBATED", "Others point to softer food in general.", "Others", "Brace 1986; Blasi et al., Science 2019")
+E("Still, if Brace is right, the way your ancestors cut their dinner is still written in your *face*.", "IF HE'S RIGHT", "Written in your face.",
+  [("biteEdge", "YOUR ANCESTORS", "Edge to edge", "before cutlery", "ancestors"), ("biteOver", "YOU", "Overbite", "today", "written")], inn="cut", pauseAfter={"face": 0.5})
 
 part(5)
 # ── the hand ──

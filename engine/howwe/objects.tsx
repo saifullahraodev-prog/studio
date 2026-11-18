@@ -64,22 +64,38 @@ const Flatbread: React.FC = () => (
     {Array.from({ length: 26 }).map((_, i) => <circle key={i} cx={-170 + (i * 67) % 340} cy={-70 + ((i * 37) % 140)} r={7} fill="#B98E62" stroke="none" />)}
   </g>
 );
-/** Side-profile bite diagram: upper and lower front incisors in their gums.
- *  over=false: edge-to-edge (pre-cutlery bite, per C. L. Brace); over=true: modern overbite (upper in front of lower). */
-const Bite: React.FC<{ over: boolean }> = ({ over }) => (
-  <g {...st}>
-    {/* gums */}
-    <path d="M-160 -220 Q-160 -150 -60 -140 L120 -140 Q160 -170 160 -220 Z" fill="#E7A9A0" />
-    <path d="M-160 220 Q-160 150 -60 140 L120 140 Q160 170 160 220 Z" fill="#E7A9A0" />
-    {/* upper incisor: points down; in an overbite it sits in front (left = front of the mouth) and lower */}
-    <g transform={over ? "translate(-34 26)" : ""}>
-      <path d="M-10 -150 Q-40 -60 -30 6 Q-10 18 14 6 Q26 -60 30 -150 Z" fill="#FBF8F2" />
+/** Side-view bite diagram: a row of upper and lower teeth in their gums, front of the mouth on the LEFT.
+ *  over=false: edge-to-edge (front teeth meet tip to tip; per C. L. Brace, the older bite);
+ *  over=true: modern overbite (upper front teeth come down IN FRONT of the lower ones). */
+const Bite: React.FC<{ over: boolean }> = ({ over }) => {
+  const tooth = "#FBF8F2", gum = "#E49A93";
+  // back teeth (canine, premolars, molars): [x0, x1, pointed]
+  const back: [number, number, boolean][] = [[-118, -84, true], [-74, -34, false], [-26, 16, false], [26, 96, false], [106, 176, false]];
+  const up = (x0: number, x1: number, pt: boolean) => pt
+    ? `M${x0} -100 L${x1} -100 Q${x1} -40 ${(x0 + x1) / 2} -2 Q${x0} -40 ${x0} -100 Z`
+    : `M${x0} -100 L${x1} -100 L${x1 - 2} -14 Q${(x0 + x1) / 2 + 8} -2 ${(x0 + x1) / 2} -10 Q${(x0 + x1) / 2 - 8} -2 ${x0 + 2} -14 Z`;
+  const lo = (x0: number, x1: number, pt: boolean) => pt
+    ? `M${x0} 100 L${x1} 100 Q${x1} 40 ${(x0 + x1) / 2} 2 Q${x0} 40 ${x0} 100 Z`
+    : `M${x0} 100 L${x1} 100 L${x1 - 2} 14 Q${(x0 + x1) / 2 + 8} 2 ${(x0 + x1) / 2} 10 Q${(x0 + x1) / 2 - 8} 2 ${x0 + 2} 14 Z`;
+  // front incisors: edge-to-edge tips meet at y=0; overbite: upper comes down to y=+40, in front of a lower set further back
+  const upInc = over ? "M-186 -100 L-146 -100 Q-140 -30 -152 40 Q-170 44 -180 36 Q-192 -30 -186 -100 Z" : "M-178 -100 L-138 -100 Q-134 -40 -142 -2 Q-160 2 -172 -2 Q-182 -40 -178 -100 Z";
+  const loInc = over ? "M-160 100 L-128 100 Q-124 50 -132 -6 Q-146 -10 -156 -4 Q-166 50 -160 100 Z" : "M-176 100 L-140 100 Q-134 50 -142 2 Q-160 -2 -172 2 Q-182 50 -176 100 Z";
+  return (
+    <g {...st}>
+      {back.map(([a, b, p], i) => <path key={`l${i}`} d={lo(a, b, p)} fill={tooth} />)}
+      <path d={loInc} fill={tooth} />
+      {back.map(([a, b, p], i) => <path key={`u${i}`} d={up(a, b, p)} fill={tooth} />)}
+      <path d={upInc} fill={tooth} />
+      {/* gums hide the roots */}
+      <path d="M-200 -196 L190 -196 L190 -96 Q0 -86 -150 -96 Q-196 -100 -200 -140 Z" fill={gum} />
+      <path d="M-200 196 L190 196 L190 96 Q0 86 -130 96 Q-196 100 -200 140 Z" fill={gum} />
+      {/* "front" marker */}
+      <path d="M-150 -232 L-226 -232 M-206 -246 L-228 -232 L-206 -218" fill="none" stroke="#6B6252" strokeWidth={4} strokeLinecap="round" />
+      <text x={-140} y={-224} fontFamily="IBM Plex Mono" fontSize={24} fill="#6B6252" stroke="none">FRONT</text>
+      <text x={0} y={262} textAnchor="middle" fontFamily="IBM Plex Mono" fontSize={30} fill="#6B6252" stroke="none">{over ? "OVERBITE" : "EDGE TO EDGE"}</text>
     </g>
-    {/* lower incisor: points up */}
-    <path d="M-6 150 Q-26 70 -18 0 Q2 -10 24 2 Q34 70 38 150 Z" fill="#F3EEE2" />
-    <text x={0} y={262} textAnchor="middle" fontFamily="IBM Plex Mono" fontSize={30} fill="#6B6252" stroke="none">{over ? "OVERBITE" : "EDGE TO EDGE"}</text>
-  </g>
-);
+  );
+};
 /** Front view of an open, smiling human mouth: lips, upper and lower teeth, tongue (clear at a glance). */
 const Mouth: React.FC = () => (
   <g {...st}>
@@ -132,9 +148,9 @@ export const OBJECTS: Record<string, Entry> = {
   knifeRound: { name: "Round-tipped knife", top: -100, bottom: 348, draw: KnifeRound },
   pasta: { name: "Pasta", top: -125, bottom: 130, draw: Pasta },
   flatbread: { name: "Flatbread", top: -120, bottom: 120, draw: Flatbread },
-  biteEdge: { name: "Edge-to-edge bite", top: -220, bottom: 270, draw: () => <Bite over={false} /> },
+  biteEdge: { name: "Edge-to-edge bite", top: -250, bottom: 270, draw: () => <Bite over={false} /> },
   mouth: { name: "Mouth", top: -120, bottom: 144, draw: Mouth },
-  biteOver: { name: "Overbite", top: -220, bottom: 270, draw: () => <Bite over={true} /> },
+  biteOver: { name: "Overbite", top: -250, bottom: 270, draw: () => <Bite over={true} /> },
   knife: { name: "Knife", top: -100, bottom: 348, draw: () => <Knife x={0} y={0} ink={INK} /> },
   spoon: { name: "Spoon", top: -110, bottom: 348, draw: Spoon },
   chopsticksBone: { name: "Bone sticks", top: -232, bottom: 232, draw: () => <Chopsticks x={0} y={0} rot={6} ink={{ ...INK, wood: "#E9DFC6" }} /> },

@@ -1,0 +1,247 @@
+{
+ "note": "How We Ended Up · video 1 v3 · scenes for the owner-approved narration. Placeholders: map colours, costumes, stand-in drawings.",
+ "voiceScale": 1.15,
+ "scenes": [
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 4,
+   "say": "And this is where the story gets *strange*.",
+   "p": {
+    "tag": "THE STRANGEST PART",
+    "word": "Your mouth.",
+    "items": [
+     {
+      "obj": "mouth",
+      "meta": "YOU",
+      "name": "Your mouth",
+      "sub": "remember?",
+      "on": "this"
+     }
+    ]
+   },
+   "pauseAfter": {
+    "strange": 0.3
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 4,
+   "say": "The American anthropologist Charles Loring *Brace* spent years studying human teeth.",
+   "p": {
+    "tag": "C. L. BRACE",
+    "word": "Human teeth.",
+    "items": [
+     {
+      "obj": "biteOver",
+      "meta": "C. L. BRACE",
+      "name": "Human teeth",
+      "sub": "years of study",
+      "on": "studying"
+     }
+    ]
+   },
+   "pauseAfter": {
+    "teeth": 0.3
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 4,
+   "say": "He noticed that most people today have an *overbite*: the top front teeth sit in front of the bottom ones.",
+   "p": {
+    "tag": "MOST PEOPLE TODAY",
+    "word": "Overbite.",
+    "items": [
+     {
+      "obj": "biteOver",
+      "meta": "TODAY",
+      "name": "Overbite",
+      "sub": "top teeth in front",
+      "on": "overbite"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 4,
+   "say": "But in old European skulls, he mostly found the teeth meeting edge to *edge*.",
+   "p": {
+    "tag": "OLD EUROPEAN SKULLS",
+    "word": "Two bites.",
+    "items": [
+     {
+      "obj": "biteOver",
+      "meta": "MOST PEOPLE TODAY",
+      "name": "Overbite",
+      "sub": "top in front",
+      "on": "But"
+     },
+     {
+      "obj": "biteEdge",
+      "meta": "OLD SKULLS",
+      "name": "Edge to edge",
+      "sub": "mostly",
+      "on": "skulls"
+     }
+    ]
+   },
+   "pauseAfter": {
+    "edge": 0.3
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 4,
+   "say": "His explanation was this. Before knives and forks, people often *clamped* a piece of meat in their front teeth and sliced off a mouthful.",
+   "p": {
+    "tag": "BRACE'S EXPLANATION",
+    "word": "Clamp and slice.",
+    "items": [
+     {
+      "obj": "biteEdge",
+      "meta": "THE GRIP",
+      "name": "Clamp",
+      "sub": "front teeth",
+      "on": "clamped"
+     },
+     {
+      "obj": "knifePointed",
+      "meta": "THE CUT",
+      "name": "Slice",
+      "sub": "at the lips",
+      "on": "sliced"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 4,
+   "say": "Once Europeans started cutting food into small pieces on the *plate*, the front teeth no longer had to grip. Over generations of childhoods, the bite *changed*.",
+   "p": {
+    "tag": "BRACE'S EXPLANATION",
+    "word": "The bite changes.",
+    "items": [
+     {
+      "obj": "biteEdge",
+      "meta": "BEFORE",
+      "name": "Edge to edge",
+      "sub": "teeth grip",
+      "on": "Once"
+     },
+     {
+      "obj": "fork",
+      "meta": "THEN",
+      "name": "Cut on the plate",
+      "sub": "knife and fork",
+      "on": "plate"
+     },
+     {
+      "obj": "biteOver",
+      "meta": "AFTER",
+      "name": "Overbite",
+      "sub": "no grip needed",
+      "on": "changed"
+     }
+    ]
+   },
+   "pauseAfter": {
+    "changed": 0.4
+   }
+  },
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 4,
+   "say": "Brace also pointed to evidence from Song dynasty *China*, suggesting the same change may have appeared there much earlier, among people eating pre-cut food with *chopsticks*.",
+   "p": {
+    "tag": "CHINA · SONG DYNASTY",
+    "title": "Earlier still?",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       114.3,
+       34.8
+      ],
+      "label": "Song China",
+      "on": "Song",
+      "below": false
+     }
+    ],
+    "routes": [],
+    "zoomTo": [
+     {
+      "on": "Brace",
+      "lonlat": [
+       108,
+       34
+      ],
+      "zoom": 1.45,
+      "stay": true
+     }
+    ]
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 4,
+   "say": "But this is one researcher's explanation, not a settled *answer*. Others link it to softer food in general, going back thousands of years.",
+   "p": {
+    "frontLabel": "ONE EXPLANATION",
+    "heard": "Cutlery changed our bite.",
+    "backLabel": "STILL DEBATED",
+    "actual": "Others point to softer food in general.",
+    "source": "Brace 1986; Blasi et al., Science 2019",
+    "flipOn": "Others"
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 4,
+   "say": "Still, if Brace is right, the way your ancestors cut their dinner is still written in your *face*.",
+   "p": {
+    "tag": "IF HE'S RIGHT",
+    "word": "Written in your face.",
+    "items": [
+     {
+      "obj": "biteEdge",
+      "meta": "YOUR ANCESTORS",
+      "name": "Edge to edge",
+      "sub": "before cutlery",
+      "on": "ancestors"
+     },
+     {
+      "obj": "biteOver",
+      "meta": "YOU",
+      "name": "Overbite",
+      "sub": "today",
+      "on": "written"
+     }
+    ]
+   },
+   "pauseAfter": {
+    "face": 0.5
+   }
+  }
+ ]
+}
