@@ -1,0 +1,7947 @@
+[
+{
+"word": "The",
+"start": 0.0,
+"end": 0.24
+},
+{
+"word": "plate",
+"start": 0.24,
+"end": 0.48
+},
+{
+"word": "arrives.",
+"start": 0.48,
+"end": 0.9
+},
+{
+"word": "Without",
+"start": 1.56,
+"end": 1.78
+},
+{
+"word": "thinking,",
+"start": 1.78,
+"end": 2.16
+},
+{
+"word": "your",
+"start": 2.6,
+"end": 2.7
+},
+{
+"word": "hands",
+"start": 2.7,
+"end": 2.98
+},
+{
+"word": "do",
+"start": 2.98,
+"end": 3.18
+},
+{
+"word": "something",
+"start": 3.18,
+"end": 3.52
+},
+{
+"word": "they've",
+"start": 3.52,
+"end": 3.86
+},
+{
+"word": "done",
+"start": 3.86,
+"end": 4.12
+},
+{
+"word": "thousands",
+"start": 4.12,
+"end": 4.68
+},
+{
+"word": "of",
+"start": 4.68,
+"end": 4.98
+},
+{
+"word": "times.",
+"start": 4.98,
+"end": 5.38
+},
+{
+"word": "Fork",
+"start": 5.88,
+"end": 6.12
+},
+{
+"word": "in",
+"start": 6.12,
+"end": 6.18
+},
+{
+"word": "the",
+"start": 6.18,
+"end": 6.28
+},
+{
+"word": "left.",
+"start": 6.28,
+"end": 6.6
+},
+{
+"word": "Knife",
+"start": 7.16,
+"end": 7.46
+},
+{
+"word": "in",
+"start": 7.46,
+"end": 7.6
+},
+{
+"word": "the",
+"start": 7.6,
+"end": 7.68
+},
+{
+"word": "right.",
+"start": 7.68,
+"end": 7.92
+},
+{
+"word": "Cut,",
+"start": 8.38,
+"end": 8.62
+},
+{
+"word": "lift,",
+"start": 8.92,
+"end": 9.02
+},
+{
+"word": "eat.",
+"start": 9.36,
+"end": 9.56
+},
+{
+"word": "Now",
+"start": 10.12,
+"end": 10.28
+},
+{
+"word": "picture",
+"start": 10.28,
+"end": 10.5
+},
+{
+"word": "the",
+"start": 10.5,
+"end": 10.72
+},
+{
+"word": "same",
+"start": 10.72,
+"end": 10.92
+},
+{
+"word": "moment",
+"start": 10.92,
+"end": 11.2
+},
+{
+"word": "in",
+"start": 11.2,
+"end": 11.38
+},
+{
+"word": "Shanghai.",
+"start": 11.38,
+"end": 11.66
+},
+{
+"word": "A",
+"start": 12.44,
+"end": 12.56
+},
+{
+"word": "knife",
+"start": 12.56,
+"end": 12.7
+},
+{
+"word": "usually",
+"start": 12.7,
+"end": 13.04
+},
+{
+"word": "isn't",
+"start": 13.04,
+"end": 13.36
+},
+{
+"word": "part",
+"start": 13.36,
+"end": 13.56
+},
+{
+"word": "of",
+"start": 13.56,
+"end": 13.68
+},
+{
+"word": "the",
+"start": 13.68,
+"end": 13.78
+},
+{
+"word": "meal.",
+"start": 13.78,
+"end": 14.0
+},
+{
+"word": "Nobody",
+"start": 14.56,
+"end": 14.88
+},
+{
+"word": "misses",
+"start": 14.88,
+"end": 15.18
+},
+{
+"word": "it.",
+"start": 15.18,
+"end": 15.46
+},
+{
+"word": "That's",
+"start": 15.72,
+"end": 15.94
+},
+{
+"word": "a",
+"start": 15.94,
+"end": 16.04
+},
+{
+"word": "family",
+"start": 16.04,
+"end": 16.28
+},
+{
+"word": "meal",
+"start": 16.28,
+"end": 16.58
+},
+{
+"word": "in",
+"start": 16.58,
+"end": 16.82
+},
+{
+"word": "many",
+"start": 16.82,
+"end": 17.02
+},
+{
+"word": "Indian",
+"start": 17.02,
+"end": 17.36
+},
+{
+"word": "homes.",
+"start": 17.36,
+"end": 17.68
+},
+{
+"word": "The",
+"start": 18.04,
+"end": 18.14
+},
+{
+"word": "right",
+"start": 18.14,
+"end": 18.34
+},
+{
+"word": "hand",
+"start": 18.34,
+"end": 18.64
+},
+{
+"word": "does",
+"start": 18.64,
+"end": 18.94
+},
+{
+"word": "all",
+"start": 18.94,
+"end": 19.32
+},
+{
+"word": "the",
+"start": 19.32,
+"end": 19.48
+},
+{
+"word": "work.",
+"start": 19.48,
+"end": 19.78
+},
+{
+"word": "And",
+"start": 20.14,
+"end": 20.34
+},
+{
+"word": "in",
+"start": 20.34,
+"end": 20.48
+},
+{
+"word": "Bangkok,",
+"start": 20.48,
+"end": 20.76
+},
+{
+"word": "you",
+"start": 21.14,
+"end": 21.26
+},
+{
+"word": "usually",
+"start": 21.26,
+"end": 21.6
+},
+{
+"word": "get",
+"start": 21.6,
+"end": 21.82
+},
+{
+"word": "a",
+"start": 21.82,
+"end": 21.92
+},
+{
+"word": "spoon",
+"start": 21.92,
+"end": 22.18
+},
+{
+"word": "and",
+"start": 22.18,
+"end": 22.42
+},
+{
+"word": "a",
+"start": 22.42,
+"end": 22.54
+},
+{
+"word": "fork.",
+"start": 22.54,
+"end": 22.78
+},
+{
+"word": "But",
+"start": 23.22,
+"end": 23.44
+},
+{
+"word": "no",
+"start": 23.44,
+"end": 23.64
+},
+{
+"word": "knife.",
+"start": 23.64,
+"end": 23.92
+},
+{
+"word": "And",
+"start": 24.28,
+"end": 24.46
+},
+{
+"word": "often",
+"start": 24.46,
+"end": 24.7
+},
+{
+"word": "no",
+"start": 24.7,
+"end": 24.88
+},
+{
+"word": "chopsticks",
+"start": 24.88,
+"end": 25.2
+},
+{
+"word": "either.",
+"start": 25.2,
+"end": 25.58
+},
+{
+"word": "Same",
+"start": 26.0,
+"end": 26.18
+},
+{
+"word": "hunger.",
+"start": 26.18,
+"end": 26.48
+},
+{
+"word": "Same",
+"start": 26.86,
+"end": 27.08
+},
+{
+"word": "food",
+"start": 27.08,
+"end": 27.34
+},
+{
+"word": "on",
+"start": 27.34,
+"end": 27.46
+},
+{
+"word": "the",
+"start": 27.46,
+"end": 27.54
+},
+{
+"word": "plate.",
+"start": 27.54,
+"end": 27.84
+},
+{
+"word": "Completely",
+"start": 27.84,
+"end": 28.64
+},
+{
+"word": "different",
+"start": 28.64,
+"end": 29.16
+},
+{
+"word": "tools.",
+"start": 29.16,
+"end": 29.58
+},
+{
+"word": "So",
+"start": 30.18,
+"end": 30.4
+},
+{
+"word": "if",
+"start": 30.4,
+"end": 30.56
+},
+{
+"word": "eating",
+"start": 30.56,
+"end": 30.82
+},
+{
+"word": "is",
+"start": 30.82,
+"end": 31.02
+},
+{
+"word": "the",
+"start": 31.02,
+"end": 31.14
+},
+{
+"word": "most",
+"start": 31.14,
+"end": 31.32
+},
+{
+"word": "universal",
+"start": 31.32,
+"end": 31.78
+},
+{
+"word": "thing",
+"start": 31.78,
+"end": 32.18
+},
+{
+"word": "humans",
+"start": 32.18,
+"end": 32.48
+},
+{
+"word": "do,",
+"start": 32.48,
+"end": 32.8
+},
+{
+"word": "why",
+"start": 33.22,
+"end": 33.5
+},
+{
+"word": "did",
+"start": 33.5,
+"end": 33.62
+},
+{
+"word": "we",
+"start": 33.62,
+"end": 33.76
+},
+{
+"word": "never",
+"start": 33.76,
+"end": 33.98
+},
+{
+"word": "agree",
+"start": 33.98,
+"end": 34.36
+},
+{
+"word": "on",
+"start": 34.36,
+"end": 34.52
+},
+{
+"word": "how",
+"start": 34.52,
+"end": 34.68
+},
+{
+"word": "to",
+"start": 34.68,
+"end": 34.82
+},
+{
+"word": "do",
+"start": 34.82,
+"end": 34.98
+},
+{
+"word": "it?",
+"start": 34.98,
+"end": 35.16
+},
+{
+"word": "The",
+"start": 35.6,
+"end": 35.74
+},
+{
+"word": "answer",
+"start": 35.74,
+"end": 35.96
+},
+{
+"word": "starts",
+"start": 35.96,
+"end": 36.26
+},
+{
+"word": "with",
+"start": 36.26,
+"end": 36.5
+},
+{
+"word": "a",
+"start": 36.5,
+"end": 36.6
+},
+{
+"word": "problem",
+"start": 36.6,
+"end": 36.92
+},
+{
+"word": "every",
+"start": 36.92,
+"end": 37.46
+},
+{
+"word": "cook",
+"start": 37.46,
+"end": 37.72
+},
+{
+"word": "in",
+"start": 37.72,
+"end": 37.88
+},
+{
+"word": "history",
+"start": 37.88,
+"end": 38.14
+},
+{
+"word": "has",
+"start": 38.14,
+"end": 38.4
+},
+{
+"word": "faced.",
+"start": 38.4,
+"end": 38.7
+},
+{
+"word": "And",
+"start": 39.14,
+"end": 39.34
+},
+{
+"word": "it",
+"start": 39.34,
+"end": 39.46
+},
+{
+"word": "ends",
+"start": 39.46,
+"end": 39.7
+},
+{
+"word": "somewhere",
+"start": 39.7,
+"end": 40.06
+},
+{
+"word": "you'd",
+"start": 40.06,
+"end": 40.38
+},
+{
+"word": "never",
+"start": 40.38,
+"end": 40.6
+},
+{
+"word": "expect.",
+"start": 40.6,
+"end": 41.12
+},
+{
+"word": "Inside",
+"start": 41.44,
+"end": 41.8
+},
+{
+"word": "your",
+"start": 41.8,
+"end": 42.2
+},
+{
+"word": "own",
+"start": 42.2,
+"end": 42.54
+},
+{
+"word": "mouth.",
+"start": 42.54,
+"end": 42.82
+},
+{
+"word": "For",
+"start": 43.3,
+"end": 43.46
+},
+{
+"word": "most",
+"start": 43.46,
+"end": 43.68
+},
+{
+"word": "of",
+"start": 43.68,
+"end": 43.82
+},
+{
+"word": "human",
+"start": 43.82,
+"end": 44.02
+},
+{
+"word": "history,",
+"start": 44.02,
+"end": 44.38
+},
+{
+"word": "the",
+"start": 44.7,
+"end": 44.88
+},
+{
+"word": "answer",
+"start": 44.88,
+"end": 45.24
+},
+{
+"word": "was",
+"start": 45.24,
+"end": 45.5
+},
+{
+"word": "simple.",
+"start": 45.5,
+"end": 45.84
+},
+{
+"word": "Your",
+"start": 46.44,
+"end": 46.58
+},
+{
+"word": "hands.",
+"start": 46.58,
+"end": 46.9
+},
+{
+"word": "Even",
+"start": 47.36,
+"end": 47.64
+},
+{
+"word": "in",
+"start": 47.64,
+"end": 47.84
+},
+{
+"word": "ancient",
+"start": 47.84,
+"end": 48.08
+},
+{
+"word": "Rome,",
+"start": 48.08,
+"end": 48.42
+},
+{
+"word": "a",
+"start": 48.8,
+"end": 48.94
+},
+{
+"word": "wealthy",
+"start": 48.94,
+"end": 49.18
+},
+{
+"word": "diner",
+"start": 49.18,
+"end": 49.6
+},
+{
+"word": "mostly",
+"start": 49.6,
+"end": 49.84
+},
+{
+"word": "ate",
+"start": 49.84,
+"end": 50.2
+},
+{
+"word": "with",
+"start": 50.2,
+"end": 50.34
+},
+{
+"word": "his",
+"start": 50.34,
+"end": 50.48
+},
+{
+"word": "fingers.",
+"start": 50.48,
+"end": 50.78
+},
+{
+"word": "There",
+"start": 51.34,
+"end": 51.5
+},
+{
+"word": "were",
+"start": 51.5,
+"end": 51.62
+},
+{
+"word": "spoons",
+"start": 51.62,
+"end": 51.92
+},
+{
+"word": "for",
+"start": 51.92,
+"end": 52.18
+},
+{
+"word": "soup",
+"start": 52.18,
+"end": 52.42
+},
+{
+"word": "and",
+"start": 52.42,
+"end": 52.58
+},
+{
+"word": "eggs.",
+"start": 52.58,
+"end": 52.82
+},
+{
+"word": "There",
+"start": 52.82,
+"end": 53.4
+},
+{
+"word": "were",
+"start": 53.4,
+"end": 53.58
+},
+{
+"word": "forks",
+"start": 53.58,
+"end": 53.98
+},
+{
+"word": "too.",
+"start": 53.98,
+"end": 54.2
+},
+{
+"word": "But",
+"start": 54.86,
+"end": 54.9
+},
+{
+"word": "they",
+"start": 54.9,
+"end": 55.08
+},
+{
+"word": "stayed",
+"start": 55.08,
+"end": 55.4
+},
+{
+"word": "in",
+"start": 55.4,
+"end": 55.64
+},
+{
+"word": "the",
+"start": 55.64,
+"end": 55.72
+},
+{
+"word": "kitchen",
+"start": 55.72,
+"end": 56.04
+},
+{
+"word": "for",
+"start": 56.04,
+"end": 56.52
+},
+{
+"word": "hauling",
+"start": 56.52,
+"end": 56.9
+},
+{
+"word": "meat",
+"start": 56.9,
+"end": 57.1
+},
+{
+"word": "out",
+"start": 57.1,
+"end": 57.36
+},
+{
+"word": "of",
+"start": 57.36,
+"end": 57.5
+},
+{
+"word": "a",
+"start": 57.5,
+"end": 57.6
+},
+{
+"word": "pot.",
+"start": 57.6,
+"end": 57.8
+},
+{
+"word": "But",
+"start": 58.56,
+"end": 58.6
+},
+{
+"word": "hands",
+"start": 58.6,
+"end": 58.92
+},
+{
+"word": "have",
+"start": 58.92,
+"end": 59.1
+},
+{
+"word": "a",
+"start": 59.1,
+"end": 59.22
+},
+{
+"word": "limit.",
+"start": 59.22,
+"end": 59.44
+},
+{
+"word": "A",
+"start": 60.0,
+"end": 60.08
+},
+{
+"word": "roasted",
+"start": 60.08,
+"end": 60.34
+},
+{
+"word": "leg",
+"start": 60.34,
+"end": 60.64
+},
+{
+"word": "of",
+"start": 60.64,
+"end": 60.78
+},
+{
+"word": "lamb",
+"start": 60.78,
+"end": 61.0
+},
+{
+"word": "doesn't",
+"start": 61.0,
+"end": 61.3
+},
+{
+"word": "arrive",
+"start": 61.3,
+"end": 61.6
+},
+{
+"word": "in",
+"start": 61.6,
+"end": 61.78
+},
+{
+"word": "bite",
+"start": 61.78,
+"end": 62.0
+},
+{
+"word": "-sized",
+"start": 62.0,
+"end": 62.18
+},
+{
+"word": "pieces.",
+"start": 62.18,
+"end": 62.62
+},
+{
+"word": "Somebody",
+"start": 63.04,
+"end": 63.36
+},
+{
+"word": "has",
+"start": 63.36,
+"end": 63.68
+},
+{
+"word": "to",
+"start": 63.68,
+"end": 63.84
+},
+{
+"word": "cut",
+"start": 63.84,
+"end": 64.06
+},
+{
+"word": "it.",
+"start": 64.06,
+"end": 64.26
+},
+{
+"word": "And",
+"start": 64.58,
+"end": 64.74
+},
+{
+"word": "that's",
+"start": 64.74,
+"end": 65.02
+},
+{
+"word": "where",
+"start": 65.02,
+"end": 65.12
+},
+{
+"word": "the",
+"start": 65.12,
+"end": 65.24
+},
+{
+"word": "world",
+"start": 65.24,
+"end": 65.48
+},
+{
+"word": "splits,",
+"start": 65.48,
+"end": 65.8
+},
+{
+"word": "because",
+"start": 66.22,
+"end": 66.4
+},
+{
+"word": "the",
+"start": 66.4,
+"end": 66.56
+},
+{
+"word": "real",
+"start": 66.56,
+"end": 66.78
+},
+{
+"word": "question",
+"start": 66.78,
+"end": 67.2
+},
+{
+"word": "isn't",
+"start": 67.2,
+"end": 67.7
+},
+{
+"word": "what",
+"start": 67.7,
+"end": 67.88
+},
+{
+"word": "you",
+"start": 67.88,
+"end": 68.1
+},
+{
+"word": "eat",
+"start": 68.1,
+"end": 68.32
+},
+{
+"word": "with.",
+"start": 68.32,
+"end": 68.58
+},
+{
+"word": "It's",
+"start": 69.04,
+"end": 69.26
+},
+{
+"word": "where",
+"start": 69.26,
+"end": 69.44
+},
+{
+"word": "the",
+"start": 69.44,
+"end": 69.6
+},
+{
+"word": "cutting",
+"start": 69.6,
+"end": 69.92
+},
+{
+"word": "happens.",
+"start": 69.92,
+"end": 70.4
+},
+{
+"word": "Let's",
+"start": 71.24,
+"end": 71.52
+},
+{
+"word": "start",
+"start": 71.52,
+"end": 71.72
+},
+{
+"word": "in",
+"start": 71.72,
+"end": 71.88
+},
+{
+"word": "China,",
+"start": 71.88,
+"end": 72.2
+},
+{
+"word": "where",
+"start": 72.48,
+"end": 72.72
+},
+{
+"word": "the",
+"start": 72.72,
+"end": 72.84
+},
+{
+"word": "answer",
+"start": 72.84,
+"end": 73.12
+},
+{
+"word": "was",
+"start": 73.12,
+"end": 73.46
+},
+{
+"word": "in",
+"start": 73.46,
+"end": 74.12
+},
+{
+"word": "the",
+"start": 74.12,
+"end": 74.26
+},
+{
+"word": "kitchen.",
+"start": 74.26,
+"end": 74.6
+},
+{
+"word": "Chinese",
+"start": 75.8,
+"end": 76.2
+},
+{
+"word": "cooks",
+"start": 76.2,
+"end": 76.54
+},
+{
+"word": "cut",
+"start": 76.54,
+"end": 76.84
+},
+{
+"word": "almost",
+"start": 76.84,
+"end": 77.18
+},
+{
+"word": "everything",
+"start": 77.18,
+"end": 77.58
+},
+{
+"word": "before",
+"start": 77.58,
+"end": 77.92
+},
+{
+"word": "it",
+"start": 77.92,
+"end": 78.14
+},
+{
+"word": "ever",
+"start": 78.14,
+"end": 78.44
+},
+{
+"word": "reached",
+"start": 78.44,
+"end": 78.74
+},
+{
+"word": "a",
+"start": 78.74,
+"end": 78.9
+},
+{
+"word": "diner.",
+"start": 78.9,
+"end": 79.28
+},
+{
+"word": "Thin",
+"start": 79.28,
+"end": 79.88
+},
+{
+"word": "strips",
+"start": 79.88,
+"end": 80.08
+},
+{
+"word": "of",
+"start": 80.08,
+"end": 80.34
+},
+{
+"word": "meat.",
+"start": 80.34,
+"end": 80.68
+},
+{
+"word": "Diced",
+"start": 81.18,
+"end": 81.4
+},
+{
+"word": "vegetables.",
+"start": 81.4,
+"end": 81.82
+},
+{
+"word": "All",
+"start": 82.42,
+"end": 82.6
+},
+{
+"word": "of",
+"start": 82.6,
+"end": 82.74
+},
+{
+"word": "it.",
+"start": 82.74,
+"end": 82.92
+},
+{
+"word": "Chopped",
+"start": 83.22,
+"end": 83.54
+},
+{
+"word": "with",
+"start": 83.54,
+"end": 83.66
+},
+{
+"word": "a",
+"start": 83.66,
+"end": 83.78
+},
+{
+"word": "single",
+"start": 83.78,
+"end": 84.02
+},
+{
+"word": "heavy",
+"start": 84.02,
+"end": 84.34
+},
+{
+"word": "cleaver.",
+"start": 84.34,
+"end": 84.76
+},
+{
+"word": "Why?",
+"start": 85.22,
+"end": 85.4
+},
+{
+"word": "One",
+"start": 85.84,
+"end": 86.08
+},
+{
+"word": "popular",
+"start": 86.08,
+"end": 86.4
+},
+{
+"word": "explanation",
+"start": 86.4,
+"end": 86.9
+},
+{
+"word": "is",
+"start": 86.9,
+"end": 87.2
+},
+{
+"word": "fuel.",
+"start": 87.2,
+"end": 87.42
+},
+{
+"word": "Firewood",
+"start": 87.98,
+"end": 88.34
+},
+{
+"word": "was",
+"start": 88.34,
+"end": 88.5
+},
+{
+"word": "precious",
+"start": 88.5,
+"end": 88.82
+},
+{
+"word": "and",
+"start": 88.82,
+"end": 89.28
+},
+{
+"word": "small",
+"start": 89.28,
+"end": 89.58
+},
+{
+"word": "pieces",
+"start": 89.58,
+"end": 89.88
+},
+{
+"word": "cook",
+"start": 89.88,
+"end": 90.14
+},
+{
+"word": "fast,",
+"start": 90.14,
+"end": 90.48
+},
+{
+"word": "but",
+"start": 90.8,
+"end": 91.02
+},
+{
+"word": "that",
+"start": 91.02,
+"end": 91.22
+},
+{
+"word": "changes",
+"start": 91.22,
+"end": 91.56
+},
+{
+"word": "the",
+"start": 91.56,
+"end": 91.78
+},
+{
+"word": "whole",
+"start": 91.78,
+"end": 92.04
+},
+{
+"word": "meal.",
+"start": 92.04,
+"end": 92.3
+},
+{
+"word": "If",
+"start": 92.7,
+"end": 92.82
+},
+{
+"word": "the",
+"start": 92.82,
+"end": 93.02
+},
+{
+"word": "food",
+"start": 93.02,
+"end": 93.22
+},
+{
+"word": "arrives",
+"start": 93.22,
+"end": 93.56
+},
+{
+"word": "already",
+"start": 93.56,
+"end": 93.86
+},
+{
+"word": "bite",
+"start": 93.86,
+"end": 94.22
+},
+{
+"word": "-sized,",
+"start": 94.22,
+"end": 94.5
+},
+{
+"word": "you",
+"start": 94.88,
+"end": 95.04
+},
+{
+"word": "don't",
+"start": 95.04,
+"end": 95.32
+},
+{
+"word": "need",
+"start": 95.32,
+"end": 95.58
+},
+{
+"word": "a",
+"start": 95.58,
+"end": 95.74
+},
+{
+"word": "knife",
+"start": 95.74,
+"end": 95.94
+},
+{
+"word": "at",
+"start": 95.94,
+"end": 96.08
+},
+{
+"word": "dinner",
+"start": 96.08,
+"end": 96.32
+},
+{
+"word": "at",
+"start": 96.32,
+"end": 96.5
+},
+{
+"word": "all.",
+"start": 96.5,
+"end": 96.78
+},
+{
+"word": "Bringing",
+"start": 97.32,
+"end": 97.54
+},
+{
+"word": "one",
+"start": 97.54,
+"end": 97.78
+},
+{
+"word": "out",
+"start": 97.78,
+"end": 97.96
+},
+{
+"word": "could",
+"start": 97.96,
+"end": 98.16
+},
+{
+"word": "seem",
+"start": 98.16,
+"end": 98.36
+},
+{
+"word": "a",
+"start": 98.36,
+"end": 98.5
+},
+{
+"word": "little",
+"start": 98.5,
+"end": 98.64
+},
+{
+"word": "rude,",
+"start": 98.64,
+"end": 99.04
+},
+{
+"word": "as",
+"start": 99.3,
+"end": 99.56
+},
+{
+"word": "if",
+"start": 99.56,
+"end": 99.68
+},
+{
+"word": "the",
+"start": 99.68,
+"end": 99.82
+},
+{
+"word": "cook",
+"start": 99.82,
+"end": 100.0
+},
+{
+"word": "hadn't",
+"start": 100.0,
+"end": 100.34
+},
+{
+"word": "finished",
+"start": 100.34,
+"end": 100.6
+},
+{
+"word": "the",
+"start": 100.6,
+"end": 100.82
+},
+{
+"word": "job.",
+"start": 100.82,
+"end": 101.12
+},
+{
+"word": "So",
+"start": 101.58,
+"end": 101.8
+},
+{
+"word": "what",
+"start": 101.8,
+"end": 102.36
+},
+{
+"word": "do",
+"start": 102.36,
+"end": 102.52
+},
+{
+"word": "you",
+"start": 102.52,
+"end": 102.6
+},
+{
+"word": "eat",
+"start": 102.6,
+"end": 102.74
+},
+{
+"word": "with",
+"start": 102.74,
+"end": 102.88
+},
+{
+"word": "instead?",
+"start": 102.88,
+"end": 103.26
+},
+{
+"word": "Surprisingly,",
+"start": 103.8,
+"end": 104.26
+},
+{
+"word": "for",
+"start": 104.68,
+"end": 104.86
+},
+{
+"word": "a",
+"start": 104.86,
+"end": 105.0
+},
+{
+"word": "long",
+"start": 105.0,
+"end": 105.14
+},
+{
+"word": "time,",
+"start": 105.14,
+"end": 105.46
+},
+{
+"word": "the",
+"start": 105.8,
+"end": 105.9
+},
+{
+"word": "answer",
+"start": 105.9,
+"end": 106.14
+},
+{
+"word": "was",
+"start": 106.14,
+"end": 106.34
+},
+{
+"word": "a",
+"start": 106.34,
+"end": 106.5
+},
+{
+"word": "spoon.",
+"start": 106.5,
+"end": 106.72
+},
+{
+"word": "Chopsticks",
+"start": 107.34,
+"end": 107.78
+},
+{
+"word": "are",
+"start": 107.78,
+"end": 107.96
+},
+{
+"word": "ancient.",
+"start": 107.96,
+"end": 108.34
+},
+{
+"word": "Archeologists",
+"start": 109.0,
+"end": 109.52
+},
+{
+"word": "have",
+"start": 109.52,
+"end": 109.8
+},
+{
+"word": "found",
+"start": 109.8,
+"end": 110.06
+},
+{
+"word": "bone",
+"start": 110.06,
+"end": 110.28
+},
+{
+"word": "sticks",
+"start": 110.28,
+"end": 110.5
+},
+{
+"word": "in",
+"start": 110.5,
+"end": 110.7
+},
+{
+"word": "China",
+"start": 110.7,
+"end": 110.98
+},
+{
+"word": "that",
+"start": 110.98,
+"end": 111.4
+},
+{
+"word": "are",
+"start": 111.4,
+"end": 111.52
+},
+{
+"word": "thousands",
+"start": 111.52,
+"end": 111.94
+},
+{
+"word": "of",
+"start": 111.94,
+"end": 112.18
+},
+{
+"word": "years",
+"start": 112.18,
+"end": 112.34
+},
+{
+"word": "old,",
+"start": 112.34,
+"end": 112.76
+},
+{
+"word": "though",
+"start": 113.1,
+"end": 113.28
+},
+{
+"word": "nobody",
+"start": 113.28,
+"end": 113.58
+},
+{
+"word": "can",
+"start": 113.58,
+"end": 113.76
+},
+{
+"word": "be",
+"start": 113.76,
+"end": 113.88
+},
+{
+"word": "sure",
+"start": 113.88,
+"end": 114.1
+},
+{
+"word": "what",
+"start": 114.1,
+"end": 114.4
+},
+{
+"word": "they",
+"start": 114.4,
+"end": 114.62
+},
+{
+"word": "were",
+"start": 114.62,
+"end": 114.74
+},
+{
+"word": "used",
+"start": 114.74,
+"end": 114.98
+},
+{
+"word": "for.",
+"start": 114.98,
+"end": 115.28
+},
+{
+"word": "And",
+"start": 115.76,
+"end": 115.88
+},
+{
+"word": "for",
+"start": 115.88,
+"end": 116.02
+},
+{
+"word": "a",
+"start": 116.02,
+"end": 116.14
+},
+{
+"word": "long",
+"start": 116.14,
+"end": 116.26
+},
+{
+"word": "time,",
+"start": 116.26,
+"end": 116.66
+},
+{
+"word": "chopsticks",
+"start": 117.06,
+"end": 117.32
+},
+{
+"word": "were",
+"start": 117.32,
+"end": 117.76
+},
+{
+"word": "the",
+"start": 117.76,
+"end": 117.88
+},
+{
+"word": "helpers.",
+"start": 117.88,
+"end": 118.38
+},
+{
+"word": "They",
+"start": 118.8,
+"end": 118.92
+},
+{
+"word": "fished",
+"start": 118.92,
+"end": 119.3
+},
+{
+"word": "vegetables",
+"start": 119.3,
+"end": 119.76
+},
+{
+"word": "out",
+"start": 119.76,
+"end": 120.02
+},
+{
+"word": "of",
+"start": 120.02,
+"end": 120.12
+},
+{
+"word": "soup",
+"start": 120.12,
+"end": 120.4
+},
+{
+"word": "and",
+"start": 120.4,
+"end": 120.84
+},
+{
+"word": "turned",
+"start": 120.84,
+"end": 121.08
+},
+{
+"word": "food",
+"start": 121.08,
+"end": 121.34
+},
+{
+"word": "over",
+"start": 121.34,
+"end": 121.58
+},
+{
+"word": "the",
+"start": 121.58,
+"end": 121.74
+},
+{
+"word": "fire.",
+"start": 121.74,
+"end": 122.02
+},
+{
+"word": "The",
+"start": 122.54,
+"end": 122.64
+},
+{
+"word": "grain",
+"start": 122.64,
+"end": 122.94
+},
+{
+"word": "itself,",
+"start": 122.94,
+"end": 123.32
+},
+{
+"word": "a",
+"start": 123.66,
+"end": 123.76
+},
+{
+"word": "millet",
+"start": 123.76,
+"end": 123.94
+},
+{
+"word": "porridge,",
+"start": 123.94,
+"end": 124.28
+},
+{
+"word": "was",
+"start": 124.72,
+"end": 124.88
+},
+{
+"word": "eaten",
+"start": 124.88,
+"end": 125.16
+},
+{
+"word": "with",
+"start": 125.16,
+"end": 125.38
+},
+{
+"word": "a",
+"start": 125.38,
+"end": 125.5
+},
+{
+"word": "spoon.",
+"start": 125.5,
+"end": 125.74
+},
+{
+"word": "Then,",
+"start": 126.26,
+"end": 126.62
+},
+{
+"word": "slowly,",
+"start": 126.8,
+"end": 127.24
+},
+{
+"word": "the",
+"start": 127.64,
+"end": 127.68
+},
+{
+"word": "menu",
+"start": 127.68,
+"end": 127.94
+},
+{
+"word": "changed.",
+"start": 127.94,
+"end": 128.42
+},
+{
+"word": "Wheat",
+"start": 128.92,
+"end": 129.24
+},
+{
+"word": "became",
+"start": 129.24,
+"end": 129.58
+},
+{
+"word": "more",
+"start": 129.58,
+"end": 129.84
+},
+{
+"word": "important,",
+"start": 129.84,
+"end": 130.28
+},
+{
+"word": "and",
+"start": 130.62,
+"end": 130.82
+},
+{
+"word": "with",
+"start": 130.82,
+"end": 130.96
+},
+{
+"word": "it",
+"start": 130.96,
+"end": 131.12
+},
+{
+"word": "came",
+"start": 131.12,
+"end": 131.3
+},
+{
+"word": "noodles",
+"start": 131.3,
+"end": 131.62
+},
+{
+"word": "and",
+"start": 131.62,
+"end": 131.96
+},
+{
+"word": "dumplings.",
+"start": 131.96,
+"end": 132.24
+},
+{
+"word": "Try",
+"start": 132.98,
+"end": 133.22
+},
+{
+"word": "lifting",
+"start": 133.22,
+"end": 133.44
+},
+{
+"word": "a",
+"start": 133.44,
+"end": 133.66
+},
+{
+"word": "noodle",
+"start": 133.66,
+"end": 133.82
+},
+{
+"word": "with",
+"start": 133.82,
+"end": 134.04
+},
+{
+"word": "a",
+"start": 134.04,
+"end": 134.12
+},
+{
+"word": "spoon.",
+"start": 134.12,
+"end": 134.34
+},
+{
+"word": "Gradually,",
+"start": 134.88,
+"end": 135.38
+},
+{
+"word": "chopsticks",
+"start": 135.74,
+"end": 136.0
+},
+{
+"word": "moved",
+"start": 136.0,
+"end": 136.4
+},
+{
+"word": "to",
+"start": 136.4,
+"end": 136.62
+},
+{
+"word": "the",
+"start": 136.62,
+"end": 136.74
+},
+{
+"word": "center",
+"start": 136.74,
+"end": 136.98
+},
+{
+"word": "of",
+"start": 136.98,
+"end": 137.16
+},
+{
+"word": "the",
+"start": 137.16,
+"end": 137.28
+},
+{
+"word": "meal.",
+"start": 137.28,
+"end": 137.58
+},
+{
+"word": "From",
+"start": 137.58,
+"end": 138.12
+},
+{
+"word": "China,",
+"start": 138.12,
+"end": 138.44
+},
+{
+"word": "they",
+"start": 138.72,
+"end": 138.82
+},
+{
+"word": "traveled",
+"start": 138.82,
+"end": 139.12
+},
+{
+"word": "to",
+"start": 139.12,
+"end": 139.3
+},
+{
+"word": "Korea,",
+"start": 139.3,
+"end": 139.6
+},
+{
+"word": "Japan,",
+"start": 139.94,
+"end": 140.3
+},
+{
+"word": "and",
+"start": 140.46,
+"end": 140.6
+},
+{
+"word": "Vietnam.",
+"start": 140.6,
+"end": 140.92
+},
+{
+"word": "And",
+"start": 141.66,
+"end": 141.78
+},
+{
+"word": "each",
+"start": 141.78,
+"end": 141.98
+},
+{
+"word": "place",
+"start": 141.98,
+"end": 142.3
+},
+{
+"word": "made",
+"start": 142.3,
+"end": 142.64
+},
+{
+"word": "them",
+"start": 142.64,
+"end": 142.9
+},
+{
+"word": "its",
+"start": 142.9,
+"end": 143.06
+},
+{
+"word": "own.",
+"start": 143.06,
+"end": 143.36
+},
+{
+"word": "In",
+"start": 143.78,
+"end": 143.92
+},
+{
+"word": "Korea,",
+"start": 143.92,
+"end": 144.26
+},
+{
+"word": "they're",
+"start": 144.7,
+"end": 144.88
+},
+{
+"word": "often",
+"start": 144.88,
+"end": 145.22
+},
+{
+"word": "metal,",
+"start": 145.22,
+"end": 145.6
+},
+{
+"word": "and",
+"start": 146.04,
+"end": 146.28
+},
+{
+"word": "they",
+"start": 146.28,
+"end": 146.4
+},
+{
+"word": "still",
+"start": 146.4,
+"end": 146.64
+},
+{
+"word": "come",
+"start": 146.64,
+"end": 146.86
+},
+{
+"word": "with",
+"start": 146.86,
+"end": 147.02
+},
+{
+"word": "a",
+"start": 147.02,
+"end": 147.14
+},
+{
+"word": "spoon.",
+"start": 147.14,
+"end": 147.36
+},
+{
+"word": "Legend",
+"start": 148.0,
+"end": 148.28
+},
+{
+"word": "says",
+"start": 148.28,
+"end": 148.64
+},
+{
+"word": "royalty",
+"start": 148.64,
+"end": 149.0
+},
+{
+"word": "ate",
+"start": 149.0,
+"end": 149.4
+},
+{
+"word": "with",
+"start": 149.4,
+"end": 149.64
+},
+{
+"word": "silver",
+"start": 149.64,
+"end": 149.92
+},
+{
+"word": "chopsticks,",
+"start": 149.92,
+"end": 150.34
+},
+{
+"word": "because",
+"start": 150.78,
+"end": 150.98
+},
+{
+"word": "silver",
+"start": 150.98,
+"end": 151.32
+},
+{
+"word": "would",
+"start": 151.32,
+"end": 151.56
+},
+{
+"word": "turn",
+"start": 151.56,
+"end": 151.76
+},
+{
+"word": "black",
+"start": 151.76,
+"end": 152.06
+},
+{
+"word": "near",
+"start": 152.06,
+"end": 152.34
+},
+{
+"word": "poison.",
+"start": 152.34,
+"end": 152.72
+},
+{
+"word": "Silver",
+"start": 153.22,
+"end": 153.52
+},
+{
+"word": "really",
+"start": 153.52,
+"end": 153.84
+},
+{
+"word": "can",
+"start": 153.84,
+"end": 154.04
+},
+{
+"word": "darken",
+"start": 154.04,
+"end": 154.42
+},
+{
+"word": "when",
+"start": 154.42,
+"end": 154.54
+},
+{
+"word": "it",
+"start": 154.54,
+"end": 154.66
+},
+{
+"word": "meets",
+"start": 154.66,
+"end": 154.84
+},
+{
+"word": "certain",
+"start": 154.84,
+"end": 155.3
+},
+{
+"word": "sulfur",
+"start": 155.3,
+"end": 155.56
+},
+{
+"word": "compounds.",
+"start": 155.56,
+"end": 156.06
+},
+{
+"word": "But",
+"start": 156.58,
+"end": 156.8
+},
+{
+"word": "that",
+"start": 156.8,
+"end": 156.96
+},
+{
+"word": "doesn't",
+"start": 156.96,
+"end": 157.28
+},
+{
+"word": "make",
+"start": 157.28,
+"end": 157.5
+},
+{
+"word": "it",
+"start": 157.5,
+"end": 157.62
+},
+{
+"word": "a",
+"start": 157.62,
+"end": 157.72
+},
+{
+"word": "reliable",
+"start": 157.72,
+"end": 158.16
+},
+{
+"word": "poison",
+"start": 158.16,
+"end": 158.64
+},
+{
+"word": "detector.",
+"start": 158.64,
+"end": 159.12
+},
+{
+"word": "And",
+"start": 159.7,
+"end": 160.0
+},
+{
+"word": "at",
+"start": 160.0,
+"end": 160.18
+},
+{
+"word": "the",
+"start": 160.18,
+"end": 160.3
+},
+{
+"word": "royal",
+"start": 160.3,
+"end": 160.5
+},
+{
+"word": "table,",
+"start": 160.5,
+"end": 160.88
+},
+{
+"word": "silver",
+"start": 161.28,
+"end": 161.52
+},
+{
+"word": "was",
+"start": 161.52,
+"end": 161.76
+},
+{
+"word": "also",
+"start": 161.76,
+"end": 162.14
+},
+{
+"word": "a",
+"start": 162.14,
+"end": 162.3
+},
+{
+"word": "display",
+"start": 162.3,
+"end": 162.56
+},
+{
+"word": "of",
+"start": 162.56,
+"end": 162.76
+},
+{
+"word": "status.",
+"start": 162.76,
+"end": 163.04
+},
+{
+"word": "In",
+"start": 163.52,
+"end": 163.66
+},
+{
+"word": "Japan,",
+"start": 163.66,
+"end": 163.92
+},
+{
+"word": "chopsticks",
+"start": 164.32,
+"end": 164.6
+},
+{
+"word": "come",
+"start": 164.6,
+"end": 165.02
+},
+{
+"word": "with",
+"start": 165.02,
+"end": 165.24
+},
+{
+"word": "rules.",
+"start": 165.24,
+"end": 165.62
+},
+{
+"word": "Never",
+"start": 165.62,
+"end": 166.42
+},
+{
+"word": "stand",
+"start": 166.42,
+"end": 166.66
+},
+{
+"word": "them",
+"start": 166.66,
+"end": 166.88
+},
+{
+"word": "upright",
+"start": 166.88,
+"end": 167.12
+},
+{
+"word": "in",
+"start": 167.12,
+"end": 167.34
+},
+{
+"word": "a",
+"start": 167.34,
+"end": 167.48
+},
+{
+"word": "bowl",
+"start": 167.48,
+"end": 167.62
+},
+{
+"word": "of",
+"start": 167.62,
+"end": 167.78
+},
+{
+"word": "rice.",
+"start": 167.78,
+"end": 168.04
+},
+{
+"word": "That's",
+"start": 168.76,
+"end": 169.02
+},
+{
+"word": "how",
+"start": 169.02,
+"end": 169.12
+},
+{
+"word": "rice",
+"start": 169.12,
+"end": 169.42
+},
+{
+"word": "is",
+"start": 169.42,
+"end": 169.56
+},
+{
+"word": "offered",
+"start": 169.56,
+"end": 169.8
+},
+{
+"word": "to",
+"start": 169.8,
+"end": 169.98
+},
+{
+"word": "the",
+"start": 169.98,
+"end": 170.1
+},
+{
+"word": "dead.",
+"start": 170.1,
+"end": 170.36
+},
+{
+"word": "And",
+"start": 170.9,
+"end": 171.06
+},
+{
+"word": "never",
+"start": 171.06,
+"end": 171.3
+},
+{
+"word": "pass",
+"start": 171.3,
+"end": 171.58
+},
+{
+"word": "food",
+"start": 171.58,
+"end": 171.84
+},
+{
+"word": "from",
+"start": 171.84,
+"end": 172.04
+},
+{
+"word": "one",
+"start": 172.04,
+"end": 172.24
+},
+{
+"word": "pair",
+"start": 172.24,
+"end": 172.46
+},
+{
+"word": "of",
+"start": 172.46,
+"end": 172.58
+},
+{
+"word": "chopsticks",
+"start": 172.58,
+"end": 172.86
+},
+{
+"word": "to",
+"start": 172.86,
+"end": 173.14
+},
+{
+"word": "another.",
+"start": 173.14,
+"end": 173.4
+},
+{
+"word": "At",
+"start": 173.92,
+"end": 174.04
+},
+{
+"word": "Japanese",
+"start": 174.04,
+"end": 174.38
+},
+{
+"word": "funerals,",
+"start": 174.38,
+"end": 174.96
+},
+{
+"word": "that's",
+"start": 175.24,
+"end": 175.54
+},
+{
+"word": "how",
+"start": 175.54,
+"end": 175.64
+},
+{
+"word": "family",
+"start": 175.64,
+"end": 175.98
+},
+{
+"word": "members",
+"start": 175.98,
+"end": 176.3
+},
+{
+"word": "pass",
+"start": 176.3,
+"end": 176.6
+},
+{
+"word": "the",
+"start": 176.6,
+"end": 176.8
+},
+{
+"word": "bones",
+"start": 176.8,
+"end": 177.08
+},
+{
+"word": "after",
+"start": 177.08,
+"end": 177.48
+},
+{
+"word": "a",
+"start": 177.48,
+"end": 177.66
+},
+{
+"word": "cremation.",
+"start": 177.66,
+"end": 178.0
+},
+{
+"word": "So",
+"start": 178.46,
+"end": 178.7
+},
+{
+"word": "in",
+"start": 178.7,
+"end": 178.86
+},
+{
+"word": "East",
+"start": 178.86,
+"end": 179.02
+},
+{
+"word": "Asia,",
+"start": 179.02,
+"end": 179.32
+},
+{
+"word": "the",
+"start": 179.68,
+"end": 179.74
+},
+{
+"word": "cutting",
+"start": 179.74,
+"end": 180.0
+},
+{
+"word": "moved",
+"start": 180.0,
+"end": 180.32
+},
+{
+"word": "into",
+"start": 180.32,
+"end": 180.62
+},
+{
+"word": "the",
+"start": 180.62,
+"end": 180.76
+},
+{
+"word": "kitchen.",
+"start": 180.76,
+"end": 181.0
+},
+{
+"word": "In",
+"start": 181.58,
+"end": 181.76
+},
+{
+"word": "Europe,",
+"start": 181.76,
+"end": 182.04
+},
+{
+"word": "it",
+"start": 182.44,
+"end": 182.54
+},
+{
+"word": "stayed",
+"start": 182.54,
+"end": 182.8
+},
+{
+"word": "right",
+"start": 182.8,
+"end": 183.1
+},
+{
+"word": "there",
+"start": 183.1,
+"end": 183.36
+},
+{
+"word": "at",
+"start": 183.36,
+"end": 183.5
+},
+{
+"word": "the",
+"start": 183.5,
+"end": 183.58
+},
+{
+"word": "table.",
+"start": 183.58,
+"end": 183.86
+},
+{
+"word": "European",
+"start": 184.98,
+"end": 185.32
+},
+{
+"word": "meat",
+"start": 185.32,
+"end": 185.7
+},
+{
+"word": "was",
+"start": 185.7,
+"end": 185.88
+},
+{
+"word": "often",
+"start": 185.88,
+"end": 186.24
+},
+{
+"word": "roasted",
+"start": 186.24,
+"end": 186.56
+},
+{
+"word": "in",
+"start": 186.56,
+"end": 186.8
+},
+{
+"word": "large",
+"start": 186.8,
+"end": 187.04
+},
+{
+"word": "pieces.",
+"start": 187.04,
+"end": 187.46
+},
+{
+"word": "And",
+"start": 187.92,
+"end": 188.12
+},
+{
+"word": "at",
+"start": 188.12,
+"end": 188.22
+},
+{
+"word": "a",
+"start": 188.22,
+"end": 188.36
+},
+{
+"word": "feast,",
+"start": 188.36,
+"end": 188.58
+},
+{
+"word": "the",
+"start": 188.92,
+"end": 188.98
+},
+{
+"word": "carving",
+"start": 188.98,
+"end": 189.26
+},
+{
+"word": "happened",
+"start": 189.26,
+"end": 189.64
+},
+{
+"word": "in",
+"start": 189.64,
+"end": 189.86
+},
+{
+"word": "front",
+"start": 189.86,
+"end": 190.06
+},
+{
+"word": "of",
+"start": 190.06,
+"end": 190.2
+},
+{
+"word": "the",
+"start": 190.2,
+"end": 190.34
+},
+{
+"word": "diners.",
+"start": 190.34,
+"end": 190.74
+},
+{
+"word": "So",
+"start": 191.18,
+"end": 191.38
+},
+{
+"word": "diners",
+"start": 191.38,
+"end": 191.72
+},
+{
+"word": "needed",
+"start": 191.72,
+"end": 191.94
+},
+{
+"word": "a",
+"start": 191.94,
+"end": 192.14
+},
+{
+"word": "blade.",
+"start": 192.14,
+"end": 192.32
+},
+{
+"word": "But",
+"start": 192.32,
+"end": 192.86
+},
+{
+"word": "in",
+"start": 192.86,
+"end": 193.0
+},
+{
+"word": "the",
+"start": 193.0,
+"end": 193.1
+},
+{
+"word": "Middle",
+"start": 193.1,
+"end": 193.28
+},
+{
+"word": "Ages,",
+"start": 193.28,
+"end": 193.6
+},
+{
+"word": "your",
+"start": 193.96,
+"end": 194.06
+},
+{
+"word": "host",
+"start": 194.06,
+"end": 194.32
+},
+{
+"word": "usually",
+"start": 194.32,
+"end": 194.8
+},
+{
+"word": "didn't",
+"start": 194.8,
+"end": 195.12
+},
+{
+"word": "give",
+"start": 195.12,
+"end": 195.3
+},
+{
+"word": "you",
+"start": 195.3,
+"end": 195.46
+},
+{
+"word": "one.",
+"start": 195.46,
+"end": 195.68
+},
+{
+"word": "You",
+"start": 196.34,
+"end": 196.36
+},
+{
+"word": "brought",
+"start": 196.36,
+"end": 196.54
+},
+{
+"word": "your",
+"start": 196.54,
+"end": 196.76
+},
+{
+"word": "own.",
+"start": 196.76,
+"end": 197.02
+},
+{
+"word": "Many",
+"start": 197.52,
+"end": 197.66
+},
+{
+"word": "diners",
+"start": 197.66,
+"end": 198.1
+},
+{
+"word": "carried",
+"start": 198.1,
+"end": 198.38
+},
+{
+"word": "a",
+"start": 198.38,
+"end": 198.52
+},
+{
+"word": "knife",
+"start": 198.52,
+"end": 198.78
+},
+{
+"word": "on",
+"start": 198.78,
+"end": 198.94
+},
+{
+"word": "their",
+"start": 198.94,
+"end": 199.06
+},
+{
+"word": "belt",
+"start": 199.06,
+"end": 199.36
+},
+{
+"word": "for",
+"start": 199.36,
+"end": 199.66
+},
+{
+"word": "cutting",
+"start": 199.66,
+"end": 199.94
+},
+{
+"word": "dinner.",
+"start": 199.94,
+"end": 200.24
+},
+{
+"word": "And,",
+"start": 200.8,
+"end": 200.92
+},
+{
+"word": "if",
+"start": 201.18,
+"end": 201.26
+},
+{
+"word": "necessary,",
+"start": 201.26,
+"end": 201.64
+},
+{
+"word": "for",
+"start": 202.02,
+"end": 202.1
+},
+{
+"word": "fighting.",
+"start": 202.1,
+"end": 202.4
+},
+{
+"word": "Picture",
+"start": 203.3,
+"end": 203.5
+},
+{
+"word": "it.",
+"start": 203.5,
+"end": 203.8
+},
+{
+"word": "A",
+"start": 204.2,
+"end": 204.28
+},
+{
+"word": "long",
+"start": 204.28,
+"end": 204.5
+},
+{
+"word": "table,",
+"start": 204.5,
+"end": 204.86
+},
+{
+"word": "a",
+"start": 205.32,
+"end": 205.46
+},
+{
+"word": "roast",
+"start": 205.46,
+"end": 205.7
+},
+{
+"word": "in",
+"start": 205.7,
+"end": 205.94
+},
+{
+"word": "the",
+"start": 205.94,
+"end": 206.02
+},
+{
+"word": "middle,",
+"start": 206.02,
+"end": 206.3
+},
+{
+"word": "and",
+"start": 206.64,
+"end": 206.86
+},
+{
+"word": "guests",
+"start": 206.86,
+"end": 207.12
+},
+{
+"word": "with",
+"start": 207.12,
+"end": 207.4
+},
+{
+"word": "blades",
+"start": 207.4,
+"end": 207.72
+},
+{
+"word": "on",
+"start": 207.72,
+"end": 207.92
+},
+{
+"word": "their",
+"start": 207.92,
+"end": 208.08
+},
+{
+"word": "belts.",
+"start": 208.08,
+"end": 208.38
+},
+{
+"word": "Now",
+"start": 209.18,
+"end": 209.38
+},
+{
+"word": "picture",
+"start": 209.38,
+"end": 209.68
+},
+{
+"word": "Venice",
+"start": 209.68,
+"end": 210.1
+},
+{
+"word": "around",
+"start": 210.1,
+"end": 210.78
+},
+{
+"word": "a",
+"start": 210.78,
+"end": 211.08
+},
+{
+"word": "thousand",
+"start": 211.08,
+"end": 211.4
+},
+{
+"word": "years",
+"start": 211.4,
+"end": 211.74
+},
+{
+"word": "ago.",
+"start": 211.74,
+"end": 212.1
+},
+{
+"word": "Into",
+"start": 212.58,
+"end": 212.8
+},
+{
+"word": "the",
+"start": 212.8,
+"end": 213.06
+},
+{
+"word": "family",
+"start": 213.06,
+"end": 213.32
+},
+{
+"word": "of",
+"start": 213.32,
+"end": 213.56
+},
+{
+"word": "its",
+"start": 213.56,
+"end": 213.7
+},
+{
+"word": "ruler,",
+"start": 213.7,
+"end": 213.96
+},
+{
+"word": "the",
+"start": 214.44,
+"end": 214.52
+},
+{
+"word": "doge,",
+"start": 214.52,
+"end": 214.98
+},
+{
+"word": "comes",
+"start": 215.18,
+"end": 215.42
+},
+{
+"word": "a",
+"start": 215.42,
+"end": 215.6
+},
+{
+"word": "Byzantine",
+"start": 215.6,
+"end": 216.02
+},
+{
+"word": "noblewoman.",
+"start": 216.02,
+"end": 216.76
+},
+{
+"word": "In",
+"start": 217.06,
+"end": 217.2
+},
+{
+"word": "Constantinople,",
+"start": 217.2,
+"end": 217.94
+},
+{
+"word": "wealthy",
+"start": 218.32,
+"end": 218.54
+},
+{
+"word": "people",
+"start": 218.54,
+"end": 218.82
+},
+{
+"word": "already",
+"start": 218.82,
+"end": 219.12
+},
+{
+"word": "ate",
+"start": 219.12,
+"end": 219.38
+},
+{
+"word": "with",
+"start": 219.38,
+"end": 219.6
+},
+{
+"word": "forks.",
+"start": 219.6,
+"end": 219.98
+},
+{
+"word": "So",
+"start": 219.98,
+"end": 220.54
+},
+{
+"word": "at",
+"start": 220.54,
+"end": 220.76
+},
+{
+"word": "dinner,",
+"start": 220.76,
+"end": 221.0
+},
+{
+"word": "she",
+"start": 221.32,
+"end": 221.52
+},
+{
+"word": "has",
+"start": 221.52,
+"end": 221.72
+},
+{
+"word": "her",
+"start": 221.72,
+"end": 221.86
+},
+{
+"word": "servants",
+"start": 221.86,
+"end": 222.2
+},
+{
+"word": "cut",
+"start": 222.2,
+"end": 222.46
+},
+{
+"word": "her",
+"start": 222.46,
+"end": 222.6
+},
+{
+"word": "food",
+"start": 222.6,
+"end": 222.88
+},
+{
+"word": "into",
+"start": 222.88,
+"end": 223.14
+},
+{
+"word": "little",
+"start": 223.14,
+"end": 223.4
+},
+{
+"word": "pieces.",
+"start": 223.4,
+"end": 223.78
+},
+{
+"word": "And",
+"start": 224.3,
+"end": 224.68
+},
+{
+"word": "she",
+"start": 224.68,
+"end": 224.86
+},
+{
+"word": "lifts",
+"start": 224.86,
+"end": 225.06
+},
+{
+"word": "them",
+"start": 225.06,
+"end": 225.32
+},
+{
+"word": "to",
+"start": 225.32,
+"end": 225.44
+},
+{
+"word": "her",
+"start": 225.44,
+"end": 225.6
+},
+{
+"word": "mouth",
+"start": 225.6,
+"end": 225.86
+},
+{
+"word": "with",
+"start": 225.86,
+"end": 226.04
+},
+{
+"word": "a",
+"start": 226.04,
+"end": 226.18
+},
+{
+"word": "golden",
+"start": 226.18,
+"end": 226.42
+},
+{
+"word": "instrument",
+"start": 226.42,
+"end": 226.94
+},
+{
+"word": "with",
+"start": 226.94,
+"end": 227.22
+},
+{
+"word": "two",
+"start": 227.22,
+"end": 227.5
+},
+{
+"word": "prongs.",
+"start": 227.5,
+"end": 227.96
+},
+{
+"word": "Decades",
+"start": 228.74,
+"end": 229.2
+},
+{
+"word": "later,",
+"start": 229.2,
+"end": 229.5
+},
+{
+"word": "a",
+"start": 230.06,
+"end": 230.26
+},
+{
+"word": "churchman",
+"start": 230.26,
+"end": 230.62
+},
+{
+"word": "named",
+"start": 230.62,
+"end": 230.8
+},
+{
+"word": "Peter",
+"start": 230.8,
+"end": 231.12
+},
+{
+"word": "Damien",
+"start": 231.12,
+"end": 231.48
+},
+{
+"word": "wrote",
+"start": 231.48,
+"end": 231.68
+},
+{
+"word": "about",
+"start": 231.68,
+"end": 231.92
+},
+{
+"word": "her,",
+"start": 231.92,
+"end": 232.2
+},
+{
+"word": "holding",
+"start": 232.82,
+"end": 233.02
+},
+{
+"word": "up",
+"start": 233.02,
+"end": 233.22
+},
+{
+"word": "her",
+"start": 233.22,
+"end": 233.3
+},
+{
+"word": "habits",
+"start": 233.3,
+"end": 233.6
+},
+{
+"word": "as",
+"start": 233.6,
+"end": 233.74
+},
+{
+"word": "a",
+"start": 233.74,
+"end": 233.84
+},
+{
+"word": "warning",
+"start": 233.84,
+"end": 234.06
+},
+{
+"word": "against",
+"start": 234.06,
+"end": 234.4
+},
+{
+"word": "sinful",
+"start": 234.4,
+"end": 234.92
+},
+{
+"word": "luxury.",
+"start": 234.92,
+"end": 235.38
+},
+{
+"word": "A",
+"start": 236.26,
+"end": 236.4
+},
+{
+"word": "fork,",
+"start": 236.4,
+"end": 236.62
+},
+{
+"word": "as",
+"start": 236.94,
+"end": 237.12
+},
+{
+"word": "a",
+"start": 237.12,
+"end": 237.2
+},
+{
+"word": "warning,",
+"start": 237.2,
+"end": 237.48
+},
+{
+"word": "and",
+"start": 237.84,
+"end": 237.9
+},
+{
+"word": "for",
+"start": 237.9,
+"end": 238.06
+},
+{
+"word": "centuries,",
+"start": 238.06,
+"end": 238.44
+},
+{
+"word": "most",
+"start": 238.92,
+"end": 239.16
+},
+{
+"word": "of",
+"start": 239.16,
+"end": 239.36
+},
+{
+"word": "Europe",
+"start": 239.36,
+"end": 239.56
+},
+{
+"word": "kept",
+"start": 239.56,
+"end": 239.82
+},
+{
+"word": "eating",
+"start": 239.82,
+"end": 240.2
+},
+{
+"word": "with",
+"start": 240.2,
+"end": 240.44
+},
+{
+"word": "its",
+"start": 240.44,
+"end": 240.58
+},
+{
+"word": "fingers.",
+"start": 240.58,
+"end": 240.96
+},
+{
+"word": "Except",
+"start": 241.74,
+"end": 242.3
+},
+{
+"word": "Italy.",
+"start": 242.3,
+"end": 242.76
+},
+{
+"word": "By",
+"start": 243.1,
+"end": 243.26
+},
+{
+"word": "the",
+"start": 243.26,
+"end": 243.4
+},
+{
+"word": "14th",
+"start": 243.4,
+"end": 243.88
+},
+{
+"word": "century,",
+"start": 243.88,
+"end": 244.16
+},
+{
+"word": "forks",
+"start": 244.6,
+"end": 244.88
+},
+{
+"word": "were",
+"start": 244.88,
+"end": 245.0
+},
+{
+"word": "becoming",
+"start": 245.0,
+"end": 245.3
+},
+{
+"word": "common",
+"start": 245.3,
+"end": 245.66
+},
+{
+"word": "at",
+"start": 245.66,
+"end": 245.88
+},
+{
+"word": "wealthier",
+"start": 245.88,
+"end": 246.34
+},
+{
+"word": "Italian",
+"start": 246.34,
+"end": 246.7
+},
+{
+"word": "tables.",
+"start": 246.7,
+"end": 247.16
+},
+{
+"word": "And",
+"start": 247.16,
+"end": 247.78
+},
+{
+"word": "one",
+"start": 247.78,
+"end": 248.14
+},
+{
+"word": "popular",
+"start": 248.14,
+"end": 248.62
+},
+{
+"word": "explanation",
+"start": 248.62,
+"end": 249.24
+},
+{
+"word": "will",
+"start": 249.24,
+"end": 249.66
+},
+{
+"word": "sound",
+"start": 249.66,
+"end": 250.06
+},
+{
+"word": "familiar.",
+"start": 250.06,
+"end": 250.6
+},
+{
+"word": "Pasta!",
+"start": 251.68,
+"end": 252.02
+},
+{
+"word": "Try",
+"start": 252.74,
+"end": 253.16
+},
+{
+"word": "eating",
+"start": 253.16,
+"end": 253.5
+},
+{
+"word": "long",
+"start": 253.5,
+"end": 253.86
+},
+{
+"word": "noodles",
+"start": 253.86,
+"end": 254.2
+},
+{
+"word": "with",
+"start": 254.2,
+"end": 254.46
+},
+{
+"word": "a",
+"start": 254.46,
+"end": 254.58
+},
+{
+"word": "knife.",
+"start": 254.58,
+"end": 254.78
+},
+{
+"word": "By",
+"start": 255.6,
+"end": 255.84
+},
+{
+"word": "the",
+"start": 255.84,
+"end": 255.94
+},
+{
+"word": "1500s,",
+"start": 255.94,
+"end": 256.92
+},
+{
+"word": "France's",
+"start": 256.96,
+"end": 257.48
+},
+{
+"word": "elite",
+"start": 257.48,
+"end": 257.7
+},
+{
+"word": "were",
+"start": 257.7,
+"end": 257.9
+},
+{
+"word": "starting",
+"start": 257.9,
+"end": 258.24
+},
+{
+"word": "to",
+"start": 258.24,
+"end": 258.46
+},
+{
+"word": "adopt",
+"start": 258.46,
+"end": 258.74
+},
+{
+"word": "the",
+"start": 258.74,
+"end": 258.9
+},
+{
+"word": "fork",
+"start": 258.9,
+"end": 259.12
+},
+{
+"word": "too.",
+"start": 259.12,
+"end": 259.38
+},
+{
+"word": "But",
+"start": 259.86,
+"end": 260.04
+},
+{
+"word": "in",
+"start": 260.04,
+"end": 260.16
+},
+{
+"word": "England,",
+"start": 260.16,
+"end": 260.42
+},
+{
+"word": "the",
+"start": 260.74,
+"end": 260.82
+},
+{
+"word": "idea",
+"start": 260.82,
+"end": 261.16
+},
+{
+"word": "was",
+"start": 261.16,
+"end": 261.4
+},
+{
+"word": "still",
+"start": 261.4,
+"end": 261.68
+},
+{
+"word": "strange.",
+"start": 261.68,
+"end": 262.26
+},
+{
+"word": "Then,",
+"start": 263.76,
+"end": 264.36
+},
+{
+"word": "in",
+"start": 264.64,
+"end": 264.82
+},
+{
+"word": "1608,",
+"start": 264.82,
+"end": 265.54
+},
+{
+"word": "an",
+"start": 266.04,
+"end": 266.14
+},
+{
+"word": "English",
+"start": 266.14,
+"end": 266.36
+},
+{
+"word": "traveller",
+"start": 266.36,
+"end": 266.86
+},
+{
+"word": "named",
+"start": 266.86,
+"end": 267.08
+},
+{
+"word": "Thomas",
+"start": 267.08,
+"end": 267.52
+},
+{
+"word": "Coriat",
+"start": 267.52,
+"end": 268.04
+},
+{
+"word": "toured",
+"start": 268.04,
+"end": 268.48
+},
+{
+"word": "Italy,",
+"start": 268.48,
+"end": 268.82
+},
+{
+"word": "walking",
+"start": 269.22,
+"end": 269.5
+},
+{
+"word": "almost",
+"start": 269.5,
+"end": 269.88
+},
+{
+"word": "half",
+"start": 269.88,
+"end": 270.2
+},
+{
+"word": "of",
+"start": 270.2,
+"end": 270.38
+},
+{
+"word": "his",
+"start": 270.38,
+"end": 270.5
+},
+{
+"word": "journey.",
+"start": 270.5,
+"end": 270.8
+},
+{
+"word": "He",
+"start": 271.22,
+"end": 271.38
+},
+{
+"word": "watched",
+"start": 271.38,
+"end": 271.64
+},
+{
+"word": "Italians",
+"start": 271.64,
+"end": 272.06
+},
+{
+"word": "eating",
+"start": 272.06,
+"end": 272.46
+},
+{
+"word": "with",
+"start": 272.46,
+"end": 272.68
+},
+{
+"word": "forks,",
+"start": 272.68,
+"end": 273.14
+},
+{
+"word": "and",
+"start": 273.26,
+"end": 273.52
+},
+{
+"word": "he",
+"start": 273.52,
+"end": 273.6
+},
+{
+"word": "helped",
+"start": 273.6,
+"end": 273.8
+},
+{
+"word": "make",
+"start": 273.8,
+"end": 274.06
+},
+{
+"word": "the",
+"start": 274.06,
+"end": 274.22
+},
+{
+"word": "habit",
+"start": 274.22,
+"end": 274.46
+},
+{
+"word": "known",
+"start": 274.46,
+"end": 274.76
+},
+{
+"word": "back",
+"start": 274.76,
+"end": 275.0
+},
+{
+"word": "home.",
+"start": 275.0,
+"end": 275.42
+},
+{
+"word": "His",
+"start": 275.42,
+"end": 275.74
+},
+{
+"word": "friends",
+"start": 275.74,
+"end": 276.0
+},
+{
+"word": "gave",
+"start": 276.0,
+"end": 276.22
+},
+{
+"word": "him",
+"start": 276.22,
+"end": 276.44
+},
+{
+"word": "a",
+"start": 276.44,
+"end": 276.58
+},
+{
+"word": "nickname,",
+"start": 276.58,
+"end": 276.96
+},
+{
+"word": "fursifer,",
+"start": 277.46,
+"end": 277.94
+},
+{
+"word": "Latin",
+"start": 278.48,
+"end": 278.84
+},
+{
+"word": "for",
+"start": 278.84,
+"end": 279.14
+},
+{
+"word": "fork",
+"start": 279.14,
+"end": 279.48
+},
+{
+"word": "-bearer,",
+"start": 279.48,
+"end": 279.96
+},
+{
+"word": "and",
+"start": 280.44,
+"end": 280.56
+},
+{
+"word": "also",
+"start": 280.56,
+"end": 280.92
+},
+{
+"word": "for",
+"start": 280.92,
+"end": 281.24
+},
+{
+"word": "rascal.",
+"start": 281.24,
+"end": 281.62
+},
+{
+"word": "But",
+"start": 282.26,
+"end": 282.44
+},
+{
+"word": "the",
+"start": 282.44,
+"end": 282.56
+},
+{
+"word": "fork's",
+"start": 282.56,
+"end": 282.94
+},
+{
+"word": "real",
+"start": 282.94,
+"end": 283.2
+},
+{
+"word": "breakthrough",
+"start": 283.2,
+"end": 283.52
+},
+{
+"word": "was",
+"start": 283.52,
+"end": 283.88
+},
+{
+"word": "tied",
+"start": 283.88,
+"end": 284.12
+},
+{
+"word": "to",
+"start": 284.12,
+"end": 284.3
+},
+{
+"word": "the",
+"start": 284.3,
+"end": 284.42
+},
+{
+"word": "other",
+"start": 284.42,
+"end": 284.6
+},
+{
+"word": "tool",
+"start": 284.6,
+"end": 284.88
+},
+{
+"word": "on",
+"start": 284.88,
+"end": 285.08
+},
+{
+"word": "the",
+"start": 285.08,
+"end": 285.16
+},
+{
+"word": "table.",
+"start": 285.16,
+"end": 285.44
+},
+{
+"word": "The",
+"start": 288.0,
+"end": 288.64
+},
+{
+"word": "knife.",
+"start": 288.64,
+"end": 288.96
+},
+{
+"word": "Remember",
+"start": 289.56,
+"end": 289.66
+},
+{
+"word": "those",
+"start": 289.66,
+"end": 290.06
+},
+{
+"word": "pointed",
+"start": 290.06,
+"end": 290.4
+},
+{
+"word": "blades?",
+"start": 290.4,
+"end": 290.76
+},
+{
+"word": "Over",
+"start": 291.4,
+"end": 291.58
+},
+{
+"word": "time,",
+"start": 291.58,
+"end": 291.92
+},
+{
+"word": "manners",
+"start": 292.42,
+"end": 292.58
+},
+{
+"word": "changed.",
+"start": 292.58,
+"end": 292.96
+},
+{
+"word": "Pointed",
+"start": 293.34,
+"end": 293.76
+},
+{
+"word": "personal",
+"start": 293.76,
+"end": 294.18
+},
+{
+"word": "knives",
+"start": 294.18,
+"end": 294.64
+},
+{
+"word": "became",
+"start": 294.64,
+"end": 294.92
+},
+{
+"word": "less",
+"start": 294.92,
+"end": 295.22
+},
+{
+"word": "welcome",
+"start": 295.22,
+"end": 295.56
+},
+{
+"word": "at",
+"start": 295.56,
+"end": 295.74
+},
+{
+"word": "dinner,",
+"start": 295.74,
+"end": 295.96
+},
+{
+"word": "and",
+"start": 296.38,
+"end": 296.58
+},
+{
+"word": "blunt",
+"start": 296.58,
+"end": 296.84
+},
+{
+"word": "table",
+"start": 296.84,
+"end": 297.22
+},
+{
+"word": "knives",
+"start": 297.22,
+"end": 297.58
+},
+{
+"word": "became",
+"start": 297.58,
+"end": 297.88
+},
+{
+"word": "more",
+"start": 297.88,
+"end": 298.12
+},
+{
+"word": "common.",
+"start": 298.12,
+"end": 298.44
+},
+{
+"word": "There's",
+"start": 298.96,
+"end": 299.24
+},
+{
+"word": "a",
+"start": 299.24,
+"end": 299.36
+},
+{
+"word": "famous",
+"start": 299.36,
+"end": 299.6
+},
+{
+"word": "story",
+"start": 299.6,
+"end": 299.98
+},
+{
+"word": "that",
+"start": 299.98,
+"end": 300.22
+},
+{
+"word": "Cardinal",
+"start": 300.22,
+"end": 300.64
+},
+{
+"word": "Richelieu,",
+"start": 300.64,
+"end": 301.22
+},
+{
+"word": "disgusted",
+"start": 301.54,
+"end": 302.12
+},
+{
+"word": "by",
+"start": 302.12,
+"end": 302.38
+},
+{
+"word": "a",
+"start": 302.38,
+"end": 302.54
+},
+{
+"word": "guest",
+"start": 302.54,
+"end": 302.68
+},
+{
+"word": "picking",
+"start": 302.68,
+"end": 302.98
+},
+{
+"word": "his",
+"start": 302.98,
+"end": 303.2
+},
+{
+"word": "teeth",
+"start": 303.2,
+"end": 303.44
+},
+{
+"word": "with",
+"start": 303.44,
+"end": 303.64
+},
+{
+"word": "his",
+"start": 303.64,
+"end": 303.76
+},
+{
+"word": "knife,",
+"start": 303.76,
+"end": 304.08
+},
+{
+"word": "had",
+"start": 304.08,
+"end": 304.6
+},
+{
+"word": "the",
+"start": 304.6,
+"end": 304.76
+},
+{
+"word": "tips",
+"start": 304.76,
+"end": 305.02
+},
+{
+"word": "of",
+"start": 305.02,
+"end": 305.2
+},
+{
+"word": "his",
+"start": 305.2,
+"end": 305.32
+},
+{
+"word": "own",
+"start": 305.32,
+"end": 305.54
+},
+{
+"word": "table",
+"start": 305.54,
+"end": 305.78
+},
+{
+"word": "knives",
+"start": 305.78,
+"end": 306.24
+},
+{
+"word": "ground",
+"start": 306.24,
+"end": 306.64
+},
+{
+"word": "round.",
+"start": 306.64,
+"end": 307.06
+},
+{
+"word": "And",
+"start": 307.56,
+"end": 307.78
+},
+{
+"word": "in",
+"start": 307.78,
+"end": 307.96
+},
+{
+"word": "1669,",
+"start": 307.96,
+"end": 308.92
+},
+{
+"word": "Louis",
+"start": 309.36,
+"end": 309.5
+},
+{
+"word": "XIV",
+"start": 309.5,
+"end": 310.02
+},
+{
+"word": "banned",
+"start": 310.02,
+"end": 310.38
+},
+{
+"word": "pointed",
+"start": 310.38,
+"end": 310.8
+},
+{
+"word": "knives",
+"start": 310.8,
+"end": 311.1
+},
+{
+"word": "in",
+"start": 311.1,
+"end": 311.26
+},
+{
+"word": "part",
+"start": 311.26,
+"end": 311.46
+},
+{
+"word": "of",
+"start": 311.46,
+"end": 311.56
+},
+{
+"word": "his",
+"start": 311.56,
+"end": 311.66
+},
+{
+"word": "kingdom,",
+"start": 311.66,
+"end": 311.94
+},
+{
+"word": "but",
+"start": 312.26,
+"end": 312.52
+},
+{
+"word": "a",
+"start": 312.52,
+"end": 312.64
+},
+{
+"word": "blunt",
+"start": 312.64,
+"end": 312.8
+},
+{
+"word": "knife",
+"start": 312.8,
+"end": 313.16
+},
+{
+"word": "can",
+"start": 313.16,
+"end": 313.36
+},
+{
+"word": "cut.",
+"start": 313.36,
+"end": 313.62
+},
+{
+"word": "It",
+"start": 314.24,
+"end": 314.36
+},
+{
+"word": "can't",
+"start": 314.36,
+"end": 314.74
+},
+{
+"word": "spear.",
+"start": 314.74,
+"end": 314.94
+},
+{
+"word": "Something",
+"start": 315.36,
+"end": 315.64
+},
+{
+"word": "else",
+"start": 315.64,
+"end": 315.98
+},
+{
+"word": "had",
+"start": 315.98,
+"end": 316.14
+},
+{
+"word": "to",
+"start": 316.14,
+"end": 316.24
+},
+{
+"word": "hold",
+"start": 316.24,
+"end": 316.44
+},
+{
+"word": "the",
+"start": 316.44,
+"end": 316.62
+},
+{
+"word": "food",
+"start": 316.62,
+"end": 316.82
+},
+{
+"word": "steady.",
+"start": 316.82,
+"end": 317.18
+},
+{
+"word": "So",
+"start": 317.54,
+"end": 317.74
+},
+{
+"word": "the",
+"start": 317.74,
+"end": 317.88
+},
+{
+"word": "fork",
+"start": 317.88,
+"end": 318.08
+},
+{
+"word": "became",
+"start": 318.08,
+"end": 318.46
+},
+{
+"word": "more",
+"start": 318.46,
+"end": 318.66
+},
+{
+"word": "useful,",
+"start": 318.66,
+"end": 319.0
+},
+{
+"word": "and",
+"start": 319.46,
+"end": 319.74
+},
+{
+"word": "it",
+"start": 319.74,
+"end": 319.86
+},
+{
+"word": "changed",
+"start": 319.86,
+"end": 320.18
+},
+{
+"word": "shape.",
+"start": 320.18,
+"end": 320.54
+},
+{
+"word": "Two",
+"start": 321.12,
+"end": 321.28
+},
+{
+"word": "prongs",
+"start": 321.28,
+"end": 321.52
+},
+{
+"word": "became",
+"start": 321.52,
+"end": 321.82
+},
+{
+"word": "three,",
+"start": 321.82,
+"end": 322.12
+},
+{
+"word": "and",
+"start": 322.5,
+"end": 322.68
+},
+{
+"word": "by",
+"start": 322.68,
+"end": 322.84
+},
+{
+"word": "the",
+"start": 322.84,
+"end": 322.94
+},
+{
+"word": "18th",
+"start": 322.94,
+"end": 323.38
+},
+{
+"word": "century,",
+"start": 323.38,
+"end": 323.68
+},
+{
+"word": "the",
+"start": 324.16,
+"end": 324.3
+},
+{
+"word": "four",
+"start": 324.3,
+"end": 324.52
+},
+{
+"word": "-pronged",
+"start": 324.52,
+"end": 324.94
+},
+{
+"word": "fork",
+"start": 324.94,
+"end": 325.14
+},
+{
+"word": "was",
+"start": 325.14,
+"end": 325.48
+},
+{
+"word": "becoming",
+"start": 325.48,
+"end": 325.8
+},
+{
+"word": "the",
+"start": 325.8,
+"end": 326.04
+},
+{
+"word": "familiar",
+"start": 326.04,
+"end": 326.36
+},
+{
+"word": "shape",
+"start": 326.36,
+"end": 326.7
+},
+{
+"word": "we",
+"start": 326.7,
+"end": 326.88
+},
+{
+"word": "recognize",
+"start": 326.88,
+"end": 327.26
+},
+{
+"word": "today.",
+"start": 327.26,
+"end": 327.74
+},
+{
+"word": "And",
+"start": 328.04,
+"end": 328.24
+},
+{
+"word": "this",
+"start": 328.24,
+"end": 328.42
+},
+{
+"word": "is",
+"start": 328.42,
+"end": 328.56
+},
+{
+"word": "where",
+"start": 328.56,
+"end": 328.7
+},
+{
+"word": "the",
+"start": 328.7,
+"end": 328.84
+},
+{
+"word": "story",
+"start": 328.84,
+"end": 329.16
+},
+{
+"word": "gets",
+"start": 329.16,
+"end": 329.42
+},
+{
+"word": "strange.",
+"start": 329.42,
+"end": 329.84
+},
+{
+"word": "The",
+"start": 330.56,
+"end": 331.16
+},
+{
+"word": "American",
+"start": 331.16,
+"end": 331.5
+},
+{
+"word": "anthropologist",
+"start": 331.5,
+"end": 332.34
+},
+{
+"word": "Charles",
+"start": 332.34,
+"end": 332.88
+},
+{
+"word": "Loring",
+"start": 332.88,
+"end": 333.28
+},
+{
+"word": "Brace",
+"start": 333.28,
+"end": 333.68
+},
+{
+"word": "spent",
+"start": 333.68,
+"end": 334.1
+},
+{
+"word": "years",
+"start": 334.1,
+"end": 334.54
+},
+{
+"word": "studying",
+"start": 334.54,
+"end": 335.02
+},
+{
+"word": "human",
+"start": 335.02,
+"end": 335.38
+},
+{
+"word": "teeth.",
+"start": 335.38,
+"end": 335.72
+},
+{
+"word": "He",
+"start": 336.28,
+"end": 336.4
+},
+{
+"word": "noticed",
+"start": 336.4,
+"end": 336.66
+},
+{
+"word": "that",
+"start": 336.66,
+"end": 336.94
+},
+{
+"word": "most",
+"start": 336.94,
+"end": 337.16
+},
+{
+"word": "people",
+"start": 337.16,
+"end": 337.42
+},
+{
+"word": "today",
+"start": 337.42,
+"end": 337.74
+},
+{
+"word": "have",
+"start": 337.74,
+"end": 338.1
+},
+{
+"word": "an",
+"start": 338.1,
+"end": 338.24
+},
+{
+"word": "overbite.",
+"start": 338.24,
+"end": 338.84
+},
+{
+"word": "The",
+"start": 339.36,
+"end": 339.48
+},
+{
+"word": "top",
+"start": 339.48,
+"end": 339.7
+},
+{
+"word": "front",
+"start": 339.7,
+"end": 339.98
+},
+{
+"word": "teeth",
+"start": 339.98,
+"end": 340.26
+},
+{
+"word": "sit",
+"start": 340.26,
+"end": 340.52
+},
+{
+"word": "in",
+"start": 340.52,
+"end": 340.7
+},
+{
+"word": "front",
+"start": 340.7,
+"end": 340.9
+},
+{
+"word": "of",
+"start": 340.9,
+"end": 341.04
+},
+{
+"word": "the",
+"start": 341.04,
+"end": 341.16
+},
+{
+"word": "bottom",
+"start": 341.16,
+"end": 341.4
+},
+{
+"word": "one.",
+"start": 341.4,
+"end": 341.66
+},
+{
+"word": "But",
+"start": 342.2,
+"end": 342.46
+},
+{
+"word": "in",
+"start": 342.46,
+"end": 342.7
+},
+{
+"word": "old",
+"start": 342.7,
+"end": 343.1
+},
+{
+"word": "European",
+"start": 343.1,
+"end": 343.7
+},
+{
+"word": "skulls,",
+"start": 343.7,
+"end": 344.64
+},
+{
+"word": "he",
+"start": 344.66,
+"end": 344.82
+},
+{
+"word": "mostly",
+"start": 344.82,
+"end": 345.12
+},
+{
+"word": "found",
+"start": 345.12,
+"end": 345.46
+},
+{
+"word": "the",
+"start": 345.46,
+"end": 345.6
+},
+{
+"word": "teeth",
+"start": 345.6,
+"end": 345.88
+},
+{
+"word": "meeting",
+"start": 345.88,
+"end": 346.3
+},
+{
+"word": "edge",
+"start": 346.3,
+"end": 346.7
+},
+{
+"word": "to",
+"start": 346.7,
+"end": 346.92
+},
+{
+"word": "edge.",
+"start": 346.92,
+"end": 347.28
+},
+{
+"word": "His",
+"start": 347.72,
+"end": 347.88
+},
+{
+"word": "explanation",
+"start": 347.88,
+"end": 348.32
+},
+{
+"word": "was",
+"start": 348.32,
+"end": 348.76
+},
+{
+"word": "this.",
+"start": 348.76,
+"end": 349.02
+},
+{
+"word": "Before",
+"start": 349.6,
+"end": 349.74
+},
+{
+"word": "knives",
+"start": 349.74,
+"end": 350.16
+},
+{
+"word": "and",
+"start": 350.16,
+"end": 350.4
+},
+{
+"word": "forks,",
+"start": 350.4,
+"end": 350.8
+},
+{
+"word": "people",
+"start": 350.98,
+"end": 351.3
+},
+{
+"word": "often",
+"start": 351.3,
+"end": 351.66
+},
+{
+"word": "clamped",
+"start": 351.66,
+"end": 352.04
+},
+{
+"word": "a",
+"start": 352.04,
+"end": 352.1
+},
+{
+"word": "piece",
+"start": 352.1,
+"end": 352.28
+},
+{
+"word": "of",
+"start": 352.28,
+"end": 352.42
+},
+{
+"word": "meat",
+"start": 352.42,
+"end": 352.6
+},
+{
+"word": "in",
+"start": 352.6,
+"end": 352.78
+},
+{
+"word": "their",
+"start": 352.78,
+"end": 352.9
+},
+{
+"word": "front",
+"start": 352.9,
+"end": 353.1
+},
+{
+"word": "teeth",
+"start": 353.1,
+"end": 353.42
+},
+{
+"word": "and",
+"start": 353.42,
+"end": 353.76
+},
+{
+"word": "sliced",
+"start": 353.76,
+"end": 354.0
+},
+{
+"word": "off",
+"start": 354.0,
+"end": 354.26
+},
+{
+"word": "a",
+"start": 354.26,
+"end": 354.38
+},
+{
+"word": "mouthful.",
+"start": 354.38,
+"end": 354.78
+},
+{
+"word": "Once",
+"start": 355.14,
+"end": 355.42
+},
+{
+"word": "Europeans",
+"start": 355.42,
+"end": 355.8
+},
+{
+"word": "started",
+"start": 355.8,
+"end": 356.24
+},
+{
+"word": "cutting",
+"start": 356.24,
+"end": 356.56
+},
+{
+"word": "food",
+"start": 356.56,
+"end": 356.9
+},
+{
+"word": "into",
+"start": 356.9,
+"end": 357.18
+},
+{
+"word": "small",
+"start": 357.18,
+"end": 357.56
+},
+{
+"word": "pieces",
+"start": 357.56,
+"end": 357.9
+},
+{
+"word": "on",
+"start": 357.9,
+"end": 358.12
+},
+{
+"word": "the",
+"start": 358.12,
+"end": 358.22
+},
+{
+"word": "plate,",
+"start": 358.22,
+"end": 358.48
+},
+{
+"word": "the",
+"start": 358.48,
+"end": 359.0
+},
+{
+"word": "front",
+"start": 359.0,
+"end": 359.24
+},
+{
+"word": "teeth",
+"start": 359.24,
+"end": 359.52
+},
+{
+"word": "no",
+"start": 359.52,
+"end": 359.8
+},
+{
+"word": "longer",
+"start": 359.8,
+"end": 360.02
+},
+{
+"word": "had",
+"start": 360.02,
+"end": 360.22
+},
+{
+"word": "to",
+"start": 360.22,
+"end": 360.36
+},
+{
+"word": "grip.",
+"start": 360.36,
+"end": 360.56
+},
+{
+"word": "Over",
+"start": 361.04,
+"end": 361.26
+},
+{
+"word": "generations",
+"start": 361.26,
+"end": 361.6
+},
+{
+"word": "of",
+"start": 361.6,
+"end": 362.0
+},
+{
+"word": "childhoods,",
+"start": 362.0,
+"end": 362.56
+},
+{
+"word": "the",
+"start": 362.74,
+"end": 362.78
+},
+{
+"word": "bite",
+"start": 362.78,
+"end": 362.98
+},
+{
+"word": "changed.",
+"start": 362.98,
+"end": 363.48
+},
+{
+"word": "Brace",
+"start": 364.28,
+"end": 364.58
+},
+{
+"word": "also",
+"start": 364.58,
+"end": 364.9
+},
+{
+"word": "pointed",
+"start": 364.9,
+"end": 365.26
+},
+{
+"word": "to",
+"start": 365.26,
+"end": 365.44
+},
+{
+"word": "evidence",
+"start": 365.44,
+"end": 365.76
+},
+{
+"word": "from",
+"start": 365.76,
+"end": 365.98
+},
+{
+"word": "Song",
+"start": 365.98,
+"end": 366.24
+},
+{
+"word": "Dynasty",
+"start": 366.24,
+"end": 366.66
+},
+{
+"word": "China,",
+"start": 366.66,
+"end": 367.06
+},
+{
+"word": "suggesting",
+"start": 367.62,
+"end": 367.9
+},
+{
+"word": "the",
+"start": 367.9,
+"end": 368.24
+},
+{
+"word": "same",
+"start": 368.24,
+"end": 368.44
+},
+{
+"word": "change",
+"start": 368.44,
+"end": 368.78
+},
+{
+"word": "may",
+"start": 368.78,
+"end": 368.98
+},
+{
+"word": "have",
+"start": 368.98,
+"end": 369.16
+},
+{
+"word": "appeared",
+"start": 369.16,
+"end": 369.42
+},
+{
+"word": "there",
+"start": 369.42,
+"end": 369.66
+},
+{
+"word": "much",
+"start": 369.66,
+"end": 369.9
+},
+{
+"word": "earlier,",
+"start": 369.9,
+"end": 370.44
+},
+{
+"word": "among",
+"start": 370.96,
+"end": 371.14
+},
+{
+"word": "people",
+"start": 371.14,
+"end": 371.48
+},
+{
+"word": "eating",
+"start": 371.48,
+"end": 371.82
+},
+{
+"word": "pre",
+"start": 371.82,
+"end": 372.08
+},
+{
+"word": "-cut",
+"start": 372.08,
+"end": 372.26
+},
+{
+"word": "food",
+"start": 372.26,
+"end": 372.54
+},
+{
+"word": "with",
+"start": 372.54,
+"end": 372.72
+},
+{
+"word": "chopsticks.",
+"start": 372.72,
+"end": 373.04
+},
+{
+"word": "But",
+"start": 373.94,
+"end": 374.12
+},
+{
+"word": "this",
+"start": 374.12,
+"end": 374.34
+},
+{
+"word": "is",
+"start": 374.34,
+"end": 374.52
+},
+{
+"word": "one",
+"start": 374.52,
+"end": 374.76
+},
+{
+"word": "researcher's",
+"start": 374.76,
+"end": 375.38
+},
+{
+"word": "explanation,",
+"start": 375.38,
+"end": 375.82
+},
+{
+"word": "not",
+"start": 376.46,
+"end": 376.62
+},
+{
+"word": "a",
+"start": 376.62,
+"end": 376.78
+},
+{
+"word": "settled",
+"start": 376.78,
+"end": 376.98
+},
+{
+"word": "answer.",
+"start": 376.98,
+"end": 377.36
+},
+{
+"word": "Others",
+"start": 377.88,
+"end": 378.08
+},
+{
+"word": "link",
+"start": 378.08,
+"end": 378.34
+},
+{
+"word": "it",
+"start": 378.34,
+"end": 378.44
+},
+{
+"word": "to",
+"start": 378.44,
+"end": 378.56
+},
+{
+"word": "softer",
+"start": 378.56,
+"end": 378.78
+},
+{
+"word": "food",
+"start": 378.78,
+"end": 379.08
+},
+{
+"word": "in",
+"start": 379.08,
+"end": 379.24
+},
+{
+"word": "general,",
+"start": 379.24,
+"end": 379.6
+},
+{
+"word": "going",
+"start": 379.94,
+"end": 380.16
+},
+{
+"word": "back",
+"start": 380.16,
+"end": 380.38
+},
+{
+"word": "thousands",
+"start": 380.38,
+"end": 380.88
+},
+{
+"word": "of",
+"start": 380.88,
+"end": 381.14
+},
+{
+"word": "years.",
+"start": 381.14,
+"end": 381.4
+},
+{
+"word": "Still,",
+"start": 381.94,
+"end": 382.26
+},
+{
+"word": "if",
+"start": 382.6,
+"end": 382.78
+},
+{
+"word": "Brace",
+"start": 382.78,
+"end": 383.1
+},
+{
+"word": "is",
+"start": 383.1,
+"end": 383.28
+},
+{
+"word": "right,",
+"start": 383.28,
+"end": 383.5
+},
+{
+"word": "the",
+"start": 383.92,
+"end": 384.02
+},
+{
+"word": "way",
+"start": 384.02,
+"end": 384.2
+},
+{
+"word": "your",
+"start": 384.2,
+"end": 384.38
+},
+{
+"word": "ancestors",
+"start": 384.38,
+"end": 384.76
+},
+{
+"word": "cut",
+"start": 384.76,
+"end": 385.2
+},
+{
+"word": "their",
+"start": 385.2,
+"end": 385.38
+},
+{
+"word": "dinner",
+"start": 385.38,
+"end": 385.66
+},
+{
+"word": "is",
+"start": 385.66,
+"end": 386.16
+},
+{
+"word": "still",
+"start": 386.16,
+"end": 386.44
+},
+{
+"word": "written",
+"start": 386.44,
+"end": 386.82
+},
+{
+"word": "in",
+"start": 386.82,
+"end": 387.14
+},
+{
+"word": "your",
+"start": 387.14,
+"end": 387.28
+},
+{
+"word": "face.",
+"start": 387.28,
+"end": 387.58
+},
+{
+"word": "And",
+"start": 388.48,
+"end": 388.72
+},
+{
+"word": "then",
+"start": 388.72,
+"end": 388.96
+},
+{
+"word": "there's",
+"start": 388.96,
+"end": 389.3
+},
+{
+"word": "the",
+"start": 389.3,
+"end": 389.44
+},
+{
+"word": "third",
+"start": 389.44,
+"end": 389.78
+},
+{
+"word": "answer,",
+"start": 389.78,
+"end": 390.3
+},
+{
+"word": "the",
+"start": 390.82,
+"end": 390.96
+},
+{
+"word": "oldest",
+"start": 390.96,
+"end": 391.32
+},
+{
+"word": "of",
+"start": 391.32,
+"end": 391.54
+},
+{
+"word": "all.",
+"start": 391.54,
+"end": 391.8
+},
+{
+"word": "Eating",
+"start": 393.0,
+"end": 393.18
+},
+{
+"word": "with",
+"start": 393.18,
+"end": 393.42
+},
+{
+"word": "your",
+"start": 393.42,
+"end": 393.58
+},
+{
+"word": "hands",
+"start": 393.58,
+"end": 393.98
+},
+{
+"word": "isn't",
+"start": 393.98,
+"end": 394.54
+},
+{
+"word": "the",
+"start": 394.54,
+"end": 394.66
+},
+{
+"word": "absence",
+"start": 394.66,
+"end": 395.04
+},
+{
+"word": "of",
+"start": 395.04,
+"end": 395.3
+},
+{
+"word": "a",
+"start": 395.3,
+"end": 395.42
+},
+{
+"word": "tool.",
+"start": 395.42,
+"end": 395.68
+},
+{
+"word": "It's",
+"start": 396.26,
+"end": 396.42
+},
+{
+"word": "a",
+"start": 396.42,
+"end": 396.48
+},
+{
+"word": "tradition",
+"start": 396.48,
+"end": 396.84
+},
+{
+"word": "with",
+"start": 396.84,
+"end": 397.26
+},
+{
+"word": "rules.",
+"start": 397.26,
+"end": 397.62
+},
+{
+"word": "Across",
+"start": 398.18,
+"end": 398.36
+},
+{
+"word": "much",
+"start": 398.36,
+"end": 398.7
+},
+{
+"word": "of",
+"start": 398.7,
+"end": 398.86
+},
+{
+"word": "South",
+"start": 398.86,
+"end": 399.04
+},
+{
+"word": "Asia,",
+"start": 399.04,
+"end": 399.4
+},
+{
+"word": "the",
+"start": 399.72,
+"end": 399.76
+},
+{
+"word": "Middle",
+"start": 399.76,
+"end": 399.96
+},
+{
+"word": "East",
+"start": 399.96,
+"end": 400.2
+},
+{
+"word": "and",
+"start": 400.2,
+"end": 400.36
+},
+{
+"word": "Africa,",
+"start": 400.36,
+"end": 400.66
+},
+{
+"word": "the",
+"start": 401.12,
+"end": 401.22
+},
+{
+"word": "first",
+"start": 401.22,
+"end": 401.5
+},
+{
+"word": "rule",
+"start": 401.5,
+"end": 401.84
+},
+{
+"word": "is",
+"start": 401.84,
+"end": 402.04
+},
+{
+"word": "simple.",
+"start": 402.04,
+"end": 402.34
+},
+{
+"word": "You",
+"start": 402.9,
+"end": 403.06
+},
+{
+"word": "eat",
+"start": 403.06,
+"end": 403.32
+},
+{
+"word": "with",
+"start": 403.32,
+"end": 403.52
+},
+{
+"word": "your",
+"start": 403.52,
+"end": 403.68
+},
+{
+"word": "right",
+"start": 403.68,
+"end": 403.92
+},
+{
+"word": "hand.",
+"start": 403.92,
+"end": 404.38
+},
+{
+"word": "Often,",
+"start": 405.42,
+"end": 405.94
+},
+{
+"word": "the",
+"start": 406.26,
+"end": 406.36
+},
+{
+"word": "bread",
+"start": 406.36,
+"end": 406.58
+},
+{
+"word": "is",
+"start": 406.58,
+"end": 406.84
+},
+{
+"word": "the",
+"start": 406.84,
+"end": 406.96
+},
+{
+"word": "cutlery.",
+"start": 406.96,
+"end": 407.48
+},
+{
+"word": "In",
+"start": 407.76,
+"end": 407.9
+},
+{
+"word": "many",
+"start": 407.9,
+"end": 408.12
+},
+{
+"word": "Indian",
+"start": 408.12,
+"end": 408.46
+},
+{
+"word": "dining",
+"start": 408.46,
+"end": 408.68
+},
+{
+"word": "traditions,",
+"start": 408.68,
+"end": 409.16
+},
+{
+"word": "flatbread",
+"start": 409.48,
+"end": 409.9
+},
+{
+"word": "becomes",
+"start": 409.9,
+"end": 410.3
+},
+{
+"word": "a",
+"start": 410.3,
+"end": 410.5
+},
+{
+"word": "scoop.",
+"start": 410.5,
+"end": 410.7
+},
+{
+"word": "In",
+"start": 411.1,
+"end": 411.24
+},
+{
+"word": "Ethiopia,",
+"start": 411.24,
+"end": 411.62
+},
+{
+"word": "the",
+"start": 412.16,
+"end": 412.26
+},
+{
+"word": "spongy",
+"start": 412.26,
+"end": 412.68
+},
+{
+"word": "bread",
+"start": 412.68,
+"end": 412.84
+},
+{
+"word": "called",
+"start": 412.84,
+"end": 413.1
+},
+{
+"word": "injera",
+"start": 413.1,
+"end": 413.56
+},
+{
+"word": "is",
+"start": 413.56,
+"end": 413.86
+},
+{
+"word": "the",
+"start": 413.86,
+"end": 414.0
+},
+{
+"word": "plate",
+"start": 414.0,
+"end": 414.24
+},
+{
+"word": "and",
+"start": 414.24,
+"end": 414.58
+},
+{
+"word": "the",
+"start": 414.58,
+"end": 414.7
+},
+{
+"word": "spoon",
+"start": 414.7,
+"end": 414.94
+},
+{
+"word": "at",
+"start": 414.94,
+"end": 415.1
+},
+{
+"word": "the",
+"start": 415.1,
+"end": 415.18
+},
+{
+"word": "same",
+"start": 415.18,
+"end": 415.4
+},
+{
+"word": "time.",
+"start": 415.4,
+"end": 415.68
+},
+{
+"word": "You",
+"start": 416.1,
+"end": 416.28
+},
+{
+"word": "tear,",
+"start": 416.28,
+"end": 416.54
+},
+{
+"word": "you",
+"start": 416.78,
+"end": 416.86
+},
+{
+"word": "fold,",
+"start": 416.86,
+"end": 417.18
+},
+{
+"word": "you",
+"start": 417.36,
+"end": 417.38
+},
+{
+"word": "lift.",
+"start": 417.38,
+"end": 417.64
+},
+{
+"word": "There's",
+"start": 417.64,
+"end": 418.06
+},
+{
+"word": "even",
+"start": 418.06,
+"end": 418.22
+},
+{
+"word": "a",
+"start": 418.22,
+"end": 418.38
+},
+{
+"word": "gesture",
+"start": 418.38,
+"end": 418.64
+},
+{
+"word": "for",
+"start": 418.64,
+"end": 418.88
+},
+{
+"word": "love.",
+"start": 418.88,
+"end": 419.12
+},
+{
+"word": "In",
+"start": 419.54,
+"end": 419.66
+},
+{
+"word": "Ethiopia,",
+"start": 419.66,
+"end": 420.02
+},
+{
+"word": "it's",
+"start": 420.36,
+"end": 420.56
+},
+{
+"word": "called",
+"start": 420.56,
+"end": 420.88
+},
+{
+"word": "gursha.",
+"start": 420.88,
+"end": 421.5
+},
+{
+"word": "You",
+"start": 421.98,
+"end": 422.1
+},
+{
+"word": "take",
+"start": 422.1,
+"end": 422.28
+},
+{
+"word": "a",
+"start": 422.28,
+"end": 422.46
+},
+{
+"word": "mouthful",
+"start": 422.46,
+"end": 422.86
+},
+{
+"word": "and",
+"start": 422.86,
+"end": 423.4
+},
+{
+"word": "you",
+"start": 423.4,
+"end": 423.56
+},
+{
+"word": "feed",
+"start": 423.56,
+"end": 423.76
+},
+{
+"word": "it",
+"start": 423.76,
+"end": 423.9
+},
+{
+"word": "to",
+"start": 423.9,
+"end": 424.04
+},
+{
+"word": "someone",
+"start": 424.04,
+"end": 424.3
+},
+{
+"word": "else",
+"start": 424.3,
+"end": 424.58
+},
+{
+"word": "with",
+"start": 424.58,
+"end": 425.02
+},
+{
+"word": "your",
+"start": 425.02,
+"end": 425.22
+},
+{
+"word": "own",
+"start": 425.22,
+"end": 425.64
+},
+{
+"word": "hand.",
+"start": 425.64,
+"end": 426.12
+},
+{
+"word": "A",
+"start": 426.62,
+"end": 426.76
+},
+{
+"word": "guest,",
+"start": 426.76,
+"end": 426.96
+},
+{
+"word": "an",
+"start": 427.18,
+"end": 427.26
+},
+{
+"word": "elder,",
+"start": 427.26,
+"end": 427.44
+},
+{
+"word": "a",
+"start": 427.76,
+"end": 427.82
+},
+{
+"word": "newly",
+"start": 427.82,
+"end": 427.98
+},
+{
+"word": "married",
+"start": 427.98,
+"end": 428.24
+},
+{
+"word": "partner,",
+"start": 428.24,
+"end": 428.64
+},
+{
+"word": "and",
+"start": 428.94,
+"end": 429.02
+},
+{
+"word": "here's",
+"start": 429.02,
+"end": 429.24
+},
+{
+"word": "a",
+"start": 429.24,
+"end": 429.34
+},
+{
+"word": "twist,",
+"start": 429.34,
+"end": 429.5
+},
+{
+"word": "Thailand",
+"start": 430.0,
+"end": 430.22
+},
+{
+"word": "used",
+"start": 430.22,
+"end": 430.5
+},
+{
+"word": "to",
+"start": 430.5,
+"end": 430.66
+},
+{
+"word": "eat",
+"start": 430.66,
+"end": 430.78
+},
+{
+"word": "with",
+"start": 430.78,
+"end": 430.96
+},
+{
+"word": "hands",
+"start": 430.96,
+"end": 431.2
+},
+{
+"word": "too.",
+"start": 431.2,
+"end": 431.48
+},
+{
+"word": "Then,",
+"start": 432.0,
+"end": 432.22
+},
+{
+"word": "during",
+"start": 432.46,
+"end": 432.68
+},
+{
+"word": "the",
+"start": 432.68,
+"end": 432.86
+},
+{
+"word": "1800s,",
+"start": 432.86,
+"end": 433.78
+},
+{
+"word": "Siam's",
+"start": 433.9,
+"end": 434.32
+},
+{
+"word": "royal",
+"start": 434.32,
+"end": 434.56
+},
+{
+"word": "court",
+"start": 434.56,
+"end": 434.9
+},
+{
+"word": "and",
+"start": 434.9,
+"end": 435.1
+},
+{
+"word": "elites",
+"start": 435.1,
+"end": 435.3
+},
+{
+"word": "began",
+"start": 435.3,
+"end": 435.68
+},
+{
+"word": "adopting",
+"start": 435.68,
+"end": 436.06
+},
+{
+"word": "Western",
+"start": 436.06,
+"end": 436.5
+},
+{
+"word": "spoons",
+"start": 436.5,
+"end": 436.82
+},
+{
+"word": "and",
+"start": 436.82,
+"end": 437.2
+},
+{
+"word": "forks.",
+"start": 437.2,
+"end": 437.6
+},
+{
+"word": "Then",
+"start": 438.02,
+"end": 438.26
+},
+{
+"word": "the",
+"start": 438.26,
+"end": 438.4
+},
+{
+"word": "habit",
+"start": 438.4,
+"end": 438.62
+},
+{
+"word": "spread.",
+"start": 438.62,
+"end": 438.94
+},
+{
+"word": "Today,",
+"start": 439.48,
+"end": 439.76
+},
+{
+"word": "the",
+"start": 440.06,
+"end": 440.18
+},
+{
+"word": "spoon",
+"start": 440.18,
+"end": 440.42
+},
+{
+"word": "goes",
+"start": 440.42,
+"end": 440.62
+},
+{
+"word": "in",
+"start": 440.62,
+"end": 440.8
+},
+{
+"word": "your",
+"start": 440.8,
+"end": 440.92
+},
+{
+"word": "right",
+"start": 440.92,
+"end": 441.12
+},
+{
+"word": "hand",
+"start": 441.12,
+"end": 441.46
+},
+{
+"word": "and",
+"start": 441.46,
+"end": 441.88
+},
+{
+"word": "the",
+"start": 441.88,
+"end": 442.02
+},
+{
+"word": "fork",
+"start": 442.02,
+"end": 442.26
+},
+{
+"word": "pushes",
+"start": 442.26,
+"end": 442.6
+},
+{
+"word": "food",
+"start": 442.6,
+"end": 442.82
+},
+{
+"word": "onto",
+"start": 442.82,
+"end": 443.04
+},
+{
+"word": "it.",
+"start": 443.04,
+"end": 443.3
+},
+{
+"word": "That's",
+"start": 443.7,
+"end": 444.1
+},
+{
+"word": "why",
+"start": 444.1,
+"end": 444.26
+},
+{
+"word": "there's",
+"start": 444.26,
+"end": 444.5
+},
+{
+"word": "no",
+"start": 444.5,
+"end": 444.64
+},
+{
+"word": "knife",
+"start": 444.64,
+"end": 444.92
+},
+{
+"word": "and",
+"start": 444.92,
+"end": 445.4
+},
+{
+"word": "usually",
+"start": 445.4,
+"end": 445.78
+},
+{
+"word": "no",
+"start": 445.78,
+"end": 446.06
+},
+{
+"word": "chopsticks.",
+"start": 446.06,
+"end": 446.44
+},
+{
+"word": "So",
+"start": 446.44,
+"end": 446.98
+},
+{
+"word": "where",
+"start": 446.98,
+"end": 447.72
+},
+{
+"word": "does",
+"start": 447.72,
+"end": 447.9
+},
+{
+"word": "that",
+"start": 447.9,
+"end": 448.08
+},
+{
+"word": "leave",
+"start": 448.08,
+"end": 448.28
+},
+{
+"word": "the",
+"start": 448.28,
+"end": 448.48
+},
+{
+"word": "stories",
+"start": 448.48,
+"end": 448.84
+},
+{
+"word": "you've",
+"start": 448.84,
+"end": 449.12
+},
+{
+"word": "probably",
+"start": 449.12,
+"end": 449.52
+},
+{
+"word": "heard?",
+"start": 449.52,
+"end": 449.88
+},
+{
+"word": "Here's",
+"start": 450.54,
+"end": 450.76
+},
+{
+"word": "the",
+"start": 450.76,
+"end": 450.88
+},
+{
+"word": "story",
+"start": 450.88,
+"end": 451.16
+},
+{
+"word": "you",
+"start": 451.16,
+"end": 451.34
+},
+{
+"word": "heard.",
+"start": 451.34,
+"end": 451.6
+},
+{
+"word": "Confucius",
+"start": 452.04,
+"end": 452.52
+},
+{
+"word": "banned",
+"start": 452.52,
+"end": 452.76
+},
+{
+"word": "knives",
+"start": 452.76,
+"end": 453.12
+},
+{
+"word": "from",
+"start": 453.12,
+"end": 453.34
+},
+{
+"word": "the",
+"start": 453.34,
+"end": 453.46
+},
+{
+"word": "dinner",
+"start": 453.46,
+"end": 453.62
+},
+{
+"word": "table",
+"start": 453.62,
+"end": 453.94
+},
+{
+"word": "because",
+"start": 453.94,
+"end": 454.44
+},
+{
+"word": "knives",
+"start": 454.44,
+"end": 454.74
+},
+{
+"word": "meant",
+"start": 454.74,
+"end": 454.98
+},
+{
+"word": "violence.",
+"start": 454.98,
+"end": 455.38
+},
+{
+"word": "What's",
+"start": 456.14,
+"end": 456.44
+},
+{
+"word": "true?",
+"start": 456.44,
+"end": 456.78
+},
+{
+"word": "There",
+"start": 457.38,
+"end": 457.52
+},
+{
+"word": "is",
+"start": 457.52,
+"end": 457.64
+},
+{
+"word": "a",
+"start": 457.64,
+"end": 457.72
+},
+{
+"word": "famous",
+"start": 457.72,
+"end": 457.94
+},
+{
+"word": "Chinese",
+"start": 457.94,
+"end": 458.24
+},
+{
+"word": "saying,",
+"start": 458.24,
+"end": 458.64
+},
+{
+"word": "A",
+"start": 459.12,
+"end": 459.2
+},
+{
+"word": "gentleman",
+"start": 459.2,
+"end": 459.5
+},
+{
+"word": "keeps",
+"start": 459.5,
+"end": 459.88
+},
+{
+"word": "away",
+"start": 459.88,
+"end": 460.2
+},
+{
+"word": "from",
+"start": 460.2,
+"end": 460.4
+},
+{
+"word": "the",
+"start": 460.4,
+"end": 460.52
+},
+{
+"word": "kitchen.",
+"start": 460.52,
+"end": 460.76
+},
+{
+"word": "What's",
+"start": 461.44,
+"end": 461.7
+},
+{
+"word": "wrong?",
+"start": 461.7,
+"end": 461.88
+},
+{
+"word": "It",
+"start": 462.28,
+"end": 462.38
+},
+{
+"word": "comes",
+"start": 462.38,
+"end": 462.58
+},
+{
+"word": "from",
+"start": 462.58,
+"end": 462.76
+},
+{
+"word": "Mencius,",
+"start": 462.76,
+"end": 463.28
+},
+{
+"word": "not",
+"start": 463.46,
+"end": 463.64
+},
+{
+"word": "Confucius.",
+"start": 463.64,
+"end": 464.38
+},
+{
+"word": "And",
+"start": 464.76,
+"end": 464.94
+},
+{
+"word": "in",
+"start": 464.94,
+"end": 465.08
+},
+{
+"word": "context,",
+"start": 465.08,
+"end": 465.44
+},
+{
+"word": "he's",
+"start": 465.86,
+"end": 466.06
+},
+{
+"word": "talking",
+"start": 466.06,
+"end": 466.28
+},
+{
+"word": "about",
+"start": 466.28,
+"end": 466.6
+},
+{
+"word": "a",
+"start": 466.6,
+"end": 466.74
+},
+{
+"word": "king",
+"start": 466.74,
+"end": 466.98
+},
+{
+"word": "who",
+"start": 466.98,
+"end": 467.38
+},
+{
+"word": "couldn't",
+"start": 467.38,
+"end": 467.7
+},
+{
+"word": "bear",
+"start": 467.7,
+"end": 467.88
+},
+{
+"word": "to",
+"start": 467.88,
+"end": 468.04
+},
+{
+"word": "see",
+"start": 468.04,
+"end": 468.22
+},
+{
+"word": "an",
+"start": 468.22,
+"end": 468.36
+},
+{
+"word": "ox",
+"start": 468.36,
+"end": 468.62
+},
+{
+"word": "led",
+"start": 468.62,
+"end": 468.86
+},
+{
+"word": "to",
+"start": 468.86,
+"end": 469.04
+},
+{
+"word": "its",
+"start": 469.04,
+"end": 469.18
+},
+{
+"word": "death.",
+"start": 469.18,
+"end": 469.5
+},
+{
+"word": "It's",
+"start": 469.98,
+"end": 470.16
+},
+{
+"word": "about",
+"start": 470.16,
+"end": 470.3
+},
+{
+"word": "compassion,",
+"start": 470.3,
+"end": 470.86
+},
+{
+"word": "not",
+"start": 471.16,
+"end": 471.38
+},
+{
+"word": "table",
+"start": 471.38,
+"end": 471.7
+},
+{
+"word": "manners.",
+"start": 471.7,
+"end": 471.96
+},
+{
+"word": "Here's",
+"start": 472.6,
+"end": 472.84
+},
+{
+"word": "another.",
+"start": 472.84,
+"end": 473.04
+},
+{
+"word": "Catherine",
+"start": 473.54,
+"end": 473.82
+},
+{
+"word": "de",
+"start": 473.82,
+"end": 474.0
+},
+{
+"word": "Medici",
+"start": 474.0,
+"end": 474.3
+},
+{
+"word": "brought",
+"start": 474.3,
+"end": 474.54
+},
+{
+"word": "the",
+"start": 474.54,
+"end": 474.74
+},
+{
+"word": "fork",
+"start": 474.74,
+"end": 474.94
+},
+{
+"word": "from",
+"start": 474.94,
+"end": 475.14
+},
+{
+"word": "Italy",
+"start": 475.14,
+"end": 475.4
+},
+{
+"word": "to",
+"start": 475.4,
+"end": 475.64
+},
+{
+"word": "France.",
+"start": 475.64,
+"end": 475.94
+},
+{
+"word": "It's",
+"start": 475.94,
+"end": 476.6
+},
+{
+"word": "a",
+"start": 476.6,
+"end": 476.66
+},
+{
+"word": "lovely",
+"start": 476.66,
+"end": 476.88
+},
+{
+"word": "story.",
+"start": 476.88,
+"end": 477.3
+},
+{
+"word": "Historians",
+"start": 477.92,
+"end": 478.34
+},
+{
+"word": "aren't",
+"start": 478.34,
+"end": 478.54
+},
+{
+"word": "convinced.",
+"start": 478.54,
+"end": 478.84
+},
+{
+"word": "The",
+"start": 479.3,
+"end": 479.4
+},
+{
+"word": "evidence",
+"start": 479.4,
+"end": 479.78
+},
+{
+"word": "is",
+"start": 479.78,
+"end": 479.98
+},
+{
+"word": "thin",
+"start": 479.98,
+"end": 480.24
+},
+{
+"word": "and",
+"start": 480.24,
+"end": 480.76
+},
+{
+"word": "the",
+"start": 480.76,
+"end": 480.9
+},
+{
+"word": "biggest",
+"start": 480.9,
+"end": 481.26
+},
+{
+"word": "one",
+"start": 481.26,
+"end": 481.58
+},
+{
+"word": "of",
+"start": 481.58,
+"end": 481.72
+},
+{
+"word": "all.",
+"start": 481.72,
+"end": 482.0
+},
+{
+"word": "That",
+"start": 482.3,
+"end": 482.44
+},
+{
+"word": "forks",
+"start": 482.44,
+"end": 482.82
+},
+{
+"word": "are",
+"start": 482.82,
+"end": 483.02
+},
+{
+"word": "simply",
+"start": 483.02,
+"end": 483.32
+},
+{
+"word": "the",
+"start": 483.32,
+"end": 483.52
+},
+{
+"word": "civilized",
+"start": 483.52,
+"end": 484.16
+},
+{
+"word": "way",
+"start": 484.16,
+"end": 484.32
+},
+{
+"word": "to",
+"start": 484.32,
+"end": 484.48
+},
+{
+"word": "eat.",
+"start": 484.48,
+"end": 484.74
+},
+{
+"word": "Europe",
+"start": 485.24,
+"end": 485.6
+},
+{
+"word": "spent",
+"start": 485.6,
+"end": 485.94
+},
+{
+"word": "six",
+"start": 485.94,
+"end": 486.32
+},
+{
+"word": "centuries",
+"start": 486.32,
+"end": 486.78
+},
+{
+"word": "thinking",
+"start": 486.78,
+"end": 487.18
+},
+{
+"word": "the",
+"start": 487.18,
+"end": 487.4
+},
+{
+"word": "opposite.",
+"start": 487.4,
+"end": 487.7
+},
+{
+"word": "And",
+"start": 488.32,
+"end": 488.44
+},
+{
+"word": "every",
+"start": 488.44,
+"end": 488.74
+},
+{
+"word": "tradition",
+"start": 488.74,
+"end": 489.14
+},
+{
+"word": "in",
+"start": 489.14,
+"end": 489.32
+},
+{
+"word": "this",
+"start": 489.32,
+"end": 489.44
+},
+{
+"word": "story",
+"start": 489.44,
+"end": 489.7
+},
+{
+"word": "comes",
+"start": 489.7,
+"end": 490.0
+},
+{
+"word": "with",
+"start": 490.0,
+"end": 490.24
+},
+{
+"word": "manners",
+"start": 490.24,
+"end": 490.54
+},
+{
+"word": "just",
+"start": 490.54,
+"end": 490.84
+},
+{
+"word": "as",
+"start": 490.84,
+"end": 491.02
+},
+{
+"word": "strict",
+"start": 491.02,
+"end": 491.26
+},
+{
+"word": "as",
+"start": 491.26,
+"end": 491.46
+},
+{
+"word": "any",
+"start": 491.46,
+"end": 491.74
+},
+{
+"word": "dinner",
+"start": 491.74,
+"end": 491.94
+},
+{
+"word": "party",
+"start": 491.94,
+"end": 492.26
+},
+{
+"word": "in",
+"start": 492.26,
+"end": 492.42
+},
+{
+"word": "Paris.",
+"start": 492.42,
+"end": 492.68
+},
+{
+"word": "None",
+"start": 493.88,
+"end": 494.1
+},
+{
+"word": "of",
+"start": 494.1,
+"end": 494.22
+},
+{
+"word": "these",
+"start": 494.22,
+"end": 494.38
+},
+{
+"word": "tools",
+"start": 494.38,
+"end": 494.7
+},
+{
+"word": "is",
+"start": 494.7,
+"end": 495.0
+},
+{
+"word": "better.",
+"start": 495.0,
+"end": 495.3
+},
+{
+"word": "Each",
+"start": 495.94,
+"end": 496.16
+},
+{
+"word": "one",
+"start": 496.16,
+"end": 496.34
+},
+{
+"word": "is",
+"start": 496.34,
+"end": 496.48
+},
+{
+"word": "a",
+"start": 496.48,
+"end": 496.58
+},
+{
+"word": "smart",
+"start": 496.58,
+"end": 496.78
+},
+{
+"word": "answer",
+"start": 496.78,
+"end": 497.18
+},
+{
+"word": "to",
+"start": 497.18,
+"end": 497.36
+},
+{
+"word": "a",
+"start": 497.36,
+"end": 497.5
+},
+{
+"word": "different",
+"start": 497.5,
+"end": 497.7
+},
+{
+"word": "problem.",
+"start": 497.7,
+"end": 498.08
+},
+{
+"word": "So",
+"start": 498.54,
+"end": 498.78
+},
+{
+"word": "let's",
+"start": 498.78,
+"end": 499.02
+},
+{
+"word": "go",
+"start": 499.02,
+"end": 499.12
+},
+{
+"word": "back",
+"start": 499.12,
+"end": 499.36
+},
+{
+"word": "to",
+"start": 499.36,
+"end": 499.5
+},
+{
+"word": "that",
+"start": 499.5,
+"end": 499.66
+},
+{
+"word": "plate.",
+"start": 499.66,
+"end": 499.92
+},
+{
+"word": "The",
+"start": 500.54,
+"end": 500.66
+},
+{
+"word": "round",
+"start": 500.66,
+"end": 500.96
+},
+{
+"word": "tip",
+"start": 500.96,
+"end": 501.26
+},
+{
+"word": "on",
+"start": 501.26,
+"end": 501.46
+},
+{
+"word": "your",
+"start": 501.46,
+"end": 501.58
+},
+{
+"word": "knife,",
+"start": 501.58,
+"end": 501.92
+},
+{
+"word": "centuries",
+"start": 502.34,
+"end": 502.62
+},
+{
+"word": "of",
+"start": 502.62,
+"end": 502.88
+},
+{
+"word": "changing",
+"start": 502.88,
+"end": 503.2
+},
+{
+"word": "table",
+"start": 503.2,
+"end": 503.54
+},
+{
+"word": "manners,",
+"start": 503.54,
+"end": 503.88
+},
+{
+"word": "and",
+"start": 503.88,
+"end": 504.5
+},
+{
+"word": "maybe",
+"start": 504.5,
+"end": 504.8
+},
+{
+"word": "one",
+"start": 504.8,
+"end": 505.12
+},
+{
+"word": "fussy",
+"start": 505.12,
+"end": 505.48
+},
+{
+"word": "cardinal.",
+"start": 505.48,
+"end": 506.0
+},
+{
+"word": "The",
+"start": 506.54,
+"end": 506.6
+},
+{
+"word": "four",
+"start": 506.6,
+"end": 506.8
+},
+{
+"word": "prongs",
+"start": 506.8,
+"end": 507.08
+},
+{
+"word": "on",
+"start": 507.08,
+"end": 507.26
+},
+{
+"word": "your",
+"start": 507.26,
+"end": 507.38
+},
+{
+"word": "fork?",
+"start": 507.38,
+"end": 507.62
+},
+{
+"word": "The",
+"start": 508.14,
+"end": 508.26
+},
+{
+"word": "1700s.",
+"start": 508.26,
+"end": 509.14
+},
+{
+"word": "And",
+"start": 509.34,
+"end": 509.54
+},
+{
+"word": "the",
+"start": 509.54,
+"end": 509.68
+},
+{
+"word": "cutting",
+"start": 509.68,
+"end": 509.94
+},
+{
+"word": "you're",
+"start": 509.94,
+"end": 510.2
+},
+{
+"word": "about",
+"start": 510.2,
+"end": 510.34
+},
+{
+"word": "to",
+"start": 510.34,
+"end": 510.52
+},
+{
+"word": "do,",
+"start": 510.52,
+"end": 510.74
+},
+{
+"word": "right",
+"start": 511.14,
+"end": 511.44
+},
+{
+"word": "there",
+"start": 511.44,
+"end": 511.74
+},
+{
+"word": "at",
+"start": 511.74,
+"end": 511.92
+},
+{
+"word": "the",
+"start": 511.92,
+"end": 512.0
+},
+{
+"word": "table.",
+"start": 512.0,
+"end": 512.28
+},
+{
+"word": "That's",
+"start": 512.62,
+"end": 512.98
+},
+{
+"word": "Europe's",
+"start": 512.98,
+"end": 513.42
+},
+{
+"word": "answer,",
+"start": 513.42,
+"end": 513.7
+},
+{
+"word": "from",
+"start": 514.1,
+"end": 514.24
+},
+{
+"word": "a",
+"start": 514.24,
+"end": 514.38
+},
+{
+"word": "time",
+"start": 514.38,
+"end": 514.56
+},
+{
+"word": "when",
+"start": 514.56,
+"end": 514.8
+},
+{
+"word": "diners",
+"start": 514.8,
+"end": 515.22
+},
+{
+"word": "brought",
+"start": 515.22,
+"end": 515.46
+},
+{
+"word": "their",
+"start": 515.46,
+"end": 515.7
+},
+{
+"word": "own",
+"start": 515.7,
+"end": 515.96
+},
+{
+"word": "blades.",
+"start": 515.96,
+"end": 516.36
+},
+{
+"word": "In",
+"start": 516.86,
+"end": 516.98
+},
+{
+"word": "Shanghai,",
+"start": 516.98,
+"end": 517.3
+},
+{
+"word": "the",
+"start": 517.5,
+"end": 517.56
+},
+{
+"word": "cutting",
+"start": 517.56,
+"end": 517.78
+},
+{
+"word": "happened",
+"start": 517.78,
+"end": 518.12
+},
+{
+"word": "hours",
+"start": 518.12,
+"end": 518.5
+},
+{
+"word": "ago,",
+"start": 518.5,
+"end": 518.88
+},
+{
+"word": "in",
+"start": 519.24,
+"end": 519.42
+},
+{
+"word": "a",
+"start": 519.42,
+"end": 519.54
+},
+{
+"word": "kitchen.",
+"start": 519.54,
+"end": 519.8
+},
+{
+"word": "In",
+"start": 520.24,
+"end": 520.36
+},
+{
+"word": "Addis",
+"start": 520.36,
+"end": 520.62
+},
+{
+"word": "Ababa,",
+"start": 520.62,
+"end": 520.88
+},
+{
+"word": "the",
+"start": 521.26,
+"end": 521.4
+},
+{
+"word": "bread",
+"start": 521.4,
+"end": 521.6
+},
+{
+"word": "is",
+"start": 521.6,
+"end": 521.78
+},
+{
+"word": "doing",
+"start": 521.78,
+"end": 521.96
+},
+{
+"word": "the",
+"start": 521.96,
+"end": 522.16
+},
+{
+"word": "work.",
+"start": 522.16,
+"end": 522.42
+},
+{
+"word": "And",
+"start": 522.82,
+"end": 522.96
+},
+{
+"word": "in",
+"start": 522.96,
+"end": 523.1
+},
+{
+"word": "Bangkok,",
+"start": 523.1,
+"end": 523.4
+},
+{
+"word": "the",
+"start": 523.76,
+"end": 523.84
+},
+{
+"word": "spoon",
+"start": 523.84,
+"end": 524.12
+},
+{
+"word": "and",
+"start": 524.12,
+"end": 524.3
+},
+{
+"word": "fork",
+"start": 524.3,
+"end": 524.54
+},
+{
+"word": "began",
+"start": 524.54,
+"end": 524.92
+},
+{
+"word": "at",
+"start": 524.92,
+"end": 525.12
+},
+{
+"word": "a",
+"start": 525.12,
+"end": 525.22
+},
+{
+"word": "royal",
+"start": 525.22,
+"end": 525.44
+},
+{
+"word": "court",
+"start": 525.44,
+"end": 525.76
+},
+{
+"word": "in",
+"start": 525.76,
+"end": 525.96
+},
+{
+"word": "the",
+"start": 525.96,
+"end": 526.06
+},
+{
+"word": "1800s.",
+"start": 526.06,
+"end": 527.14
+},
+{
+"word": "Same",
+"start": 527.6,
+"end": 527.9
+},
+{
+"word": "problem.",
+"start": 527.9,
+"end": 528.28
+},
+{
+"word": "How",
+"start": 528.9,
+"end": 529.04
+},
+{
+"word": "do",
+"start": 529.04,
+"end": 529.16
+},
+{
+"word": "you",
+"start": 529.16,
+"end": 529.26
+},
+{
+"word": "get",
+"start": 529.26,
+"end": 529.4
+},
+{
+"word": "food",
+"start": 529.4,
+"end": 529.66
+},
+{
+"word": "from",
+"start": 529.66,
+"end": 529.88
+},
+{
+"word": "the",
+"start": 529.88,
+"end": 530.04
+},
+{
+"word": "plate",
+"start": 530.04,
+"end": 530.3
+},
+{
+"word": "to",
+"start": 530.3,
+"end": 530.52
+},
+{
+"word": "your",
+"start": 530.52,
+"end": 530.62
+},
+{
+"word": "mouth?",
+"start": 530.62,
+"end": 530.9
+},
+{
+"word": "Three",
+"start": 531.34,
+"end": 531.62
+},
+{
+"word": "brilliant",
+"start": 531.62,
+"end": 531.94
+},
+{
+"word": "answers.",
+"start": 531.94,
+"end": 532.4
+},
+{
+"word": "And",
+"start": 532.4,
+"end": 533.18
+},
+{
+"word": "one",
+"start": 533.18,
+"end": 533.38
+},
+{
+"word": "of",
+"start": 533.38,
+"end": 533.5
+},
+{
+"word": "them",
+"start": 533.5,
+"end": 533.7
+},
+{
+"word": "may",
+"start": 533.7,
+"end": 534.0
+},
+{
+"word": "even",
+"start": 534.0,
+"end": 534.36
+},
+{
+"word": "be",
+"start": 534.36,
+"end": 534.52
+},
+{
+"word": "shaping",
+"start": 534.52,
+"end": 534.84
+},
+{
+"word": "your",
+"start": 534.84,
+"end": 535.06
+},
+{
+"word": "teeth.",
+"start": 535.06,
+"end": 535.32
+},
+{
+"word": "And",
+"start": 535.76,
+"end": 535.94
+},
+{
+"word": "if",
+"start": 535.94,
+"end": 536.06
+},
+{
+"word": "you're",
+"start": 536.06,
+"end": 536.22
+},
+{
+"word": "wondering",
+"start": 536.22,
+"end": 536.52
+},
+{
+"word": "why",
+"start": 536.52,
+"end": 536.82
+},
+{
+"word": "a",
+"start": 536.82,
+"end": 536.96
+},
+{
+"word": "Korean",
+"start": 536.96,
+"end": 537.26
+},
+{
+"word": "meal",
+"start": 537.26,
+"end": 537.58
+},
+{
+"word": "so",
+"start": 537.58,
+"end": 537.84
+},
+{
+"word": "often",
+"start": 537.84,
+"end": 538.16
+},
+{
+"word": "comes",
+"start": 538.16,
+"end": 538.44
+},
+{
+"word": "glowing",
+"start": 538.44,
+"end": 538.68
+},
+{
+"word": "red",
+"start": 538.68,
+"end": 539.02
+},
+{
+"word": "with",
+"start": 539.02,
+"end": 539.24
+},
+{
+"word": "chili,",
+"start": 539.24,
+"end": 539.5
+},
+{
+"word": "while",
+"start": 540.1,
+"end": 540.26
+},
+{
+"word": "a",
+"start": 540.26,
+"end": 540.38
+},
+{
+"word": "Japanese",
+"start": 540.38,
+"end": 540.64
+},
+{
+"word": "meal",
+"start": 540.64,
+"end": 541.06
+},
+{
+"word": "usually",
+"start": 541.06,
+"end": 541.44
+},
+{
+"word": "doesn't,",
+"start": 541.44,
+"end": 542.02
+},
+{
+"word": "that's",
+"start": 542.24,
+"end": 542.56
+},
+{
+"word": "a",
+"start": 542.56,
+"end": 542.62
+},
+{
+"word": "story",
+"start": 542.62,
+"end": 542.92
+},
+{
+"word": "about",
+"start": 542.92,
+"end": 543.16
+},
+{
+"word": "a",
+"start": 543.16,
+"end": 543.28
+},
+{
+"word": "plant",
+"start": 543.28,
+"end": 543.56
+},
+{
+"word": "that",
+"start": 543.56,
+"end": 543.78
+},
+{
+"word": "crossed",
+"start": 543.78,
+"end": 544.1
+},
+{
+"word": "the",
+"start": 544.1,
+"end": 544.32
+},
+{
+"word": "world.",
+"start": 544.32,
+"end": 544.64
+},
+{
+"word": "And",
+"start": 545.2,
+"end": 545.36
+},
+{
+"word": "it",
+"start": 545.36,
+"end": 545.48
+},
+{
+"word": "starts",
+"start": 545.48,
+"end": 545.68
+},
+{
+"word": "in",
+"start": 545.68,
+"end": 545.88
+},
+{
+"word": "the",
+"start": 545.88,
+"end": 545.96
+},
+{
+"word": "Americas.",
+"start": 545.96,
+"end": 546.32
+}
+]

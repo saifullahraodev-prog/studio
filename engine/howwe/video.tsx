@@ -7,12 +7,12 @@ import { AbsoluteFill, Audio, CalculateMetadataFunction, staticFile, useCurrentF
 import { H, MapCat, Pillar, T, W } from "./kit";
 import { easeInOut, TIMING } from "./motion";
 import { TEMPLATES, TemplateId } from "./templates";
-import { KaraokeCaption, KeywordPop, punchAt, RehookChip, Word } from "./retention";
+import { beatAt, KaraokeCaption, KeywordPop, punchAt, RehookChip, Word } from "./retention";
 
 export type SceneIn = "cut" | "dolly" | "door";
 /** A scene. Built videos (tools/howwe_build.py) add `words` (frames, local to the scene; em = emphasised)
  *  and `rehook` (chip text shown from `rehookAt` to the end). `pillar` picks the accent colour. */
-export type Scene = { t: TemplateId; dur: number; in?: SceneIn; p: Record<string, unknown>; words?: Word[]; rehook?: string; rehookAt?: number; pillar?: string; say?: string };
+export type Scene = { t: TemplateId; dur: number; in?: SceneIn; p: Record<string, unknown>; words?: Word[]; rehook?: string; rehookAt?: number; pillar?: string; say?: string; beats?: number[] };
 /** `audio`: path under public/, e.g. "howwe/<slug>/mix.wav" made by tools/howwe_mix.py from the same scene list. */
 export type HowVideoProps = { scenes: Scene[]; cats?: Record<string, Record<string, MapCat>>; audio?: string; slug?: string };
 
@@ -47,9 +47,10 @@ const SceneView: React.FC<{ s: Scene; i: number; f: number; cats?: HowVideoProps
   const accent = (T as Record<string, string>)[s.pillar ?? "eat"] ?? T.eat;
   const dark = s.t === "reveal";
   const punch = punchAt(f, s.words);
+  const beat = beatAt(f, s.beats);
   return (
     <g>
-      <g transform={`translate(${W / 2} ${H / 2}) scale(${punch}) translate(${-W / 2} ${-H / 2})`}>
+      <g transform={`translate(${W / 2 + beat.x} ${H / 2}) scale(${punch * beat.z}) translate(${-W / 2} ${-H / 2})`}>
         <C {...p} uid={`s${i}`} f={f} dur={s.dur} />
       </g>
       <KeywordPop f={f} words={s.words} accent={accent} />

@@ -54,6 +54,41 @@ const Flatbread: React.FC = () => (
     {Array.from({ length: 26 }).map((_, i) => <circle key={i} cx={-170 + (i * 67) % 340} cy={-70 + ((i * 37) % 140)} r={7} fill="#B98E62" stroke="none" />)}
   </g>
 );
+/** Side-profile bite diagram: upper and lower front incisors in their gums.
+ *  over=false: edge-to-edge (pre-cutlery bite, per C. L. Brace); over=true: modern overbite (upper in front of lower). */
+const Bite: React.FC<{ over: boolean }> = ({ over }) => (
+  <g {...st}>
+    {/* gums */}
+    <path d="M-160 -220 Q-160 -150 -60 -140 L120 -140 Q160 -170 160 -220 Z" fill="#E7A9A0" />
+    <path d="M-160 220 Q-160 150 -60 140 L120 140 Q160 170 160 220 Z" fill="#E7A9A0" />
+    {/* upper incisor: points down; in an overbite it sits in front (left = front of the mouth) and lower */}
+    <g transform={over ? "translate(-34 26)" : ""}>
+      <path d="M-10 -150 Q-40 -60 -30 6 Q-10 18 14 6 Q26 -60 30 -150 Z" fill="#FBF8F2" />
+    </g>
+    {/* lower incisor: points up */}
+    <path d="M-6 150 Q-26 70 -18 0 Q2 -10 24 2 Q34 70 38 150 Z" fill="#F3EEE2" />
+    <text x={0} y={262} textAnchor="middle" fontFamily="IBM Plex Mono" fontSize={30} fill="#6B6252" stroke="none">{over ? "OVERBITE" : "EDGE TO EDGE"}</text>
+  </g>
+);
+/** Front view of an open, smiling human mouth: lips, upper and lower teeth, tongue (clear at a glance). */
+const Mouth: React.FC = () => (
+  <g {...st}>
+    <defs>
+      <clipPath id="howwe-mouth-open"><path d="M-150 -6 Q-80 -62 0 -56 Q80 -62 150 -6 Q90 92 0 96 Q-90 92 -150 -6 Z" /></clipPath>
+    </defs>
+    <path d="M-200 -4 Q-130 -120 -40 -112 Q0 -96 40 -112 Q130 -120 200 -4 Q130 140 0 144 Q-130 140 -200 -4 Z" fill="#C4574C" />
+    <path d="M-150 -6 Q-80 -62 0 -56 Q80 -62 150 -6 Q90 92 0 96 Q-90 92 -150 -6 Z" fill="#5A2326" />
+    <g clipPath="url(#howwe-mouth-open)" strokeWidth={3}>
+      <ellipse cx={0} cy={86} rx={92} ry={40} fill="#E07F7A" stroke="none" />
+      <path d="M-160 -80 L160 -80 L160 -4 Q0 12 -160 -4 Z" fill="#FBF8F2" />
+      {[-96, -50, 0, 50, 96].map((x) => <path key={x} d={`M${x} -60 L${x} ${-2 + Math.abs(x) * 0.02}`} fill="none" />)}
+      <path d="M-160 120 L160 120 L160 64 Q0 52 -160 64 Z" fill="#F3EEE2" />
+      {[-70, -24, 24, 70].map((x) => <path key={x} d={`M${x} 60 L${x} 100`} fill="none" />)}
+    </g>
+    <path d="M-150 -6 Q-80 -62 0 -56 Q80 -62 150 -6 Q90 92 0 96 Q-90 92 -150 -6 Z" fill="none" />
+    <path d="M-120 -86 Q-60 -100 -20 -92" fill="none" stroke="#E58F86" strokeWidth={8} strokeLinecap="round" />
+  </g>
+);
 const Teacup: React.FC = () => (
   <g {...st}>
     <ellipse cx={0} cy={110} rx={170} ry={34} fill={INK.plate} />
@@ -86,6 +121,9 @@ export const OBJECTS: Record<string, Entry> = {
   knifeRound: { name: "Round-tipped knife", top: -100, bottom: 348, draw: KnifeRound },
   pasta: { name: "Pasta", top: -125, bottom: 130, draw: Pasta },
   flatbread: { name: "Flatbread", top: -120, bottom: 120, draw: Flatbread },
+  biteEdge: { name: "Edge-to-edge bite", top: -220, bottom: 270, draw: () => <Bite over={false} /> },
+  mouth: { name: "Mouth", top: -120, bottom: 144, draw: Mouth },
+  biteOver: { name: "Overbite", top: -220, bottom: 270, draw: () => <Bite over={true} /> },
   knife: { name: "Knife", top: -100, bottom: 348, draw: () => <Knife x={0} y={0} ink={INK} /> },
   spoon: { name: "Spoon", top: -110, bottom: 348, draw: Spoon },
   chopsticks: { name: "Chopsticks", top: -232, bottom: 232, draw: () => <Chopsticks x={0} y={0} rot={6} ink={INK} /> },

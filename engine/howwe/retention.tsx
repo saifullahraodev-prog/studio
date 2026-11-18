@@ -115,6 +115,18 @@ export const punchAt = (f: number, words: Word[] = [], amount = 0.035) => {
   return 1 + amount * p;
 };
 
+/** Camera beats: each beat eases to the next framing (alternating 1.00 / 1.05 zoom, small sideways shift) over 18 frames. */
+export const beatAt = (f: number, beats: number[] = []) => {
+  let z = 1, x = 0;
+  beats.forEach((b, i) => {
+    const t = easeInOut(prog(f, b, 18));
+    const tz = i % 2 === 0 ? 1.05 : 1.0, tx = i % 2 === 0 ? (i % 4 === 0 ? -24 : 24) : 0;
+    z = lerp(z, tz, t);
+    x = lerp(x, tx, t);
+  });
+  return { z, x };
+};
+
 /** Re-hook chip ("But that's only half the story…") shown from frame `from` to the end of the scene. */
 export const RehookChip: React.FC<{ f: number; from: number; text: string; accent: string }> = ({ f, from, text, accent }) => {
   const t = easeOut(prog(f, from, 10));

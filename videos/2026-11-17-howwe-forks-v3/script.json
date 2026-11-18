@@ -1,0 +1,2144 @@
+{
+ "note": "How We Ended Up · video 1 v3 · scenes for the owner-approved narration (2026-11-17). Placeholders: map colours, costumes, stand-in drawings. Voice = placeholder TTS.",
+ "voiceScale": 1.15,
+ "scenes": [
+  {
+   "t": "today",
+   "in": "cut",
+   "pillar": "eat",
+   "say": "The plate arrives. Without thinking, your hands do something they've done *thousands* of times.",
+   "p": {}
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "Fork in the left. Knife in the right. Cut, lift, *eat*.",
+   "p": {
+    "tag": "YOUR TABLE",
+    "word": "Fork and knife.",
+    "items": [
+     {
+      "obj": "fork",
+      "meta": "LEFT HAND",
+      "name": "Fork",
+      "sub": "holds",
+      "on": "Fork"
+     },
+     {
+      "obj": "knifeRound",
+      "meta": "RIGHT HAND",
+      "name": "Knife",
+      "sub": "cuts",
+      "on": "Knife"
+     }
+    ]
+   }
+  },
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "Now picture the same moment in *Shanghai*. There's no knife on the table. Nobody *misses* it.",
+   "p": {
+    "tag": "SHANGHAI",
+    "title": "No knife",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       121.47,
+       31.23
+      ],
+      "label": "Shanghai",
+      "on": "Shanghai",
+      "below": false
+     }
+    ],
+    "routes": [],
+    "zoomTo": [
+     {
+      "on": "Shanghai",
+      "lonlat": [
+       121.47,
+       31.23
+      ],
+      "zoom": 2.2
+     }
+    ]
+   }
+  },
+  {
+   "t": "map",
+   "in": "cut",
+   "pillar": "eat",
+   "say": "At a family meal in many *Indian* homes, the right hand does all the work.",
+   "p": {
+    "tag": "INDIA",
+    "title": "The right hand",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       77.2,
+       28.6
+      ],
+      "label": "India",
+      "on": "Indian",
+      "below": false
+     }
+    ],
+    "routes": [],
+    "zoomTo": [
+     {
+      "on": "Indian",
+      "lonlat": [
+       77.2,
+       28.6
+      ],
+      "zoom": 2.0
+     }
+    ]
+   }
+  },
+  {
+   "t": "map",
+   "in": "cut",
+   "pillar": "eat",
+   "say": "In *Bangkok*, you usually get a spoon and a fork. But no knife, and often no *chopsticks* either.",
+   "p": {
+    "tag": "BANGKOK",
+    "title": "Spoon and fork",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       100.5,
+       13.75
+      ],
+      "label": "Bangkok",
+      "on": "Bangkok",
+      "below": false
+     }
+    ],
+    "routes": [],
+    "zoomTo": [
+     {
+      "on": "Bangkok",
+      "lonlat": [
+       100.5,
+       13.75
+      ],
+      "zoom": 2.2
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "Same hunger. Same food on the plate. Completely different *tools*.",
+   "p": {
+    "tag": "THE QUESTION",
+    "word": "Three answers.",
+    "items": [
+     {
+      "obj": "fork",
+      "meta": "EUROPE",
+      "name": "Fork",
+      "sub": "and knife",
+      "on": "hunger"
+     },
+     {
+      "obj": "chopsticks",
+      "meta": "EAST ASIA",
+      "name": "Chopsticks",
+      "sub": "no knife",
+      "on": "food"
+     },
+     {
+      "obj": "hand",
+      "meta": "SOUTH ASIA · AFRICA",
+      "name": "The hand",
+      "sub": "and bread",
+      "on": "Completely"
+     }
+    ]
+   }
+  },
+  {
+   "t": "titleWall",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "So if eating is the most *universal* thing humans do, why did we never agree on how to do it?",
+   "p": {
+    "question": "Why half the world doesn't use forks"
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "The answer starts with a problem every cook in history has faced. And it ends somewhere you'd never expect. Inside your own *mouth*.",
+   "p": {
+    "tag": "COMING UP",
+    "word": "A mystery.",
+    "items": [
+     {
+      "obj": "cleaver",
+      "meta": "THE PROBLEM",
+      "name": "Every cook's problem",
+      "sub": "coming up",
+      "on": "cook"
+     },
+     {
+      "obj": "biteOver",
+      "meta": "THE ENDING",
+      "name": "Inside your mouth",
+      "sub": "coming up",
+      "on": "mouth"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "For most of human history, the answer was simple. Your *hands*.",
+   "p": {
+    "tag": "THE BEGINNING",
+    "word": "Your hands.",
+    "items": [
+     {
+      "obj": "hand",
+      "meta": "EXHIBIT 01",
+      "name": "The hand",
+      "sub": "the first tool",
+      "on": "hands"
+     }
+    ]
+   }
+  },
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "Even in ancient *Rome*, a wealthy diner mostly ate with his fingers.",
+   "p": {
+    "tag": "ANCIENT ROME",
+    "title": "Fingers first",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       12.5,
+       41.9
+      ],
+      "label": "Rome",
+      "on": "Rome",
+      "below": false
+     }
+    ],
+    "routes": [],
+    "zoomTo": [
+     {
+      "on": "Rome",
+      "lonlat": [
+       12.5,
+       41.9
+      ],
+      "zoom": 2.1
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "There were *spoons* for soup and eggs. There were forks, too. But they stayed in the *kitchen*, for lifting meat out of a pot. Nobody brought one to the table.",
+   "p": {
+    "tag": "ANCIENT ROME",
+    "word": "Kitchen, not table.",
+    "items": [
+     {
+      "obj": "spoon",
+      "meta": "ROME · TABLE",
+      "name": "Spoon",
+      "sub": "soup and eggs",
+      "on": "spoons"
+     },
+     {
+      "obj": "fork2",
+      "meta": "ROME · KITCHEN",
+      "name": "Kitchen fork",
+      "sub": "STAND-IN drawing",
+      "on": "forks"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "But hands have a limit. A roasted leg of lamb doesn't come in *bite-sized* pieces. Somebody has to *cut* it.",
+   "p": {
+    "tag": "THE LIMIT",
+    "word": "Somebody has to cut.",
+    "items": [
+     {
+      "obj": "plate",
+      "meta": "THE PROBLEM",
+      "name": "A roast",
+      "sub": "too big to bite",
+      "on": "lamb"
+     },
+     {
+      "obj": "knife",
+      "meta": "THE SOLUTION",
+      "name": "A blade",
+      "sub": "somebody cuts",
+      "on": "cut"
+     }
+    ]
+   }
+  },
+  {
+   "t": "period",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "And that is where the world splits in *two*. Because the real question isn't what you eat with. It's where the *cutting* happens.",
+   "p": {
+    "left": "europe1500",
+    "leftSign": "EUROPE · CUT AT THE TABLE",
+    "washIn": false,
+    "marks": [],
+    "right": "china1500",
+    "rightSign": "CHINA · CUT IN THE KITCHEN",
+    "splitOn": "splits"
+   }
+  },
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "Let's start in *China*, where the answer was: in the *kitchen*.",
+   "p": {
+    "tag": "PART ONE",
+    "title": "China",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       114.35,
+       36.1
+      ],
+      "label": "China",
+      "on": "China",
+      "below": false
+     }
+    ],
+    "routes": [],
+    "zoomTo": [
+     {
+      "on": "China",
+      "lonlat": [
+       114.35,
+       36.1
+      ],
+      "zoom": 1.9
+     }
+    ]
+   }
+  },
+  {
+   "t": "period",
+   "in": "door",
+   "pillar": "eat",
+   "say": "Chinese cooking had a problem: *fuel*. Firewood was precious.",
+   "p": {
+    "left": "china1500",
+    "leftSign": "CHINA · A KITCHEN",
+    "washIn": true,
+    "marks": [
+     {
+      "on": "Firewood",
+      "kind": "circle",
+      "x": 1280,
+      "y": 600,
+      "w": 240,
+      "h": 200
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "One popular explanation, repeated by many food historians, is that cooks found a clever way around it. Cut everything *small* first.",
+   "p": {
+    "tag": "A POPULAR EXPLANATION",
+    "word": "Cut it small.",
+    "items": [
+     {
+      "obj": "cleaver",
+      "meta": "THE KITCHEN",
+      "name": "One cleaver",
+      "sub": "cut small first",
+      "on": "small"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "Thin strips of meat, diced vegetables, all of it chopped with a single heavy *cleaver*. Small pieces cook *fast*. Fast cooking saves fuel.",
+   "p": {
+    "tag": "THE KITCHEN",
+    "word": "Small and fast.",
+    "items": [
+     {
+      "obj": "cleaver",
+      "meta": "STEP 1",
+      "name": "Chop",
+      "sub": "one heavy cleaver",
+      "on": "cleaver"
+     },
+     {
+      "obj": "bowl",
+      "meta": "STEP 2",
+      "name": "Cook fast",
+      "sub": "saves fuel",
+      "on": "fast"
+     }
+    ]
+   }
+  },
+  {
+   "t": "period",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "But that changes the meal itself. If everything reaches the table already *bite-sized*, you don't need a knife at dinner at all.",
+   "p": {
+    "left": "europe1500",
+    "leftSign": "EUROPE · c. 1500",
+    "washIn": false,
+    "marks": [
+     {
+      "on": "bite-sized",
+      "kind": "circle",
+      "x": 1760,
+      "y": 690,
+      "w": 260,
+      "h": 220
+     }
+    ],
+    "right": "china1500",
+    "rightSign": "CHINA · c. 1500"
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "In fact, bringing one out could seem a little *rude*, as if the cook hadn't finished the job.",
+   "p": {
+    "frontLabel": "AT A CHINESE TABLE",
+    "heard": "A knife?",
+    "backLabel": "WHY NOT",
+    "actual": "The cook already did the cutting.",
+    "source": "",
+    "flipOn": "as"
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "What you need instead is something to *pick* up small pieces. And China already had it.",
+   "p": {
+    "tag": "THE TOOL",
+    "word": "Something to pick up.",
+    "items": [
+     {
+      "obj": "chopsticks",
+      "meta": "CHINA",
+      "name": "Chopsticks",
+      "sub": "for small pieces",
+      "on": "pick"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "The oldest chopsticks ever found are bronze, from a royal city near *Anyang*, and they're more than *three thousand* years old.",
+   "p": {
+    "tag": "ANYANG, CHINA",
+    "word": "c. 1200 BC",
+    "items": [
+     {
+      "obj": "chopsticks",
+      "meta": "SHANG PERIOD",
+      "name": "Bronze chopsticks",
+      "sub": "c. 1200 BC · Yinxu",
+      "on": "oldest"
+     }
+    ]
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "But here's the twist: they probably weren't for *eating*. They were *cooking* tools, for reaching into a hot pot.",
+   "p": {
+    "frontLabel": "THE OLDEST CHOPSTICKS",
+    "heard": "For eating?",
+    "backLabel": "PROBABLY",
+    "actual": "Cooking tools.",
+    "source": "",
+    "flipOn": "They"
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "For centuries, people in China ate their grain porridge with *spoons*. Then, during the Han dynasty, as more people ate *rice*, chopsticks moved from the stove to the table.",
+   "p": {
+    "tag": "EARLY CHINA",
+    "word": "Spoons first.",
+    "items": [
+     {
+      "obj": "spoon",
+      "meta": "EARLY CHINA",
+      "name": "Spoon",
+      "sub": "for porridge",
+      "on": "spoons"
+     },
+     {
+      "obj": "bowl",
+      "meta": "HAN DYNASTY",
+      "name": "Rice",
+      "sub": "and chopsticks",
+      "on": "rice"
+     }
+    ]
+   }
+  },
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "And only in the *Ming* dynasty, about six hundred years ago, did they take over completely.",
+   "p": {
+    "tag": "MING DYNASTY",
+    "title": "Chopsticks take over",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       116.4,
+       39.9
+      ],
+      "label": "Beijing",
+      "on": "Ming",
+      "below": false
+     }
+    ],
+    "routes": [],
+    "zoomTo": [
+     {
+      "on": "Ming",
+      "lonlat": [
+       116.4,
+       39.9
+      ],
+      "zoom": 2.0
+     }
+    ]
+   }
+  },
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "From China, chopsticks travelled to *Korea*, *Japan* and *Vietnam*. And each place made them its own.",
+   "p": {
+    "tag": "SPREAD",
+    "title": "One tool, many tables",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       114.35,
+       36.1
+      ],
+      "label": "China",
+      "on": "China",
+      "below": false
+     },
+     {
+      "lonlat": [
+       126.98,
+       37.57
+      ],
+      "label": "Korea",
+      "on": "Korea",
+      "below": false
+     },
+     {
+      "lonlat": [
+       135.8,
+       34.68
+      ],
+      "label": "Japan",
+      "on": "Japan",
+      "below": false
+     },
+     {
+      "lonlat": [
+       105.85,
+       21.03
+      ],
+      "label": "Vietnam",
+      "on": "Vietnam",
+      "below": true
+     }
+    ],
+    "routes": [
+     {
+      "from": [
+       114.35,
+       36.1
+      ],
+      "to": [
+       126.98,
+       37.57
+      ],
+      "on": "Korea"
+     },
+     {
+      "from": [
+       114.35,
+       36.1
+      ],
+      "to": [
+       135.8,
+       34.68
+      ],
+      "on": "Japan"
+     },
+     {
+      "from": [
+       114.35,
+       36.1
+      ],
+      "to": [
+       105.85,
+       21.03
+      ],
+      "on": "Vietnam"
+     }
+    ],
+    "zoomTo": [
+     {
+      "on": "China",
+      "lonlat": [
+       120,
+       33
+      ],
+      "zoom": 1.9
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "In Korea, they're often made of *metal*, and they come with a *spoon*.",
+   "p": {
+    "tag": "KOREA",
+    "word": "Metal and a spoon.",
+    "items": [
+     {
+      "obj": "chopsticks",
+      "meta": "KOREA",
+      "name": "Metal chopsticks",
+      "sub": "STAND-IN drawing",
+      "on": "metal"
+     },
+     {
+      "obj": "spoon",
+      "meta": "KOREA",
+      "name": "Spoon",
+      "sub": "served together",
+      "on": "spoon"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "Legend says Korean kings ate with *silver* chopsticks, because silver would turn black near *poison*.",
+   "p": {
+    "tag": "A LEGEND",
+    "word": "Silver.",
+    "items": [
+     {
+      "obj": "chopsticks",
+      "meta": "KOREA · LEGEND",
+      "name": "Silver chopsticks",
+      "sub": "STAND-IN drawing",
+      "on": "silver"
+     }
+    ]
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "The catch? Silver reacts to *sulphur*, in things like eggs and garlic. Not to arsenic itself.",
+   "p": {
+    "frontLabel": "THE LEGEND",
+    "heard": "Silver detects poison.",
+    "backLabel": "THE CATCH",
+    "actual": "Silver reacts to sulphur. Not to arsenic itself.",
+    "source": "Smithsonian Magazine",
+    "flipOn": "Silver"
+   }
+  },
+  {
+   "t": "period",
+   "in": "door",
+   "pillar": "eat",
+   "say": "In Japan, chopsticks come with *rules*. Never stand them *upright* in a bowl of rice. That's how rice is offered to the *dead*.",
+   "p": {
+    "left": "japan",
+    "leftSign": "JAPAN · A FAMILY MEAL",
+    "washIn": false,
+    "marks": [
+     {
+      "on": "upright",
+      "kind": "circle",
+      "x": 1290,
+      "y": 600,
+      "w": 150,
+      "h": 190
+     }
+    ]
+   }
+  },
+  {
+   "t": "period",
+   "in": "cut",
+   "pillar": "eat",
+   "say": "And never pass food from one pair of chopsticks to *another*. At Japanese funerals, that's how family members pass the *bones* after a cremation.",
+   "p": {
+    "left": "japan",
+    "leftSign": "JAPAN · A FAMILY MEAL",
+    "washIn": false,
+    "marks": [
+     {
+      "on": "another",
+      "kind": "underline",
+      "x": 810,
+      "y": 690,
+      "w": 280
+     }
+    ]
+   }
+  },
+  {
+   "t": "period",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "So in East Asia, the cutting moved into the *kitchen*. In Europe, it stayed right there at the *table*.",
+   "p": {
+    "left": "europe1500",
+    "leftSign": "EUROPE · AT THE TABLE",
+    "washIn": false,
+    "marks": [],
+    "right": "china1500",
+    "rightSign": "EAST ASIA · IN THE KITCHEN",
+    "splitOn": "East"
+   }
+  },
+  {
+   "t": "period",
+   "in": "door",
+   "pillar": "eat",
+   "say": "European cooks roasted meat in large joints, and the *carving* happened in front of the diners. So everyone needed a *blade*.",
+   "p": {
+    "left": "europe1500",
+    "leftSign": "PART TWO · EUROPE",
+    "washIn": true,
+    "marks": []
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "But in the Middle Ages, your host usually didn't give you one. You brought your *own*.",
+   "p": {
+    "tag": "THE MIDDLE AGES",
+    "word": "Bring your own.",
+    "items": [
+     {
+      "obj": "knife",
+      "meta": "MIDDLE AGES",
+      "name": "Your own knife",
+      "sub": "hosts didn't provide one",
+      "on": "own"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "Almost everyone carried a knife on their belt, for cutting dinner, and, if necessary, for *fighting*.",
+   "p": {
+    "tag": "THE MIDDLE AGES",
+    "word": "One knife, two jobs.",
+    "items": [
+     {
+      "obj": "knife",
+      "meta": "AT THE TABLE",
+      "name": "Eating knife",
+      "sub": "for dinner",
+      "on": "cutting"
+     },
+     {
+      "obj": "knife",
+      "meta": "ON THE ROAD",
+      "name": "The same knife",
+      "sub": "for self-defence",
+      "on": "fighting"
+     }
+    ]
+   }
+  },
+  {
+   "t": "period",
+   "in": "cut",
+   "pillar": "eat",
+   "say": "Picture that for a moment. A long table, a roast in the middle, and every single guest *armed*.",
+   "p": {
+    "left": "europe1500",
+    "leftSign": "EUROPE · A FEAST",
+    "washIn": false,
+    "marks": [
+     {
+      "kind": "circle",
+      "x": 751,
+      "y": 657,
+      "w": 120,
+      "h": 110,
+      "on": "armed"
+     }
+    ]
+   }
+  },
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "Then, in the eleventh century, something strange arrived in *Venice*.",
+   "p": {
+    "tag": "VENICE",
+    "title": "Something strange",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       28.98,
+       41.01
+      ],
+      "label": "Constantinople",
+      "on": "Then",
+      "below": false
+     },
+     {
+      "lonlat": [
+       12.34,
+       45.44
+      ],
+      "label": "Venice",
+      "on": "Venice",
+      "below": false
+     }
+    ],
+    "routes": [
+     {
+      "from": [
+       28.98,
+       41.01
+      ],
+      "to": [
+       12.34,
+       45.44
+      ],
+      "on": "arrived"
+     }
+    ],
+    "zoomTo": [
+     {
+      "on": "Venice",
+      "lonlat": [
+       12.34,
+       45.44
+      ],
+      "zoom": 2.2
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "cut",
+   "pillar": "eat",
+   "say": "A Byzantine bride sat down at her wedding feast and lifted her food with a little *golden* fork, with two prongs.",
+   "p": {
+    "tag": "VENICE · 11TH CENTURY",
+    "word": "A wedding feast.",
+    "items": [
+     {
+      "obj": "fork2",
+      "meta": "VENICE, 11TH C.",
+      "name": "A golden fork",
+      "sub": "two prongs",
+      "on": "golden"
+     }
+    ]
+   }
+  },
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "Wealthy *Byzantines* had been using forks for a while. Venice had *not*.",
+   "p": {
+    "tag": "BYZANTIUM",
+    "title": "Forks in the East",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       28.98,
+       41.01
+      ],
+      "label": "Constantinople",
+      "on": "Byzantines",
+      "below": false
+     },
+     {
+      "lonlat": [
+       12.34,
+       45.44
+      ],
+      "label": "Venice",
+      "on": "Venice",
+      "below": false
+     }
+    ],
+    "routes": [],
+    "zoomTo": [
+     {
+      "on": "Byzantines",
+      "lonlat": [
+       28.98,
+       41.01
+      ],
+      "zoom": 2.2
+     },
+     {
+      "on": "Venice",
+      "lonlat": [
+       12.34,
+       45.44
+      ],
+      "zoom": 2.2
+     }
+    ]
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "A churchman was *horrified*. God, he said, had already given us forks. Our *fingers*.",
+   "p": {
+    "frontLabel": "A VENETIAN CHURCHMAN, 11TH C.",
+    "heard": "God has already given us forks.",
+    "backLabel": "HE MEANT",
+    "actual": "Our fingers.",
+    "source": "National Geographic",
+    "flipOn": "Our"
+   }
+  },
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "And for centuries, most of Europe *agreed* with him. Except *Italy*. By the fourteenth century, forks were becoming common at Italian tables.",
+   "p": {
+    "tag": "ITALY",
+    "title": "The fork stays",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       12.34,
+       45.44
+      ],
+      "label": "Venice",
+      "on": "Italy",
+      "below": false
+     },
+     {
+      "lonlat": [
+       11.25,
+       43.77
+      ],
+      "label": "Florence",
+      "on": "fourteenth",
+      "below": true
+     }
+    ],
+    "routes": [],
+    "zoomTo": [
+     {
+      "on": "Italy",
+      "lonlat": [
+       12,
+       43
+      ],
+      "zoom": 2.2
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "One popular explanation is *pasta*. Try eating long noodles with a knife.",
+   "p": {
+    "tag": "A POPULAR EXPLANATION",
+    "word": "Pasta.",
+    "items": [
+     {
+      "obj": "pasta",
+      "meta": "ITALY",
+      "name": "Long pasta",
+      "sub": "a popular explanation",
+      "on": "pasta"
+     }
+    ]
+   }
+  },
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "Then, in *1608*, an English traveller named Thomas Coryat toured Italy, walking almost *half* of his journey.",
+   "p": {
+    "tag": "1608",
+    "title": "A long walk",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       -2.7,
+       50.94
+      ],
+      "label": "Odcombe",
+      "on": "Thomas",
+      "below": false
+     },
+     {
+      "lonlat": [
+       12.34,
+       45.44
+      ],
+      "label": "Venice",
+      "on": "Italy",
+      "below": true
+     }
+    ],
+    "routes": [
+     {
+      "from": [
+       -2.7,
+       50.94
+      ],
+      "to": [
+       12.34,
+       45.44
+      ],
+      "on": "toured"
+     }
+    ],
+    "zoomTo": [
+     {
+      "on": "Thomas",
+      "lonlat": [
+       5,
+       48
+      ],
+      "zoom": 2.0
+     }
+    ]
+   }
+  },
+  {
+   "t": "map",
+   "in": "cut",
+   "pillar": "eat",
+   "say": "He watched Italians eating with forks, and he brought the idea *home*.",
+   "p": {
+    "tag": "1608",
+    "title": "The idea comes home",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       12.34,
+       45.44
+      ],
+      "label": "Venice",
+      "on": "Italians",
+      "below": true
+     },
+     {
+      "lonlat": [
+       -0.13,
+       51.51
+      ],
+      "label": "England",
+      "on": "home",
+      "below": false
+     }
+    ],
+    "routes": [
+     {
+      "from": [
+       12.34,
+       45.44
+      ],
+      "to": [
+       -0.13,
+       51.51
+      ],
+      "on": "brought"
+     }
+    ],
+    "zoomTo": [
+     {
+      "on": "watched",
+      "lonlat": [
+       5,
+       48
+      ],
+      "zoom": 2.0
+     },
+     {
+      "on": "home",
+      "lonlat": [
+       5,
+       48
+      ],
+      "zoom": 2.0
+     }
+    ]
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "His friends gave him a nickname. *Furcifer*. Latin for fork-bearer. And also, for *rascal*.",
+   "p": {
+    "frontLabel": "HIS FRIENDS CALLED HIM",
+    "heard": "“Furcifer”",
+    "backLabel": "LATIN FOR",
+    "actual": "Fork-bearer. And also: rascal.",
+    "source": "Coryat's Crudities (1611)",
+    "flipOn": "Latin"
+   }
+  },
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "Slowly, the fork crept north. It reached the French royal court in the early *sixteen hundreds*. And there, it ran straight into the other tool on the table.",
+   "p": {
+    "tag": "FRANCE",
+    "title": "The royal court",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       2.35,
+       48.86
+      ],
+      "label": "Paris",
+      "on": "French",
+      "below": false
+     }
+    ],
+    "routes": [],
+    "zoomTo": [
+     {
+      "on": "French",
+      "lonlat": [
+       2.35,
+       48.86
+      ],
+      "zoom": 2.2
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "The *knife*. Remember, every guest had a sharp, *pointed* blade.",
+   "p": {
+    "tag": "THE OTHER TOOL",
+    "word": "The knife.",
+    "items": [
+     {
+      "obj": "knife",
+      "meta": "EVERY GUEST",
+      "name": "Pointed knife",
+      "sub": "sharp and personal",
+      "on": "knife"
+     }
+    ]
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "The story goes that Cardinal *Richelieu* was so disgusted by a guest picking his teeth with the point of his knife that he had the tips of his own table knives ground *round*.",
+   "p": {
+    "frontLabel": "THE STORY GOES",
+    "heard": "A guest picks his teeth with a knife point.",
+    "backLabel": "SO, THE STORY GOES",
+    "actual": "Richelieu had his knives ground round.",
+    "source": "Wikipedia: Table knife (a tradition)",
+    "flipOn": "ground"
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "And in *1669*, King Louis the Fourteenth reportedly went further, and banned pointed table knives.",
+   "p": {
+    "tag": "FRANCE · 1669",
+    "word": "Banned.",
+    "items": [
+     {
+      "obj": "knife",
+      "meta": "FRANCE · 1669",
+      "name": "Pointed table knife",
+      "sub": "reportedly banned",
+      "on": "banned"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "That solved one problem. But it created another. A blunt knife can *cut*, but it can't *spear*. Somebody else had to do the spearing.",
+   "p": {
+    "tag": "A NEW PROBLEM",
+    "word": "Who spears?",
+    "items": [
+     {
+      "obj": "knifeRound",
+      "meta": "THE KNIFE",
+      "name": "Cuts",
+      "sub": "no point",
+      "on": "cut"
+     },
+     {
+      "obj": "fork2",
+      "meta": "THE FORK",
+      "name": "Spears",
+      "sub": "two prongs",
+      "on": "spear"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "Therefore, the fork had to grow up. Two prongs weren't enough to hold food steady, so a *third* was added. And in the eighteenth century, in Germany, a curved fork with *four* prongs appeared.",
+   "p": {
+    "tag": "THE FORK GROWS UP",
+    "word": "More prongs.",
+    "items": [
+     {
+      "obj": "fork2",
+      "meta": "TWO PRONGS",
+      "name": "Two",
+      "sub": "medieval",
+      "on": "Two"
+     },
+     {
+      "obj": "fork3",
+      "meta": "THREE PRONGS",
+      "name": "Three",
+      "sub": "early 1700s",
+      "on": "third"
+     },
+     {
+      "obj": "fork",
+      "meta": "FOUR PRONGS",
+      "name": "Four",
+      "sub": "Germany, 1700s",
+      "on": "four"
+     }
+    ]
+   }
+  },
+  {
+   "t": "today",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "That's the shape of the fork you probably used *today*. It's only about two hundred and fifty years *old*.",
+   "p": {}
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "And here's where the story gets *strange*. In the nineteen seventies, an American anthropologist named Charles Loring *Brace* was studying human teeth.",
+   "p": {
+    "tag": "THE STRANGEST CONSEQUENCE",
+    "word": "Your teeth.",
+    "items": [
+     {
+      "obj": "biteOver",
+      "meta": "C. L. BRACE",
+      "name": "Human teeth",
+      "sub": "1970s research",
+      "on": "teeth"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "He noticed that most people today have an *overbite*: the top front teeth sit in front of the bottom ones. But in Europe, skulls older than a few centuries mostly *don't*.",
+   "p": {
+    "tag": "WHAT BRACE NOTICED",
+    "word": "Two bites.",
+    "items": [
+     {
+      "obj": "biteOver",
+      "meta": "MOST PEOPLE TODAY",
+      "name": "Overbite",
+      "sub": "top in front",
+      "on": "overbite"
+     },
+     {
+      "obj": "biteEdge",
+      "meta": "OLDER EUROPEAN SKULLS",
+      "name": "Edge to edge",
+      "sub": "mostly",
+      "on": "don't"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "His explanation was this. Before knives and forks, people often *clamped* a piece of meat in their front teeth and sliced off a mouthful.",
+   "p": {
+    "tag": "BRACE'S EXPLANATION",
+    "word": "Clamp and slice.",
+    "items": [
+     {
+      "obj": "biteEdge",
+      "meta": "THE GRIP",
+      "name": "Clamp",
+      "sub": "front teeth",
+      "on": "clamped"
+     },
+     {
+      "obj": "knife",
+      "meta": "THE CUT",
+      "name": "Slice",
+      "sub": "at the lips",
+      "on": "sliced"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "That habit kept the teeth meeting *edge* to edge. Once Europeans began cutting food into small pieces on the *plate*, the front teeth no longer had to grip. Over generations of childhoods, the bite *changed*.",
+   "p": {
+    "tag": "BRACE'S EXPLANATION",
+    "word": "The bite changes.",
+    "items": [
+     {
+      "obj": "biteEdge",
+      "meta": "BEFORE",
+      "name": "Edge to edge",
+      "sub": "teeth grip",
+      "on": "edge"
+     },
+     {
+      "obj": "fork",
+      "meta": "THEN",
+      "name": "Cut on the plate",
+      "sub": "knife and fork",
+      "on": "plate"
+     },
+     {
+      "obj": "biteOver",
+      "meta": "AFTER",
+      "name": "Overbite",
+      "sub": "no grip needed",
+      "on": "changed"
+     }
+    ]
+   }
+  },
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "And in *China*, Brace said he found the same overbite much earlier, around a thousand years ago, in a culture that had been eating pre-cut food with *chopsticks* for centuries.",
+   "p": {
+    "tag": "CHINA · SONG ERA",
+    "title": "Earlier still",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       121.47,
+       31.23
+      ],
+      "label": "Song-era jaw",
+      "on": "thousand",
+      "below": true
+     }
+    ],
+    "routes": [],
+    "zoomTo": [
+     {
+      "on": "China",
+      "lonlat": [
+       114.35,
+       36.1
+      ],
+      "zoom": 1.9
+     }
+    ]
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "It's one researcher's *theory*, and it's still debated. But if he's right, the way your ancestors cut their dinner is still written in your *face*.",
+   "p": {
+    "frontLabel": "A THEORY",
+    "heard": "Cutlery changed our bite.",
+    "backLabel": "IF HE'S RIGHT",
+    "actual": "Your ancestors' dinners are written in your face.",
+    "source": "C. L. Brace (1977), via Bee Wilson",
+    "flipOn": "if"
+   }
+  },
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "And then there's the third answer, the *oldest* one of all.",
+   "p": {
+    "tag": "PART THREE",
+    "title": "The hand",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       77.2,
+       28.6
+      ],
+      "label": "India",
+      "on": "oldest",
+      "below": false
+     },
+     {
+      "lonlat": [
+       38.74,
+       9.03
+      ],
+      "label": "Ethiopia",
+      "on": "answer",
+      "below": true
+     }
+    ],
+    "routes": [],
+    "zoomTo": [
+     {
+      "on": "oldest",
+      "lonlat": [
+       55,
+       15
+      ],
+      "zoom": 1.5
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "Eating with your hands isn't the absence of a tool. It's a tradition, with *rules*.",
+   "p": {
+    "tag": "NOT A MISSING TOOL",
+    "word": "A tradition.",
+    "items": [
+     {
+      "obj": "hand",
+      "meta": "THE HAND",
+      "name": "A tradition",
+      "sub": "with rules",
+      "on": "hands"
+     }
+    ]
+   }
+  },
+  {
+   "t": "period",
+   "in": "door",
+   "pillar": "eat",
+   "say": "Across much of South Asia, the Middle East and Africa, the first rule is simple. You eat with your *right* hand.",
+   "p": {
+    "left": "india",
+    "leftSign": "INDIA · A FAMILY MEAL",
+    "washIn": false,
+    "marks": [
+     {
+      "on": "right",
+      "kind": "circle",
+      "x": 753,
+      "y": 620,
+      "w": 120,
+      "h": 110
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "And very often, the bread is the *cutlery*. In India, a piece of flatbread becomes a *scoop*.",
+   "p": {
+    "tag": "BREAD AS CUTLERY",
+    "word": "The scoop.",
+    "items": [
+     {
+      "obj": "flatbread",
+      "meta": "INDIA",
+      "name": "Flatbread",
+      "sub": "STAND-IN drawing",
+      "on": "cutlery"
+     },
+     {
+      "obj": "hand",
+      "meta": "THE HAND",
+      "name": "Scoop",
+      "sub": "right hand",
+      "on": "scoop"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "In Ethiopia, the spongy bread called *injera* is the plate and the spoon at the same time. You tear, you fold, you *lift*.",
+   "p": {
+    "tag": "ETHIOPIA",
+    "word": "Plate and spoon.",
+    "items": [
+     {
+      "obj": "flatbread",
+      "meta": "ETHIOPIA",
+      "name": "Injera",
+      "sub": "STAND-IN drawing",
+      "on": "injera"
+     },
+     {
+      "obj": "hand",
+      "meta": "THE HAND",
+      "name": "Tear, fold, lift",
+      "sub": "right hand",
+      "on": "lift"
+     }
+    ]
+   }
+  },
+  {
+   "t": "period",
+   "in": "door",
+   "pillar": "eat",
+   "say": "There's even a gesture for *love*. In Ethiopia, it's called *gursha*.",
+   "p": {
+    "left": "ethiopia",
+    "leftSign": "ETHIOPIA · A FAMILY MEAL",
+    "washIn": false,
+    "marks": []
+   }
+  },
+  {
+   "t": "period",
+   "in": "cut",
+   "pillar": "eat",
+   "say": "You take a mouthful, and you feed it to someone else, with your own *hand*. A guest, an elder, a newly married partner.",
+   "p": {
+    "left": "ethiopia",
+    "leftSign": "ETHIOPIA · GURSHA",
+    "washIn": false,
+    "marks": [
+     {
+      "on": "hand",
+      "kind": "circle",
+      "x": 871,
+      "y": 640,
+      "w": 130,
+      "h": 120
+     }
+    ]
+   }
+  },
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "And here's a twist. *Thailand* used to eat with hands too.",
+   "p": {
+    "tag": "A TWIST",
+    "title": "Thailand",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       100.5,
+       13.75
+      ],
+      "label": "Bangkok",
+      "on": "Thailand",
+      "below": false
+     }
+    ],
+    "routes": [],
+    "zoomTo": [
+     {
+      "on": "Thailand",
+      "lonlat": [
+       100.5,
+       13.75
+      ],
+      "zoom": 2.2
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "Then, in the eighteen hundreds, the royal court of Siam adopted Western *spoons* and *forks*.",
+   "p": {
+    "tag": "SIAM, 1800s",
+    "word": "A royal choice.",
+    "items": [
+     {
+      "obj": "spoon",
+      "meta": "SIAM",
+      "name": "Spoon",
+      "sub": "from the West",
+      "on": "spoons"
+     },
+     {
+      "obj": "fork",
+      "meta": "SIAM",
+      "name": "Fork",
+      "sub": "from the West",
+      "on": "forks"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "Today, the spoon goes in your *right* hand, and the fork pushes food onto it.",
+   "p": {
+    "tag": "A THAI TABLE",
+    "word": "How it works.",
+    "items": [
+     {
+      "obj": "spoon",
+      "meta": "RIGHT HAND",
+      "name": "Spoon",
+      "sub": "eats",
+      "on": "right"
+     },
+     {
+      "obj": "fork",
+      "meta": "LEFT HAND",
+      "name": "Fork",
+      "sub": "pushes",
+      "on": "pushes"
+     }
+    ]
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "That's why a Thai meal usually comes with a spoon and a fork, and not with *chopsticks*.",
+   "p": {
+    "frontLabel": "A THAI TABLE",
+    "heard": "Chopsticks?",
+    "backLabel": "USUALLY",
+    "actual": "A spoon and a fork.",
+    "source": "",
+    "flipOn": "not"
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "So where does that leave the stories you've probably *heard*?",
+   "p": {
+    "frontLabel": "THE STORY YOU HEARD",
+    "heard": "Three famous stories.",
+    "backLabel": "LET'S CHECK",
+    "actual": "True, exaggerated, or debated?",
+    "source": "",
+    "flipOn": "heard"
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "Here is the story you heard. *Confucius* banned knives from the dinner table, because knives meant violence. What's true? There is a famous Chinese saying: a gentleman keeps away from the *kitchen*.",
+   "p": {
+    "frontLabel": "THE STORY YOU HEARD",
+    "heard": "Confucius banned knives from the table.",
+    "backLabel": "WHAT'S TRUE",
+    "actual": "“A gentleman keeps away from the kitchen.”",
+    "source": "",
+    "flipOn": "What's"
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "What's wrong? It comes from *Mencius*, not Confucius.",
+   "p": {
+    "frontLabel": "WHO SAID IT?",
+    "heard": "Confucius?",
+    "backLabel": "WHAT'S WRONG",
+    "actual": "It was Mencius.",
+    "source": "Stanford Encyclopedia of Philosophy",
+    "flipOn": "Mencius"
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "And in context, he's talking about a king who couldn't bear to see an *ox* led to its death. It's about *compassion*, not table manners.",
+   "p": {
+    "frontLabel": "IN CONTEXT",
+    "heard": "A king spares an ox.",
+    "backLabel": "IT'S ABOUT",
+    "actual": "Compassion. Not table manners.",
+    "source": "Mengzi 1A7",
+    "flipOn": "compassion"
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "Here's another. *Catherine* de' Medici brought the fork from Italy to France. It's a lovely story, and you'll find it everywhere. Historians aren't *convinced*. The evidence for it is thin.",
+   "p": {
+    "frontLabel": "THE STORY YOU HEARD",
+    "heard": "Catherine de' Medici brought the fork to France.",
+    "backLabel": "THE EVIDENCE",
+    "actual": "Thin. Historians aren't convinced.",
+    "source": "National Geographic",
+    "flipOn": "Historians"
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "And the biggest one of all. That forks are simply the *civilised* way to eat. Europe spent *six centuries* thinking the opposite.",
+   "p": {
+    "frontLabel": "THE BIGGEST ONE",
+    "heard": "Forks are the civilised way to eat.",
+    "backLabel": "CORRECTION",
+    "actual": "Europe thought the opposite for six centuries.",
+    "source": "",
+    "flipOn": "Europe"
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "And every tradition in this story, from Japanese *chopsticks* to Ethiopian *gursha*, comes with manners just as strict as any dinner party in *Paris*.",
+   "p": {
+    "tag": "EVERY TRADITION",
+    "word": "Strict manners.",
+    "items": [
+     {
+      "obj": "chopsticks",
+      "meta": "JAPAN",
+      "name": "Chopstick rules",
+      "sub": "from funerals",
+      "on": "chopsticks"
+     },
+     {
+      "obj": "hand",
+      "meta": "ETHIOPIA",
+      "name": "Gursha",
+      "sub": "a gesture of love",
+      "on": "gursha"
+     },
+     {
+      "obj": "fork",
+      "meta": "FRANCE",
+      "name": "Dinner party",
+      "sub": "Paris",
+      "on": "Paris"
+     }
+    ]
+   }
+  },
+  {
+   "t": "reveal",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "None of these tools is *better*. Each one is a smart answer to a different *problem*.",
+   "p": {
+    "tag": "THE ANSWER",
+    "line": "None is better.",
+    "left": "fork",
+    "right": "hand",
+    "answer": {
+     "meta": "THE ANSWER",
+     "name": "Different problems",
+     "sub": "different answers"
+    },
+    "downOn": "None",
+    "answerOn": "smart"
+   },
+   "hold": 0.3
+  },
+  {
+   "t": "today",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "So let's go back to that *plate*.",
+   "p": {}
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "The round tip on your knife? A *cardinal* and a king, who were tired of armed guests.",
+   "p": {
+    "tag": "YOUR TABLE",
+    "word": "The round tip.",
+    "items": [
+     {
+      "obj": "knifeRound",
+      "meta": "FRANCE, 1600s",
+      "name": "Round-tipped knife",
+      "sub": "a cardinal and a king",
+      "on": "knife"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "cut",
+   "pillar": "eat",
+   "say": "The four prongs on your fork? Eighteenth-century *Germany*.",
+   "p": {
+    "tag": "YOUR TABLE",
+    "word": "Four prongs.",
+    "items": [
+     {
+      "obj": "fork",
+      "meta": "GERMANY, 1700s",
+      "name": "Four prongs",
+      "sub": "about 250 years old",
+      "on": "fork"
+     }
+    ]
+   }
+  },
+  {
+   "t": "today",
+   "in": "cut",
+   "pillar": "eat",
+   "say": "The cutting you're about to do, right there at the table? That's Europe's *answer*, from a time when meat came in big pieces and everyone carried a blade.",
+   "p": {}
+  },
+  {
+   "t": "period",
+   "in": "door",
+   "pillar": "eat",
+   "say": "In Shanghai, the cutting happened hours ago, in a *kitchen*, to save fuel.",
+   "p": {
+    "left": "china1500",
+    "leftSign": "SHANGHAI · THE KITCHEN",
+    "washIn": false,
+    "marks": []
+   }
+  },
+  {
+   "t": "period",
+   "in": "cut",
+   "pillar": "eat",
+   "say": "In Addis Ababa, the *bread* is doing the work.",
+   "p": {
+    "left": "ethiopia",
+    "leftSign": "ADDIS ABABA · THE BREAD",
+    "washIn": false,
+    "marks": []
+   }
+  },
+  {
+   "t": "map",
+   "in": "cut",
+   "pillar": "eat",
+   "say": "And in *Bangkok*, a royal court decided it in the eighteen hundreds.",
+   "p": {
+    "tag": "BANGKOK",
+    "title": "A royal decision",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       100.5,
+       13.75
+      ],
+      "label": "Bangkok",
+      "on": "Bangkok",
+      "below": false
+     }
+    ],
+    "routes": [],
+    "zoomTo": [
+     {
+      "on": "Bangkok",
+      "lonlat": [
+       100.5,
+       13.75
+      ],
+      "zoom": 2.2
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "Same problem. How do you get food from the plate to your mouth? Three brilliant *answers*.",
+   "p": {
+    "tag": "THREE ANSWERS",
+    "word": "One problem.",
+    "items": [
+     {
+      "obj": "fork",
+      "meta": "AT THE TABLE",
+      "name": "Knife and fork",
+      "sub": "Europe",
+      "on": "problem"
+     },
+     {
+      "obj": "chopsticks",
+      "meta": "IN THE KITCHEN",
+      "name": "Chopsticks",
+      "sub": "East Asia",
+      "on": "plate"
+     },
+     {
+      "obj": "hand",
+      "meta": "IN THE BREAD",
+      "name": "The hand",
+      "sub": "South Asia, Africa",
+      "on": "answers"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "cut",
+   "pillar": "eat",
+   "say": "And one of them may even be shaping your *teeth*.",
+   "p": {
+    "tag": "AND ONE MORE THING",
+    "word": "Your teeth.",
+    "items": [
+     {
+      "obj": "biteOver",
+      "meta": "YOU",
+      "name": "Your bite",
+      "sub": "a theory",
+      "on": "teeth"
+     }
+    ]
+   }
+  },
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "say": "And if you're wondering why a *Korean* meal so often comes glowing red with chili, while a *Japanese* meal usually doesn't, that's a story about a plant that crossed the world. And it starts in the *Americas*.",
+   "p": {
+    "tag": "NEXT TIME",
+    "title": "A plant that crossed the world",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       126.98,
+       37.57
+      ],
+      "label": "Korea",
+      "on": "Korean",
+      "below": false
+     },
+     {
+      "lonlat": [
+       135.8,
+       34.68
+      ],
+      "label": "Japan",
+      "on": "Japanese",
+      "below": true
+     },
+     {
+      "lonlat": [
+       -99.1,
+       19.4
+      ],
+      "label": "The Americas",
+      "on": "Americas",
+      "below": false
+     }
+    ],
+    "routes": [
+     {
+      "from": [
+       -99.1,
+       19.4
+      ],
+      "to": [
+       126.98,
+       37.57
+      ],
+      "on": "Americas"
+     }
+    ],
+    "zoomTo": [
+     {
+      "on": "Korean",
+      "lonlat": [
+       128,
+       36
+      ],
+      "zoom": 2.0
+     },
+     {
+      "on": "Americas",
+      "lonlat": [
+       -40,
+       20
+      ],
+      "zoom": 1.0
+     }
+    ]
+   },
+   "rehook": "Next: Korea vs Japan, the chili mystery",
+   "hold": 1.2
+  }
+ ]
+}

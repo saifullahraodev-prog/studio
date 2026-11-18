@@ -28,7 +28,8 @@ const still = (frame, name, rebundle) => {
 };
 let first = rest.includes("--rebundle");
 let n = 0;
-scenes.forEach((s, i) => [0.3, 0.6, 0.9].forEach((q) => {
+const moments = rest.includes("--mid") ? [0.6] : [0.3, 0.6, 0.9]; // --mid: one still per scene (long videos)
+scenes.forEach((s, i) => moments.forEach((q) => {
   // skip the overlapped transition part at the very start of a scene
   const fr = starts[i] + Math.round(s.dur * q);
   still(fr, `s-${String(n++).padStart(3, "0")}.png`, first); first = false;

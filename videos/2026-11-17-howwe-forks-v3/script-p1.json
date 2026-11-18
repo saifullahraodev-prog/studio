@@ -1,0 +1,364 @@
+{
+ "note": "How We Ended Up · video 1 v3 · scenes for the owner-approved narration. Placeholders: map colours, costumes, stand-in drawings.",
+ "voiceScale": 1.15,
+ "scenes": [
+  {
+   "t": "today",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 1,
+   "say": "The plate arrives. Without thinking, your hands do something they've done *thousands* of times.",
+   "p": {}
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 1,
+   "say": "Fork in the left. Knife in the right. Cut, lift, *eat*.",
+   "p": {
+    "tag": "YOUR TABLE",
+    "word": "Fork and knife.",
+    "items": [
+     {
+      "obj": "fork",
+      "meta": "LEFT HAND",
+      "name": "Fork",
+      "sub": "holds",
+      "on": "Fork"
+     },
+     {
+      "obj": "knifeRound",
+      "meta": "RIGHT HAND",
+      "name": "Knife",
+      "sub": "cuts",
+      "on": "Knife"
+     }
+    ]
+   }
+  },
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 1,
+   "say": "Now picture the same moment in *Shanghai*.",
+   "p": {
+    "tag": "SHANGHAI",
+    "title": "Same moment",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       121.47,
+       31.23
+      ],
+      "label": "Shanghai",
+      "on": "Shanghai",
+      "below": false
+     }
+    ],
+    "routes": [],
+    "zoomTo": [
+     {
+      "on": "Now",
+      "lonlat": [
+       121.47,
+       31.23
+      ],
+      "zoom": 1.8,
+      "stay": true
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 1,
+   "say": "A knife usually isn't part of the meal. Nobody *misses* it.",
+   "p": {
+    "tag": "SHANGHAI · TODAY",
+    "word": "No knife needed.",
+    "items": [
+     {
+      "obj": "chopsticks",
+      "meta": "SHANGHAI",
+      "name": "Chopsticks",
+      "sub": "no knife",
+      "on": "knife"
+     },
+     {
+      "obj": "bowl",
+      "meta": "SHANGHAI",
+      "name": "Bowl",
+      "sub": "bite-sized food",
+      "on": "meal"
+     }
+    ]
+   }
+  },
+  {
+   "t": "period",
+   "in": "door",
+   "pillar": "eat",
+   "part": 1,
+   "say": "At a family meal in many *Indian* homes, the *right* hand does all the work.",
+   "p": {
+    "left": "india",
+    "leftSign": "INDIA · A FAMILY MEAL",
+    "washIn": false,
+    "marks": [
+     {
+      "on": "right",
+      "kind": "circle",
+      "x": 753,
+      "y": 620,
+      "w": 120,
+      "h": 110
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "door",
+   "pillar": "eat",
+   "part": 1,
+   "say": "And in *Bangkok*, you usually get a *spoon* and a fork. But no knife, and often no chopsticks either.",
+   "p": {
+    "tag": "BANGKOK",
+    "word": "Spoon and fork.",
+    "items": [
+     {
+      "obj": "spoon",
+      "meta": "BANGKOK",
+      "name": "Spoon",
+      "sub": "right hand",
+      "on": "spoon"
+     },
+     {
+      "obj": "fork",
+      "meta": "BANGKOK",
+      "name": "Fork",
+      "sub": "left hand",
+      "on": "fork"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 1,
+   "say": "Same hunger. Same food on the plate. Completely different *tools*.",
+   "p": {
+    "tag": "THE QUESTION",
+    "word": "Three answers.",
+    "items": [
+     {
+      "obj": "fork",
+      "meta": "EUROPE",
+      "name": "Fork",
+      "sub": "and knife",
+      "on": "hunger"
+     },
+     {
+      "obj": "chopsticks",
+      "meta": "EAST ASIA",
+      "name": "Chopsticks",
+      "sub": "no knife",
+      "on": "food"
+     },
+     {
+      "obj": "hand",
+      "meta": "SOUTH ASIA · AFRICA",
+      "name": "The hand",
+      "sub": "and bread",
+      "on": "Completely"
+     }
+    ]
+   }
+  },
+  {
+   "t": "titleWall",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 1,
+   "say": "So if eating is the most *universal* thing humans do, why did we never agree on how to do it?",
+   "p": {
+    "question": "Why half the world doesn't use forks"
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 1,
+   "say": "The answer starts with a problem every cook in history has faced. And it ends somewhere you'd never expect. Inside your own *mouth*.",
+   "p": {
+    "tag": "COMING UP",
+    "word": "A mystery.",
+    "items": [
+     {
+      "obj": "cleaver",
+      "meta": "THE PROBLEM",
+      "name": "Every cook's problem",
+      "sub": "coming up",
+      "on": "cook"
+     },
+     {
+      "obj": "mouth",
+      "meta": "THE ENDING",
+      "name": "Inside your mouth",
+      "sub": "coming up",
+      "on": "Inside"
+     }
+    ]
+   },
+   "pauseAfter": {
+    "mouth": 0.6
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 1,
+   "say": "For most of human history, the answer was simple. Your *hands*.",
+   "p": {
+    "tag": "THE BEGINNING",
+    "word": "Your hands.",
+    "items": [
+     {
+      "obj": "hand",
+      "meta": "EXHIBIT 01",
+      "name": "The hand",
+      "sub": "the first tool",
+      "on": "hands"
+     }
+    ]
+   },
+   "pauseAfter": {
+    "simple": 0.25,
+    "hands": 0.25
+   }
+  },
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 1,
+   "say": "Even in ancient *Rome*, a wealthy diner mostly ate with his fingers.",
+   "p": {
+    "tag": "ANCIENT ROME",
+    "title": "Fingers first",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       12.5,
+       41.9
+      ],
+      "label": "Rome",
+      "on": "Rome",
+      "below": false
+     }
+    ],
+    "routes": [],
+    "zoomTo": [
+     {
+      "on": "Even",
+      "lonlat": [
+       12.5,
+       41.9
+      ],
+      "zoom": 2.3,
+      "stay": true
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 1,
+   "say": "There were *spoons* for soup and eggs. There were forks too, but they stayed in the *kitchen*, for hauling meat out of a pot.",
+   "p": {
+    "tag": "ANCIENT ROME",
+    "word": "Kitchen, not table.",
+    "items": [
+     {
+      "obj": "spoon",
+      "meta": "ROME · TABLE",
+      "name": "Spoon",
+      "sub": "soup and eggs",
+      "on": "spoons"
+     },
+     {
+      "obj": "fork2",
+      "meta": "ROME · KITCHEN",
+      "name": "Kitchen fork",
+      "sub": "STAND-IN drawing",
+      "on": "forks"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 1,
+   "say": "But hands have a limit. A roasted leg of lamb doesn't arrive in *bite-sized* pieces. Somebody has to *cut* it.",
+   "p": {
+    "tag": "THE LIMIT",
+    "word": "Somebody has to cut.",
+    "items": [
+     {
+      "obj": "hand",
+      "meta": "THE LIMIT",
+      "name": "Hands",
+      "sub": "can't cut",
+      "on": "hands"
+     },
+     {
+      "obj": "plate",
+      "meta": "THE PROBLEM",
+      "name": "A roast",
+      "sub": "too big to bite",
+      "on": "lamb"
+     },
+     {
+      "obj": "knife",
+      "meta": "THE SOLUTION",
+      "name": "A blade",
+      "sub": "somebody cuts",
+      "on": "cut"
+     }
+    ]
+   }
+  },
+  {
+   "t": "period",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 1,
+   "say": "And that's where the world *splits*. Because the real question isn't what you eat with. It's where the *cutting* happens.",
+   "p": {
+    "left": "europe1500",
+    "leftSign": "EUROPE · CUT AT THE TABLE",
+    "washIn": false,
+    "marks": [],
+    "right": "china1500",
+    "rightSign": "CHINA · CUT IN THE KITCHEN",
+    "splitOn": "splits"
+   }
+  }
+ ]
+}

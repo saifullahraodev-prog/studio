@@ -49,6 +49,8 @@ def events(scenes):
             for z in p.get("zoomTo", []):
                 if "f" in z:
                     ev.append((t0 + z["f"], "map zoom"))
+        for b in s.get("beats", []):
+            ev.append((t0 + b, "camera beat"))
         for k in p.get("cam", []):
             ev.append((t0 + k["f"], "camera move"))
         for m in p.get("marks", []):

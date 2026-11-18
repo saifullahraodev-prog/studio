@@ -43,7 +43,7 @@ def cues(scenes):
         t0, d, p, kind = starts[i], s["dur"], s.get("p", {}), s["t"]
         tin = s.get("in", "cut")
         if i > 0 and tin == "dolly":
-            ev.append((sec(t0), "footsteps", 1.0, "dolly"))
+            ev.append((sec(t0), "air", 0.8, "dolly"))  # owner 2026-11-17: no footsteps ("dum dum")
         if i > 0 and tin == "door":
             ev.append((sec(t0), "door", 1.0, "door"))
         for w in s.get("words", []):
@@ -75,9 +75,9 @@ def cues(scenes):
             if p.get("washIn", True):
                 ev.append((sec(t0 + 2), "paper", 0.8, "tint wash"))
             if p.get("right"):
-                ev.append((sec(t0 + p.get("splitAt", 0)), "footsteps", 0.6, "split opens"))
+                ev.append((sec(t0 + p.get("splitAt", 0)), "air", 0.7, "split opens"))
             rooms = [p.get("left"), p.get("right")]
-            if "china1500" in rooms:  # cook chops every 16 frames (chopUp loop)
+            if False and "china1500" in rooms:  # chop loop removed (owner 2026-11-17: low thumps read as "dum dum")
                 f = 8
                 while f < d - 10:
                     ev.append((sec(t0 + f), "chop", 0.9 if (f // 16) % 3 else 0.6, "chop", (f // 16) % 3))

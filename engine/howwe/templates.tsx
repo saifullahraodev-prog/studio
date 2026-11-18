@@ -131,7 +131,7 @@ export const Period: React.FC<Base & PeriodProps> = ({ uid, f, left, leftSign, r
 export type MapRoute = { from: [number, number]; to: [number, number]; at: number };
 /** `orderAt`: frame each category in `order` fills (word-synced); `zoomTo`: camera visits to [lon, lat] at frame f. */
 export type MapPin = { lonlat: [number, number]; label: string; f?: number; below?: boolean };
-export type MapSceneProps = { pins?: MapPin[]; tag: string; title: string; cats: Record<string, MapCat>; order?: MapCat[]; legend?: { cat: MapCat; label: string }[]; routes?: MapRoute[]; subtitle?: string; source?: string; orderAt?: number[]; zoomTo?: { f: number; lonlat: [number, number]; zoom?: number }[] };
+export type MapSceneProps = { pins?: MapPin[]; tag: string; title: string; cats: Record<string, MapCat>; order?: MapCat[]; legend?: { cat: MapCat; label: string }[]; routes?: MapRoute[]; subtitle?: string; source?: string; orderAt?: number[]; zoomTo?: { f: number; lonlat: [number, number]; zoom?: number; stay?: boolean }[] };
 export const MapScene: React.FC<Base & MapSceneProps> = ({ uid, f, dur, pins = [], tag, title, cats, order = [], legend = [], routes = [], subtitle, source, orderAt, zoomTo = [], cam, marks }) => {
   const mw = 1160, mh = mapHeight(mw), fx = (W - mw) / 2, fy = 214; // leaves the bottom band free for captions
   const push = easeInOut(prog(f, 6, 26));
@@ -143,7 +143,7 @@ export const MapScene: React.FC<Base & MapSceneProps> = ({ uid, f, dur, pins = [
   const keys: CamKey[] | undefined = cam ?? (zoomTo.length ? [
     { f: 6, zoom: 1.15, fx: 960, fy: 520, d: 26 },
     ...zoomTo.map((z) => { const [px, py] = projectEE(...z.lonlat); return { f: z.f, zoom: z.zoom ?? 1.7, fx: fx + px * k, fy: fy + py * k, d: 12 }; }),
-    { f: Math.max(...zoomTo.map((z) => z.f)) + 40, zoom: 1.15, fx: 960, fy: 520, d: 16 },
+    ...(zoomTo.some((z) => z.stay) ? [] : [{ f: Math.max(...zoomTo.map((z) => z.f)) + 40, zoom: 1.15, fx: 960, fy: 520, d: 16 }]),
   ] : undefined);
   return (
     <g>
