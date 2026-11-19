@@ -215,38 +215,45 @@ C("That's why there's no knife, and usually no *chopsticks*.", "A THAI TABLE", "
   pauseAfter={"chopsticks": 0.4})
 
 part(6)
-# ── the story you heard ──
-C("So where does that leave the stories you've probably *heard*?", "THE STORY YOU HEARD", "Three famous stories.", "LET'S CHECK", "True, exaggerated, or debated?", "heard")
-C("Here is the story you heard. *Confucius* banned knives from the dinner table, because knives meant violence. What's true? There is a famous Chinese saying: a gentleman keeps away from the *kitchen*.",
-  "THE STORY YOU HEARD", "Confucius banned knives from the table.", "WHAT'S TRUE", "“A gentleman keeps away from the kitchen.”", "What's")
-C("What's wrong? It comes from *Mencius*, not Confucius.", "WHO SAID IT?", "Confucius?", "WHAT'S WRONG", "It was Mencius.", "Mencius", "Stanford Encyclopedia of Philosophy")
+# ── the story you heard + back to the plate (rewritten 2026-11-19: one picture per line) ──
+C("So where does that leave the stories you've probably *heard*?", "THE STORY YOU HEARD", "Three famous stories.", "LET'S CHECK", "True, exaggerated, or debated?", "leave")
+C("Here is the story you heard. *Confucius* banned knives from the dinner table, because knives meant violence.", "THE STORY YOU HEARD", "Confucius banned knives.",
+  "BECAUSE", "Knives meant violence.", "because", inn="cut")
+P("What's true? There is a famous Chinese saying: a gentleman keeps away from the *kitchen*.", "china1500", "CHINA · A FAMOUS SAYING", inn="door",
+  marks=[{"on": "kitchen", "kind": "circle", "x": 1280, "y": 600, "w": 240, "h": 200}])
+C("What's wrong? It comes from *Mencius*, not Confucius.", "WHO SAID IT?", "Confucius?", "WHAT'S WRONG", "It was Mencius.", "Mencius", "Stanford Encyclopedia of Philosophy", inn="cut")
 C("And in context, he's talking about a king who couldn't bear to see an *ox* led to its death. It's about *compassion*, not table manners.", "IN CONTEXT", "A king spares an ox.",
-  "IT'S ABOUT", "Compassion. Not table manners.", "compassion", "Mengzi 1A7")
-C("Here's another. *Catherine* de' Medici brought the fork from Italy to France. It's a lovely story, and you'll find it everywhere. Historians aren't *convinced*. The evidence for it is thin.",
-  "THE STORY YOU HEARD", "Catherine de' Medici brought the fork to France.", "THE EVIDENCE", "Thin. Historians aren't convinced.", "Historians", "National Geographic")
-C("And the biggest one of all. That forks are simply the *civilised* way to eat. Europe spent *six centuries* thinking the opposite.", "THE BIGGEST ONE", "Forks are the civilised way to eat.",
-  "CORRECTION", "Europe thought the opposite for six centuries.", "Europe")
-E("And every tradition in this story, from Japanese *chopsticks* to Ethiopian *gursha*, comes with manners just as strict as any dinner party in *Paris*.", "EVERY TRADITION", "Strict manners.",
-  [("chopsticks", "JAPAN", "Chopstick rules", "from funerals", "chopsticks"), ("hand", "ETHIOPIA", "Gursha", "a gesture of love", "gursha"), ("fork", "FRANCE", "Dinner party", "Paris", "Paris")])
+  "IT'S ABOUT", "Compassion. Not table manners.", "compassion", "Mengzi 1A7", inn="cut", pauseAfter={"manners": 0.3})
+M("Here's another. *Catherine* de' Medici brought the fork from Italy to France. It's a lovely story.", "THE STORY YOU HEARD", "Catherine de' Medici",
+  [zm("Catherine", [6, 46], 2.6, True)], [pin(FLORENCE, "Florence", "Catherine", True), pin(PARIS, "Paris", "France")], [{"from": FLORENCE, "to": PARIS, "on": "brought"}])
+C("Historians aren't *convinced*. The evidence is thin.", "THE STORY YOU HEARD", "She brought the fork to France.", "THE EVIDENCE", "Thin. Historians aren't convinced.", "Historians",
+  "National Geographic", inn="cut", pauseAfter={"thin": 0.3})
+E("And the biggest one of all. That forks are simply the *civilised* way to eat. Europe spent *six centuries* thinking the opposite.", "THE BIGGEST ONE", "Civilised?",
+  [("fork", "THE CLAIM", "The civilised way?", "forks", "civilised"), ("hand", "EUROPE, FOR CENTURIES", "Fingers", "a fork was a scandal", "Europe")])
+E("And every tradition in this story comes with manners just as strict as any dinner party in *Paris*.", "EVERY TRADITION", "Strict manners.",
+  [("chopsticks", "JAPAN", "Chopstick rules", "from funerals", "every"), ("hand", "ETHIOPIA", "Gursha", "a gesture of love", "manners"), ("fork", "FRANCE", "Dinner party", "Paris", "Paris")],
+  pauseAfter={"Paris": 0.3})
 add("reveal", "None of these tools is *better*. Each one is a smart answer to a different *problem*.",
     {"tag": "THE ANSWER", "line": "None is better.", "left": "fork", "right": "hand", "answer": {"meta": "THE ANSWER", "name": "Different problems", "sub": "different answers"},
      "downOn": "None", "answerOn": "smart"}, hold=0.3)
-
-# ── back to the plate ──
 add("today", "So let's go back to that *plate*.")
-E("The round tip on your knife? A *cardinal* and a king, who were tired of armed guests.", "YOUR TABLE", "The round tip.", [("knifeRound", "FRANCE, 1600s", "Round-tipped knife", "a cardinal and a king", "knife")])
-E("The four prongs on your fork? Eighteenth-century *Germany*.", "YOUR TABLE", "Four prongs.", [("fork", "GERMANY, 1700s", "Four prongs", "about 250 years old", "fork")], inn="cut")
-add("today", "The cutting you're about to do, right there at the table? That's Europe's *answer*, from a time when meat came in big pieces and everyone carried a blade.", inn="cut")
-P("In Shanghai, the cutting happened hours ago, in a *kitchen*, to save fuel.", "china1500", "SHANGHAI · THE KITCHEN", inn="door")
+E("The round tip on your knife? Centuries of changing table manners, and maybe one fussy *cardinal*.", "YOUR TABLE", "The round tip.",
+  [("knifeRound", "YOUR KNIFE", "Round tip", "changing manners", "round")], pauseAfter={"cardinal": 0.3})
+E("The four prongs on your fork? The seventeen *hundreds*.", "YOUR TABLE", "Four prongs.", [("fork", "YOUR FORK", "Four prongs", "the 1700s", "four")], inn="cut", pauseAfter={"hundreds": 0.3})
+add("today", "And the cutting you're about to do, right there at the table? That's Europe's *answer*, from a time when diners brought their own blades.", inn="cut")
+P("In Shanghai, the cutting happened hours ago, in a *kitchen*.", "china1500", "SHANGHAI · THE KITCHEN", inn="door")
 P("In Addis Ababa, the *bread* is doing the work.", "ethiopia", "ADDIS ABABA · THE BREAD", inn="cut")
-M("And in *Bangkok*, a royal court decided it in the eighteen hundreds.", "BANGKOK", "A royal decision", [zm("Bangkok", BANGKOK, 2.2)], [pin(BANGKOK, "Bangkok", "Bangkok")], inn="cut")
+M("And in *Bangkok*, the spoon and fork began at a royal court in the eighteen hundreds.", "BANGKOK", "A royal start", [zm("Bangkok", [95, 24], 1.3, True)],
+  [pin(BANGKOK, "Bangkok", "Bangkok")], inn="cut")
 E("Same problem. How do you get food from the plate to your mouth? Three brilliant *answers*.", "THREE ANSWERS", "One problem.",
-  [("fork", "AT THE TABLE", "Knife and fork", "Europe", "problem"), ("chopsticks", "IN THE KITCHEN", "Chopsticks", "East Asia", "plate"), ("hand", "IN THE BREAD", "The hand", "South Asia, Africa", "answers")])
-E("And one of them may even be shaping your *teeth*.", "AND ONE MORE THING", "Your teeth.", [("biteOver", "YOU", "Your bite", "a theory", "teeth")], inn="cut")
+  [("fork", "AT THE TABLE", "Knife and fork", "Europe", "Same"), ("chopsticks", "IN THE KITCHEN", "Chopsticks", "East Asia", "plate"), ("hand", "IN THE BREAD", "The hand", "South Asia, Africa", "Three")],
+  pauseAfter={"answers": 0.3})
+E("And one of them may even be shaping your *teeth*.", "AND ONE MORE THING", "Your teeth.", [("biteOver", "YOU", "Your bite", "a theory", "shaping")], inn="cut", pauseAfter={"teeth": 0.4})
 M("And if you're wondering why a *Korean* meal so often comes glowing red with chili, while a *Japanese* meal usually doesn't, that's a story about a plant that crossed the world. And it starts in the *Americas*.",
-  "NEXT TIME", "A plant that crossed the world", [zm("Korean", [128, 36], 2.0), zm("Americas", [-40, 20], 1.0)],
+  "NEXT TIME", "A plant that crossed the world", [zm("Korean", [100, 34], 1.25), zm("Americas", [-40, 20], 1.0)],
   [pin(SEOUL, "Korea", "Korean"), pin(NARA, "Japan", "Japanese", True), pin(MEXICO, "The Americas", "Americas")], [{"from": MEXICO, "to": SEOUL, "on": "Americas"}],
   rehook="Next: Korea vs Japan, the chili mystery", hold=1.2)
+
 
 # ── write + verify against the approved narration ──
 # --part=N: verify and write only that part (script-pN.json). The part's text must equal the narration between

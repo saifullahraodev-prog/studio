@@ -1,0 +1,510 @@
+{
+ "note": "How We Ended Up · video 1 v3 · scenes for the owner-approved narration. Placeholders: map colours, costumes, stand-in drawings.",
+ "voiceScale": 1.15,
+ "scenes": [
+  {
+   "t": "cardFlip",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 6,
+   "say": "So where does that leave the stories you've probably *heard*?",
+   "p": {
+    "frontLabel": "THE STORY YOU HEARD",
+    "heard": "Three famous stories.",
+    "backLabel": "LET'S CHECK",
+    "actual": "True, exaggerated, or debated?",
+    "source": "",
+    "flipOn": "leave"
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 6,
+   "say": "Here is the story you heard. *Confucius* banned knives from the dinner table, because knives meant violence.",
+   "p": {
+    "frontLabel": "THE STORY YOU HEARD",
+    "heard": "Confucius banned knives.",
+    "backLabel": "BECAUSE",
+    "actual": "Knives meant violence.",
+    "source": "",
+    "flipOn": "because"
+   }
+  },
+  {
+   "t": "period",
+   "in": "door",
+   "pillar": "eat",
+   "part": 6,
+   "say": "What's true? There is a famous Chinese saying: a gentleman keeps away from the *kitchen*.",
+   "p": {
+    "left": "china1500",
+    "leftSign": "CHINA · A FAMOUS SAYING",
+    "washIn": false,
+    "marks": [
+     {
+      "on": "kitchen",
+      "kind": "circle",
+      "x": 1280,
+      "y": 600,
+      "w": 240,
+      "h": 200
+     }
+    ]
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 6,
+   "say": "What's wrong? It comes from *Mencius*, not Confucius.",
+   "p": {
+    "frontLabel": "WHO SAID IT?",
+    "heard": "Confucius?",
+    "backLabel": "WHAT'S WRONG",
+    "actual": "It was Mencius.",
+    "source": "Stanford Encyclopedia of Philosophy",
+    "flipOn": "Mencius"
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 6,
+   "say": "And in context, he's talking about a king who couldn't bear to see an *ox* led to its death. It's about *compassion*, not table manners.",
+   "p": {
+    "frontLabel": "IN CONTEXT",
+    "heard": "A king spares an ox.",
+    "backLabel": "IT'S ABOUT",
+    "actual": "Compassion. Not table manners.",
+    "source": "Mengzi 1A7",
+    "flipOn": "compassion"
+   },
+   "pauseAfter": {
+    "manners": 0.3
+   }
+  },
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 6,
+   "say": "Here's another. *Catherine* de' Medici brought the fork from Italy to France. It's a lovely story.",
+   "p": {
+    "tag": "THE STORY YOU HEARD",
+    "title": "Catherine de' Medici",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       11.25,
+       43.77
+      ],
+      "label": "Florence",
+      "on": "Catherine",
+      "below": true
+     },
+     {
+      "lonlat": [
+       2.35,
+       48.86
+      ],
+      "label": "Paris",
+      "on": "France",
+      "below": false
+     }
+    ],
+    "routes": [
+     {
+      "from": [
+       11.25,
+       43.77
+      ],
+      "to": [
+       2.35,
+       48.86
+      ],
+      "on": "brought"
+     }
+    ],
+    "zoomTo": [
+     {
+      "on": "Catherine",
+      "lonlat": [
+       6,
+       46
+      ],
+      "zoom": 2.6,
+      "stay": true
+     }
+    ]
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 6,
+   "say": "Historians aren't *convinced*. The evidence is thin.",
+   "p": {
+    "frontLabel": "THE STORY YOU HEARD",
+    "heard": "She brought the fork to France.",
+    "backLabel": "THE EVIDENCE",
+    "actual": "Thin. Historians aren't convinced.",
+    "source": "National Geographic",
+    "flipOn": "Historians"
+   },
+   "pauseAfter": {
+    "thin": 0.3
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 6,
+   "say": "And the biggest one of all. That forks are simply the *civilised* way to eat. Europe spent *six centuries* thinking the opposite.",
+   "p": {
+    "tag": "THE BIGGEST ONE",
+    "word": "Civilised?",
+    "items": [
+     {
+      "obj": "fork",
+      "meta": "THE CLAIM",
+      "name": "The civilised way?",
+      "sub": "forks",
+      "on": "civilised"
+     },
+     {
+      "obj": "hand",
+      "meta": "EUROPE, FOR CENTURIES",
+      "name": "Fingers",
+      "sub": "a fork was a scandal",
+      "on": "Europe"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 6,
+   "say": "And every tradition in this story comes with manners just as strict as any dinner party in *Paris*.",
+   "p": {
+    "tag": "EVERY TRADITION",
+    "word": "Strict manners.",
+    "items": [
+     {
+      "obj": "chopsticks",
+      "meta": "JAPAN",
+      "name": "Chopstick rules",
+      "sub": "from funerals",
+      "on": "every"
+     },
+     {
+      "obj": "hand",
+      "meta": "ETHIOPIA",
+      "name": "Gursha",
+      "sub": "a gesture of love",
+      "on": "manners"
+     },
+     {
+      "obj": "fork",
+      "meta": "FRANCE",
+      "name": "Dinner party",
+      "sub": "Paris",
+      "on": "Paris"
+     }
+    ]
+   },
+   "pauseAfter": {
+    "Paris": 0.3
+   }
+  },
+  {
+   "t": "reveal",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 6,
+   "say": "None of these tools is *better*. Each one is a smart answer to a different *problem*.",
+   "p": {
+    "tag": "THE ANSWER",
+    "line": "None is better.",
+    "left": "fork",
+    "right": "hand",
+    "answer": {
+     "meta": "THE ANSWER",
+     "name": "Different problems",
+     "sub": "different answers"
+    },
+    "downOn": "None",
+    "answerOn": "smart"
+   },
+   "hold": 0.3
+  },
+  {
+   "t": "today",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 6,
+   "say": "So let's go back to that *plate*.",
+   "p": {}
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 6,
+   "say": "The round tip on your knife? Centuries of changing table manners, and maybe one fussy *cardinal*.",
+   "p": {
+    "tag": "YOUR TABLE",
+    "word": "The round tip.",
+    "items": [
+     {
+      "obj": "knifeRound",
+      "meta": "YOUR KNIFE",
+      "name": "Round tip",
+      "sub": "changing manners",
+      "on": "round"
+     }
+    ]
+   },
+   "pauseAfter": {
+    "cardinal": 0.3
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 6,
+   "say": "The four prongs on your fork? The seventeen *hundreds*.",
+   "p": {
+    "tag": "YOUR TABLE",
+    "word": "Four prongs.",
+    "items": [
+     {
+      "obj": "fork",
+      "meta": "YOUR FORK",
+      "name": "Four prongs",
+      "sub": "the 1700s",
+      "on": "four"
+     }
+    ]
+   },
+   "pauseAfter": {
+    "hundreds": 0.3
+   }
+  },
+  {
+   "t": "today",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 6,
+   "say": "And the cutting you're about to do, right there at the table? That's Europe's *answer*, from a time when diners brought their own blades.",
+   "p": {}
+  },
+  {
+   "t": "period",
+   "in": "door",
+   "pillar": "eat",
+   "part": 6,
+   "say": "In Shanghai, the cutting happened hours ago, in a *kitchen*.",
+   "p": {
+    "left": "china1500",
+    "leftSign": "SHANGHAI · THE KITCHEN",
+    "washIn": false,
+    "marks": []
+   }
+  },
+  {
+   "t": "period",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 6,
+   "say": "In Addis Ababa, the *bread* is doing the work.",
+   "p": {
+    "left": "ethiopia",
+    "leftSign": "ADDIS ABABA · THE BREAD",
+    "washIn": false,
+    "marks": []
+   }
+  },
+  {
+   "t": "map",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 6,
+   "say": "And in *Bangkok*, the spoon and fork began at a royal court in the eighteen hundreds.",
+   "p": {
+    "tag": "BANGKOK",
+    "title": "A royal start",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       100.5,
+       13.75
+      ],
+      "label": "Bangkok",
+      "on": "Bangkok",
+      "below": false
+     }
+    ],
+    "routes": [],
+    "zoomTo": [
+     {
+      "on": "Bangkok",
+      "lonlat": [
+       95,
+       24
+      ],
+      "zoom": 1.3,
+      "stay": true
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 6,
+   "say": "Same problem. How do you get food from the plate to your mouth? Three brilliant *answers*.",
+   "p": {
+    "tag": "THREE ANSWERS",
+    "word": "One problem.",
+    "items": [
+     {
+      "obj": "fork",
+      "meta": "AT THE TABLE",
+      "name": "Knife and fork",
+      "sub": "Europe",
+      "on": "Same"
+     },
+     {
+      "obj": "chopsticks",
+      "meta": "IN THE KITCHEN",
+      "name": "Chopsticks",
+      "sub": "East Asia",
+      "on": "plate"
+     },
+     {
+      "obj": "hand",
+      "meta": "IN THE BREAD",
+      "name": "The hand",
+      "sub": "South Asia, Africa",
+      "on": "Three"
+     }
+    ]
+   },
+   "pauseAfter": {
+    "answers": 0.3
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 6,
+   "say": "And one of them may even be shaping your *teeth*.",
+   "p": {
+    "tag": "AND ONE MORE THING",
+    "word": "Your teeth.",
+    "items": [
+     {
+      "obj": "biteOver",
+      "meta": "YOU",
+      "name": "Your bite",
+      "sub": "a theory",
+      "on": "shaping"
+     }
+    ]
+   },
+   "pauseAfter": {
+    "teeth": 0.4
+   }
+  },
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 6,
+   "say": "And if you're wondering why a *Korean* meal so often comes glowing red with chili, while a *Japanese* meal usually doesn't, that's a story about a plant that crossed the world. And it starts in the *Americas*.",
+   "p": {
+    "tag": "NEXT TIME",
+    "title": "A plant that crossed the world",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       126.98,
+       37.57
+      ],
+      "label": "Korea",
+      "on": "Korean",
+      "below": false
+     },
+     {
+      "lonlat": [
+       135.8,
+       34.68
+      ],
+      "label": "Japan",
+      "on": "Japanese",
+      "below": true
+     },
+     {
+      "lonlat": [
+       -99.1,
+       19.4
+      ],
+      "label": "The Americas",
+      "on": "Americas",
+      "below": false
+     }
+    ],
+    "routes": [
+     {
+      "from": [
+       -99.1,
+       19.4
+      ],
+      "to": [
+       126.98,
+       37.57
+      ],
+      "on": "Americas"
+     }
+    ],
+    "zoomTo": [
+     {
+      "on": "Korean",
+      "lonlat": [
+       100,
+       34
+      ],
+      "zoom": 1.25
+     },
+     {
+      "on": "Americas",
+      "lonlat": [
+       -40,
+       20
+      ],
+      "zoom": 1.0
+     }
+    ]
+   },
+   "rehook": "Next: Korea vs Japan, the chili mystery",
+   "hold": 1.2
+  }
+ ]
+}
