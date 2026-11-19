@@ -189,24 +189,30 @@ E("Still, if Brace is right, the way your ancestors cut their dinner is still wr
   [("biteEdge", "YOUR ANCESTORS", "Edge to edge", "before cutlery", "ancestors"), ("biteOver", "YOU", "Overbite", "today", "written")], inn="cut", pauseAfter={"face": 0.5})
 
 part(5)
-# ── the hand ──
-M("And then there's the third answer, the *oldest* one of all.", "PART THREE", "The hand", [zm("oldest", [55, 15], 1.5)], [pin(DELHI, "India", "oldest"), pin(ADDIS, "Ethiopia", "answer", True)])
-E("Eating with your hands isn't the absence of a tool. It's a tradition, with *rules*.", "NOT A MISSING TOOL", "A tradition.", [("hand", "THE HAND", "A tradition", "with rules", "hands")])
-P("Across much of South Asia, the Middle East and Africa, the first rule is simple. You eat with your *right* hand.", "india", "INDIA · A FAMILY MEAL", inn="door",
-  marks=[{"on": "right", "kind": "circle", "x": 753, "y": 620, "w": 120, "h": 110}])
-E("And very often, the bread is the *cutlery*. In India, a piece of flatbread becomes a *scoop*.", "BREAD AS CUTLERY", "The scoop.",
-  [("flatbread", "INDIA", "Flatbread", "STAND-IN drawing", "cutlery"), ("hand", "THE HAND", "Scoop", "right hand", "scoop")])
-E("In Ethiopia, the spongy bread called *injera* is the plate and the spoon at the same time. You tear, you fold, you *lift*.", "ETHIOPIA", "Plate and spoon.",
-  [("flatbread", "ETHIOPIA", "Injera", "STAND-IN drawing", "injera"), ("hand", "THE HAND", "Tear, fold, lift", "right hand", "lift")])
+# ── the hand + Thailand (rewritten 2026-11-18: one picture per line, holds after end-of-line reveals) ──
+M("And then there's the third answer, the *oldest* of all.", "PART THREE", "The hand", [zm("third", [62, 20], 1.35, True)],
+  [pin(DELHI, "India", "answer"), pin(ADDIS, "Ethiopia", "oldest", True)])
+E("Eating with your hands isn't the absence of a tool. It's a tradition, with *rules*.", "NOT A MISSING TOOL", "A tradition.",
+  [("hand", "THE HAND", "A tradition", "with rules", "tradition")], pauseAfter={"rules": 0.3})
+M("Across much of South Asia, the Middle East and Africa, the first rule is simple.", "WHERE", "Much of the world", [zm("Across", [50, 16], 1.6, True)],
+  [pin(DELHI, "South Asia", "South"), pin([45, 26], "Middle East", "Middle"), pin([20, 4], "Africa", "Africa", True)], inn="cut")
+P("You eat with your *right* hand.", "india", "INDIA · A FAMILY MEAL", inn="door",
+  marks=[{"on": "right", "kind": "circle", "x": 753, "y": 620, "w": 120, "h": 110}], pauseAfter={"hand": 0.1})
+E("Often, the bread is the *cutlery*. In many Indian dining traditions, flatbread becomes a *scoop*.", "BREAD AS CUTLERY", "The scoop.",
+  [("flatbread", "INDIA", "Flatbread", "torn and folded", "bread"), ("hand", "THE HAND", "Scoop", "right hand", "scoop")], pauseAfter={"scoop": 0.3})
+E("In Ethiopia, the spongy bread called *injera* is the plate and the spoon at the same time.", "ETHIOPIA", "Plate and spoon.",
+  [("flatbread", "ETHIOPIA", "Injera", "the plate", "injera"), ("spoon", "AND ALSO", "The spoon", "at the same time", "spoon")], inn="cut")
+E("You tear, you fold, you *lift*.", "ETHIOPIA", "Tear, fold, lift.", [("hand", "THE HAND", "Tear, fold, lift", "right hand", "tear")], inn="cut", pauseAfter={"lift": 0.4})
 P("There's even a gesture for *love*. In Ethiopia, it's called *gursha*.", "ethiopia", "ETHIOPIA · A FAMILY MEAL", inn="door")
 P("You take a mouthful, and you feed it to someone else, with your own *hand*. A guest, an elder, a newly married partner.", "ethiopia", "ETHIOPIA · GURSHA", inn="cut",
-  marks=[{"on": "hand", "kind": "circle", "x": 871, "y": 640, "w": 130, "h": 120}])
-M("And here's a twist. *Thailand* used to eat with hands too.", "A TWIST", "Thailand", [zm("Thailand", BANGKOK, 2.2)], [pin(BANGKOK, "Bangkok", "Thailand")])
-E("Then, in the eighteen hundreds, the royal court of Siam adopted Western *spoons* and *forks*.", "SIAM, 1800s", "A royal choice.",
-  [("spoon", "SIAM", "Spoon", "from the West", "spoons"), ("fork", "SIAM", "Fork", "from the West", "forks")])
-E("Today, the spoon goes in your *right* hand, and the fork pushes food onto it.", "A THAI TABLE", "How it works.",
-  [("spoon", "RIGHT HAND", "Spoon", "eats", "right"), ("fork", "LEFT HAND", "Fork", "pushes", "pushes")])
-C("That's why a Thai meal usually comes with a spoon and a fork, and not with *chopsticks*.", "A THAI TABLE", "Chopsticks?", "USUALLY", "A spoon and a fork.", "not")
+  marks=[{"on": "hand", "kind": "circle", "x": 871, "y": 640, "w": 130, "h": 120}], pauseAfter={"partner": 0.4})
+M("And here's a twist. *Thailand* used to eat with hands too.", "A TWIST", "Thailand", [zm("twist", [100, 20], 1.45, True)], [pin(BANGKOK, "Thailand", "Thailand")])
+E("Then, during the eighteen hundreds, Siam's royal court and elites began adopting Western *spoons* and *forks*.", "SIAM, 1800s", "A royal choice.",
+  [("spoon", "SIAM", "Spoon", "from the West", "spoons"), ("fork", "SIAM", "Fork", "from the West", "forks")], pauseAfter={"forks": 0.3})
+E("Then the habit spread. Today, the spoon goes in your *right* hand, and the fork pushes food onto it.", "A THAI TABLE", "How it works.",
+  [("spoon", "RIGHT HAND", "Spoon", "eats", "right"), ("fork", "LEFT HAND", "Fork", "pushes", "pushes")], inn="cut")
+C("That's why there's no knife, and usually no *chopsticks*.", "A THAI TABLE", "A knife? Chopsticks?", "USUALLY", "Just a spoon and a fork.", "usually", inn="cut",
+  pauseAfter={"chopsticks": 0.4})
 
 part(6)
 # ── the story you heard ──

@@ -1,0 +1,382 @@
+{
+ "note": "How We Ended Up · video 1 v3 · scenes for the owner-approved narration. Placeholders: map colours, costumes, stand-in drawings.",
+ "voiceScale": 1.15,
+ "scenes": [
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 5,
+   "say": "And then there's the third answer, the *oldest* of all.",
+   "p": {
+    "tag": "PART THREE",
+    "title": "The hand",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       77.2,
+       28.6
+      ],
+      "label": "India",
+      "on": "answer",
+      "below": false
+     },
+     {
+      "lonlat": [
+       38.74,
+       9.03
+      ],
+      "label": "Ethiopia",
+      "on": "oldest",
+      "below": true
+     }
+    ],
+    "routes": [],
+    "zoomTo": [
+     {
+      "on": "third",
+      "lonlat": [
+       62,
+       20
+      ],
+      "zoom": 1.35,
+      "stay": true
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 5,
+   "say": "Eating with your hands isn't the absence of a tool. It's a tradition, with *rules*.",
+   "p": {
+    "tag": "NOT A MISSING TOOL",
+    "word": "A tradition.",
+    "items": [
+     {
+      "obj": "hand",
+      "meta": "THE HAND",
+      "name": "A tradition",
+      "sub": "with rules",
+      "on": "tradition"
+     }
+    ]
+   },
+   "pauseAfter": {
+    "rules": 0.3
+   }
+  },
+  {
+   "t": "map",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 5,
+   "say": "Across much of South Asia, the Middle East and Africa, the first rule is simple.",
+   "p": {
+    "tag": "WHERE",
+    "title": "Much of the world",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       77.2,
+       28.6
+      ],
+      "label": "South Asia",
+      "on": "South",
+      "below": false
+     },
+     {
+      "lonlat": [
+       45,
+       26
+      ],
+      "label": "Middle East",
+      "on": "Middle",
+      "below": false
+     },
+     {
+      "lonlat": [
+       20,
+       4
+      ],
+      "label": "Africa",
+      "on": "Africa",
+      "below": true
+     }
+    ],
+    "routes": [],
+    "zoomTo": [
+     {
+      "on": "Across",
+      "lonlat": [
+       50,
+       16
+      ],
+      "zoom": 1.6,
+      "stay": true
+     }
+    ]
+   }
+  },
+  {
+   "t": "period",
+   "in": "door",
+   "pillar": "eat",
+   "part": 5,
+   "say": "You eat with your *right* hand.",
+   "p": {
+    "left": "india",
+    "leftSign": "INDIA · A FAMILY MEAL",
+    "washIn": false,
+    "marks": [
+     {
+      "on": "right",
+      "kind": "circle",
+      "x": 753,
+      "y": 620,
+      "w": 120,
+      "h": 110
+     }
+    ]
+   },
+   "pauseAfter": {
+    "hand": 0.1
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 5,
+   "say": "Often, the bread is the *cutlery*. In many Indian dining traditions, flatbread becomes a *scoop*.",
+   "p": {
+    "tag": "BREAD AS CUTLERY",
+    "word": "The scoop.",
+    "items": [
+     {
+      "obj": "flatbread",
+      "meta": "INDIA",
+      "name": "Flatbread",
+      "sub": "torn and folded",
+      "on": "bread"
+     },
+     {
+      "obj": "hand",
+      "meta": "THE HAND",
+      "name": "Scoop",
+      "sub": "right hand",
+      "on": "scoop"
+     }
+    ]
+   },
+   "pauseAfter": {
+    "scoop": 0.3
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 5,
+   "say": "In Ethiopia, the spongy bread called *injera* is the plate and the spoon at the same time.",
+   "p": {
+    "tag": "ETHIOPIA",
+    "word": "Plate and spoon.",
+    "items": [
+     {
+      "obj": "flatbread",
+      "meta": "ETHIOPIA",
+      "name": "Injera",
+      "sub": "the plate",
+      "on": "injera"
+     },
+     {
+      "obj": "spoon",
+      "meta": "AND ALSO",
+      "name": "The spoon",
+      "sub": "at the same time",
+      "on": "spoon"
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 5,
+   "say": "You tear, you fold, you *lift*.",
+   "p": {
+    "tag": "ETHIOPIA",
+    "word": "Tear, fold, lift.",
+    "items": [
+     {
+      "obj": "hand",
+      "meta": "THE HAND",
+      "name": "Tear, fold, lift",
+      "sub": "right hand",
+      "on": "tear"
+     }
+    ]
+   },
+   "pauseAfter": {
+    "lift": 0.4
+   }
+  },
+  {
+   "t": "period",
+   "in": "door",
+   "pillar": "eat",
+   "part": 5,
+   "say": "There's even a gesture for *love*. In Ethiopia, it's called *gursha*.",
+   "p": {
+    "left": "ethiopia",
+    "leftSign": "ETHIOPIA · A FAMILY MEAL",
+    "washIn": false,
+    "marks": []
+   }
+  },
+  {
+   "t": "period",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 5,
+   "say": "You take a mouthful, and you feed it to someone else, with your own *hand*. A guest, an elder, a newly married partner.",
+   "p": {
+    "left": "ethiopia",
+    "leftSign": "ETHIOPIA · GURSHA",
+    "washIn": false,
+    "marks": [
+     {
+      "on": "hand",
+      "kind": "circle",
+      "x": 871,
+      "y": 640,
+      "w": 130,
+      "h": 120
+     }
+    ]
+   },
+   "pauseAfter": {
+    "partner": 0.4
+   }
+  },
+  {
+   "t": "map",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 5,
+   "say": "And here's a twist. *Thailand* used to eat with hands too.",
+   "p": {
+    "tag": "A TWIST",
+    "title": "Thailand",
+    "cats": {},
+    "legend": [],
+    "pins": [
+     {
+      "lonlat": [
+       100.5,
+       13.75
+      ],
+      "label": "Thailand",
+      "on": "Thailand",
+      "below": false
+     }
+    ],
+    "routes": [],
+    "zoomTo": [
+     {
+      "on": "twist",
+      "lonlat": [
+       100,
+       20
+      ],
+      "zoom": 1.45,
+      "stay": true
+     }
+    ]
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "dolly",
+   "pillar": "eat",
+   "part": 5,
+   "say": "Then, during the eighteen hundreds, Siam's royal court and elites began adopting Western *spoons* and *forks*.",
+   "p": {
+    "tag": "SIAM, 1800s",
+    "word": "A royal choice.",
+    "items": [
+     {
+      "obj": "spoon",
+      "meta": "SIAM",
+      "name": "Spoon",
+      "sub": "from the West",
+      "on": "spoons"
+     },
+     {
+      "obj": "fork",
+      "meta": "SIAM",
+      "name": "Fork",
+      "sub": "from the West",
+      "on": "forks"
+     }
+    ]
+   },
+   "pauseAfter": {
+    "forks": 0.3
+   }
+  },
+  {
+   "t": "exhibits",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 5,
+   "say": "Then the habit spread. Today, the spoon goes in your *right* hand, and the fork pushes food onto it.",
+   "p": {
+    "tag": "A THAI TABLE",
+    "word": "How it works.",
+    "items": [
+     {
+      "obj": "spoon",
+      "meta": "RIGHT HAND",
+      "name": "Spoon",
+      "sub": "eats",
+      "on": "right"
+     },
+     {
+      "obj": "fork",
+      "meta": "LEFT HAND",
+      "name": "Fork",
+      "sub": "pushes",
+      "on": "pushes"
+     }
+    ]
+   }
+  },
+  {
+   "t": "cardFlip",
+   "in": "cut",
+   "pillar": "eat",
+   "part": 5,
+   "say": "That's why there's no knife, and usually no *chopsticks*.",
+   "p": {
+    "frontLabel": "A THAI TABLE",
+    "heard": "A knife? Chopsticks?",
+    "backLabel": "USUALLY",
+    "actual": "Just a spoon and a fork.",
+    "source": "",
+    "flipOn": "usually"
+   },
+   "pauseAfter": {
+    "chopsticks": 0.4
+   }
+  }
+ ]
+}
