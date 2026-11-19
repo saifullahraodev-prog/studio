@@ -605,4 +605,4 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   no "125 landings", wires 4/3 incl. Reagan/Bush, air wing/strike group/cycles qualified, "about as tall as the Eiffel Tower",
   EMALS stored rotor energy + solid-state conversion, Ford "nearly three times" per Navy, 160/270 = design requirements + DOT&E doubts,
   nuclear ≠ no replenishment, Forrestal: electrical malfunction, Zuni from F-4B → A-4E tank, 134/161/21, Chief Farrier, training changes).
-- `revision-v2.md`: fact-check table, editorial notes, scores. `narration.txt` regenerated. GATE: owner approves script, then records CapCut voice.
+- `revision-v2.md`: fact-check table, editorial notes, scores. `narration.txt` regenerated. GATE passed: owner approved script v2 (2026-11-19). Next: owner records CapCut voice from narration.txt.
