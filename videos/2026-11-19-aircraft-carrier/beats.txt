@@ -60,3 +60,54 @@ emals step=5 || || It's easier to fine-tune for heavy jets and light drones alik
 cv mode=helps || || The carrier usually helps too.
 wind || INTO THE WIND || It steers into the wind, so more air is already flowing over the wings.
 guy act=fingerup bg=paper label=EVEN_HARDER || || Launching is violent. But bringing that jet back is even harder.
+# --- PART 2 = sections 3-5 (catching the jet, why full throttle, the deck crew)
+# --- 3. Catching a jet with a wire
+cockpit view=close || BACK TO THE LANDING || Let's go back to our night landing.
+meatball step=1 || THE "MEATBALL" || To stay on the right path down, the pilot watches a light on the side of the deck called the meatball.
+meatball step=2 || ON THE GLIDE PATH || If the ball of light sits level with a row of green lights, you're on the glide path.
+meatball step=high || TOO HIGH || Too high, and it rises.
+meatball step=low || TOO LOW || Too low, and it sinks.
+lso || LANDING SIGNAL OFFICER || Beside the landing area stands a landing signal officer,
+lso talk=1 || || an experienced pilot who watches every approach and talks the pilots in by radio.
+wires mode=top n=4 || ARRESTING WIRES || Across the landing area are thick steel cables, raised a little above the deck.
+wires mode=count n=4 || NIMITZ: [4] || Most Nimitz-class carriers have four.
+wires mode=count n=3 || FORD: [3] || The Ford, and the two newest Nimitz ships, have three.
+wires mode=hook || THE TAILHOOK || Under the tail of the jet hangs a hook.
+wires mode=catch || || The pilot flies the plane firmly onto the deck so the hook can catch one of those wires.
+wires mode=aim || AIM FOR WIRE [3] || On a four-wire deck, pilots aim for the third,
+wires mode=margin || || because it gives the safest margin from the back edge of the ship.
+wires mode=below || || Then the wire pays out, pulling against huge machines below the deck that soak up the jet's energy.
+wires mode=stop || [20+ TONNES] || The system is built to stop a jet weighing more than twenty tonnes,
+wires mode=stop speed=1 || [240 KM/H] || coming in at around two hundred and forty kilometres an hour,
+wires mode=stop dist=1 || [~100 M] || in roughly a hundred metres.
+wires mode=pile || [2 SECONDS] || In about two seconds.
+wires mode=beat || || Those cables take a terrible beating,
+wires mode=inspect || INSPECT · REPLACE || so the crew inspect them constantly and replace them whenever wear and maintenance rules say so.
+# --- 4. Why full throttle?
+throttle || WHY FULL POWER? || So, why push to full power at the exact moment you land?
+bolter mode=miss || || Because sometimes the hook misses every wire.
+bolter mode=miss label=1 || "BOLTER" || That's called a bolter.
+bolter mode=low || || If the engines were at low power, the jet could roll off the end of the deck into the sea.
+bolter mode=go || GO AROUND || At full power, it simply takes off again, flies around, and tries one more time.
+angled mode=1 || [~9°] ANGLED DECK || That's also why the landing area is angled, about nine degrees off to the side.
+angled mode=2 || || A jet that misses flies off past the bow, instead of crashing into the planes parked at the front.
+barricade step=1 || || And if a jet can't land normally at all, say its hook is damaged,
+barricade step=2 || THE BARRICADE || the crew can raise a giant net across the deck, called the barricade, and catch the plane in it.
+# --- 5. The rainbow on the deck
+flightdeck || || All of this happens on a deck packed with jets, spinning engines and fuel.
+guy act=think bg=paper label=SAFE? || || So how do they keep people safe?
+jerseys mode=show || COLOURS || With colours. Everyone on the flight deck wears a coloured jersey that shows their job.
+jersey c=yellow || YELLOW || Yellow are the officers and directors who control and move the aircraft, including the catapult and arresting-gear officers.
+jersey c=green || GREEN || Green run and maintain the catapults and arresting gear, along with many aircraft maintenance crews.
+jersey c=purple || PURPLE = "GRAPES" || Purple handle the fuel. Everyone calls them grapes.
+jersey c=red || RED || Red handle bombs and missiles, and crash and salvage.
+jersey c=blue || BLUE || Blue chain the jets down, chock the wheels, and drive the tractors and elevators.
+jersey c=brown || BROWN || Brown are the plane captains, each responsible for getting one jet ready.
+jersey c=white || WHITE || And white covers several safety jobs: landing signal officers, safety observers, inspectors and medical teams.
+jerseys mode=all || || At a glance, anyone can see who's doing what.
+island mode=zoom || PRIMARY FLIGHT CONTROL || High up on the island, the tower beside the deck, is primary flight control.
+island mode=boss || THE AIR BOSS || That's where the Air Boss runs every aircraft on the deck and in the air close to the ship.
+cycle mode=1 || CYCLES || During busy flying, launches and landings often run in waves called cycles.
+cycle mode=2 || [~1.5 HOURS] · 12+ AIRCRAFT || A common rhythm is roughly every hour and a half, with a dozen or more aircraft in each,
+cycle mode=3 || IT VARIES || but it changes with the mission.
+cycle mode=4 || || A busy airport, squeezed onto a moving deck, in the middle of the sea.

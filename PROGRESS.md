@@ -611,3 +611,6 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   the launch; 0:00-3:04): 57 beats in `beats.txt`, new `engine/shipguy/templates6.tsx` (cockpit, jetside, throttle, cv, eiffel,
   group, deck, plane, runway, cat, emals, wind) + puppet outfits `jersey` (job colour + cranial helmet) and `aviator`.
   Storyboard `videos/2026-11-19-aircraft-carrier/storyboard/p1-*.png`. GATE: owner OK on Part 1 stills.
+- 2026-11-19: owner approved Part 1 stills. PART 2 (sections 3-5: meatball, LSO, wires, bolter, angled deck, barricade, jerseys,
+  Pri-Fly/Air Boss, cycles; 3:04-6:15): beats 58-104 in `beats.txt`, new `engine/shipguy/templates6b.tsx`. Storyboard
+  `storyboard/p2-*.png` (p2-1 also shows the end of Part 1). GATE: owner OK on Part 2 stills.

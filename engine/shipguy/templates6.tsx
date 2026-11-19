@@ -38,7 +38,7 @@ export const OpenSea: React.FC<{ t: number; y: number; night?: boolean; speed?: 
     <line x1={0} y1={y} x2={W} y2={y} stroke={INK} strokeWidth={5} />
   </g>
 );
-const TopSea: React.FC<{ t: number; night?: boolean }> = ({ t, night }) => (
+export const TopSea: React.FC<{ t: number; night?: boolean }> = ({ t, night }) => (
   <g>
     <rect width={W} height={H} fill={night ? "#0f2440" : "#3a83ad"} />
     {Array.from({ length: 40 }).map((_, i) => (
@@ -116,7 +116,7 @@ const Hawkeye: React.FC<{ t: number }> = ({ t }) => (
   </g>
 );
 
-const Helo: React.FC<{ t: number }> = ({ t }) => (
+export const Helo: React.FC<{ t: number }> = ({ t }) => (
   <g>
     <path d="M-60 -50 L -240 -64 L -250 -90 L -230 -90 L -210 -70 L -60 -66 Z" fill={NAVY} {...O(5)} />
     <ellipse cx={-240} cy={-74} rx={6} ry={28} fill="#dfe6ea" opacity={0.6} {...O(2)} />
@@ -143,7 +143,7 @@ const Tiltrotor: React.FC<{ t: number }> = ({ t }) => (
 );
 
 /** Small stick person in a coloured jersey, seen from the side, `s` scale (deck crowds, top-down not needed). */
-const Crew: React.FC<{ x: number; y: number; c: string; s?: number; t: number; arm?: number }> = ({ x, y, c, s = 1, t, arm = 0 }) => (
+export const Crew: React.FC<{ x: number; y: number; c: string; s?: number; t: number; arm?: number }> = ({ x, y, c, s = 1, t, arm = 0 }) => (
   <g transform={`translate(${x} ${y}) scale(${s})`}>
     <line x1={-6} y1={0} x2={-2} y2={-34} {...O(5)} /><line x1={6} y1={0} x2={2} y2={-34} {...O(5)} />
     <rect x={-12} y={-70} width={24} height={38} rx={8} fill={c} {...O(4)} />
@@ -514,7 +514,7 @@ const EiffelT: Tpl = ({ t }) => {
 };
 
 // ================================================================== SECTION 1: the strike group (top-down)
-const Escort: React.FC<{ len?: number; supply?: boolean }> = ({ len = 260, supply }) => (
+export const Escort: React.FC<{ len?: number; supply?: boolean }> = ({ len = 260, supply }) => (
   <g>
     <path d={`M${-len / 2} -${supply ? 30 : 20} L ${len * 0.3} -${supply ? 30 : 20} Q ${len / 2} 0 ${len * 0.3} ${supply ? 30 : 20} L ${-len / 2} ${supply ? 30 : 20} Z`} fill={supply ? "#8f8a80" : "#8e99a4"} {...O(4)} />
     {supply ? [-0.3, -0.05, 0.2].map((k) => <g key={k}><line x1={len * k} y1={-24} x2={len * k} y2={24} {...O(4)} /><circle cx={len * k} cy={0} r={6} fill={INK} /></g>)
@@ -888,4 +888,4 @@ export const TEMPLATES6: Record<string, Tpl> = {
   cockpit: Cockpit, jetside: JetSide, throttle: Throttle, cv: Cv, eiffel: EiffelT, group: Group, deck: Deck, plane: Plane,
   runway: Runway, cat: Cat, emals: Emals, wind: Wind,
 };
-export { SEA as SEA6, WATER as WATER6, Crew };
+export { SEA as SEA6, WATER as WATER6 };
