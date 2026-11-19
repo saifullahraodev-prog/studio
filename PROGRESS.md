@@ -588,3 +588,14 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   (voice + SFX only, -14.9 LUFS); standing rule for future Ship Guy videos. Sample `fixes/no-music-check.mp3`.
 - DONE v2 2026-11-16: `videos/2026-11-16-dali-bridge/out/dali-bridge-final-v2.mp4` (no music, voice + SFX, fixed visuals;
   1080p30, 10:29, -15.0 LUFS, peak -4.3 dBFS, 0 black, 0 frozen; render 27 min; 225 MB). Use v2 for upload (v1 kept until owner says delete).
+
+## 2026-11-19: The Ship Guy long-form #6 "How an Aircraft Carrier Actually Works" (script draft v1)
+- Owner asked for a topic from analytics. Read YouTube Studio (The Ship Guy, last 28 days): Shorts 18.9k views (each ~1.0-1.25k,
+  79% Shorts-only viewers, 0 regular viewers, +18 subs); long videos 2.8k views, 19.2k impressions, CTR 2.9%, AVD 2:23, 68% Browse.
+  Best long: Every Level of Ship by Size 747, Seawise Giant 483. Dali (uploaded as "A Tiny Plastic Part Brought Down This Bridge"):
+  AVD 5:45 of 10:29. Niche demand: "Inside the World's Largest Cruise Ship" 2.2M, "How Aircraft Carriers Work" 1.4M,
+  "458 Meters of Steel" 279k in 4 weeks. Owner picked the aircraft carrier.
+- `videos/2026-11-19-aircraft-carrier/script.md` (hook = night landing; launch, wire, bolter/full throttle, angled deck, barricade,
+  jerseys, the Forrestal fire (serious, no gags), island/Air Boss/cycles, hangar + elevators, reactors, water/food, Ford; sources,
+  13 fact notes) + `narration.txt` (spoken words only, 1,842 words ~10:15). No music; build part by part.
+  GATE: owner approval of script v1.
