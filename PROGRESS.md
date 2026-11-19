@@ -606,3 +606,8 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   EMALS stored rotor energy + solid-state conversion, Ford "nearly three times" per Navy, 160/270 = design requirements + DOT&E doubts,
   nuclear ≠ no replenishment, Forrestal: electrical malfunction, Zuni from F-4B → A-4E tank, 134/161/21, Chief Farrier, training changes).
 - `revision-v2.md`: fact-check table, editorial notes, scores. `narration.txt` regenerated. GATE passed: owner approved script v2 (2026-11-19). Next: owner records CapCut voice from narration.txt.
+- 2026-11-19: owner sent the CapCut voice (10:03 + 0:33) -> `voice.wav` 10:36 raw, 1,827 words; pauses tightened to 10:14
+  (`tools/shipguy_tighten.py` got `--hold A-B`: the Forrestal part 388.5-451.5 s keeps its silences). PART 1 (hook, the ship,
+  the launch; 0:00-3:04): 57 beats in `beats.txt`, new `engine/shipguy/templates6.tsx` (cockpit, jetside, throttle, cv, eiffel,
+  group, deck, plane, runway, cat, emals, wind) + puppet outfits `jersey` (job colour + cranial helmet) and `aviator`.
+  Storyboard `videos/2026-11-19-aircraft-carrier/storyboard/p1-*.png`. GATE: owner OK on Part 1 stills.

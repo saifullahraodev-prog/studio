@@ -1,6 +1,7 @@
 """The Ship Guy: shorten long silences in a CapCut voice (owner 2026-11-16: "the start has some gaps").
 
-Usage: python -I tools/shipguy_tighten.py videos/<dir> [--max 0.6] [--keep 0.4]
+Usage: python -I tools/shipguy_tighten.py videos/<dir> [--max 0.6] [--keep 0.4] [--hold 389-452 ...]
+(--hold A-B: seconds in the RAW voice where pauses are left untouched.)
 Every pause between two words longer than --max seconds is cut down to --keep seconds (the cut is taken from the
 middle of the silence, with short crossfades, so no word is touched). Word timings are shifted to match.
 The first run saves the originals as voice-raw.wav / words-raw.json and always works from those, so it can be re-run.
@@ -22,7 +23,7 @@ def read(p: Path) -> np.ndarray:
     return np.frombuffer(pcm, np.int16).astype(np.float32) / 32768.0
 
 
-def main(vdir: str, mx: float = 0.6, keep: float = 0.4):
+def main(vdir: str, mx: float = 0.6, keep: float = 0.4, hold: tuple = ()):
     vd = Path(vdir)
     raw_v, raw_w = vd / "voice-raw.wav", vd / "words-raw.json"
     if not raw_v.exists():
@@ -33,6 +34,8 @@ def main(vdir: str, mx: float = 0.6, keep: float = 0.4):
     cuts = []  # (start_s, end_s) of audio to remove
     for a, b in zip(words, words[1:]):
         gap = b["start"] - a["end"]
+        if any(h0 <= a["end"] <= h1 for h0, h1 in hold):
+            continue  # a quiet section whose pauses must stay (e.g. a memorial part)
         if gap > mx:
             remove = gap - keep
             mid = (a["end"] + b["start"]) / 2
@@ -68,4 +71,5 @@ if __name__ == "__main__":
     args = sys.argv[1:]
     mx = float(args[args.index("--max") + 1]) if "--max" in args else 0.6
     kp = float(args[args.index("--keep") + 1]) if "--keep" in args else 0.4
-    main(args[0], mx, kp)
+    hold = tuple(tuple(float(v) for v in args[i + 1].split("-")) for i, a in enumerate(args) if a == "--hold")
+    main(args[0], mx, kp, hold)

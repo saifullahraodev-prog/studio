@@ -1,0 +1,62 @@
+# How an Aircraft Carrier Actually Works (The Ship Guy #6). Retention-first: ~3.5 s shots, a sound on every cut, NO music.
+# Built part by part. PART 1 = hook + the ship + the launch (sections 0-2). New templates: engine/shipguy/templates6.tsx.
+# --- 0. Hook
+cockpit view=far || [NIGHT] || It's night.
+jetside mode=fly || [240 KM/H] || You're flying a fighter jet at around two hundred and forty kilometres an hour.
+cockpit view=far ring=1 || YOUR RUNWAY || Somewhere down there in the dark is your runway.
+cockpit view=bob || IT'S MOVING || It's moving. It's rising and falling with the waves.
+cockpit view=box || || And the patch of deck you have to hit is smaller than almost any runway on land.
+jetside mode=guy || NO BRAKES || You can't slow down to land. You can't stop on your own.
+jetside mode=grab || [2 SECONDS] || Something has to grab your plane and stop it for you, in about two seconds.
+jetside mode=touch || || And the moment your wheels hit the deck,
+guy act=shock bg=paper || || you do something that sounds completely crazy.
+throttle || [FULL POWER] || You push the engines to full power.
+guy act=think bg=paper label=WHY?! || || Why? To answer that,
+cv mode=title || || we need to understand how an aircraft carrier really works.
+# --- 1. A runway that floats
+cv mode=sail || US NAVY SUPERCARRIERS || The biggest aircraft carriers in the world belong to the United States Navy:
+cv mode=two || || the Nimitz class, and the newest one, the Gerald R. Ford.
+cv mode=length || [333 M] LONG || A Nimitz carrier is about three hundred and thirty metres long.
+eiffel || ≈ EIFFEL TOWER || Stand it on its end, and it's about as tall as the Eiffel Tower.
+cv mode=weight || [~100,000] TONNES || Fully loaded, it weighs around a hundred thousand tonnes,
+cv mode=speed || [30+ KNOTS] || and it can still sail at more than thirty knots.
+cv mode=xray || [~5,000] PEOPLE || With its air wing on board, around five thousand people live and work on a Nimitz carrier.
+cv mode=town || || That's more than many small towns.
+group mode=escorts || ESCORTS || And it doesn't sail alone. Cruisers and destroyers guard it against missiles and submarines,
+group mode=supply || || and supply ships keep it stocked.
+group mode=all || CARRIER STRIKE GROUP || Together they're called a carrier strike group, and the escorts bring thousands more people.
+deck mode=jets || THE AIR WING || But the whole point of this ship is its aircraft.
+deck mode=fighters || STRIKE FIGHTERS || An air wing usually has more than forty strike fighters,
+deck mode=types || || like the F/A-18 Super Hornet and the F-35C,
+plane kind=hawkeye || E-2D HAWKEYE || plus the specialists: the E-2D Hawkeye with its giant radar dish,
+plane kind=growler || EA-18G GROWLER || the EA-18G Growler that jams enemy radar,
+plane kind=helo || HELICOPTERS || helicopters for submarine hunting and rescue,
+plane kind=cod || TRANSPORT || and transport aircraft that bring people, mail and parts.
+deck mode=mix || THE MIX CHANGES || The exact mix changes from ship to ship and mission to mission.
+guy act=worried bg=paper || || But every one of those aircraft has the same problem.
+runway mode=short || [TOO SHORT] || This runway is far too short.
+# --- 2. Zero to flying speed in two seconds
+runway mode=land || || On land, a fighter jet often uses well over a kilometre of runway.
+runway mode=compare || || On a Nimitz carrier, the catapult gives it about ninety metres.
+cat mode=slot || THE CATAPULT || So the carrier throws it into the air.
+cat mode=track || || Under the deck runs a long track.
+cat mode=hook || || The jet's nose wheel is attached to a shuttle that rides in that track.
+cat mode=hold || FULL POWER… || The pilot pushes the engines to full power,
+cat mode=hold tag=1 zoom=1 || || but the jet doesn't move, because a holdback is holding it in place.
+cat mode=jbd || || Behind it, a steel wall rises out of the deck.
+cat mode=jbd tag=1 || JET BLAST DEFLECTOR || It's a jet blast deflector,
+cat mode=jbd zoom=1 || || and it stops the scorching exhaust from hitting the people and planes behind.
+cat mode=check || || The deck crew check everything.
+cat mode=shooter || "THE SHOOTER" || Then the catapult officer, nicknamed the shooter, gives the signal.
+cat mode=launch || || The holdback lets go, and the catapult fires.
+cat mode=speed || [2 SECONDS] || In about two seconds, the jet goes from standing still to flying speed,
+jetside mode=climb || [~280 KM/H] || around two hundred and eighty kilometres an hour for a typical fighter.
+cat mode=steam || NIMITZ: STEAM || On Nimitz carriers, that push comes from steam, made with heat from the ship's reactors.
+emals step=1 || FORD: ELECTRIC || The Ford uses an electric system called EMALS.
+emals step=2 || || It stores energy in big spinning rotors between launches,
+emals step=3 || || then releases it through electronic power converters
+emals step=4 || || into a long electric motor that pulls the shuttle down the track.
+emals step=5 || || It's easier to fine-tune for heavy jets and light drones alike.
+cv mode=helps || || The carrier usually helps too.
+wind || INTO THE WIND || It steers into the wind, so more air is already flowing over the wings.
+guy act=fingerup bg=paper label=EVEN_HARDER || || Launching is violent. But bringing that jet back is even harder.

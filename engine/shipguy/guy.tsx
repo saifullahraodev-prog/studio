@@ -19,7 +19,7 @@ export type Mouth = "smile" | "grin" | "smirk" | "flat" | "o" | "scream" | "frow
 export type Face = { eyes: Eyes; brows: Brows; mouth: Mouth; lookX?: number; lookY?: number };
 export type Hand = "mitt" | "open" | "point" | "thumb";
 export type PropName = "clipboard" | "mug" | "spade" | "phone" | "hammer" | "rod" | "magnifier" | "label" | "none";
-export type Outfit = "ship" | "pilot" | "captain" | "officer" | "coverall" | "road";
+export type Outfit = "ship" | "pilot" | "captain" | "officer" | "coverall" | "road" | "jersey" | "aviator";
 export type Emote = "sweat" | "!" | "?" | "steam" | "stars" | "idea";
 
 export const IDLE: Pose = { lean: 0, tilt: 0, hipX: 0, hipY: 0, squash: 0, armL: [14, 8], armR: [14, 8], legL: [-5, 0], legR: [5, 0] };
@@ -331,11 +331,12 @@ export type GuyProps = {
   hat?: { dx: number; dy: number; rot: number }; // hat offset (pop-off gag); undefined = on the head
   emote?: Emote; emoteT?: number; boil?: boolean; shadow?: boolean; feet?: "out" | "fwd";
   outfit?: Outfit; id?: string; shades?: boolean;
+  jersey?: string; // flight-deck jersey colour (outfit "jersey")
 };
 
 export const Guy: React.FC<GuyProps> = ({
   x, y, s = 1, flip, t, pose = IDLE, face = FACES.happy, talk = 0, blink, handL = "mitt", handR = "mitt",
-  prop = "none", hat, emote, emoteT = 0, boil = true, shadow = true, feet = "out", outfit = "ship", id = "guy", shades = false,
+  prop = "none", hat, emote, emoteT = 0, boil = true, shadow = true, feet = "out", outfit = "ship", id = "guy", shades = false, jersey = "#ffd23f",
 }) => {
   const p = pose;
   const sq = p.squash; // + = squashed (wider, shorter), - = stretched
@@ -427,6 +428,25 @@ export const Guy: React.FC<GuyProps> = ({
               {[60, 92, 124].map((yy) => <circle key={yy} cx={0} cy={yy} r={4} fill="#c9ced3" />)}
               <rect x={22} y={54} width={22} height={18} rx={3} fill="none" stroke="#9aa6b1" strokeWidth={3} />
             </g>
+          ) : outfit === "jersey" ? (
+            <g>
+              {/* flight-deck crew: long-sleeve jersey in the job colour + a float vest in the same colour, number on the back */}
+              <path d="M-52 6 Q -60 80 -62 152 Q 0 166 62 152 Q 60 80 52 6 Q 0 -6 -52 6 Z" fill={jersey} stroke={INK} strokeWidth={7} strokeLinejoin="round" />
+              <path d="M30 10 Q 50 80 52 150 L 62 152 Q 60 80 52 6 Z" fill="#000" opacity={0.16} />
+              <path d="M-50 40 Q 0 52 50 40 L 54 92 Q 0 104 -54 92 Z" fill={jersey} stroke={INK} strokeWidth={5} />
+              <path d="M-50 40 Q 0 52 50 40 L 54 92 Q 0 104 -54 92 Z" fill="#fff" opacity={0.18} />
+              <path d="M-56 58 h 18 M38 58 h 18" stroke="#e8ecef" strokeWidth={6} />
+              <path d="M-20 4 L 0 26 L 20 4" fill="none" stroke={INK} strokeWidth={5} strokeLinejoin="round" />
+            </g>
+          ) : outfit === "aviator" ? (
+            <g>
+              {/* naval aviator: olive flight suit, survival vest (harness) */}
+              <path d="M-52 6 Q -60 80 -62 152 Q 0 166 62 152 Q 60 80 52 6 Q 0 -6 -52 6 Z" fill="#6f7a52" stroke={INK} strokeWidth={7} strokeLinejoin="round" />
+              <path d="M30 10 Q 50 80 52 150 L 62 152 Q 60 80 52 6 Z" fill="#59633f" />
+              <path d="M-46 14 L -30 150 M46 14 L 30 150 M-48 70 L 48 70" stroke="#3a3f2c" strokeWidth={9} fill="none" />
+              <rect x={-44} y={84} width={30} height={22} rx={4} fill="#59633f" stroke={INK} strokeWidth={3} />
+              <rect x={10} y={30} width={34} height={16} rx={3} fill="#2c3550" stroke={INK} strokeWidth={2} />
+            </g>
           ) : outfit === "coverall" ? (
             <g>
               {/* deck crew: blue coveralls with a reflective band, white hard hat */}
@@ -457,6 +477,25 @@ export const Guy: React.FC<GuyProps> = ({
               <path d="M-90 -92 L -86 -66 Q 0 -56 86 -66 L 90 -92 Q 0 -80 -90 -92 Z" fill="#1d2f4f" stroke={INK} strokeWidth={6} strokeLinejoin="round" />
               <path d="M-80 -64 Q 0 -30 80 -64 Q 0 -54 -80 -64 Z" fill={INK} />
               <circle cx={0} cy={-102} r={14} fill="#e0b13a" stroke={INK} strokeWidth={4} />
+            </g>
+          )}
+          {outfit === "jersey" && (
+            <g transform={`translate(${hatT.dx} ${hatT.dy}) rotate(${hatT.rot - 4} 0 -70)`}>
+              {/* "cranial" flight-deck helmet: shell in the jersey colour, ear cups, goggles pushed up */}
+              <path d="M-100 -40 C -108 -130, -56 -170, 2 -172 C 62 -170, 110 -130, 102 -40 L 84 -44 C 86 -110, 50 -146, 2 -148 C -48 -146, -84 -110, -82 -44 Z" fill={jersey} stroke={INK} strokeWidth={7} strokeLinejoin="round" />
+              <ellipse cx={-100} cy={-30} rx={22} ry={34} fill="#30353c" stroke={INK} strokeWidth={6} />
+              <ellipse cx={102} cy={-30} rx={22} ry={34} fill="#30353c" stroke={INK} strokeWidth={6} />
+              <rect x={-74} y={-150} width={60} height={34} rx={14} fill="#9fd3ee" stroke={INK} strokeWidth={6} />
+              <rect x={14} y={-150} width={60} height={34} rx={14} fill="#9fd3ee" stroke={INK} strokeWidth={6} />
+              <line x1={-14} y1={-133} x2={14} y2={-133} stroke={INK} strokeWidth={6} />
+            </g>
+          )}
+          {outfit === "aviator" && (
+            <g transform={`translate(${hatT.dx} ${hatT.dy}) rotate(${hatT.rot - 4} 0 -70)`}>
+              {/* flight helmet with the visor up and an oxygen-mask hose */}
+              <path d="M-108 -20 C -116 -140, -60 -186, 2 -188 C 66 -186, 118 -140, 110 -20 L 88 -30 C 92 -120, 52 -160, 2 -162 C -50 -160, -88 -120, -86 -30 Z" fill="#e9ecef" stroke={INK} strokeWidth={7} strokeLinejoin="round" />
+              <path d="M-80 -150 Q 2 -196 84 -150 L 76 -126 Q 2 -164 -72 -126 Z" fill="#2b3340" stroke={INK} strokeWidth={5} />
+              <path d="M-60 -170 Q 2 -186 60 -170" stroke="#ffd23f" strokeWidth={8} fill="none" />
             </g>
           )}
           {(outfit === "ship" || outfit === "coverall" || outfit === "road") && (

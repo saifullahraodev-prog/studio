@@ -216,12 +216,12 @@ export const CruiseHD: React.FC<{ w: number }> = ({ w }) => {
 };
 
 // ================================================================== 5. aircraft carrier (design 1000)
-export const CarrierHD: React.FC<{ w: number }> = ({ w }) => {
+export const CarrierHD: React.FC<{ w: number; num?: string }> = ({ w, num = "78" }) => {
   const d = "M0 -52 L1000 -64 Q990 -20 965 10 Q945 34 900 40 L50 40 Q16 40 6 14 Q-2 -14 0 -52 Z";
   return (
     <g transform={`scale(${w / 1000})`}>
       <Hull id="cvh" d={d} top="#8a95a0" mid="#76818c" low="#5f6a74" bootY={8} bottom="#7a3a2a" len={1000} deck={-52} keel={40} plates={30} rust={[880, 640, 300]} />
-      <text x={900} y={-14} fontFamily={fontFamily} fontSize={26} fontWeight={700} fill="#fff" textAnchor="middle">78</text>
+      <text x={900} y={-14} fontFamily={fontFamily} fontSize={26} fontWeight={700} fill="#fff" textAnchor="middle">{num}</text>
       {/* hangar openings + sponsons */}
       {[160, 420, 700].map((x) => <rect key={x} x={x} y={-44} width={60} height={22} fill="#3d454d" {...O(1.5)} />)}
       {/* flight deck: overhang, markings, angled landing area */}
@@ -237,7 +237,7 @@ export const CarrierHD: React.FC<{ w: number }> = ({ w }) => {
       <path d="M620 -150 L626 -196 L654 -196 L660 -150 Z" fill="#8e99a4" {...O(2.5)} />
       <line x1={640} y1={-196} x2={640} y2={-240} {...O(3)} /><line x1={624} y1={-226} x2={656} y2={-226} {...O(2.5)} />
       <circle cx={640} cy={-244} r={6} fill="#d9d9d2" {...O(1.5)} />
-      <text x={640} y={-78} textAnchor="middle" fontFamily={fontFamily} fontSize={18} fontWeight={700} fill="#fff">78</text>
+      <text x={640} y={-78} textAnchor="middle" fontFamily={fontFamily} fontSize={18} fontWeight={700} fill="#fff">{num}</text>
       {/* parked jets (wings folded) */}
       {[[120, -64], [190, -65], [260, -66], [740, -69], [810, -70], [880, -71], [480, -66]].map(([x, y], i) => (
         <g key={i} transform={`translate(${x} ${y})`}>
