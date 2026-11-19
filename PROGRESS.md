@@ -599,3 +599,10 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   jerseys, the Forrestal fire (serious, no gags), island/Air Boss/cycles, hangar + elevators, reactors, water/food, Ford; sources,
   13 fact notes) + `narration.txt` (spoken words only, 1,842 words ~10:15). No music; build part by part.
   GATE: owner approval of script v1.
+
+## 2026-11-19: carrier script v2 (fact-checked revision per owner's editor/fact-checker brief)
+- `videos/2026-11-19-aircraft-carrier/script.md` v2 (1,850 words, ~10:15): launch/recovery is the spine; fixes A–L (no "23 t typical",
+  no "125 landings", wires 4/3 incl. Reagan/Bush, air wing/strike group/cycles qualified, "about as tall as the Eiffel Tower",
+  EMALS stored rotor energy + solid-state conversion, Ford "nearly three times" per Navy, 160/270 = design requirements + DOT&E doubts,
+  nuclear ≠ no replenishment, Forrestal: electrical malfunction, Zuni from F-4B → A-4E tank, 134/161/21, Chief Farrier, training changes).
+- `revision-v2.md`: fact-check table, editorial notes, scores. `narration.txt` regenerated. GATE: owner approves script, then records CapCut voice.

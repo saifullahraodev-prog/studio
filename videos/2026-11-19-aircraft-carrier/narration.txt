@@ -1,6 +1,6 @@
-It's night. You're flying a twenty-three-tonne fighter jet at two hundred and forty kilometres an hour.
+It's night. You're flying a fighter jet at around two hundred and forty kilometres an hour.
 
-Somewhere down there in the dark is your runway. It's moving. It's going up and down with the waves. And it's shorter than a football pitch.
+Somewhere down there in the dark is your runway. It's moving. It's rising and falling with the waves. And the patch of deck you have to hit is smaller than almost any runway on land.
 
 You can't slow down to land. You can't stop on your own. Something has to grab your plane and stop it for you, in about two seconds.
 
@@ -8,148 +8,146 @@ And the moment your wheels hit the deck, you do something that sounds completely
 
 Why? To answer that, we need to understand how an aircraft carrier really works.
 
-The biggest aircraft carriers in the world belong to the United States Navy. The Nimitz class, and the newest one, the Gerald R. Ford.
+The biggest aircraft carriers in the world belong to the United States Navy: the Nimitz class, and the newest one, the Gerald R. Ford.
 
-They're about three hundred and thirty metres long. Stand one on its end, and it's taller than the Eiffel Tower.
+A Nimitz carrier is about three hundred and thirty metres long. Stand it on its end, and it's about as tall as the Eiffel Tower.
 
-A fully loaded one weighs about a hundred thousand tonnes. And it carries up to ninety aircraft.
+Fully loaded, it weighs around a hundred thousand tonnes, and it can still sail at more than thirty knots.
 
-On a Nimitz-class carrier, around five thousand people live on board when the air wing is embarked. That's more people than many small towns.
+With its air wing on board, around five thousand people live and work on a Nimitz carrier. That's more than many small towns.
 
-And it can sail at more than thirty knots. That's over fifty-five kilometres an hour, for a ship the size of a skyscraper.
+And it doesn't sail alone. Cruisers and destroyers guard it against missiles and submarines, and supply ships keep it stocked. Together they're called a carrier strike group, and the escorts bring thousands more people.
 
-And it never sails alone. A carrier usually travels with a whole team of ships called a carrier strike group: cruisers and destroyers around it to shoot down missiles and hunt submarines, sometimes a submarine of its own hiding underneath, and supply ships bringing fuel, food and ammunition. Around seven and a half thousand people in the whole group.
+But the whole point of this ship is its aircraft. An air wing usually has more than forty strike fighters, like the F/A-18 Super Hornet and the F-35C, plus the specialists: the E-2D Hawkeye with its giant radar dish, the EA-18G Growler that jams enemy radar, helicopters for submarine hunting and rescue, and transport aircraft that bring people, mail and parts.
 
-So what are those ninety aircraft? Most are strike fighters: F/A-18 Super Hornets, and the newer F-35C stealth jets.
+The exact mix changes from ship to ship and mission to mission. But every one of those aircraft has the same problem. This runway is far too short.
 
-Then there are the specialists. The E-2D Hawkeye carries a giant radar dish on its back, so the group can see far beyond the horizon. The EA-18G Growler jams enemy radars. And helicopters hunt submarines and pick up anyone who ends up in the water.
+On land, a fighter jet often uses well over a kilometre of runway. On a Nimitz carrier, the catapult gives it about ninety metres.
 
-A typical air wing today has around forty-four strike fighters, plus the radar planes, the jammers and the helicopters.
+So the carrier throws it into the air.
 
-But a runway at sea has a problem that no airport on land has. It's far too short.
+Under the deck runs a long track. The jet's nose wheel is attached to a shuttle that rides in that track.
 
-A fighter jet on land needs a runway that's often more than a kilometre long. On a carrier, the jet gets about ninety metres.
+The pilot pushes the engines to full power, but the jet doesn't move, because a holdback is holding it in place.
 
-So the carrier throws it into the air. With a catapult.
+Behind it, a steel wall rises out of the deck. It's a jet blast deflector, and it stops the scorching exhaust from hitting the people and planes behind.
 
-Under the deck runs a long track. The jet's nose wheel is hooked onto a shuttle that rides in that track.
+The deck crew check everything. Then the catapult officer, nicknamed the shooter, gives the signal.
 
-The pilot pushes the engines to full power. But the jet doesn't move yet, because a holdback bar is holding it in place.
+The holdback lets go, and the catapult fires. In about two seconds, the jet goes from standing still to flying speed, around two hundred and eighty kilometres an hour for a typical fighter.
 
-Behind the jet, a big steel wall rises out of the deck. It's called a jet blast deflector, and it stops the scorching exhaust from blasting the people and planes behind it.
+On Nimitz carriers, that push comes from steam, made with heat from the ship's reactors. The Ford uses an electric system called EMALS. It stores energy in big spinning rotors between launches, then releases it through electronic power converters into a long electric motor that pulls the shuttle down the track. It's easier to fine-tune for heavy jets and light drones alike.
 
-The deck crew check everything. Then the catapult officer, called the shooter, gives the signal.
+The carrier usually helps too. It steers into the wind, so more air is already flowing over the wings.
 
-The holdback bar releases, and the catapult fires. In about two seconds, the jet goes from standing still to around two hundred and eighty kilometres an hour.
-
-On the Nimitz carriers, that push comes from steam, made with heat from the ship's nuclear reactors. On the new Ford, it's electric: a system called EMALS uses electromagnets to pull the shuttle down the track. Smoother, easier to fine-tune, and better for both very heavy and very light aircraft.
-
-And the carrier helps too. It usually turns into the wind before a launch, so more air is already rushing over the wings.
-
-Launching is violent. But landing is even harder.
+Launching is violent. But bringing that jet back is even harder.
 
 Let's go back to our night landing.
 
-To find the right path down, the pilot watches a light on the side of the deck called the meatball. If the ball of light is centred between two rows of green lights, you're on the right glide path. Too high, and it moves up. Too low, and it drops.
+To stay on the right path down, the pilot watches a light on the side of the deck called the meatball. If the ball of light sits level with a row of green lights, you're on the glide path. Too high, and it rises. Too low, and it sinks.
 
-On the deck, a landing signal officer, an experienced pilot, watches every approach and talks the pilots down by radio.
+Beside the landing area stands a landing signal officer, an experienced pilot who watches every approach and talks the pilots in by radio.
 
-Across the landing area are thick steel cables, stretched a little above the deck. Nimitz-class ships have four. The Ford has three.
+Across the landing area are thick steel cables, raised a little above the deck. Most Nimitz-class carriers have four. The Ford, and the two newest Nimitz ships, have three.
 
-Under the back of the jet hangs a hook. The pilot's job is to slam the plane down so the hook catches one of those wires. Pilots aim for the third wire on a four-wire carrier, because the first one is closest to the back edge of the ship.
+Under the tail of the jet hangs a hook. The pilot flies the plane firmly onto the deck so the hook can catch one of those wires. On a four-wire deck, pilots aim for the third, because it gives the safest margin from the back edge of the ship.
 
-Then the wire pays out, pulling against huge machines below the deck. A twenty-three-tonne jet coming in at about two hundred and forty kilometres an hour is stopped in roughly a hundred metres. In about two seconds.
+Then the wire pays out, pulling against huge machines below the deck that soak up the jet's energy. The system is built to stop a jet weighing more than twenty tonnes, coming in at around two hundred and forty kilometres an hour, in roughly a hundred metres. In about two seconds.
 
-The wires take such a beating that they're replaced after every hundred and twenty-five landings.
+Those cables take a terrible beating, so the crew inspect them constantly and replace them whenever wear and maintenance rules say so.
 
-So, why do pilots push to full power at the exact moment they land?
+So, why push to full power at the exact moment you land?
 
 Because sometimes the hook misses every wire. That's called a bolter.
 
-If that happens and the engines are at low power, the jet would roll off the end of the deck into the sea. With full power, it simply takes off again, goes around, and tries one more time.
+If the engines were at low power, the jet could roll off the end of the deck into the sea. At full power, it simply takes off again, flies around, and tries one more time.
 
-That's also why the landing area is angled. On modern carriers, it points about nine degrees off to the side. So a jet that misses flies off to the side, instead of crashing into the planes parked at the front.
+That's also why the landing area is angled, about nine degrees off to the side. A jet that misses flies off past the bow, instead of crashing into the planes parked at the front.
 
-And if a jet can't land normally at all, because its hook is damaged for example, the crew can stretch a giant net across the deck called the barricade, and catch the plane in it.
+And if a jet can't land normally at all, say its hook is damaged, the crew can raise a giant net across the deck, called the barricade, and catch the plane in it.
 
-All of this happens on a deck packed with jets, engines and fuel. So how does nobody get hurt?
+All of this happens on a deck packed with jets, spinning engines and fuel. So how do they keep people safe?
 
 With colours. Everyone on the flight deck wears a coloured jersey that shows their job.
 
-Yellow are the directors who move every aircraft around the deck with hand signals.
+Yellow are the officers and directors who control and move the aircraft, including the catapult and arresting-gear officers.
 
-Green run the catapults and the arresting wires.
+Green run and maintain the catapults and arresting gear, along with many aircraft maintenance crews.
 
-Purple handle the jet fuel. Everyone calls them grapes.
+Purple handle the fuel. Everyone calls them grapes.
 
-Red handle bombs and missiles, and fight fires.
+Red handle bombs and missiles, and crash and salvage.
 
-Blue chain the jets down, put chocks under the wheels, and drive the tractors and elevators.
+Blue chain the jets down, chock the wheels, and drive the tractors and elevators.
 
-Brown are the plane captains, who look after one jet each like it's their own car.
+Brown are the plane captains, each responsible for getting one jet ready.
 
-And white are safety, medical, and the landing signal officers.
+And white covers several safety jobs: landing signal officers, safety observers, inspectors and medical teams.
 
-So at a glance, anyone can see who's doing what. On a deck this dangerous, that saves lives.
+At a glance, anyone can see who's doing what.
 
-And all of it is run from the island, the tall tower on the side of the deck. Near the top is a room called primary flight control. That's where the Air Boss sits, in charge of every aircraft on the deck and in the air around the ship.
+High up on the island, the tower beside the deck, is primary flight control. That's where the Air Boss runs every aircraft on the deck and in the air close to the ship.
 
-Launches and landings happen in waves called cycles. Roughly every hour and a half, a group of about twelve to twenty aircraft launches, and the group that went out earlier comes back to land. It's a busy airport, squeezed onto a moving parking lot, in the middle of the sea.
+During busy flying, launches and landings often run in waves called cycles. A common rhythm is roughly every hour and a half, with a dozen or more aircraft in each, but it changes with the mission. A busy airport, squeezed onto a moving deck, in the middle of the sea.
 
-Why so careful? Because the Navy learned the hard way what can happen on a crowded flight deck.
+The Navy didn't learn all of this on paper.
 
-On the twenty-ninth of July, nineteen sixty-seven, the carrier USS Forrestal was getting ready to launch aircraft off the coast of Vietnam.
+On the twenty-ninth of July, nineteen sixty-seven, the carrier USS Forrestal was preparing to launch aircraft off the coast of Vietnam.
 
-On the deck, a rocket under the wing of one jet fired by accident. It hit another plane's fuel tank. Burning jet fuel spread across the deck, and the bombs loaded on the planes began to explode.
+On the crowded deck, an electrical malfunction fired a Zuni rocket from under an F-4B Phantom. It struck the external fuel tank of an A-4E Skyhawk across the deck. Fuel poured out and caught fire, and bombs on the burning aircraft began to explode.
 
-A hundred and thirty-four sailors and aviators were killed. Twenty-one aircraft were destroyed.
+One of the first men to run toward the fire was Chief Gerald Farrier, with a portable extinguisher. He was killed in the first explosion.
 
-After the Forrestal fire, the Navy changed the way it trains sailors to fight fires at sea. Today, sailors on every carrier drill for a flight deck fire again and again, because on a ship, the fire brigade is you.
+One hundred and thirty-four men were killed. One hundred and sixty-one were injured. Twenty-one aircraft were destroyed.
 
-Of course, ninety aircraft don't all fit on the top deck at once.
+The fire changed the Navy. It brought back firefighting training for every sailor, not just specialist teams, and reshaped how carriers handle fires on deck. Today, sailors train at a firefighting school named after Chief Farrier.
 
-Under the flight deck is a huge garage called the hangar bay, where jets are repaired and stored.
+On a ship, there's no fire brigade coming. The fire brigade is everyone on board.
 
-To move jets between the two, there are giant elevators on the sides of the ship. A Nimitz carrier has four of them, and each one can lift fighter jets from the hangar up to the flight deck in seconds.
+Back to the flying. Not every aircraft fits on the flight deck at once.
 
-There are separate elevators for bombs and missiles too, which come up from storage rooms deep inside the ship.
+Below it is a huge garage called the hangar bay, where jets are repaired and stored.
 
-So what powers a hundred-thousand-tonne ship, a catapult, and a town of five thousand people?
+To move jets between the two, there are giant elevators on the sides of the ship. A Nimitz carrier has four, and each one can lift a fighter from the hangar to the flight deck in seconds.
+
+Separate weapons elevators bring bombs and missiles up from magazines deep inside the hull.
+
+So what powers the catapults, the elevators, and a town of five thousand people?
 
 Two nuclear reactors.
 
-The reactors heat water into steam. The steam spins turbines that turn the propellers, and make electricity for the whole ship.
+They heat water into steam. The steam spins turbines that turn the propellers and make electricity for the whole ship.
 
-On a Nimitz-class carrier, the reactors run for more than twenty years without new fuel. In its whole life, the ship is refuelled only once, halfway through, in a huge overhaul that can take around four years.
+A Nimitz carrier runs for more than twenty years on its first load of fuel. Halfway through its life, it gets refuelled once, in a huge overhaul that takes several years.
 
-The Ford's new reactors make far more electricity, about three times as much as the older design sets aside for its systems. That's what lets it run electric catapults instead of steam.
+The Ford's newer reactors generate much more electricity. The Navy says nearly three times the capacity of earlier carriers. That's what makes the electric catapults possible.
 
-And because the reactors don't need oil, the carrier itself never has to stop for fuel. All its tanks can carry fuel for the jets instead.
+Nuclear power means the carrier never stops for its own fuel. But the jets still burn jet fuel, and lots of it. So supply ships regularly come alongside at sea, pumping over aviation fuel and passing across food, parts and ammunition.
 
-Now think about the people. Five thousand of them, far out at sea, for months.
+Now think about the people who keep those flights going, far out at sea for months.
 
 A Nimitz carrier's galleys can serve around eighteen thousand meals a day.
 
-And all that water? The ship makes it from the sea. Its distillers turn seawater into about four hundred thousand gallons of fresh water every day. That's around one and a half million litres.
+The water? Distillers turn seawater into about four hundred thousand gallons of fresh water a day. That's around one and a half million litres.
 
-Most sailors sleep in stacked bunks, in rooms shared with dozens of other people, each with a small locker for everything they own.
+Most sailors sleep in stacked bunks, in rooms shared with dozens of others, with a small locker for everything they own.
 
-There are gyms, a post office, a hospital with operating rooms, and even a barber shop.
+There are gyms, a post office, a medical department with an operating room, and even a barber shop.
 
-The newest carrier, the USS Gerald R. Ford, was commissioned in twenty seventeen.
+The newest carrier, the USS Gerald R. Ford, was commissioned in twenty seventeen, at a cost of about thirteen billion dollars.
 
-It cost about thirteen billion dollars, making it the most expensive warship ever built.
+It has the electric catapults, new arresting gear, three elevators instead of four, and a smaller island moved further back to free up deck space.
 
-It has the electric catapult, new electric arresting gear, a smaller control tower moved further back, and new weapons elevators. The goal was to launch more flights every day than the older carriers: a hundred and sixty a day, and up to two hundred and seventy in an emergency. The Pentagon's own testers have called those targets unrealistic, so we'll see.
+All of it is meant to launch and recover more aircraft. The Navy's design requirement is a hundred and sixty flights a day for weeks at a time, and up to two hundred and seventy in a short surge. Those are targets, not everyday numbers, and the Pentagon's own testers have questioned whether the ship can reach them.
 
 So let's land that jet one more time.
 
-The ship turns into the wind. You keep the meatball in the centre. The landing officer says your approach looks good.
+The ship has turned into the wind. You keep the meatball level with the green lights. The landing signal officer says you're looking good.
 
-The wheels slam down. You push to full power. Your hook catches the third wire.
+The wheels slam down. You push to full power, just in case. Your hook catches the third wire.
 
-And in two seconds, a twenty-three-tonne jet is standing still, on a floating runway, in the middle of the ocean.
+And in about two seconds, your jet is standing still, on a floating runway, in the middle of the ocean.
 
-That's how an aircraft carrier works: a floating airport, a power station, and a town of five thousand people, all moving at fifty kilometres an hour across the sea.
+That's how an aircraft carrier works: a floating airport, a power station and a town, built around one job. Throw jets into the sky, and catch them again.
 
-If you want to see what this ship costs compared to every other kind of ship, from a two-thousand-dollar fishing boat to the thirteen-billion-dollar Ford, that video is right here.
+If you want to see what this ship costs compared to every other kind of ship, from a small fishing boat to the thirteen-billion-dollar Ford, that video is right here.
