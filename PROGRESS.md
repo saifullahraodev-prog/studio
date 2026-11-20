@@ -624,3 +624,5 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
 - 2026-11-20: owner approved Part 4 stills. Sound: new procedural SFX in `audio/sfx.py` (jet, hiss, twang, zap) + carrier rules in
   `tools/shipguy_mix.py` (Forrestal cuts at whoosh 0.15, no comic sounds). `mix.wav` voice + SFX only (no music), 362 events,
   -15.0 LUFS / -1.4 dBTP. Subtitles: 209 cues (`subs.json`). GATE: ask owner before test/full render.
+- 2026-11-20: owner OK'd a test -> `videos/2026-11-19-aircraft-carrier/out/test-60s.mp4` (frames 0-1799, -14.8 LUFS, no black/frozen
+  stretches). GATE: owner feedback on the test, then full render.
