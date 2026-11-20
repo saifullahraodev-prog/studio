@@ -626,3 +626,6 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   -15.0 LUFS / -1.4 dBTP. Subtitles: 209 cues (`subs.json`). GATE: ask owner before test/full render.
 - 2026-11-20: owner OK'd a test -> `videos/2026-11-19-aircraft-carrier/out/test-60s.mp4` (frames 0-1799, -14.8 LUFS, no black/frozen
   stretches). GATE: owner feedback on the test, then full render.
+- DONE 2026-11-20: `videos/2026-11-19-aircraft-carrier/out/carrier-final.mp4` (1080p30, 10:16, -15.0 LUFS, peak -4.3 dBFS, 0 black,
+  0 frozen; voice + SFX, no music). Upload kit: `thumbnails/thumb-C{A,B,C}.jpg` (`engine/shipguy/ThumbCarrier.tsx`),
+  `aircraft-carrier.en.srt` (224 cues), `youtube-upload.txt` (title, description, 12 chapters, sources, tags, end screen).

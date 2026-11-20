@@ -1,0 +1,1031 @@
+1
+00:00:00,000 --> 00:00:00,870
+It's night.
+
+2
+00:00:00,920 --> 00:00:02,630
+You're flying a fighter jet at around
+
+3
+00:00:02,680 --> 00:00:04,990
+two hundred and forty kilometres an hour.
+
+4
+00:00:05,280 --> 00:00:08,010
+Somewhere down there in
+the dark is your runway.
+
+5
+00:00:08,160 --> 00:00:09,090
+It's moving.
+
+6
+00:00:09,140 --> 00:00:10,910
+It's rising and falling with the waves.
+
+7
+00:00:11,080 --> 00:00:12,810
+And the patch of deck you have to hit is
+
+8
+00:00:12,860 --> 00:00:15,270
+smaller than almost any runway on land.
+
+9
+00:00:15,420 --> 00:00:17,390
+You can't slow down to land.
+
+10
+00:00:17,440 --> 00:00:19,030
+You can't stop on your own.
+
+11
+00:00:19,120 --> 00:00:20,710
+Something has to grab your plane and
+
+12
+00:00:20,760 --> 00:00:23,230
+stop it for you, in about two seconds.
+
+13
+00:00:23,480 --> 00:00:25,430
+And the moment your wheels hit the deck,
+
+14
+00:00:25,500 --> 00:00:27,850
+you do something that
+sounds completely crazy.
+
+15
+00:00:27,900 --> 00:00:30,030
+You push the engines to full power.
+
+16
+00:00:30,080 --> 00:00:30,650
+Why?
+
+17
+00:00:30,700 --> 00:00:32,570
+To answer that, we need to understand
+
+18
+00:00:32,620 --> 00:00:35,230
+how an aircraft carrier really works.
+
+19
+00:00:35,380 --> 00:00:38,370
+The biggest aircraft carriers in
+the world belong to the United
+
+20
+00:00:38,420 --> 00:00:43,850
+States Navy: the Nimitz class, and
+the newest one, the Gerald R. Ford.
+
+21
+00:00:44,000 --> 00:00:48,030
+A Nimitz carrier is about three
+hundred and thirty metres long.
+
+22
+00:00:48,200 --> 00:00:51,810
+Stand it on its end, and it's
+about as tall as the Eiffel Tower.
+
+23
+00:00:52,120 --> 00:00:55,610
+Fully loaded, it weighs around
+a hundred thousand tonnes,
+
+24
+00:00:55,740 --> 00:00:58,330
+and it can still sail at
+more than thirty knots.
+
+25
+00:00:58,580 --> 00:00:59,850
+With its air wing on board,
+
+26
+00:01:00,080 --> 00:01:03,190
+around five thousand people live
+and work on a Nimitz carrier.
+
+27
+00:01:03,500 --> 00:01:05,290
+That's more than many small towns.
+
+28
+00:01:05,340 --> 00:01:06,730
+And it doesn't sail alone.
+
+29
+00:01:06,820 --> 00:01:08,910
+Cruisers and destroyers
+guard it against missiles
+
+30
+00:01:08,960 --> 00:01:11,990
+and submarines, and supply
+ships keep it stocked.
+
+31
+00:01:12,040 --> 00:01:14,610
+Together they're called
+a carrier strike group,
+
+32
+00:01:14,660 --> 00:01:17,170
+and the escorts bring
+thousands more people.
+
+33
+00:01:17,480 --> 00:01:19,890
+But the whole point of
+this ship is its aircraft.
+
+34
+00:01:20,040 --> 00:01:23,070
+An air wing usually has more
+than forty strike fighters,
+
+35
+00:01:23,380 --> 00:01:27,930
+like the F/A-18 Super Hornet and
+the F-35C, plus the specialists:
+
+36
+00:01:28,080 --> 00:01:32,070
+the E-2D Hawkeye with its giant
+radar dish, the EA-18G Growler
+
+37
+00:01:32,120 --> 00:01:36,090
+that jams enemy radar, helicopters
+for submarine hunting and rescue,
+
+38
+00:01:36,340 --> 00:01:39,810
+and transport aircraft that
+bring people, mail and parts.
+
+39
+00:01:39,980 --> 00:01:43,390
+The exact mix changes from ship
+to ship and mission to mission.
+
+40
+00:01:43,500 --> 00:01:46,310
+But every one of those
+aircraft has the same problem.
+
+41
+00:01:46,600 --> 00:01:48,350
+This runway is far too short.
+
+42
+00:01:48,400 --> 00:01:52,810
+On land, a fighter jet often uses
+well over a kilometre of runway.
+
+43
+00:01:53,020 --> 00:01:56,570
+On a Nimitz carrier, the catapult
+gives it about ninety metres.
+
+44
+00:01:56,720 --> 00:01:58,850
+So the carrier throws it into the air.
+
+45
+00:01:59,000 --> 00:02:00,910
+Under the deck runs a long track.
+
+46
+00:02:01,260 --> 00:02:02,690
+The jet's nose wheel is attached to
+
+47
+00:02:02,740 --> 00:02:04,470
+a shuttle that rides in that track.
+
+48
+00:02:04,700 --> 00:02:06,970
+The pilot pushes the
+engines to full power,
+
+49
+00:02:07,080 --> 00:02:10,710
+but the jet doesn't move, because
+a holdback is holding it in place.
+
+50
+00:02:10,860 --> 00:02:13,830
+Behind it, a steel wall
+rises out of the deck.
+
+51
+00:02:14,040 --> 00:02:17,770
+It's a jet blast deflector,
+and it stops the scorching
+
+52
+00:02:17,820 --> 00:02:20,370
+exhaust from hitting the
+people and planes behind.
+
+53
+00:02:20,520 --> 00:02:22,310
+The deck crew check everything.
+
+54
+00:02:22,460 --> 00:02:26,330
+Then the catapult officer, nicknamed
+the shooter, gives the signal.
+
+55
+00:02:26,480 --> 00:02:29,010
+The holdback lets go,
+and the catapult fires.
+
+56
+00:02:29,160 --> 00:02:31,570
+In about two seconds, the
+jet goes from standing
+
+57
+00:02:31,620 --> 00:02:34,510
+still to flying speed,
+around two hundred and
+
+58
+00:02:34,560 --> 00:02:37,130
+eighty kilometres an hour
+for a typical fighter.
+
+59
+00:02:37,280 --> 00:02:39,810
+On Nimitz carriers, that
+push comes from steam,
+
+60
+00:02:39,880 --> 00:02:41,510
+made with heat from the ship's reactors.
+
+61
+00:02:41,560 --> 00:02:44,590
+The Ford uses an electric
+system called EMALS.
+
+62
+00:02:44,740 --> 00:02:47,650
+It stores energy in big spinning
+rotors between launches,
+
+63
+00:02:47,960 --> 00:02:50,990
+then releases it through
+electronic power converters into a
+
+64
+00:02:51,040 --> 00:02:54,310
+long electric motor that pulls
+the shuttle down the track.
+
+65
+00:02:54,540 --> 00:02:57,690
+It's easier to fine-tune for
+heavy jets and light drones alike.
+
+66
+00:02:57,840 --> 00:02:59,530
+The carrier usually helps too.
+
+67
+00:02:59,860 --> 00:03:01,230
+It steers into the wind,
+
+68
+00:03:01,280 --> 00:03:03,910
+so more air is already
+flowing over the wings.
+
+69
+00:03:04,060 --> 00:03:05,370
+Launching is violent.
+
+70
+00:03:05,620 --> 00:03:08,590
+But bringing that jet back is even harder.
+
+71
+00:03:08,740 --> 00:03:10,750
+Let's go back to our night landing.
+
+72
+00:03:10,940 --> 00:03:13,630
+To stay on the right path
+down, the pilot watches
+
+73
+00:03:13,680 --> 00:03:16,330
+a light on the side of the
+deck called the meatball.
+
+74
+00:03:16,380 --> 00:03:18,330
+If the ball of light sits level with a row
+
+75
+00:03:18,380 --> 00:03:21,050
+of green lights, you're on the glide path.
+
+76
+00:03:21,100 --> 00:03:22,570
+Too high, and it rises.
+
+77
+00:03:22,880 --> 00:03:24,370
+Too low, and it sinks.
+
+78
+00:03:24,680 --> 00:03:27,530
+Beside the landing area stands
+a landing signal officer,
+
+79
+00:03:27,740 --> 00:03:32,690
+an experienced pilot who watches every
+approach and talks the pilots in by radio.
+
+80
+00:03:32,840 --> 00:03:35,890
+Across the landing area
+are thick steel cables,
+
+81
+00:03:35,940 --> 00:03:38,050
+raised a little above the deck.
+
+82
+00:03:38,240 --> 00:03:40,170
+Most Nimitz-class carriers have four.
+
+83
+00:03:40,480 --> 00:03:43,710
+The Ford, and the two newest
+Nimitz ships, have three.
+
+84
+00:03:43,960 --> 00:03:46,150
+Under the tail of the jet hangs a hook.
+
+85
+00:03:46,460 --> 00:03:48,210
+The pilot flies the plane firmly onto the
+
+86
+00:03:48,260 --> 00:03:50,670
+deck so the hook can
+catch one of those wires.
+
+87
+00:03:50,820 --> 00:03:53,490
+On a four-wire deck,
+pilots aim for the third,
+
+88
+00:03:53,540 --> 00:03:56,850
+because it gives the safest margin
+from the back edge of the ship.
+
+89
+00:03:57,000 --> 00:03:59,250
+Then the wire pays out,
+pulling against huge
+
+90
+00:03:59,300 --> 00:04:01,910
+machines below the deck that
+soak up the jet's energy.
+
+91
+00:04:01,960 --> 00:04:04,710
+The system is built to stop
+a jet weighing more than
+
+92
+00:04:04,760 --> 00:04:07,518
+twenty tonnes, coming in
+at around two hundred and
+
+93
+00:04:07,568 --> 00:04:10,630
+forty kilometres an hour,
+in roughly a hundred metres.
+
+94
+00:04:10,780 --> 00:04:12,190
+In about two seconds.
+
+95
+00:04:12,340 --> 00:04:15,450
+Those cables take a terrible
+beating, so the crew inspect them
+
+96
+00:04:15,500 --> 00:04:19,870
+constantly and replace them whenever
+wear and maintenance rules say so.
+
+97
+00:04:20,020 --> 00:04:23,890
+So, why push to full power
+at the exact moment you land?
+
+98
+00:04:24,160 --> 00:04:26,430
+Because sometimes the
+hook misses every wire.
+
+99
+00:04:26,520 --> 00:04:28,090
+That's called a bolter.
+
+100
+00:04:28,240 --> 00:04:29,750
+If the engines were at low power,
+
+101
+00:04:29,800 --> 00:04:32,910
+the jet could roll off the
+end of the deck into the sea.
+
+102
+00:04:32,960 --> 00:04:35,450
+At full power, it simply takes off again,
+
+103
+00:04:35,700 --> 00:04:38,390
+flies around, and tries one more time.
+
+104
+00:04:38,540 --> 00:04:40,850
+That's also why the
+landing area is angled,
+
+105
+00:04:40,980 --> 00:04:43,190
+about nine degrees off to the side.
+
+106
+00:04:43,380 --> 00:04:45,530
+A jet that misses flies off past the bow,
+
+107
+00:04:45,720 --> 00:04:48,710
+instead of crashing into the
+planes parked at the front.
+
+108
+00:04:49,060 --> 00:04:53,090
+And if a jet can't land normally
+at all, say its hook is damaged,
+
+109
+00:04:53,360 --> 00:04:55,990
+the crew can raise a
+giant net across the deck,
+
+110
+00:04:56,040 --> 00:04:58,850
+called the barricade, and
+catch the plane in it.
+
+111
+00:04:59,000 --> 00:05:01,850
+All of this happens on
+a deck packed with jets,
+
+112
+00:05:01,920 --> 00:05:03,430
+spinning engines and fuel.
+
+113
+00:05:03,600 --> 00:05:05,230
+So how do they keep people safe?
+
+114
+00:05:05,500 --> 00:05:06,310
+With colours.
+
+115
+00:05:06,360 --> 00:05:07,850
+Everyone on the flight deck wears a
+
+116
+00:05:07,900 --> 00:05:09,910
+coloured jersey that shows their job.
+
+117
+00:05:10,060 --> 00:05:13,670
+Yellow are the officers and directors
+who control and move the aircraft,
+
+118
+00:05:14,000 --> 00:05:17,290
+including the catapult and
+arresting-gear officers.
+
+119
+00:05:17,440 --> 00:05:21,210
+Green run and maintain the
+catapults and arresting gear,
+
+120
+00:05:21,360 --> 00:05:23,730
+along with many aircraft
+maintenance crews.
+
+121
+00:05:24,040 --> 00:05:25,630
+Purple handle the fuel.
+
+122
+00:05:25,940 --> 00:05:27,390
+Everyone calls them grapes.
+
+123
+00:05:27,540 --> 00:05:30,970
+Red handle bombs and missiles,
+and crash and salvage.
+
+124
+00:05:31,160 --> 00:05:33,410
+Blue chain the jets
+down, chock the wheels,
+
+125
+00:05:33,680 --> 00:05:35,910
+and drive the tractors and elevators.
+
+126
+00:05:36,060 --> 00:05:37,870
+Brown are the plane captains,
+
+127
+00:05:38,100 --> 00:05:40,510
+each responsible for
+getting one jet ready.
+
+128
+00:05:40,780 --> 00:05:44,350
+And white covers several safety
+jobs: landing signal officers,
+
+129
+00:05:44,500 --> 00:05:47,430
+safety observers, inspectors
+and medical teams.
+
+130
+00:05:47,600 --> 00:05:50,230
+At a glance, anyone can
+see who's doing what.
+
+131
+00:05:50,540 --> 00:05:53,130
+High up on the island,
+the tower beside the deck,
+
+132
+00:05:53,180 --> 00:05:54,870
+is primary flight control.
+
+133
+00:05:55,100 --> 00:05:57,130
+That's where the Air
+Boss runs every aircraft
+
+134
+00:05:57,180 --> 00:05:59,770
+on the deck and in the
+air close to the ship.
+
+135
+00:05:59,920 --> 00:06:01,090
+During busy flying,
+
+136
+00:06:01,300 --> 00:06:04,330
+launches and landings often
+run in waves called cycles.
+
+137
+00:06:04,480 --> 00:06:07,090
+A common rhythm is roughly
+every hour and a half,
+
+138
+00:06:07,140 --> 00:06:10,750
+with a dozen or more aircraft in
+each, but it changes with the mission.
+
+139
+00:06:10,820 --> 00:06:14,950
+A busy airport, squeezed onto a
+moving deck, in the middle of the sea.
+
+140
+00:06:15,220 --> 00:06:17,190
+The Navy didn't learn
+all of this on paper.
+
+141
+00:06:17,240 --> 00:06:21,850
+On the twenty-ninth of July,
+nineteen sixty-seven, the carrier USS
+
+142
+00:06:21,900 --> 00:06:26,090
+Forrestal was preparing to launch
+aircraft off the coast of Vietnam.
+
+143
+00:06:27,080 --> 00:06:29,650
+On the crowded deck, an
+electrical malfunction
+
+144
+00:06:29,700 --> 00:06:33,190
+fired a Zuni rocket from
+under an F-4B Phantom.
+
+145
+00:06:33,520 --> 00:06:38,030
+It struck the external fuel tank
+of an A-4E Skyhawk across the deck.
+
+146
+00:06:38,240 --> 00:06:40,110
+Fuel poured out and caught fire,
+
+147
+00:06:40,180 --> 00:06:42,790
+and bombs on the burning
+aircraft began to explode.
+
+148
+00:06:43,780 --> 00:06:46,210
+One of the first men to
+run toward the fire was
+
+149
+00:06:46,260 --> 00:06:49,590
+Chief Gerald Farrier, with
+a portable extinguisher.
+
+150
+00:06:50,600 --> 00:06:52,390
+He was killed in the first explosion.
+
+151
+00:06:53,380 --> 00:06:54,930
+One hundred and thirty-four
+men were killed.
+
+152
+00:06:55,780 --> 00:06:57,110
+One hundred and sixty-one were injured.
+
+153
+00:06:57,280 --> 00:06:58,950
+Twenty-one aircraft were destroyed.
+
+154
+00:06:59,180 --> 00:07:00,610
+The fire changed the Navy.
+
+155
+00:07:00,900 --> 00:07:03,750
+It brought back firefighting
+training for every sailor,
+
+156
+00:07:03,800 --> 00:07:07,970
+not just specialist teams, and reshaped
+how carriers handle fires on deck.
+
+157
+00:07:08,220 --> 00:07:10,250
+Today, sailors train at a firefighting
+
+158
+00:07:10,300 --> 00:07:12,310
+school named after Chief Farrier.
+
+159
+00:07:12,580 --> 00:07:14,470
+On a ship, there's no fire brigade coming.
+
+160
+00:07:14,520 --> 00:07:17,210
+The fire brigade is everyone on board.
+
+161
+00:07:17,620 --> 00:07:18,620
+Back to the flying.
+
+162
+00:07:18,740 --> 00:07:21,330
+Not every aircraft fits on
+the flight deck at once.
+
+163
+00:07:21,480 --> 00:07:24,190
+Below it is a huge garage
+called the hangar bay,
+
+164
+00:07:24,460 --> 00:07:26,130
+where jets are repaired and stored.
+
+165
+00:07:26,380 --> 00:07:27,870
+To move jets between the two,
+
+166
+00:07:28,080 --> 00:07:30,650
+there are giant elevators
+on the sides of the ship.
+
+167
+00:07:30,920 --> 00:07:33,650
+A Nimitz carrier has four,
+and each one can lift a
+
+168
+00:07:33,700 --> 00:07:36,270
+fighter from the hangar to
+the flight deck in seconds.
+
+169
+00:07:36,500 --> 00:07:38,870
+Separate weapons elevators bring bombs and
+
+170
+00:07:38,920 --> 00:07:41,950
+missiles up from magazines
+deep inside the hull.
+
+171
+00:07:42,100 --> 00:07:45,170
+So what powers the
+catapults, the elevators,
+
+172
+00:07:45,220 --> 00:07:47,530
+and a town of five thousand people?
+
+173
+00:07:47,800 --> 00:07:49,050
+Two nuclear reactors.
+
+174
+00:07:49,180 --> 00:07:50,690
+They heat water into steam.
+
+175
+00:07:50,960 --> 00:07:53,130
+The steam spins turbines
+that turn the propellers
+
+176
+00:07:53,180 --> 00:07:55,630
+and make electricity for the whole ship.
+
+177
+00:07:55,780 --> 00:07:57,570
+A Nimitz carrier runs for more than
+
+178
+00:07:57,620 --> 00:08:00,070
+twenty years on its first load of fuel.
+
+179
+00:08:00,220 --> 00:08:02,870
+Halfway through its life,
+it gets refuelled once,
+
+180
+00:08:02,920 --> 00:08:05,850
+in a huge overhaul that
+takes several years.
+
+181
+00:08:06,000 --> 00:08:08,850
+The Ford's newer reactors
+generate much more electricity.
+
+182
+00:08:08,900 --> 00:08:12,830
+The Navy says nearly three times
+the capacity of earlier carriers.
+
+183
+00:08:12,980 --> 00:08:15,410
+That's what makes the
+electric catapults possible.
+
+184
+00:08:15,740 --> 00:08:18,930
+Nuclear power means the carrier
+never stops for its own fuel.
+
+185
+00:08:19,160 --> 00:08:22,010
+But the jets still burn
+jet fuel, and lots of it.
+
+186
+00:08:22,280 --> 00:08:24,790
+So supply ships regularly
+come alongside at sea,
+
+187
+00:08:24,960 --> 00:08:29,290
+pumping over aviation fuel and passing
+across food, parts and ammunition.
+
+188
+00:08:29,440 --> 00:08:30,970
+Now think about the people who keep those
+
+189
+00:08:31,020 --> 00:08:33,670
+flights going, far out at sea for months.
+
+190
+00:08:33,940 --> 00:08:35,750
+A Nimitz carrier's galleys can serve
+
+191
+00:08:35,800 --> 00:08:37,890
+around eighteen thousand meals a day.
+
+192
+00:08:38,040 --> 00:08:38,930
+The water?
+
+193
+00:08:38,980 --> 00:08:41,103
+Distillers turn seawater into about four
+
+194
+00:08:41,153 --> 00:08:43,470
+hundred thousand gallons
+of fresh water a day.
+
+195
+00:08:43,680 --> 00:08:46,070
+That's around one and
+a half million litres.
+
+196
+00:08:46,220 --> 00:08:49,430
+Most sailors sleep in stacked
+bunks, in rooms shared with
+
+197
+00:08:49,480 --> 00:08:52,930
+dozens of others, with a small
+locker for everything they own.
+
+198
+00:08:53,240 --> 00:08:56,370
+There are gyms, a post
+office, a medical department
+
+199
+00:08:56,420 --> 00:08:59,410
+with an operating room,
+and even a barber shop.
+
+200
+00:08:59,540 --> 00:09:03,270
+The newest carrier, the USS Gerald
+R. Ford, was commissioned in
+
+201
+00:09:03,320 --> 00:09:07,370
+twenty seventeen, at a cost of
+about thirteen billion dollars.
+
+202
+00:09:07,480 --> 00:09:10,570
+It has the electric
+catapults, new arresting gear,
+
+203
+00:09:10,720 --> 00:09:12,450
+three elevators instead of four,
+
+204
+00:09:12,560 --> 00:09:15,790
+and a smaller island moved further
+back to free up deck space.
+
+205
+00:09:16,080 --> 00:09:18,710
+All of it is meant to launch
+and recover more aircraft.
+
+206
+00:09:18,860 --> 00:09:22,210
+The Navy's design requirement is a
+hundred and sixty flights a day for
+
+207
+00:09:22,260 --> 00:09:26,250
+weeks at a time, and up to two
+hundred and seventy in a short surge.
+
+208
+00:09:26,540 --> 00:09:29,730
+Those are targets, not everyday
+numbers, and the Pentagon's
+
+209
+00:09:29,780 --> 00:09:32,750
+own testers have questioned
+whether the ship can reach them.
+
+210
+00:09:33,060 --> 00:09:35,430
+So let's land that jet one more time.
+
+211
+00:09:35,580 --> 00:09:37,290
+The ship has turned into the wind.
+
+212
+00:09:37,440 --> 00:09:39,870
+You keep the meatball level
+with the green lights.
+
+213
+00:09:40,020 --> 00:09:42,870
+The landing signal officer
+says you're looking good.
+
+214
+00:09:43,020 --> 00:09:44,390
+The wheels slam down.
+
+215
+00:09:44,640 --> 00:09:46,350
+You push to full power, just in case.
+
+216
+00:09:46,600 --> 00:09:48,350
+Your hook catches the third wire.
+
+217
+00:09:48,480 --> 00:09:51,430
+And in about two seconds,
+your jet is standing still,
+
+218
+00:09:51,480 --> 00:09:54,590
+on a floating runway, in
+the middle of the ocean.
+
+219
+00:09:54,740 --> 00:09:57,730
+That's how an aircraft carrier
+works: a floating airport,
+
+220
+00:09:57,780 --> 00:10:01,510
+a power station and a
+town, built around one job.
+
+221
+00:10:01,680 --> 00:10:04,490
+Throw jets into the sky,
+and catch them again.
+
+222
+00:10:04,640 --> 00:10:07,690
+If you want to see what this
+ship costs compared to every
+
+223
+00:10:07,740 --> 00:10:10,630
+other kind of ship, from a
+small fishing boat to the
+
+224
+00:10:10,680 --> 00:10:14,290
+thirteen-billion-dollar Ford,
+that video is right here.

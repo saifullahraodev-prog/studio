@@ -1,0 +1,76 @@
+TITLE (use this one)
+How an Aircraft Carrier Actually Works
+
+Other title options (for later A/B tests):
+- How Do You Stop a Jet in 2 Seconds?
+- Why Pilots Go FULL Power When They Land on a Carrier
+- Inside a 100,000-Tonne Aircraft Carrier
+
+THUMBNAIL (in the thumbnails folder)
+- thumb-CA.jpg  "2 SECONDS": the jet slamming onto the wire with sparks, the Ship Guy shocked (recommended)
+- thumb-CB.jpg  "FULL POWER?!": the Ship Guy as the pilot, panicking, the jet landing behind him (good second for YouTube's thumbnail test)
+- thumb-CC.jpg  "STOP IT!": the Ship Guy pulling on the jet's tailhook, heels sparking
+
+=====================================================================
+
+DESCRIPTION (paste everything between the lines)
+---------------------------------------------------------------------
+It's night. You're landing a fighter jet on a runway that moves, rises and falls with the waves, and you have about two seconds to stop. And the moment your wheels hit the deck, you push the engines to full power. Why?
+
+This is how a US Navy aircraft carrier really works: the catapults that throw jets into the sky, the wires that catch them, the crews in coloured jerseys who keep it all safe, the fire that changed the Navy, the reactors that power it, and the floating town of about five thousand people who live on board.
+
+⏱ CHAPTERS
+0:00 The hardest landing in the world
+0:35 A runway that floats
+1:48 Zero to flying speed in two seconds
+3:08 Catching a jet with a wire
+4:19 Why full throttle?
+4:58 The rainbow on the deck
+6:15 The day it went wrong (USS Forrestal, 1967)
+7:17 The garage below
+7:42 The nuclear heart
+8:29 Feeding a floating town
+8:59 The newest giant: USS Gerald R. Ford
+9:32 Back to the landing
+
+📊 KEY FACTS
+• Nimitz class: about 333 m long, about 100,000 tonnes fully loaded, 30+ knots, two nuclear reactors
+• About 5,000 people on board with the air wing embarked (Nimitz class)
+• Air wing: usually 40+ strike fighters, plus radar, electronic-attack, helicopter and transport aircraft (varies by deployment)
+• Arresting gear: built to stop a jet of more than 20 tonnes from about 240 km/h in roughly 100 m, in about 2 seconds
+• Most Nimitz carriers have 4 wires; the Ford and the two newest Nimitz ships have 3
+• USS Forrestal, 29 July 1967: 134 killed, 161 injured, 21 aircraft destroyed
+• Ford: commissioned 2017, about $13 billion; the Navy says nearly three times the electrical capacity of earlier carriers
+• Ford sortie numbers (160 a day / 270 surge) are design requirements, not everyday numbers
+
+We remember the 134 men who died aboard USS Forrestal.
+
+🚢 Watch next: Every Level of Ship by Cost
+🚢 Also: The Tiny Mistake That Brought Down a Bridge
+
+📚 SOURCES
+• US Navy fact file, Aircraft Carriers (CVN): https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2169795/aircraft-carriers-cvn/
+• Naval History and Heritage Command, H-Gram 008-6, USS Forrestal disaster: https://www.history.navy.mil/about-us/leadership/director/directors-corner/h-grams/h-gram-008/h-008-6.html
+• Naval Safety Command, USS Forrestal fire: https://navalsafetycommand.navy.mil/Portals/100/Documents/TDNH_USS_Forrestal_Fire_29JUL67.pdf
+• All Hands, remembering the Forrestal fire: https://allhands.navy.mil/Stories/Display-Story/Article/1840393
+• Congressional Research Service, Navy Ford (CVN-78) class carrier program: https://crsreports.congress.gov/product/pdf/RS/RS20643
+• DOT&E annual reports (CVN 78 sortie generation): https://www.dote.osd.mil/
+• AIRPAC, Flight Deck Awareness (jersey colours, Pri-Fly): https://www.airpac.navy.mil/Portals/53/Flight%20Deck%20Awareness%20V2.pdf
+• US Indo-Pacific Command, USS Nimitz at 50 (meals, fresh water): https://www.pacom.mil/Media/News/News-Articles/Article/1564617/uss-nimitz-50-years-of-teamwork-and-tradition/
+• USNI News, Inside the Carrier Air Wing: https://news.usni.org/2016/04/28/the-basics-inside-the-carrier-air-wing
+• Arresting gear: https://en.wikipedia.org/wiki/Arresting_gear
+• EMALS: https://en.wikipedia.org/wiki/Electromagnetic_Aircraft_Launch_System
+
+Subscribe to The Ship Guy for more stories about the biggest, strangest and most expensive ships on Earth.
+
+#AircraftCarrier #USNavy #Ships
+---------------------------------------------------------------------
+
+TAGS (YouTube Studio → Show more → Tags; paste as one line)
+how aircraft carriers work, aircraft carrier, us navy, nimitz class, uss gerald r ford, carrier landing, arresting wire, catapult launch, emals, flight deck jerseys, uss forrestal fire, nuclear aircraft carrier, the ship guy
+
+CATEGORY: Education
+SUBTITLES: the video already has subtitles burned in. Also upload aircraft-carrier.en.srt under Subtitles (English, "With timing")
+so YouTube's own captions, search and auto-translate work.
+END SCREEN: the last ~11 seconds point to the ship-cost video. In YouTube Studio → End screen, place the video element over the
+dark "EVERY SHIP'S PRICE" card (left side) and a Subscribe element over the red button.
