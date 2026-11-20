@@ -80,7 +80,7 @@ const Lso: Tpl = ({ t, p, w }) => {
         {talk && (
           <g transform={`translate(1020 360) scale(${pop(t, 8)})`}>
             <path d="M-260 -80 H 260 V 60 H -40 L -120 140 L -100 60 H -260 Z" fill="#f4f4f0" {...O(7)} />
-            <Txt x={0} y={14} s={52}>"ROGER BALL…"</Txt>
+            <Txt x={0} y={14} s={52}>{p.say ? `"${p.say.replace(/_/g, " ")}"` : "\"ROGER BALL…\""}</Txt>
           </g>
         )}
       </Svg>
@@ -137,11 +137,13 @@ const Wires: Tpl = ({ t, d, p, w }) => {
     );
   }
   // side-view family
+  const night = p.night === "1";
   const bg = (
     <g>
-      <DaySky hz={deck} />
-      <OpenSea t={t} y={deck + 80} />
-      <path d={`M300 ${deck} L ${W} ${deck} L ${W} ${deck + 80} L 330 ${deck + 80} Z`} fill={DECK} {...O(6)} />
+      {night ? <NightSky t={t} /> : <DaySky hz={deck} />}
+      <OpenSea t={t} y={deck + 80} night={night} />
+      <path d={`M300 ${deck} L ${W} ${deck} L ${W} ${deck + 80} L 330 ${deck + 80} Z`} fill={night ? DECK_N : DECK} {...O(6)} />
+      {night && Array.from({ length: 12 }).map((_, i) => <circle key={i} cx={360 + i * 130} cy={deck + 8} r={5} fill="#ffd27a" />)}
       <path d={`M300 ${deck} L 330 ${deck + 80} L 270 ${deck + 260} L 240 ${deck + 260}`} fill="#6b747d" {...O(5)} />
       {WX.map((x, i) => <WireSide key={i} x={x} y={deck} hl={(m === "margin" || m === "catch") && i === 2} n={m === "margin" ? i + 1 : undefined} />)}
     </g>

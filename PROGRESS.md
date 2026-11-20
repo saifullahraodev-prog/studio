@@ -617,3 +617,7 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
 - 2026-11-20: owner approved Part 2 stills. PART 3 (sections 5b-8: Forrestal [quiet, no gags], hangar + elevators, reactors,
   replenishment at sea, life on board; 6:15-8:53): beats 105-147, new `engine/shipguy/templates6c.tsx`.
   Storyboard `storyboard/p3-*.png`. GATE: owner OK on Part 3 stills.
+- 2026-11-20: owner approved Part 3 stills. PART 4 (sections 9-10: the Ford, sortie targets, the final landing, end card;
+  8:53-10:16): beats 148-168, new `engine/shipguy/templates6d.tsx` (ford, sorties, finale, endcard6); `lso say=`, `wires night=1`.
+  Whole video now timed: 168 beats, 10:16, avg 3.7 s. Storyboard `storyboard/p4-*.png`. GATE: owner OK on Part 4 stills,
+  then SFX mix + subtitles + test render (ask first).

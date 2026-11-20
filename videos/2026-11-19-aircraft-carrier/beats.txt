@@ -159,3 +159,27 @@ town step=litres || ≈ [1.5 MILLION] LITRES || That's around one and a half mil
 town step=bunks || || Most sailors sleep in stacked bunks, in rooms shared with dozens of others,
 town step=locker || || with a small locker for everything they own.
 town step=extras || || There are gyms, a post office, a medical department with an operating room, and even a barber shop.
+# --- PART 4 = sections 9-10 (the Ford, back to the landing, the end)
+# --- 9. The newest giant
+ford step=commission || USS GERALD R. FORD · 2017 || The newest carrier, the USS Gerald R. Ford, was commissioned in twenty seventeen,
+ford step=cost || ~[$13 BILLION] || at a cost of about thirteen billion dollars.
+ford step=parts1 || EMALS · NEW ARRESTING GEAR || It has the electric catapults, new arresting gear,
+ford step=parts2 || || three elevators instead of four, and a smaller island moved further back to free up deck space.
+ford step=goal || MORE FLIGHTS || All of it is meant to launch and recover more aircraft.
+sorties step=160 || DESIGN GOAL: [160] A DAY || The Navy's design requirement is a hundred and sixty flights a day for weeks at a time,
+sorties step=270 || [270] IN A SURGE || and up to two hundred and seventy in a short surge.
+sorties step=q || TARGETS, NOT EVERYDAY || Those are targets, not everyday numbers,
+sorties step=testers || || and the Pentagon's own testers have questioned whether the ship can reach them.
+# --- 10. Back to the landing (night again, same jet as the hook)
+cockpit view=far || ONE MORE TIME || So let's land that jet one more time.
+wind || INTO THE WIND || The ship has turned into the wind.
+meatball step=2 || || You keep the meatball level with the green lights.
+lso talk=1 say=LOOKING_GOOD! || || The landing signal officer says you're looking good.
+jetside mode=touch || || The wheels slam down.
+throttle || FULL POWER || You push to full power, just in case.
+wires mode=catch night=1 || WIRE [3] || Your hook catches the third wire.
+finale step=stop || [2 SECONDS] || And in about two seconds, your jet is standing still,
+finale step=wide || || on a floating runway, in the middle of the ocean.
+finale step=sum || AIRPORT · POWER STATION · TOWN || That's how an aircraft carrier works: a floating airport, a power station and a town, built around one job.
+finale step=job || || Throw jets into the sky, and catch them again.
+endcard6 || || If you want to see what this ship costs compared to every other kind of ship, from a small fishing boat to the thirteen-billion-dollar Ford, that video is right here.
