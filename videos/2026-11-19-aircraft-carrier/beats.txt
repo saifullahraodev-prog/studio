@@ -111,3 +111,51 @@ cycle mode=1 || CYCLES || During busy flying, launches and landings often run in
 cycle mode=2 || [~1.5 HOURS] · 12+ AIRCRAFT || A common rhythm is roughly every hour and a half, with a dozen or more aircraft in each,
 cycle mode=3 || IT VARIES || but it changes with the mission.
 cycle mode=4 || || A busy airport, squeezed onto a moving deck, in the middle of the sea.
+# --- PART 3 = sections 5b-8 (Forrestal, the hangar, the reactors, the floating town)
+# --- 5b. The day it went wrong. QUIET: no gags, no comic sounds, slow moves, the pauses are kept in the voice.
+forrestal step=open || || The Navy didn't learn all of this on paper.
+forrestal step=date || 29 JULY 1967 || On the twenty-ninth of July, nineteen sixty-seven,
+forrestal step=ship || USS FORRESTAL · OFF VIETNAM || the carrier USS Forrestal was preparing to launch aircraft off the coast of Vietnam.
+forrestal step=deck || || On the crowded deck,
+forrestal step=fault || ELECTRICAL MALFUNCTION || an electrical malfunction fired a Zuni rocket from under an F-4B Phantom.
+forrestal step=strike || || It struck the external fuel tank of an A-4E Skyhawk across the deck.
+forrestal step=fire || || Fuel poured out and caught fire, and bombs on the burning aircraft began to explode.
+forrestal step=farrier || CHIEF GERALD FARRIER || One of the first men to run toward the fire was Chief Gerald Farrier, with a portable extinguisher.
+forrestal step=farrier2 || || He was killed in the first explosion.
+forrestal step=toll || [134] KILLED || One hundred and thirty-four men were killed.
+forrestal step=toll2 || [161] INJURED || One hundred and sixty-one were injured.
+forrestal step=toll3 || [21] AIRCRAFT DESTROYED || Twenty-one aircraft were destroyed.
+forrestal step=changed || || The fire changed the Navy.
+forrestal step=train || FIREFIGHTING FOR EVERY SAILOR || It brought back firefighting training for every sailor, not just specialist teams, and reshaped how carriers handle fires on deck.
+forrestal step=school || || Today, sailors train at a firefighting school named after Chief Farrier.
+forrestal step=alone || || On a ship, there's no fire brigade coming.
+forrestal step=everyone || || The fire brigade is everyone on board.
+# --- 6. The garage below
+hangar step=crowd || || Back to the flying. Not every aircraft fits on the flight deck at once.
+hangar step=bay || THE HANGAR BAY || Below it is a huge garage called the hangar bay, where jets are repaired and stored.
+elevator step=1 || GIANT ELEVATORS || To move jets between the two, there are giant elevators on the sides of the ship.
+elevator step=2 || NIMITZ: [4] || A Nimitz carrier has four, and each one can lift a fighter from the hangar to the flight deck in seconds.
+elevator step=weapons || WEAPONS ELEVATORS || Separate weapons elevators bring bombs and missiles up from magazines deep inside the hull.
+# --- 7. The nuclear heart
+guy act=think bg=paper label=POWER? || || So what powers the catapults, the elevators, and a town of five thousand people?
+reactor step=1 || [2] NUCLEAR REACTORS || Two nuclear reactors.
+reactor step=steam || || They heat water into steam.
+reactor step=turbine || || The steam spins turbines that turn the propellers and make electricity for the whole ship.
+reactor step=years || [20+ YEARS] || A Nimitz carrier runs for more than twenty years on its first load of fuel.
+reactor step=rcoh || REFUELLED ONCE || Halfway through its life, it gets refuelled once, in a huge overhaul that takes several years.
+reactor step=ford || FORD: MORE POWER || The Ford's newer reactors generate much more electricity.
+reactor step=ford2 || NEARLY [3×] (US NAVY) || The Navy says nearly three times the capacity of earlier carriers.
+reactor step=emals || || That's what makes the electric catapults possible.
+unrep step=1 || || Nuclear power means the carrier never stops for its own fuel.
+unrep step=2 || || But the jets still burn jet fuel, and lots of it.
+unrep step=3 || REPLENISHMENT AT SEA || So supply ships regularly come alongside at sea,
+unrep step=4 || || pumping over aviation fuel and passing across food, parts and ammunition.
+# --- 8. Feeding a floating town
+town step=intro || MONTHS AT SEA || Now think about the people who keep those flights going, far out at sea for months.
+town step=meals || [18,000] MEALS A DAY || A Nimitz carrier's galleys can serve around eighteen thousand meals a day.
+guy act=think bg=paper label=WATER? || || The water?
+town step=water || [400,000] GALLONS A DAY || Distillers turn seawater into about four hundred thousand gallons of fresh water a day.
+town step=litres || ≈ [1.5 MILLION] LITRES || That's around one and a half million litres.
+town step=bunks || || Most sailors sleep in stacked bunks, in rooms shared with dozens of others,
+town step=locker || || with a small locker for everything they own.
+town step=extras || || There are gyms, a post office, a medical department with an operating room, and even a barber shop.

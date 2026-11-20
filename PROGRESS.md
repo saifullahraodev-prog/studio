@@ -614,3 +614,6 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
 - 2026-11-19: owner approved Part 1 stills. PART 2 (sections 3-5: meatball, LSO, wires, bolter, angled deck, barricade, jerseys,
   Pri-Fly/Air Boss, cycles; 3:04-6:15): beats 58-104 in `beats.txt`, new `engine/shipguy/templates6b.tsx`. Storyboard
   `storyboard/p2-*.png` (p2-1 also shows the end of Part 1). GATE: owner OK on Part 2 stills.
+- 2026-11-20: owner approved Part 2 stills. PART 3 (sections 5b-8: Forrestal [quiet, no gags], hangar + elevators, reactors,
+  replenishment at sea, life on board; 6:15-8:53): beats 105-147, new `engine/shipguy/templates6c.tsx`.
+  Storyboard `storyboard/p3-*.png`. GATE: owner OK on Part 3 stills.

@@ -10,6 +10,7 @@ import { TEMPLATES3 } from "./templates3";
 import { TEMPLATES5 } from "./templates5";
 import { TEMPLATES6 } from "./templates6";
 import { TEMPLATES6B } from "./templates6b";
+import { TEMPLATES6C } from "./templates6c";
 
 export type P = Record<string, string>;
 export type Tpl = React.FC<{ t: number; d: number; p: P; w?: number[][] }>; // w = spoken word spans (frames in the beat)
@@ -873,5 +874,6 @@ export const TEMPLATES: Record<string, Tpl> = {
   ...TEMPLATES4,
   ...TEMPLATES6,
   ...TEMPLATES6B,
+  ...TEMPLATES6C,
   stat: (props) => (STAT_ICONS.includes(props.p.icon ?? "") ? <StatX {...props} /> : <Stat {...props} />),
 };
