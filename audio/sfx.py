@@ -255,6 +255,42 @@ SOUNDS = {"impact": impact, "scream": scream, "riser": riser, "whoosh": whoosh, 
 GAINS = {"impact": 1.0, "scream": 0.42, "riser": 0.3, "swish": 0.16, "whoosh": 0.22, "hit": 0.8, "boom": 0.9, "crunch": 0.95, "pop": 0.45, "boing": 0.5, "ding": 0.45, "stamp": 0.8, "fire": 0.35, "tick": 0.25, "mgburst": 0.55}
 
 
+# -- carrier video (#6) sounds ------------------------------------------------
+def jet(sec=1.6):
+    """jet engine spooling up: rumble + a rising whine."""
+    n = int(sec * SR)
+    t = np.linspace(0, 1, n)
+    roar = _bp(_noise(n), 120, 1800) * (0.4 + 0.6 * t)
+    whine = _sine_sweep(900, 2400, sec, 0.7) * 0.12 * t
+    return norm((roar + whine) * _env(n, 0.15, 0.35), 0.85)
+
+
+def hiss(sec=0.9):
+    """steam / catapult hiss."""
+    n = int(sec * SR)
+    x = _bp(_noise(n), 2500, 9000)
+    return norm(x * _env(n, 0.01, 0.6), 0.6)
+
+
+def twang(sec=0.6):
+    """the arresting wire snapping taut: a low metallic zing."""
+    t = _t(sec)
+    f = 95 + 60 * np.exp(-t * 10)
+    x = np.sin(2 * np.pi * np.cumsum(f) / SR) + 0.35 * np.sin(2 * np.pi * np.cumsum(f * 3.1) / SR)
+    return norm(x * np.exp(-t * 5) * _env(len(t), 0.001, 0.2), 0.85)
+
+
+def zap(sec=0.35):
+    """electric crackle (EMALS, power)."""
+    n = int(sec * SR)
+    x = _bp(_noise(n), 1500, 6000) * (np.sin(2 * np.pi * 37 * _t(sec)) > 0)
+    return norm(x * _env(n, 0.002, 0.15), 0.6)
+
+
+SOUNDS.update({"jet": jet, "hiss": hiss, "twang": twang, "zap": zap})
+GAINS.update({"jet": 0.55, "hiss": 0.4, "twang": 0.7, "zap": 0.35})
+
+
 # ── music ───────────────────────────────────────────────────────────────────
 def _pluck(freq, sec=0.5):
     # Karplus-Strong plucked string

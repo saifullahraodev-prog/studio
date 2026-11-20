@@ -113,9 +113,10 @@ def main(slug: str, tracks: str = ""):
     ev = []
     for i, b in enumerate(tl["beats"]):
         t0 = b["from"] / fps
-        if i > 0:
-            ev.append((t0, "whoosh", 0.45))
         tpl, p = b["tpl"], b["p"]
+        if i > 0:
+            # carrier video: the Forrestal part is quiet (a soft cut sound only, no comic sounds)
+            ev.append((t0, "whoosh", 0.15 if tpl == "forrestal" else 0.45))
         if tpl == "attack":
             ev.append((t0 + 1.2, "impact", 0.9))
         if tpl == "sea" and p.get("state") == "fire":
@@ -215,6 +216,110 @@ def main(slug: str, tracks: str = ""):
             ev.append((t0 + 0.15, "pop", 0.45))
         if tpl == "endhire":
             ev.append((t0 + 0.2, "ding", 0.5))
+        # --- carrier templates (video #6)
+        st = p.get("step") or p.get("mode") or p.get("view") or ""
+        if tpl == "jetside" and st == "fly" or tpl == "plane" and p.get("kind") == "growler":
+            ev.append((t0, "jet", 0.4))
+        if tpl == "jetside" and st == "touch":
+            ev.append((t0 + 0.45, "hit", 0.8)); ev.append((t0 + 0.55, "jet", 0.6))
+        if tpl == "jetside" and st == "grab":
+            for k in range(5): ev.append((t0 + 0.6 + k * 0.4, "tick", 0.7))
+        if tpl == "jetside" and st == "climb":
+            ev.append((t0, "jet", 0.5))
+        if tpl == "throttle":
+            ev.append((t0 + 0.27, "stamp", 0.6)); ev.append((t0 + 0.3, "jet", 0.7))
+        if tpl == "cockpit" and (p.get("ring") == "1" or st == "box"):
+            ev.append((t0 + 0.35, "ding", 0.3))
+        if tpl == "cv" and st in ("length", "weight", "xray"):
+            ev.append((t0 + 0.15, "riser", 0.35)); ev.append((t0 + 0.9, "pop", 0.6))
+        if tpl == "cv" and st in ("two", "town", "helps", "title"):
+            ev.append((t0 + 0.4, "pop", 0.5))
+        if tpl == "cv" and st == "speed":
+            ev.append((t0 + 0.2, "boing", 0.35))
+        if tpl == "eiffel":
+            ev.append((t0 + 0.3, "riser", 0.4)); ev.append((t0 + 1.2, "ding", 0.5))
+        if tpl == "group":
+            ev.append((t0 + 0.3, "pop", 0.45))
+            if st == "escorts": ev.append((t0 + 1.5, "hit", 0.35))
+        if tpl == "deck":
+            for k in range(4): ev.append((t0 + 0.1 + k * 0.15, "pop", 0.4))
+        if tpl == "plane":
+            ev.append((t0 + 0.4, "ding", 0.3))
+        if tpl == "runway" and st in ("compare", "short"):
+            ev.append((t0 + 0.5, "boing", 0.3))
+        if tpl == "cat":
+            if st == "hold": ev.append((t0, "jet", 0.45))
+            if st == "jbd": ev.append((t0 + 0.2, "crunch", 0.25))
+            if st == "shooter": ev.append((t0 + 0.8, "ding", 0.35))
+            if st == "launch": ev.append((t0 + 0.4, "hiss", 0.8)); ev.append((t0 + 0.45, "jet", 0.6)); ev.append((t0 + 0.6, "boing", 0.3))
+            if st == "speed": ev.append((t0 + 0.1, "riser", 0.4)); ev.append((t0 + 2.1, "ding", 0.5))
+            if st == "steam": ev.append((t0 + 0.7, "hiss", 0.6))
+            if st in ("track", "hook", "check"): ev.append((t0 + 0.3, "pop", 0.45))
+        if tpl == "emals":
+            ev.append((t0 + 0.3, "zap", 0.6))
+        if tpl == "wind":
+            ev.append((t0 + 0.2, "whoosh", 0.35))
+        if tpl == "meatball":
+            ev.append((t0 + 0.3, "ding", 0.3))
+        if tpl == "lso" and p.get("talk") == "1":
+            ev.append((t0 + 0.3, "pop", 0.45))
+        if tpl == "wires":
+            if st in ("top", "count", "aim", "margin"): ev.append((t0 + 0.3, "pop", 0.45))
+            if st == "catch": ev.append((t0 + 0.9, "hit", 0.7)); ev.append((t0 + 1.1, "twang", 0.8))
+            if st == "below": ev.append((t0 + 0.4, "hiss", 0.5))
+            if st == "stop": ev.append((t0 + 0.2, "twang", 0.5))
+            if st == "pile": ev.append((t0 + 0.1, "twang", 0.7)); ev.append((t0 + 0.6, "boing", 0.45)); ev.append((t0 + 0.9, "crunch", 0.3))
+            if st == "beat":
+                for k in range(3): ev.append((t0 + 0.2 + k * 0.45, "hit", 0.35))
+            if st == "inspect": ev.append((t0 + 0.6, "ding", 0.35))
+        if tpl == "bolter":
+            if st == "miss": ev.append((t0 + 0.6, "hit", 0.4)); ev.append((t0 + 0.9, "jet", 0.5))
+            if p.get("label") == "1": ev.append((t0 + 0.15, "stamp", 0.8))
+            if st == "low": ev.append((t0 + 1.6, "boom", 0.35))
+            if st == "go": ev.append((t0 + 0.2, "jet", 0.6))
+        if tpl == "angled":
+            ev.append((t0 + 0.3, "ding", 0.35))
+        if tpl == "barricade":
+            ev.append((t0 + 0.3, "riser" if p.get("step") == "1" else "crunch", 0.35))
+        if tpl == "flightdeck":
+            ev.append((t0, "jet", 0.3))
+        if tpl in ("jersey", "jerseys"):
+            ev.append((t0 + 0.2, "pop", 0.5))
+            if tpl == "jersey" and p.get("c") == "purple": ev.append((t0 + 1.4, "boing", 0.3))
+        if tpl in ("island", "cycle"):
+            ev.append((t0 + 0.4, "ding", 0.3))
+        if tpl in ("hangar", "elevator"):
+            ev.append((t0 + 0.3, "pop", 0.45))
+            if tpl == "elevator" and p.get("step") == "2": ev.append((t0 + 0.4, "riser", 0.35))
+        if tpl == "reactor":
+            ev.append((t0 + 0.2, "zap" if st in ("ford", "ford2", "emals") else "pop", 0.45))
+            if st == "steam": ev.append((t0 + 0.3, "hiss", 0.5))
+        if tpl == "unrep":
+            ev.append((t0 + 0.3, "pop", 0.45))
+            if st == "2": ev.append((t0, "jet", 0.35))
+        if tpl == "town":
+            if st in ("meals", "water", "litres"): ev.append((t0 + 0.15, "riser", 0.35)); ev.append((t0 + 1.2, "ding", 0.45))
+            elif st == "bunks": ev.append((t0 + 1.4, "boing", 0.45))
+            elif st == "extras":
+                for k in range(4): ev.append((t0 + k * (b["dur"] / fps) / 4, "pop", 0.5))
+            else: ev.append((t0 + 0.3, "pop", 0.4))
+        if tpl == "ford":
+            if st == "commission": ev.append((t0 + 0.7, "pop", 0.5)); ev.append((t0 + 0.8, "ding", 0.5))
+            if st == "cost": ev.append((t0 + 0.15, "stamp", 0.7)); ev.append((t0 + 0.5, "boing", 0.35))
+            if st in ("parts1", "parts2"): ev.append((t0 + 0.2, "ding", 0.35)); ev.append((t0 + 1.0, "ding", 0.35))
+            if st == "goal": ev.append((t0, "jet", 0.35))
+        if tpl == "sorties":
+            if st in ("160", "270"): ev.append((t0 + 0.1, "riser", 0.4)); ev.append((t0 + 1.3, "ding", 0.45))
+            else: ev.append((t0 + 0.2, "stamp", 0.7))
+        if tpl == "finale":
+            if st == "stop": ev.append((t0 + 0.2, "ding", 0.5))
+            if st == "sum":
+                for k in range(3): ev.append((t0 + 0.7 + k * 1.33, "pop", 0.55))
+            if st == "job": ev.append((t0 + 0.2, "jet", 0.4))
+        if tpl == "endcard6":
+            ev.append((t0 + 0.2, "ding", 0.5))
+        if tpl == "guy" and p.get("act") == "think":
+            ev.append((t0 + 0.25, "pop", 0.4))
     fx = sfx.render_events(ev, dur)[:n]
     fx = np.pad(fx, (0, max(0, n - len(fx))))
 

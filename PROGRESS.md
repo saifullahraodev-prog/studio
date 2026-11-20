@@ -621,3 +621,6 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   8:53-10:16): beats 148-168, new `engine/shipguy/templates6d.tsx` (ford, sorties, finale, endcard6); `lso say=`, `wires night=1`.
   Whole video now timed: 168 beats, 10:16, avg 3.7 s. Storyboard `storyboard/p4-*.png`. GATE: owner OK on Part 4 stills,
   then SFX mix + subtitles + test render (ask first).
+- 2026-11-20: owner approved Part 4 stills. Sound: new procedural SFX in `audio/sfx.py` (jet, hiss, twang, zap) + carrier rules in
+  `tools/shipguy_mix.py` (Forrestal cuts at whoosh 0.15, no comic sounds). `mix.wav` voice + SFX only (no music), 362 events,
+  -15.0 LUFS / -1.4 dBTP. Subtitles: 209 cues (`subs.json`). GATE: ask owner before test/full render.
