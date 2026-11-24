@@ -636,4 +636,4 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   Owner picked the Felicity Ace (disaster + money hook).
 - `videos/2026-11-24-felicity-ace/script.md` (1,756 words, ~10:00) + `narration.txt`. Main source: Panama Maritime Authority report
   R-013-2022-DIAM (read in full: 3,965 vehicles / 574 EVs, alarm 08:30 deck 1, foam fans failed, abandon ship, sank 1 Mar 09:11,
-  conclusions 8.1-8.16). Plus NTSB Höegh Xiamen, Stuttgart ruling May 2026, Lamborghini restart. GATE: owner approves script.
+  conclusions 8.1-8.16). Plus NTSB Höegh Xiamen, Stuttgart ruling May 2026, Lamborghini restart. GATE passed 2026-11-24: owner approved script v1. Next: owner records CapCut voice from narration.txt.
