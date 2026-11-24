@@ -644,3 +644,6 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
 - 2026-11-24 owner: "make the ship like a ship, it looks more like a box" -> `Pctc` redrawn: lower/longer profile, deck sheer from a low
   stern to a high rounded bow that leans forward, bulbous bow, curved stern, bridge house + mast, funnel aft, anchor, lifeboat, side door,
   vents; the sea now covers the hull below the waterline. Part 1 stills re-rendered (`storyboard/p1-*.png`, `ship-v2.png`).
+- 2026-11-24: owner approved Part 1 (with the redrawn ship). PART 2 (sections 3-6: smoke on deck one, the foam system, abandon ship,
+  rescue, why it burned, Höegh Xiamen; 2:05-5:41): beats 31-80, new `engine/shipguy/templates7b.tsx` (deckmap, lookaft, radio7, door7,
+  cool7, foam, abandon, rescue, why7, xiamen). Storyboard `storyboard/p2-*.png`. GATE: owner OK on Part 2 stills.

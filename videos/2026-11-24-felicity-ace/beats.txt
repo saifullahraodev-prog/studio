@@ -33,3 +33,58 @@ rounds || SAFETY ROUNDS || The crew did their safety rounds through the car deck
 bridge7 || [07:50] || At ten to eight, the third officer came up to the bridge to take over the watch.
 bridge7 calm=1 || ALL NORMAL || The captain was there too. Everything was normal.
 bridge7 alarm=1 || [08:30] || And then, at eight thirty, the alarm.
+# --- PART 2 = sections 3-6 (smoke on deck one, plan B, the rescue, why it wouldn't go out). New templates: templates7b.tsx
+# --- 3. Smoke on deck one
+deckmap mode=alarm || DECK 1 · AFT || The smoke detector said: deck one, at the back of the ship.
+deckmap mode=numbers || || And on this ship, deck one isn't the bottom. The car decks are counted from the top down,
+deckmap mode=top || [30+ M] UP || so deck one is the highest car deck, more than thirty metres above the bottom of the hull.
+lookaft || NO SMOKE VISIBLE || From the bridge, nobody could see any smoke.
+radio7 || || So the officer radioed a sailor who was already doing a safety round and asked him to go and check.
+door7 mode=door || || The sailor went down the stairs and opened the door to deck one.
+door7 mode=open || BLACK SMOKE || Black smoke. And between the rows of cars, flames.
+door7 mode=pops || [3-4] CARS BURNING || Three or four cars already burning. And small explosions.
+door7 mode=ext || || The sailor grabbed a fire extinguisher, but couldn't get anywhere near the flames. The smoke was too thick.
+door7 mode=shut || || So the door went shut again, and the alarm went out to the whole ship.
+door7 mode=team || FIRE TEAM || The fire team got ready fast, with breathing sets and fire suits. They opened the door again.
+door7 mode=black || ZERO VISIBILITY || They couldn't see a thing.
+cool7 || BOUNDARY COOLING || The crew started the emergency fire pump and sprayed water on the outside of the deck above, to cool it down.
+guy act=fingerup bg=paper label=PLAN_B || || Then the captain went to plan B. The ship's fixed firefighting system.
+# --- 4. Plan B
+guy act=think bg=paper label=FOAM? || || Car carriers don't use sprinklers like a building. This one used high-expansion foam.
+foam mode=how || || The idea is simple. A pump mixes foam liquid with water, and big electric fans blow air through it.
+foam mode=grow || [×100s] || That air puffs the mixture up to hundreds of times its size,
+foam mode=bath || || into a huge wave of foam that fills the whole deck and smothers the fire, like the world's biggest bubble bath.
+foam mode=pump || PUMPS: ON || The first engineer ran to the room where the foam system was, and started the pumps.
+foam mode=tank || || Foam liquid was flowing. The level in the tank was going down.
+foam mode=fans || [FANS: OFF] || But the fans on deck one didn't start.
+foam mode=dribble || NO FANS = NO FOAM || No fans, no foam. Just liquid running out of the pipes.
+foam mode=breakers || || The engineer ran up to the electrical room to check the fan circuits and breakers. Still nothing. The fans would not start.
+abandon mode=report || OUT OF CONTROL || Meanwhile, the fire team was reporting that the fire was out of control. So the captain made the call.
+abandon mode=call || [ABANDON SHIP] || Abandon ship.
+# --- 5. The rescue
+rescue mode=call || MAYDAY || The ship sent out a distress call.
+rescue mode=tanker || RESILIENT WARRIOR || A tanker called the Resilient Warrior, on her way to Rotterdam, answered and turned around.
+rescue mode=ladder || [22] CREW SAFE || Within about an hour, all twenty-two crew had climbed down a rope ladder to safety.
+rescue mode=heli || FAIAL · AZORES || Later, a Portuguese Air Force helicopter flew them to the island of Faial, in the Azores. Nobody was hurt.
+rescue mode=adrift || ABANDONED || The Felicity Ace was left on her own, burning, in the middle of the Atlantic.
+# --- 6. Why it wouldn't go out
+guy act=think bg=paper label=WHY? || || So why was this fire so hard to stop?
+why7 mode=open || [1] ONE BIG OPEN DECK || First, a car deck is one giant open space.
+why7 mode=spread || NO WALLS · LOTS OF AIR || There are no walls between the cars to stop a fire spreading, and air can flow along the whole deck.
+why7 mode=burn || [2] FULL OF FUEL || Second, every car is full of things that burn. Fuel, plastic, foam seats, tyres.
+why7 mode=many || || Thousands of cars means thousands of fires waiting to happen.
+ev7 || [3] ELECTRIC CARS || And third, the electric cars.
+why7 mode=battery || THERMAL RUNAWAY || A lithium-ion battery that overheats can go into what's called thermal runaway.
+why7 mode=chain || || One cell heats up, sets off the next one, and the next one,
+why7 mode=relight || || and the battery keeps feeding its own fire. It can even reignite after it looks like it's out.
+why7 mode=report || [NOT PREPARED] || The investigators said it plainly. Car carriers, at the time, were not prepared to put out fires on electric and hybrid cars.
+why7 mode=report2 || || There was no special equipment, and no special procedure.
+guy act=wag bg=paper label=BUT... || || But here's the thing. Car carrier fires didn't start with electric cars.
+xiamen mode=port || HÖEGH XIAMEN · 2020 || Two years earlier, in June twenty twenty, another car carrier, the Höegh Xiamen, caught fire in the port of Jacksonville, in Florida.
+xiamen mode=used || USED CARS || She was full of used cars, most of them running on petrol.
+xiamen mode=ntsb || NTSB || America's National Transportation Safety Board found the cause.
+xiamen mode=battery || DISCONNECT THE BATTERY || The batteries in some of those used cars were supposed to be disconnected and secured before loading.
+xiamen mode=spark || || One wasn't done properly, and an electrical fault started the fire.
+xiamen mode=fire || [1+ WEEK] || That ship burned for more than a week. Nine firefighters were injured,
+xiamen mode=loss || [2,420] CARS LOST || and the ship and all two thousand four hundred and twenty cars were a total loss.
+xiamen mode=scale || || So any car carrier fire is hard. Electric cars just add one more problem nobody had fully solved.
