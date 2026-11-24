@@ -93,7 +93,7 @@ export const Pctc: React.FC<{ L?: number; fire?: number; scorch?: number; xray?:
       {/* enclosed lifeboat */}
       <g transform="translate(870 -196)"><path d="M-30 0 Q -30 -12 -16 -14 L 18 -14 Q 32 -12 32 0 Q 0 8 -30 0 Z" fill="#ff8a3a" {...O(sw(2.5))} /><rect x={-10} y={-12} width={20} height={5} rx={2} fill="#f4f4f0" /></g>
       {/* stern ramp (folded up when closed, lowers to load cars) */}
-      <g transform={`translate(12 -44) rotate(${-rmp * 62})`}><rect x={-6} y={-76} width={12} height={80} fill="#9aa4ad" {...O(sw(3))} /></g>
+      <g transform={`translate(12 -44) rotate(${-rmp * 118})`}><rect x={-6} y={-76} width={12} height={80} fill="#9aa4ad" {...O(sw(3))} /></g>
       {name && <Txt x={600} y={-70} s={28} c="#2c4a7a">FELICITY ACE</Txt>}
       {name && <Txt x={60} y={-56} s={14} c="#2c4a7a">PANAMA</Txt>}
       {/* x-ray: the 11 car decks inside */}
@@ -141,6 +141,15 @@ const Bridge7: React.FC<{ t: number; alarm?: boolean; w?: number[][] }> = ({ t, 
     {Array.from({ length: 10 }).map((_, i) => <circle key={i} cx={1250 + i * 46} cy={650} r={12} fill={alarm && i === 6 ? (Math.floor(t / 6) % 2 ? RED : "#5a1a16") : "#4dff7a"} />)}
     <rect x={1250} y={690} width={420} height={70} rx={8} fill="#0b1426" {...O(3)} />
     {alarm && <g opacity={Math.floor(t / 6) % 2 ? 0.25 : 0}><rect width={W} height={H} fill={RED} /></g>}
+  </g>
+);
+
+const Quay: React.FC<{ x0: number; x1: number; y: number; h?: number }> = ({ x0, x1, y, h = 140 }) => (
+  <g>
+    <rect x={x0} y={y} width={x1 - x0} height={h} fill="#a8aaa4" {...O(6)} />
+    <rect x={x0} y={y} width={x1 - x0} height={16} fill="#c9cbc4" />
+    {Array.from({ length: Math.max(1, Math.floor((x1 - x0) / 120)) }).map((_, i) => <line key={i} x1={x0 + 60 + i * 120} y1={y + 16} x2={x0 + 60 + i * 120} y2={y + h} stroke="#8e908a" strokeWidth={4} />)}
+    <g transform={`translate(${x0 + 50} ${y})`}><rect x={-14} y={-26} width={28} height={26} rx={6} fill="#2a2d33" {...O(4)} /><rect x={-20} y={-32} width={40} height={10} rx={4} fill="#2a2d33" {...O(3)} /></g>
   </g>
 );
 
@@ -232,16 +241,21 @@ const Pc: Tpl = ({ t, d, p, w }) => {
         ))}
         {m === "shoebox" && (
           <g>
-            <Actor a="hold" t={t} x={1620} y={1040} s={0.75} id="shoe" w={w} over={{ pose: { ...POSES.hold, armR: [70, 60], armL: [70, 60] }, face: FACES.happy }} />
-            <g transform={`translate(1640 ${700 + Math.sin(t * 0.2) * 4})`}><rect x={-120} y={-60} width={240} height={110} fill="#e8d6a6" {...O(6)} /><rect x={-126} y={-70} width={252} height={30} fill="#d9c18a" {...O(6)} /><Txt x={0} y={20} s={28}>SHOES</Txt></g>
+            <Quay x0={1280} x1={1940} y={900} h={200} />
+            <Actor a="hold" t={t} x={1620} y={910} s={0.7} id="shoe" w={w} over={{ pose: { ...POSES.cheer, armL: [160, -10], armR: [160, -10] }, face: FACES.happy }} />
+            <g transform={`translate(1620 ${460 + Math.sin(t * 0.2) * 4})`}><rect x={-120} y={-60} width={240} height={110} fill="#e8d6a6" {...O(6)} /><rect x={-126} y={-70} width={252} height={30} fill="#d9c18a" {...O(6)} /><Txt x={0} y={20} s={28}>SHOES</Txt></g>
           </g>
         )}
         {m === "xray" && p.count === "1" && <T3 x={960} y={260} size={60} color={YEL} o={ramp(t, 10, 18)}>ROOM FOR 5,000+ CARS</T3>}
         {m === "ramp" && (
           <g>
+            <Quay x0={-40} x1={452} y={hz + 8} h={420} />
             {Array.from({ length: 4 }).map((_, i) => {
-              const k = clamp01(((t - 14 - i * 12) % 60) / 50);
-              return <g key={i} transform={`translate(${60 + k * 520} ${hz - 30 - k * 60}) rotate(${-8})`} opacity={k > 0.95 ? 0 : 1}><Car kind={(["sport", "suv", "sedan", "super"] as CarKind[])[i]} c={CAR_COLORS[i + 2]} s={1.3} /></g>;
+              const k = clamp01(((t - 10 - i * 14) % 64) / 56);
+              // along the quay (to x = 440), then up the ramp to the stern door (537, 618)
+              const onQ = k < 0.75, u = onQ ? k / 0.75 : (k - 0.75) / 0.25;
+              const x = onQ ? -120 + u * 560 : 440 + u * 97, y = onQ ? hz + 8 : hz + 8 - u * 50;
+              return <g key={i} transform={`translate(${x} ${y}) rotate(${onQ ? 0 : -27})`} opacity={k > 0.97 || k <= 0 ? 0 : 1}><Car kind={(["sport", "suv", "sedan", "super"] as CarKind[])[i]} c={CAR_COLORS[i + 2]} s={1.1} /></g>;
             })}
           </g>
         )}
@@ -328,7 +342,8 @@ const Price7: Tpl = ({ t, w, p }) => {
           <circle cx={280} cy={0} r={22} fill="#fff" {...O(6)} />
           <Txt x={-40} y={36} s={hook ? 84 : 110}>{hook ? "$$$ MILLIONS" : "$400 MILLION"}</Txt>
         </g>
-        <Actor a="shock" t={Math.max(0, t - 18)} x={260} y={1080} s={0.5} id="p7" w={w} />
+        <Quay x0={-40} x1={520} y={930} h={200} />
+        <Actor a="shock" t={Math.max(0, t - 18)} x={260} y={940} s={0.45} id="p7" w={w} />
         {!hook && <T3 x={1500} y={980} size={40} o={ramp(t, 20, 30)}>(INSURANCE ANALYST ESTIMATE)</T3>}
       </Svg>
     </AbsoluteFill>
@@ -396,20 +411,36 @@ const BridgeT7: Tpl = ({ t, p, w }) => {
   );
 };
 
-/** hook: a court, a gavel, a question mark over a tiny car */
-const Court7: Tpl = ({ t }) => {
-  const g = Math.max(0, Math.sin(Math.min(1, (t - 6) / 8) * Math.PI));
+/** a courtroom: the judge taps the gavel under a board asking what started the fire */
+const Court7: Tpl = ({ t, p, w }) => {
+  const g = Math.max(0, Math.sin(Math.min(1, Math.max(0, (t - 8) / 8)) * Math.PI));
+  const blame = p.q === "blame";
   return (
     <AbsoluteFill>
       <Svg>
         <rect width={W} height={H} fill="#e8d6a6" />
-        <rect x={0} y={760} width={W} height={320} fill="#8a6a4a" {...O(6)} />
-        {Array.from({ length: 6 }).map((_, i) => <rect key={i} x={120 + i * 300} y={160} width={60} height={600} fill="#d9c18a" {...O(4)} />)}
-        <g transform={`translate(560 700) rotate(${-40 + g * 40} 120 0)`}><rect x={0} y={-40} width={200} height={80} rx={14} fill="#7a4a2a" {...O(6)} /><rect x={90} y={40} width={20} height={200} fill="#7a4a2a" {...O(5)} /></g>
-        <ellipse cx={680} cy={760} rx={140} ry={26} fill="#5a3a22" {...O(5)} />
-        <g transform="translate(1300 700)"><Car kind="sport" c="#f4f4f0" s={2.4} ev /></g>
-        <T3 x={1300} y={420} size={260} color={YEL} s={pop(t, 14)}>?</T3>
-        <T3 x={960} y={140} size={60} o={ramp(t, 20, 30)}>2026: STILL NOT PROVEN</T3>
+        {Array.from({ length: 7 }).map((_, i) => <rect key={i} x={40 + i * 300} y={0} width={40} height={1080} fill="#d9c18a" />)}
+        {/* the board */}
+        <g transform="translate(960 250)">
+          <rect x={-420} y={-190} width={840} height={360} rx={14} fill="#2a3a2a" stroke="#7a4a2a" strokeWidth={18} />
+          <g transform="translate(-150 110)"><Car kind="sport" c="#f4f4f0" s={2.2} ev glow={0.8} /></g>
+          {Array.from({ length: 4 }).map((_, i) => <path key={i} d={`M${-210 + i * 34} 70 q 12 ${-40 - Math.abs(Math.sin(t * 0.4 + i)) * 30} 4 -70 q 20 28 22 70 Z`} fill={i % 2 ? "#ffb03a" : "#ff6a2a"} />)}
+          <T3 x={190} y={50} size={200} color={YEL} s={pop(t, 4)}>?</T3>
+          <Txt x={0} y={-130} s={48} c="#fff">{blame ? "WHO IS TO BLAME?" : "WHAT STARTED THE FIRE?"}</Txt>
+        </g>
+        {/* the judge behind the bench */}
+        <Actor a="talk" t={t} x={960} y={880} s={0.6} id="judge" outfit="officer" w={w} over={{ face: { eyes: "half", brows: "one", mouth: "flat" } }} />
+        <path d="M918 640 Q 960 626 1002 640 L 1030 780 L 890 780 Z" fill="#1d1d22" {...O(5)} />
+        <rect x={560} y={760} width={800} height={320} fill="#7a4a2a" {...O(8)} />
+        <rect x={600} y={790} width={720} height={40} fill="#8a5a3a" />
+        <g transform={`translate(1180 740) rotate(${-50 + g * 50} 0 0)`}><rect x={-10} y={-120} width={20} height={120} fill="#5a3a22" {...O(4)} /><rect x={-50} y={-150} width={100} height={46} rx={10} fill="#5a3a22" {...O(5)} /></g>
+        <ellipse cx={1180} cy={760} rx={60} ry={12} fill="#5a3a22" {...O(4)} />
+        {g > 0.6 && <g>{[0, 1, 2].map((i) => <path key={i} d={`M${1120 - i * 20} ${720 - i * 14} l -40 -20`} stroke={INK} strokeWidth={6} />)}</g>}
+        {/* the two sides */}
+        <rect x={60} y={900} width={380} height={180} fill="#8a5a3a" {...O(6)} />
+        <rect x={1480} y={900} width={380} height={180} fill="#8a5a3a" {...O(6)} />
+        <Actor a="watch" t={t} x={250} y={960} s={0.38} id="cl1" outfit="officer" />
+        <Actor a="watch" t={t + 9} x={1670} y={960} s={0.38} id="cl2" outfit="officer" over={{ flip: true }} />
       </Svg>
     </AbsoluteFill>
   );

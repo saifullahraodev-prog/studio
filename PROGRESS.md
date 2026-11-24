@@ -658,3 +658,9 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   `felicity-ace.en.srt` (219 cues). GATE: ask owner before test/full render.
 - 2026-11-24: owner OK'd a test -> `videos/2026-11-24-felicity-ace/out/test-60s.mp4` (frames 0-1799, -14.9 LUFS, no black/frozen).
   GATE: owner feedback, then full render.
+- 2026-11-24 owner on the test: "the audio is not smooth, it is cutting"; court visual didn't match "a court still couldn't say what
+  started the fire"; Ship Guy standing in the sea (shoebox shot); cars driving over the water (ramp shot). Fixes: pause trimming much
+  gentler (`--max 1.1 --keep 0.8`: only 9 gaps, voice 10:00, natural ~0.75 s sentence pauses kept; earlier 0.6/0.4 cut 70 gaps);
+  new courtroom (judge, gavel, board "WHAT STARTED THE FIRE?" / "WHO IS TO BLAME?"); `Quay` added: Ship Guy + cars on a quay, stern
+  ramp now lowers down onto it. Re-timed, re-mixed, subs rebuilt -> `out/test-60s-v2.mp4` (-14.9 LUFS).
+  Lesson: keep CapCut's natural sentence pauses; only trim the really long gaps.
