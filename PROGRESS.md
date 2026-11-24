@@ -641,3 +641,6 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   PART 1 (hook, the ship, the voyage; 0:00-2:04): 30 beats in `beats.txt`, new `engine/shipguy/templates7.tsx` (car carrier `Pctc`,
   generic `Car`/`CarTop` with no logos; pc, lash, route7, parade, price7, ev7, rounds, bridge7, court7). Storyboard `storyboard/p1-*.png`.
   GATE: owner OK on Part 1 stills.
+- 2026-11-24 owner: "make the ship like a ship, it looks more like a box" -> `Pctc` redrawn: lower/longer profile, deck sheer from a low
+  stern to a high rounded bow that leans forward, bulbous bow, curved stern, bridge house + mast, funnel aft, anchor, lifeboat, side door,
+  vents; the sea now covers the hull below the waterline. Part 1 stills re-rendered (`storyboard/p1-*.png`, `ship-v2.png`).

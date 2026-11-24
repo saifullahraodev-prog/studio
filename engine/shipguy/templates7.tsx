@@ -49,43 +49,72 @@ export const CarTop: React.FC<{ c?: string; ev?: boolean; glow?: number }> = ({ 
 );
 
 // ================================================================== the car carrier (side view, stern left, bow right, waterline y = 0, length L)
-export const Pctc: React.FC<{ L?: number; fire?: number; scorch?: number; xray?: number; t?: number; ramp?: number; name?: boolean }> = ({ L = 1400, fire = 0, scorch = 0, xray = 0, t = 0, ramp: rmp = 0, name = true }) => {
+// Owner 2026-11-24: "make the ship like a ship, it looks more like a box". Lower, longer profile; deck sheer rising to the bow;
+// rounded, raked bow with a bulb; curved stern; bridge with windows + mast up front; funnel aft; anchor, lifeboat, side door, vents.
+const HULL_D = "M22 -168 Q 520 -180 930 -224 Q 1004 -226 1016 -178 Q 1018 -120 998 -52 Q 992 -32 1006 -14 Q 1022 10 1000 26 Q 978 40 940 42 L 130 42 Q 70 42 44 24 Q 20 6 14 -36 L 10 -158 Q 12 -168 22 -168 Z";
+export const Pctc: React.FC<{ L?: number; fire?: number; scorch?: number; xray?: number; t?: number; ramp?: number; name?: boolean; water?: boolean }> = ({ L = 1400, fire = 0, scorch = 0, xray = 0, t = 0, ramp: rmp = 0, name = true, water = true }) => {
   const k = L / 1000;
-  const top = -300, wl = 0, keel = 60;
+  const top = -200, wl = 0, sw = (w: number) => w / k;
+  const cid = `pcc${Math.round(L)}`;
   return (
     <g transform={`scale(${k})`}>
-      {/* hull: white box above, blue band, red bottom */}
-      <path d={`M0 ${keel} L 0 ${top + 10} Q 0 ${top} 10 ${top} L 960 ${top} Q 1000 ${top + 20} 1004 ${top + 90} L 1000 ${keel - 20} Q 990 ${keel} 960 ${keel} Z`} fill={HULL_W} {...O(5 / k)} />
-      <path d={`M0 ${wl - 60} L 1003 ${wl - 60} L 1000 ${keel - 20} Q 990 ${keel} 960 ${keel} L 0 ${keel} Z`} fill={HULL_B} {...O(4 / k)} />
-      <path d={`M0 ${wl} L 1001 ${wl} L 1000 ${keel - 20} Q 990 ${keel} 960 ${keel} L 0 ${keel} Z`} fill={HULL_R} {...O(3 / k)} />
-      {/* panel seams, portholes */}
-      {Array.from({ length: 9 }).map((_, i) => <line key={i} x1={100 + i * 100} y1={top + 4} x2={100 + i * 100} y2={wl - 60} stroke="#d9d6cc" strokeWidth={2 / k} />)}
-      {Array.from({ length: 6 }).map((_, i) => <circle key={`p${i}`} cx={820 + i * 26} cy={top + 40} r={6} fill="#2c4a7a" />)}
-      {/* bridge + funnel + lifeboat */}
-      <rect x={830} y={top - 26} width={140} height={26} fill={HULL_W} {...O(3 / k)} />
-      <rect x={840} y={top - 20} width={120} height={10} fill="#2c4a7a" />
-      <rect x={140} y={top - 46} width={40} height={46} fill="#e06a2e" {...O(3 / k)} />
-      <ellipse cx={880} cy={top + 70} rx={34} ry={12} fill="#ff8a3a" {...O(3 / k)} />
-      {/* stern ramp (folded up when closed) */}
-      <g transform={`translate(0 ${wl - 70}) rotate(${-rmp * 62})`}><rect x={-6} y={-90} width={14} height={90} fill="#9aa4ad" {...O(3 / k)} /></g>
-      {name && <Txt x={560} y={wl - 90} s={34} c="#2c4a7a">FELICITY ACE</Txt>}
-      {/* x-ray: the decks inside */}
+      <defs><clipPath id={cid}><path d={HULL_D} /></clipPath></defs>
+      {/* hull colours: white topsides, blue band, red antifouling below the waterline */}
+      <g clipPath={`url(#${cid})`}>
+        <rect x={0} y={-260} width={1040} height={230} fill={HULL_W} />
+        <rect x={0} y={-36} width={1040} height={36} fill={HULL_B} />
+        <rect x={0} y={0} width={1040} height={60} fill={HULL_R} />
+        {/* panel seams + a darker shade under the deck edge */}
+        {Array.from({ length: 10 }).map((_, i) => <line key={i} x1={90 + i * 85} y1={-196} x2={90 + i * 85} y2={-36} stroke="#dedbd0" strokeWidth={sw(2)} />)}
+        <path d="M10 -158 Q 520 -170 1010 -212 L 1012 -200 Q 520 -158 10 -146 Z" fill="#d9d6cc" />
+        {/* louvred vents along the top */}
+        {Array.from({ length: 7 }).map((_, i) => { const y0 = -140 - i * i * 0.9 - i * 3; return <g key={`v${i}`}>{[0, 1, 2, 3].map((j) => <line key={j} x1={150 + i * 100} y1={y0 + j * 6} x2={190 + i * 100} y2={y0 + j * 6} stroke="#b8b4a8" strokeWidth={sw(2)} />)}</g>; })}
+        {/* side door + stern quarter ramp outline */}
+        <rect x={430} y={-112} width={56} height={60} rx={3} fill="none" stroke="#b8b4a8" strokeWidth={sw(3)} />
+        {xray === 0 && Array.from({ length: 5 }).map((_, i) => <circle key={`p${i}`} cx={890 + i * 18} cy={-150} r={4.5} fill="#2c4a7a" />)}
+        <line x1={0} y1={0} x2={1040} y2={0} stroke={INK} strokeWidth={sw(3)} />
+      </g>
+      <path d={HULL_D} fill="none" {...O(sw(5))} />
+      {/* bulbous bow seam + anchor */}
+      <path d="M992 -20 Q 1004 4 996 22" fill="none" stroke={INK} strokeWidth={sw(2)} opacity={0.5} />
+      <g transform="translate(978 -112)"><path d="M0 0 V 22 M-8 16 Q 0 28 8 16" stroke={INK} strokeWidth={sw(3)} fill="none" /><circle cy={-2} r={4} fill="none" stroke={INK} strokeWidth={sw(2)} /></g>
+      {/* bridge house up front: rounded front, a strip of windows, bridge wings, a mast */}
+      <path d="M842 -216 L 842 -246 Q 846 -252 856 -252 L 948 -252 Q 972 -250 980 -232 L 982 -222 Z" fill={HULL_W} {...O(sw(3.5))} />
+      {Array.from({ length: 8 }).map((_, i) => <rect key={`w${i}`} x={852 + i * 14} y={-244} width={10} height={9} rx={2} fill="#2c4a7a" />)}
+      <rect x={830} y={-240} width={162} height={6} fill={HULL_W} {...O(sw(2))} />
+      <path d="M900 -252 L 902 -288 M888 -276 L 916 -276" stroke={INK} strokeWidth={sw(3)} fill="none" />
+      <circle cx={902} cy={-290} r={4} fill="#f4f4f0" stroke={INK} strokeWidth={sw(2)} />
+      {/* funnel aft, with a company stripe */}
+      <path d="M118 -168 L 126 -226 L 168 -226 L 170 -170 Z" fill="#e06a2e" {...O(sw(3.5))} />
+      <rect x={124} y={-214} width={45} height={9} fill="#2c4a7a" />
+      <path d="M128 -226 L 130 -234 L 164 -234 L 166 -226" fill="#2a2d33" stroke={INK} strokeWidth={sw(2)} />
+      {/* deck rails + aft mooring deck */}
+      <path d="M22 -168 Q 520 -180 930 -224" fill="none" stroke="#9aa4ad" strokeWidth={sw(2)} strokeDasharray="5 4" transform="translate(0 -6)" />
+      {/* enclosed lifeboat */}
+      <g transform="translate(870 -196)"><path d="M-30 0 Q -30 -12 -16 -14 L 18 -14 Q 32 -12 32 0 Q 0 8 -30 0 Z" fill="#ff8a3a" {...O(sw(2.5))} /><rect x={-10} y={-12} width={20} height={5} rx={2} fill="#f4f4f0" /></g>
+      {/* stern ramp (folded up when closed, lowers to load cars) */}
+      <g transform={`translate(12 -44) rotate(${-rmp * 62})`}><rect x={-6} y={-76} width={12} height={80} fill="#9aa4ad" {...O(sw(3))} /></g>
+      {name && <Txt x={600} y={-70} s={28} c="#2c4a7a">FELICITY ACE</Txt>}
+      {name && <Txt x={60} y={-56} s={14} c="#2c4a7a">PANAMA</Txt>}
+      {/* x-ray: the 11 car decks inside */}
       {xray > 0 && (
-        <g opacity={xray}>
-          <rect x={20} y={top + 14} width={960} height={(wl - 70) - (top + 14)} fill="#f8f6ee" />
+        <g opacity={xray} clipPath={`url(#${cid})`}>
+          <rect x={20} y={-200} width={980} height={160} fill="#f8f6ee" />
           {Array.from({ length: 11 }).map((_, i) => {
-            const y = top + 14 + (i + 1) * (((wl - 70) - (top + 14)) / 11);
+            const y = -160 + (i + 1) * (120 / 11);
             return (
               <g key={i}>
-                <line x1={20} y1={y} x2={980} y2={y} stroke="#9aa4ad" strokeWidth={3 / k} />
-                {Array.from({ length: 30 }).map((__, j) => <rect key={j} x={30 + j * 31} y={y - 12} width={24} height={10} rx={4} fill={CAR_COLORS[(i * 7 + j * 3) % CAR_COLORS.length]} stroke={INK} strokeWidth={1 / k} opacity={ramp(t, i * 2, i * 2 + 6)} />)}
+                <line x1={20} y1={y} x2={990} y2={y} stroke="#9aa4ad" strokeWidth={sw(2)} />
+                {Array.from({ length: 34 }).map((__, j) => <rect key={j} x={34 + j * 28} y={y - 9} width={22} height={7} rx={3} fill={CAR_COLORS[(i * 7 + j * 3) % CAR_COLORS.length]} stroke={INK} strokeWidth={sw(1)} opacity={ramp(t, i * 2, i * 2 + 6)} />)}
               </g>
             );
           })}
         </g>
       )}
+      {/* the sea in front of the hull below the waterline (a loaded ship shows only a sliver of red) */}
+      {water && <g><rect x={-60} y={10} width={1140} height={70} fill="#3f86b0" opacity={0.93} />{Array.from({ length: 8 }).map((_, i) => <path key={i} d={`M${(i * 140 + t * 1.2) % 1100 - 40} ${30 + (i % 3) * 14} q 14 -5 28 0 t 28 0`} stroke="#bfe6f5" strokeWidth={sw(3)} fill="none" />)}</g>}
       {/* fire / scorch */}
-      {scorch > 0 && <path d={`M0 ${top} L 1000 ${top} L 1000 ${wl - 60} L 0 ${wl - 60} Z`} fill="#2a2620" opacity={0.65 * scorch} />}
+      {scorch > 0 && <g clipPath={`url(#${cid})`}><rect x={0} y={-260} width={1040} height={224} fill="#2a2620" opacity={0.65 * scorch} /></g>}
       {fire > 0 && (
         <g>
           {Array.from({ length: 16 }).map((_, i) => {
@@ -127,7 +156,7 @@ const Pc: Tpl = ({ t, d, p, w }) => {
         <Svg>
           <DaySky hz={hz} />
           <rect width={W} height={hz} fill="#5d6b80" opacity={0.35} />
-          <g transform={`translate(260 ${hz + k * 520}) rotate(${-6 * k})`}><Pctc L={1400} scorch={1} t={t} /></g>
+          <g transform={`translate(260 ${hz + k * 520}) rotate(${-6 * k})`}><Pctc L={1400} scorch={1} t={t} water={false} /></g>
           <OpenSea t={t} y={hz} />
           {Array.from({ length: 10 }).map((_, i) => <circle key={i} cx={500 + rnd(i) * 900} cy={hz + 40 + ((t * 3 + i * 37) % 300)} r={8 + rnd(i + 3) * 12} fill="#fff" opacity={0.6 * k} />)}
           {k > 0.7 && <g transform={`translate(${960 + Math.sin(t * 0.1) * 20} ${hz - 6 + Math.sin(t * 0.2) * 4})`}><circle r={30} fill="#2a2d33" {...O(4)} /><circle r={12} fill="#9aa4ad" /></g>}
