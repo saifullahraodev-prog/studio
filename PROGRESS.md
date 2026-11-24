@@ -673,3 +673,6 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   (top deck hosed, steam, fire below); foam diagram on dark bg with pump + growing foam; bridge alarm + smoke + radio call; captain on the
   PA handset with crew in life jackets running; ladder with crew climbing down in turn, boat filling, counter. `out/part2.mp4` v2
   (3:51, -15.0 LUFS, no black/frozen). Lesson: crew on ships use radios, not phones.
+- 2026-11-24 owner: binoculars looked like a mask, radios covered faces, extinguisher floated by the head -> officer scans with arms
+  folded (eyes move), radios held below the chin (armR [40,128]), new `extinguisher` prop held at the side. `out/part2.mp4` v3.
+  Lesson: never put a held prop over the face; check props against the head in a full-size still.

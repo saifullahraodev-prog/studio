@@ -115,8 +115,8 @@ const LookAft: Tpl = ({ t, w }) => {
     <AbsoluteFill>
       <Svg>
         <BridgeInside t={t} />
-        <Actor a="watch" t={t} x={360} y={1080} s={0.85} id="laoff" outfit="officer" w={w}
-          over={{ prop: "binoculars", pose: { ...IDLE, armR: [150, 140], armL: [150, 140], tilt: scan }, handR: "mitt", handL: "mitt", face: { eyes: "dot", brows: "one", mouth: "flat", lookX: 0.6 } }} />
+        <Actor a="fold" t={t} x={360} y={1080} s={0.85} id="laoff" outfit="officer" w={w}
+          over={{ face: { eyes: "dot", brows: "one", mouth: "flat", lookX: Math.sin(t * 0.06) * 0.9, lookY: -0.2 }, pose: { ...IDLE, armL: [30, -120], armR: [30, -120], tilt: scan * 0.6 } }} />
         <g transform={`translate(1500 260) scale(${pop(t, 40)})`}><circle r={80} fill="#3f9a4f" {...O(6)} /><path d="M-34 0 L -8 26 L 38 -26" stroke="#fff" strokeWidth={14} fill="none" strokeLinecap="round" /></g>
       </Svg>
     </AbsoluteFill>
@@ -133,12 +133,12 @@ const Radio7: Tpl = ({ t, d, w }) => {
         <rect x={60} y={90} width={840} height={360} rx={10} fill="#9fd3ee" stroke={INK} strokeWidth={8} />
         <rect x={60} y={330} width={840} height={120} fill="#3f86b0" />
         <rect x={0} y={760} width={960} height={320} fill="#3a424b" stroke={INK} strokeWidth={6} />
-        <Actor a="talk" t={t} x={480} y={1040} s={0.75} id="r7o" outfit="officer" w={w} over={{ prop: "radio", pose: { ...POSES.hold, armR: [120, 120] }, face: FACES.talk }} />
+        <Actor a="talk" t={t} x={480} y={1040} s={0.75} id="r7o" outfit="officer" w={w} over={{ prop: "radio", pose: { ...POSES.hold, armR: [40, 128] }, face: FACES.talk }} />
         <rect x={960} y={0} width={960} height={H} fill="#5a636c" />
         <line x1={960} y1={0} x2={960} y2={H} stroke={INK} strokeWidth={10} />
         {Array.from({ length: 9 }).map((_, i) => <rect key={i} x={1040 + i * 90} y={380 + i * 70} width={120} height={22} fill="#8e99a4" stroke={INK} strokeWidth={3} />)}
         <path d="M1030 300 L 1900 980" stroke="#c9cfd5" strokeWidth={8} />
-        <Actor a="talk" t={t} x={sx} y={sy} s={0.55} id="r7s" outfit="coverall" over={{ prop: "radio", pose: { ...POSES.hold, armR: [120, 120], legL: [-20 + Math.sin(t * 0.5) * 20, 10], legR: [20 - Math.sin(t * 0.5) * 20, 10] }, face: FACES.happy }} />
+        <Actor a="talk" t={t} x={sx} y={sy} s={0.55} id="r7s" outfit="coverall" over={{ prop: "radio", pose: { ...POSES.hold, armR: [40, 128], legL: [-20 + Math.sin(t * 0.5) * 20, 10], legR: [20 - Math.sin(t * 0.5) * 20, 10] }, face: FACES.happy }} />
         {Array.from({ length: 3 }).map((_, i) => <path key={i} d={`M${640 + i * 46} ${520 - i * 12} q 34 -34 0 -68`} stroke={YEL} strokeWidth={9} fill="none" opacity={(Math.floor(t / 5) + i) % 3 === 0 ? 1 : 0.3} />)}
         <g transform={`translate(560 170) scale(${pop(t, 14)})`}><rect x={-260} y={-56} width={520} height={112} rx={20} fill="#f4f4f0" {...O(6)} /><Txt x={0} y={18} s={46}>"CHECK DECK ONE"</Txt></g>
       </Svg>
@@ -199,8 +199,7 @@ const Door7: Tpl = ({ t, p, w }) => {
         <SmokeCloud t={t} k={m === "ext" ? 0.95 : 0.75} y={-60} />
         {m === "ext" && (
           <g>
-            <Actor a="worried" t={t} x={360 - Math.max(0, t - 40) * 4} y={1060} s={0.7} id="ex7" outfit="coverall" w={w} over={{ pose: { ...IDLE, lean: -10, armR: [70, 20] }, face: { eyes: "wide", brows: "worried", mouth: "teeth" }, emote: "sweat", emoteT: t }} />
-            <g transform={`translate(${470 - Math.max(0, t - 40) * 4} 760)`}><rect x={-14} y={-50} width={28} height={70} rx={10} fill={RED} {...O(4)} /><path d="M10 -50 q 30 -10 40 10" stroke={INK} strokeWidth={6} fill="none" /></g>
+            <Actor a="worried" t={t} x={360 - Math.max(0, t - 40) * 4} y={1060} s={0.7} id="ex7" outfit="coverall" w={w} over={{ prop: "extinguisher", pose: { ...IDLE, lean: -10, armR: [40, 20] }, face: { eyes: "wide", brows: "worried", mouth: "teeth" }, emote: "sweat", emoteT: t }} />
           </g>
         )}
       </Svg>
@@ -388,7 +387,7 @@ const Abandon: Tpl = ({ t, p, w }) => {
         <Svg>
           <BridgeInside t={t} smoke={1} alarm />
           <Actor a="worried" t={t} x={560} y={1080} s={0.85} id="cap7" outfit="captain" w={w}
-            over={{ prop: "radio", pose: { ...POSES.hold, armR: [120, 120] }, face: { eyes: "wide", brows: "worried", mouth: "frown", lookX: 0.6 }, emote: "sweat", emoteT: t }} />
+            over={{ prop: "radio", pose: { ...POSES.hold, armR: [40, 128] }, face: { eyes: "wide", brows: "worried", mouth: "frown", lookX: 0.6 }, emote: "sweat", emoteT: t }} />
           <g transform={`translate(1360 300) scale(${pop(t, 10)})`}>
             <path d="M-330 -80 H 330 V 60 H 60 L 0 140 L 20 60 H -330 Z" fill="#f4f4f0" {...O(7)} />
             <Txt x={0} y={6} s={44} c={RED}>"FIRE OUT OF CONTROL!"</Txt>
