@@ -637,3 +637,7 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
 - `videos/2026-11-24-felicity-ace/script.md` (1,756 words, ~10:00) + `narration.txt`. Main source: Panama Maritime Authority report
   R-013-2022-DIAM (read in full: 3,965 vehicles / 574 EVs, alarm 08:30 deck 1, foam fans failed, abandon ship, sank 1 Mar 09:11,
   conclusions 8.1-8.16). Plus NTSB Höegh Xiamen, Stuttgart ruling May 2026, Lamborghini restart. GATE passed 2026-11-24: owner approved script v1. Next: owner records CapCut voice from narration.txt.
+- 2026-11-24: owner sent the CapCut voice (one file, 10:06) -> `voice.wav`, 1,727 words; pauses tightened to 9:35.
+  PART 1 (hook, the ship, the voyage; 0:00-2:04): 30 beats in `beats.txt`, new `engine/shipguy/templates7.tsx` (car carrier `Pctc`,
+  generic `Car`/`CarTop` with no logos; pc, lash, route7, parade, price7, ev7, rounds, bridge7, court7). Storyboard `storyboard/p1-*.png`.
+  GATE: owner OK on Part 1 stills.

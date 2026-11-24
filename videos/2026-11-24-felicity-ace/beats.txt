@@ -1,0 +1,35 @@
+# The Ship That Sank With 4,000 Luxury Cars (The Ship Guy #7, Felicity Ace). Retention-first: ~3.5 s shots, a sound on every cut, NO music.
+# Built part by part. PART 1 = hook + the ship + the voyage (sections 0-2). New templates: engine/shipguy/templates7.tsx.
+# --- 0. Hook
+pc mode=hook || 16 FEB 2022 || It's the sixteenth of February, twenty twenty-two.
+pc mode=sail cam=far || [~4,000] NEW CARS || A ship is crossing the Atlantic Ocean with almost four thousand brand-new cars on board.
+parade names=1 || || Porsches. Bentleys. Even a few Lamborghinis.
+bridge7 alarm=1 || [8:30] AM || At eight thirty in the morning, a smoke alarm goes off.
+pc mode=sink || [2 WEEKS] LATER || Two weeks later, the ship and every single car on it are at the bottom of the ocean.
+guy act=fold bg=paper label=NOBODY_DIED || || Nobody died.
+price7 hook=1 || || But the cargo was worth hundreds of millions of dollars,
+court7 || || and four years later, a court still couldn't say for sure what started the fire.
+guy act=think bg=paper label=WHAT_HAPPENED? || || So what happened on that ship?
+bridge7 || || To find out, we need to go back to the morning of the alarm.
+# --- 1. A car park that floats
+pc mode=sail cam=close || FELICITY ACE || The ship was called the Felicity Ace.
+pc mode=sail cam=length || CAR CARRIER || It was a car carrier, about two hundred metres long,
+pc mode=shoebox || || and from the outside it looks like a giant floating shoebox.
+pc mode=xray || MULTI-STOREY CAR PARK || Inside, it's basically a multi-storey car park.
+pc mode=xray count=1 || [11] DECKS || Eleven decks of cars, stacked on top of each other, with room for more than five thousand.
+pc mode=ramp || DRIVEN ON BOARD || The cars are driven on board up a big ramp at the back,
+lash || || parked just centimetres apart, and strapped to the deck so they can't slide around in a storm.
+ev7 n=3965 || [3,965] VEHICLES || On this trip, it had loaded three thousand nine hundred and sixty-five vehicles
+route7 || EMDEN → RHODE ISLAND || in Emden, in Germany, bound for Rhode Island, in the United States. About three and a half thousand nautical miles.
+parade || || Most were from the Volkswagen Group. Around eleven hundred were Porsches. A hundred and eighty-nine were Bentleys. And fifteen were the Lamborghini Aventador Ultimae, the very last version of a famous V12 supercar.
+price7 || ~[$400 MILLION] || One insurance analyst estimated the cars alone were worth around four hundred million dollars.
+ev7 || [574] ELECTRIC || And there was one more detail. Five hundred and seventy-four of those cars were electric.
+guy act=fingerup bg=paper label=574 || || Keep that number in mind.
+# --- 2. A quiet voyage
+pc mode=storm || GALE || The trip started rough. Three days out, the ship hit a gale, with waves around three metres high.
+pc mode=storm || || The captain changed course to stop the ship slamming into them.
+pc mode=calm || || Then the weather calmed down.
+rounds || SAFETY ROUNDS || The crew did their safety rounds through the car decks, day and night. One in the morning. Five in the morning. Seven in the morning. Nothing unusual.
+bridge7 || [07:50] || At ten to eight, the third officer came up to the bridge to take over the watch.
+bridge7 calm=1 || ALL NORMAL || The captain was there too. Everything was normal.
+bridge7 alarm=1 || [08:30] || And then, at eight thirty, the alarm.
