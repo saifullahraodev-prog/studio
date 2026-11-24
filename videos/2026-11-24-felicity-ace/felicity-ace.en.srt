@@ -1,0 +1,985 @@
+1
+00:00:00,000 --> 00:00:02,690
+It's the sixteenth of
+February, twenty twenty-two.
+
+2
+00:00:02,840 --> 00:00:04,930
+A ship is crossing the Atlantic Ocean with
+
+3
+00:00:04,980 --> 00:00:07,890
+almost four thousand
+brand-new cars on board.
+
+4
+00:00:08,040 --> 00:00:08,550
+Porsches.
+
+5
+00:00:08,600 --> 00:00:09,510
+Bentleys.
+
+6
+00:00:09,560 --> 00:00:11,490
+Even a few Lamborghinis.
+
+7
+00:00:11,640 --> 00:00:15,010
+At eight thirty in the morning,
+a smoke alarm goes off.
+
+8
+00:00:15,140 --> 00:00:17,350
+Two weeks later, the ship and every single
+
+9
+00:00:17,400 --> 00:00:19,630
+car on it are at the bottom of the ocean.
+
+10
+00:00:19,780 --> 00:00:20,810
+Nobody died.
+
+11
+00:00:20,960 --> 00:00:25,250
+But the cargo was worth hundreds of
+millions of dollars, and four years later,
+
+12
+00:00:25,440 --> 00:00:28,330
+a court still couldn't say for
+sure what started the fire.
+
+13
+00:00:28,480 --> 00:00:30,550
+So what happened on that ship?
+
+14
+00:00:30,780 --> 00:00:33,810
+To find out, we need to go back
+to the morning of the alarm.
+
+15
+00:00:33,960 --> 00:00:36,170
+The ship was called the Felicity Ace.
+
+16
+00:00:36,440 --> 00:00:39,310
+It was a car carrier, about
+two hundred metres long,
+
+17
+00:00:39,360 --> 00:00:43,230
+and from the outside it looks
+like a giant floating shoebox.
+
+18
+00:00:43,380 --> 00:00:46,670
+Inside, it's basically
+a multi-storey car park.
+
+19
+00:00:46,980 --> 00:00:49,530
+Eleven decks of cars,
+stacked on top of each other,
+
+20
+00:00:49,580 --> 00:00:52,210
+with room for more than five thousand.
+
+21
+00:00:52,420 --> 00:00:55,150
+The cars are driven on board
+up a big ramp at the back,
+
+22
+00:00:55,240 --> 00:00:56,790
+parked just centimetres apart,
+
+23
+00:00:56,840 --> 00:01:00,850
+and strapped to the deck so they
+can't slide around in a storm.
+
+24
+00:01:01,000 --> 00:01:03,670
+On this trip, it had
+loaded three thousand nine
+
+25
+00:01:03,720 --> 00:01:06,930
+hundred and sixty-five
+vehicles in Emden, in Germany,
+
+26
+00:01:07,080 --> 00:01:09,650
+bound for Rhode Island,
+in the United States.
+
+27
+00:01:09,700 --> 00:01:11,890
+About three and a half
+thousand nautical miles.
+
+28
+00:01:12,200 --> 00:01:13,870
+Most were from the Volkswagen Group.
+
+29
+00:01:14,020 --> 00:01:15,830
+Around eleven hundred were Porsches.
+
+30
+00:01:15,980 --> 00:01:17,630
+A hundred and eighty-nine were Bentleys.
+
+31
+00:01:17,680 --> 00:01:20,950
+And fifteen were the
+Lamborghini Aventador Ultimae,
+
+32
+00:01:21,000 --> 00:01:24,430
+the very last version of
+a famous V12 supercar.
+
+33
+00:01:24,600 --> 00:01:27,210
+One insurance analyst
+estimated the cars alone
+
+34
+00:01:27,260 --> 00:01:29,690
+were worth around four
+hundred million dollars.
+
+35
+00:01:29,740 --> 00:01:31,850
+And there was one more detail.
+
+36
+00:01:32,000 --> 00:01:33,970
+Five hundred and seventy-four
+of those cars were electric.
+
+37
+00:01:34,120 --> 00:01:35,490
+Keep that number in mind.
+
+38
+00:01:35,640 --> 00:01:36,970
+The trip started rough.
+
+39
+00:01:37,280 --> 00:01:39,070
+Three days out, the ship hit a gale,
+
+40
+00:01:39,120 --> 00:01:41,570
+with waves around three metres high.
+
+41
+00:01:41,680 --> 00:01:44,990
+The captain changed course to
+stop the ship slamming into them.
+
+42
+00:01:45,040 --> 00:01:46,470
+Then the weather calmed down.
+
+43
+00:01:46,800 --> 00:01:50,650
+The crew did their safety rounds
+through the car decks, day and night.
+
+44
+00:01:50,980 --> 00:01:51,970
+One in the morning.
+
+45
+00:01:52,020 --> 00:01:53,130
+Five in the morning.
+
+46
+00:01:53,360 --> 00:01:54,430
+Seven in the morning.
+
+47
+00:01:54,680 --> 00:01:55,680
+Nothing unusual.
+
+48
+00:01:55,920 --> 00:01:57,830
+At ten to eight, the third officer came
+
+49
+00:01:57,880 --> 00:01:59,870
+up to the bridge to take over the watch.
+
+50
+00:02:00,080 --> 00:02:01,350
+The captain was there too.
+
+51
+00:02:01,500 --> 00:02:02,510
+Everything was normal.
+
+52
+00:02:02,640 --> 00:02:05,150
+And then, at eight thirty, the alarm.
+
+53
+00:02:05,300 --> 00:02:08,210
+The smoke detector said: deck
+one, at the back of the ship.
+
+54
+00:02:08,260 --> 00:02:10,930
+And on this ship, deck
+one isn't the bottom.
+
+55
+00:02:11,240 --> 00:02:16,170
+The car decks are counted from the top
+down, so deck one is the highest car deck,
+
+56
+00:02:16,280 --> 00:02:18,750
+more than thirty metres
+above the bottom of the hull.
+
+57
+00:02:18,900 --> 00:02:21,950
+From the bridge, nobody
+could see any smoke.
+
+58
+00:02:22,140 --> 00:02:24,450
+So the officer radioed
+a sailor who was already
+
+59
+00:02:24,500 --> 00:02:27,250
+doing a safety round and
+asked him to go and check.
+
+60
+00:02:27,400 --> 00:02:31,230
+The sailor went down the stairs
+and opened the door to deck one.
+
+61
+00:02:31,380 --> 00:02:32,190
+Black smoke.
+
+62
+00:02:32,240 --> 00:02:34,970
+And between the rows of cars, flames.
+
+63
+00:02:35,100 --> 00:02:36,770
+Three or four cars already burning.
+
+64
+00:02:37,020 --> 00:02:38,350
+And small explosions.
+
+65
+00:02:38,460 --> 00:02:40,230
+The sailor grabbed a fire extinguisher,
+
+66
+00:02:40,280 --> 00:02:42,390
+but couldn't get anywhere near the flames.
+
+67
+00:02:42,540 --> 00:02:43,790
+The smoke was too thick.
+
+68
+00:02:44,000 --> 00:02:47,550
+So the door went shut again, and the
+alarm went out to the whole ship.
+
+69
+00:02:47,700 --> 00:02:51,130
+The fire team got ready fast, with
+breathing sets and fire suits.
+
+70
+00:02:51,440 --> 00:02:52,670
+They opened the door again.
+
+71
+00:02:52,920 --> 00:02:54,190
+They couldn't see a thing.
+
+72
+00:02:54,500 --> 00:02:57,110
+The crew started the emergency
+fire pump and sprayed
+
+73
+00:02:57,160 --> 00:03:00,570
+water on the outside of the
+deck above, to cool it down.
+
+74
+00:03:00,740 --> 00:03:04,490
+Then the captain went to plan B. The
+ship's fixed firefighting system.
+
+75
+00:03:04,540 --> 00:03:07,370
+Car carriers don't use
+sprinklers like a building.
+
+76
+00:03:07,520 --> 00:03:09,410
+This one used high-expansion foam.
+
+77
+00:03:09,540 --> 00:03:10,630
+The idea is simple.
+
+78
+00:03:10,900 --> 00:03:12,730
+A pump mixes foam liquid with water,
+
+79
+00:03:12,780 --> 00:03:15,490
+and big electric fans blow air through it.
+
+80
+00:03:15,620 --> 00:03:18,870
+That air puffs the mixture up
+to hundreds of times its size,
+
+81
+00:03:19,030 --> 00:03:22,490
+into a huge wave of foam
+that fills the whole deck and
+
+82
+00:03:22,540 --> 00:03:25,710
+smothers the fire, like the
+world's biggest bubble bath.
+
+83
+00:03:25,860 --> 00:03:27,610
+The first engineer ran to the room where
+
+84
+00:03:27,660 --> 00:03:30,130
+the foam system was,
+and started the pumps.
+
+85
+00:03:30,280 --> 00:03:31,470
+Foam liquid was flowing.
+
+86
+00:03:31,580 --> 00:03:33,450
+The level in the tank was going down.
+
+87
+00:03:33,500 --> 00:03:35,590
+But the fans on deck one didn't start.
+
+88
+00:03:35,720 --> 00:03:37,350
+No fans, no foam.
+
+89
+00:03:37,620 --> 00:03:39,630
+Just liquid running out of the pipes.
+
+90
+00:03:39,840 --> 00:03:41,690
+The engineer ran up to the electrical room
+
+91
+00:03:41,740 --> 00:03:43,910
+to check the fan circuits and breakers.
+
+92
+00:03:44,120 --> 00:03:45,050
+Still nothing.
+
+93
+00:03:45,100 --> 00:03:46,290
+The fans would not start.
+
+94
+00:03:46,620 --> 00:03:48,110
+Meanwhile, the fire team was reporting
+
+95
+00:03:48,160 --> 00:03:50,050
+that the fire was out of control.
+
+96
+00:03:50,380 --> 00:03:51,950
+So the captain made the call.
+
+97
+00:03:52,280 --> 00:03:53,270
+Abandon ship.
+
+98
+00:03:53,320 --> 00:03:55,210
+The ship sent out a distress call.
+
+99
+00:03:55,480 --> 00:03:57,010
+A tanker called the Resilient Warrior,
+
+100
+00:03:57,060 --> 00:04:00,550
+on her way to Rotterdam,
+answered and turned around.
+
+101
+00:04:00,800 --> 00:04:03,110
+Within about an hour, all twenty-two crew
+
+102
+00:04:03,160 --> 00:04:05,630
+had climbed down a rope ladder to safety.
+
+103
+00:04:05,780 --> 00:04:08,390
+Later, a Portuguese Air
+Force helicopter flew
+
+104
+00:04:08,440 --> 00:04:11,170
+them to the island of
+Faial, in the Azores.
+
+105
+00:04:11,440 --> 00:04:12,530
+Nobody was hurt.
+
+106
+00:04:12,680 --> 00:04:14,970
+The Felicity Ace was left on her own,
+
+107
+00:04:15,060 --> 00:04:17,310
+burning, in the middle of the Atlantic.
+
+108
+00:04:17,460 --> 00:04:20,050
+So why was this fire so hard to stop?
+
+109
+00:04:20,200 --> 00:04:22,810
+First, a car deck is one giant open space.
+
+110
+00:04:23,020 --> 00:04:26,110
+There are no walls between the
+cars to stop a fire spreading,
+
+111
+00:04:26,160 --> 00:04:29,110
+and air can flow along the whole deck.
+
+112
+00:04:29,260 --> 00:04:32,870
+Second, every car is
+full of things that burn.
+
+113
+00:04:33,020 --> 00:04:34,830
+Fuel, plastic, foam seats, tyres.
+
+114
+00:04:35,120 --> 00:04:38,510
+Thousands of cars means thousands
+of fires waiting to happen.
+
+115
+00:04:38,760 --> 00:04:40,830
+And third, the electric cars.
+
+116
+00:04:40,980 --> 00:04:43,250
+A lithium-ion battery that overheats can
+
+117
+00:04:43,300 --> 00:04:45,590
+go into what's called thermal runaway.
+
+118
+00:04:45,840 --> 00:04:49,090
+One cell heats up, sets off
+the next one, and the next one,
+
+119
+00:04:49,140 --> 00:04:51,710
+and the battery keeps
+feeding its own fire.
+
+120
+00:04:51,860 --> 00:04:54,090
+It can even reignite after
+it looks like it's out.
+
+121
+00:04:54,140 --> 00:04:56,430
+The investigators said it plainly.
+
+122
+00:04:56,620 --> 00:04:58,770
+Car carriers, at the
+time, were not prepared
+
+123
+00:04:58,820 --> 00:05:01,570
+to put out fires on
+electric and hybrid cars.
+
+124
+00:05:01,720 --> 00:05:04,610
+There was no special equipment,
+and no special procedure.
+
+125
+00:05:04,760 --> 00:05:05,760
+But here's the thing.
+
+126
+00:05:05,900 --> 00:05:08,710
+Car carrier fires didn't
+start with electric cars.
+
+127
+00:05:08,860 --> 00:05:12,530
+Two years earlier, in June twenty
+twenty, another car carrier,
+
+128
+00:05:12,580 --> 00:05:16,750
+the Höegh Xiamen, caught fire in the
+port of Jacksonville, in Florida.
+
+129
+00:05:16,900 --> 00:05:20,150
+She was full of used cars,
+most of them running on petrol.
+
+130
+00:05:20,300 --> 00:05:23,710
+America's National Transportation
+Safety Board found the cause.
+
+131
+00:05:23,860 --> 00:05:26,010
+The batteries in some
+of those used cars were
+
+132
+00:05:26,060 --> 00:05:28,750
+supposed to be disconnected
+and secured before loading.
+
+133
+00:05:28,960 --> 00:05:32,610
+One wasn't done properly, and an
+electrical fault started the fire.
+
+134
+00:05:32,760 --> 00:05:34,830
+That ship burned for more than a week.
+
+135
+00:05:34,980 --> 00:05:37,830
+Nine firefighters were injured,
+and the ship and all two
+
+136
+00:05:37,880 --> 00:05:41,130
+thousand four hundred and
+twenty cars were a total loss.
+
+137
+00:05:41,320 --> 00:05:43,610
+So any car carrier fire is hard.
+
+138
+00:05:43,860 --> 00:05:47,270
+Electric cars just add one more
+problem nobody had fully solved.
+
+139
+00:05:47,320 --> 00:05:49,690
+The owners called in a salvage company,
+
+140
+00:05:49,860 --> 00:05:51,830
+Smit Salvage, from the Netherlands.
+
+141
+00:05:51,980 --> 00:05:54,870
+They flew a team of sixteen
+experts to the Azores.
+
+142
+00:05:55,140 --> 00:05:57,790
+Tugs reached the ship and
+started spraying her with water,
+
+143
+00:05:57,840 --> 00:06:00,030
+to cool the hull from the outside.
+
+144
+00:06:00,180 --> 00:06:03,470
+Day after day, the fire
+kept burning inside.
+
+145
+00:06:03,780 --> 00:06:06,350
+Little by little, the flames died down.
+
+146
+00:06:06,560 --> 00:06:09,210
+When it was safe enough,
+a salvage team climbed on
+
+147
+00:06:09,260 --> 00:06:12,230
+board from a small patrol
+boat to see what was left.
+
+148
+00:06:12,380 --> 00:06:15,550
+Then a big salvage tug called
+Bear got a line on board
+
+149
+00:06:15,600 --> 00:06:19,670
+and started towing her toward
+calmer water off the Azores.
+
+150
+00:06:19,820 --> 00:06:24,210
+Then, on the first of March,
+she started to lean to one side.
+
+151
+00:06:24,360 --> 00:06:27,910
+At eleven minutes past nine in the
+morning, the Felicity Ace sank.
+
+152
+00:06:27,960 --> 00:06:33,530
+And all three thousand nine hundred
+and sixty-five cars went with her.
+
+153
+00:06:33,720 --> 00:06:35,670
+The tugs stayed for a few days,
+
+154
+00:06:35,720 --> 00:06:37,810
+watching for oil leaking from the wreck.
+
+155
+00:06:38,140 --> 00:06:40,430
+The operator said no new
+oil spills were seen,
+
+156
+00:06:40,480 --> 00:06:44,090
+and after that the site was watched
+by satellite and from the air.
+
+157
+00:06:44,320 --> 00:06:45,320
+So who paid?
+
+158
+00:06:45,440 --> 00:06:46,750
+Some of the people waiting for a new
+
+159
+00:06:46,800 --> 00:06:49,250
+Porsche or Bentley had
+to wait a lot longer.
+
+160
+00:06:49,300 --> 00:06:51,950
+And Lamborghini did something unusual.
+
+161
+00:06:52,100 --> 00:06:54,290
+It had already finished
+building the Aventador.
+
+162
+00:06:54,400 --> 00:06:57,470
+But fifteen of the last ones
+were now on the sea floor.
+
+163
+00:06:57,520 --> 00:07:01,130
+So it restarted production, just
+to build those fifteen cars again.
+
+164
+00:07:01,280 --> 00:07:03,850
+But the biggest question was still open.
+
+165
+00:07:04,000 --> 00:07:05,000
+Who was to blame?
+
+166
+00:07:05,080 --> 00:07:06,690
+The ship flew the flag of Panama,
+
+167
+00:07:06,740 --> 00:07:09,590
+so Panama's maritime
+authority investigated.
+
+168
+00:07:09,740 --> 00:07:14,070
+According to the crew, the fire
+started on an electric Porsche Taycan.
+
+169
+00:07:14,200 --> 00:07:17,690
+But the report also said the reason
+the car caught fire was unknown.
+
+170
+00:07:17,840 --> 00:07:21,070
+It listed possible causes,
+like a faulty battery cell,
+
+171
+00:07:21,160 --> 00:07:25,930
+damage during assembly, or a short circuit, but it couldn't prove any of them.
+
+172
+00:07:26,080 --> 00:07:28,810
+The report also asked a hard question.
+
+173
+00:07:29,080 --> 00:07:30,750
+Could the fire have been stopped early?
+
+174
+00:07:30,920 --> 00:07:34,770
+A crew member had taken a photo
+inside deck one, and in it,
+
+175
+00:07:34,820 --> 00:07:37,650
+the investigators could still
+see the cars and the lights.
+
+176
+00:07:37,880 --> 00:07:40,510
+They thought a fire team
+might have been able to go in,
+
+177
+00:07:40,580 --> 00:07:42,470
+use the hoses already fitted on the deck,
+
+178
+00:07:42,520 --> 00:07:45,370
+and stop the fire
+spreading from car to car.
+
+179
+00:07:45,560 --> 00:07:48,190
+But they also found that
+the crew had no special
+
+180
+00:07:48,240 --> 00:07:51,210
+training for car deck
+fires, or for electric cars,
+
+181
+00:07:51,260 --> 00:07:54,410
+and little confidence going
+into a space like that.
+
+182
+00:07:54,480 --> 00:07:56,810
+And the fans that never started?
+
+183
+00:07:56,960 --> 00:07:59,950
+The investigators thought
+their motor sat on deck one,
+
+184
+00:08:00,000 --> 00:08:03,930
+near the fire, and its cables
+were probably damaged by the heat.
+
+185
+00:08:04,080 --> 00:08:07,390
+The ship's owner and insurers
+took Porsche to court in Germany,
+
+186
+00:08:07,580 --> 00:08:09,810
+asking for about thirty million euros.
+
+187
+00:08:09,960 --> 00:08:12,570
+Their argument: Porsche should
+have warned them about the
+
+188
+00:08:12,620 --> 00:08:16,090
+risks of shipping electric cars,
+and how to carry them safely.
+
+189
+00:08:16,240 --> 00:08:19,970
+In May twenty twenty-six, a court
+in Stuttgart rejected the claim.
+
+190
+00:08:20,120 --> 00:08:21,890
+The judges said they were not convinced
+
+191
+00:08:21,940 --> 00:08:23,950
+that a Taycan had started the fire.
+
+192
+00:08:24,140 --> 00:08:25,990
+That ruling can still be appealed,
+
+193
+00:08:26,080 --> 00:08:28,890
+and a second case in another
+German court is still going.
+
+194
+00:08:29,040 --> 00:08:30,890
+So, four years later,
+
+195
+00:08:31,140 --> 00:08:34,210
+nobody has officially proven
+exactly what started it.
+
+196
+00:08:34,300 --> 00:08:36,370
+And this wasn't the last time.
+
+197
+00:08:36,520 --> 00:08:39,290
+In July twenty twenty-three,
+another car carrier,
+
+198
+00:08:39,440 --> 00:08:42,810
+the Fremantle Highway, caught fire
+off the coast of the Netherlands.
+
+199
+00:08:42,960 --> 00:08:44,430
+One crew member died.
+
+200
+00:08:44,560 --> 00:08:47,850
+Since then, Europe's maritime
+safety agency has published guidance
+
+201
+00:08:47,900 --> 00:08:51,550
+on carrying electric cars on ships,
+and the International Maritime
+
+202
+00:08:51,600 --> 00:08:55,230
+Organization has been working on
+new fire rules for car carriers.
+
+203
+00:08:55,380 --> 00:08:56,250
+Better detection.
+
+204
+00:08:56,300 --> 00:08:58,310
+Better ways to spot a hot car early.
+
+205
+00:08:58,480 --> 00:09:00,850
+Better ways to fight a
+fire before it spreads.
+
+206
+00:09:01,000 --> 00:09:02,810
+So let's go back to that morning.
+
+207
+00:09:02,960 --> 00:09:04,270
+The alarm goes off.
+
+208
+00:09:04,560 --> 00:09:05,850
+A sailor opens a door.
+
+209
+00:09:06,060 --> 00:09:06,730
+Smoke.
+
+210
+00:09:06,780 --> 00:09:08,250
+Three or four cars on fire.
+
+211
+00:09:08,500 --> 00:09:11,250
+The ship has a system built
+for exactly this moment.
+
+212
+00:09:11,540 --> 00:09:13,030
+Foam, pumps, fans.
+
+213
+00:09:13,280 --> 00:09:15,370
+But one part doesn't start.
+
+214
+00:09:15,520 --> 00:09:19,067
+And two weeks later, three
+thousand nine hundred and
+
+215
+00:09:19,117 --> 00:09:22,550
+sixty-five cars are lying
+on the bottom of the ocean.
+
+216
+00:09:22,700 --> 00:09:25,250
+The cars on these ships are changing fast.
+
+217
+00:09:25,400 --> 00:09:26,950
+The ships are still catching up.
+
+218
+00:09:27,020 --> 00:09:30,970
+And if you want to see just how expensive
+a normal day is for a ship like this,
+
+219
+00:09:31,120 --> 00:09:34,510
+even when nothing goes wrong,
+that video is right here.

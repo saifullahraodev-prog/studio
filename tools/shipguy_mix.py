@@ -116,7 +116,7 @@ def main(slug: str, tracks: str = ""):
         tpl, p = b["tpl"], b["p"]
         if i > 0:
             # carrier video: the Forrestal part is quiet (a soft cut sound only, no comic sounds)
-            ev.append((t0, "whoosh", 0.15 if tpl == "forrestal" else 0.45))
+            ev.append((t0, "whoosh", 0.15 if tpl in ("forrestal", "fremantle") else 0.45))
         if tpl == "attack":
             ev.append((t0 + 1.2, "impact", 0.9))
         if tpl == "sea" and p.get("state") == "fire":
@@ -320,6 +320,92 @@ def main(slug: str, tracks: str = ""):
             ev.append((t0 + 0.2, "ding", 0.5))
         if tpl == "guy" and p.get("act") == "think":
             ev.append((t0 + 0.25, "pop", 0.4))
+        # --- Felicity Ace templates (video #7). Fremantle Highway (a crew member died) gets no comic sounds.
+        if tpl == "pc":
+            if st == "hook": ev.append((t0 + 0.4, "pop", 0.5)); ev.append((t0 + 0.8, "pop", 0.45)); ev.append((t0 + 1.2, "pop", 0.45))
+            if st == "sink": ev.append((t0 + 0.4, "boom", 0.35))
+            if st == "storm": ev.append((t0 + 0.2, "crunch", 0.2))
+            if st in ("shoebox", "xray", "ramp"): ev.append((t0 + 0.3, "pop", 0.45))
+            if p.get("cam") == "length": ev.append((t0 + 0.2, "riser", 0.35)); ev.append((t0 + 1.0, "ding", 0.45))
+        if tpl == "bridge7" and p.get("alarm") == "1":
+            for k in range(4): ev.append((t0 + 0.1 + k * 0.4, "tick", 0.9))
+            ev.append((t0 + 0.2, "hit", 0.5))
+        if tpl in ("price7", "court7"):
+            ev.append((t0 + 0.4, "stamp", 0.7)); ev.append((t0 + 0.7, "boing", 0.3))
+        if tpl in ("ev7", "parade", "lash", "route7"):
+            ev.append((t0 + 0.15, "riser", 0.3)); ev.append((t0 + 0.9, "pop", 0.5))
+            if tpl == "ev7" and p.get("n") is None: ev.append((t0 + 0.4, "zap", 0.4))
+        if tpl == "rounds":
+            for k in range(3): ev.append((t0 + 0.6 + k * (b["dur"] / fps) / 3, "ding", 0.35))
+        if tpl == "deckmap":
+            ev.append((t0 + 0.2, "hit" if st == "alarm" else "pop", 0.45))
+        if tpl in ("lookaft", "radio7"):
+            ev.append((t0 + 0.4, "pop", 0.4))
+        if tpl == "door7":
+            if st == "door": ev.append((t0 + 1.0, "crunch", 0.25))
+            if st in ("open", "pops"): ev.append((t0, "fire_bed", 0.35, b["dur"] / fps)); ev.append((t0 + 0.5, "hit", 0.35))
+            if st == "pops":
+                for k in range(3): ev.append((t0 + 0.8 + k * 0.7, "pop", 0.6))
+            if st == "shut": ev.append((t0 + 0.2, "hit", 0.6))
+            if st == "black": ev.append((t0 + 0.1, "boom", 0.2))
+        if tpl == "cool7": ev.append((t0 + 0.3, "hiss", 0.5))
+        if tpl == "foam":
+            if st in ("how", "grow"): ev.append((t0 + 0.3, "hiss", 0.4)); ev.append((t0 + 0.6, "pop", 0.45))
+            if st == "bath": ev.append((t0 + 0.5, "boing", 0.4)); ev.append((t0 + 1.4, "pop", 0.5))
+            if st in ("pump", "tank"): ev.append((t0 + 0.3, "jet", 0.25))
+            if st == "fans": ev.append((t0 + 0.4, "ding", 0.4)); ev.append((t0 + 0.9, "hit", 0.5))
+            if st == "dribble": ev.append((t0 + 0.6, "boing", 0.35))
+            if st == "breakers":
+                for k in range(4): ev.append((t0 + 0.4 + k * 0.5, "tick", 0.8))
+        if tpl == "abandon":
+            if st == "call":
+                for k in range(3): ev.append((t0 + k * 0.35, "hit", 0.45))
+            else: ev.append((t0 + 0.4, "stamp", 0.5))
+        if tpl == "rescue":
+            if st == "call":
+                for k in range(3): ev.append((t0 + 0.2 + k * 0.4, "ding", 0.35))
+            if st in ("tanker", "ladder", "heli"): ev.append((t0 + 0.3, "pop", 0.45))
+            if st == "ladder": ev.append((t0 + (b["dur"] / fps) * 0.8, "ding", 0.5))
+            if st == "adrift": ev.append((t0, "fire_bed", 0.25, b["dur"] / fps))
+        if tpl == "why7":
+            if st in ("open", "spread", "many"): ev.append((t0 + 0.3, "pop", 0.45))
+            if st == "burn":
+                for k in range(4): ev.append((t0 + 0.3 + k * 0.5, "pop", 0.5))
+            if st in ("battery", "chain"):
+                for k in range(3): ev.append((t0 + 0.3 + k * 0.5, "zap", 0.45))
+            if st == "relight": ev.append((t0 + 1.7, "boom", 0.35)); ev.append((t0 + 1.8, "boing", 0.3))
+            if st == "report": ev.append((t0 + 0.4, "stamp", 0.8))
+            if st == "report2": ev.append((t0 + 0.2, "pop", 0.5)); ev.append((t0 + 0.9, "pop", 0.5))
+        if tpl == "xiamen":
+            if st in ("port", "used", "ntsb", "battery"): ev.append((t0 + 0.4, "ding", 0.3))
+            if st == "spark": ev.append((t0 + 0.2, "zap", 0.6)); ev.append((t0 + 1.0, "fire", 0.3))
+            if st == "fire": ev.append((t0, "fire_bed", 0.25, b["dur"] / fps))
+            if st == "loss": ev.append((t0 + 0.5, "stamp", 0.8))
+            if st == "scale": ev.append((t0 + 0.3, "boing", 0.3))
+        if tpl == "salvage":
+            if st in ("team", "plane", "board"): ev.append((t0 + 0.3, "pop", 0.45))
+            if st == "spray": ev.append((t0 + 0.2, "hiss", 0.5))
+            if st == "days":
+                for k in range(4): ev.append((t0 + 0.2 * (k + 1) * 1.5, "tick", 0.7))
+            if st == "tow": ev.append((t0 + 0.4, "twang", 0.4))
+            if st == "lean": ev.append((t0 + 0.8, "crunch", 0.3))
+            if st == "cars": ev.append((t0 + 0.2, "boom", 0.25))
+            if st in ("oil", "sat"): ev.append((t0 + 0.4, "ding", 0.3))
+        if tpl == "bill":
+            if st == "receipt": ev.append((t0 + 0.2, "riser", 0.3)); ev.append((t0 + 0.6, "boing", 0.35))
+            if st in ("showroom", "seafloor"): ev.append((t0 + 0.4, "pop", 0.4))
+            if st == "lambo": ev.append((t0 + 0.4, "hit", 0.3))
+            if st == "factory": ev.append((t0 + 0.3, "ding", 0.45)); ev.append((t0 + 1.0, "pop", 0.45))
+        if tpl == "case":
+            if st in ("ruling",): ev.append((t0 + 0.4, "hit", 0.6)); ev.append((t0 + 0.7, "stamp", 0.8))
+            elif st in ("causes",):
+                for k in range(3): ev.append((t0 + 0.3 + k * (b["dur"] / fps - 1) / 3, "pop", 0.5))
+            elif st in ("notproven", "lawsuit"): ev.append((t0 + 0.3, "stamp", 0.6))
+            elif st == "shrug": ev.append((t0 + 0.4, "boing", 0.35))
+            else: ev.append((t0 + 0.4, "pop", 0.4))
+        if tpl == "rules": ev.append((t0 + 0.4, "ding", 0.35))
+        if tpl == "future": ev.append((t0 + 0.3, "zap", 0.3)); ev.append((t0 + 1.2, "ding", 0.4))
+        if tpl == "endcard7": ev.append((t0 + 0.2, "ding", 0.5))
     fx = sfx.render_events(ev, dur)[:n]
     fx = np.pad(fx, (0, max(0, n - len(fx))))
 

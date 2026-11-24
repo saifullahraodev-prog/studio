@@ -653,3 +653,6 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
 - 2026-11-24: owner approved Part 3. PART 4 (sections 10-11: Fremantle Highway [quiet], new guidance/rules, back to 8:30, end card;
   8:34-9:36): beats 116-130, new `engine/shipguy/templates7d.tsx` (fremantle, rules, future, endcard7). Whole video timed: 130 beats,
   9:36, avg 4.4 s. Storyboard `storyboard/p4-*.png`. GATE: owner OK on Part 4, then SFX + subtitles + test render (ask first).
+- 2026-11-24: owner approved Part 4. Sound: Felicity Ace rules in `tools/shipguy_mix.py` (Fremantle cuts soft, no comic sounds there);
+  `mix.wav` voice + SFX only, 316 events, -15.1 LUFS / -1.4 dBTP. Subtitles: 208 burned-in cues (`subs.json`), YouTube file
+  `felicity-ace.en.srt` (219 cues). GATE: ask owner before test/full render.
