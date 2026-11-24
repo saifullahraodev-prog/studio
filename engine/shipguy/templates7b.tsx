@@ -90,37 +90,61 @@ const DeckMap: Tpl = ({ t, p, w }) => {
 };
 
 // ================================================================== the bridge looking aft (no smoke) / the radio call
-const LookAft: Tpl = ({ t }) => (
-  <AbsoluteFill>
-    <Svg>
-      {/* looking back from the bridge windows along the ship's long flat top: clear sky, no smoke */}
-      <DaySky hz={560} />
-      <rect x={0} y={560} width={W} height={520} fill="#3f86b0" />
-      <path d="M760 560 L 1160 560 L 1700 1080 L 220 1080 Z" fill="#c9c6bb" {...O(6)} />
-      <path d="M960 560 L 960 1080" stroke="#a8a59a" strokeWidth={6} strokeDasharray="30 24" />
-      {Array.from({ length: 5 }).map((_, i) => { const k = (i + 1) / 6; return <rect key={i} x={960 - (200 + k * 560) + 40} y={560 + k * 520 - 10} width={60 * k + 20} height={14 * k + 6} fill="#9aa4ad" />; })}
-      <path d="M800 520 L 806 470 L 840 470 L 842 522 Z" fill="#e06a2e" {...O(4)} />
-      <rect x={0} y={0} width={W} height={90} fill="#2a2f35" /><rect x={0} y={990} width={W} height={90} fill="#2a2f35" />
-      {[0, 640, 1280, 1910].map((x) => <rect key={x} x={x - 14} y={0} width={28} height={H} fill="#2a2f35" />)}
-      <g transform={`translate(1500 300) scale(${pop(t, 10)})`}><circle r={80} fill="#3f9a4f" {...O(6)} /><path d="M-34 0 L -8 26 L 38 -26" stroke="#fff" strokeWidth={14} fill="none" strokeLinecap="round" /></g>
-    </Svg>
-  </AbsoluteFill>
+const BridgeInside: React.FC<{ t: number; smoke?: number; alarm?: boolean }> = ({ t, smoke = 0, alarm }) => (
+  <g>
+    {/* outside: looking aft along the ship's long white top deck to the funnel, sea on both sides */}
+    <DaySky hz={520} />
+    <rect x={0} y={520} width={W} height={560} fill="#3f86b0" />
+    {Array.from({ length: 8 }).map((_, i) => <path key={i} d={`M${(i * 260 + t * 0.6) % W} ${560 + (i % 3) * 30} q 16 -6 32 0`} stroke="#bfe6f5" strokeWidth={4} fill="none" />)}
+    <path d="M820 520 L 1100 520 L 1560 900 L 360 900 Z" fill="#e8e6dc" stroke={INK} strokeWidth={5} />
+    <path d="M960 520 L 960 900" stroke="#c9c6bb" strokeWidth={5} strokeDasharray="26 20" />
+    {[0, 1, 2, 3].map((i) => { const k = (i + 1) / 5; return <rect key={i} x={960 - 380 * k - 40 + 300 * k * 0} y={520 + 380 * k - 8} width={36 + 50 * k} height={10 + 8 * k} fill="#c9c6bb" />; })}
+    <path d="M846 506 L 852 456 L 888 456 L 892 508 Z" fill="#e06a2e" stroke={INK} strokeWidth={4} />
+    {smoke > 0 && Array.from({ length: 12 }).map((_, i) => { const a = ((t * 0.8 + i * 20) % 240) / 240; return <circle key={i} cx={900 + Math.sin(i * 1.7) * 60 + a * 220} cy={540 - a * 480} r={50 + a * 140} fill="#2a2b30" opacity={(0.8 - a * 0.5) * smoke} />; })}
+    {/* inside: window frame + console */}
+    <rect x={0} y={0} width={W} height={70} fill="#2a2f35" />
+    {[0, 640, 1280, 1920].map((x) => <rect key={x} x={x - 16} y={0} width={32} height={900} fill="#2a2f35" />)}
+    <rect x={0} y={880} width={W} height={200} fill="#3a424b" stroke={INK} strokeWidth={6} />
+    {Array.from({ length: 6 }).map((_, i) => <g key={i}><rect x={160 + i * 280} y={910} width={200} height={90} rx={8} fill="#0b1426" stroke={INK} strokeWidth={4} /><path d={`M${180 + i * 280} 960 q 30 -30 60 0 t 60 0`} stroke="#4dff7a" strokeWidth={4} fill="none" /></g>)}
+    {alarm && <g><circle cx={960} cy={40} r={36} fill={RED} opacity={Math.floor(t / 5) % 2 ? 1 : 0.35} stroke={INK} strokeWidth={5} /><rect width={W} height={H} fill={RED} opacity={Math.floor(t / 5) % 2 ? 0.14 : 0} /></g>}
+  </g>
 );
-const Radio7: Tpl = ({ t, w }) => (
-  <AbsoluteFill>
-    <Svg>
-      <rect width={960} height={H} fill="#d9dde0" />
-      <rect x={960} y={0} width={960} height={H} fill="#5a636c" />
-      <line x1={960} y1={0} x2={960} y2={H} stroke={INK} strokeWidth={10} />
-      <Actor a="talk" t={t} x={480} y={1040} s={0.75} id="r7o" outfit="officer" w={w} over={{ prop: "phone", pose: { ...POSES.hold, armR: [120, 120] }, face: FACES.talk }} />
-      {/* stairwell side */}
-      {Array.from({ length: 8 }).map((_, i) => <rect key={i} x={1060 + i * 90} y={300 + i * 80} width={100} height={20} fill="#8e99a4" {...O(3)} />)}
-      <Actor a="talk" t={t} x={1440} y={1040} s={0.7} id="r7s" outfit="coverall" over={{ prop: "phone", pose: { ...POSES.hold, armR: [120, 120] }, face: FACES.happy }} />
-      {Array.from({ length: 3 }).map((_, i) => <path key={i} d={`M${700 + i * 40} ${360 - i * 10} q 30 -30 0 -60`} stroke={YEL} strokeWidth={8} fill="none" opacity={(Math.floor(t / 5) + i) % 3 === 0 ? 1 : 0.3} />)}
-      <g transform={`translate(960 160) scale(${pop(t, 20)})`}><rect x={-300} y={-60} width={600} height={120} rx={20} fill="#f4f4f0" {...O(6)} /><Txt x={0} y={18} s={48}>"CHECK DECK ONE"</Txt></g>
-    </Svg>
-  </AbsoluteFill>
-);
+const LookAft: Tpl = ({ t, w }) => {
+  const scan = Math.sin(t * 0.05) * 10;
+  return (
+    <AbsoluteFill>
+      <Svg>
+        <BridgeInside t={t} />
+        <Actor a="watch" t={t} x={360} y={1080} s={0.85} id="laoff" outfit="officer" w={w}
+          over={{ prop: "binoculars", pose: { ...IDLE, armR: [150, 140], armL: [150, 140], tilt: scan }, handR: "mitt", handL: "mitt", face: { eyes: "dot", brows: "one", mouth: "flat", lookX: 0.6 } }} />
+        <g transform={`translate(1500 260) scale(${pop(t, 40)})`}><circle r={80} fill="#3f9a4f" {...O(6)} /><path d="M-34 0 L -8 26 L 38 -26" stroke="#fff" strokeWidth={14} fill="none" strokeLinecap="round" /></g>
+      </Svg>
+    </AbsoluteFill>
+  );
+};
+const Radio7: Tpl = ({ t, d, w }) => {
+  // left: the officer on the bridge with a handheld radio; right: the sailor walking down the stairs, answering
+  const k = Math.min(1, t / Math.max(30, d - 10));
+  const sx = 1100 + k * 620, sy = 360 + k * 560;
+  return (
+    <AbsoluteFill>
+      <Svg>
+        <rect width={960} height={H} fill="#d9dde0" />
+        <rect x={60} y={90} width={840} height={360} rx={10} fill="#9fd3ee" stroke={INK} strokeWidth={8} />
+        <rect x={60} y={330} width={840} height={120} fill="#3f86b0" />
+        <rect x={0} y={760} width={960} height={320} fill="#3a424b" stroke={INK} strokeWidth={6} />
+        <Actor a="talk" t={t} x={480} y={1040} s={0.75} id="r7o" outfit="officer" w={w} over={{ prop: "radio", pose: { ...POSES.hold, armR: [120, 120] }, face: FACES.talk }} />
+        <rect x={960} y={0} width={960} height={H} fill="#5a636c" />
+        <line x1={960} y1={0} x2={960} y2={H} stroke={INK} strokeWidth={10} />
+        {Array.from({ length: 9 }).map((_, i) => <rect key={i} x={1040 + i * 90} y={380 + i * 70} width={120} height={22} fill="#8e99a4" stroke={INK} strokeWidth={3} />)}
+        <path d="M1030 300 L 1900 980" stroke="#c9cfd5" strokeWidth={8} />
+        <Actor a="talk" t={t} x={sx} y={sy} s={0.55} id="r7s" outfit="coverall" over={{ prop: "radio", pose: { ...POSES.hold, armR: [120, 120], legL: [-20 + Math.sin(t * 0.5) * 20, 10], legR: [20 - Math.sin(t * 0.5) * 20, 10] }, face: FACES.happy }} />
+        {Array.from({ length: 3 }).map((_, i) => <path key={i} d={`M${640 + i * 46} ${520 - i * 12} q 34 -34 0 -68`} stroke={YEL} strokeWidth={9} fill="none" opacity={(Math.floor(t / 5) + i) % 3 === 0 ? 1 : 0.3} />)}
+        <g transform={`translate(560 170) scale(${pop(t, 14)})`}><rect x={-260} y={-56} width={520} height={112} rx={20} fill="#f4f4f0" {...O(6)} /><Txt x={0} y={18} s={46}>"CHECK DECK ONE"</Txt></g>
+      </Svg>
+    </AbsoluteFill>
+  );
+};
 
 // ================================================================== the door to deck one
 const Door7: Tpl = ({ t, p, w }) => {
@@ -147,10 +171,20 @@ const Door7: Tpl = ({ t, p, w }) => {
         <Svg>
           <rect width={W} height={H} fill="#8e99a4" />
           <rect x={1180} y={180} width={520} height={820} fill={SMOKE} />
-          <Masked x={700} y={1060} s={0.75} t={t} id="ft1" a="hold" />
-          <Masked x={960} y={1060} s={0.75} t={t + 7} id="ft2" a="watch" />
+          {[0, 1].map((i) => {
+            const walk = Math.min(1, t / 50);
+            const x = 240 + i * 260 + walk * 520;
+            return <Actor key={i} a="watch" t={t + i * 7} x={x} y={1060} s={0.7} id={`ft${i}`} outfit="fire"
+              over={{ pose: { ...IDLE, lean: 4, armR: [40, 30], armL: [30, 20], legL: [-20 + (walk < 1 ? Math.sin(t * 0.5 + i) * 22 : 0), 10], legR: [20 - (walk < 1 ? Math.sin(t * 0.5 + i) * 22 : 0), 10] }, face: { eyes: "dot", brows: "angry", mouth: "flat" }, prop: i === 0 ? "hose" : "none" }} />;
+          })}
+          {/* smoke pouring out of the open door */}
+          {Array.from({ length: 10 }).map((_, i) => { const a = ((t * 1.2 + i * 24) % 240) / 240; return <circle key={i} cx={1300 - a * 500} cy={500 - a * 260 + Math.sin(i) * 60} r={60 + a * 150} fill="#2a2b30" opacity={0.85 - a * 0.6} />; })}
           <rect width={W} height={H} fill="#0d0e10" opacity={black * 0.96} />
-          {m === "black" && <g opacity={black}><circle cx={960} cy={520} r={60} fill="#9fd3ee" opacity={0.15} /><T3 x={960} y={540} size={90} color="#fff">???</T3></g>}
+          {m === "black" && <g opacity={black}>
+            {[0, 1].map((i) => <path key={i} d={`M${700 + i * 260} 600 L ${1400 + Math.sin(t * 0.1 + i) * 60} ${440 + i * 140} L ${1400 + Math.sin(t * 0.1 + i) * 60} ${560 + i * 140} Z`} fill="#fff7c2" opacity={0.12} />)}
+            <circle cx={720} cy={600} r={14} fill="#fff7c2" /><circle cx={980} cy={600} r={14} fill="#fff7c2" />
+            <T3 x={1300} y={420} size={110} color="#fff">???</T3>
+          </g>}
         </Svg>
       </AbsoluteFill>
     );
@@ -175,20 +209,32 @@ const Door7: Tpl = ({ t, p, w }) => {
 };
 
 // ================================================================== boundary cooling on the weather deck
-const Cool7: Tpl = ({ t }) => (
+const Cool7: Tpl = ({ t, w }) => (
   <AbsoluteFill>
     <Svg>
       <DaySky hz={1080} />
-      <rect x={0} y={600} width={W} height={480} fill="#8e99a4" {...O(6)} />
-      {Array.from({ length: 6 }).map((_, i) => <rect key={i} x={i * 330} y={560} width={160} height={50} fill="#d9d6cc" {...O(4)} />)}
-      <SmokeCloud t={t} k={0.45} y={-200} />
-      {[420, 1200].map((x, i) => (
-        <g key={i}>
-          <path d={`M${x} 900 Q ${x + 120} ${600 + Math.sin(t * 0.3 + i) * 10} ${x + 360} 700`} stroke="#9fd3ee" strokeWidth={22} fill="none" opacity={0.9} />
-          {Array.from({ length: 6 }).map((_, j) => <circle key={j} cx={x + 340 + rnd(j + i) * 60} cy={700 + ((t * 4 + j * 12) % 60)} r={8} fill="#cde9f7" />)}
-          <Actor a="push" t={t + i * 9} x={x - 30} y={1040} s={0.45} id={`cl${i}`} outfit="coverall" over={{ emote: undefined, face: FACES.confident }} />
-        </g>
-      ))}
+      {/* the top (weather) deck */}
+      <rect x={0} y={560} width={W} height={40} fill="#c9c6bb" stroke={INK} strokeWidth={6} />
+      <T3 x={1700} y={540} size={34} color="#2c4a7a">TOP DECK</T3>
+      {/* deck one just below, on fire */}
+      <rect x={0} y={600} width={W} height={480} fill="#3a3f46" />
+      <rect x={0} y={600} width={W} height={480} fill="#ff6a2a" opacity={0.18 + 0.08 * Math.sin(t * 0.3)} />
+      {Array.from({ length: 7 }).map((_, i) => <g key={i} transform={`translate(${180 + i * 260} 1000)`}><Car kind={(["sport", "suv", "sedan"] as CarKind[])[i % 3]} c="#4a4f56" s={1.8} /></g>)}
+      <Flames x={900} y={1000} t={t} s={2.2} n={8} />
+      <T3 x={1700} y={680} size={34} color="#ffb03a">DECK 1 · FIRE</T3>
+      {/* crew on the top deck spraying it */}
+      {[0, 1].map((i) => {
+        const x = 300 + i * 760;
+        return (
+          <g key={i}>
+            <path d={`M${x + 120} 380 Q ${x + 260} ${330 + Math.sin(t * 0.3 + i) * 10} ${x + 420} 556`} stroke="#9fd3ee" strokeWidth={18} fill="none" opacity={0.9} />
+            {Array.from({ length: 8 }).map((_, j) => { const a = ((t * 2 + j * 15 + i * 40) % 120) / 120; return <circle key={j} cx={x + 400 + Math.sin(j * 2) * 40 + a * 30} cy={550 - a * 260} r={20 + a * 40} fill="#f4f4f0" opacity={0.7 - a * 0.6} />; })}
+            <Actor a="watch" t={t + i * 9} x={x} y={560} s={0.48} id={`cool${i}`} outfit="coverall" w={w}
+              over={{ prop: "hose", pose: { ...IDLE, lean: -8, armR: [80, 30], armL: [70, 40], legL: [-20, 10], legR: [24, -8] }, face: FACES.confident }} />
+          </g>
+        );
+      })}
+      <T3 x={760} y={200} size={46} color="#fff" o={ramp(t, 20, 30)}>STEAM: THE DECK IS HOT</T3>
     </Svg>
   </AbsoluteFill>
 );
@@ -204,19 +250,36 @@ const Foam: Tpl = ({ t, d, p, w }) => {
     </g>
   );
   if (m === "how" || m === "grow") {
-    const g = m === "grow" ? ease((t - 4) / 40) : 0;
+    const g = m === "grow" ? ease((t - 4) / 40) : 0.12 + 0.1 * ease((t - 10) / 40);
+    const bub = (i: number) => ({ x: 1150 + rnd(i) * (220 + g * 640), y: 560 + (rnd(i + 9) - 0.5) * (160 + g * 760), r: 26 + rnd(i + 4) * 34 });
     return (
       <AbsoluteFill>
         <Svg>
-          <rect width={W} height={H} fill="#e8eef2" />
-          <rect x={140} y={360} width={260} height={360} rx={30} fill="#f4e2a0" {...O(7)} /><Txt x={270} y={560} s={44}>FOAM LIQUID</Txt>
-          <path d="M400 560 H 700" stroke="#e0b13a" strokeWidth={30} />
-          <Fan x={820} y={540} on />
-          <Txt x={820} y={720} s={40}>FANS</Txt>
-          {Array.from({ length: 5 }).map((_, i) => <path key={i} d={`M${560 + ((t * 8 + i * 30) % 150)} ${440 + i * 30} h 60`} stroke="#fff" strokeWidth={8} opacity={0.8} />)}
-          <path d="M940 540 H 1100" stroke="#fff" strokeWidth={60} />
-          {Array.from({ length: Math.round(8 + g * 60) }).map((_, i) => <circle key={i} cx={1160 + rnd(i) * (200 + g * 560)} cy={540 + (rnd(i + 9) - 0.5) * (120 + g * 700)} r={26 + rnd(i + 4) * 30} fill="#fff" stroke="#c9d8e0" strokeWidth={3} />)}
-          {m === "grow" && <T3 x={1480} y={200} size={90} color={YEL} s={pop(t, 20)}>× HUNDREDS</T3>}
+          <rect width={W} height={H} fill="#13233d" />
+          {/* water pipe + foam liquid tank join at a mixer, a pump pushes it to the fan */}
+          <path d="M0 360 H 420 V 520" stroke="#5ab8ff" strokeWidth={34} fill="none" />
+          <Txt x={160} y={320} s={40} c="#5ab8ff">SEA WATER</Txt>
+          <rect x={120} y={600} width={240} height={300} rx={26} fill="#f4e2a0" {...O(7)} />
+          <rect x={120} y={600 + 300 * (1 - 0.8)} width={240} height={300 * 0.8} rx={20} fill="#e0b13a" />
+          <Txt x={240} y={960} s={38} c="#fff">FOAM LIQUID</Txt>
+          <path d="M360 740 H 420 V 560" stroke="#e0b13a" strokeWidth={26} fill="none" />
+          <circle cx={420} cy={540} r={50} fill="#3f9a9a" {...O(6)} />
+          <g transform={`rotate(${t * 20} 420 540)`}><path d="M420 500 V 580 M380 540 H 460" stroke="#fff" strokeWidth={8} /></g>
+          <Txt x={420} y={630} s={34} c="#fff">PUMP</Txt>
+          <path d="M470 540 H 700" stroke="#cfe9b0" strokeWidth={30} />
+          {Array.from({ length: 4 }).map((_, i) => <circle key={i} cx={480 + ((t * 8 + i * 60) % 220)} cy={540} r={10} fill="#e0b13a" />)}
+          {/* the fan blowing air through it */}
+          <g transform="translate(820 540)">
+            <circle r={130} fill="#5a636c" {...O(8)} />
+            <g transform={`rotate(${t * 26})`}>{[0, 1, 2, 3].map((i) => <ellipse key={i} cx={0} cy={-60} rx={30} ry={60} fill="#c9cfd5" stroke={INK} strokeWidth={4} transform={`rotate(${i * 90})`} />)}</g>
+            <circle r={20} fill={INK} />
+            <Txt x={0} y={190} s={40} c="#fff">FANS</Txt>
+          </g>
+          {Array.from({ length: 6 }).map((_, i) => <path key={`a${i}`} d={`M${560 + ((t * 10 + i * 40) % 160)} ${420 + i * 46} h 70`} stroke="#9fd3ee" strokeWidth={6} opacity={0.7} />)}
+          <path d="M950 540 H 1100" stroke="#f4f4f0" strokeWidth={80} />
+          {/* foam pouring out and growing */}
+          {Array.from({ length: Math.round(14 + g * 70) }).map((_, i) => { const b = bub(i); return <circle key={i} cx={b.x} cy={b.y} r={b.r} fill="#f4f8fb" stroke="#9fc3d8" strokeWidth={3} />; })}
+          {m === "grow" && <T3 x={1500} y={150} size={90} color={YEL} s={pop(t, 20)}>× HUNDREDS</T3>}
         </Svg>
       </AbsoluteFill>
     );
@@ -319,15 +382,43 @@ const Foam: Tpl = ({ t, d, p, w }) => {
 // ================================================================== abandon ship
 const Abandon: Tpl = ({ t, p, w }) => {
   const call = p.mode === "call";
+  if (!call) {
+    return (
+      <AbsoluteFill>
+        <Svg>
+          <BridgeInside t={t} smoke={1} alarm />
+          <Actor a="worried" t={t} x={560} y={1080} s={0.85} id="cap7" outfit="captain" w={w}
+            over={{ prop: "radio", pose: { ...POSES.hold, armR: [120, 120] }, face: { eyes: "wide", brows: "worried", mouth: "frown", lookX: 0.6 }, emote: "sweat", emoteT: t }} />
+          <g transform={`translate(1360 300) scale(${pop(t, 10)})`}>
+            <path d="M-330 -80 H 330 V 60 H 60 L 0 140 L 20 60 H -330 Z" fill="#f4f4f0" {...O(7)} />
+            <Txt x={0} y={6} s={44} c={RED}>"FIRE OUT OF CONTROL!"</Txt>
+          </g>
+        </Svg>
+      </AbsoluteFill>
+    );
+  }
+  // the captain on the ship's loudspeaker; crew in life jackets run to the muster station behind
   return (
     <AbsoluteFill>
       <Svg>
-        <rect width={W} height={H} fill={call ? "#5a1a16" : "#d9dde0"} />
-        {!call && <><rect x={120} y={120} width={1680} height={420} rx={12} fill="#9fd3ee" {...O(8)} /><rect x={120} y={120} width={1680} height={420} fill={SMOKE} opacity={0.5} /></>}
-        <Actor a="talk" t={t} x={call ? 960 : 700} y={1080} s={call ? 1.1 : 0.8} id="cap7" outfit="captain" w={w}
-          over={{ prop: "phone", pose: { ...POSES.hold, armR: [120, 120] }, face: { eyes: "half", brows: "worried", mouth: call ? "o" : "frown" } }} />
-        {!call && <g transform="translate(1400 700)"><rect x={-180} y={-60} width={360} height={120} rx={20} fill="#f4f4f0" {...O(6)} /><Txt x={0} y={16} s={40} c={RED}>"OUT OF CONTROL"</Txt></g>}
-        {call && Array.from({ length: 3 }).map((_, i) => <circle key={i} cx={960} cy={420} r={200 + ((t * 10 + i * 80) % 240)} fill="none" stroke="#ff8a3a" strokeWidth={10} opacity={0.6 - ((t * 10 + i * 80) % 240) / 400} />)}
+        <rect width={W} height={H} fill="#5a636c" />
+        <rect x={0} y={820} width={W} height={260} fill="#3a424b" />
+        {Array.from({ length: 6 }).map((_, i) => {
+          const x = ((t * 9 + i * 340) % (W + 300)) - 150;
+          return (
+            <g key={i} transform={`translate(${x} 840)`}>
+              <line x1={-10} y1={0} x2={-4 + Math.sin(t * 0.8 + i) * 16} y2={-50} stroke={INK} strokeWidth={7} />
+              <line x1={10} y1={0} x2={4 - Math.sin(t * 0.8 + i) * 16} y2={-50} stroke={INK} strokeWidth={7} />
+              <rect x={-24} y={-120} width={48} height={74} rx={14} fill="#ff8a3a" stroke={INK} strokeWidth={5} />
+              <circle cx={0} cy={-148} r={26} fill="#f3f1ea" stroke={INK} strokeWidth={5} />
+            </g>
+          );
+        })}
+        <rect width={W} height={H} fill={RED} opacity={Math.floor(t / 5) % 2 ? 0.22 : 0.05} />
+        <g transform="translate(1700 160)"><circle r={50} fill={RED} opacity={Math.floor(t / 5) % 2 ? 1 : 0.4} {...O(6)} /></g>
+        <Actor a="talk" t={t} x={760} y={1080} s={1.05} id="cap7c" outfit="captain" w={w}
+          over={{ prop: "mic", pose: { ...POSES.hold, armR: [120, 120] }, face: { eyes: "half", brows: "worried", mouth: "o" } }} />
+        {Array.from({ length: 3 }).map((_, i) => <path key={i} d={`M${980 + i * 50} ${430 - i * 10} q 40 -50 0 -100`} stroke="#fff" strokeWidth={10} fill="none" opacity={(Math.floor(t / 4) + i) % 3 === 0 ? 1 : 0.3} />)}
       </Svg>
     </AbsoluteFill>
   );
@@ -362,19 +453,32 @@ const Rescue: Tpl = ({ t, d, p, w }) => {
     );
   }
   if (m === "ladder") {
-    const n = Math.min(22, Math.floor(ease((t - 4) / Math.max(30, (d - 10))) * 22));
+    const per = Math.max(4, (d - 30) / 22);
+    const climb = 36;
+    const done = (i: number) => t - 6 - i * per > climb;
+    const n = Array.from({ length: 22 }).filter((_, i) => done(i)).length;
     return (
       <AbsoluteFill>
         <Svg>
-          <DaySky hz={500} />
-          <OpenSea t={t} y={500} />
-          <rect x={0} y={0} width={900} height={780} fill={"#f2f0e8"} {...O(8)} />
-          <SmokeCloud t={t} k={0.5} y={-300} />
-          <path d="M780 100 V 760 M840 100 V 760" stroke="#8a6a4a" strokeWidth={8} />
-          {Array.from({ length: 18 }).map((_, i) => <line key={i} x1={780} y1={120 + i * 36} x2={840} y2={120 + i * 36} stroke="#8a6a4a" strokeWidth={8} />)}
-          {[0, 1].map((i) => <Actor key={i} a="rope" t={t + i * 20} x={810} y={380 + ((t * 3 + i * 220) % 420)} s={0.28} id={`lad${i}`} outfit="coverall" />)}
-          <g transform="translate(1000 780)"><path d="M-120 -40 L 260 -40 L 220 30 L -80 30 Z" fill="#ff8a3a" {...O(6)} /></g>
-          <g transform="translate(1560 260)"><rect x={-220} y={-90} width={440} height={180} rx={20} fill="#0b1426" {...O(6)} /><text x={0} y={40} textAnchor="middle" fontFamily="monospace" fontWeight={700} fontSize={110} fill="#4dff7a">{n}/22</text></g>
+          <DaySky hz={760} />
+          <OpenSea t={t} y={760} />
+          {/* the ship's side, with the rope ladder down to the boat */}
+          <rect x={0} y={0} width={760} height={800} fill={"#f2f0e8"} {...O(8)} />
+          <rect x={0} y={740} width={760} height={60} fill="#5b9bd5" />
+          {Array.from({ length: 6 }).map((_, i) => <circle key={i} cx={240 + (i % 3) * 80 + Math.sin(t * 0.04 + i) * 20} cy={-40 + Math.floor(i / 3) * 60} r={90} fill="#2a2b30" opacity={0.7} />)}
+          <path d="M760 60 V 800 M820 60 V 800" stroke="#8a6a4a" strokeWidth={8} />
+          {Array.from({ length: 21 }).map((_, i) => <line key={i} x1={760} y1={80 + i * 34} x2={820} y2={80 + i * 34} stroke="#8a6a4a" strokeWidth={8} />)}
+          {Array.from({ length: 22 }).map((_, i) => {
+            const k = (t - 6 - i * per) / climb;
+            if (k < 0 || k > 1 || i % 3 !== 0) return null;
+            return <Actor key={i} a="rope" t={t + i * 5} x={790} y={140 + k * 600} s={0.24} id={`lad${i}`} outfit="coverall" />;
+          })}
+          {/* the boat fills up */}
+          <g transform={`translate(1060 ${800 + Math.sin(t * 0.15) * 6})`}>
+            {Array.from({ length: Math.min(22, n) }).map((_, i) => <g key={i} transform={`translate(${-150 + (i % 11) * 32} ${-40 - Math.floor(i / 11) * 26})`}><circle r={15} fill="#f3f1ea" stroke={INK} strokeWidth={3} /><path d="M-15 -4 Q 0 -24 15 -4" fill="#f1f6fa" stroke={INK} strokeWidth={3} /></g>)}
+            <path d="M-220 -30 L 230 -30 L 190 40 L -180 40 Z" fill="#ff8a3a" {...O(6)} />
+          </g>
+          <g transform="translate(1600 260)"><rect x={-220} y={-90} width={440} height={180} rx={20} fill="#0b1426" {...O(6)} /><text x={0} y={40} textAnchor="middle" fontFamily="monospace" fontWeight={700} fontSize={110} fill="#4dff7a">{n}/22</text></g>
         </Svg>
       </AbsoluteFill>
     );

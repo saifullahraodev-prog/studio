@@ -18,8 +18,8 @@ export type Brows = "none" | "up" | "worried" | "angry" | "one";
 export type Mouth = "smile" | "grin" | "smirk" | "flat" | "o" | "scream" | "frown" | "wavy" | "teeth";
 export type Face = { eyes: Eyes; brows: Brows; mouth: Mouth; lookX?: number; lookY?: number };
 export type Hand = "mitt" | "open" | "point" | "thumb";
-export type PropName = "clipboard" | "mug" | "spade" | "phone" | "hammer" | "rod" | "magnifier" | "label" | "none";
-export type Outfit = "ship" | "pilot" | "captain" | "officer" | "coverall" | "road" | "jersey" | "aviator";
+export type PropName = "clipboard" | "mug" | "spade" | "phone" | "hammer" | "rod" | "magnifier" | "label" | "radio" | "binoculars" | "mic" | "hose" | "none";
+export type Outfit = "ship" | "pilot" | "captain" | "officer" | "coverall" | "road" | "jersey" | "aviator" | "fire";
 export type Emote = "sweat" | "!" | "?" | "steam" | "stars" | "idea";
 
 export const IDLE: Pose = { lean: 0, tilt: 0, hipX: 0, hipY: 0, squash: 0, armL: [14, 8], armR: [14, 8], legL: [-5, 0], legR: [5, 0] };
@@ -183,6 +183,39 @@ const Held: React.FC<{ prop: PropName; x: number; y: number }> = ({ prop, x, y }
       <rect x={7} y={10} width={50} height={86} rx={4} fill="#8fd0f0" />
       <rect x={12} y={52} width={40} height={30} fill="#2f7d4a" />
       <rect x={14} y={70} width={10} height={8} fill="#ffd23f" />
+    </g>
+  );
+  if (prop === "radio") return (
+    <g transform={`translate(${x - 22} ${y - 90}) rotate(-8)`}>
+      {/* handheld VHF ship radio: black body, stubby antenna, small screen, keypad */}
+      <rect x={30} y={-46} width={12} height={52} rx={5} fill="#2a2d33" stroke={INK} strokeWidth={4} />
+      <rect x={0} y={0} width={50} height={104} rx={10} fill="#2a2d33" stroke={INK} strokeWidth={6} />
+      <rect x={8} y={12} width={34} height={22} rx={3} fill="#9fe07a" />
+      {[0, 1, 2].map((r) => [0, 1].map((c) => <rect key={`${r}${c}`} x={10 + c * 18} y={46 + r * 16} width={12} height={10} rx={3} fill="#5a636c" />))}
+      <circle cx={25} cy={96} r={4} fill="#e8352b" />
+    </g>
+  );
+  if (prop === "binoculars") return (
+    <g transform={`translate(${x - 40} ${y - 40})`}>
+      <rect x={0} y={0} width={34} height={56} rx={12} fill="#2a2d33" stroke={INK} strokeWidth={5} />
+      <rect x={44} y={0} width={34} height={56} rx={12} fill="#2a2d33" stroke={INK} strokeWidth={5} />
+      <rect x={30} y={18} width={18} height={14} fill="#2a2d33" stroke={INK} strokeWidth={4} />
+      <circle cx={17} cy={4} r={10} fill="#9fd3ee" stroke={INK} strokeWidth={3} /><circle cx={61} cy={4} r={10} fill="#9fd3ee" stroke={INK} strokeWidth={3} />
+    </g>
+  );
+  if (prop === "mic") return (
+    <g transform={`translate(${x - 24} ${y - 70}) rotate(-10)`}>
+      {/* ship's PA / radio handset with a coiled cord */}
+      <rect x={0} y={0} width={48} height={74} rx={18} fill="#2a2d33" stroke={INK} strokeWidth={6} />
+      {[0, 1, 2].map((i) => <line key={i} x1={12} y1={16 + i * 12} x2={36} y2={16 + i * 12} stroke="#5a636c" strokeWidth={4} />)}
+      <path d="M24 74 q -20 14 0 22 q 20 8 0 22 q -20 8 0 22 q 20 8 0 22" stroke={INK} strokeWidth={5} fill="none" />
+    </g>
+  );
+  if (prop === "hose") return (
+    <g transform={`translate(${x} ${y}) rotate(-20)`}>
+      <rect x={-10} y={-20} width={70} height={30} rx={8} fill="#c9a23a" stroke={INK} strokeWidth={5} />
+      <rect x={58} y={-16} width={30} height={22} rx={4} fill="#9aa4ad" stroke={INK} strokeWidth={4} />
+      <path d="M-10 -5 Q -120 40 -200 200" stroke="#c94a3a" strokeWidth={16} fill="none" />
     </g>
   );
   if (prop === "hammer") return (
@@ -438,6 +471,16 @@ export const Guy: React.FC<GuyProps> = ({
               <path d="M-56 58 h 18 M38 58 h 18" stroke="#e8ecef" strokeWidth={6} />
               <path d="M-20 4 L 0 26 L 20 4" fill="none" stroke={INK} strokeWidth={5} strokeLinejoin="round" />
             </g>
+          ) : outfit === "fire" ? (
+            <g>
+              {/* firefighter: tan fire suit, yellow/silver reflective bands, breathing-set straps */}
+              <path d="M-54 6 Q -62 80 -66 158 Q 0 172 66 158 Q 62 80 54 6 Q 0 -6 -54 6 Z" fill="#c8a86a" stroke={INK} strokeWidth={7} strokeLinejoin="round" />
+              <path d="M30 10 Q 52 80 56 156 L 66 158 Q 62 80 54 6 Z" fill="#a88a50" />
+              <path d="M-62 100 Q 0 110 62 100 L 63 118 Q 0 128 -63 118 Z" fill="#e8ef6a" stroke={INK} strokeWidth={3} />
+              <path d="M-64 136 Q 0 146 64 136 L 65 150 Q 0 160 -65 150 Z" fill="#d9dde0" stroke={INK} strokeWidth={3} />
+              <path d="M-34 6 L -24 96 M34 6 L 24 96" stroke="#2a2d33" strokeWidth={10} fill="none" />
+              <rect x={-14} y={30} width={28} height={30} rx={6} fill="#5a636c" stroke={INK} strokeWidth={4} />
+            </g>
           ) : outfit === "aviator" ? (
             <g>
               {/* naval aviator: olive flight suit, survival vest (harness) */}
@@ -488,6 +531,24 @@ export const Guy: React.FC<GuyProps> = ({
               <rect x={-74} y={-150} width={60} height={34} rx={14} fill="#9fd3ee" stroke={INK} strokeWidth={6} />
               <rect x={14} y={-150} width={60} height={34} rx={14} fill="#9fd3ee" stroke={INK} strokeWidth={6} />
               <line x1={-14} y1={-133} x2={14} y2={-133} stroke={INK} strokeWidth={6} />
+            </g>
+          )}
+          {outfit === "fire" && (
+            <g>
+              {/* breathing mask over the face: clear lens, black rubber rim, regulator */}
+              <ellipse cx={0} cy={6} rx={80} ry={70} fill="#9fd3ee" opacity={0.35} stroke="#1d1d22" strokeWidth={12} />
+              <path d="M-50 -30 Q 0 -46 50 -30" stroke="#fff" strokeWidth={6} fill="none" opacity={0.6} />
+              <circle cx={0} cy={74} r={26} fill="#2a2d33" stroke={INK} strokeWidth={5} />
+              <circle cx={0} cy={74} r={10} fill="#5a636c" />
+              <path d="M26 80 Q 90 110 110 180" stroke="#2a2d33" strokeWidth={10} fill="none" />
+              {/* fire helmet with a wide back brim */}
+              <g transform={`translate(${hatT.dx} ${hatT.dy}) rotate(${hatT.rot - 6} 0 -70)`}>
+                <path d="M-140 -50 Q -136 -70 -100 -72 L 110 -72 Q 146 -68 150 -40 Q 0 -30 -140 -50 Z" fill="#e0a23b" stroke={INK} strokeWidth={7} strokeLinejoin="round" />
+                <path d="M-98 -70 C -100 -150, -50 -186, 4 -188 C 62 -186, 108 -150, 104 -70 Z" fill="#ffd23f" stroke={INK} strokeWidth={7} strokeLinejoin="round" />
+                <path d="M4 -188 C -4 -150, -4 -110, -2 -72" stroke={INK} strokeWidth={6} fill="none" />
+                <rect x={-34} y={-150} width={68} height={50} rx={10} fill="#fff" stroke={INK} strokeWidth={4} />
+                <text x={0} y={-114} textAnchor="middle" fontSize={26} fontWeight={700} fill="#c94a3a">FIRE</text>
+              </g>
             </g>
           )}
           {outfit === "aviator" && (

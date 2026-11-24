@@ -667,3 +667,9 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
 - 2026-11-24 owner: "make parts for better control, make the part2" -> rendering the video part by part (frame ranges from the
   timeline: P1 0-3945, P2 3946-10868, P3 10869-16059, P4 16060-18034). `out/part2.mp4` (3:51, -15.0 LUFS, no black/frozen).
   Note: `npm run cleanup` deletes `.cache/bundle`; rebundle before the next part render.
+- 2026-11-24 owner flagged 8 Part 2 shots ("visual and animation need to be fixed"): redrawn with more motion. Puppet: new props
+  radio / binoculars / mic / hose, new outfit "fire" (fire helmet, breathing mask, air-tank straps, tan suit). Shots: bridge interior
+  with an officer scanning aft; radio call with the sailor walking down stairs; firefighters walking to a smoking door; boundary cooling
+  (top deck hosed, steam, fire below); foam diagram on dark bg with pump + growing foam; bridge alarm + smoke + radio call; captain on the
+  PA handset with crew in life jackets running; ladder with crew climbing down in turn, boat filling, counter. `out/part2.mp4` v2
+  (3:51, -15.0 LUFS, no black/frozen). Lesson: crew on ships use radios, not phones.
