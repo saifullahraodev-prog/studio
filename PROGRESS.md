@@ -664,3 +664,6 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   new courtroom (judge, gavel, board "WHAT STARTED THE FIRE?" / "WHO IS TO BLAME?"); `Quay` added: Ship Guy + cars on a quay, stern
   ramp now lowers down onto it. Re-timed, re-mixed, subs rebuilt -> `out/test-60s-v2.mp4` (-14.9 LUFS).
   Lesson: keep CapCut's natural sentence pauses; only trim the really long gaps.
+- 2026-11-24 owner: "make parts for better control, make the part2" -> rendering the video part by part (frame ranges from the
+  timeline: P1 0-3945, P2 3946-10868, P3 10869-16059, P4 16060-18034). `out/part2.mp4` (3:51, -15.0 LUFS, no black/frozen).
+  Note: `npm run cleanup` deletes `.cache/bundle`; rebundle before the next part render.
