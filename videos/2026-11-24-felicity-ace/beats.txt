@@ -127,3 +127,21 @@ case mode=ruling || STUTTGART · MAY 2026 || In May twenty twenty-six, a court i
 case mode=notproven || [NOT CONVINCED] || The judges said they were not convinced that a Taycan had started the fire.
 case mode=appeal || || That ruling can still be appealed, and a second case in another German court is still going.
 case mode=shrug || STILL A MYSTERY || So, four years later, nobody has officially proven exactly what started it.
+# --- PART 4 = sections 10-11 (it happened again, back to 8:30, end). New templates: templates7d.tsx
+# --- 10. It happened again (Fremantle Highway: one crew member died -> quiet, no gags)
+fremantle mode=year || || And this wasn't the last time.
+fremantle mode=ship || FREMANTLE HIGHWAY · 2023 || In July twenty twenty-three, another car carrier, the Fremantle Highway, caught fire off the coast of the Netherlands.
+fremantle mode=quiet || || One crew member died.
+rules mode=emsa || EU SAFETY GUIDANCE || Since then, Europe's maritime safety agency has published guidance on carrying electric cars on ships,
+rules mode=imo || NEW RULES IN THE WORKS || and the International Maritime Organization has been working on new fire rules for car carriers.
+rules mode=detect || BETTER DETECTION || Better detection. Better ways to spot a hot car early.
+rules mode=fight || || Better ways to fight a fire before it spreads.
+# --- 11. Back to 8:30
+bridge7 alarm=1 || BACK TO 08:30 || So let's go back to that morning.
+door7 mode=door || || The alarm goes off. A sailor opens a door.
+door7 mode=pops || || Smoke. Three or four cars on fire.
+foam mode=how || || The ship has a system built for exactly this moment. Foam, pumps, fans.
+foam mode=fans || [ONE PART] || But one part doesn't start.
+salvage mode=cars || [3,965] CARS || And two weeks later, three thousand nine hundred and sixty-five cars are lying on the bottom of the ocean.
+future || || The cars on these ships are changing fast. The ships are still catching up.
+endcard7 || || And if you want to see just how expensive a normal day is for a ship like this, even when nothing goes wrong, that video is right here.
