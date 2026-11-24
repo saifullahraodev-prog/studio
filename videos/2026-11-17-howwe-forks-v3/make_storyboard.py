@@ -52,27 +52,27 @@ CHARS = {
                       "reading glasses and rolled-up shirt sleeves",
     "ADDIS_FAMILY": "an Addis Ababa family: a grandmother in her seventies wearing a white cotton netela shawl with a woven coloured border, "
                     "a father in his forties in a dark-blue shirt, and a ten-year-old grandson in a sand-coloured sweater",
-    "SIAM_COURT": "Siamese courtiers of the mid-1800s: men with short cropped hair in patterned chong kraben wrap trousers and high-collared "
+    "SIAM_COURT": "Siamese courtiers of the 1860s-1880s: men with short cropped hair in patterned chong kraben wrap trousers and high-collared "
                   "white jackets",
     "MENCIUS": "Mencius, a Warring-States philosopher in his fifties with a long greying beard, a topknot and a dark scholar's robe",
     "KING_XUAN": "King Xuan of Qi, a stout man in his forties in rich layered Warring-States robes with a tall formal cap",
 }
 LOCS = {
     "Modern apartment": "small round oak table by a tall window, linen napkin, white plate, glass of water, soft afternoon light (scenes 1-2, 84-90)",
-    "Shanghai home": "compact modern dining room, lazy-Susan round table, shared dishes, rice bowls, chopstick rests, a calendar on the wall",
+    "Shanghai home": "compact modern dining room, round wooden dining table (no turntable: that is mostly a restaurant fixture), shared dishes in the middle, rice bowls, a calendar on the wall",
     "Delhi home": "tiled floor, low table and chairs, stainless-steel thalis and katoris, a steel water jug, ceiling fan",
     "Bangkok shophouse": "open-front shophouse eatery, steel tables, plastic stools, condiment caddy with chilli and fish sauce, street light",
     "Song kitchen": "brick stove with a small fire, iron wok, thick wooden chopping block, hanging bundles of herbs, ceramic jars",
     "Medieval hall": "14th-century hall, long trestle table with white cloth, bread trenchers, a high table, tapestries, a carver's board",
     "Venetian palace": "11th-century Venetian hall with Byzantine-style arches, silk hangings, oil lamps, a view to the lagoon",
-    "Addis home": "living room with a woven mesob basket-table, injera on a round tray, coffee-ceremony set and incense in a corner",
+    "Addis home": "living room with a traditional woven mesob basket-table (many families also use an ordinary table), injera on a round tray, coffee-ceremony set in a corner",
 }
 
 S = []
 
 
-def sc(tech, narr, vis, comp, chars, env, anim, prompt, aprompt, trans, dark=False):
-    S.append(dict(tech=tech, narr=narr, vis=vis, comp=comp, chars=chars, env=env, anim=anim, prompt=prompt, aprompt=aprompt, trans=trans, dark=dark))
+def sc(tech, narr, vis, comp, chars, env, anim, prompt, aprompt, trans, dark=False, note="", reuse=None):
+    S.append(dict(tech=tech, narr=narr, vis=vis, comp=comp, chars=chars, env=env, anim=anim, prompt=prompt, aprompt=aprompt, trans=trans, dark=dark, note=note, reuse=reuse))
 
 
 EXH, CUL, MAP, CMP, HIS = "Exhibition", "Cultural Scene", "World Map", "Comparison", "Historical Explanation"
@@ -97,14 +97,15 @@ sc(CUL, "Without thinking, your hands do something they've done thousands of tim
    "The fork presses down, the knife saws once, a bite-sized piece separates and the fork lifts it out of frame; small crumbs settle.",
    "Whip-pan right along the table edge into the next table.")
 sc(CUL, "Now picture the same moment in Shanghai. A knife usually isn't part of the meal. Nobody misses it.",
-   "The Shanghai family shares dinner: bite-sized dishes on a lazy Susan, rice bowls, chopsticks, no knives anywhere.",
+   "The Shanghai family shares dinner: bite-sized shared dishes in the middle of the table, rice bowls, chopsticks, no knives anywhere.",
    "Three-quarter high angle over the round table; grandmother serving at left, girl reaching with chopsticks at right.",
    "{SHANGHAI_FAMILY}; the grandmother places a piece of fish in the girl's bowl.", "Shanghai home.",
-   "A small 'SHANGHAI' location tag draws on (add in edit); the lazy Susan turns; chopsticks move.",
-   "{SHANGHAI_FAMILY} sharing dinner around a round table with a lazy Susan in a compact modern Shanghai dining room: stir-fried greens, sliced "
-   "pork, steamed fish in pieces, tofu, rice bowls, chopsticks on ceramic rests, no knives on the table; warm evening light.",
-   "The lazy Susan rotates a quarter turn; the grandmother lifts a piece of fish into the girl's bowl; the father pours tea; gentle steam.",
-   "The turning lazy Susan wipes into the next round dish.")
+   "Location tag 'SHANGHAI' (edit); the grandmother serves the girl; little else moves.",
+   "{SHANGHAI_FAMILY} sharing dinner around a round wooden dining table in a compact modern Shanghai home: shared dishes in the middle (stir-fried "
+   "greens, sliced pork, steamed fish, tofu), rice bowls, chopsticks, no knives on the table; warm evening light.",
+   "The grandmother lifts a piece of fish into the girl's bowl; gentle steam rises; very slow push-in.",
+   "Cut on the girl's lifting chopsticks.",
+   note="Removed the lazy Susan: in China it is mostly a restaurant fixture, so in a home it reads as a cliche. Fewer simultaneous actions.")
 sc(CUL, "At a family meal in many Indian homes, the right hand does all the work.",
    "The Delhi family eats dal, rice and sabzi from steel thalis with their right hands.",
    "Eye-level medium-wide; grandfather centre, mother left, son right; their right hands clearly in use, left hands resting.",
@@ -128,11 +129,12 @@ sc(CMP, "Same hunger. Same food on the plate. Completely different tools.",
    "Four panels side by side: the apartment, Shanghai, Delhi and Bangkok, each at the same moment of lifting a bite.",
    "Four equal vertical panels on cream with thin charcoal gutters; the tool in each panel highlighted with a soft terracotta halo.",
    "{DINER}; {SHANGHAI_FAMILY} (the girl); {DELHI_FAMILY} (the grandfather); {BANGKOK_DINER}.", "All four locations, simplified.",
-   "Panels slide in one per phrase; on 'tools' the four tools glow in turn.",
+   "Panels cut in one per phrase (edit); on 'tools' the four tools glow in turn.",
    "Four equal vertical panels: {DINER} lifting a bite with a fork; the ten-year-old Shanghai girl lifting food with chopsticks; the Delhi "
    "grandfather lifting rice with his right hand; {BANGKOK_DINER} lifting rice with a spoon; same moment, same pose, warm cream gutters.",
-   "Panels slide up one after another; each person lifts a bite in sync; a soft terracotta halo pulses around each tool in turn.",
-   "The four panels shrink into map pins.")
+   "Hold the still image; a soft terracotta halo glows around each tool in turn (overlay added in the edit, not generated motion).",
+   "The four panels shrink into map pins.",
+   note="Animation simplified: four synchronised character actions are hard to keep consistent; a still grid with an overlay highlight reads faster.")
 sc(MAP, "So if eating is the most universal thing humans do, why did we never agree on how to do it?",
    "An elegant world map with four pins (Europe/USA, Shanghai, Delhi, Bangkok) and the title 'Why half the world doesn't use forks'.",
    "Full world map in Equal Earth projection centred on the Old World; title space top centre (title added in edit).",
@@ -171,24 +173,17 @@ sc(HIS, "For most of human history, the answer was simple. Your hands.",
    "clothing, wooden bowls, warm firelight on individual faces.",
    "Flames flicker; a child is handed a piece of meat; hands tear bread; embers drift upward.",
    "Embers rise and become the oil-lamp glow of a Roman dining room.")
-sc(HIS, "Even in ancient Rome, a wealthy diner mostly ate with his fingers. There were spoons for soup and eggs.",
-   "A wealthy Roman reclines in a triclinium, picking food with his fingers; a small spoon sits beside an egg cup.",
-   "Medium-wide; diner reclining on the left couch; low table centre; inset close-up of spoon and egg (right third).",
-   "A wealthy Roman man in his forties in a cream tunic and draped toga, reclining; a servant boy in a short tunic.", "Triclinium: couches, frescoed walls, mosaic floor.",
-   "Fingers pick an olive; the inset spoon taps an egg.",
-   "A wealthy Roman man in a cream tunic reclining on a couch in a triclinium with frescoed walls, picking food from a low table with his fingers; "
-   "dishes of olives, bread, eggs in a holder and a small silver spoon; a servant boy in a short tunic carrying a jug; oil-lamp light.",
-   "He picks an olive with his fingers; the servant pours wine; the small spoon cracks an egg in the corner; lamp flames flicker.",
-   "Pan left through the wall into the kitchen.")
-sc(HIS, "There were forks too, but they stayed in the kitchen, for hauling meat out of a pot.",
-   "In the Roman kitchen, a cook lifts boiled meat from a bronze cauldron with a large two-pronged fork.",
-   "Medium shot; cauldron on a raised hearth, cook at right, steam.",
-   "A Roman kitchen worker in a plain short tunic, sleeves bare, sweating lightly.", "Raised masonry hearth, bronze cauldron, amphorae.",
-   "The big fork rises from the pot with dripping meat.",
-   "A Roman kitchen worker in a plain short tunic lifts a piece of boiled meat out of a bronze cauldron with a large two-pronged iron fork on a "
-   "raised masonry hearth; amphorae, hanging pans, steam.",
-   "The fork rises from the cauldron with the meat, steam swirling, drops falling back.",
-   "The meat swings toward camera and becomes a roast on a board.")
+sc(HIS, "Even in ancient Rome, a wealthy diner mostly ate with his fingers. There were spoons for soup and eggs. There were forks too, but they stayed in the kitchen, for hauling meat out of a pot.",
+   "One cutaway of a Roman house: left, a wealthy diner reclining and eating with his fingers, a small pointed-handled spoon (cochlear) by an egg; right, through the wall, a cook lifting meat from a cauldron with a large fork.",
+   "Dollhouse-style cutaway: dining room left two-thirds, kitchen right third; one camera pan from left to right.",
+   "A wealthy Roman man in his forties in a cream tunic, reclining; a kitchen worker in a plain short tunic.", "Roman house: frescoed triclinium; masonry kitchen hearth.",
+   "One slow pan from the diner to the kitchen as the narration moves there.",
+   "A cutaway view of a Roman house: on the left a wealthy Roman man in a cream tunic reclines on a couch in a frescoed triclinium, eating with his "
+   "fingers, a small pointed-handled spoon beside an egg on the low table; on the right, through the wall, a kitchen worker in a plain short tunic "
+   "lifts boiled meat out of a bronze cauldron with a large two-pronged iron fork on a masonry hearth; oil-lamp light.",
+   "Slow camera pan from the reclining diner on the left to the kitchen on the right; the fork lifts the meat once; steam rises.",
+   "The meat swings toward camera and becomes a roast on a board.",
+   note="Merged two scenes into one cutaway: same information, one image, one pan. The cochlear egg spoon is museum-verified (Met; National Museums Scotland).")
 sc(EXH, "But hands have a limit. A roasted leg of lamb doesn't arrive in bite-sized pieces. Somebody has to cut it.",
    "A roasted leg of lamb on a board; a hand reaches and hesitates; a knife slides into frame.",
    "Clean museum-like table-top composition, lamb centre, slight shadow; hand from left, knife from right.",
@@ -280,24 +275,17 @@ sc(HIS, "Chopsticks are ancient. Archaeologists have found bone sticks in China 
    "string grid, trowel, small numbered tags, layered soil.",
    "The brush sweeps soil away; the bone sticks emerge; a breeze moves the hat brim.",
    "Dissolve back in time: the sticks become chopsticks in an ancient pot.")
-sc(HIS, "And for a long time, chopsticks were the helpers. They fished vegetables out of soup and turned food over the fire.",
-   "An ancient household: a woman uses long chopsticks to fish greens from a pot and turn millet cakes on the fire.",
-   "Medium shot at hearth height; pot left, fire right; woman centre.",
-   "A woman of early imperial China in a plain wrapped robe, hair in a low knot.", "Simple earthen house, tripod pot over a fire.",
-   "Chopsticks fish a leaf, then turn food on the fire.",
-   "In a simple earthen house in early imperial China, a woman in a plain wrapped robe with hair in a low knot uses long wooden chopsticks to fish "
-   "greens out of a soup pot and turn food over a small fire; tripod pot, woven baskets.",
-   "She lifts a leaf from the soup, then flips a piece of food on the embers; steam and smoke rise.",
-   "Pull back to the family eating in the same room.")
-sc(CUL, "The grain itself, a millet porridge, was eaten with a spoon.",
-   "The family eats millet porridge from bowls with spoons.",
-   "Eye-level; three family members; bowls of yellow porridge; spoons clearly visible.",
-   "Same woman; her husband in a plain robe; a child.", "Same earthen house.",
-   "Spoons dip and lift.",
-   "A family of three in early imperial China in plain wrapped robes eating yellow millet porridge from ceramic bowls with spoons, sitting on mats "
-   "in a simple earthen house; the woman from the previous scene.",
-   "Spoons dip and lift in turn; the child blows on the porridge; hold on the spoon.",
-   "Timeline wipe: a field of millet sways and becomes wheat.")
+sc(HIS, "And for a long time, chopsticks were the helpers. They fished vegetables out of soup and turned food over the fire. The grain itself, a millet porridge, was eaten with a spoon.",
+   "One household in early imperial northern China: at the hearth a woman uses long chopsticks to fish greens from a soup pot; on the mat beside her, the family eats millet porridge with spoons.",
+   "Medium-wide; hearth left (chopsticks as cooking helpers), family mat right (spoons for the grain): the two tools in two zones.",
+   "A woman in a plain wrapped robe with hair in a low knot; her husband in a plain robe; a child.", "Simple earthen house, tripod pot over a fire, mats, ceramic bowls.",
+   "Camera drifts from the hearth to the mat; small hand movements only.",
+   "Inside a simple earthen house in early imperial northern China: on the left, a woman in a plain wrapped robe with hair in a low knot uses long "
+   "wooden chopsticks to fish greens out of a soup pot over a small fire; on the right, her husband and child sit on a mat eating yellow millet "
+   "porridge from ceramic bowls with spoons.",
+   "Slow drift from the hearth to the mat; the woman lifts a leaf from the soup; the child lifts a spoonful; steam rises.",
+   "Timeline wipe: a field of millet sways and becomes wheat.",
+   note="Merged two scenes: one image shows both roles at once (chopsticks at the pot, spoons for the grain), which makes the point clearer.")
 sc(HIS, "Then, slowly, the menu changed. Wheat became more important, and with it came noodles and dumplings.",
    "A timeline strip: millet field turns to wheat; a cook stretches noodles; another folds dumplings.",
    "Horizontal three-part illustrated timeline on cream; thin terracotta ribbon underneath.",
@@ -334,14 +322,16 @@ sc(CUL, "In Korea, they're often metal, and they still come with a spoon.",
    "She lifts the spoon for stew, then the chopsticks for a side dish; the stew bubbles.",
    "Pan across centuries to a royal table.")
 sc(HIS, "Legend says royalty ate with silver chopsticks, because silver would turn black near poison.",
-   "A Joseon royal table: a court lady tests a dish with silver chopsticks while the king's place waits.",
-   "Medium-wide; low royal table (surasang) centre; court lady kneeling left; king's empty cushion right.",
-   "A Joseon court lady in a dark-green dangui jacket and red skirt, hair in a braided chignon.", "Joseon palace room, folding screen, low lacquer tables.",
-   "Silver chopsticks dip into a dish; she inspects them.",
-   "A Joseon-dynasty court lady in a dark-green dangui jacket and red skirt kneels at a low lacquered royal table laid with many dishes, testing a "
-   "dish with silver chopsticks; a folding screen with painted peonies behind; the king's cushion empty; quiet, tense atmosphere.",
-   "She dips the silver chopsticks into a dish and lifts them to the light, inspecting the tips; candle flames flicker.",
-   "Push into the chopstick tips.")
+   "A Joseon royal table set with a silver spoon and silver chopsticks among many dishes; officials kneel at the edges of the room.",
+   "Symmetrical medium-wide on the low royal table; the silver utensils at the centre catch the light; officials soft in the background.",
+   "Joseon court officials in dark-red danryeong robes with black winged samo caps (court dress), kneeling at the edges.", "Joseon palace room, folding screen with painted peonies, low lacquer tables.",
+   "A slow glint runs along the silver chopsticks; nothing else.",
+   "A Joseon-dynasty royal dining room: a low lacquered royal table laid with many dishes, a silver spoon and silver chopsticks at the centre "
+   "catching the light; a folding screen with painted peonies behind; court officials in dark-red danryeong robes and black winged samo caps "
+   "kneeling at the edges; calm candlelight. Generate wide and high-resolution (it is reused).",
+   "A slow glint travels along the silver chopsticks; candle flames flicker slightly.",
+   "Push into the chopstick tips.",
+   note="Removed the court lady 'testing for poison': that ritual is not well sourced for Joseon. Fixed court headwear (samo caps, not gat). Silver stayed a court custom, not an everyday one (KOCIS).")
 sc(EXH, "Silver really can darken when it meets certain sulphur compounds. But that doesn't make it a reliable poison detector.",
    "A simple diagram: a silver chopstick tip touching a boiled egg darkens; beside it, a poison bottle with a question mark.",
    "Exhibition table-top: egg left, chopstick tip centre, small dark bottle right; generous white space.",
@@ -352,14 +342,13 @@ sc(EXH, "Silver really can darken when it meets certain sulphur compounds. But t
    "The tip slowly darkens where it touches the yolk; the bottle stays unchanged; small pause.",
    "Pull back to the banquet table.")
 sc(HIS, "And at the royal table, silver was also a display of status.",
-   "Wide: a royal banquet table glittering with silver spoons, chopsticks and bowls; courtiers in attendance.",
-   "Symmetrical wide shot; table centre; silver highlights catch the light.",
-   "Joseon court officials in dark-red and blue robes with black gat hats.", "Palace hall with lattice doors.",
-   "Light glints travel across the silver.",
-   "A Joseon palace banquet hall: a long low table set with silver bowls, spoons and chopsticks that catch the light; court officials in dark-red "
-   "and blue robes with black gat hats seated in rows; lattice doors.",
-   "A slow glint travels across the silverware; officials bow slightly; candlelight.",
-   "Cut to a modern Japanese home.")
+   "Reuse of the royal-table image, pulled wider so the whole silver setting and the officials read as status.",
+   "Same image as the legend scene, wider crop.", "Same officials.", "Same palace room.",
+   "Slow pull-out; one glint.",
+   "(Reuse the royal-table image from the silver-legend scene; no new generation.)",
+   "Slow pull-out from the chopsticks to the whole table; a single glint crosses the silverware.",
+   "Cut to a modern Japanese home.",
+   note="Now a reuse of the legend image: one fewer generation, and returning to the same table turns 'status' into a reveal.", reuse="the silver-legend scene")
 sc(CUL, "In Japan, chopsticks come with rules. Never stand them upright in a bowl of rice. That's how rice is offered to the dead.",
    "The Japanese family at dinner; the son is about to stick his chopsticks upright in rice; inset: a home altar with a rice offering and upright chopsticks.",
    "Medium shot of the table; inset panel top right showing the butsudan.",
@@ -378,8 +367,9 @@ sc(CUL, "And never pass food from one pair of chopsticks to another. At Japanese
    "Two-part image: left, at the dinner table the father almost passes food from his chopsticks to his son's, then pauses; right, in a quiet plain "
    "funeral hall, the same family in black mourning clothes stand together, two of them holding long chopsticks over a white-covered tray, its "
    "contents out of view; muted greys, respectful.",
-   "Left: the passing hand stops mid-air. Right: the family bows their heads slowly; very still.",
-   "Fade through cream to the split callback.")
+   "Left: the passing hand stops mid-air. Right: no character motion at all; only a very slow push-in.",
+   "Fade through cream to the split callback.",
+   note="The funeral half stays completely still: motion there would feel disrespectful.")
 sc(CMP, "So in East Asia, the cutting moved into the kitchen. In Europe, it stayed right there at the table.",
    "Callback to the split screen: the Song kitchen on one side, the medieval table on the other, with the cutting highlighted.",
    "Same 50/50 composition as the earlier split, mirrored: kitchen left, table right.",
@@ -397,7 +387,8 @@ sc(HIS, "European meat was often roasted in large pieces, and at a feast, the ca
    "A carver in a parti-coloured tunic; nobles and guests in fur-trimmed gowns and hoods.", "Medieval hall.",
    "Carver slices; servers move; guests lean in.",
    "A 14th-century European great hall feast: a carver in a parti-coloured tunic slices a large roast at the high table in front of nobles in "
-   "fur-trimmed gowns; long trestle tables with white cloths, bread trenchers, tapestries, candlelight.",
+   "fur-trimmed gowns; along the long trestle table in the foreground, seated guests with small sheathed knives on their belts; white cloths, "
+   "bread trenchers, tapestries, candlelight. Generate wide and high-resolution (it is reused).",
    "The carver's knife moves in long strokes; a server carries a platter; guests lean forward.",
    "Tilt down to a guest's belt.")
 sc(CUL, "But in the Middle Ages, your host usually didn't give you one. You brought your own.",
@@ -419,32 +410,23 @@ sc(EXH, "Many diners carried a knife on their belt, for cutting dinner, and, if 
    "Knife rotates slightly into the light; the left vignette draws in, then the right one.",
    "Back to the feast, wide.")
 sc(CUL, "Picture it. A long table, a roast in the middle, and guests with blades on their belts.",
-   "Wide feast table; the camera tracks along the guests' belts, each with a sheathed knife.",
-   "Long horizontal tracking composition at belt height; roast visible at the centre.",
-   "Six varied guests: merchant, knight, older woman, young squire, cleric, host.", "Medieval hall.",
-   "Lateral track; knives glint one by one.",
-   "A long medieval feast table seen at belt height: six varied guests (merchant, knight, older woman, young squire, cleric, host) seated along it, "
-   "each with a small sheathed knife on the belt; a roast in the middle; candlelight; slightly tense, slightly comic.",
-   "Slow lateral track along the table; each knife handle catches a glint as the camera passes.",
-   "A candle flame wipes the frame to the lagoon.")
-sc(HIS, "Now picture Venice, around a thousand years ago.",
-   "Venice c. 1000: a lagoon city of wooden and early stone buildings, the first San Marco, boats.",
-   "Aerial three-quarter view; lagoon foreground; a small location pin (edit).",
-   "Tiny boatmen.", "Venetian lagoon, early medieval Venice.",
-   "Boats glide; water shimmers.",
-   "Early medieval Venice around the year 1000 seen from above the lagoon: clusters of wooden and early stone buildings, an early basilica, "
-   "boats and barges on muted-blue water.",
-   "Boats glide slowly; light ripples on the water; slow aerial drift.",
-   "Pull back into a map.")
-sc(MAP, "Into the family of its ruler, the doge, comes a Byzantine noblewoman. In Constantinople, wealthy people already ate with forks.",
-   "Map of the Mediterranean: a route from Constantinople to Venice with a small ship; inset of a Byzantine dinner with forks.",
-   "Map Mediterranean; route arcs across the Adriatic; inset bottom right.",
-   "Inset: Byzantine diners in silk.", "Map; Byzantine dining room inset.",
-   "Route and ship move; inset blooms in on 'forks'.",
-   "Illustrated map of the eastern Mediterranean with a thin route from Constantinople to Venice and a small sailing ship on it; an inset vignette "
-   "of a wealthy Byzantine dining room where diners in silk robes eat with small two-pronged forks.",
-   "The ship sails along the route; the inset opens like a window when it arrives.",
-   "Push into Venice: the palace hall.")
+   "Reuse of the great-hall feast image: the camera glides along the foreground guests' belts, each with a sheathed knife, the roast in the middle.",
+   "Same image, tight crop at belt height, lateral pan.", "Same guests.", "Medieval hall.",
+   "Lateral pan at belt height; no character animation.",
+   "(Reuse the great-hall feast image from the carving scene; it is generated wide and high-resolution for this crop.)",
+   "Slow lateral pan along the guests' belts in the foreground; each knife handle catches a small glint as the camera passes.",
+   "A candle flame wipes the frame to the map.",
+   note="Reuse instead of a new image: the narration says 'picture it', so going back to the same hall is clearer than a new one.", reuse="the carving scene")
+sc(MAP, "Now picture Venice, around a thousand years ago. Into the family of its ruler, the doge, comes a Byzantine noblewoman. In Constantinople, wealthy people already ate with forks.",
+   "Map of the eastern Mediterranean: a small illustrated Venice in its lagoon, a route from Constantinople with a ship, and an inset of a wealthy Byzantine dinner with forks.",
+   "Map with Venice upper left and Constantinople right; inset bottom right.", "Inset: Byzantine diners in silk.", "Map; Byzantine dining-room inset.",
+   "Start on Venice; the route draws; the inset opens on 'forks'.",
+   "Illustrated map of the eastern Mediterranean with a tiny illustrated early-medieval Venice in its lagoon, a thin route from Constantinople to "
+   "Venice with a small sailing ship, and an inset vignette of a wealthy Byzantine dining room where diners in silk robes eat with small "
+   "two-pronged forks.",
+   "The camera starts on Venice; the route draws from Constantinople as the ship moves; the inset opens like a window.",
+   "Push into Venice: the palace hall.",
+   note="Merged the 3-second Venice establishing shot into the map: the map carries Venice and Constantinople together.")
 sc(HIS, "So at dinner, she has her servants cut her food into little pieces, and she lifts them to her mouth with a golden instrument with two prongs.",
    "The noblewoman at a Venetian table: attendants cut her food small; she lifts a piece with a golden two-pronged fork; Venetians stare.",
    "Medium shot; her centre; attendants at left; two Venetian nobles at right, staring.",
@@ -452,7 +434,7 @@ sc(HIS, "So at dinner, she has her servants cut her food into little pieces, and
    "Attendants cut; she lifts the fork; nobles' eyebrows rise.",
    "{BYZANTINE_BRIDE} at an 11th-century Venetian dinner: two attendants cut her food into small pieces; she lifts a piece to her mouth with a slender "
    "golden two-pronged fork; two Venetian nobles in red and brown mantles stare in surprise; Byzantine-style arches, oil lamps.",
-   "The attendants' knives cut small pieces; she lifts the golden fork gracefully; the nobles exchange glances.",
+   "She lifts the golden fork to her mouth, slowly; everyone else stays still except one noble turning his head.",
    "The golden fork glints and becomes an ink drawing in a manuscript.")
 sc(HIS, "Decades later, a churchman named Peter Damian wrote about her, holding up her habits as a warning against sinful luxury. A fork. As a warning.",
    "Peter Damian writes by candlelight; a small ink sketch of the fork appears in his manuscript margin.",
@@ -468,8 +450,8 @@ sc(CUL, "And for centuries, most of Europe kept eating with its fingers.",
    "Wide, cosy; table centre; ribbon along the bottom.",
    "A townsman's family in wool tunics and linen coifs.", "Timber-framed house interior.",
    "Fingers tear bread; ribbon dates advance.",
-   "A medieval European townsman's family in wool tunics and linen coifs eating stew and bread with their fingers at a plain table in a "
-   "timber-framed house; a thin terracotta timeline ribbon along the bottom edge.",
+   "A medieval European townsman's family in wool tunics and linen coifs eating stew and bread mostly with their fingers at a plain table in a "
+   "timber-framed house, a few knives and wooden spoons on the table; a thin terracotta timeline ribbon along the bottom edge.",
    "Hands tear bread and dip it; the ribbon slides along under the scene.",
    "Map: Italy lights up.")
 sc(CUL, "Except Italy. By the fourteenth century, forks were becoming common at wealthier Italian tables.",
@@ -495,19 +477,22 @@ sc(CMP, "By the fifteen hundreds, France's elite were starting to adopt the fork
    "50/50 split; matching table lines.",
    "French courtiers in slashed doublets and ruffs; a Tudor family in dark wool, one man frowning at a fork.", "Château dining room / Tudor hall.",
    "Left: forks lift. Right: the man turns the fork over, baffled.",
-   "A split composition: left, French nobles around 1550 in a château dining room eating with forks; right, an English Tudor family in dark wool at "
-   "an oak table eating with knives and fingers while one man frowns at a fork he is holding.",
-   "Left diners lift forks elegantly; right, the man turns the fork over, puzzled.",
-   "A dotted walking route draws across the map.")
+   "A split composition: left, French nobles around 1580 in a château dining room, two of them eating with small forks while others still use "
+   "knives and fingers; right, an English Tudor family in dark wool at an oak table eating with knives and fingers while one man frowns at a fork "
+   "he is holding.",
+   "Left: one diner lifts a fork. Right: the man turns the fork over, puzzled.",
+   "A dotted walking route draws across the map.",
+   note="Only some French diners use forks: the elite were 'starting to', and the fork caught on slowly (National Geographic).")
 sc(MAP, "Then, in 1608, an English traveller named Thomas Coryat toured Italy, walking almost half of his journey.",
-   "Map of Western Europe: a dotted route from Odcombe to Venice; then Coryat striding along an Alpine road.",
-   "Map beat with the route; then a wide landscape with Coryat small against the mountains.",
-   "{CORYAT}.", "Map; Alpine pass.",
-   "Route dots step along; he walks.",
-   "{CORYAT} striding along a winding Alpine road with snowy peaks behind; a dotted route line from England to Venice faintly drawn across the sky "
-   "like a map overlay.",
-   "He walks steadily up the road; clouds drift; the dotted route extends ahead of him.",
-   "He walks through a doorway into a Venetian dining room.")
+   "Coryat walks a dusty poplar-lined road across the plain of northern Italy, a dotted route from England to Venice drawn faintly over the sky like a map.",
+   "Wide landscape, Coryat small on the road at the left third; route overlay across the top.",
+   "{CORYAT}.", "Poplar-lined road on the Lombard plain.",
+   "He walks; the dotted route extends ahead.",
+   "{CORYAT} walking along a dusty poplar-lined road across the flat plain of northern Italy, farmhouses in the distance, with a dotted route line "
+   "from England to Venice faintly drawn across the sky like a map overlay.",
+   "He walks steadily along the road; the dotted route line extends ahead of him; poplars sway.",
+   "He walks through a doorway into a Venetian dining room.",
+   note="Fact fix: Coryat did not walk over the Alps; guides carried him up the Mont Cenis pass in a chair (Osher Map Library). He walked other stretches, so a lowland road is accurate.")
 sc(HIS, "He watched Italians eating with forks, and he helped make the habit known back home.",
    "Coryat at a Venetian table in 1608, notebook open, watching diners use forks; then at an English table showing the fork.",
    "Two beats in one frame: Venetian table left, English table right, Coryat in both.",
@@ -551,13 +536,14 @@ sc(HIS, "There's a famous story that Cardinal Richelieu, disgusted by a guest pi
    "Guest picks; Richelieu's frown; sparks at the wheel.",
    "A 1630s Paris dining room: {RICHELIEU} frowns with distaste as a guest in a doublet picks his teeth with the point of his knife; in a side panel, "
    "a steward grinds the tips of table knives round on a grinding wheel; candlelight.",
-   "The guest picks; Richelieu's frown deepens; in the side panel the wheel spins and a knife tip turns round.",
-   "Sparks fly into a town square.")
+   "Richelieu's frown deepens slightly; the side-panel grinding wheel turns; nothing else.",
+   "Sparks fly into a town square.",
+   note="Kept, framed as 'a famous story' (tradition, not documented: Wikipedia, Table knife). Motion cut to one gesture and a turning wheel.")
 sc(HIS, "And in 1669, Louis the Fourteenth banned pointed knives in part of his kingdom.",
    "A herald reads a royal edict in a northern French town square; a cutler listens at his shop door.",
    "Wide town square; herald on steps centre; cutler shop right.",
    "A royal herald in blue tabard with fleurs-de-lis; a cutler in a leather apron; townsfolk in 1660s dress.", "Brick town square, stepped gables.",
-   "Herald unrolls the edict; heads turn.",
+   "Herald unrolls the edict; heads turn. Illustrative staging: the 1669 edict is attested, but its scope is disputed, so no specific town is named.",
    "A brick town square in a northern French province in 1669 with stepped gables: a royal herald in a blue tabard reads an edict from a sealed "
    "parchment; a cutler in a leather apron listens at his shop door among displayed knives; townsfolk in 1660s dress.",
    "The herald unrolls the parchment; the crowd turns; the cutler glances at his pointed knives.",
@@ -586,9 +572,10 @@ sc(EXH, "And this is where the story gets strange.",
    "Callback to the opening mouth close-up, now with a faint question mark drawn beside the teeth.",
    "Same framing as scene 9.", "{DINER}, profile close-up.", "Plain cream ground.",
    "Brief push-in; light dims slightly.",
-   "Extreme close-up profile of {DINER}, lips parted, upper front teeth visible, a delicate dotted guide line pointing at the teeth; plain cream.",
+   "(Reuse the mouth close-up from the opening teaser; no new generation.)",
    "Slow push-in toward the teeth; the light dims a little.",
-   "Dissolve to a lab bench.")
+   "Dissolve to a lab bench.",
+   note="Reuse: the callback is the point.", reuse="the opening mouth teaser")
 sc(HIS, "The American anthropologist Charles Loring Brace spent years studying human teeth.",
    "An anthropologist's lab: skulls and dental casts on shelves, calipers, index cards.",
    "Medium shot at bench height; researcher centre; shelves behind.",
@@ -598,24 +585,17 @@ sc(HIS, "The American anthropologist Charles Loring Brace spent years studying h
    "cards, a desk lamp, 1980s equipment.",
    "He adjusts the calipers and writes on an index card; the desk lamp hums softly.",
    "Push into the cast; it becomes a diagram.")
-sc(EXH, "He noticed that most people today have an overbite: the top front teeth sit in front of the bottom ones.",
-   "A clean side-view diagram of an overbite: upper front teeth overlapping in front of the lower ones.",
-   "Centred anatomical diagram; front of mouth to the left; arrow pointing to the overlap.",
+sc(CMP, "He noticed that most people today have an overbite: the top front teeth sit in front of the bottom ones. But in old European skulls, he mostly found the teeth meeting edge to edge.",
+   "Two clean side-view dental diagrams: a modern overbite, then an old European skull's edge-to-edge bite beside it.",
+   "Left diagram alone at centre first; it slides left as the right one appears; identical scale; a fine guide line.",
    "None.", "Cream ground.",
-   "The overlap is highlighted with a soft terracotta outline.",
-   "An editorial anatomical side-view diagram of human front teeth in their gums, front of the mouth facing left: the upper incisors overlap in "
-   "front of the lower incisors (an overbite); soft gum pink, ivory teeth, thin charcoal lines, cream ground.",
-   "The upper teeth settle into the overlap; a soft terracotta outline traces the overlap.",
-   "Slide the diagram left; a second appears.")
-sc(CMP, "But in old European skulls, he mostly found the teeth meeting edge to edge.",
-   "Side by side: a modern bite (overbite) and an old European skull's bite (edge to edge).",
-   "50/50 composition; identical scale; matching alignment line.",
-   "None.", "Cream ground.",
-   "Right diagram draws in; the meeting edges glow.",
-   "Two side-view dental diagrams side by side on cream: left, a modern overbite; right, an old European skull's front teeth meeting edge to edge "
-   "(tip to tip); identical scale and line style.",
-   "The right diagram builds in; a fine horizontal guide line shows the tips meeting.",
-   "Cut to a medieval meal.")
+   "One diagram, then two; the overlap and then the meeting edges get a soft terracotta outline.",
+   "Two editorial anatomical side-view diagrams of human front teeth in their gums on cream, front of the mouth facing left, identical scale and "
+   "line style: left, a modern overbite with the upper incisors overlapping in front of the lower ones; right, an old European skull's front "
+   "teeth meeting edge to edge, tip to tip.",
+   "Start on the left diagram alone; it slides left as the right diagram builds in; a fine horizontal guide line shows where the tips meet.",
+   "Cut to a medieval meal.",
+   note="Merged two diagram scenes into one build: one image, and the comparison is clearer side by side.")
 sc(HIS, "His explanation was this. Before knives and forks, people often clamped a piece of meat in their front teeth and sliced off a mouthful.",
    "A medieval man holds a strip of meat in his front teeth and slices it off with a small knife near his lips.",
    "Close side profile; the knife moves away from the face (safe, not threatening).",
@@ -629,10 +609,10 @@ sc(HIS, "Once Europeans started cutting food into small pieces on the plate, the
    "Three generations of children at the table across the 1600s to 1800s, each with a small bite-diagram inset that slowly shifts.",
    "Three panels, left to right; children eating with knife and fork; small circular inset below each.",
    "Three children: 1650 in a lace collar, 1750 in a waistcoat, 1850 in a pinafore.", "Three period dining rooms.",
-   "Insets morph step by step from edge-to-edge to overbite.",
+   "Panels fade in left to right; the insets are still drawings.",
    "Three side-by-side panels: a child in 1650 with a lace collar, a child in 1750 in a waistcoat, a child in 1850 in a pinafore, each cutting food "
    "on a plate with knife and fork; below each a small circular inset of front teeth, shifting from edge-to-edge to a slight overbite.",
-   "Each child cuts and eats in turn; the insets shift subtly from left to right.",
+   "No morphing: the three panels fade in one after another, left to right; each inset is a separate still drawing.",
    "Map: China highlighted again.")
 sc(MAP, "Brace also pointed to evidence from Song dynasty China, suggesting the same change may have appeared there much earlier, among people eating pre-cut food with chopsticks.",
    "China highlighted; inset of a Song family eating pre-cut food with chopsticks and a small jaw diagram.",
@@ -642,7 +622,8 @@ sc(MAP, "Brace also pointed to evidence from Song dynasty China, suggesting the 
    "An illustrated map of East Asia with China in terracotta wash, and an inset of a Song-dynasty family eating bite-sized food with chopsticks, "
    "with a small side-view jaw diagram showing an overbite.",
    "China fills with colour; the inset opens; the jaw diagram draws in.",
-   "Cut to a two-sided page.")
+   "Cut to a two-sided page.",
+   note="Brace's Song-China point rests on very little evidence (he discusses one individual), so the inset stays small and the next scene stresses the debate.")
 sc(CMP, "But this is one researcher's explanation, not a settled answer. Others link it to softer food in general, going back thousands of years.",
    "A balanced two-sided page: left, the cutlery explanation (knife, fork, plate); right, early farmers grinding grain into soft porridge.",
    "50/50 composition like an open book; equal weight to both sides.",
@@ -656,10 +637,10 @@ sc(CUL, "Still, if Brace is right, the way your ancestors cut their dinner is st
    "The diner smiles at her table; behind her, faint silhouettes of ancestors at their own tables, as if drawn in pencil.",
    "Medium close-up of her smiling; ghostly pencil ancestors behind at decreasing size.",
    "{DINER}; faint pencil ancestors (medieval, 1700s, 1800s).", "Modern apartment.",
-   "Ancestors sketch in; she smiles.",
+   "Slow push-in.",
    "Medium close-up of {DINER} smiling at her table, front teeth just visible; behind her, faint pencil-sketch silhouettes of ancestors at their "
    "own tables from medieval, 18th- and 19th-century times, receding into the cream background.",
-   "The pencil ancestors sketch themselves in one by one behind her; she smiles.",
+   "The faint ancestors are part of the still; only a slow push-in on her smile.",
    "The ancestors fade; a map rises.")
 
 # ═════════ THE HAND ═════════
@@ -676,7 +657,7 @@ sc(CUL, "Eating with your hands isn't the absence of a tool. It's a tradition, w
    "Close-up, centred; water arc; basin below.",
    "{DELHI_FAMILY}: the grandfather's hands; the son pours.", "Delhi home.",
    "Water pours; hands rub; towel.",
-   "Close-up of an elderly man's hands being washed before a meal as a teenager pours water from a steel jug over a basin; white kurta cuffs; "
+   "Close-up of an elderly man's hands being washed before a meal, a common custom in many households, as a teenager pours water from a steel jug over a basin; white kurta cuffs; "
    "towel nearby; Delhi home tiles.",
    "Water pours in a smooth arc; the hands rub together; droplets fall into the basin.",
    "Pull back to the family meal.")
@@ -734,13 +715,13 @@ sc(HIS, "And here's a twist. Thailand used to eat with hands too.",
    "Hands roll rice and dip into curry; palms sway outside.",
    "Track up into a palace.")
 sc(HIS, "Then, during the eighteen hundreds, Siam's royal court and elites began adopting Western spoons and forks. Then the habit spread.",
-   "A Siamese court banquet with a Western table setting; courtiers handle spoons and forks; a map inset shows the habit spreading.",
-   "Wide banquet; small inset map of Siam lower right.",
+   "A Siamese court banquet with a Western table setting; courtiers handle spoons and forks.",
+   "Wide banquet, symmetrical.",
    "{SIAM_COURT}.", "Palace hall with Western table, Thai roof finials through windows.",
-   "Spoons lift; inset dots spread.",
-   "{SIAM_COURT} at a long Western-style banquet table in a mid-1800s palace hall: white cloth, silver spoons and forks, porcelain; Thai roof "
-   "finials visible through the windows; a small inset map of Siam with dots spreading outward.",
-   "Courtiers lift spoons and forks; the inset dots spread across the map.",
+   "Spoons lift; slow push-in.",
+   "{SIAM_COURT} at a long Western-style banquet table in a palace hall of the 1860s-1880s: white cloth, silver spoons and forks, porcelain; Thai "
+   "roof finials visible through the windows.",
+   "Two courtiers lift spoons and forks; slow push-in. 'Then the habit spread' is carried by the cut to modern Bangkok.",
    "Match cut to the modern spoon.")
 sc(CUL, "Today, the spoon goes in your right hand, and the fork pushes food onto it. That's why there's no knife, and usually no chopsticks.",
    "Callback to the Bangkok diner: the fork pushes rice onto the spoon.",
@@ -840,9 +821,10 @@ sc(CUL, "So let's go back to that plate.",
    "Callback: the diner at her table, plate in front of her, exactly as in the opening.",
    "Same framing as scene 1.", "{DINER}.", "Modern apartment.",
    "Slow push-in.",
-   "{DINER} seated at a small round oak table by a tall window; a white plate of roast chicken, potatoes and green beans in front of her; soft light.",
-   "Slow push-in toward the plate; she picks up her knife and fork.",
-   "Push into the knife.")
+   "(Reuse the opening image of the diner at her table; no new generation.)",
+   "Slow push-in toward the plate.",
+   "Push into the knife.",
+   note="Reuse of the opening frame: the visual rhyme signals the ending.", reuse="the opening plate scene")
 sc(CUL, "The round tip on your knife? Centuries of changing table manners, and maybe one fussy cardinal.",
    "Close-up of her knife's round tip; in its reflection, a tiny frowning Richelieu.",
    "Extreme close-up; knife tip centre; reflection inside the blade.",
@@ -850,7 +832,7 @@ sc(CUL, "The round tip on your knife? Centuries of changing table manners, and m
    "Tip glints; reflection appears and frowns.",
    "Extreme close-up of a round-tipped table knife in a woman's hand with a terracotta cardigan cuff; in the polished blade, a tiny reflection of "
    "{RICHELIEU} frowning.",
-   "The knife tilts; the reflection appears and frowns; glint.",
+   "The knife tilts slightly; a glint crosses the blade; the reflection is part of the still (no animated face).",
    "Slide to the fork.")
 sc(CUL, "The four prongs on your fork? The seventeen hundreds.",
    "Close-up of the four prongs; a faint ribbon timeline behind it stopping at the 1700s.",
@@ -867,7 +849,7 @@ sc(CUL, "And the cutting you're about to do, right there at the table? That's Eu
    "{DINER}; faint medieval guests.", "Modern apartment, medieval sketch layer.",
    "She cuts; sketch blooms behind; guests' knives glint.",
    "{DINER} cutting her chicken at her table; behind her, a faint pencil-sketch medieval feast with guests carrying knives on their belts.",
-   "She cuts; the pencil feast blooms behind her and fades.",
+   "She cuts once; the faint pencil feast is part of the still; slow push-in.",
    "Split into three windows.")
 sc(CMP, "In Shanghai, the cutting happened hours ago, in a kitchen. In Addis Ababa, the bread is doing the work. And in Bangkok, the spoon and fork began at a royal court in the eighteen hundreds.",
    "Triptych callback: the Shanghai family's kitchen; the Addis family's injera; the Bangkok diner with a faint Siamese court behind.",
@@ -885,7 +867,7 @@ sc(CMP, "Same problem. How do you get food from the plate to your mouth? Three b
    "Grid lifts; tools resolve.",
    "Three tools side by side on cream, centred and equal: a fork with a table knife, a pair of chopsticks, and a right hand holding flatbread; "
    "elegant shadows.",
-   "The tools settle into a row one by one and hold.",
+   "Hold; a soft light rises on each tool in turn (edit overlay).",
    "Back to the diner's smile.")
 sc(CUL, "And one of them may even be shaping your teeth.",
    "The diner smiles; the faint dotted line from the opening returns to her teeth.",
@@ -893,17 +875,20 @@ sc(CUL, "And one of them may even be shaping your teeth.",
    "{DINER}.", "Modern apartment.",
    "Dotted line draws; she smiles.",
    "Close-up of {DINER} smiling at her table, front teeth visible; a delicate dotted guide line points to her front teeth.",
-   "The dotted line draws to her teeth; she smiles a little wider.",
-   "Cut to two tables.")
+   "The dotted line draws to her teeth (edit overlay).",
+   "Cut to two tables.",
+   note="Simplified: the guide line is added in the edit so her face stays consistent.")
 sc(CMP, "And if you're wondering why a Korean meal so often comes glowing red with chili, while a Japanese meal usually doesn't, that's a story about a plant that crossed the world. And it starts in the Americas.",
    "Split: a red-hued Korean table (kimchi, stew) vs a pale Japanese table (miso, sashimi); then a map route from the Americas to East Asia with a chilli pepper.",
    "50/50 split, then a map beat for the route; end-card space.",
-   "Hands only.", "Korean table; Japanese table; world map.",
+   "{SEOUL_DINER}; {JAPAN_FAMILY}.", "Korean table; Japanese table; world map.",
    "Red glow builds on the left; route draws from the Americas.",
-   "A split composition: left, a Korean table glowing red with kimchi, red stew and chilli paste; right, a pale Japanese table with miso soup, rice "
-   "and sashimi; across the top a thin route line from the Americas to East Asia carrying a small red chilli pepper.",
+   "A split composition: left, {SEOUL_DINER} at a Korean table glowing red with kimchi, red stew and chilli paste; right, {JAPAN_FAMILY} at a pale "
+   "Japanese table with miso soup, rice and grilled fish; across the top a thin route line from the Americas to East Asia carrying a small red "
+   "chilli pepper.",
    "The red tones warm on the left; the route line draws from the Americas, carrying the chilli across the map.",
-   "End card.")
+   "End card.",
+   note="Teaser kept, now tied to this video: the Seoul diner and the Japanese family come back, so the next episode grows out of this one.")
 
 
 # ── build: verify narration coverage, resolve characters, add timecodes ──
@@ -954,40 +939,73 @@ counts = {}
 for x in S:
     counts[x["tech"]] = counts.get(x["tech"], 0) + 1
 
+# revision notes for scenes changed in v2 only by motion or detail (narration prefix -> note)
+EXTRA_NOTES = {
+    "So at dinner, she has her servants": "Motion cut to one action (the fork lift). The attendants cutting her food is in Peter Damian's own account (Met Museum).",
+    "And for centuries, most of Europe kept eating": "Added knives and spoons on the table: medieval diners used them too; 'fingers' was never the whole story.",
+    "And in 1669, Louis the Fourteenth": "Marked as illustrative staging: the edict is attested, but its scope is disputed (Flemish provinces per Wikipedia), so no real town is named.",
+    "Once Europeans started cutting food": "Removed the morphing insets (hard to generate consistently); three still panels fade in instead.",
+    "Still, if Brace is right": "The pencil ancestors are part of the still image instead of drawing themselves in: simpler and steadier.",
+    "Eating with your hands isn't the absence": "Qualifier added: hand-washing before meals is common in many households, not a universal rule.",
+    "Then, during the eighteen hundreds, Siam": "Removed the spreading-dots inset (one idea per scene); costume dates narrowed to the 1860s-1880s, when Western dress elements appear at court.",
+    "The round tip on your knife?": "The Richelieu reflection is part of the still (no animated face): consistent and less gimmicky.",
+    "And the cutting you're about to do": "The pencil feast is part of the still; one cutting action only.",
+    "Same problem. How do you get food": "Grid-collapse animation removed; three tools hold with an overlay highlight.",
+    "In Shanghai, the cutting happened hours ago": "Kept; each panel animates only after the previous one finishes, to keep one action on screen at a time.",
+}
+for x in S:
+    if not x["note"]:
+        for k, v in EXTRA_NOTES.items():
+            if x["narr"].startswith(k):
+                x["note"] = v
+new_imgs = sum(1 for x in S if not x["reuse"])
 L = []
-L.append("# Storyboard: \"Why Half the World Doesn't Use Forks\" (editorial documentary direction)\n")
-L.append(f"For approval. {len(S)} scenes over {mmss(total)}, timed to the approved CapCut narration. No images generated yet.\n")
-L.append("Narration is unchanged and quoted exactly (checked word for word against `narration.txt`). Timecodes are from the approved final.\n")
-L.append("\n## How to use the prompts\n")
-L.append("- Every **Image Generation Prompt** below is complete: scene content + the channel style block + fixed character descriptions are already merged in. Paste as is.\n")
-L.append("- Every **Animation Prompt** already includes the consistency rule. Use the generated still as the first frame.\n")
-L.append("- Text (location tags, titles, dates, the Mencius calligraphy, 'Furcifer') is added in the edit, never generated: AI tools garble lettering.\n")
-L.append("\n## Style block (in every prompt)\n")
+head = HERE / "storyboard-v2-audit.md"   # Parts A-D (hand-written audit); Part F after the marker
+audit = head.read_text(encoding="utf-8") if head.exists() else ""
+L.append(audit.split("<!-- PART F -->")[0])
+L.append("\n## PART E: Revised storyboard\n")
+L.append(f"{len(S)} scenes over {mmss(total)} ({new_imgs} new images, {len(S) - new_imgs} reuses), timed to the approved CapCut narration. "
+         "Narration quoted exactly (checked word for word against `narration.txt`). Timecodes are from the approved final. No images generated yet.\n")
+L.append("\n### How to use the prompts\n")
+L.append("- Every **Image Generation Prompt** is complete: scene content + the channel style block + fixed character descriptions are merged in. Paste as is.")
+L.append("- Every **Animation Prompt** includes the consistency rule. Use the generated still as the first frame.")
+L.append("- Text (location tags, titles, dates, the Mencius calligraphy, 'Furcifer') and highlight overlays are added in the edit, never generated.")
+L.append("- **Reuse** scenes take an image generated earlier; generate those images wide and high-resolution so they can be cropped.\n")
+L.append("\n### Style block (in every prompt)\n")
 L.append(f"> {STYLE}\n>\n> {NEG}\n")
-L.append("\nThe one dark scene (the reveal, scene with three spotlights) swaps the ground to charcoal; everything else stays on cream.\n")
-L.append("\n## Character bible (same words in every prompt they appear in)\n")
+L.append("\nThe one dark scene (the three-spotlight reveal) swaps the ground to charcoal; everything else stays on cream.\n")
+L.append("\n### Character bible (same words in every prompt they appear in)\n")
 for kk, v in CHARS.items():
     L.append(f"- **{kk}**: {v}")
-L.append("\n## Recurring locations\n")
+L.append("\n### Recurring locations\n")
 for kk, v in LOCS.items():
     L.append(f"- **{kk}**: {v}")
-L.append("\n## Technique mix\n")
+L.append("\n### Technique mix\n")
 L.append(" · ".join(f"{kk}: {v}" for kk, v in sorted(counts.items(), key=lambda z: -z[1])) + "\n")
 L.append("\n---\n")
 for i, x in enumerate(S, 1):
     st = STYLE_DARK if x["dark"] else STYLE
-    L.append(f"\n### Scene {i} · {mmss(x['t0'])}–{mmss(x['t1'])} ({x['t1'] - x['t0']:.1f} s) · {x['tech']}\n")
+    tag = " · REUSE" if x["reuse"] else ""
+    L.append(f"\n#### Scene {i} · {mmss(x['t0'])}–{mmss(x['t1'])} ({x['t1'] - x['t0']:.1f} s) · {x['tech']}{tag}\n")
+    L.append(f"**Revision:** {x['note'] or 'Kept as in v1.'}\n")
     L.append(f"**Narration:** \"{x['narr']}\"\n")
     L.append(f"**Visual Technique:** {x['tech']}\n")
-    L.append(f"**Visual Description:** {fill(x['vis'])}\n")
-    L.append(f"**Composition:** {x['comp']}\n")
-    L.append(f"**Character Details:** {fill(x['chars'])}\n")
-    L.append(f"**Environment:** {x['env']}\n")
+    L.append(f"**Scene Description:** {fill(x['vis'])}\n")
+    L.append(f"**Composition and framing:** {x['comp']}\n")
+    L.append(f"**Characters:** {fill(x['chars'])}\n")
+    L.append(f"**Environment and cultural details:** {x['env']}\n")
     L.append(f"**Animation Direction:** {x['anim']}\n")
-    L.append(f"**Image Generation Prompt:**\n```\n{fill(x['prompt'])} {st} {NEG}\n```\n")
+    if x["reuse"]:
+        L.append(f"**Image Generation Prompt:** none: reuse the image from {x['reuse']}.\n")
+    else:
+        L.append(f"**Image Generation Prompt:**\n```\n{fill(x['prompt'])} {st} {NEG}\n```\n")
     L.append(f"**Animation Prompt:**\n```\n{fill(x['aprompt'])} {KEEP}\n```\n")
     L.append(f"**Transition out:** {x['trans']}\n")
+if "<!-- PART F -->" in audit:
+    L.append(audit.split("<!-- PART F -->")[1])
 (HERE / "storyboard-editorial.md").write_text("\n".join(L), encoding="utf-8")
 long_ = [(i + 1, x["t1"] - x["t0"]) for i, x in enumerate(S) if x["t1"] - x["t0"] > 12]
-print(f"{len(S)} scenes, {mmss(total)}, narration matches word for word; techniques: {counts}")
+print(f"{len(S)} scenes ({new_imgs} new images), {mmss(total)}, narration matches word for word; techniques: {counts}")
+print("revised:", [i + 1 for i, x in enumerate(S) if x["note"]])
+print("reuse:", [i + 1 for i, x in enumerate(S) if x["reuse"]])
 print("scenes over 12 s:", long_)
