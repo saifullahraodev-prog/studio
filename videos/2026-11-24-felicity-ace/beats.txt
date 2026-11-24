@@ -88,3 +88,42 @@ xiamen mode=spark || || One wasn't done properly, and an electrical fault starte
 xiamen mode=fire || [1+ WEEK] || That ship burned for more than a week. Nine firefighters were injured,
 xiamen mode=loss || [2,420] CARS LOST || and the ship and all two thousand four hundred and twenty cars were a total loss.
 xiamen mode=scale || || So any car carrier fire is hard. Electric cars just add one more problem nobody had fully solved.
+# --- PART 3 = sections 7-9 (two weeks adrift, the bill, the mystery). New templates: templates7c.tsx
+# --- 7. Two weeks adrift
+salvage mode=team || SMIT SALVAGE || The owners called in a salvage company, Smit Salvage, from the Netherlands.
+salvage mode=plane || [16] EXPERTS || They flew a team of sixteen experts to the Azores.
+salvage mode=spray || COOLING THE HULL || Tugs reached the ship and started spraying her with water, to cool the hull from the outside.
+salvage mode=days || || Day after day, the fire kept burning inside.
+salvage mode=calmer || || Little by little, the flames died down.
+salvage mode=board || || When it was safe enough, a salvage team climbed on board from a small patrol boat to see what was left.
+salvage mode=tow || TUG "BEAR" || Then a big salvage tug called Bear got a line on board and started towing her toward calmer water off the Azores.
+salvage mode=lean || [1 MARCH] || Then, on the first of March, she started to lean to one side.
+pc mode=sink || [09:11] || At eleven minutes past nine in the morning, the Felicity Ace sank.
+salvage mode=cars || [3,965] CARS LOST || And all three thousand nine hundred and sixty-five cars went with her.
+salvage mode=oil || || The tugs stayed for a few days, watching for oil leaking from the wreck.
+salvage mode=sat || NO NEW OIL SEEN || The operator said no new oil spills were seen, and after that the site was watched by satellite and from the air.
+# --- 8. The bill
+bill mode=receipt || WHO PAYS? || So who paid?
+bill mode=showroom || || Some of the people waiting for a new Porsche or Bentley had to wait a lot longer.
+bill mode=lambo || || And Lamborghini did something unusual. It had already finished building the Aventador.
+bill mode=seafloor || [15] ON THE SEA FLOOR || But fifteen of the last ones were now on the sea floor.
+bill mode=factory || PRODUCTION RESTARTED || So it restarted production, just to build those fifteen cars again.
+court7 || WHO WAS TO BLAME? || But the biggest question was still open. Who was to blame?
+# --- 9. The mystery
+case mode=panama || PANAMA INVESTIGATES || The ship flew the flag of Panama, so Panama's maritime authority investigated.
+case mode=taycan || "A PORSCHE TAYCAN" || According to the crew, the fire started on an electric Porsche Taycan.
+case mode=unknown || CAUSE: UNKNOWN || But the report also said the reason the car caught fire was unknown.
+case mode=causes || || It listed possible causes, like a faulty battery cell, damage during assembly, or a short circuit, but it couldn't prove any of them.
+case mode=question || COULD IT BE STOPPED? || The report also asked a hard question. Could the fire have been stopped early?
+case mode=photo || THE CREW'S PHOTO || A crew member had taken a photo inside deck one, and in it, the investigators could still see the cars and the lights.
+case mode=hoses || || They thought a fire team might have been able to go in, use the hoses already fitted on the deck, and stop the fire spreading from car to car.
+case mode=training || NO SPECIAL TRAINING || But they also found that the crew had no special training for car deck fires, or for electric cars,
+case mode=confidence || || and little confidence going into a space like that.
+foam mode=fans || THE FANS? || And the fans that never started?
+case mode=fan || CABLES DAMAGED BY HEAT? || The investigators thought their motor sat on deck one, near the fire, and its cables were probably damaged by the heat.
+case mode=lawsuit || [~€30 MILLION] || The ship's owner and insurers took Porsche to court in Germany, asking for about thirty million euros.
+case mode=warn || "YOU SHOULD HAVE WARNED US" || Their argument: Porsche should have warned them about the risks of shipping electric cars, and how to carry them safely.
+case mode=ruling || STUTTGART · MAY 2026 || In May twenty twenty-six, a court in Stuttgart rejected the claim.
+case mode=notproven || [NOT CONVINCED] || The judges said they were not convinced that a Taycan had started the fire.
+case mode=appeal || || That ruling can still be appealed, and a second case in another German court is still going.
+case mode=shrug || STILL A MYSTERY || So, four years later, nobody has officially proven exactly what started it.

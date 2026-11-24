@@ -647,3 +647,6 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
 - 2026-11-24: owner approved Part 1 (with the redrawn ship). PART 2 (sections 3-6: smoke on deck one, the foam system, abandon ship,
   rescue, why it burned, Höegh Xiamen; 2:05-5:41): beats 31-80, new `engine/shipguy/templates7b.tsx` (deckmap, lookaft, radio7, door7,
   cool7, foam, abandon, rescue, why7, xiamen). Storyboard `storyboard/p2-*.png`. GATE: owner OK on Part 2 stills.
+- 2026-11-24: owner approved Part 2. PART 3 (sections 7-9: salvage + sinking + oil watch, the bill, the mystery/lawsuit/ruling;
+  5:47-9:29): beats 81-115, new `engine/shipguy/templates7c.tsx` (salvage, bill, case). Storyboard `storyboard/p3-*.png`.
+  GATE: owner OK on Part 3 stills.
