@@ -656,3 +656,5 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
 - 2026-11-24: owner approved Part 4. Sound: Felicity Ace rules in `tools/shipguy_mix.py` (Fremantle cuts soft, no comic sounds there);
   `mix.wav` voice + SFX only, 316 events, -15.1 LUFS / -1.4 dBTP. Subtitles: 208 burned-in cues (`subs.json`), YouTube file
   `felicity-ace.en.srt` (219 cues). GATE: ask owner before test/full render.
+- 2026-11-24: owner OK'd a test -> `videos/2026-11-24-felicity-ace/out/test-60s.mp4` (frames 0-1799, -14.9 LUFS, no black/frozen).
+  GATE: owner feedback, then full render.
