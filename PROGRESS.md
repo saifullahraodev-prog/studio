@@ -629,3 +629,11 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
 - DONE 2026-11-20: `videos/2026-11-19-aircraft-carrier/out/carrier-final.mp4` (1080p30, 10:16, -15.0 LUFS, peak -4.3 dBFS, 0 black,
   0 frozen; voice + SFX, no music). Upload kit: `thumbnails/thumb-C{A,B,C}.jpg` (`engine/shipguy/ThumbCarrier.tsx`),
   `aircraft-carrier.en.srt` (224 cues), `youtube-upload.txt` (title, description, 12 chapters, sources, tags, end screen).
+
+## 2026-11-24: The Ship Guy long-form #7 "The Ship That Sank With 4,000 Luxury Cars" (Felicity Ace) — script draft v1
+- Analytics (last 28 days, 22 Nov): carrier video (uploaded as "How Aircraft Carriers Stop Fighter Jets in 2 Seconds") 110 views,
+  CTR 2.3%, AVD 2:26 of 10:16; money titles click best (cargo-ship cost 5.7%, $100k/day 4.2%); disaster stories hold best (Dali).
+  Owner picked the Felicity Ace (disaster + money hook).
+- `videos/2026-11-24-felicity-ace/script.md` (1,756 words, ~10:00) + `narration.txt`. Main source: Panama Maritime Authority report
+  R-013-2022-DIAM (read in full: 3,965 vehicles / 574 EVs, alarm 08:30 deck 1, foam fans failed, abandon ship, sank 1 Mar 09:11,
+  conclusions 8.1-8.16). Plus NTSB Höegh Xiamen, Stuttgart ruling May 2026, Lamborghini restart. GATE: owner approves script.
