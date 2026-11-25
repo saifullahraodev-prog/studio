@@ -297,7 +297,7 @@ const Route7: Tpl = ({ t }) => {
         <circle cx={A[0]} cy={A[1]} r={16} fill={RED} {...O(4)} /><T3 x={A[0] - 30} y={A[1] - 40} size={44} anchor="end">EMDEN, GERMANY</T3>
         <circle cx={B[0]} cy={B[1]} r={16} fill={RED} {...O(4)} /><T3 x={B[0] + 20} y={B[1] + 70} size={44} anchor="start">RHODE ISLAND, USA</T3>
         <g transform={`translate(${sx} ${sy}) scale(0.16)`}><Pctc L={1000} name={false} /></g>
-        <T3 x={960} y={940} size={60} color={YEL} o={ramp(t, 30, 40)}>~3,500 NAUTICAL MILES</T3>
+        <T3 x={960} y={250} size={60} color={YEL} o={ramp(t, 30, 40)}>~3,500 NAUTICAL MILES</T3>
       </Svg>
     </AbsoluteFill>
   );
@@ -344,7 +344,7 @@ const Price7: Tpl = ({ t, w, p }) => {
         </g>
         <Quay x0={-40} x1={520} y={930} h={200} />
         <Actor a="shock" t={Math.max(0, t - 18)} x={260} y={940} s={0.45} id="p7" w={w} />
-        {!hook && <T3 x={1500} y={980} size={40} o={ramp(t, 20, 30)}>(INSURANCE ANALYST ESTIMATE)</T3>}
+        {!hook && <T3 x={1300} y={500} size={40} o={ramp(t, 20, 30)}>(INSURANCE ANALYST ESTIMATE)</T3>}
       </Svg>
     </AbsoluteFill>
   );
@@ -370,9 +370,13 @@ const Ev7: Tpl = ({ t, d, p }) => {
 };
 
 /** safety rounds: a crew member with a torch walks between the cars, clock ticks, green ticks */
-const Rounds: Tpl = ({ t, d }) => {
+const Rounds: Tpl = ({ t, d, w }) => {
   const times = ["01:00", "05:00", "07:00"];
-  const idx = Math.min(2, Math.floor((t / Math.max(1, d)) * 3));
+  // the clock follows the spoken words "One… Five… Seven in the morning" (word 13, 17, 21 of the line)
+  const at = (i: number, f: number) => (w && w[i] ? w[i][0] : f);
+  const s1 = at(13, d * 0.4), s2 = at(17, d * 0.6), s3 = at(21, d * 0.8);
+  const idx = t >= s3 ? 2 : t >= s2 ? 1 : t >= s1 ? 0 : -1;
+  const since = idx === 2 ? t - s3 : idx === 1 ? t - s2 : t - s1;
   const x = 200 + ((t * 6) % 1500);
   return (
     <AbsoluteFill>
@@ -381,12 +385,12 @@ const Rounds: Tpl = ({ t, d }) => {
         <rect x={0} y={0} width={W} height={120} fill="#2a2f35" />
         {Array.from({ length: 6 }).map((_, i) => <rect key={i} x={120 + i * 320} y={40} width={200} height={24} rx={6} fill="#fff7c2" opacity={0.8} />)}
         {Array.from({ length: 8 }).map((_, i) => <g key={i} transform={`translate(${140 + i * 230} 760)`}><Car kind={(["sport", "suv", "sedan", "super"] as CarKind[])[i % 4]} c={CAR_COLORS[i % CAR_COLORS.length]} s={2} /></g>)}
-        <path d={`M${x + 40} 560 L ${x + 400} 470 L ${x + 400} 650 Z`} fill="#fff7c2" opacity={0.25} />
-        <Actor a="talk" t={t} x={x} y={900} s={0.5} id="round" outfit="coverall" over={{ pose: { ...IDLE, armR: [80, 10] }, prop: "phone", face: FACES.confident }} />
+        <path d={`M${x + 160} 745 L ${x + 560} 640 L ${x + 560} 850 Z`} fill="#fff7c2" opacity={0.28} />
+        <Actor a="talk" t={t} x={x} y={900} s={0.5} id="round" outfit="coverall" over={{ pose: { ...IDLE, armR: [80, 10] }, prop: "torch", face: FACES.confident }} />
         <g transform="translate(1600 300)">
           <rect x={-200} y={-80} width={400} height={160} rx={20} fill="#0b1426" {...O(6)} />
-          <text x={-40} y={30} textAnchor="middle" fontFamily="monospace" fontWeight={700} fontSize={80} fill="#4dff7a">{times[idx]}</text>
-          <g transform={`translate(130 0) scale(${pop(t % (d / 3), 10)})`}><circle r={46} fill="#3f9a4f" {...O(5)} /><path d="M-20 0 L -4 16 L 22 -16" stroke="#fff" strokeWidth={10} fill="none" strokeLinecap="round" /></g>
+          <text x={-40} y={30} textAnchor="middle" fontFamily="monospace" fontWeight={700} fontSize={80} fill="#4dff7a">{idx < 0 ? "--:--" : times[idx]}</text>
+          <g transform={`translate(130 0) scale(${idx < 0 ? 0 : pop(since, 6)})`}><circle r={46} fill="#3f9a4f" {...O(5)} /><path d="M-20 0 L -4 16 L 22 -16" stroke="#fff" strokeWidth={10} fill="none" strokeLinecap="round" /></g>
         </g>
       </Svg>
     </AbsoluteFill>

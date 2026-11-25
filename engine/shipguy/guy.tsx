@@ -18,7 +18,7 @@ export type Brows = "none" | "up" | "worried" | "angry" | "one";
 export type Mouth = "smile" | "grin" | "smirk" | "flat" | "o" | "scream" | "frown" | "wavy" | "teeth";
 export type Face = { eyes: Eyes; brows: Brows; mouth: Mouth; lookX?: number; lookY?: number };
 export type Hand = "mitt" | "open" | "point" | "thumb";
-export type PropName = "clipboard" | "mug" | "spade" | "phone" | "hammer" | "rod" | "magnifier" | "label" | "radio" | "binoculars" | "mic" | "hose" | "extinguisher" | "none";
+export type PropName = "clipboard" | "mug" | "spade" | "phone" | "hammer" | "rod" | "magnifier" | "label" | "radio" | "binoculars" | "mic" | "hose" | "extinguisher" | "torch" | "none";
 export type Outfit = "ship" | "pilot" | "captain" | "officer" | "coverall" | "road" | "jersey" | "aviator" | "fire";
 export type Emote = "sweat" | "!" | "?" | "steam" | "stars" | "idea";
 
@@ -209,6 +209,13 @@ const Held: React.FC<{ prop: PropName; x: number; y: number }> = ({ prop, x, y }
       <rect x={0} y={0} width={48} height={74} rx={18} fill="#2a2d33" stroke={INK} strokeWidth={6} />
       {[0, 1, 2].map((i) => <line key={i} x1={12} y1={16 + i * 12} x2={36} y2={16 + i * 12} stroke="#5a636c" strokeWidth={4} />)}
       <path d="M24 74 q -20 14 0 22 q 20 8 0 22 q -20 8 0 22 q 20 8 0 22" stroke={INK} strokeWidth={5} fill="none" />
+    </g>
+  );
+  if (prop === "torch") return (
+    <g transform={`translate(${x} ${y}) rotate(-6)`}>
+      <rect x={-10} y={-18} width={70} height={30} rx={8} fill="#e0a23b" stroke={INK} strokeWidth={5} />
+      <rect x={56} y={-24} width={22} height={42} rx={6} fill="#5a636c" stroke={INK} strokeWidth={4} />
+      <ellipse cx={78} cy={-3} rx={6} ry={16} fill="#fff7c2" />
     </g>
   );
   if (prop === "extinguisher") return (
