@@ -1,0 +1,75 @@
+TITLE (use this one)
+The Ship That Sank With 4,000 Luxury Cars
+
+Other title options (for later A/B tests):
+- A $400 Million Cargo of Supercars Burned at Sea
+- Why Nobody Could Put Out This Ship Fire
+- 4,000 Porsches, Bentleys and Lamborghinis Lost at Sea
+
+THUMBNAIL (in the thumbnails folder)
+- thumb-FA.jpg  "$400M": the burning car carrier, a burning supercar in a circle, the Ship Guy shocked in a little boat (recommended)
+- thumb-FB.jpg  "4,000 CARS": the ship going down with cars sliding off, the Ship Guy panicking in a boat (good second for YouTube's thumbnail test)
+- thumb-FC.jpg  "WHO DID IT?": one glowing electric car on a dark car deck, the Ship Guy suspicious
+
+=====================================================================
+
+DESCRIPTION (paste everything between the lines)
+---------------------------------------------------------------------
+On 16 February 2022, the car carrier Felicity Ace was crossing the Atlantic with 3,965 brand-new cars on board, including Porsches, Bentleys and the very last Lamborghini Aventadors. At 8:30 in the morning, a smoke alarm went off on deck one. Two weeks later, the ship and every car on it were at the bottom of the ocean.
+
+Nobody died. But the cargo was worth hundreds of millions of dollars, and four years later, a court still couldn't say for sure what started the fire. This is the story of that morning, why the ship's foam system failed, why car carrier fires are so hard to put out, and the court case that followed.
+
+⏱ CHAPTERS
+0:00 8:30 a.m.
+0:36 A car park that floats
+1:41 A quiet voyage
+2:11 Smoke on deck one
+3:12 Plan B
+4:02 The rescue
+4:28 Why it wouldn't go out
+6:02 Two weeks adrift
+7:01 The bill
+7:22 The mystery
+8:55 It happened again
+9:24 Back to 8:30
+
+📊 KEY FACTS
+• Ship: Felicity Ace, car carrier, ~200 m, built 2005, 11 car decks, room for 5,000+ cars
+• Cargo: 3,965 vehicles, 574 of them electric (Panama Maritime Authority report)
+• About 1,100 Porsches, 189 Bentleys and 15 Lamborghini Aventador Ultimae
+• Cargo value: around $400 million (insurance analyst estimate)
+• Fire detected 08:30, 16 February 2022, deck 1; the foam system's fans did not start; all 22 crew rescued
+• Sank under tow, 1 March 2022, 09:11
+• May 2026: a court in Stuttgart rejected the owner's and insurers' claim against Porsche (not convinced a Taycan started the fire; appeal possible)
+
+We remember the crew member who died in the 2023 Fremantle Highway fire.
+
+🚢 Watch next: Why Cargo Ships Cost $100,000+ a Day to Operate
+🚢 Also: How Aircraft Carriers Stop Fighter Jets in 2 Seconds
+
+📚 SOURCES
+• Panama Maritime Authority, investigation report R-013-2022-DIAM (Felicity Ace): https://maritimesafetyinnovationlab.org/wp-content/uploads/2025/03/Panama-Felicity-Ace-Cargo-Fire-Sinking-March-2022.pdf
+• Portuguese Air Force, crew rescue: https://www.emfa.pt/paginas/fap/ficheiros/comunicados/2022/02/helicopterodaforcaaerearesgata22tripulantesdenavioaposincendioabordo_1645107990.pdf
+• 22 crew rescued: https://maritime-executive.com/article/22-crewmembers-of-burning-ro-ro-safely-rescued-off-the-azores
+• Sinking under tow: https://www.marinelink.com/news/burnt-car-carrier-felicity-ace-sinks-494679
+• Porsche and Bentley numbers: https://www.npr.org/2022/02/17/1081620129/porsche-volkswagen-burning-cargo-ship
+• Cargo value estimate: https://maritime-executive.com/article/cost-of-felicity-ace-ro-ro-fire-could-top-400-million
+• Lamborghini restarted production: https://www.motor1.com/news/574081/lamborghini-aventador-ultimate-production-restart/
+• Stuttgart ruling, May 2026: https://gcaptain.com/porsche-wins-felicity-ace-lawsuit-as-cause-of-fire-remains-unproven/
+• NTSB, Höegh Xiamen fire (2020): https://www.ntsb.gov/news/press-releases/Pages/mr20211216.aspx
+• Fremantle Highway fire (2023): https://maritime-executive.com/article/report-details-confused-and-chaotic-rescue-for-north-sea-car-carrier-fire
+• EMSA guidance on electric cars in ro-ro spaces: https://www.emsa.europa.eu/publications/reports/download/8189/4729/23.html
+
+Subscribe to The Ship Guy for more stories about the biggest, strangest and most expensive ships on Earth.
+
+#FelicityAce #Shipwreck #Ships
+---------------------------------------------------------------------
+
+TAGS (YouTube Studio → Show more → Tags; paste as one line)
+felicity ace, car carrier fire, ship carrying porsches sank, luxury cars lost at sea, porsche taycan fire, electric car fire ship, lamborghini aventador sank, bentley ship fire, ro-ro ship fire, ship fire atlantic, cargo ship sinking, the ship guy
+
+CATEGORY: Education
+SUBTITLES: the video already has subtitles burned in. Also upload felicity-ace.en.srt under Subtitles (English, "With timing")
+so YouTube's own captions, search and auto-translate work.
+END SCREEN: the last ~9 seconds point to the "$100,000 a day" video. In YouTube Studio → End screen, place the video element over the
+dark "$100,000 / DAY" card (left side) and a Subscribe element over the red button.

@@ -682,3 +682,7 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
 - 2026-11-25: `out/part1.mp4` (2:11, -15.0 LUFS, no black/frozen). Fixed before sending: safety-rounds sailor held a phone -> new
   `torch` prop with the beam from it; the clock now follows the spoken "one / five / seven" (word timings); "~3,500 nautical miles" and
   "(insurance analyst estimate)" moved off the subtitles. All 4 parts rendered; next: join into the final video.
+- DONE 2026-11-25: `videos/2026-11-24-felicity-ace/out/felicity-final.mp4` (1080p30, 10:01, 18,035 frames = parts 1-4 joined by stream
+  copy + the full mix.wav as audio; -15.1 LUFS, peak -1.2 dBFS, 0 black, 0 frozen). Upload kit: `thumbnails/thumb-F{A,B,C}.jpg`
+  (`engine/shipguy/ThumbFelicity.tsx`, Ship Guy in a boat, not in the sea), `felicity-ace.en.srt`, `youtube-upload.txt`
+  (title, description, 12 chapters, key facts, sources, tags, end screen).
