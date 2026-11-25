@@ -430,7 +430,7 @@ const Court7: Tpl = ({ t, p, w }) => {
         </g>
         {/* the judge behind the bench */}
         <Actor a="talk" t={t} x={960} y={880} s={0.6} id="judge" outfit="officer" w={w} over={{ face: { eyes: "half", brows: "one", mouth: "flat" } }} />
-        <path d="M918 640 Q 960 626 1002 640 L 1030 780 L 890 780 Z" fill="#1d1d22" {...O(5)} />
+        <path d="M914 690 Q 960 676 1006 690 L 1036 780 L 884 780 Z" fill="#1d1d22" {...O(5)} /><path d="M944 684 L 960 712 L 976 684" fill="#f4f4f0" stroke={INK} strokeWidth={3} />
         <rect x={560} y={760} width={800} height={320} fill="#7a4a2a" {...O(8)} />
         <rect x={600} y={790} width={720} height={40} fill="#8a5a3a" />
         <g transform={`translate(1180 740) rotate(${-50 + g * 50} 0 0)`}><rect x={-10} y={-120} width={20} height={120} fill="#5a3a22" {...O(4)} /><rect x={-50} y={-150} width={100} height={46} rx={10} fill="#5a3a22" {...O(5)} /></g>

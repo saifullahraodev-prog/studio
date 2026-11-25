@@ -108,7 +108,7 @@ bill mode=showroom || || Some of the people waiting for a new Porsche or Bentley
 bill mode=lambo || || And Lamborghini did something unusual. It had already finished building the Aventador.
 bill mode=seafloor || [15] ON THE SEA FLOOR || But fifteen of the last ones were now on the sea floor.
 bill mode=factory || PRODUCTION RESTARTED || So it restarted production, just to build those fifteen cars again.
-court7 q=blame || WHO WAS TO BLAME? || But the biggest question was still open. Who was to blame?
+court7 q=blame || || But the biggest question was still open. Who was to blame?
 # --- 9. The mystery
 case mode=panama || PANAMA INVESTIGATES || The ship flew the flag of Panama, so Panama's maritime authority investigated.
 case mode=taycan || "A PORSCHE TAYCAN" || According to the crew, the fire started on an electric Porsche Taycan.

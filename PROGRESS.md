@@ -676,3 +676,5 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
 - 2026-11-24 owner: binoculars looked like a mask, radios covered faces, extinguisher floated by the head -> officer scans with arms
   folded (eyes move), radios held below the chin (armR [40,128]), new `extinguisher` prop held at the side. `out/part2.mp4` v3.
   Lesson: never put a held prop over the face; check props against the head in a full-size still.
+- 2026-11-24: `out/part3.mp4` (2:53, -15.2 LUFS, no black/frozen). Fixed before sending: judge's robe started too high (looked like
+  a beard) -> robe from the collar + white collar; removed the caption on the "who was to blame?" court shot (the board already says it).
