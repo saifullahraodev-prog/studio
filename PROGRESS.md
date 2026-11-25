@@ -678,3 +678,4 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   Lesson: never put a held prop over the face; check props against the head in a full-size still.
 - 2026-11-24: `out/part3.mp4` (2:53, -15.2 LUFS, no black/frozen). Fixed before sending: judge's robe started too high (looked like
   a beard) -> robe from the collar + white collar; removed the caption on the "who was to blame?" court shot (the board already says it).
+- 2026-11-25: `out/part4.mp4` (1:06, -15.4 LUFS, no black/frozen). Remaining: full Part 1 render (0-3945), then join P1-P4.
