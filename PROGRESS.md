@@ -691,3 +691,4 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   Investigative Body report (read from the PDF via `pdf2png.ps1` page renders); salvage facts from gCaptain / Professional Mariner / Marine Log.
   Quiet sections (deaths, rescue, diver) have no gags. Waiting for owner script approval.
 - 2026-11-26: owner APPROVED Costa Concordia script (hook v2: the bill first). Next: owner records the CapCut voice from `narration.txt`.
+- 2026-11-26: Costa voice in (CapCut, 9:28 -> 9:25 after gentle tighten, 4 pauses). New `engine/shipguy/templates8.tsx` (Liner side/end/top views, bill8, wreck8, roll8, night8, liner8, map8, count8, pass8, speed8, report8, bridge8, rocks8). Part 1 = beats 1-35 (0:00-~2:04), storyboard p0-p2 sent for approval.

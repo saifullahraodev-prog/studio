@@ -1,0 +1,41 @@
+# The $2 Billion Job to Raise a Sunken Cruise Ship (The Ship Guy #8, Costa Concordia). Retention-first: ~3.5 s shots, a sound on every cut, NO music.
+# Built part by part. PART 1 = hook (the bill first) + the ship + the route + too close / too fast (sections 0-2). New templates: engine/shipguy/templates8.tsx.
+# Serious story: the Ship Guy reacts only in the money / engineering beats; the "thirty-two lives" beat and all night shots stay quiet.
+# --- 0. Hook: the bill first
+bill8 stage=1 || TO BUILD || This cruise ship cost about four hundred and fifty million euros to build.
+bill8 stage=2 || TO GET RID OF HER || Getting rid of her cost more than three times that.
+wreck8 mode=x || NOT TO || Not to repair her. Not to sail her again.
+wreck8 mode=scrap || OFF A ROCK || Just to get her off a rock, and cut her up for scrap.
+roll8 stage=1 || ROLL HER UPRIGHT || To do it, engineers had to roll a ship almost three hundred metres long back upright,
+roll8 stage=2 || WITHOUT BREAKING HER || in one piece, without breaking her in half.
+roll8 stage=3 || || No ship that big had ever been lifted like this.
+map8 mode=rock || WHY? || But why did a modern cruise ship end up on that rock in the first place?
+night8 mode=rewind || ONE NIGHT || To find out, we have to go back to one night.
+night8 mode=dinner || DINNER TIME || A calm sea. A ship full of people at dinner.
+night8 mode=quiet || || And a mistake that cost thirty-two lives.
+# --- 1. A floating city
+liner8 mode=name || COSTA CONCORDIA || The ship was called the Costa Concordia.
+liner8 mode=built || BUILT IN ITALY || Built in Italy in two thousand and six,
+liner8 mode=len || || she was about two hundred and ninety metres long,
+liner8 mode=pax || ROOM FOR || with room for more than three thousand seven hundred passengers.
+liner8 mode=xray || || Pools, theatres, restaurants, a spa.
+liner8 mode=city || FLOATING CITY || Basically a floating city.
+map8 mode=depart || WEEK-LONG CRUISE || That night, she had just left the port of Civitavecchia, near Rome, on a week-long cruise around the Mediterranean.
+count8 || ON BOARD || On board were three thousand two hundred and six passengers and one thousand and twenty-three crew.
+night8 mode=calm || GOOD WEATHER || The weather was good. The sea was calm.
+map8 mode=route || NEXT STOP || The next stop was Savona, in the north.
+map8 mode=giglio || SMALL ISLAND || And the route went past a small island called Giglio.
+# --- 2. Too close, too fast
+pass8 mode=normal || PLENTY OF ROOM || Now, a big ship normally passes an island like that with plenty of room to spare.
+pass8 mode=close || MUCH CLOSER || But that night, the ship was taken much closer to the coast than usual.
+pass8 mode=half || FROM THE SHORE || The plan was to pass about half a mile from the shore.
+night8 mode=dark || VERY FEW LIGHTS || At night. In an area with very few lights.
+speed8 || FAST || And she was moving fast. About sixteen knots.
+speed8 mode=kmh || SMALL TOWN || That's roughly thirty kilometres an hour, for a ship that weighs as much as a small town.
+report8 n=0 || THE BRIDGE || Italy's official investigators later went through everything that happened on the bridge.
+report8 n=1 || || They wrote that the close pass had been planned on a chart that wasn't detailed enough for it.
+report8 n=2 || || That people who weren't part of the watch were on the bridge.
+report8 n=3 || || And that there was a phone call that had nothing to do with navigation.
+bridge8 || OFFICERS ON DUTY || They also said something about the officers on duty.
+bridge8 mode=silent || NOBODY || Nobody seemed to push the captain to slow down or turn away in time.
+rocks8 || [TOO LATE] || By the time the danger was clear, it was too late.
