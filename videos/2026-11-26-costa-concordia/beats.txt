@@ -115,3 +115,28 @@ tow8 || ~[200] NAUTICAL MILES || On the twenty-third of July, tugs started towin
 tow8 mode=genoa || GENOA || On the twenty-seventh, she arrived in Genoa.
 yard8 || ~[3] YEARS || There, it took around three years to take her apart.
 yard8 mode=recycle || RECYCLED || About ninety per cent of the ship was recycled.
+# ================= PART 4 = the bill, the verdicts, back to that night (sections 9-10). Templates: engine/shipguy/templates8d.tsx.
+# --- 9. The bill
+cost8 || THE BILL || So how much did all of this cost?
+cost8 mode=tag || REEF TO GENOA || Costa's chief executive said the whole operation, from the reef to Genoa, would cost around one and a half billion euros.
+cost8 mode=usd || ~[$2 BILLION] || Roughly two billion dollars.
+cost8 mode=compare || 3× THE SHIP || Much more than it cost to build the ship in the first place.
+diver8 || || And it wasn't only money. A diver working on the salvage also died.
+court8 || THE CAPTAIN || The captain, Francesco Schettino, was convicted of manslaughter, of causing the shipwreck, and of abandoning the ship.
+court8 mode=years || PRISON || He was sentenced to sixteen years in prison.
+court8 mode=upheld || MAY 2017 || In May twenty seventeen, Italy's highest court upheld that sentence, and he went to jail.
+find8 || NOT ONLY ONE MAN || The official report didn't only blame one man, though.
+find8 n=1 || || It said the flooding was far beyond what the ship was designed to survive.
+find8 n=2 || || That the rules at the time didn't require the ship to have sensors to detect flooding.
+find8 n=3 || || And that the bridge team didn't work as a team.
+# --- 10. Back to 9:45 (quiet recap)
+night8 mode=rewind || THAT NIGHT || So let's go back to that night.
+night8 mode=sail || TOO CLOSE, TOO FAST || Nine forty-five. A calm sea. A ship that was sailing too close, too fast, in the dark.
+rocks8 || ONE ROCK || One rock.
+gash8 || [53 m] || A fifty-three metre gash.
+clock8 || AN HOUR || An hour before anyone was told to leave.
+dawn8 mode=memorial || || Thirty-two people lost.
+float8 mode=rise || TWO YEARS || Two years of engineering to lift what was left.
+cost8 mode=usd || ~[$2 BILLION] || And around two billion dollars.
+empty8 || || All because of a few minutes on the bridge.
+endcard8 || || And if you want to see another ship that lost all her power at the worst possible moment, that story is right here.

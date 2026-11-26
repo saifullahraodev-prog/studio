@@ -696,3 +696,5 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
 - 2026-11-26: Costa Part 2 (beats 36-70, ~2:04-5:05): new `engine/shipguy/templates8b.tsx` (impact8, gash8, comp8 compartments/ice-cube tray, power8, drift8, clock8, shore8, list8, aground8, lifeboat8, ladder8, rescue8, captain8, dawn8 memorial). Storyboard p2-p4 sent.
 - 2026-11-26: owner APPROVED Costa Part 2 storyboard.
 - 2026-11-26: Costa Part 3 (beats 71-103, ~5:05-8:10): new `engine/shipguy/templates8c.tsx` (site8, fuel8, choice8, team8, title8, barrel8, parb8 = parbuckling step by step via `Parb`, float8, tow8, yard8). Storyboard p4-p6 sent.
+- 2026-11-26: owner APPROVED Costa Part 3 storyboard.
+- 2026-11-26: Costa Part 4 (beats 104-125, ~8:07-9:25): new `engine/shipguy/templates8d.tsx` (cost8, diver8, court8, find8, empty8, endcard8 -> Dali video). Quiet recap reuses Part 1-3 shots. Storyboard p6-p7 sent.
