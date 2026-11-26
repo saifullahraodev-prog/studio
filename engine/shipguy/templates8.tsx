@@ -62,7 +62,7 @@ export const Liner: React.FC<{ L?: number; night?: number; dark?: number; gash?:
         <rect x={0} y={0} width={1010} height={60} fill={ANTI} />
         {Array.from({ length: 52 }).map((_, i) => <circle key={i} cx={60 + i * 17} cy={-46} r={2.8} fill={lit(900 + i)} />)}
         {Array.from({ length: 30 }).map((_, i) => <rect key={`d${i}`} x={60 + i * 29} y={-74} width={18} height={10} rx={2} fill={lit(1000 + i)} />)}
-        {gash > 0 && <path d={`M${560} -8 l 16 -10 l 14 14 l 18 -12 l 16 12 l 20 -12 l 14 12 l 18 -10 l 16 10 l 18 -8 l 0 14 l -${150 * gash} 6 Z`} fill="#1a1414" opacity={gash} />}
+        {gash > 0 && <path d={`M${560} 8 l 16 -8 l 14 12 l 18 -10 l 16 12 l 20 -12 l 14 12 l 18 -10 l 16 10 l 18 -8 l 0 16 l -${150 * gash} 4 Z`} fill="#1a1414" opacity={gash} />}
       </g>
       <path d={LHULL} fill="none" {...O(sw(5))} />
       {name && <Txt x={810} y={-28} s={18} c={NAVY8}>COSTA CONCORDIA</Txt>}
@@ -114,7 +114,7 @@ export const LinerTop: React.FC<{ s?: number; night?: boolean }> = ({ s = 1, nig
 );
 
 // ================================================================== shared bits
-const Quay8: React.FC<{ x0: number; x1: number; y: number; h?: number }> = ({ x0, x1, y, h = 200 }) => (
+export const Quay8: React.FC<{ x0: number; x1: number; y: number; h?: number }> = ({ x0, x1, y, h = 200 }) => (
   <g>
     <rect x={x0} y={y} width={x1 - x0} height={h} fill="#a8aaa4" {...O(6)} />
     <rect x={x0} y={y} width={x1 - x0} height={16} fill="#c9cbc4" />
@@ -131,7 +131,7 @@ const Tag: React.FC<{ x: number; y: number; s: number; text: string; c?: string;
   </g>
 );
 /** a rocky Mediterranean island seen from the sea (side view), harbour houses on the slope */
-const Island: React.FC<{ x: number; y: number; s?: number; night?: boolean }> = ({ x, y, s = 1, night }) => (
+export const Island: React.FC<{ x: number; y: number; s?: number; night?: boolean }> = ({ x, y, s = 1, night }) => (
   <g transform={`translate(${x} ${y}) scale(${s})`}>
     <path d="M-520 0 Q -460 -180 -300 -230 Q -160 -300 -20 -240 Q 120 -190 220 -80 Q 280 -30 320 0 Z" fill={night ? "#1d2a22" : "#6f8a4f"} {...O(6)} />
     <path d="M-520 0 Q -480 -60 -420 -70 Q -360 -40 -330 0 Z" fill={night ? "#2a2f35" : "#9aa4ad"} {...O(4)} />

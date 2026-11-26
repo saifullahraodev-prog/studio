@@ -692,3 +692,5 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   Quiet sections (deaths, rescue, diver) have no gags. Waiting for owner script approval.
 - 2026-11-26: owner APPROVED Costa Concordia script (hook v2: the bill first). Next: owner records the CapCut voice from `narration.txt`.
 - 2026-11-26: Costa voice in (CapCut, 9:28 -> 9:25 after gentle tighten, 4 pauses). New `engine/shipguy/templates8.tsx` (Liner side/end/top views, bill8, wreck8, roll8, night8, liner8, map8, count8, pass8, speed8, report8, bridge8, rocks8). Part 1 = beats 1-35 (0:00-~2:04), storyboard p0-p2 sent for approval.
+- 2026-11-26: owner APPROVED Costa Part 1 storyboard.
+- 2026-11-26: Costa Part 2 (beats 36-70, ~2:04-5:05): new `engine/shipguy/templates8b.tsx` (impact8, gash8, comp8 compartments/ice-cube tray, power8, drift8, clock8, shore8, list8, aground8, lifeboat8, ladder8, rescue8, captain8, dawn8 memorial). Storyboard p2-p4 sent.

@@ -39,3 +39,42 @@ report8 n=3 || || And that there was a phone call that had nothing to do with na
 bridge8 || OFFICERS ON DUTY || They also said something about the officers on duty.
 bridge8 mode=silent || NOBODY || Nobody seemed to push the captain to slow down or turn away in time.
 rocks8 || [TOO LATE] || By the time the danger was clear, it was too late.
+# ================= PART 2 = the rock, the missing hour, abandon ship (sections 3-5). Templates: engine/shipguy/templates8b.tsx.
+# --- 3. The rock
+impact8 || [21:45:07] || At nine forty-five and seven seconds,
+impact8 mode=hit || THE SCOLE ROCKS || the Costa Concordia hit a group of rocks off Giglio called the Scole.
+gash8 || ~[53 m] GASH || The rock tore a gash in the left side of the hull, fifty-three metres long, below the waterline.
+comp8 mode=tray || STAYING AFLOAT || To understand why that was so bad, you need to know how a ship stays afloat when it's damaged.
+comp8 mode=walls || WATERTIGHT COMPARTMENTS || The hull is split into watertight compartments, like an ice cube tray.
+comp8 mode=one || STILL FLOATS || If one or two flood, the ship should still float.
+comp8 mode=five || [5] AT ONCE || The Concordia's gash opened five of them at once.
+comp8 mode=heart || THE HEART OF THE SHIP || And those five held the heart of the ship. The engine room. The propulsion motors. All six of the main generators.
+power8 || BLACKOUT || So within moments, the ship lost her engines and her power.
+power8 mode=flicker || ON AND OFF || The emergency generator kept cutting in and out.
+power8 mode=rudder || RUDDER STUCK || And the rudder was stuck, turned hard to one side.
+drift8 || DRIFTING || A ship with more than four thousand people on board was now drifting in the dark, with water rushing in.
+# --- 4. The missing hour
+clock8 || [1 HOUR+] || And here's the part that still shocks people. For more than an hour, the ship did not order everyone to leave.
+shore8 || FROM THE SHORE || At first, the coast guard didn't even hear it from the ship.
+shore8 mode=boat || [22:16] RESCUE STARTS || Someone on shore raised the alarm, and the rescue started at sixteen minutes past ten.
+comp8 mode=deck || [22:27] || By twenty-seven minutes past ten, the water had reached the deck that's supposed to stay dry, the top of the watertight compartments.
+comp8 mode=spill || SPILLING OVER || And once that happens, the sea can spill from one compartment into the next, like water tipping over the top of an ice cube tray.
+clock8 mode=line || DISTRESS CALL || The official distress call only came at twenty-two thirty-eight. And the order to abandon ship came at five to eleven.
+clock8 mode=gap || MORE THAN AN HOUR || That's more than an hour after the rocks.
+clock8 mode=alarm || GENERAL ALARM || And before it, the general emergency alarm that should have warned everyone in time was not sounded straight away.
+list8 mode=lean || LEANING || By then, the ship had already started to lean.
+aground8 || ONE PIECE OF LUCK || There was one piece of luck. With the rudder jammed, the drifting ship turned around by herself and drifted back toward the island.
+aground8 mode=shelf || [~23:00] AGROUND || At around eleven o'clock, she ran aground on a rock shelf near Giglio's little harbour, just off the shore.
+aground8 mode=open || OPEN WATER || If she had sunk in open water, it could have been much worse.
+# --- 5. Abandon ship (quiet: no gags, no comic sounds)
+lifeboat8 || [22:55] || The first lifeboats went down at five to eleven, and reached the shore a quarter of an hour later.
+list8 mode=deg || KEPT LEANING || But the ship kept leaning. Forty degrees around midnight. Later, almost eighty.
+list8 mode=high || HIGH SIDE || On a ship leaning that far, lifeboats on the high side can't be lowered at all.
+list8 mode=walls || || Corridors become walls. Stairs become ladders.
+ladder8 || || People climbed down rope ladders on the side of the hull, waited on deck, or jumped into the sea and swam for the rocks.
+rescue8 || THE RESCUE || Twenty-five patrol boats, fourteen other vessels, four tugs and eight helicopters joined the rescue.
+rescue8 mode=island || GIGLIO || The people of Giglio opened their homes, their churches and their school to the survivors.
+captain8 || THE CAPTAIN || And the captain? He left the ship while hundreds of people were still on board.
+captain8 mode=call || || A coast guard officer famously ordered him, by phone, to go back. He didn't.
+dawn8 || SAVED || The first rescue finished at seventeen minutes past six the next morning. Four thousand one hundred and ninety-four people were saved that night. Three more were found alive two days later.
+dawn8 mode=memorial || || But thirty-two people died, passengers and crew.
