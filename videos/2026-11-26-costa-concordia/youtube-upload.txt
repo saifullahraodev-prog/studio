@@ -1,0 +1,76 @@
+TITLE (use this one)
+The $2 Billion Job to Raise a Sunken Cruise Ship
+
+Other title options (for later A/B tests):
+- How Do You Lift a Sunken Cruise Ship?
+- The Cruise Ship That Sailed Too Close
+- It Cost €450M to Build. Removing It Cost 3x More.
+
+THUMBNAIL (in the thumbnails folder)
+- thumb-CA.jpg  "$2 BILLION": the wreck on her side by the island, chains pulling, the Ship Guy shocked on a work boat (recommended)
+- thumb-CB.jpg  "HOW?": underwater cut-away, the ship half rolled up on the steel platforms (good second for YouTube's thumbnail test)
+- thumb-CC.jpg  "TOO CLOSE": the lit cruise ship at night sliding past dark rocks
+
+=====================================================================
+
+DESCRIPTION (paste everything between the lines)
+---------------------------------------------------------------------
+The Costa Concordia cost about €450 million to build. Getting her off a rock and into a scrapyard cost more than three times that.
+
+On 13 January 2012, at 21:45, the cruise ship hit rocks off the Italian island of Giglio with 4,229 people on board. Thirty-two people died. This is the story of that night, as the official investigation describes it, and of the huge engineering job that followed: rolling a ship almost 300 metres long back upright, floating her, and towing her to Genoa.
+
+⏱ CHAPTERS
+0:00 Built for €450M
+0:35 A floating city
+1:13 Too close, too fast
+2:04 The rock
+2:54 The missing hour
+4:05 Abandon ship
+5:06 A wreck nobody could leave
+6:06 Parbuckling
+7:36 Floating her home
+8:07 The bill
+8:54 Back to that night
+
+📊 KEY FACTS
+• Ship: Costa Concordia, cruise ship, ~290 m, built 2006 in Italy, 114,147 GT, room for 3,780 passengers
+• On board: 3,206 passengers + 1,023 crew = 4,229
+• Hit the Scole rocks off Giglio at 21:45:07, 13 January 2012, at about 15.5–16 knots; a 53 m gash below the waterline
+• Distress call 22:38; abandon ship ordered 22:54; 4,194 people rescued by 06:17, 3 more found alive two days later
+• 32 people died. A salvage diver also died during the salvage work
+• Parbuckling (rolled upright): 16–17 September 2013, about 19 hours
+• Refloated July 2014; towed to Genoa 23–27 July 2014; scrapping finished 2017, about 90% recycled
+• Whole operation: about €1.5 billion (~$2 billion), according to Costa's chief executive
+• Captain Francesco Schettino: 16 years in prison, upheld by Italy's highest court in May 2017
+
+We remember the 32 people who lost their lives, and the diver who died during the salvage.
+
+🚢 Watch next: the Dali, the ship that lost all power before hitting a bridge
+🚢 Also: The Ship That Sank With 4,000 Luxury Cars
+
+📚 SOURCES
+• Italian Ministry of Infrastructure and Transport, Marine Casualties Investigative Body: Costa Concordia, Report on the safety technical investigation (official report)
+• Fincantieri, delivery of Costa Concordia (2006, ~€450M investment): https://www.fincantieri.com/en/newsroom/press-releases/2006/costa-crociere-takes-delivery-from-fincantieri-of-the-new-flagship-costa-concordia
+• Cost "more than triple" the build price: https://www.seatrade-cruise.com/news-headlines/concordia-costs-reach-15bn-costa-chief-says
+• Parbuckling completed: https://www.marinelog.com/news/costa-concordia-wreck-is-upright/
+• Parbuckling, the biggest ever: https://professionalmariner.com/salvors-achieve-costa-concordia-parbuckling-the-biggest-ever/
+• Refloat: https://gcaptain.com/costa-concordia-fully-afloat/
+• Arrival in Genoa: https://gcaptain.com/costa-concordia-arrives-safely-in-genoa-completing-historic-salvage-operation
+• $2 billion job: https://professionalmariner.com/titan-italian-salvors-complete-2-billion-costa-concordia-job
+• Scrapping completed: https://gcaptain.com/costa-concordia-dismantling-completed-in-italy/
+• €1.5 billion estimate: https://www.nbcnews.com/news/world/end-line-costa-concordia-docks-port-be-broken-scrap-n165921
+• Sentence upheld, May 2017: https://www.aljazeera.com/news/2017/5/12/jail-sentence-upheld-for-costa-concordia-captain
+
+Subscribe to The Ship Guy for more stories about the biggest, strangest and most expensive ships on Earth.
+
+#CostaConcordia #Shipwreck #Ships
+---------------------------------------------------------------------
+
+TAGS (YouTube Studio → Show more → Tags; paste as one line)
+costa concordia, costa concordia salvage, parbuckling, cruise ship disaster, cruise ship sinking, giglio island, raising a sunken ship, most expensive salvage, ship salvage engineering, schettino, cruise ship hit rock, the ship guy
+
+CATEGORY: Education
+SUBTITLES: the video already has subtitles burned in. Also upload costa-concordia.en.srt under Subtitles (English, "With timing")
+so YouTube's own captions, search and auto-translate work.
+END SCREEN: the last ~10 seconds point to the Dali video. In YouTube Studio → End screen, place the video element over the
+dark "BLACKOUT" card (left side) and a Subscribe element over the red button.
