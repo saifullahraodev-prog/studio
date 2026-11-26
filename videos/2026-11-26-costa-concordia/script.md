@@ -12,31 +12,31 @@ watches or takes his hat off. He is lively only in the engineering parts (ice cu
 Lessons kept: radios not phones (except the one "phone call" icon the report mentions, drawn as a desk handset), no props over faces,
 nobody standing in water (quays, boats, decks), labels clear of the subtitle area.
 
-**Retention plan:** the hook is the night of the crash and asks two questions (how did it hit a rock? how do you lift it?). Question 1 is
-answered by ~4:30, question 2 carries the second half. Every section ends on a small open loop.
+**Retention plan (hook v2):** the hook opens on the money paradox (built for €450M, removing it cost 3x more) and a 3-second teaser of the
+ship rolling upright, cut before the end. Then it asks how she got on the rock. Question 1 is answered by ~4:30; the teaser pays off in the second half. Every section ends on a small open loop.
 
 **Main source:** the official Italian investigation report (Ministry of Infrastructure and Transport, Marine Casualties Investigative Body).
 
 **Title:** The $2 Billion Job to Raise a Sunken Cruise Ship
+**Hook:** v2 (owner asked for a new hook, 26 Nov): starts with the bill, not the crash.
 **Other titles (A/B):** "How Do You Lift a Sunken Cruise Ship?" · "The Cruise Ship That Sailed Too Close"
 **Thumbnail idea:** the cruise ship lying on her side by a rocky island, giant chains pulling her up, the Ship Guy shocked on a work boat; text "$2 BILLION".
 
 ---
 
-## 0. Hook: 9:45 p.m.
+## 0. Hook: the bill first
 
-It's Friday the thirteenth of January, twenty twelve. Nine forty-five at night. A cruise ship is sailing along the coast of Italy with more than four thousand people on board. Most of the passengers are at dinner.
-*[night sea, a bright cruise ship sliding past; a date card 13.01.2012 21:45; dining room lights through the windows]*
+This cruise ship cost about four hundred and fifty million euros to build. Getting rid of her cost more than three times that.
+*[the bright cruise ship with a price tag "€450M"; THUD: a second tag drops beside it, three times bigger, "€1.5 BILLION"; the Ship Guy does a double take]*
 
-Then the whole ship shudders. The lights go out. And somewhere below the waterline, the sea starts pouring in.
-*[the hull jolts; windows go dark row by row; a cut-away below the waterline, water rushing in]*
+Not to repair her. Not to sail her again. Just to get her off a rock, and cut her up for scrap.
+*[the ship lying on her side by a rocky island; a big X over a repair wrench; a scrapyard crane waiting]*
 
-Thirty-two people never made it home. And the wreck left behind was so big, so heavy, and in such an awkward spot, that getting it out became one of the most expensive salvage jobs in history.
-*[(quiet) 32 small candles on a dark screen; then the wreck on its side, a giant price tag "$2 BILLION?" swinging over it]*
+To do it, engineers had to roll a ship almost three hundred metres long back upright, in one piece, without breaking her in half. No ship that big had ever been lifted like this.
+*[time-lapse teaser: chains go tight, the wreck starts to roll up out of the water (CREAK, GROAN), cut away just before she's upright]*
 
-So how did a modern cruise ship hit a rock on a calm night? And how do you lift a sunken ship that's almost three hundred metres long? Let's go back to that evening.
-*[the Ship Guy on a quay, looking at the wreck, scratching his head; a rewind clock]*
-
+But why did a modern cruise ship end up on that rock in the first place? To find out, we have to go back to one night. A calm sea. A ship full of people at dinner. And a mistake that cost thirty-two lives.
+*[(quiet from "thirty-two lives") rewind; the night sea, the lit ship gliding past; dining room windows glowing; a date card 13.01.2012 21:45]*
 
 ## 1. A floating city
 
@@ -286,7 +286,10 @@ And if you want to see another ship that lost all her power at the worst possibl
 6. **"Ice cube tray"** is our simple picture of watertight compartments, not the report's wording.
 7. **"One of the most expensive salvage jobs in history":** said as "one of", because exact rankings are not published. "$2 billion" is the
    ~€1.5 billion Costa estimate converted at 2014 rates.
-8. **"Much more than it cost to build the ship":** the ship cost roughly €450 million in 2006 (widely reported). Shown only as a smaller tag, no number spoken.
+8. **€450 million to build / "more than three times that":** Fincantieri's 2006 delivery release (Costa invested ~€450M) and Seatrade Cruise News
+   ("more than triple"): https://www.fincantieri.com/en/newsroom/press-releases/2006/costa-crociere-takes-delivery-from-fincantieri-of-the-new-flagship-costa-concordia ·
+   https://www.seatrade-cruise.com/news-headlines/concordia-costs-reach-15bn-costa-chief-says . "No ship that big had ever been lifted like this" = the
+   biggest parbuckling ever (Professional Mariner).
 9. **"Nineteen hours"**: several reports; the start (09:00 on 16 Sept) and end (~04:00 on 17 Sept) match it.
 10. **"Some sponsons taller than a house":** kept vague on purpose (sizes varied).
 11. **End screen** points to the Dali video ("another ship that lost all her power"), your best-watched long video. We can swap to Felicity once it is live.
