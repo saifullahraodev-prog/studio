@@ -362,8 +362,8 @@ const Liner8: Tpl = ({ t, d, p, w }) => {
 };
 
 // ------------------------------------------------------------------ map of the Italian coast (Liguria to Lazio)
-const PL: Record<string, [number, number]> = { SAVONA: [300, 150], GENOA: [440, 128], LIVORNO: [860, 420], CIVITAVECCHIA: [1330, 900], ROME: [1500, 930], GIGLIO: [1040, 760] };
-const COAST = "M0 210 Q 160 160 300 150 Q 380 120 440 128 Q 560 150 700 250 Q 800 320 860 420 Q 900 520 920 600 Q 960 680 1060 700 Q 1100 740 1150 760 Q 1240 830 1330 900 Q 1420 960 1520 1080 L 1920 1080 L 1920 0 L 0 0 Z";
+export const PL: Record<string, [number, number]> = { SAVONA: [300, 150], GENOA: [440, 128], LIVORNO: [860, 420], CIVITAVECCHIA: [1330, 900], ROME: [1500, 930], GIGLIO: [1040, 760] };
+export const COAST = "M0 210 Q 160 160 300 150 Q 380 120 440 128 Q 560 150 700 250 Q 800 320 860 420 Q 900 520 920 600 Q 960 680 1060 700 Q 1100 740 1150 760 Q 1240 830 1330 900 Q 1420 960 1520 1080 L 1920 1080 L 1920 0 L 0 0 Z";
 const Map8: Tpl = ({ t, d, p }) => {
   const m = p.mode ?? "depart";
   const route: [number, number][] = [[1330, 900], [1220, 850], [1110, 780], [1040, 700], [980, 600], [900, 460], [780, 340], [600, 240], [440, 190], [300, 175]];

@@ -78,3 +78,40 @@ captain8 || THE CAPTAIN || And the captain? He left the ship while hundreds of p
 captain8 mode=call || || A coast guard officer famously ordered him, by phone, to go back. He didn't.
 dawn8 || SAVED || The first rescue finished at seventeen minutes past six the next morning. Four thousand one hundred and ninety-four people were saved that night. Three more were found alive two days later.
 dawn8 mode=memorial || || But thirty-two people died, passengers and crew.
+# ================= PART 3 = the salvage (sections 6-8). Templates: engine/shipguy/templates8c.tsx.
+# --- 6. A wreck nobody could leave
+site8 mode=problem || A NEW PROBLEM || Then came a different kind of problem.
+site8 mode=side || ON HER SIDE || The Concordia was now lying on her side, on a sloping rock shelf, right next to a small island in a protected marine area.
+site8 mode=stuff || [100,000+] TONNES || More than a hundred thousand tonnes of ship, full of fuel, food, furniture and everything the passengers had left behind.
+fuel8 || FUEL FIRST || First, salvors pumped out the fuel.
+fuel8 mode=count || OIL REMOVED || More than two thousand cubic metres of oil were removed in the first months, before it could leak into the sea.
+choice8 mode=ask || THE BIG QUESTION || Then came the big question. What do you do with the ship?
+choice8 mode=cut || PIECE BY PIECE || The easy answer would have been to cut her up right there, piece by piece.
+choice8 mode=mess || YEARS || But that would have taken years, right next to the island, with pieces of wreck and dirt falling into the sea.
+choice8 mode=whole || THE HARDER PLAN || So the owners chose the harder plan. Turn the whole ship upright, float her, and tow her away in one piece.
+team8 || TWO COMPANIES || The job went to two companies working together. Titan Salvage, from the United States, and Micoperi, from Italy.
+team8 mode=crew || HUNDREDS OF WORKERS || Hundreds of workers and divers from all over the world.
+title8 || || And the trick they used has a name. Parbuckling.
+# --- 7. Parbuckling
+barrel8 || ROLLING IT UPRIGHT || Parbuckling means rolling something upright by pulling it around its own side.
+barrel8 mode=ramp || LIKE A BARREL || Like rolling a barrel up a ramp with ropes.
+barrel8 mode=ship || || Except this barrel was a cruise ship.
+parb8 mode=slide || DEEP WATER || But first, they had to stop her from sliding off the rock shelf into deep water.
+parb8 mode=bags || CEMENT BAGS || So divers filled huge bags with cement and packed them under the hull.
+parb8 mode=plats || [6] PLATFORMS || And they drilled into the granite seabed and built six giant steel platforms next to the ship, to catch her when she turned.
+parb8 mode=sponsons || SPONSONS || Then they welded enormous steel boxes, called sponsons, onto the side that was sticking out of the water. Some of them were taller than a house.
+parb8 mode=chains || CHAINS + JACKS || And they ran thick chains under the hull, linked to steel cables and powerful jacks, all anchored to the seabed.
+parb8 mode=start || [9:00] AM || On the sixteenth of September twenty thirteen, at nine in the morning, they started pulling.
+parb8 mode=stuck || NOTHING MOVED || At first, nothing moved. The ship had been lying in the same spot for twenty months, and she was stuck on the rocks.
+parb8 mode=free || FREE || The jacks pulled harder and harder, until, with a groan of steel, she finally came free.
+parb8 mode=turn || ALL NIGHT || Then, very slowly, she started to turn. All day. All night.
+parb8 mode=flood || WATER DOES THE WORK || Partway up, the engineers let seawater flood into the steel boxes. Now the weight of that water did the rest of the work, pulling the ship the rest of the way round.
+parb8 mode=upright || ~[19 HOURS] || At four in the morning on the seventeenth of September, about nineteen hours after they started, the Costa Concordia was sitting upright on the platforms.
+parb8 mode=rust || CRUSHED AND TWISTED || The side that had been underwater for twenty months was brown, crushed and twisted.
+# --- 8. Floating her home
+float8 mode=more || MORE SPONSONS || But she still couldn't float. So the salvors welded more sponsons onto the other side. Thirty in total.
+float8 mode=rise || JULY 2014 || Then, in July twenty fourteen, they pushed the water out of them with compressed air, and the ship slowly rose off the platforms.
+tow8 || ~[200] NAUTICAL MILES || On the twenty-third of July, tugs started towing her north. About two hundred nautical miles, in four days, at walking speed.
+tow8 mode=genoa || GENOA || On the twenty-seventh, she arrived in Genoa.
+yard8 || ~[3] YEARS || There, it took around three years to take her apart.
+yard8 mode=recycle || RECYCLED || About ninety per cent of the ship was recycled.
