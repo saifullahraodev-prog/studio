@@ -698,3 +698,5 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
 - 2026-11-26: Costa Part 3 (beats 71-103, ~5:05-8:10): new `engine/shipguy/templates8c.tsx` (site8, fuel8, choice8, team8, title8, barrel8, parb8 = parbuckling step by step via `Parb`, float8, tow8, yard8). Storyboard p4-p6 sent.
 - 2026-11-26: owner APPROVED Costa Part 3 storyboard.
 - 2026-11-26: Costa Part 4 (beats 104-125, ~8:07-9:25): new `engine/shipguy/templates8d.tsx` (cost8, diver8, court8, find8, empty8, endcard8 -> Dali video). Quiet recap reuses Part 1-3 shots. Storyboard p6-p7 sent.
+- 2026-11-26: owner APPROVED Costa Part 4 storyboard (all 4 parts approved).
+- 2026-11-26: Costa sound: rules in `tools/shipguy_mix.py` (quiet8 set: drift/lifeboat/ladder/rescue/captain/dawn/diver/empty + night8 quiet + list8 deg/high/walls get only a soft cut sound). `mix.wav` 9:26.5, 235 events, -15.0 LUFS, peak -1.4. Subs 194 cues; `costa-concordia.en.srt` 208 cues. Next: 60 s test render (needs owner OK).

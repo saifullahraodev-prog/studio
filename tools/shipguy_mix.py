@@ -116,7 +116,8 @@ def main(slug: str, tracks: str = ""):
         tpl, p = b["tpl"], b["p"]
         if i > 0:
             # carrier video: the Forrestal part is quiet (a soft cut sound only, no comic sounds)
-            ev.append((t0, "whoosh", 0.15 if tpl in ("forrestal", "fremantle") else 0.45))
+            quiet8 = tpl in ("drift8", "lifeboat8", "ladder8", "rescue8", "captain8", "dawn8", "diver8", "empty8") or (tpl == "night8" and p.get("mode") == "quiet") or (tpl == "list8" and p.get("mode") in ("deg", "high", "walls"))
+            ev.append((t0, "whoosh", 0.15 if tpl in ("forrestal", "fremantle") or quiet8 else 0.45))
         if tpl == "attack":
             ev.append((t0 + 1.2, "impact", 0.9))
         if tpl == "sea" and p.get("state") == "fire":
@@ -406,6 +407,52 @@ def main(slug: str, tracks: str = ""):
         if tpl == "rules": ev.append((t0 + 0.4, "ding", 0.35))
         if tpl == "future": ev.append((t0 + 0.3, "zap", 0.3)); ev.append((t0 + 1.2, "ding", 0.4))
         if tpl == "endcard7": ev.append((t0 + 0.2, "ding", 0.5))
+        # --- Costa Concordia templates (video #8). 32 people died: the abandon-ship / rescue / memorial / diver beats get
+        # only the soft cut sound (quiet8 above), never comic sounds (no boing in serious beats).
+        if tpl == "bill8": ev.append((t0 + 0.5, "stamp", 0.7)); (p.get("stage") == "2") and ev.append((t0 + 0.8, "boing", 0.3))
+        if tpl == "wreck8": ev.append((t0 + 0.4, "pop", 0.45)); (st == "x") and ev.append((t0 + 1.4, "pop", 0.45))
+        if tpl == "roll8": ev.append((t0 + 0.2, "crunch", 0.25))
+        if tpl == "map8" or tpl == "tow8": ev.append((t0 + 0.4, "ding", 0.3))
+        if tpl == "liner8" and st in ("len", "pax", "xray", "built"): ev.append((t0 + 0.15, "riser", 0.3)); ev.append((t0 + 0.9, "pop", 0.45))
+        if tpl == "count8": ev.append((t0 + 0.15, "riser", 0.3)); ev.append((t0 + 2.0, "ding", 0.4))
+        if tpl == "pass8" and st == "half": ev.append((t0 + 0.4, "ding", 0.35))
+        if tpl == "speed8": ev.append((t0 + 0.2, "riser", 0.35))
+        if tpl == "report8": ev.append((t0 + 0.3, "stamp" if p.get("n", "0") == "0" else "pop", 0.6))
+        if tpl == "rocks8": ev.append((t0 + 0.3, "hit", 0.35))
+        if tpl == "impact8" and st == "hit": ev.append((t0 + 0.05, "impact", 0.8)); ev.append((t0 + 0.3, "crunch", 0.5))
+        if tpl == "gash8": ev.append((t0 + 0.3, "crunch", 0.3)); ev.append((t0 + 0.6, "hiss", 0.4))
+        if tpl == "comp8" and st in ("one", "five", "deck", "spill"): ev.append((t0 + 0.3, "hiss", 0.35))
+        if tpl == "comp8" and st == "heart":
+            for k in range(3): ev.append((t0 + 0.3 + k * (b["dur"] / fps) / 3.5, "pop", 0.45))
+        if tpl == "power8" and st == "out": ev.append((t0 + 0.35, "hit", 0.45))
+        if tpl == "power8" and st == "flicker":
+            for k in range(3): ev.append((t0 + 0.3 + k * 0.6, "zap", 0.25))
+        if tpl == "clock8":
+            if st == "tick":
+                for k in range(6): ev.append((t0 + 0.3 + k * 0.5, "tick", 0.7))
+            else: ev.append((t0 + 0.3, "ding" if st != "alarm" else "hit", 0.35))
+        if tpl == "shore8": ev.append((t0 + 0.4, "ding", 0.3))
+        if tpl == "aground8" and st == "shelf": ev.append((t0 + 0.5, "crunch", 0.25))
+        if tpl in ("site8", "fuel8", "team8", "choice8") and st != "mess": ev.append((t0 + 0.4, "pop", 0.4))
+        if tpl == "title8": ev.append((t0 + 0.2, "riser", 0.35)); ev.append((t0 + 0.7, "stamp", 0.7))
+        if tpl == "barrel8": ev.append((t0 + 0.4, "pop" if st != "ship" else "boing", 0.4))
+        if tpl == "parb8":
+            if st in ("bags", "plats", "sponsons", "chains"): ev.append((t0 + 0.4, "pop", 0.45)); ev.append((t0 + 1.2, "hammer" if False else "pop", 0.35))
+            if st == "start": ev.append((t0 + 0.3, "ding", 0.4))
+            if st == "stuck":
+                for k in range(3): ev.append((t0 + 0.5 + k * 1.0, "crunch", 0.2))
+            if st == "free": ev.append((t0 + (b["dur"] / fps) * 0.6, "crunch", 0.6))
+            if st == "turn":
+                for k in range(4): ev.append((t0 + 0.3 + k * 0.7, "tick", 0.6))
+            if st == "flood": ev.append((t0 + 0.4, "hiss", 0.45))
+            if st == "upright": ev.append((t0 + 0.3, "ding", 0.55))
+            if st == "rust": ev.append((t0 + 0.3, "hit", 0.35))
+        if tpl == "float8": ev.append((t0 + 0.4, "hiss" if st == "rise" else "pop", 0.4))
+        if tpl == "yard8": ev.append((t0 + 0.4, "ding", 0.4))
+        if tpl == "cost8": ev.append((t0 + 0.5, "stamp" if st != "bill" else "riser", 0.6))
+        if tpl == "court8": ev.append((t0 + 0.6, "hit", 0.45)); (st == "upheld") and ev.append((t0 + 0.9, "stamp", 0.7))
+        if tpl == "find8" and p.get("n", "0") != "0": ev.append((t0 + 0.3, "stamp", 0.6))
+        if tpl == "endcard8": ev.append((t0 + 0.2, "ding", 0.5))
     fx = sfx.render_events(ev, dur)[:n]
     fx = np.pad(fx, (0, max(0, n - len(fx))))
 
