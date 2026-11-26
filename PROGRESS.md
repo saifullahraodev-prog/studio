@@ -686,3 +686,7 @@ File: `videos/2026-11-08-titanic-lifeboats-v2/out/preview-v2b-720p.mp4`.
   copy + the full mix.wav as audio; -15.1 LUFS, peak -1.2 dBFS, 0 black, 0 frozen). Upload kit: `thumbnails/thumb-F{A,B,C}.jpg`
   (`engine/shipguy/ThumbFelicity.tsx`, Ship Guy in a boat, not in the sea), `felicity-ace.en.srt`, `youtube-upload.txt`
   (title, description, 12 chapters, key facts, sources, tags, end screen).
+- 2026-11-26: next video picked by owner from analytics: **#8 Costa Concordia** (disaster + $2B salvage). Script v1 written:
+  `videos/2026-11-26-costa-concordia/script.md` + `narration.txt` (1,701 words, ~9:45). Main source: Italian MIT Marine Casualties
+  Investigative Body report (read from the PDF via `pdf2png.ps1` page renders); salvage facts from gCaptain / Professional Mariner / Marine Log.
+  Quiet sections (deaths, rescue, diver) have no gags. Waiting for owner script approval.
